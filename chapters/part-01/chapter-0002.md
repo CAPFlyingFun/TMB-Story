@@ -4,7 +4,7 @@ title: "Sixty-Two Grams of Salt"
 part: 1
 mini_arc: 1
 pov: Nora
-word_count: 3610
+word_count: 3613
 story_time:
   clock: outside
   date: "Year 0, first week of October (the same Tuesday as Chapter 1)"
@@ -54,7 +54,7 @@ Marco let them out at the bottom of the hill at a quarter to seven, because the 
 
 The van went away down the road with one tail light, and the twins stood at the bottom of their own hill with a pack each and looked up it.
 
-It was not a big hill. It was a hill you did not notice on any other day. Tonight it had grown. The rain that had chased them off the bar had come and gone all afternoon and was now coming back for another go, in small handfuls, and the firs at the top were making the sound firs make when they are about to make a bigger one.
+It was not a big hill. It was a hill you did not notice on any other day. Tonight it had grown. The rain that had chased them off the bar had come and gone all afternoon and was now coming back for another go, in small handfuls, and the firs at the top had started the low sound that comes before the loud one.
 
 "Race you," said Caleb, and did not move.
 
@@ -128,7 +128,7 @@ Caleb did the talking, because Caleb was the talking. He did the mud, with actio
 
 Their mother had turned around now, with the spoon, and was looking at Caleb the way she looked at him when he was small and had brought something in from the garden in his hands. She pointed the spoon at the table. "Plates."
 
-Nora did the numbers while Caleb did the plates, because the numbers were hers and Caleb would have got them wrong. The low water fifteen centimeters above the table, same minute. The pressure dropping four in an hour, the line on the screen going down like a cliff. The wind gone around to the south with weight in it. She said it plainly, as if it were a report, because it had been.
+Nora did the numbers while Caleb did the plates, because the numbers were hers and Caleb would have got them wrong. The low water had been fifteen centimeters above the table, same minute. The pressure had dropped four in an hour, the line on the screen going down like a cliff. The wind had gone around to the south with weight in it. She said it plainly, as if it were a report, because it had been.
 
 Her mother listened to all of it with her back to the pot. That was the first thing. She did not say *goodness* or *my girl* or any of the things she said when Nora explained a spreadsheet. She listened like a person at a bench.
 
@@ -184,7 +184,7 @@ There was a pause, in which Nora did the sum and found it was right.
 
 Then they sat, because the food was on the table and their mother had used the voice, and for a while nobody said anything that was not about bread.
 
-It was a small kitchen and the table was against the wall, and from where Nora sat she could see through the door into the front hall, to the shelf by the door, where the keys lived and the photograph lived. The photograph had been there for as long as she had been anywhere. It showed a man on a dock, in a green jacket, squinting into sun, with a boat's rail behind him. Nobody looked at it. You looked at the keys. Her eye did what it always did, which was slide from the door to the keys to the coat hooks without stopping in between, and she thought nothing, because there was nothing to think.
+It was a small kitchen and the table was against the wall, and from where Nora sat she could see through the door into the front hall, to the shelf by the door, where the keys and the photograph lived. The photograph had been there for as long as she had been anywhere. It showed a man on a dock, in a green jacket, squinting into sun, with a boat's rail behind him. Nobody looked at it. You looked at the keys. Her eye did what it always did, which was slide from the door to the keys to the coat hooks without stopping in between, and she thought nothing, because there was nothing to think.
 
 "Somebody at the station," said their mother, tearing bread, "told me you two have that twin thing."
 
@@ -200,7 +200,7 @@ It was a small kitchen and the table was against the wall, and from where Nora s
 
 "Once," said their mother. "The second time was you." And she was smiling, because she had been there, and for a moment the whole table was the same warm thing.
 
-Then Caleb, with his mouth full, out of nowhere, in the way that was the whole of Caleb: "Did Dad ever work out there?"
+Then Caleb, with his mouth full, out of nowhere, in the way that was the whole of Caleb, said, "Did Dad ever work out there?"
 
 The moth arrived at the window at the same moment, which was nothing, a fat brown moth banging at the glass, so that Nora looked at the moth and not at her mother, and heard rather than saw the fork go down.
 
@@ -264,6 +264,6 @@ She was standing at the shelf by the door, in the dark, in the fleece, with the 
 
 Nora had lived in that house her whole life. She had never seen anyone look at it.
 
-She stood on the stairs with one hand on the rail and did not go down, and did not go up, and did not breathe in any way that could be heard. Her mother did not move. The rain moved. The porch light lay across the packs by the door, ready for Saturday, and her mother stood between them and the door with her back to the stairs, looking, and went on looking, for longer than you look at anything you have already seen.
+She stood on the stairs with one hand on the rail and did not go down, and did not go up, and did not breathe in any way that could be heard. Her mother did not move. The rain moved. The porch light lay across the packs by the door, ready for Saturday, and her mother stood between them and the door with her back to the stairs, and went on looking at the photograph for longer than anyone looks at something they already know by heart.
 
 Nora went back up without the water.

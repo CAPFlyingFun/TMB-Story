@@ -223,4 +223,4 @@ walking"; "followed the line up the beach, into the grass"; "That was where they
 taking the babies: a dry stump"; the summit as one sentence; "It was south now ...
 and it smelled of rain"; "ticking and bubbling as the sea came up" (the "cooking"
 chime cut); "Then he was in the middle of the saddle". Kept as the joke: "Not
-snatched. Took." Word count 3,332. Waiting on Joshua's re-approval.
+snatched. Took." Word count 3,332. Re-approved by Joshua, 2026-09-16.

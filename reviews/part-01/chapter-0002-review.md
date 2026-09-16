@@ -1,6 +1,6 @@
 # Chapter 0002 — Sixty-Two Grams of Salt — handoff report
 
-Date: 2026-09-16 · POV: Nora · Words: 3,610 · Ending type: quiet unsettling line ·
+Date: 2026-09-16 · POV: Nora · Words: 3,613 · Ending type: quiet unsettling line ·
 Status: `in-review`, waiting on Joshua. Not approved; no bible file changed.
 
 Source of the plan: Trello card `02 — Sixty-Two Grams of Salt | Nora` in the
@@ -243,3 +243,14 @@ slow. Two striped flies that Caleb logged as honey bees..."; "Download the memor
 read the trace, swap the battery."; "South now, with weight in it, smelling of rain
 that had not arrived."; "Up the beach, into the grass, up a bank and onto the
 trail..."; "Then the middle of the saddle, and the water was over his boots..."
+
+## Rescan for decisions 0013 and 0014 (2026-09-16)
+
+Fragments: Nora's report of the numbers now three full sentences ("The low water
+had been..."); Caleb's question line recast with "said". Verse: the firs' "making
+the sound firs make ... make" chime flattened; "where the keys lived and the
+photograph lived" kept once (the hall) and flattened at dinner; the ending's
+"looking, and went on looking, for longer than you look" stack flattened. Kept on
+purpose: "Caleb did the talking, because Caleb was the talking" (the joke), "Caleb
+liked to arrive; Nora liked to have arrived" (the character pair), "She had always
+heard the door. She had never once heard it open." (the weight). Word count 3,613.
