@@ -14,9 +14,9 @@ at chapters/part-01/chapter-0001.md — (older line:) 2,996 prose words measured
 
 - characters.md — Caleb, Nora, Rachel, Daniel, Ines, Marco, Gus per source; APPROVED Ch 1 block at end.
 - creatures.md — APPROVED Ch 1 ants/birds/gull/web/sweep; PLAN insect texture by chapter; RETIRED wasps.
-- timeline.md — CORRECTED clock: Tuesday first week Oct Y0; on the bar 07:30 (page: 07:00); LOW 10:30;
-  off the bar 12:30; station 13:00; the page's 11:10 / "Ninety" / 11:52 arithmetic flags; TWO van rides;
-  daylight; Ch 3 Saturday and Ch 10 Thursday tide constraints (recomputed for a 10:30 low).
+- timeline.md — APPROVED clock: Tuesday first week Oct Y0; mud 07:30; LOW 10:30; call 11:00; saddle 11:22-11:24;
+  station 13:00; TWO van rides in Ch 1 (+ Ch 2 dusk leg); sunset ≈ 18:40-18:50 / civil dusk ≈ 19:10-19:20 (estimate);
+  Ch 3 Saturday lows ≈ 13:50 / 02:15 (morning-only "wrong for the bar"); Ch 10 Thursday +9 or +23 d.
 - equipment.md — scale readings, packs, the TWO loggers as written, the summit box as written, the van,
   Tern Island geography on the page; RETIRED table.
 - open-threads.md — Ch 1 APPROVED hand-off audit (met / not met / changed); PLAN-INTERNAL CONFLICTS
@@ -35,5 +35,11 @@ Top APPROVED flags reported for Ch 1 (2026-09-16): (1) 11:10 + "Ninety minutes" 
 saddle; (2) 07:00 crossing vs PLAN 07:30 / 3-h window; (3) frontmatter "download cut short" not on the
 page; (4) the web beat pre-empts Ch 3; (5) Ines drives, frontmatter says "a van Marco drives".
 
-Last pass: REVIEW of the Ch 0001 APPROVED (2026-09-16). Next: on approval promote every APPROVED tag to
-APPROVED [ch 0001], then ADVISORY for Ch 0002 "Sixty-Two Grams of Salt" (Nora POV, same day, dusk).
+Ch 0001 tags promoted to APPROVED [ch 0001] (2026-09-16, repo at e3de218). Approved page corrections vs the
+draft: mud 07:30 (ch:96), call at 11:00 (ch:194), saddle 11:22/11:24 (ch:206, :212), Marco drove OUT / Ines HOME
+(ch:72, :216), Ines "not wet above the shin" (ch:216), corridor photos ON the page (ch:70), Caleb HEARD "which
+island" (ch:258), text 3 unread on the page (ch:262). Line refs in topic files are draft numbers (~+2 after ch:70).
+
+Last pass: ADVISORY for Ch 0002 "Sixty-Two Grams of Salt" (2026-09-16; open-threads.md tail, timeline.md Ch 2
+line). Next: REVIEW of the Ch 0002 draft — check vials/jars, Saturday tide wording, fixed-words variant,
+"Gus's boat shed", text 3, box unmentioned, ending type ≠ unanswered question.

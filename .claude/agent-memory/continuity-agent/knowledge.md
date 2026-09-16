@@ -22,9 +22,12 @@ MA1: = outline/part-01/mini-arc-01.md (PLAN).
 
 ## RETIRED (boatyard draft): "nothing changes hands" facts tied to the customer, the fuel dock, "Half of them", the recitation heard by Nora in Ch 1, Rachel learning Caleb said "no" to a customer.
 
-## DRAFT Ch 0001 (chapter-0001.md @ dd8b7cb) — nothing changes hands ✓
+## APPROVED [ch 0001] — nothing changes hands ✓ (draft line refs)
 - Caleb now holds: the bar's crest/saddle rule (ch:79); the ant brood-move to the summit stump (ch:125-145); the summit box exists, padlocked, "clean and dry", touched more recently than anything else up there (ch:147) — an impression only; the birds' departure + filling pools + south wind (ch:149-157). He did NOT see a tag. He guesses "since breakfast" for the ants (ch:177) — he first saw them at 10:30.
 - Nora now holds: low water 15 cm above the printed table at the same minute; pressure down four in the last hour; wind gone round (ch:175). She did NOT see the box (frontmatter ch:21) — Ch 3 is her first sight.
 - Ines: "Front's come in early. Six hours early." (ch:195); read the trace herself (ch:189). Gus: wind south + glass dropping at the station (ch:193). Marco: nothing.
 - Rachel (off-page): received the mud photo (ch:93) → knows they crossed to Tern Island today; nothing else. Nobody on the page says Mercer, Dad, Tidewater, the tag, the nineties photos, or the old programme ✓.
 - Audience: sees the box described (ch:147) and the ants' choice of the summit — a picture, not a clue (MA1:106).
+- APPROVED [ch 0001] texts (ch:250-262): Nora read text 1 ALOUD in Mom's voice ("Boots go ON the gravel, Caleb"); text 2 she did not read out but SAID "She wants to know which island" — Caleb HEARD that, eyes shut, "So tell her. It's not a secret."; Nora typed "Tern"; text 3 lit up before she put the phone down, content NOT on the page, Caleb did not see it. So at Ch 2 open Caleb knows Mom asked which island; only text 3 is Nora's alone. Rachel knows: mud photo + "Tern".
+- APPROVED [ch 0001] ch:70: the station corridor of nineties group photos IS on the page ("Caleb had walked past them every day for three weeks without knowing a single face") — Ch 2's "Did Dad ever work out there?" has its trigger already planted.
+- Caleb told Nora the ants had been moving "all morning, at least" (ch:176) — his guess; he first saw them at 10:30.
