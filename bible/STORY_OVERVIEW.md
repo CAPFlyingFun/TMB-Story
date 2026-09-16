@@ -4,7 +4,7 @@ Read this every chapter. It is a distillation of `architecture/SERIES_ARCHITECTU
 (Revision 3, which layers on Rev 2 and Rev 1 in `architecture/history/`). If this file
 and the architecture disagree, the architecture wins and this file gets fixed.
 
-**Currently at: Part 1, Chapter 0 — nothing drafted, nothing outlined.**
+**Currently at: Part 1, Chapter 0 — Part One outlined (`outline/part-01/`), awaiting Joshua's approval; nothing drafted.**
 
 ---
 

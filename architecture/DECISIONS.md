@@ -13,6 +13,7 @@ file is updated.
 - 0002 — Four-digit chapter numbering (`chapter-0001.md`) — **Accepted with the foundation build (2026-09-16)**
 - 0003 — `main` is the only branch; protection via frontmatter + hook, not branching — **Accepted (Joshua, 2026-09-16)**
 - 0004 — Future reader: GitHub Pages serves from `main`; visual theme follows Portrait-Lifesyle-Prompt-Studio — **Accepted (Joshua, 2026-09-16), not yet built**
+- 0005 — M07 and M30 are introduced in Part One (Mini-Arcs 2–3), not Part 2 — **Proposed**
 
 ---
 
@@ -39,3 +40,9 @@ file is updated.
 **Decision:** When the reader is built it is a static site on `main` served by Pages, consuming approved chapters and bible material only (never a second place the story is written). Its visual language follows that repo's dark warm theme, recorded here so the reference survives if that repo changes: backgrounds `#12100E` / `#1C1917` / `#262220` / `#302C28`, text `#F5EDE4` / `#C4B49A` / `#8B7E6E`, borders `#3D3733` / `#8B7355`, accents gold `#D4A853`, warm `#C9845C`, sage `#7BA68A`, sky `#6B9FBF`, rose `#C47070`, violet `#9B87B2`; display font Playfair Display, body font DM Sans.
 **Consequences:** Nothing to build now. Until a reader exists, Pages on `main` simply serves the repository's Markdown as-is, which is harmless. `voices/` and `audio/` remain out of scope until audio production starts.
 **Status:** Accepted, 2026-09-16; build deferred.
+
+### 0005 — Ladder Part column for M07 and M30
+**Context:** Rev 2 §17 lists M07 (who funded/monitored Dad's work) and M30 (Kessler's real connection) as "Introduced: Part 2 (professor)". Rev 2 §10 places Kessler's first appearance in Mini-Arc 2 (Chapters 11–20) and Rev 1 §8 places the funder's name in Mini-Arc 3 (Chapters 21–30), both inside Part One. The mini-arc text is the more specific source.
+**Decision (proposed):** Treat the ladder's "Part 2" for these two rows as "Part 1, Mini-Arcs 2–3". `bible/MYSTERIES.md` is updated to say so once approved.
+**Consequences:** The Part One outline introduces M30 at Chapter 14 and M07 at Chapter 23. Partial and full answer columns are unchanged.
+**Status:** Proposed with the Part One outline, 2026-09-16; awaiting Joshua.
