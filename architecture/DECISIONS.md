@@ -13,7 +13,7 @@ file is updated.
 - 0002 — Four-digit chapter numbering (`chapter-0001.md`) — **Accepted with the foundation build (2026-09-16)**
 - 0003 — `main` is the only branch; protection via frontmatter + hook, not branching — **Accepted (Joshua, 2026-09-16)**
 - 0004 — Future reader: GitHub Pages serves from `main`; visual theme follows Portrait-Lifesyle-Prompt-Studio — **Accepted (Joshua, 2026-09-16), not yet built**
-- 0005 — M07 and M30 are introduced in Part One (Mini-Arcs 2–3), not Part 2 — **Proposed**
+- 0005 — M07 and M30 are introduced in Part One (Mini-Arcs 2–3), not Part 2 — **Accepted with the Part One outline (Joshua, 2026-09-16)**
 
 ---
 
@@ -45,4 +45,4 @@ file is updated.
 **Context:** Rev 2 §17 lists M07 (who funded/monitored Dad's work) and M30 (Kessler's real connection) as "Introduced: Part 2 (professor)". Rev 2 §10 places Kessler's first appearance in Mini-Arc 2 (Chapters 11–20) and Rev 1 §8 places the funder's name in Mini-Arc 3 (Chapters 21–30), both inside Part One. The mini-arc text is the more specific source.
 **Decision (proposed):** Treat the ladder's "Part 2" for these two rows as "Part 1, Mini-Arcs 2–3". `bible/MYSTERIES.md` is updated to say so once approved.
 **Consequences:** The Part One outline introduces M30 at Chapter 14 and M07 at Chapter 23. Partial and full answer columns are unchanged.
-**Status:** Proposed with the Part One outline, 2026-09-16; awaiting Joshua.
+**Status:** Accepted with the Part One outline approval, 2026-09-16.

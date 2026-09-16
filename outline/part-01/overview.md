@@ -1,7 +1,8 @@
 # Part One — The Impossible Island (Chapters 1–50)
 
-**Status: OUTLINED — awaiting Joshua's approval. Do not draft from this until the
-status line says approved.**
+**Status: APPROVED by Joshua, 2026-09-16. Chapters may be drafted from this outline.
+Provisional inventions below are approved as working names and remain swappable
+until they appear in an approved chapter.**
 
 Genre: mystery/investigation. Objective: prove the island is real and reach it.
 Source: `architecture/SERIES_ARCHITECTURE.md` (Rev 3) with Rev 2 §10 (redesigned

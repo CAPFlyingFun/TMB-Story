@@ -21,7 +21,7 @@ prevent a contradiction.
 | M04 | Was the crash vision real? | Part 1 | Part 3–4 | Part 9/10 | open |
 | M05 | Why did the vision affect both siblings differently? | Part 1 | Part 6 | Part 9 | open (mechanism never fully explained) |
 | M06 | Who's erasing evidence of Dad's research? | Part 1 | Part 6 | Part 9 | open |
-| M07 | Who funded/monitored Dad's work? | Part 2 (Kessler) | Part 6 | Part 9 | open (full membership stays unknown) |
+| M07 | Who funded/monitored Dad's work? | Part 1, Mini-Arc 3 (Kessler; decision 0005) | Part 6 | Part 9 | open (full membership stays unknown) |
 | M08 | Did people live on the island before Dad? | Part 2 | Part 3 | Part 4 | open |
 | M09 | Why do some islanders hate Dad? | Part 2 | Part 3 (Silas) | Part 9 | open |
 | M10 | What did Dad actually build and change? | Part 3 | Parts 5–8 | Part 10 | open |
@@ -44,7 +44,7 @@ prevent a contradiction.
 | M27 | Does Mom reunite with Dad, and what does it cost? | Part 8 | Part 14 | Part 17 | not yet introduced |
 | M28 | What really happened to the abandoned second settlement? | Part 2/3 (Theo, Silas) | Part 7 | Part 9 | open |
 | M29 | Who are Caleb and Nora, from the islanders' side? | Part 1 (spider rescue) | Part 2 | Part 3 | open |
-| M30 | What is Professor Kessler's real connection to Dad's research? | Part 2 | Part 3 | Part 6/7 | open |
+| M30 | What is Professor Kessler's real connection to Dad's research? | Part 1, Mini-Arc 2 (decision 0005) | Part 3 | Part 6/7 | open |
 | M31 | What's sealed beneath the oldest underground level? | Part 3/4 (background texture) | — | Deliberately open | open — DO NOT ANSWER |
 | M32 | What has Dad actually been doing out there? | Part 4–5 | Parts 6–9 | Part 10 | not yet introduced |
 
