@@ -103,3 +103,14 @@ the count sheets and Nora's pack surviving dry in the van. The page gives only C
 ("would not close", "lying there wrong") and Nora "not moving".
 CONTRADICTION vs the outline: MA1:178 has Ines FOLLOWING in her own car (and MA1:202 first on
 scene). d3:245 sends her to the district office "on her way home" — she is not behind the van.
+
+## Open gaps for Joshua (from the external audit, 2026-09-16)
+- HOW THE TWINS REACH THE STATION. Ch 1 opens at the boathouse at 06:00. The Bennett
+  home is at the top of a hill, the twins have no vehicle, and no chapter shows the
+  ride. Ch 3 dodges it with the skiff. Needs one throwaway line in a future chapter,
+  or a line added when Chapters 1-10 are batch-approved.
+- THE DOWNLOADED FILE. Rachel asked for it (Ch 2), Nora copied it to the lab machine
+  (Ch 3). No chapter is assigned to resolve whether Rachel ever receives it or whether
+  it matters. Likely Ch 7 or Ch 8. Unassigned.
+- THE TAG'S YEAR. Read twice by Nora on the page, never spoken. Ch 7 matches it to a
+  record and Ch 9 puts it on the wall map, so a value is needed before Ch 7.

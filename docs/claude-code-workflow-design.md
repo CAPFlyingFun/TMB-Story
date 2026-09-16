@@ -1,5 +1,10 @@
 # TMB — Claude Code Writing Workflow & Repository Design
 
+> **This document is background reasoning, not canon.** Where it disagrees with
+> `CLAUDE.md` or `architecture/DECISIONS.md`, those win. Known superseded points:
+> §3's three-digit chapter filenames (decision 0002 uses four) and §7's draft
+> branches (decision 0003 is main-only). Superseded in part, kept for its reasoning.
+
 ---
 
 ## 1. Reviewing Your Proposed Workflow
@@ -50,7 +55,7 @@ TMB-Story/
       mini-arc-01.md ... mini-arc-05.md
   chapters/
     part-01/
-      chapter-001.md
+      chapter-0001.md
       chapter-002.md
       ...
   reviews/
@@ -102,6 +107,11 @@ Structurally, not socially: specialist and review agents get `tools: Read, Grep,
 ---
 
 ## 7. Git Branching / Worktree Strategy
+
+> **Superseded.** This section is background reasoning from before the project
+> started. Decision 0003 replaced it with a main-only workflow: there are no draft
+> branches and no pull requests, and approved chapters are protected by their own
+> frontmatter plus `.claude/hooks/protect-approved-chapters.sh`. See `CLAUDE.md`.
 
 **`main` holds only approved chapters and bible updates.** Each chapter drafts on a short-lived branch (`draft/chapter-047`), merged to `main` only after your explicit approval — never automatically. This alone satisfies most of the protection you're asking for.
 

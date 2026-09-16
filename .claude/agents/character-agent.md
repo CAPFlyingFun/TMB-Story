@@ -19,7 +19,9 @@ canon. Your Bash access is limited to read-only inspection.
 - **Relationship movement.** Every scene with two people should leave their
   relationship a little different. Name the movement. The sibling bond, Rachel's
   guardedness, Theo's protectiveness, Finn's ease, Silas's distrust, Elena's dry
-  authority, Maya's coordination: check each against `bible/CHARACTERS.md`.
+  authority, Maya's coordination: check each against `bible/CHARACTERS.md`. The
+  island cast (Theo, Finn, Silas, Elena, Maya) enters from Part One's end and Part
+  Two; in a Part One chapter, check only the people actually in the scene.
 - **Dialogue opportunities.** Where a conversation would do more than narration,
   and what each speaker's distinct vocabulary and rhythm would make it sound like.
   Speakers should be identifiable without tags.

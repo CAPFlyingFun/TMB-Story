@@ -30,6 +30,7 @@ file is updated.
 ---
 
 ### 0001 — Chapter length
+**Amended by decision 0010, and 0010 was itself amended when Joshua approved Chapter 1 at 3,294 words. Read 0010 for the rule in force; the range below is history.**
 **Context:** Rev 1 §12 set 1,600–1,800 words, matched to Beyond Extinction; Rev 2 and Rev 3 carried "audio-clarity rules" forward without restating a number. Joshua's repository-initialization brief sets 1,800–2,500 with a natural target of 2,100–2,300.
 **Decision:** 1,800–2,500, target 2,100–2,300; never pad or cut a good chapter to hit a number.
 **Consequences:** `CLAUDE.md` carries the rule; the architecture file is not edited (historical record).

@@ -1,3 +1,9 @@
+PRECEDENCE: these memory files are WORKING NOTES, not canon. Where a memory file and a
+bible file disagree, the BIBLE WINS and the memory is stale and must be corrected. Keep
+facts here only where they are genuinely supplementary (clock arithmetic, line references,
+draft-specific observations); for cast, creatures, locations and mysteries, point at the
+bible rather than copying it, so the two cannot drift.
+
 # Continuity memory — index (keep under 200 lines)
 
 Status tags: LOCKED (architecture Rev 3 §1/§14 or Rev 2 LOCKED table) · PLAN (approved

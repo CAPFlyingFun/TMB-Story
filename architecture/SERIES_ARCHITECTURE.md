@@ -1,4 +1,7 @@
 # TMB — Series Architecture, Revision 3
+
+> **Note:** `SERIES_ARCHITECTURE.docx` beside this file is Joshua's original and is
+> NOT maintained. This `.md` is the living copy. If the two disagree, this file wins.
 ### Locking the seven answers, expanding the creature system, and relocating Daniel
 
 ---
