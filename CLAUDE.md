@@ -29,6 +29,17 @@ newer or more authoritative source, and flag it in the handoff report.
 
 These are craft invariants. The prose is heard, not seen.
 
+- **Voice follows the mood (Joshua, 2026-09-16, decision 0006).** The prose
+  changes register with the scene. A happy or funny stretch is light, simple and
+  playful: plain words, short sentences, one idea at a time, jokes from character
+  that land out loud, the warmth of a story told to a bright child. A serious or
+  dangerous stretch earns weight: fuller sentences, slower beats, real dread or
+  grief, said plainly rather than hinted. Move between the two inside a chapter
+  when the story turns, and let the turn be felt. Whatever the register, a listener
+  must never get lost: concrete pictures, clear geography, one actor per clause.
+  Wonder in small things everywhere. Humour somewhere in every chapter, even the
+  dark ones, because that is who these people are. Subtext is allowed under either
+  register; it never replaces a surface that is a pleasure on its own.
 - **Length:** 1,800–2,500 words; natural target 2,100–2,300. Never pad or cut a good
   chapter to hit a number. Record the real count in the frontmatter.
 - **Tense and person:** past tense, close third person. **One POV per chapter**, no
