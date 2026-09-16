@@ -117,7 +117,7 @@ By ten there were things up. A bumblebee, huge and slow. Two striped flies that 
 
 At half past ten, which was low water, they ate lunch on a silver log at the island end of the bar, and Caleb put his sandwich down for one second to open his water, and a gull took half of it. Not snatched. Took. It landed, considered, picked up half a sandwich and left, like a man collecting a parcel.
 
-"Hey," Caleb said, to a bird.
+"Hey," Caleb said, to the bird.
 
 Marco did not even look up from his own. "That's his sandwich now. Law of the beach."
 

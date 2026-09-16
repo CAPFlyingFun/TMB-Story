@@ -191,3 +191,9 @@ dialogue beats added about 300.
   action Caleb performs on the page.
 - Length: 3,294, over the 3,000 guide by a margin; flagged above for Joshua.
 - Dialogue: no run of bare lines; speakers named; beats vary (decision 0011).
+
+## Post-approval edit (Joshua, 2026-09-16)
+
+One line changed in the APPROVED chapter on Joshua's explicit instruction: "Hey,"
+Caleb said, to a bird. → "Hey," Caleb said, to the bird. Word count unchanged.
+Flagged here and in the commit subject per the canon-protection rule.
