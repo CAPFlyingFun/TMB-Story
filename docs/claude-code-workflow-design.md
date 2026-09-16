@@ -197,7 +197,7 @@ STEP 3 - Write CLAUDE.md
 Create CLAUDE.md at the repo root containing:
 - A short project description and a pointer to
   architecture/SERIES_ARCHITECTURE.md as the creative source of truth
-- Audiobook writing rules: 1,800-2,500 word chapters (natural target
+- Audiobook writing rules: 1,800-3,000 word chapters, about 2,200 on average (decision 0010; was 1,800-2,500 with target
   2,100-2,300; never pad or cut a good chapter to hit a number), past
   tense, close third person, one POV per chapter, one to three scenes,
   dialogue/action-forward prose, distinct character voices without

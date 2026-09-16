@@ -9,7 +9,7 @@ file is updated.
 
 ## Index
 
-- 0001 — Chapter length 1,800–2,500 (target 2,100–2,300) supersedes Rev 1 §12's 1,600–1,800 — **Accepted (Joshua, 2026-09-16)**
+- 0001 — Chapter length 1,800–2,500 (target 2,100–2,300) supersedes Rev 1 §12's 1,600–1,800; amended by 0010 — **Accepted (Joshua, 2026-09-16)**
 - 0002 — Four-digit chapter numbering (`chapter-0001.md`) — **Accepted with the foundation build (2026-09-16)**
 - 0003 — `main` is the only branch; protection via frontmatter + hook, not branching — **Accepted (Joshua, 2026-09-16)**
 - 0004 — Future reader: GitHub Pages serves from `main`; visual theme follows Portrait-Lifesyle-Prompt-Studio — **Accepted (Joshua, 2026-09-16), not yet built**
@@ -17,6 +17,8 @@ file is updated.
 - 0006 — Prose voice follows the mood: light and simple when happy or funny, dramatic when serious; humour in every chapter — **Accepted (Joshua, 2026-09-16)**
 - 0007 — Trello is the planning board (checked first, every chapter); the story and the game follow the same canonical adventure — **Accepted (Joshua, 2026-09-16)**
 - 0008 — New opening: Alder Sound and Tern Island; the crash at Ch. 3; M33 and M34 added; M34's answer is Rachel — **Accepted via Trello (Joshua + ChatGPT, 2026-09-16)**
+- 0009 — Endings hook the next chapter; time passing is spoken, never `***` — **Accepted (Joshua, 2026-09-16)**
+- 0010 — Chapter length about 2,200 average, range 1,800–3,000; amends 0001 — **Accepted (Joshua, 2026-09-16)**
 
 ---
 
@@ -75,4 +77,10 @@ file is updated.
 **Context:** Joshua read the corrected Chapter 1 and asked for two craft changes that apply to every chapter: no `***` scene breaks (state the gap in words, "an hour later", "after they got home"), and endings that hook the listener into the next chapter rather than stopping. His named devices: an unfinished line of dialogue, an event, a sound, an action.
 **Decision:** Both become audiobook writing rules in `CLAUDE.md`. A scene transition names the time passed and, if it changes, the place. A chapter's final lines lead into the next chapter's plan without revealing early; a warm or funny beat may precede the hook but not replace it. The ending-type rotation still applies to the hook.
 **Consequences:** Chapter 1's two `***` breaks replaced with spoken transitions; its ending now runs past the scale gag into Rachel's texts (the joke, then "which island?", then an instant reply Caleb does not see), which is the door Chapter 2's card opens on (Rachel and the letter, Rachel's one professional question too many). `ending_type` for Chapter 1 changes from funny character beat to unanswered question. The scene specialist's review checklist gains both rules.
+**Status:** Accepted, 2026-09-16.
+
+### 0010 — Chapter length: around 2,200, free between 1,800 and 3,000
+**Context:** Chapter 1 kept landing over decision 0001's 2,500 ceiling (2,990 after the hook), and each round asked Joshua whether to cut a beat. His answer set the rule instead: "the average should be around 2,200 words, but can fluctuate from 1,800–3,000 words depending on the story's chapter and plot."
+**Decision:** Amends 0001. Target average about 2,200; hard range 1,800–3,000; where a chapter lands inside that range is decided by what the chapter has to do, not by the number. "Never pad or cut a good chapter to hit a number" stands.
+**Consequences:** `CLAUDE.md` length rule rewritten. Mini-Arc 1 per-chapter targets adjusted upward for the set-piece chapters; the rest stay near 2,100–2,300. Chapter 1 at 2,990 is inside the range and is not cut. The running average is checked at the ten-chapter boundary, not per chapter.
 **Status:** Accepted, 2026-09-16.

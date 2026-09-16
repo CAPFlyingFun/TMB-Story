@@ -55,7 +55,7 @@ Bennett home, Tidewater Instruments, Mercy General.
 ### Chapter 0001 — The Bar
 - **Trello:** Godot https://trello.com/c/y7dgXHZ2 · TypeScript https://trello.com/c/OFjCwBSI
 - **Playable beat flow:** Load gear → cross bar → survey wildlife → inspect ant behavior → regroup and compare findings → warn Ines → pack equipment → navigate rising crossing → return.
-- **POV:** Caleb · **Target:** 2,300–2,500 (the set piece earns it)
+- **POV:** Caleb · **Target:** 2,500–3,000 (the set piece earns it; decision 0010)
 - **Opening situation:** 6 a.m. at the station boathouse in the dark; on the bar by half past seven on
   the falling tide; low water at half past ten; Ines's rule: off the bar by half past
   twelve, back at the station by one. Marco loading the van with the enthusiasm of a man who is not
@@ -158,7 +158,7 @@ Bennett home, Tidewater Instruments, Mercy General.
 ### Chapter 0003 — The Enclosure
 - **Trello:** Godot https://trello.com/c/8gnxJcx8 · TypeScript https://trello.com/c/kXQIW8Uy
 - **Playable beat flow:** Skiff to island → finish survey → navigate around web → climb to enclosure → inspect D.M. tag and seals → pack for weather → drive sequence → crash → vision (cutscene).
-- **POV:** Caleb · **Target:** 2,300–2,500
+- **POV:** Caleb · **Target:** 2,300–2,800
 - **Opening situation:** Saturday, the tide wrong for the bar, so Gus runs
   the four of them out in the station skiff. A calm, gold October morning.
   The island at rest is even better than the island in a hurry.
@@ -418,7 +418,7 @@ Bennett home, Tidewater Instruments, Mercy General.
 ### Chapter 0010 — Low Water
 - **Trello:** Godot https://trello.com/c/sKcjgfty · TypeScript (TypeScript board: card missing, flagged)
 - **Playable beat flow:** Sneak out → cross at low water → reach enclosure → unlock and inspect live equipment → compare card to Nora's drawing → detect recent or approaching presence → hide and detour → escape island → preserve proof.
-- **POV:** Caleb · **Target:** 2,300–2,500
+- **POV:** Caleb · **Target:** 2,300–2,800
 - **Opening situation:** Thursday, an hour before sunset, the gravel bar
   shining, two eighteen-year-olds who were told not to do exactly this,
   doing it. Caleb's cast in a bread bag. Nora with a headlamp and a

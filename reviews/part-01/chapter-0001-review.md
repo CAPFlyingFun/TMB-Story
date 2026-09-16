@@ -45,13 +45,10 @@ Joshua: "95% there." Two changes, both now standing rules (decision 0009):
 
 ## Word count
 
-The chapter runs 2,990 words against a ceiling of 2,500 (decision 0001). Two cutting
-passes brought it from 3,385 to 2,875; the hook added 115. The remaining overage is
-a beat, not fat. The nearest clean cut is the pollinator sweep (about 110 words: the empty bag,
-"zero is science", the fly in a bee costume); the next is the plovers and the
-sanderlings in the bird count (about 50). I did not take either, because the card
-names the sweep as a beat and the count is where Caleb's "best job in the world"
-lands. Joshua's call: approve at this length, or name the beat to lose.
+The chapter runs 2,990 words. Joshua's rule (decision 0010, 2026-09-16) is about
+2,200 on average with a range of 1,800 to 3,000 as the plot needs, so this chapter
+is inside the range and no longer needs a beat cut. Two cutting passes brought it
+from 3,385 to 2,875; the hook added 115.
 
 ## What changed from the card and why
 
@@ -164,4 +161,4 @@ lands. Joshua's call: approve at this length, or name the beat to lose.
   off the bar.
 - No second-person command language; every beat in `playable_beat_flow` is an
   action Caleb performs on the page.
-- Length: over ceiling, flagged above.
+- Length: 2,990, inside the 1,800–3,000 range (decision 0010).

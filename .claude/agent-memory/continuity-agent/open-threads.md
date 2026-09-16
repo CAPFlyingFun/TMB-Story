@@ -42,3 +42,4 @@ Not met / changed by the draft (carry forward):
 - Ch 1 now ENDS in the van on Rachel's texts: reply 1 to the mud photo, a joke ("Boots go ON the gravel, Caleb"); reply 2 asks WHICH ISLAND; Nora types "Tern" and sends it; the phone lights up again at once. Caleb never sees reply 2 or reply 3; Nora reads them and says nothing. Ch 2 (Nora POV) owns what reply 3 said and whether Nora tells Caleb. Rachel therefore KNOWS the island's name before the dusk drop-off and before the dinner telling.
 - Ch 1 ending_type is now "unanswered question", not "funny character beat". Ch 2 may not end on an unanswered question.
 - The two `***` breaks are gone; transitions are spoken ("An hour later, at the island end of the bar", "Ten minutes down the road"). Ch 2 must do the same.
+- Length rule changed (decision 0010): average ~2,200, range 1,800–3,000. Ch 1 at 2,990 is in range; item 10 above is closed.

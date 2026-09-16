@@ -57,8 +57,10 @@ These are craft invariants. The prose is heard, not seen.
   Wonder in small things everywhere. Humour somewhere in every chapter, even the
   dark ones, because that is who these people are. Subtext is allowed under either
   register; it never replaces a surface that is a pleasure on its own.
-- **Length:** 1,800–2,500 words; natural target 2,100–2,300. Never pad or cut a good
-  chapter to hit a number. Record the real count in the frontmatter.
+- **Length (Joshua, 2026-09-16, decision 0010):** about 2,200 words on average,
+  free to run anywhere from 1,800 to 3,000 as the chapter's story and plot need. A
+  set piece earns the top of the range; a quiet chapter sits low. Never pad or cut a
+  good chapter to hit a number. Record the real count in the frontmatter.
 - **Tense and person:** past tense, close third person. **One POV per chapter**, no
   head-hopping. Alternate primarily between Caleb and Nora; Rachel, Daniel and others
   earn POV only once they are active in the story.
