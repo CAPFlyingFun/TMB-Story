@@ -15,6 +15,7 @@ Flag explicitly wherever the rates are shown to diverge.
 ## Outside-world clock
 | Story date | Chapter | Event |
 |---|---|---|
+| Year 0, a Tuesday in the first week of October, 06:00–~12:00 | 0001 | The twins' first Tern Island field day, three weeks into their contracts. Low water 10:30; the front arrives six hours early; the team leaves at 11:00 and crosses the saddle 11:22–11:24. Downstream: Ch. 3's Saturday lows fall about 13:50 and 02:15 (skiff run, not a foot crossing); Ch. 10's Thursday must be +9 or +23 days for a low in working hours. |
 
 ## Island clock
 | Island date | Chapter | Event |

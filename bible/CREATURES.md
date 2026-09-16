@@ -40,6 +40,16 @@ Individual entry template:
 ### Praying mantis — conditioned at best; reverts under stress
 ### Wolf spider — tolerance only, rare handlers, prestige and danger
 
+## Normal world, human scale (Part One)
+
+### Carpenter ant (Camponotus sp., unnamed on the page)
+- **Size relative to a human:** ordinary; the twins are full-size in Part One.
+- **Real behaviour that matters:** nests in damp, decaying wood; a colony whose nest is flooded or soaked relocates brood, in daylight if it must, along an existing trail to a drier site; workers carry larvae and pupae (pale, rice-sized; larger larvae held out in front) and may carry other workers curled beneath them (adult transport). None of this is weather foresight; it is a reaction to a wet nest. Species and Latin name are bible-only; the page says "big ones, black, with legs the colour of rust".
+- **On the page:** a colony in a drift log at Tern Island's wrack line, soaked from underneath on the surge day, moves its brood up the beach, across the trail and into an old stump at the edge of the summit clearing. Caleb reads it as "moving house" and follows the line to the summit. `[ch 0001]`
+- **Locked / provisional:** provisional (species); the summit-stump colony is canon.
+
+Also on the page in Part One, human scale, no entry needed unless they recur: black turnstones, sanderlings and three black-bellied plovers on the spit, which lift together and leave downwind before the surge; a gull that takes half a sandwich; a fall bumblebee and two drone flies in the sweep. `[ch 0001]`
+
 ## Wider bestiary (add as the twins' range and skill reach them)
 
 ## Named individuals

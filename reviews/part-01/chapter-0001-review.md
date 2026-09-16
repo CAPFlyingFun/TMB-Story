@@ -1,7 +1,7 @@
 # Chapter 0001 — The Bar — handoff report
 
 Date: 2026-09-16 · POV: Caleb · Words: 3,294 · Ending type: unanswered question ·
-Status: `in-review`, waiting on Joshua.
+Status: `approved` by Joshua, 2026-09-16, at 3,294 words as-is ("the 1,800–3,000 range is a target, not a hard limit"). Bible updates below were applied on approval.
 
 Source of the plan: Trello card `01 — The Bar` in the `📖 STORY — Chapters 1–50`
 list (read on both TRADDOMIUM boards before drafting; the two cards agreed), the

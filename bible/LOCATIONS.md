@@ -19,7 +19,16 @@ Entry template:
 
 ### The Bennett home (Port Alder)
 ### Alder Sound Field Station (boathouse, lab with the leaking skylight, dock, van)
+- **Status:** discovered `[ch 0001]`
+- **What it is like:** a boathouse that smells of diesel and wet rope at six in the morning; a corridor lined with group photographs going back to the nineties, people in fleeces on boats, which Caleb has walked past for three weeks without knowing a face; a van (Marco usually drives it; Ines drove it home on the surge day); a radio to Gus at the station, who keeps the boat. The lab, skylight and dock are planned, not yet on the page.
+- **Who:** Dr. Ines Marchetti (field lead), Marco Sato, Gus Pelletier, the twins on three-month seasonal contracts (three weeks in at Ch. 1). Tidewater Instruments services its loggers (plan; not yet on the page).
+- **First appears:** `[ch 0001]`
 ### Tern Island (the gravel bar, the transect, the summit, the enclosure)
+- **Status:** discovered `[ch 0001]`
+- **Where:** four hundred metres straight out from a mainland car park across a gravel bar that is walkable for a few hours around low water. The crest is dry gravel with driftwood; two-thirds across, near the island end, the crest sags for thirty steps into the saddle, which floods first and from the windward side; the gravel there "ticks" as the sea comes up through the stones. Smooth grey mud on the sheltered side of the bar takes a person to the shin. A soft patch on the left of the saddle (facing the island) in the morning.
+- **What it is like:** at the island end of the bar, a lee beach with a wrack line of dark weed and silver drift logs; at the top of the beach the shore logger (a box on a post with a wire down the beach into the water) and a second small pressure logger beside it; a transect of stakes along the top of the beach out to the spit; the spit, a low gravel finger with pools and shorebirds; a trail up through alders into firs; the summit, a hilltop of moss and rust with a bent metal post, a concrete lump with a rusted ring, an old stump at the edge of the clearing (the ants' new nest), and one knee-high grey metal box, square, clean and dry, padlocked, "the only thing up there that wasn't rusting". The box is the enclosure of M34; the page has not yet called it that. The padlock must be a combination padlock (Ch. 9 lock code).
+- **Ines's rule:** off the bar by half past twelve, back at the station by one. On the surge day the team left at eleven and crossed the saddle at shin depth at 11:22–11:24.
+- **First appears:** `[ch 0001]`
 ### The coast road (the crash site)
 ### The hospital
 ### Professor Kessler's campus

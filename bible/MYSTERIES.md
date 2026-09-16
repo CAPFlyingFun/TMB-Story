@@ -62,12 +62,20 @@ old signal was really from Daniel · the organization's full agenda beyond the s
 ## Clues planted / false clues
 | Id | Chapter | Clue (quoted or paraphrased) | Seen by | True/false |
 |---|---|---|---|---|
+| M34 | 0001 | On Tern Island's rusting summit, "one grey metal box about the height of his knee, square and clean and dry, with a padlock on it, the only thing up there that wasn't rusting." | Caleb alone, registered as nothing | true |
+| M13 | 0001 | Rachel, by text, after the joke about the boots: she wants to know which island; Nora sends "Tern"; the phone lights up again before Nora has put it down. | Nora (read); Caleb (heard "which island", saw nothing) | true (meaning open) |
 
 ## Who knows what
 (one block per mystery as it becomes active)
 
 ### M01
 - Caleb: — · Nora: — · Rachel: — · audience: —
+
+### M13 (subtext from Ch. 0001)
+- Caleb: nothing; thinks the island is "not a secret" · Nora: Mom asked which island and answered at once; has not said so · Rachel: knows the twins were on Tern Island on the surge day, from Nora's text · audience: a mother asked one question too many.
+
+### M34 (box seen Ch. 0001; ladder entry Ch. 7)
+- Caleb: has seen the box; knows only that it was clean and dry on a rusting hilltop · Nora: has not seen it · Rachel: (per plan) knows it exists and keeps it alive; nothing on the page yet · audience: has been shown it once and told nothing.
 
 ## Resolved archive
 (one line each, with the answering chapter, once fully answered)

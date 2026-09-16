@@ -36,9 +36,9 @@ new_canon:
   - "Ines's rule: off the bar by half past twelve, back at the station by one. She does not spend margin."
 playable_beat_flow: ["load gear at the boathouse", "cross the bar on the falling tide", "count birds on the spit", "sweep for pollinators", "get stuck in the lee-side mud", "follow the ant column uphill", "glimpse the summit box", "regroup with Nora and compare findings", "report to Ines", "pack equipment", "navigate the flooding saddle with a pole", "return to the van", "read Mom's texts"]
 ending_type: unanswered question
-review_status: in-review
+review_status: approved
 audio_status: not-started
-approved_on: ""
+approved_on: "2026-09-16"
 ---
 
 # Chapter 1 — The Bar

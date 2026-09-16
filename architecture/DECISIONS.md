@@ -82,7 +82,8 @@ file is updated.
 
 ### 0010 — Chapter length: around 2,200, free between 1,800 and 3,000
 **Context:** Chapter 1 kept landing over decision 0001's 2,500 ceiling (2,990 after the hook), and each round asked Joshua whether to cut a beat. His answer set the rule instead: "the average should be around 2,200 words, but can fluctuate from 1,800–3,000 words depending on the story's chapter and plot."
-**Decision:** Amends 0001. Target average about 2,200; hard range 1,800–3,000; where a chapter lands inside that range is decided by what the chapter has to do, not by the number. "Never pad or cut a good chapter to hit a number" stands.
+**Decision:** Amends 0001. Target average about 2,200; range 1,800–3,000; where a chapter lands is decided by what the chapter has to do, not by the number. "Never pad or cut a good chapter to hit a number" stands.
+**Amendment (Joshua, 2026-09-16, approving Chapter 1 at 3,294):** the range is a TARGET, not a hard limit. A chapter may exceed it when the story naturally earns the length, especially a major set piece, an opening, a finale or a high-dialogue chapter. Do not pad to reach the minimum; do not cut useful material to hit the maximum.
 **Consequences:** `CLAUDE.md` length rule rewritten. Mini-Arc 1 per-chapter targets adjusted upward for the set-piece chapters; the rest stay near 2,100–2,300. Chapter 1 at 2,990 is inside the range and is not cut. The running average is checked at the ten-chapter boundary, not per chapter.
 **Status:** Accepted, 2026-09-16.
 
