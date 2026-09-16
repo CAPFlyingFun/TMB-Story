@@ -61,4 +61,7 @@ raised and then forgotten. Suggest the smallest fix for each. Do not rewrite.
   chapter's last lines hook the NEXT chapter's plan without revealing early, and
   every passage of time is spoken ("an hour later, at the spit"), never marked with
   `***` or a blank gap.
+- In review mode, flag any run of three or more bare dialogue lines and any stretch
+  where "said" alternates mechanically (decision 0011): most lines want an action, a
+  look or a reaction a listener can picture.
 - Be short. Ranked lists over essays. The main session decides.

@@ -4,7 +4,7 @@ title: "The Bar"
 part: 1
 mini_arc: 1
 pov: Caleb
-word_count: 2990
+word_count: 3294
 story_time:
   clock: outside
   date: "Year 0, first week of October (a Tuesday)"
@@ -45,35 +45,39 @@ approved_on: ""
 
 At six in the morning the boathouse smelled like diesel and wet rope and the coffee Marco had made too strong on purpose, and Caleb Bennett was losing an argument about a backpack.
 
-"Mine's heavier," he said.
+"Mine's heavier," he said, and hefted it to prove it, and nearly took out a lamp.
 
-"It isn't," said Nora.
+"It isn't." Nora did not look up from her boot laces.
 
 "I've got the water."
 
-"I've got the jars, the stakes, the tape and the spare battery, which weighs as much as a cat." His sister unzipped her jacket and took out a luggage scale. A little black one with a hook, the kind people use at airports. She had brought a luggage scale to work.
+"I've got the jars, the stakes, the tape and the spare battery, which weighs as much as a cat." His sister finished the knot, stood up, unzipped her jacket and took out a luggage scale. A little black one with a hook, the kind people use at airports. She had brought a luggage scale to work.
 
-Marco Sato, who was twenty-four and usually drove the van and had so far carried nothing at all, put his coffee down to watch this properly. "Oh, she came prepared," he said. "She came to *end* you."
+Caleb stared at it. Then at her. "You did not."
 
-Nora hooked Caleb's pack and lifted it. "Six point two." She hooked her own. "Six point one."
+Marco Sato, who was twenty-four and usually drove the van and had so far carried nothing at all, put his coffee down to watch this properly. "Oh, she came prepared," he said, delighted. "She came to *end* you."
 
-"Ha," said Caleb.
+Nora hooked Caleb's pack and lifted it, watching the little screen with the face she used for maths. "Six point two." She hooked her own. "Six point one."
 
-"A hundred grams. Would you like a medal, or should we just tell people?"
+"Ha," said Caleb, and pointed at her.
 
-"Loser carries the winner's water all day," said Marco. "That's the rule. I just made it up. It's binding."
+Nora set the pack down gently, as if it had feelings. "A hundred grams. Would you like a medal, or should we just tell people?"
 
-"Van," said Dr. Ines Marchetti, from the door, and that was the end of that.
+"Loser carries the winner's water all day," Marco announced from behind his coffee. "That's the rule. I just made it up. It's binding."
+
+"Van," said Dr. Ines Marchetti, from the door, without coming in, and that was the end of that.
 
 They drove out in the dark with the heater roaring and the packs on their knees, three weeks into a job Caleb still could not believe was a job. Field assistant. Seasonal. Three months. He had got in on a summer of trail crew and a letter from his old biology teacher that he had never been allowed to read. Nora had got in on a spreadsheet nobody had asked for: nine years of the station's bird counts, sent to Ines with a note that said *you may find this useful.* Ines had found it useful. There was a corridor at the station lined with group photographs going back to the nineties, and Caleb had walked past them every day for three weeks without knowing a single face.
 
 Marco drove and talked enough for the van. Ines rode in front and let him.
 
-"Big day, kids. First crossing on foot. Anybody scared?"
+"Big day, kids." Marco found Caleb's eyes in the mirror. "First crossing on foot. Anybody scared?"
 
-"We're not kids," said Nora.
+"We're not kids," said Nora, to the window.
 
 "You're eighteen. You're technically a rumour."
+
+Caleb laughed. Nora tried not to, and lost.
 
 By the time they reached the car park at the mainland end, the sky had gone the colour of the inside of a shell, and the bar was coming up out of the water.
 
@@ -81,9 +85,9 @@ That was the thing about the bar. It was not there, and then it was. Four hundre
 
 Ines walked the middle, where the gravel stood up in a dry crest with driftwood along it, and talked over her shoulder. "Stay on the crest. Two-thirds across there's a dip, near the island end. We call it the saddle. That's where the water comes in first. Remember what it looks like dry." She stopped so they could see it: the crest sagged for thirty steps and the gravel there was darker, still wet. "We are off this bar by half past twelve, whatever's finished. Back at the station by one. Questions."
 
-"Is that a question or a statement," said Marco.
+Marco, hands in his pockets, looked at the sky. "Is that a question or a statement?"
 
-"It's a statement."
+Ines did not turn round. "It's a statement."
 
 Caleb had a question, which was whether the smooth grey mud on the sheltered side of the bar would hold a person. He tested it by stepping on it.
 
@@ -95,23 +99,27 @@ He went in to the shin with both feet, and when he pulled the first one out the 
 
 "I'm calling his mother," said Nora, and held up her phone. She had already taken the picture. Caleb saw her thumbs move and knew exactly where it was going.
 
-Ines did not laugh. She waited until he had squelched back onto the crest and said, "Now you know," and walked on. It took Caleb half the bar to work out that she was not annoyed. She was pleased.
+"Don't you—"
+
+"Sent."
+
+Ines did not laugh. She waited until he had squelched back onto the crest, looked at his trousers, and then at him. "Now you know." And walked on. It took Caleb half the bar to work out that she was not annoyed. She was pleased.
 
 An hour later, at the island end of the bar, it was full daylight and the island was a different animal. Up close it kept unfolding: a beach where the bar landed, with a long line of dark weed and silver logs where the sea had left its laundry; a trail going up through alders into the firs; and on the far side the spit, a low gravel finger with pools in it and birds all over it.
 
 Ines split them at the beach. She and Nora went to the shore logger, a box on a post at the top of the lee beach with a wire running down the beach into the water, and a second little box beside it that Nora called *the pressure logger* and Marco called *the other one.* Download the memory, read the trace, swap the battery. Caleb and Marco took the count sheets and the binoculars along the transect, the marked line of stakes along the top of the beach, out to the spit.
 
-The count was three stops along the spit, ten minutes each. Marco called the birds and Caleb clicked the counter and wrote them down. Black turnstones, small dark ones that ran about in a gang and made a noise like a rattle. Sanderlings, which ran at the water and away from it and at it again, like they had bet each other. Three fat grey plovers that Marco said were "we don't get many out here, write that down, Ines will be thrilled." The sun came up properly and the spit warmed, and this was, he thought, the best job in the world.
+Three stops along the spit, ten minutes each. Marco called the birds and Caleb clicked the counter and wrote them down. Black turnstones, small dark ones that ran about in a gang and made a noise like a rattle. Sanderlings, which ran at the water and away from it and at it again, like they had bet each other. Three fat grey plovers that Marco said were "we don't get many out here, write that down, Ines will be thrilled." The sun came up properly and the spit warmed, and this was, he thought, the best job in the world.
 
-The pollinator sweep was less of a triumph. You walked the transect back through the last purple asters, swung the net twenty times, and looked in the bag. The first bag had a spider, a grass seed and some dew in it. "Write down zero," said Marco. "Zero is science."
+The pollinator sweep was less of a triumph. You walked the transect back through the last purple asters, swung the net twenty times, and looked in the bag. The first bag had a spider, a grass seed and some dew in it. Marco peered in beside him and nodded like a doctor. "Write down zero. Zero is science."
 
-By ten there were things up. A bumblebee, huge and slow. Two striped flies that Caleb logged as *honey bees* until Marco looked in the bag and said, "One pair of wings, Bennett. That's a fly in a bee costume," and Caleb crossed it out and wrote *fly (bee costume)* and felt wonderful.
+By ten there were things up. A bumblebee, huge and slow. Two striped flies that Caleb logged as *honey bees* until Marco looked in the bag, and then at Caleb, with enormous pity. "One pair of wings, Bennett. That's a fly in a bee costume." Caleb crossed it out and wrote *fly (bee costume)* and felt wonderful.
 
 At half past ten, which was low water, they ate lunch on a silver log at the island end of the bar, and Caleb put his sandwich down for one second to open his water, and a gull took half of it. Not snatched. Took. It landed, considered, picked up half a sandwich and left, like a man collecting a parcel.
 
 "Hey," Caleb said, to a bird.
 
-"That's his sandwich now," said Marco. "Law of the beach."
+Marco did not even look up from his own. "That's his sandwich now. Law of the beach."
 
 Caleb went after the crust the gull had dropped, out of principle, and that was how he came to be kneeling in the wet weed at the foot of a drift log, and how he saw the ants.
 
@@ -121,19 +129,19 @@ He lay down on his stomach in the weed without checking what he was lying on, an
 
 The line went up the beach, across the sand, into the grass at the edge of the trees, and kept climbing. Coming back down the same line, weaving between them, were ants carrying nothing, going back for more. One of them was carrying another ant, curled up small underneath it like a sleeping child, and the one being carried did not appear to mind.
 
-"They're moving house," Caleb said. "In the middle of the day. They're taking the babies up the hill."
+"They're moving house," Caleb said, without lifting his face out of the weed. "In the middle of the day. They're taking the babies up the hill."
 
-"That's nice for them," said Marco, from the log.
+Marco, from the log, with his mouth full: "That's nice for them."
 
 Caleb got up and followed the line. Up the beach, into the grass, up a bank and onto the trail, where the ants had cut a path of their own across the human one and gone on uphill through the alders.
 
 "Transect's that way," Marco called, pointing the other way with his sandwich.
 
-"I know."
+"I know." Caleb did not stop.
 
 "You're walking the other way."
 
-"Also know that."
+"Also know that." He waved the count sheet over his shoulder and kept going.
 
 He followed them up. The trail climbed through the firs and came out on top, where the wind was and the trees opened, and the ants went to an old stump at the edge of the clearing and poured into it. That was where they were taking the babies. A dry stump on the summit, as far from the water as the island went.
 
@@ -151,29 +159,27 @@ Something in his stomach went cold and stayed cold. It was not a fact. It was th
 
 "Marco. Where's Ines?"
 
-"Up at the logger. Why?"
+"Up at the logger." Marco squinted at him. "Why?"
 
 "The birds have gone."
 
-"Birds do that."
+"Birds do that." He said it kindly, the way you talk to someone who has seen a ghost.
 
 "It's not time for them to do that."
 
 He was walking, and then running, up the beach, and he met Nora coming along the top of it from the logger with the station's little laptop open in one arm like a tray and the look on her face that meant a number would not behave.
 
-"Where's Ines," she said.
+"Where's Ines?" they said, both at once, and neither of them laughed.
 
-"Where's Ines," he said.
+Nora got there first. "She went to look at the saddle. Caleb, listen. The water at low was fifteen centimetres higher than the table says. Same minute. It's on the trace. And the pressure's dropped four in the last hour." She turned the screen so he could see a line going down like a cliff. "And the wind's gone round. If it keeps going, the saddle's wet by noon. Not half past one. Noon."
 
-"She went to look at the saddle. Caleb, listen. The water at low was fifteen centimetres higher than the table says. Same minute. It's on the trace. And the pressure's dropped four in the last hour." She turned the screen so he could see a line going down like a cliff. "Four in an hour is a lot. And the wind's gone round. If it keeps going, the saddle's wet by noon. Not half past one. Noon."
-
-"The birds have gone," Caleb said. "All of them, together, just now. The pools are filling and it's not time. And the ants have been moving the babies up the hill all morning, at least."
+"The birds have gone." Caleb was out of breath and it came out in a heap. "All of them, together, just now. The pools are filling and it's not time. And the ants have been moving the babies up the hill all morning, at least."
 
 They looked at each other.
 
 "Your ants," Nora said slowly, "and my numbers agree."
 
-"Yeah."
+"Yeah." He wiped his hands on his trousers, for something to do with them.
 
 "That's not a sentence I thought I'd say today."
 
@@ -189,9 +195,9 @@ A man's voice came out of it, slow and old and completely unbothered. "Gone sout
 
 "Ninety minutes," said Nora, who could not help it.
 
-"Ninety minutes is margin. I don't spend margin. Move."
+Ines was already walking. "Ninety minutes is margin. I don't spend margin. Move."
 
-Nora sealed the count sheets, the laptop and the printed table into the dry bag, then took the wet things, the gloves and the dripping net bag, into her own pack so nothing with writing on it would get wet. Marco put Caleb's pack on backwards over his own. Caleb got the net poles and the stakes and went to the front, because Ines pointed at him and said, "You walked the crest this morning. You know where the soft is. Go first with the pole. Say what you're standing on."
+Nora sealed the count sheets, the laptop and the printed table into the dry bag and took the wet things, the gloves and the dripping net, into her own pack so nothing with writing on it would get wet. Marco put Caleb's pack on backwards over his own. Caleb got the net poles and the stakes and went to the front, because Ines pointed at him and said, "You walked the crest this morning. You know where the soft is. Go first with the pole. Say what you're standing on."
 
 The crest was dry all the way to the saddle. At the saddle there was water on the gravel now, a thin sheet sliding in from the windward side and across to the other, and the gravel under it was ticking. The whole bar was ticking and bubbling like something cooking, as the sea came up through the stones from underneath.
 
@@ -211,46 +217,46 @@ Ines came last, on the right-hand line Caleb had called, not wet above the shin,
 
 "Good catch," she said. "Both of you."
 
-"It was the ants," said Caleb.
+Caleb, dripping, could not leave it there. "It was the ants."
 
-"It was the pressure," said Nora.
+Nora folded her arms round the dry bag. "It was the pressure."
 
-"It was both," said Ines, "which is why I'm keeping you," and got in the van.
+Ines looked at the two of them, one and then the other, for about a second each. "It was both. Which is why I'm keeping you." And got in the van.
 
 Ten minutes down the road, with the heater roaring and the smell of wet everything, Nora took out the luggage scale.
 
-"No," said Caleb.
+Caleb saw it come out and closed his eyes. "No."
 
-"Rules are rules. Marco made them."
+"Rules are rules. Marco made them." She was already reaching for his pack.
 
-"They're binding," said Marco, from the front.
+"They're binding," said Marco from the front, not turning round.
 
-She hooked his pack. "Five point nine." She hooked her own, and it took two hands. "Six point five."
+She hooked his pack. "Five point nine." She hooked her own, and it took two hands. "Six point five." She showed him the screen. He did not need to see the screen.
 
-"That's water. That's the gloves and the net. You took all the wet stuff. That's not the pack, that's the sea."
+Caleb sat up. "That's water. That's the gloves and the net. You took all the wet stuff. That's not the pack, that's the sea."
 
-"I said heavier."
+"I said heavier." Nora put the scale away with great care.
 
 "You said heavier this *morning*, when it wasn't."
 
-"I said heavier," said Nora, "and it's heavier. I didn't say when. I didn't say why. I said."
+Nora considered this, and him, and found neither convincing. "I said heavier, and it's heavier. I didn't say when. I didn't say why. I said."
 
-"You said," said Caleb.
+"You said," said Caleb, to the roof of the van.
 
-"Four hundred grams," said Marco. "Bennett loses to a wet glove."
+Marco whistled. "Four hundred grams. Bennett loses to a wet glove."
 
 Ines drove, and said nothing at all, and Caleb was fairly sure, from the back of her head, that she was smiling.
 
-Nora's phone buzzed against the dry bag. She looked at it and laughed. "Mom. About the picture. 'Boots go ON the gravel, Caleb.'"
+Nora's phone buzzed against the dry bag. She looked at it and laughed. "Mom. About the picture." She read it out in Mom's voice. "'Boots go ON the gravel, Caleb.'"
 
-"Tell her I know that now."
+"Tell her I know that now." He put his head back against the seat.
 
 It buzzed again. Nora read it, and this time she did not laugh, and did not read it out. Her thumbs started to move, and stopped.
 
-"What?"
+"What?" Caleb opened one eye.
 
-"Nothing. She wants to know which island."
+"Nothing." She did not look up. "She wants to know which island."
 
-"So tell her. It's not a secret."
+"So tell her. It's not a secret." He shut the eye again.
 
 "It isn't," Nora said, and typed *Tern*, and sent it, and the phone lit up again before she had put it down.

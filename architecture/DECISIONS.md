@@ -19,6 +19,7 @@ file is updated.
 - 0008 — New opening: Alder Sound and Tern Island; the crash at Ch. 3; M33 and M34 added; M34's answer is Rachel — **Accepted via Trello (Joshua + ChatGPT, 2026-09-16)**
 - 0009 — Endings hook the next chapter; time passing is spoken, never `***` — **Accepted (Joshua, 2026-09-16)**
 - 0010 — Chapter length about 2,200 average, range 1,800–3,000; amends 0001 — **Accepted (Joshua, 2026-09-16)**
+- 0011 — Dialogue carries a body: beats, looks and reactions on most lines, no bare back-and-forth — **Accepted (Joshua, 2026-09-16)**
 
 ---
 
@@ -83,4 +84,10 @@ file is updated.
 **Context:** Chapter 1 kept landing over decision 0001's 2,500 ceiling (2,990 after the hook), and each round asked Joshua whether to cut a beat. His answer set the rule instead: "the average should be around 2,200 words, but can fluctuate from 1,800–3,000 words depending on the story's chapter and plot."
 **Decision:** Amends 0001. Target average about 2,200; hard range 1,800–3,000; where a chapter lands inside that range is decided by what the chapter has to do, not by the number. "Never pad or cut a good chapter to hit a number" stands.
 **Consequences:** `CLAUDE.md` length rule rewritten. Mini-Arc 1 per-chapter targets adjusted upward for the set-piece chapters; the rest stay near 2,100–2,300. Chapter 1 at 2,990 is inside the range and is not cut. The running average is checked at the ten-chapter boundary, not per chapter.
+**Status:** Accepted, 2026-09-16.
+
+### 0011 — Dialogue carries a body
+**Context:** Joshua, on the round-two Chapter 1: avoid bare back-and-forth dialogue, and avoid fixing it with repetitive "he said, she said"; instead attach actions, emotion, reactions and looks to the lines. His example turned three bare lines into lines with a speaker, a feeling and a small action each.
+**Decision:** A standing audiobook rule in `CLAUDE.md`. Most lines in an exchange carry a beat a listener can picture; constructions vary; speakers are named often enough that nobody counts back. Ornate tags and stacked adverbs remain out; the beat does the work the adverb would.
+**Consequences:** Chapter 1 revised line by line. The revision added about 300 words; with small trims it stands at the count in its frontmatter, over decision 0010's 3,000 by a margin flagged in the handoff report for Joshua's ruling (accept, trim, or split, where a split would shift every Trello chapter number and produce two chapters under 1,800). The scene and character specialists check the rule in review.
 **Status:** Accepted, 2026-09-16.

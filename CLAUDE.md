@@ -73,6 +73,12 @@ These are craft invariants. The prose is heard, not seen.
 - **Distinct voices, not tags.** Each recurring character has their own vocabulary and
   rhythm so dialogue identifies itself. Prefer action beats to dialogue tags. Use
   "said" sparingly and never ornate synonyms.
+- **Dialogue carries a body (Joshua, 2026-09-16, decision 0011).** No runs of bare
+  back-and-forth lines, and no "he said, she said" to fix them. Most lines in an
+  exchange come with something a listener can picture: an action, a look, a reaction,
+  a feeling, a pause, what the hands are doing. Vary the construction (beat before
+  the line, beat after, beat in the middle, the odd line left bare for pace). Name
+  who is speaking often enough that a listener never has to count back.
 - **Profanity:** minimal to none.
 - **Violence:** real consequences with real weight, no graphic anatomical description,
   no lingering.
