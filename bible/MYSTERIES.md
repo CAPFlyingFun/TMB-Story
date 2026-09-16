@@ -64,6 +64,9 @@ old signal was really from Daniel · the organization's full agenda beyond the s
 |---|---|---|---|---|
 | M34 | 0001 | On Tern Island's rusting summit, "one gray metal box about the height of his knee, square and clean and dry, with a padlock on it, the only thing up there that was not rusting." | Caleb alone, registered as nothing | true |
 | M13 | 0001 | Rachel, by text, after the joke about the boots: she wants to know which island; Nora sends "Tern"; the phone lights up again before Nora has put it down. | Nora (read); Caleb (heard "which island", saw nothing) | true (meaning open) |
+| M13 | 0002 (in review) | The third text was "Ok. Straight home after. Both.", inside a minute. Rachel folds a letter in three into her back pocket as the twins come in. She asks what the unit read, step or ramp, file or screen, before she asks about the saddle. At night she stands at the shelf with the keys in her hand, looking at the photograph. | Nora alone (letter, text wording, night look); Caleb (the questions, at the table) | true (meaning open) |
+| M33 | 0002 (in review) | The fixed words, verbatim: "Your father did research. He went out on a research trip. The boat was lost off the coast. Nobody was ever found. Eighteen years ago. That's the whole of it." Closer: "Pass your brother the salt." The salt was already at Caleb's elbow. | Caleb and Nora (heard, as always); Nora noted the salt | order and truth open (Ch 8, Ch 27) |
+| M34 | 0002 (in review) | Rachel with the keys in her hand at the door at night, "as if she had been going out, or had just come in, and was doing neither." Nothing says where. | Nora | seed only |
 
 ## Who knows what
 (one block per mystery as it becomes active)
@@ -71,8 +74,11 @@ old signal was really from Daniel · the organization's full agenda beyond the s
 ### M01
 - Caleb: — · Nora: — · Rachel: — · audience: —
 
-### M13 (subtext from Ch. 0001)
-- Caleb: nothing; thinks the island is "not a secret" · Nora: Mom asked which island and answered at once; has not said so · Rachel: knows the twins were on Tern Island on the surge day, from Nora's text · audience: a mother asked one question too many.
+### M13 (subtext from Ch. 0001; Ch. 0002 in review)
+- Caleb: heard the fixed words; asked "Did Dad ever work out there?" and got the door; thinks Mom simply dislikes the job; knows Nora shut him down, not why · Nora: the letter, the third text's wording and speed, the order of Mom's questions, the night look at the photograph; has explained the text and the worry away; has told no one · Rachel: the twins were on Tern on the surge day; the logger numbers; the file is still on the unit; Saturday's skiff; Caleb's question; does not know Nora saw the letter or the look · audience: all of it.
+
+### M33 (introduced Ch. 0002, in review)
+- Caleb and Nora: know the six sentences as the family story they were told before they could talk; neither has noticed they have an order · Rachel: recites them · audience: heard them once, verbatim; may suspect rehearsal; does not know they are false.
 
 ### M34 (box seen Ch. 0001; ladder entry Ch. 7)
 - Caleb: has seen the box; knows only that it was clean and dry on a rusting hilltop · Nora: has not seen it · Rachel: (per plan) knows it exists and keeps it alive; nothing on the page yet · audience: has been shown it once and told nothing.

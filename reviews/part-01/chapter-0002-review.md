@@ -1,7 +1,7 @@
 # Chapter 0002 — Sixty-Two Grams of Salt — handoff report
 
 Date: 2026-09-16 · POV: Nora · Words: 3,576 · Ending type: quiet unsettling line ·
-Status: `in-review`, waiting on Joshua. Not approved; no bible file changed.
+Status: `in-review`; per decision 0016 it stays in review with Chapters 1–10 for batch approval unless Joshua approves sooner. Bible updates below were applied at draft-complete, tagged `[ch 0002, in review]`.
 
 Source of the plan: Trello card `02 — Sixty-Two Grams of Salt | Nora` in the
 `📖 STORY — Chapters 1–50` list, read on BOTH boards before drafting; the two cards
@@ -168,7 +168,7 @@ luggage-scale callback (about 70).
    she had been going out, or had just come in". Nothing on the page says where; it
    keeps Chapter 10's visitor unidentified and is worth a clue-table row.
 
-## Proposed bible updates (NOT applied; applied on approval)
+## Bible updates (APPLIED at draft-complete under decision 0016, tagged in review)
 
 - `bible/LOCATIONS.md`: the Bennett home (top of a hill in Port Alder among firs;
   porch light; front hall with the shelf for keys and the photograph; small kitchen,

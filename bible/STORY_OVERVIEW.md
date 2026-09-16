@@ -4,7 +4,7 @@ Read this every chapter. It is a distillation of `architecture/SERIES_ARCHITECTU
 (Revision 3, which layers on Rev 2 and Rev 1 in `architecture/history/`). If this file
 and the architecture disagree, the architecture wins and this file gets fixed.
 
-**Currently at: Part 1, Chapter 0001 approved (The Bar, re-approved 2026-09-16 after decisions 0013/0014); Chapter 0002 in review — Mini-Arc 1 (Chapters 1–10) planned on Trello and mirrored in `outline/part-01/mini-arc-01.md`; next: Chapter 0002 (Nora POV; must not end on an unanswered question).**
+**Currently at: Part 1, Chapters 0001–0002 drafted and in review (batch approval at Chapter 10, decision 0016); next: Chapter 0003 (Caleb POV; must not end on a quiet unsettling line) — Mini-Arc 1 (Chapters 1–10) planned on Trello and mirrored in `outline/part-01/mini-arc-01.md`; next: Chapter 0002 (Nora POV; must not end on an unanswered question).**
 
 ---
 

@@ -190,9 +190,19 @@ Full version: `outline/WORKFLOW.md`. In short:
 5. Make justified corrections; self-check against the rules above.
 6. Verify every required Trello beat is on the page and nothing contradicts canon or
    reveals early. Write the handoff report in `reviews/`. Commit the draft.
-7. **Stop and wait for Joshua.** Only on his approval does `review_status` become
-   `approved`, `CHAPTER_INDEX.md` gain its row, the tracker line in
-   `STORY_OVERVIEW.md` move, and the approval get committed.
+7. **Stop and wait for Joshua's notes.** Chapters stay `in-review` until he approves
+   them, and he approves in BATCHES (Joshua, 2026-09-16, decision 0016): the first
+   batch is Chapters 1–10, approved together once Chapter 10 is written, unless he
+   approves sooner. While a chapter is in review it is still the ground the next
+   chapter stands on: `CHAPTER_INDEX.md` gets its row (Rev column `in-review`), the
+   bible gets its updates tagged `[ch NNNN, in review]`, and the tracker line moves.
+   Approval flips the status, the Rev column and the tags, and is committed.
+8. **A writing rule that changes mid-stream is a question, not a sweep.** When
+   Joshua changes how the prose is written (voice, sentences, register, English),
+   record the decision, apply it to the chapter in hand, and ASK him whether to
+   apply it to every earlier chapter. Do not rewrite earlier chapters until he says
+   so. Decisions 0006–0015 are the writing rules as of Chapter 2; he hopes they are
+   the last major change.
 
 Do not outline further than Joshua has asked for. Do not draft the next chapter on the
 strength of the current one being "probably fine."
@@ -200,7 +210,9 @@ strength of the current one being "probably fine."
 ## Canon protection
 
 A chapter file whose frontmatter says `review_status: approved` is canon. **It must
-never be silently rewritten.** Any change to an approved chapter, down to a comma,
+never be silently rewritten.** A chapter `in-review` is provisional canon: later
+chapters build on it as written, and it is edited only for Joshua's notes, the
+current writing rules, or a continuity error, each named in the commit. Any change to an approved chapter, down to a comma,
 requires an explicit instruction from Joshua for that chapter, and the change must be
 flagged in the handoff report and the commit message, not made quietly.
 `.claude/hooks/protect-approved-chapters.sh` blocks Edit/Write on such files as a

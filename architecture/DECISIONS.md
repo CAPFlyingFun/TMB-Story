@@ -24,6 +24,7 @@ file is updated.
 - 0013 — Complete sentences; fragments only for a joke, a cut-off or a trail-off — **Accepted (Joshua, 2026-09-16)**
 - 0014 — No accidental rhyme or verse cadence; Chapter 1 re-opened for 0013/0014 — **Accepted (Joshua, 2026-09-16)**
 - 0015 — The plain register: Beyond Extinction's style is the model; measured by `scripts/style-check.py` — **Accepted (Joshua, 2026-09-16)**
+- 0016 — Batch approval: Chapters 1–10 pending together; rule changes are asked before being applied to earlier chapters — **Accepted (Joshua, 2026-09-16)**
 
 ---
 
@@ -120,4 +121,10 @@ file is updated.
 **Analysis:** measured in `docs/STYLE_GUIDE.md`. BE's finished chapters average 6 words a sentence (median 5), 0.13 commas a sentence, no sentence over 30 words, paragraphs of one or two sentences. TMB's chapters averaged 11–13 words a sentence with a comma in most and sentences of 60+ words. The habits that make BE readable: one idea per sentence, very short sentences, almost no commas, beat fragments that are whole images, short paragraphs, plain words and familiar similes, feelings named then shown, parallel structure for steps.
 **Decision:** TMB adopts the register. Numeric targets per chapter (average sentence ≤ 9 words, median ≤ 7, narration sentences over 30 words ≤ 2%, commas ≤ 0.5 a sentence, "and" ≤ 0.3, paragraphs ≤ 60 words with none over 80) are checked by `scripts/style-check.py` before a chapter goes to review. Decision 0013 is refined: beat fragments of one to five words are allowed; clause fragments are not. BE's "• • •" scene breaks and journal epigraphs are NOT adopted (decision 0009 stands; TMB has no narrator-character).
 **Consequences:** Chapter 2 (in review) rewritten in the register and passes every target. Chapter 1 is approved and untouched; its numbers fail every sentence-level target, so it needs Joshua's re-open to be rewritten. The scene specialist runs the checker in review. `CLAUDE.md` carries the rule.
+**Status:** Accepted, 2026-09-16.
+
+### 0016 — Batch approval; ask before applying a rule change backward
+**Context:** Joshua, after re-opening Chapter 1 twice in one day for new writing rules: "let me review both before approval again so it's not approved and disapproved the next message... How about I not approve it until chapter 10... keep it pending until chapter 10. However, I may approve it sooner if good this time... just make a note and ask if I change something with the writing later if I want to apply it to all past chapters. Hopefully, they will be the last major writing change."
+**Decision:** Chapters 1–10 stay `in-review` and are approved together once Chapter 10 is written, or sooner at Joshua's word. An in-review chapter is provisional canon: the next chapter builds on it as written; its index row, bible updates (tagged `[ch NNNN, in review]`) and the tracker move at draft-complete and are confirmed at approval. When a writing rule changes, Claude records it, applies it to the chapter in hand, and asks Joshua whether to apply it to earlier chapters before touching them.
+**Consequences:** Chapter 1 re-opened for decision 0015 and rewritten in the plain register; both chapters `in-review`. Chapter 2's bible updates applied now, tagged in review. `CLAUDE.md` workflow steps 7–8 and `outline/WORKFLOW.md` updated. The approved-chapter hook still guards `approved` files only.
 **Status:** Accepted, 2026-09-16.

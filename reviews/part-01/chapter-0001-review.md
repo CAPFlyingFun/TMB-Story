@@ -224,3 +224,13 @@ taking the babies: a dry stump"; the summit as one sentence; "It was south now .
 and it smelled of rain"; "ticking and bubbling as the sea came up" (the "cooking"
 chime cut); "Then he was in the middle of the saddle". Kept as the joke: "Not
 snatched. Took." Word count 3,332. Re-approved by Joshua, 2026-09-16.
+
+## Re-opened again (Joshua, 2026-09-16): the plain register (decision 0015)
+
+Joshua re-opened Chapter 1 so the Beyond Extinction register could be applied.
+Every narration paragraph rewritten: one idea per sentence, commas cut, "and" chains
+broken, paragraphs split. No beat, fact or line of dialogue changed. Style check
+before and after: average sentence 11.3 → 8.3 words; narration sentences over 30
+words 10% → 0%; commas 0.80 → 0.38 a sentence; "and" 0.49 → 0.22. Word count
+3,392. Per decision 0016 the chapter stays `in-review` with Chapters 1–10 for
+batch approval, unless Joshua approves it sooner.

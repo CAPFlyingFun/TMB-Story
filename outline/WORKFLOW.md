@@ -157,3 +157,13 @@ Run a heavier audit and record it in `bible/CONTINUITY_LOG.md`: contradictions a
 the last stretch, "who knows what" drift, both clocks in `TIMELINE.md`, bible files
 that need splitting or compressing, mystery rhythm (has 5–15 chapters gone by without
 a question being answered or asked?). Housekeeping happens here, not mid-chapter.
+
+
+## Batch approval (decision 0016, 2026-09-16)
+
+Joshua approves chapters in batches, the first being Chapters 1–10 once Chapter 10
+is written; he may approve sooner. Until then chapters sit `in-review` and are still
+the ground the next chapter stands on: the index row, bible updates (tagged
+`[ch NNNN, in review]`) and the tracker move at draft-complete, and are confirmed at
+approval. When a writing rule changes, Claude applies it to the chapter in hand and
+asks Joshua whether to apply it to earlier chapters.

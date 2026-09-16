@@ -18,9 +18,13 @@ Entry template:
 ## Normal world (Part One)
 
 ### The Bennett home (Port Alder)
+- **Status:** discovered `[ch 0002, in review]`
+- **Where:** at the top of a hill among firs; the van does not do the hill in the wet, so the twins are dropped at the bottom. A river nearby (the two-count kept them out of it at seven).
+- **What it is like:** porch light over a glass-paned front door; a front hall with a shelf by the door where the keys and the photograph live, coat hooks, a mat; a small kitchen with the table against the wall, a heater under the window over the sink (the window is a mirror at night), a stove; a back step with the outside faucet; stairs that are silent on their outside edges (Nora's trick since she was six). The photograph: a man on a dock in a green jacket, squinting into sun, a boat's rail behind him; nobody looks at it.
+- **First appears:** `[ch 0002]`
 ### Alder Sound Field Station (boathouse, lab with the leaking skylight, dock, van)
 - **Status:** discovered `[ch 0001]`
-- **What it is like:** a boathouse that smells of diesel and wet rope at six in the morning; a corridor lined with group photographs going back to the nineties, people in fleeces on boats, which Caleb has walked past for three weeks without knowing a face; a van (Marco usually drives it; Ines drove it home on the surge day); a radio to Gus at the station, who keeps the boat. The lab, skylight and dock are planned, not yet on the page.
+- **What it is like:** a boathouse that smells of diesel and wet rope at six in the morning; a corridor lined with group photographs going back to the nineties, people in fleeces on boats, which Caleb has walked past for three weeks without knowing a face; a van (Marco usually drives it; Ines drove it home on the surge day); a radio to Gus at the station, who keeps the boat. The lab's drying corner sits under a skylight that leaks, and the station log has a box for cause (Caleb wrote *ants* in it) `[ch 0002, in review]`. The dock is planned, not yet on the page.
 - **Who:** Dr. Ines Marchetti (field lead), Marco Sato, Gus Pelletier, the twins on three-month seasonal contracts (three weeks in at Ch. 1). Tidewater Instruments services its loggers (plan; not yet on the page).
 - **First appears:** `[ch 0001]`
 ### Tern Island (the gravel bar, the transect, the summit, the enclosure)

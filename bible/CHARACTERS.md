@@ -35,7 +35,7 @@ Entry template:
 - **Skills:** bird counting with a caller, sweep-netting (learning: logged drone flies as honey bees), reading a beach; led the saddle crossing with a pole, calling depth and footing.
 - **Injuries / condition:** none; wet to the knee from the lee-side mud `[ch 0001]`.
 - **Knows:** the ants moved brood uphill on the surge day; there is a clean padlocked box on the summit (registered as nothing). **Does not know:** what Rachel texted after "which island".
-- **Arc so far:** `[ch 0001]` first Tern Island field day; mud; the ants; the summit glimpse; half of the warning that got the team off the bar; "It was the ants."
+- **Arc so far:** `[ch 0001]` first Tern Island field day; mud; the ants; the summit glimpse; half of the warning that got the team off the bar; "It was the ants." `[ch 0002, in review]` Told Rachel the fun version; "He was my friend" (the dead fly); finishes sentences only when annoyed; "She bit me. Twice."; asked "Did Dad ever work out there?" and was answered with the door; "Let me live."
 
 ### Nora Bennett
 - **Status:** active main cast · **Age:** 18 · **Role:** seasonal field assistant, Alder Sound (got in on an unasked-for spreadsheet of nine years of the station's bird counts).
@@ -44,11 +44,14 @@ Entry template:
 - **Skills:** logger download and trace reading, tide tables, pressure trends.
 - **Equipment:** a small black luggage scale (hers) `[ch 0001]`.
 - **Knows:** the low was 15 cm high and the pressure fell fast; Rachel asked which island and replied at once when told "Tern". **Does not know:** about the summit box (has not seen it).
-- **Arc so far:** `[ch 0001]` the scale; the trace; the other half of the warning; "It was the pressure."; Mom's texts.
+- **Arc so far:** `[ch 0001]` the scale; the trace; the other half of the warning; "It was the pressure."; Mom's texts. `[ch 0002, in review]` Saw the letter go into the back pocket; the two-count ("Fun one"); the kit sheet and "I'm calling it salt"; "We built it the hard way"; shut Caleb down ("Caleb. Eat.") to protect Mom; explained the third text away as worry; saw Rachel at the photograph at night and went back up without the water.
 
 ### Rachel Bennett
 - **Status:** active main cast · **Role:** the twins' mother; Tidewater Instruments (plan; not yet on the page).
-- **Arc so far:** `[ch 0001]` off-page. Received Nora's photo of Caleb in the mud; replied with a joke ("Boots go ON the gravel, Caleb"), then asked which island, then replied again at once when Nora sent "Tern". Content of the third text: Chapter 2 (M13 subtext).
+- **Voice `[ch 0002, in review]`:** imperatives as affection ("Boots off. Both of you. Not on the mat, on the step."); answers questions with instructions ("Pass your brother the salt"); bench vocabulary leaks when she is interested ("Step, or ramp?", "A step is an instrument. A ramp is weather.", "Thirty-five grams to the liter, love."); "That's allowed."
+- **The fixed words (M33), verbatim, six sentences and a closer:** "Your father did research. He went out on a research trip. The boat was lost off the coast. Nobody was ever found. Eighteen years ago. That's the whole of it." Closer: "Pass your brother the salt."
+- **Knows `[ch 0002]`:** the surge numbers, that the file is still on the unit, that the return trip is Saturday by skiff, that Caleb followed ants to the summit, that Caleb asked whether Dad worked at the station. Did the station's units last month; "I know she doesn't" about Ines.
+- **Arc so far:** `[ch 0001]` off-page. Received Nora's photo of Caleb in the mud; replied with a joke ("Boots go ON the gravel, Caleb"), then asked which island, then replied again at once when Nora sent "Tern". `[ch 0002, in review]` The third text was "Ok. Straight home after. Both.", sent inside a minute (she answers from the bench in hours). Folded a letter in three into her back pocket as the twins came in; cooked in the Tidewater fleece; asked one logger question too many; laughed at the ants; gave the fixed words when Caleb asked about Dad and the station; "I don't love you out on that bar"; at a quarter past eleven stood in the dark hall with the keys in one hand, looking at the photograph.
 
 ### Dr. Daniel Mercer
 (absent; entry tracks what the twins and the audience know about him, and separately what is true)

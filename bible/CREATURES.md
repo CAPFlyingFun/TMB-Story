@@ -48,6 +48,10 @@ Individual entry template:
 - **On the page:** a colony in a drift log at Tern Island's wrack line, soaked from underneath on the surge day, moves its brood up the beach, across the trail and into an old stump at the edge of the summit clearing. Caleb reads it as "moving house" and follows the line to the summit. `[ch 0001]`
 - **Locked / provisional:** provisional (species); the summit-stump colony is canon.
 
+### Large yellow underwing (*Noctua pronuba*)
+- **Real behaviour that matters:** an introduced moth, abundant at Pacific Northwest lit windows in September and October; fat, drab brown at rest, bangs the glass and walks the frame. On the page only as "a fat brown moth" `[ch 0002, in review]`; the species is bible-only. Seeds Mini-Arc 4's moth motif.
+- **Locked / provisional:** provisional (species).
+
 Also on the page in Part One, human scale, no entry needed unless they recur: black turnstones, sanderlings and three black-bellied plovers on the spit, which lift together and leave downwind before the surge; a gull that takes half a sandwich; a fall bumblebee and two drone flies in the sweep. `[ch 0001]`
 
 ## Wider bestiary (add as the twins' range and skill reach them)
