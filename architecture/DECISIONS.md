@@ -15,6 +15,7 @@ file is updated.
 - 0004 — Future reader: GitHub Pages serves from `main`; visual theme follows Portrait-Lifesyle-Prompt-Studio — **Accepted (Joshua, 2026-09-16), not yet built**
 - 0005 — M07 and M30 are introduced in Part One (Mini-Arcs 2–3), not Part 2 — **Accepted with the Part One outline (Joshua, 2026-09-16)**
 - 0006 — Prose voice follows the mood: light and simple when happy or funny, dramatic when serious; humour in every chapter — **Accepted (Joshua, 2026-09-16)**
+- 0007 — Trello is the planning board (checked first, every chapter); the story and the game follow the same canonical adventure — **Accepted (Joshua, 2026-09-16)**
 
 ---
 
@@ -52,4 +53,10 @@ file is updated.
 **Context:** Joshua read the first draft of Chapter 1 and found it a little boring, hard to follow, and short on humour. His instruction, in two parts: write "like explaining to a young child or in the style of Disney," and then, refining it, "match the style of writing with the story, so if it's a happy or funny part it will be more lighthearted and simple; something more serious, maybe more dramatic tones."
 **Decision:** The register follows the scene. Light, simple, playful and funny where the story is happy; fuller, slower and dramatic where it is serious or dangerous; the turn between them felt on the page. In every register the listener must never get lost, wonder lives in small things, and there is humour somewhere in every chapter. The architecture's restraint (violence, romance, profanity) stands.
 **Consequences:** `CLAUDE.md` writing rules carry this as the first rule. Chapter 1, a happy chapter, rewritten in the light register before approval. The specialists' review passes check register against mood.
+**Status:** Accepted, 2026-09-16.
+
+### 0007 — Trello plans, GitHub is canon; the story and the game are one adventure
+**Context:** Joshua and ChatGPT will plan Chapters 1–50 on Trello at three levels (50-chapter overview, ten-chapter mini-arcs, one card per chapter with a compact PLAYABLE BEAT FLOW). TMB is not a novel with a loosely related game later: the audiobook tells what the characters did; the game lets the player perform those same canonical actions.
+**Decision:** Before any chapter, Trello is checked first, then GitHub canon, then the previous chapter in full and the next planned chapter. Trello = what we plan; GitHub = what is canon. A conflict is flagged to Joshua, never resolved silently. Chapters are written as a lived adventure with dialogue on the move where it fits and stillness where it is earned; each chapter answers the twelve mission questions and carries `objective` and `playable_beat_flow` in its frontmatter. Gameplay comes from the story's objectives, never from added chores. Claude remains the prose writer, editor and checker, not a stenographer: weak, passive, repetitive or contradictory plans are flagged before drafting.
+**Consequences:** `CLAUDE.md` (truth order and a new section), `outline/WORKFLOW.md` §0, `chapters/CHAPTER_TEMPLATE.md` updated. The current Chapters 1–10 proposal and the approved 11–50 outline are reviewed for passivity (see the review of 2026-09-16 in chat; to be reconciled with the Trello plan once approved). Trello board link: to be recorded here when Joshua provides it.
 **Status:** Accepted, 2026-09-16.

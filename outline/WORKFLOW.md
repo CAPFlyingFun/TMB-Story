@@ -4,10 +4,42 @@ How one chapter goes from outline to canon. The main session (the session Joshua
 talking to) owns every step and every write. The five specialists in
 `.claude/agents/` advise twice and write nothing.
 
-## 0. Preconditions
+## 0. Preconditions, and the pre-draft check
 
-- The chapter has an entry in `outline/part-NN/mini-arc-NN.md` (or the Part
-  overview) that Joshua has approved.
+**Trello is checked FIRST, every chapter** (decision 0007). Read the 50-chapter
+overview, the current ten-chapter overview, this chapter's card, and nearby cards
+that affect continuity. Then read GitHub canon: the approved outline, the bible
+files this chapter touches, the previous finalized chapter in FULL, the next
+planned chapter, `architecture/DECISIONS.md`. Compare the card against canon. If
+there is a meaningful conflict (a card contradicts an approved chapter, a LOCKED
+item, the timeline, or an earlier decision), STOP and flag it for Joshua. Do not
+choose, do not reconcile, do not draft. If the card is newer than a committed
+outline and Joshua approved it, the card wins and the outline is reconciled into
+GitHub before prose becomes canon.
+
+Before drafting, the chapter must be able to answer the twelve chapter-as-mission
+questions (the chapter is still a natural audiobook chapter, never a quest log):
+
+1. What is the POV character trying to accomplish?
+2. Where do they physically go?
+3. What do they actually DO?
+4. Which people do they interact with?
+5. Which animals or creatures do they encounter or interact with?
+6. Which objects, equipment, tools or environmental elements do they use?
+7. What changes or complicates the original objective?
+8. What choice or problem must they deal with?
+9. What character or relationship development happens through those actions?
+10. What mystery is opened, advanced, answered, or deliberately left untouched?
+11. What has physically, emotionally or informationally changed by the end?
+12. How does the ending hand off to the next chapter?
+
+If the planned chapter is boring, repetitive, implausible, contradictory, reveals
+something too early, lacks meaningful activity, or would not translate naturally
+into the game, say so BEFORE drafting and suggest an improvement. Do not replace
+Joshua's approved event with a preferred one.
+
+- The chapter has a Trello card and an entry in `outline/part-NN/mini-arc-NN.md`
+  (or the Part overview) that Joshua has approved, and the two agree.
 - The previous chapter is `review_status: approved`, or Joshua has explicitly said
   to draft ahead of an unapproved one (rare; flag it in the report).
 - `bible/STORY_OVERVIEW.md`'s tracker line says where the series is.
@@ -73,7 +105,10 @@ self-check against `CLAUDE.md`:
 - no exposition block over ~200 words
 - `ending_type` set, and different from the previous chapter's
 - distinct voices, action beats over tags, profanity and violence within policy
-- every frontmatter field filled; mystery ids valid against `MYSTERIES.md`
+- every frontmatter field filled, including `objective` and `playable_beat_flow`;
+  mystery ids valid against `MYSTERIES.md`
+- every required Trello beat is on the page; nothing contradicts canon; nothing
+  is revealed early
 - nothing contradicts a LOCKED item or a DECISIONS entry
 
 Set `review_status: in-review`.

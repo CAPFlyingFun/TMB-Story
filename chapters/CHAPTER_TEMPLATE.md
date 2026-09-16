@@ -10,6 +10,7 @@ story_time:
   date: ""                 # story-calendar date on that clock, e.g. "Day 3" or "2026-03-14"
   opens: ""                # time of day the chapter opens, e.g. "late afternoon"
   elapsed: ""              # time the chapter covers, e.g. "about two hours"
+objective: ""              # what the POV character is trying to accomplish, one line
 locations: []              # names as written in bible/LOCATIONS.md
 characters: []             # everyone present on the page, POV first
 creatures: []              # species (and individual name if bonded), as in bible/CREATURES.md
@@ -19,6 +20,7 @@ mysteries:
   advanced: []
   answered: []
 new_canon: []              # facts established here that did not exist before, one line each
+playable_beat_flow: []     # what the future player could DO here, in order, e.g. ["cross the bar", "carry gear", "investigate the ants"]
 ending_type: ""            # one of the rotating types in CLAUDE.md; must differ from the previous chapter
 review_status: draft       # draft | in-review | approved
 audio_status: not-started  # not-started | recorded | published

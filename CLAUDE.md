@@ -9,18 +9,28 @@ adapts what is strongest and stable here, never the other way round.
 ## Where the truth lives
 
 1. **Joshua's newest explicit instruction.**
-2. **`architecture/SERIES_ARCHITECTURE.md`** — Revision 3, the approved creative
+2. **Trello, for what is PLANNED to happen** (Joshua, 2026-09-16, decision 0007).
+   Joshua and ChatGPT plan Chapters 1–50 on the TMB Story board at three levels:
+   the 50-chapter overview, the ten-chapter mini-arc overview, and one card per
+   chapter. Trello says what we currently plan; GitHub says what has already
+   become canon. A newer approved Trello plan outranks an older committed outline.
+   Trello may never outrank an approved chapter or a LOCKED item: if a card
+   conflicts with GitHub canon, STOP and flag it for Joshua before drafting;
+   never pick one silently, never rewrite canon, never invent a reconciliation.
+   Card COMMENTS do not reach Claude through the connector; plan content belongs
+   in card DESCRIPTIONS.
+3. **`architecture/SERIES_ARCHITECTURE.md`** — Revision 3, the approved creative
    authority. It layers on Rev 2 and Rev 1 in `architecture/history/`; where Rev 3
    is silent, the newest earlier revision that speaks stands, and where they
    conflict, Rev 3 wins. Nothing in `history/` overrides it.
-3. **`bible/STORY_OVERVIEW.md`** — the lean distillation. Read it EVERY chapter.
+4. **`bible/STORY_OVERVIEW.md`** — the lean distillation. Read it EVERY chapter.
    Premise, locked cast, rules that bite, the 20-Part roadmap, and the
    "currently at" tracker line.
-4. **The rest of `bible/`** — living canon as the chapters establish it.
-5. **`architecture/DECISIONS.md`** — creative decisions made after Rev 3, one dated
+5. **The rest of `bible/`** — living canon as the chapters establish it.
+6. **`architecture/DECISIONS.md`** — creative decisions made after Rev 3, one dated
    entry each, append-only. A decision recorded there outranks the bible file it
    changes until the bible is updated to match.
-6. This file — stable operating guidance, not design truth.
+7. This file — stable operating guidance, not design truth.
 
 If two sources disagree, do not invent a compromise. Name the conflict, follow the
 newer or more authoritative source, and flag it in the handoff report.
@@ -69,6 +79,30 @@ These are craft invariants. The prose is heard, not seen.
 - **Insects stay structural.** Every Part needs at least one insect-driven beat that
   materially changes human stakes.
 
+## The story is the adventure; the game lives the same adventure
+
+TMB is written so that the eventual game performs the same canonical actions
+the audiobook narrates (Joshua, 2026-09-16, decision 0007). The audiobook stays
+in close third person, one POV per chapter, never second-person command
+language. But the POV character regularly travels, explores, investigates,
+uses equipment, handles objects, reads and interacts with creatures, solves
+practical problems, helps people, sneaks, escapes, prepares, and discovers
+places, creatures, clues, technology and information. Those are not
+"gameplay sections"; they are the story. Let dialogue happen while people are
+doing something whenever it fits: walking, driving, packing, repairing,
+cooking, examining evidence, tending a creature. Stillness is still allowed
+when the moment deserves it (Rachel does not collect samples while she
+confesses). The goal is rhythm, not action for its own sake.
+
+Every chapter should be able to answer the twelve chapter-as-mission
+questions in `outline/WORKFLOW.md` §0, and its frontmatter carries a compact
+`playable_beat_flow`: what the future player could actually do during this
+part of the canonical story. Gameplay comes from what the characters need to
+accomplish, never from chores added because there will be a game. When an
+action could matter to the game, keep the concrete details straight: where
+people are, which route, what they carried, which hand is hurt, what was left
+behind, who witnessed it.
+
 ## The mystery rhythm
 
 Question → clue → investigation → answer → bigger question, roughly every 5–15
@@ -81,14 +115,18 @@ prevent a contradiction: keep it current.
 
 Full version: `outline/WORKFLOW.md`. In short:
 
-1. Orient: outline for this chapter, the complete previous finalized chapter, the next
-   chapter's outline-level direction, `bible/STORY_OVERVIEW.md`, and targeted bible
-   excerpts found through `bible/CHAPTER_INDEX.md`.
+0. **Check Trello first**: the 50-chapter overview, the current ten-chapter
+   overview, this chapter's card, and nearby cards that touch continuity.
+1. Orient in GitHub: the approved outline, the complete previous finalized chapter,
+   the next planned chapter, `bible/STORY_OVERVIEW.md`, and targeted bible excerpts
+   found through `bible/CHAPTER_INDEX.md`. Compare the card against canon. A
+   meaningful conflict means STOP and flag it; only alignment means draft.
 2. Dispatch the five specialists in parallel for advisory input (read-only).
 3. The main session writes the one canonical draft. Nothing else writes chapters.
 4. Dispatch the same five specialists to review the finished draft.
 5. Make justified corrections; self-check against the rules above.
-6. Write the handoff report in `reviews/`. Commit the draft.
+6. Verify every required Trello beat is on the page and nothing contradicts canon or
+   reveals early. Write the handoff report in `reviews/`. Commit the draft.
 7. **Stop and wait for Joshua.** Only on his approval does `review_status` become
    `approved`, `CHAPTER_INDEX.md` gain its row, the tracker line in
    `STORY_OVERVIEW.md` move, and the approval get committed.
