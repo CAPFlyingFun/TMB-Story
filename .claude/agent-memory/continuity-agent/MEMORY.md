@@ -7,10 +7,14 @@ overview.md; superseded by Trello ten-chapter cards where they differ) · APPROV
 under review) · APPROVED [ch NNNN] · RETIRED (the boatyard "The Wet Engine", deleted at 254158b,
 kept in history at a2a7320). Approved chapter beats memory; memory beats nothing. Cite file:line.
 
-Series state (2026-09-16, fourth pass, repo at dd8b7cb): Ch 0001 "The Bar" (Caleb POV) is APPROVED (2026-09-16, 3,294 words; review_status: approved)
-at chapters/part-01/chapter-0001.md — (older line:) 2,996 prose words measured (frontmatter
-2989), three scenes, ends in the van on Rachel's texts. APPROVED; CHAPTER_INDEX.md has its row.
-"MA1:" = outline/part-01/mini-arc-01.md (472 lines at dd8b7cb); "ch:" = chapter-0001.md lines.
+Series state (2026-09-16, FIFTH pass — Ch 1 and Ch 2 re-read IN FULL, both `in-review`):
+Ch 0001 "The Bar" (Caleb POV, 3,443 words) and Ch 0002 "Sixty-Two Grams of Salt" (Nora POV, 3,602 words)
+are both PROVISIONAL CANON under decision 0016 (batch approval, Chapters 1-10 together, or sooner at
+Joshua's word). Both have been through decisions 0015 (plain register) and 0017 (one narrator) since the
+fourth pass, so EVERY `ch:` and `c2:` line ref in the topic files predates the current text. The corrected
+refs live in the "CORRECTIONS" blocks appended to timeline.md, equipment.md, knowledge.md and
+open-threads.md. "MA1:" = outline/part-01/mini-arc-01.md; "ch1:" = chapter-0001.md; "c2:" = chapter-0002.md.
+Bible now carries index rows, TIMELINE rows and entries for both chapters (tagged in review).
 
 - characters.md — Caleb, Nora, Rachel, Daniel, Ines, Marco, Gus per source; APPROVED Ch 1 block at end.
 - creatures.md — APPROVED Ch 1 ants/birds/gull/web/sweep; PLAN insect texture by chapter; RETIRED wasps.
@@ -40,10 +44,21 @@ draft: mud 07:30 (ch:96), call at 11:00 (ch:194), saddle 11:22/11:24 (ch:206, :2
 (ch:72, :216), Ines "not wet above the shin" (ch:216), corridor photos ON the page (ch:70), Caleb HEARD "which
 island" (ch:258), text 3 unread on the page (ch:262). Line refs in topic files are draft numbers (~+2 after ch:70).
 
-Last pass: REVIEW of the Ch 0002 DRAFT "Sixty-Two Grams of Salt" (2026-09-16; chapters/part-01/chapter-0002.md,
-3,602 words, Nora POV, Tue 18:45–≈23:20). DRAFT [ch 0002] blocks appended to every topic file ("c2:" = its
-lines). Top flags: "Get it Saturday." unprompted (c2:151); August "twin thing" predates the twins' start
-(c2:193); frontmatter asserts "low after lunch", "by skiff", moth species, "both pairs", scale "lives at home"
-beyond the page; elapsed ≈ 4.5 h not 5; beat-flow order ≠ prose. Box unmentioned ✓, text 3 revealed ✓, ends
-on a quiet unsettling line ✓, fixed words = MA1 wording (overview.md:75 variant still conflicts). Next: on
-approval promote DRAFT → APPROVED [ch 0002] and check the bible entries listed in open-threads.md tail.
+Last pass: ADVISORY for Ch 0003 "The Enclosure" (Caleb POV; Saturday, four days after Ch 1's Tuesday;
+08:00 skiff, the work finished, the tag, the crash, the vision). PLAN [ch 0003] blocks appended to
+timeline.md (the clock: Sat lows 13:50/02:15 -> high ~07:45-08:05, so the skiff is right and the bar is
+still walkable 10:50-16:50; sunrise ~07:20; crash early-to-mid afternoon), equipment.md (the packs as they
+stand by the door since Tuesday; the scale and kit sheet are AT HOME; the unswapped battery is in Nora's
+pack; the jars' date is blank; one transect stake short; the van), knowledge.md (who holds what; the name
+Mercer goes public in front of Ines and Marco; Caleb's vision half only, no notation) and open-threads.md
+(the seven things Ch 3 must leave unspent, and the new canon it would create).
+
+Three corrections the current text forced: (1) THE ORB-WEAVER WEB IS NOT IN CHAPTER 1 - Ch 3's web is a
+first, and the old "Ch 1 pre-empts it" flag is dead; (2) Ch 2's "Get it Saturday." is no longer unprompted,
+Caleb tells Rachel in the hall (c2:87); (3) the August/"twin thing" flag is closed, the page now reads
+"last month". Ines came off the bar "not wet above the shin"; Nora's repacked pack reads 6.4 kg.
+
+CAUTION (2026-09-16, end of the fifth pass): BOTH chapters were re-styled ON DISK DURING this pass —
+Ch 1 3,443 -> 3,437 words, Ch 2 3,602 -> 3,636. No fact, clue, ending or bible-quoted line moved, but
+line numbers drift by one or two per pass. Treat every `ch1:`/`c2:` ref as approximate and re-grep the
+quoted phrase before citing it. `in-review` chapters are being edited continuously under decision 0016.

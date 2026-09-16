@@ -1,6 +1,6 @@
 # Chapter 0002 — Sixty-Two Grams of Salt — handoff report
 
-Date: 2026-09-16 · POV: Nora · Words: 3,602 · Ending type: quiet unsettling line ·
+Date: 2026-09-16 · POV: Nora · Words: 3,636 · Ending type: quiet unsettling line ·
 Status: `in-review`; per decision 0016 it stays in review with Chapters 1–10 for batch approval unless Joshua approves sooner. Bible updates below were applied at draft-complete, tagged `[ch 0002, in review]`.
 
 Source of the plan: Trello card `02 — Sixty-Two Grams of Salt | Nora` in the
@@ -321,3 +321,26 @@ it needed new action. No new business was invented.
 
 Style checks after the pass: every sentence-level target passes, zero British-isms,
 zero unanchored dialogue runs of three or more.
+
+## Second audiobook anchor pass (decision 0017 strengthened, 2026-09-16)
+
+Joshua's one-voice listening test found a case the first pass and the checker both
+allowed: naming speaker A reset the run counter without making the NEXT line
+audible. The rule now says identity is due AS the line is heard, and that A/B
+alternation is never an anchor. Prose-level only; no canon changed.
+
+**Word count: 3,602 → 3,636.** 7 further changes, every one of them Joshua's pattern
+(a named speaker followed by an untagged reply):
+
+- `"Good," said Caleb, and they went up together...` — merged into the walk so the
+  joke keeps its rhythm and gains a name.
+- `Nora did not look up from the boots. "Put your friend down and bring the bag in."`
+  The boots were already in her hands; the action moved in front of the line.
+- `"He shouted anyway," said Nora.` A plain tag, because no natural action was there
+  to move.
+- `Her mother spoke to the pot. "The pressure. When it dropped."` Anchors Rachel
+  before the line while keeping her back turned, which the scene depends on.
+- `"Get it Saturday," her mother said.`
+- `Nora left the bag where it was on the scale. "Sand falls out..."` Uses the prop
+  already in the scene.
+- `"I'm not," Nora said. "I'm just telling you the number."`

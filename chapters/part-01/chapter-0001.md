@@ -4,7 +4,7 @@ title: "The Bar"
 part: 1
 mini_arc: 1
 pov: Caleb
-word_count: 3443
+word_count: 3437
 story_time:
   clock: outside
   date: "Year 0, first week of October (a Tuesday)"
@@ -51,7 +51,7 @@ At six in the morning the boathouse smelled like diesel and wet rope. It smelled
 
 "I've got the water," Caleb said. He shook the pack so the bottles knocked.
 
-"I've got the jars, the stakes, the tape and the spare battery, which weighs as much as a cat." His sister finished the knot. She stood up. She unzipped her jacket and took out a luggage scale. It was a little black one with a hook, the kind people use at airports. She had brought a luggage scale to work.
+Nora pulled the knot tight. "I've got the jars, the stakes, the tape and the spare battery, which weighs as much as a cat." She stood, unzipped her jacket and took out a luggage scale. It was a little black one with a hook, the kind people use at airports. She had brought a luggage scale to work.
 
 Caleb stared at it. Then at her. "You did not."
 
@@ -87,9 +87,9 @@ By the time they reached the parking lot at the mainland end, the sky had gone t
 
 That was the thing about the bar. It was not there, and then it was. It was four hundred meters of gravel, four football fields, straight out from the parking lot to the island. For a few hours around low tide you could walk it. The wet gravel shone like somebody had polished it. Tern Island stood at the far end, dark trees on a low hump.
 
-Ines walked the middle, where the gravel stood up in a dry crest with driftwood along it. She talked over her shoulder. "Stay on the crest. Two-thirds across there's a dip, near the island end. We call it the saddle. That's where the water comes in first.
+Ines walked the middle, where the gravel stood up in a dry crest with driftwood along it. She talked over her shoulder. "Stay on the crest. Two-thirds across there's a dip, near the island end. We call it the saddle. That's where the water comes in first. Remember what it looks like dry."
 
-Remember what it looks like dry." She stopped so they could see it. The crest sagged for thirty steps. The gravel there was darker, still wet. "We are off this bar by twelve thirty, whatever's finished. Back at the station by one. Questions."
+Ines stopped so they could see it. The crest sagged for thirty steps. The gravel there was darker, still wet. "We are off this bar by twelve thirty, whatever's finished. Back at the station by one. Questions."
 
 Marco put his hands in his pockets and looked at the sky. "Is that a question or a statement?"
 
@@ -191,9 +191,9 @@ Caleb was walking, and then running, up the beach. He met Nora coming along the 
 
 "Where's Ines?" they said, both at once. Neither of them laughed.
 
-Nora got there first. "She went to look at the saddle. Caleb, listen. The water at low was fifteen centimeters higher than the table says. Same minute. It's on the trace.
+Nora got there first. "She went to look at the saddle. Caleb, listen. The water at low was fifteen centimeters higher than the table says. Same minute. It's on the trace. And the pressure's dropped four in the last hour."
 
-And the pressure's dropped four in the last hour." She turned the screen so he could see a line going down like a cliff. "And the wind's gone around. If it keeps going, the saddle's wet by noon. Not one thirty. Noon."
+Nora turned the screen so he could see a line going down like a cliff. "And the wind's gone around. If it keeps going, the saddle's wet by noon. Not one thirty. Noon."
 
 "The birds have gone." Caleb was out of breath, and it came out in a heap. "All of them, together, just now. The pools are filling and it's not time. And the ants have been moving the babies up the hill all morning, at least."
 
@@ -213,7 +213,7 @@ Ines took the laptop and read the trace herself, one line at a time. Then she lo
 
 "Gus. Ines. What's the wind doing at the station."
 
-A man's voice came out of it, slow and old and completely unbothered. "Gone south on me the last half hour. Freshening. Glass is dropping. You want the boat?"
+Gus came back slow and old and completely unbothered. "Gone south on me the last half hour. Freshening. Glass is dropping. You want the boat?"
 
 "Stand by with it. Don't launch," Ines said. She let go of the button. "Front's come in early," she said. "Six hours early. The table's not wrong. It's just not today's table." She looked at her watch. "Eleven. The plan was off by twelve thirty. We're walking now. Battery stays. Count stays. Download stays. Marco, packs."
 
@@ -243,7 +243,7 @@ They came off the bar onto the parking lot wet to the shins and stood there. The
 
 Ines came last, on the right-hand line Caleb had called. She was not wet above the shin. She thumbed the radio as she walked. "Gus. We're off. Stand down." Then she went past them to the driver's door.
 
-"Good catch," she said. "Both of you."
+"Good catch," Ines said. "Both of you."
 
 Caleb was dripping, and he could not let it go. "It was the ants."
 
@@ -259,7 +259,7 @@ Caleb saw it come out and closed his eyes. "No."
 
 "They're binding," said Marco from the front. He did not turn around.
 
-She hooked his pack. "Five point nine." She hooked her own, and it took two hands. "Six point five." She showed him the screen. He did not need to see the screen.
+Nora hooked his pack. "Five point nine." She hooked her own, and it took two hands. "Six point five." She showed him the screen. He did not need to see the screen.
 
 Caleb sat up. "That's water. That's the gloves and the net. You took all the wet stuff. That's not the pack, that's the ocean."
 

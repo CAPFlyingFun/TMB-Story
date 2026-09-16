@@ -38,3 +38,24 @@ MA1: = outline/part-01/mini-arc-01.md (PLAN).
 - Both twins: the fixed words heard again, "not new... all their lives" (c2:217); that "somebody at the station" told Rachel about "that twin thing" in August (c2:189-193); that Rachel knows Ines and her margin rule (c2:231-235).
 - Rachel now holds: the surge as told (mud, gull, ants to the summit stump, log wet underneath); the numbers (+15 cm same minute, −4/h ramp not step, wind south); that the file is still on the unit, only the screen read (c2:147-149); the saddle crossing ankle→shin, Caleb first with the pole (c2:155); Ines pulled them ninety minutes early (c2:233). NOT told on the page: Saturday, the skiff, eight o'clock — yet she says "Get it Saturday." (c2:151). Box: unmentioned by anyone ✓. Tag/Mercer/Tidewater tickets: unspent ✓.
 - Nobody says: Mercer, D.M., the box, "station manager", "twin thing" from station staff to the twins ✓. The words' ORDER is not remarked (Ch 8's) ✓.
+
+## CORRECTIONS + PLAN [ch 0003] (2026-09-16, fifth pass)
+CLOSED by the current text of Ch 2:
+- "Get it Saturday." is NO LONGER unprompted. Caleb tells Rachel in the hall on arrival: "And we're going back Saturday. In the skiff. Gus is taking us." (c2:87), before her line at c2:163. Frontmatter records it (c2:21).
+- The "twin thing" remark is now "**last month**" (c2:211), not August — i.e. September, after the twins' mid-September start. Flag CLOSED.
+- Saturday was told to the twins by **MARCO at the drop-off**: "Eight o'clock Saturday. Gus is running you out in the skiff. Ines wants the morning. Wear the boots." (c2:49). Rachel was told by CALEB, without the hour.
+
+WHO KNOWS WHAT AT CH 3 OPEN:
+- Caleb: the summit box exists, padlocked, clean and dry on a rusting hilltop — an impression, registered as nothing (ch1:164-166). Heard Mom ask "which island" (ch1:286). Asked "Did Dad ever work out there?" and got the door (c2:223-233). Does NOT know: text 3's wording, the letter, Rachel's night look, the tag, Mercer.
+- Nora: has NEVER SEEN THE BOX (ch1:21) — Ch 3 is her first sight. Holds alone: the letter into the back pocket (c2:77), text 3 "Ok. Straight home after. Both." inside a minute (c2:263), the three logger questions before the saddle (c2:149-163), the look at the photograph at 23:15 (c2:293-303), "the door" in the fixed words (c2:237). She has explained the text away to herself and "felt it go light" (c2:263).
+- Both: the fixed words verbatim, heard again Tuesday (c2:233); the two-count; that Tidewater does the station's units and Rachel was there last month.
+- Rachel: the surge and its numbers; the file is still on the unit; Saturday, the skiff, Gus; that Caleb followed ants to the summit; that Caleb asked about Dad and the station. She has NOT been told the hour.
+- Gus: still radio-voice only (ch1:216). Ch 3 is his first appearance in person.
+- Ines, Marco: no Mercer link.
+
+PLAN [ch 0003] — what changes hands, and the cost:
+- Gus says, at the summit: "That's from the old program. Before most of us." / "Mercer. Your name's Bennett, though." / "Huh." (MA1:14-17). The name MERCER is spoken aloud for the first time, IN FRONT OF INES AND MARCO as well as the twins. Station staff now hold the Bennett–Mercer link; track it, because Ch 7 has Nora asking Gus who the Mercer was and Ines never raising it.
+- Nora reads the year twice. Neither twin does the arithmetic aloud against "eighteen years ago" — that comparison is Ch 5/Ch 8 work.
+- Caleb's vision: his half ONLY (a hoarse man's voice, "Get them under. Hold the line.", a rain-on-a-drum/hive sound, hands on a cable, wet soil, a man's back turning). **No wall, no marks, no nested brackets** — the notation is NORA's half and Ch 10's payoff ("Neither of them had seen the notation before that night", MA1 Ch 10). Whatever Ch 3 writes becomes the canonical vision text (MA1 Ch 5 continuity).
+- Caleb tells NOBODY in Ch 3. "Mom. I saw Dad." and Rachel's "Where was he?" are Ch 4; "You didn't say anything to me" is Ch 5's hinge.
+- Ch 4 says BOTH twins had brief loss of consciousness — Caleb's vision sits inside a blackout; he is not continuously conscious through the impact.

@@ -79,9 +79,15 @@ These are craft invariants. The prose is heard, not seen.
   single voice performs every character, because one will. The listener has no
   quotation marks, no paragraph breaks and no second voice, so the PROSE has to say
   who is speaking, who they are speaking to, where they are and what they are doing.
-  Anchor dialogue to a character by NAME regularly, and more often early, while the
-  audience is still learning the cast. Never let paragraph alternation alone carry
-  the speaker, and never let three spoken lines in a row pass with nobody named.
+  **The speaker must be identifiable AS THE LINE IS HEARD, or from what was heard
+  immediately before it** (Joshua, 2026-09-16, strengthening 0017 from his one-voice
+  listening test). Information that arrives only AFTER the line is too late: put the
+  identifying action BEFORE the speech ("Nora pulled the knot tight." then her line),
+  not after it. **A/B alternation is never an anchor.** Naming speaker A does not
+  identify the next untagged line as speaker B, because the listener cannot see the
+  paragraph break; "Caleb said" followed by an untagged line is exactly the case
+  that fails. Anchor dialogue by NAME regularly, and more often early, while the
+  audience is still learning the cast.
   A plain "Caleb said" is good and often best: clarity beats avoiding "said", and
   ornate synonyms stay out. Where a beat is natural, prefer one that also does a
   second job (shows the task, the place, who is looking at whom, or the mood) over a

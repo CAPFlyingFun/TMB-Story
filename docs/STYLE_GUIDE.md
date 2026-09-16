@@ -163,5 +163,40 @@ If no natural beat exists, "Caleb said" is better than an invented gesture. Do n
 tag an exchange that is already unmistakable, and do not reach for "exclaimed",
 "retorted" or "opined"; "said" disappears into the narration, which is the point.
 
-`scripts/style-check.py` reports every run of three or more spoken lines that name
-nobody. Zero is the target for both chapters.
+### The rule the first version was not strong enough to catch
+
+Joshua's second listening pass found an exchange that satisfied "no run of three
+unnamed lines" and was still ambiguous out loud:
+
+> "It isn't." Nora did not look up from her boot laces.
+> "I've got the water," Caleb said. He shook the pack so the bottles knocked.
+> "I've got the jars, the stakes, the tape and the spare battery, which weighs as
+> much as a cat." His sister finished the knot.
+
+The listener hears Caleb named, then hears a whole line from somebody else, and only
+learns it was Nora after the line has gone by. Naming Caleb had reset the counter
+without making the next line audible. The fix moves the existing action in front of
+the speech:
+
+> Nora pulled the knot tight. "I've got the jars, the stakes, the tape and the spare
+> battery, which weighs as much as a cat."
+
+Two principles follow, and they outrank the counter:
+
+1. **Identity is due at the line, not after it.** Whatever names the speaker belongs
+   before the speech or inside its first few words. A short line with a trailing tag
+   ("Mine's heavier," Caleb said.) is fine; a long line with a trailing tag is not.
+2. **Alternation is never an anchor.** "Caleb said" does not make the next untagged
+   line Nora's, because there is no visible paragraph break. Short exchanges may
+   still go untagged when the audible context alone makes them unmistakable, but
+   that must be true of the CONTEXT, not of the layout.
+
+Prefer moving an action the character is already performing to inventing a new one.
+A plain tag beats an invented gesture.
+
+`scripts/style-check.py` reports two failures: dialogue whose speaker is named only
+after a long stretch of speech, and dialogue with no anchor at or before the line. It
+over-reports a speaker continuing through a beat of their own narration, which is the
+safe direction; the checker is a net, not a proof. The real test is the one Joshua
+runs: press play with one voice and ask whether you know who is speaking as you hear
+the line, not afterward.

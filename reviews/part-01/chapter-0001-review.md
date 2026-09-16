@@ -1,6 +1,6 @@
 # Chapter 0001 — The Bar — handoff report
 
-Date: 2026-09-16 · POV: Caleb · Words: 3,443 · Ending type: unanswered question ·
+Date: 2026-09-16 · POV: Caleb · Words: 3,437 · Ending type: unanswered question ·
 Status: `approved` by Joshua, 2026-09-16, at 3,294 words as-is ("the 1,800–3,000 range is a target, not a hard limit"). Bible updates below were applied on approval.
 
 Source of the plan: Trello card `01 — The Bar` in the `📖 STORY — Chapters 1–50`
@@ -282,3 +282,25 @@ said," which is the joke and needs no help.
 
 Style checks after the pass: every sentence-level target passes, zero British-isms,
 zero unanchored dialogue runs of three or more.
+
+## Second audiobook anchor pass (decision 0017 strengthened, 2026-09-16)
+
+Joshua's one-voice listening test found a case the first pass and the checker both
+allowed: naming speaker A reset the run counter without making the NEXT line
+audible. The rule now says identity is due AS the line is heard, and that A/B
+alternation is never an anchor. Prose-level only; no canon changed.
+
+**Word count: 3,443 → 3,437.** 7 further changes.
+
+- **Joshua's case, fixed as he wrote it.** The jars line now opens with `Nora pulled
+  the knot tight.` The knot was already in the paragraph; it simply moved in front
+  of the speech, so the listener knows who is talking before she talks.
+- **Two speeches had been split mid-quotation** by the earlier paragraph-length pass,
+  leaving Ines's crest briefing and Nora's trace report with an unclosed quote and a
+  second paragraph that opened with no speaker at all. Both breaks moved to the end
+  of the speech. This was a real manuscript defect, not just an audio one.
+- **`Gus came back slow and old and completely unbothered.`** replaces "A man's voice
+  came out of it". The radio voice is now named as it arrives.
+- **`"Good catch," Ines said.`** and **`Nora hooked his pack.`** Both followed another
+  named speaker and relied on alternation; both are the chapter's payoff beats.
+- **`Nora turned the screen`** rather than "She", at the moment her evidence lands.

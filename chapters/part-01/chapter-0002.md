@@ -4,7 +4,7 @@ title: "Sixty-Two Grams of Salt"
 part: 1
 mini_arc: 1
 pov: Nora
-word_count: 3602
+word_count: 3636
 story_time:
   clock: outside
   date: "Year 0, first week of October (the same Tuesday as Chapter 1)"
@@ -60,9 +60,7 @@ It was not a big hill. On any other day you did not notice it. Tonight it had gr
 
 "No," said Nora.
 
-"Good."
-
-They went up together, slowly, the way you carry a full cup.
+"Good," said Caleb, and they went up together, slowly, the way you carry a full cup.
 
 The afternoon had gone the way afternoons at the station went. Ines had written the day into the station's log in four lines. In the box for cause, Caleb had written *ants*. He did it in pencil, while she was out of the room. When she came back and read it, she looked at him for a second.
 
@@ -106,7 +104,7 @@ The gloves got rinsed and wrung. The net bag got shaken out over the step. A gre
 
 "He was my friend." Caleb held it up to the light on one finger, so she could see the stripes.
 
-"Put your friend down and bring the bag in."
+Nora did not look up from the boots. "Put your friend down and bring the bag in."
 
 He brought the bag in. The kitchen was warm. The window over the sink had gone black and turned into a mirror. Nora hung the net bag and the gloves over the heater under it.
 
@@ -136,7 +134,7 @@ It was now roughly the size of a dog, and it had looked him in the eye. Their mo
 
 "I could hear Marco fine," Caleb said.
 
-"He shouted anyway."
+"He shouted anyway," said Nora.
 
 Their mother had turned around now, with the spoon. She was looking at Caleb the way she looked at him when he was small and had brought something in from the yard in his hands. She pointed the spoon at the table. "Plates."
 
@@ -154,7 +152,7 @@ Nora told her.
 
 Nora looked at the back of her mother's head. "What?"
 
-"The pressure. When it dropped." The spoon drew it in the air. A stair, and then a slope. "Did it go down in a step, or did it slide? A step is an instrument. A ramp is weather."
+Her mother spoke to the pot. "The pressure. When it dropped." The spoon drew it in the air, a stair and then a slope. "Did it go down in a step, or did it slide? A step is an instrument. A ramp is weather."
 
 "Ramp," said Nora, slowly. "Steady. Cliff, but a smooth cliff."
 
@@ -162,7 +160,7 @@ Nora looked at the back of her mother's head. "What?"
 
 "The screen," Nora said. "Ines called it before I'd finished. It's still on the unit."
 
-"Get it Saturday."
+"Get it Saturday," her mother said.
 
 Then her mother put the spoon down. She turned all the way around. "And you crossed in *that*," she said, in her real voice. She came across the kitchen and put a hand flat on the top of Nora's wet head, and left it there.
 
@@ -190,7 +188,7 @@ The sheet was every piece of gear she carried, with its dry weight, in a column.
 
 "Sand," said Caleb.
 
-"Sand falls out. I shook it. Salt stays."
+Nora left the bag where it was on the scale. "Sand falls out. I shook it. Salt stays."
 
 "Thirty-five grams to the liter, hon." Their mother did not look up from the pot. "You'd need two liters of seawater held in a mesh bag to leave that behind. You didn't dip it in the ocean. You dragged it through wet seaweed. That's sand, and grit, and half a plant. Ten grams of that is salt. If you're lucky."
 
@@ -280,7 +278,7 @@ Caleb sat on the floor with his back against the cabinets and handed her things 
 
 "Don't," said Caleb.
 
-"I'm not. I'm just telling you the number."
+"I'm not," Nora said. "I'm just telling you the number."
 
 "Nora." Caleb was nearly smiling. "You had your fun this morning. Let me live."
 

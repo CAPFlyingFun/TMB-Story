@@ -62,9 +62,12 @@ raised and then forgotten. Suggest the smallest fix for each. Do not rewrite.
   every passage of time is spoken ("an hour later, at the spit"), never marked with
   `***` or a blank gap.
 - In review mode, apply the one-narrator test to EVERY exchange (decision 0017): one
-  voice for all characters, no quotation marks, no paragraph breaks. Flag any line
-  whose speaker a listener would have to infer from alternation, and say whether a
-  plain tag or a working beat is the better fix.
+  voice for all characters, no quotation marks, no paragraph breaks. The speaker must
+  be identifiable AS THE LINE IS HEARD or from what was heard just before it. Flag
+  (a) any line whose speaker is named only after the speech, and (b) any line whose
+  speaker is identifiable only because the previous line named somebody else —
+  alternation is not an anchor. Say whether a plain tag, or moving an action the
+  character is already performing in front of the line, is the better fix.
 - In review mode, run `python3 scripts/style-check.py <chapter>` and report every FLAG
   with the longest sentences it lists (decision 0015, docs/STYLE_GUIDE.md).
 - In review mode, flag rhyme, chime, stacked -ing words, matched pairs and sing-song

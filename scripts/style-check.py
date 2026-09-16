@@ -92,37 +92,51 @@ NAMES = ["Caleb", "Nora", "Marco", "Ines", "Gus", "Rachel", "mother", "Mom", "si
 NAME_RE = re.compile(r"\b(" + "|".join(NAMES) + r")\b")
 
 def audio(path):
-    """One-narrator clarity: find dialogue that names nobody for too long.
+    """One-narrator clarity (decision 0017).
 
-    A listener has no quotation marks and no paragraph breaks. Two unanchored
-    lines in a clear A/B exchange are fine; three in a row is where "wait, who
-    said that?" happens. Reports each run so the writer can anchor one line.
+    The listener has no quotation marks and no paragraph breaks, so a speaker
+    must be identifiable AS THE LINE IS HEARD, or from what was just heard
+    before it. Two failures are reported:
+
+    LATE   the paragraph names its speaker only after a long stretch of speech,
+           so the listener hears the line first and learns who said it after.
+           A short line followed by a tag ("Mine's heavier," Caleb said.) is
+           fine and is not reported.
+    OPEN   nothing in the paragraph, and nothing in the narration immediately
+           before it, names a speaker. A/B alternation does NOT count: naming
+           speaker A does not identify the next line as speaker B. Short
+           exchanges can legitimately stay open, so these are reported for
+           judgement rather than failed automatically.
     """
     t = prose(path)
     paras = [p.strip() for p in t.split("\n") if p.strip() and not p.startswith("#")]
-    run, runs = [], []
+    late, open_ = [], []
+    carry = False          # the narration just before named somebody
     for para in paras:
-        speech = '"' in para or '\u201c' in para
-        if not speech:
-            if NAME_RE.search(para):
-                run = []
+        qi = para.find('"')
+        if qi < 0:
+            qi = para.find("\u201c")
+        if qi < 0:                       # narration
+            carry = bool(NAME_RE.search(para))
             continue
-        if NAME_RE.search(para):
-            run = []
-        else:
-            run.append(para)
-            if len(run) >= 3:
-                runs.append(list(run))
-    # keep only the longest version of each run
-    trimmed = []
-    for r in runs:
-        if not trimmed or r[:len(trimmed[-1])] != trimmed[-1]:
-            trimmed.append(r)
-        else:
-            trimmed[-1] = r
-    print(f"  unanchored dialogue runs (3+): {len(trimmed)}")
-    for r in trimmed:
-        print(f"    {len(r)} lines, starting: {r[0][:70]}")
+        before, after = para[:qi], para[qi:]
+        if NAME_RE.search(before):
+            carry = False
+            continue
+        m = NAME_RE.search(after)
+        if m:
+            spoken = len(re.findall(r"[A-Za-z']+", after[:m.start()]))
+            if spoken > 12 and not carry:
+                late.append((spoken, para))
+        elif not carry:
+            open_.append(para)
+        carry = False
+    print(f"  dialogue anchored late (name arrives after the line): {len(late)}")
+    for n, para in late:
+        print(f"    {n} words before the name: {para[:90]}")
+    print(f"  dialogue with no anchor at or before the line: {len(open_)}")
+    for para in open_[:25]:
+        print(f"    {para[:90]}")
 
 if __name__ == '__main__':
     for p in sys.argv[1:] or ['chapters/part-01/chapter-0001.md']:
