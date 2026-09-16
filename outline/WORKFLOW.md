@@ -52,6 +52,8 @@ Copy `chapters/CHAPTER_TEMPLATE.md` to `chapters/part-NN/chapter-NNNN.md`, fill 
 frontmatter you already know, set `review_status: draft`, and write the chapter under
 the rules in `CLAUDE.md`. One canonical draft. No alternates, no agent-written prose.
 
+Run `python3 scripts/build-manifest.py` so the reader page lists the new chapter.
+
 Commit: `Draft chapter NNNN: <title>`.
 
 ## 4. Post-draft review pass (the same five, in parallel)
@@ -104,7 +106,8 @@ back to step 5):
 3. Apply the proposed bible updates from the report to `bible/*.md`; log anything
    that is a creative decision in `architecture/DECISIONS.md`.
 4. Advance the tracker line in `bible/STORY_OVERVIEW.md`.
-5. Commit: `Approve chapter NNNN: <title>`.
+5. Run `python3 scripts/build-manifest.py` (the reader page reads `reader/manifest.json`).
+6. Commit: `Approve chapter NNNN: <title>`.
 
 From here the chapter is canon and the protection hook guards it.
 

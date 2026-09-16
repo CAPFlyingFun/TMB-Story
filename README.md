@@ -12,3 +12,4 @@ where humans live at insect scale.
 - `chapters/` — the chapters, one Markdown file each with YAML frontmatter
 - `reviews/` — per-chapter handoff reports
 - `docs/` — background reasoning, not canon
+- `index.html` + `reader/` — the reader page, served by GitHub Pages from `main`; after adding chapters or outline files run `python3 scripts/build-manifest.py` to refresh `reader/manifest.json`

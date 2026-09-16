@@ -1,0 +1,69 @@
+{
+  "generated": "2026-09-16",
+  "parts": [
+    {
+      "number": 1,
+      "dir": "outline/part-01",
+      "overview": "outline/part-01/overview.md",
+      "miniArcs": [
+        "outline/part-01/mini-arc-01.md",
+        "outline/part-01/mini-arc-02.md",
+        "outline/part-01/mini-arc-03.md",
+        "outline/part-01/mini-arc-04.md",
+        "outline/part-01/mini-arc-05.md"
+      ]
+    }
+  ],
+  "chapters": [],
+  "bible": [
+    {
+      "key": "STORY_OVERVIEW",
+      "label": "Story Overview",
+      "path": "bible/STORY_OVERVIEW.md"
+    },
+    {
+      "key": "CHARACTERS",
+      "label": "Characters",
+      "path": "bible/CHARACTERS.md"
+    },
+    {
+      "key": "CREATURES",
+      "label": "Creatures",
+      "path": "bible/CREATURES.md"
+    },
+    {
+      "key": "LOCATIONS",
+      "label": "Locations",
+      "path": "bible/LOCATIONS.md"
+    },
+    {
+      "key": "TECHNOLOGY",
+      "label": "Technology",
+      "path": "bible/TECHNOLOGY.md"
+    },
+    {
+      "key": "MYSTERIES",
+      "label": "Mysteries",
+      "path": "bible/MYSTERIES.md"
+    },
+    {
+      "key": "TIMELINE",
+      "label": "Timeline",
+      "path": "bible/TIMELINE.md"
+    },
+    {
+      "key": "CONTINUITY_LOG",
+      "label": "Continuity Log",
+      "path": "bible/CONTINUITY_LOG.md"
+    },
+    {
+      "key": "CHAPTER_INDEX",
+      "label": "Chapter Index",
+      "path": "bible/CHAPTER_INDEX.md"
+    }
+  ],
+  "architecture": {
+    "architecture": "architecture/SERIES_ARCHITECTURE.md",
+    "decisions": "architecture/DECISIONS.md"
+  }
+}
