@@ -4,7 +4,7 @@ title: "The Bar"
 part: 1
 mini_arc: 1
 pov: Caleb
-word_count: 3293
+word_count: 3332
 story_time:
   clock: outside
   date: "Year 0, first week of October (a Tuesday)"
@@ -36,9 +36,9 @@ new_canon:
   - "Ines's rule: off the bar by half past twelve, back at the station by one. She does not spend margin."
 playable_beat_flow: ["load gear at the boathouse", "cross the bar on the falling tide", "count birds on the spit", "sweep for pollinators", "get stuck in the lee-side mud", "follow the ant column uphill", "glimpse the summit box", "regroup with Nora and compare findings", "report to Ines", "pack equipment", "navigate the flooding saddle with a pole", "return to the van", "read Mom's texts"]
 ending_type: unanswered question
-review_status: approved
+review_status: in-review
 audio_status: not-started
-approved_on: "2026-09-16"
+approved_on: ""  # approved 2026-09-16; re-opened by Joshua the same day for decisions 0013/0014
 ---
 
 # Chapter 1 — The Bar
@@ -51,7 +51,7 @@ At six in the morning the boathouse smelled like diesel and wet rope and the cof
 
 "I've got the water."
 
-"I've got the jars, the stakes, the tape and the spare battery, which weighs as much as a cat." His sister finished the knot, stood up, unzipped her jacket and took out a luggage scale. A little black one with a hook, the kind people use at airports. She had brought a luggage scale to work.
+"I've got the jars, the stakes, the tape and the spare battery, which weighs as much as a cat." His sister finished the knot, stood up, unzipped her jacket and took out a luggage scale. It was a little black one with a hook, the kind people use at airports. She had brought a luggage scale to work.
 
 Caleb stared at it. Then at her. "You did not."
 
@@ -67,7 +67,7 @@ Nora set the pack down gently, as if it had feelings. "A hundred grams. Would yo
 
 "Van," said Dr. Ines Marchetti, from the door, without coming in, and that was the end of that.
 
-They drove out in the dark with the heater roaring and the packs on their knees, three weeks into a job Caleb still could not believe was a job. Field assistant. Seasonal. Three months. He had gotten in on a summer of trail crew and a letter from his old biology teacher that he had never been allowed to read. Nora had gotten in on a spreadsheet nobody had asked for: nine years of the station's bird counts, sent to Ines with a note that said *you may find this useful.* Ines had found it useful. There was a corridor at the station lined with group photographs going back to the nineties, and Caleb had walked past them every day for three weeks without knowing a single face.
+They drove out in the dark with the heater roaring and the packs on their knees, three weeks into a job Caleb still could not believe was a job. He was a field assistant, seasonal, for three months. He had gotten in on a summer of trail crew and a letter from his old biology teacher that he had never been allowed to read. Nora had gotten in on a spreadsheet nobody had asked for: nine years of the station's bird counts, sent to Ines with a note that said *you may find this useful.* Ines had found it useful. There was a corridor at the station lined with group photographs going back to the nineties, and Caleb had walked past them every day for three weeks without knowing a single face.
 
 Marco drove and talked enough for the van. Ines rode in front and let him.
 
@@ -81,7 +81,7 @@ Caleb laughed. Nora tried not to, and lost.
 
 By the time they reached the parking lot at the mainland end, the sky had gone the color of the inside of a shell, and the bar was coming up out of the water.
 
-That was the thing about the bar. It was not there, and then it was. Four hundred meters of gravel, four football fields, straight out from the parking lot to the island, and for a few hours around low water you could walk it. The wet gravel shone like somebody had polished it, and Tern Island stood at the far end, dark trees on a dark hump.
+That was the thing about the bar. It was not there, and then it was. Four hundred meters of gravel, four football fields, straight out from the parking lot to the island, and for a few hours around low water you could walk it. The wet gravel shone like somebody had polished it, and Tern Island stood at the far end, dark trees on a low hump.
 
 Ines walked the middle, where the gravel stood up in a dry crest with driftwood along it, and talked over her shoulder. "Stay on the crest. Two-thirds across there's a dip, near the island end. We call it the saddle. That's where the water comes in first. Remember what it looks like dry." She stopped so they could see it: the crest sagged for thirty steps and the gravel there was darker, still wet. "We are off this bar by half past twelve, whatever's finished. Back at the station by one. Questions."
 
@@ -107,13 +107,13 @@ Ines did not laugh. She waited until he had squelched back onto the crest, looke
 
 An hour later, at the island end of the bar, it was full daylight and the island was a different animal. Up close it kept unfolding: a beach where the bar landed, with a long line of dark weed and silver logs where the sea had left its laundry; a trail going up through alders into the firs; and on the far side the spit, a low gravel finger with pools in it and birds all over it.
 
-Ines split them at the beach. She and Nora went to the shore logger, a box on a post at the top of the lee beach with a wire running down the beach into the water, and a second little box beside it that Nora called *the pressure logger* and Marco called *the other one.* Download the memory, read the trace, swap the battery. Caleb and Marco took the count sheets and the binoculars along the transect, the marked line of stakes along the top of the beach, out to the spit.
+Ines split them at the beach. She and Nora went to the shore logger, a box on a post at the top of the lee beach with a wire running down the beach into the water, and a second little box beside it that Nora called *the pressure logger* and Marco called *the other one.* The job there was to download the memory, read the trace and swap the battery. Caleb and Marco took the count sheets and the binoculars along the transect, the marked line of stakes along the top of the beach, out to the spit.
 
-Three stops along the spit, ten minutes each. Marco called the birds and Caleb clicked the counter and wrote them down. Black turnstones, small dark ones that ran about in a gang and made a noise like a rattle. Sanderlings, which ran at the water and away from it and at it again, like they had bet each other. Three fat gray plovers. "We don't get many out here," Marco said. "Write that down. Ines will be thrilled." The sun came up properly and the spit warmed, and this was, he thought, the best job in the world.
+The count was three stops along the spit, ten minutes each. Marco called the birds and Caleb clicked the counter and wrote them down. There were black turnstones, small dark ones that ran about in a gang and made a noise like a rattle. There were sanderlings, which ran at the water and away from it and at it again, like they had bet each other. And there were three fat gray plovers. "We don't get many out here," Marco said. "Write that down. Ines will be thrilled." The sun came up properly and the spit warmed, and this was, he thought, the best job in the world.
 
 The pollinator sweep was less of a triumph. You walked the transect back through the last purple asters, swung the net twenty times, and looked in the bag. The first bag had a spider, a grass seed and some dew in it. Marco peered in beside him and nodded like a doctor. "Write down zero. Zero is science."
 
-By ten there were things up. A bumblebee, huge and slow. Two striped flies that Caleb logged as *honey bees* until Marco looked in the bag, and then at Caleb, with enormous pity. "One pair of wings, Bennett. That's a fly in a bee costume." Caleb crossed it out and wrote *fly (bee costume)* and felt wonderful.
+By ten there were things up: a bumblebee, huge and slow, and two striped flies that Caleb logged as *honey bees* until Marco looked in the bag, and then at Caleb, with enormous pity. "One pair of wings, Bennett. That's a fly in a bee costume." Caleb crossed it out and wrote *fly (bee costume)* and felt wonderful.
 
 At half past ten, which was low water, they ate lunch on a silver log at the island end of the bar, and Caleb put his sandwich down for one second to open his water, and a gull took half the sandwich. Not snatched. Took. It landed, considered, picked it up and left, like a man collecting a parcel.
 
@@ -123,7 +123,7 @@ Marco did not even look up from his own sandwich. "That's his sandwich now. Law 
 
 Caleb went after the crust the gull had dropped, out of principle, and that was how he came to be kneeling in the wet weed at the foot of a drift log, and how he saw the ants.
 
-Big ones, black, with legs the color of rust, coming out of the log. The log was dark and spongy along its underside, wetter than a log should be that high up the beach, and the ants were leaving it. Not wandering. Walking, in a line, up the slope of the beach and away from the water, and most of them were carrying something pale and curled, the size of a grain of rice. Some carried grubs as big as themselves, held out in front, like a person carrying a rolled-up carpet.
+They were big ones, black, with legs the color of rust, and they were coming out of the log. The log was dark and spongy along its underside, wetter than a log should be that high up the beach, and the ants were leaving it. They were not wandering. They were walking, in a line, up the slope of the beach and away from the water, and most of them were carrying something pale and curled, the size of a grain of rice. Some carried grubs as big as themselves, held out in front, like a person carrying a rolled-up carpet.
 
 He lay down on his stomach in the weed without checking what he was lying on, and watched.
 
@@ -133,7 +133,7 @@ The line went up the beach, across the sand, into the grass at the edge of the t
 
 "That's nice for them," said Marco from the log, with his mouth full.
 
-Caleb got up and followed the line. Up the beach, into the grass, up a bank and onto the trail, where the ants had cut a path of their own across the human one and gone on uphill through the alders.
+Caleb got up and followed the line up the beach, into the grass, up a bank and onto the trail, where the ants had cut a path of their own across the human one and gone on uphill through the alders.
 
 "Transect's that way," Marco called, pointing the other way with his sandwich.
 
@@ -143,15 +143,15 @@ Caleb got up and followed the line. Up the beach, into the grass, up a bank and 
 
 "Also know that." He waved the count sheet over his shoulder and kept going.
 
-He went on up after them. The trail climbed through the firs and came out on top, where the wind was and the trees opened, and the ants went to an old stump at the edge of the clearing and poured into it. That was where they were taking the babies. A dry stump on the summit, as far from the water as the island went.
+He went on up after them. The trail climbed through the firs and came out on top, where the wind was and the trees opened, and the ants went to an old stump at the edge of the clearing and poured into it. That was where they were taking the babies: a dry stump on the summit, as far from the water as the island went.
 
-The summit was a hilltop of moss and rust. A bent metal post with nothing on it. A lump of concrete with a rusted ring. And, squatting in the grass, one gray metal box about the height of his knee, square and clean and dry, with a padlock on it, the only thing up there that was not rusting. Caleb looked at it the way you look at a parked car. Then he looked at the ants some more, because the ants were the interesting thing, and went back down to the transect, which was that way.
+The summit was a hilltop of moss and rust. There was a bent metal post with nothing on it, and a lump of concrete with a rusted ring, and, squatting in the grass, one gray metal box about the height of his knee, square and clean and dry, with a padlock on it, the only thing up there that was not rusting. Caleb looked at it the way you look at a parked car. Then he looked at the ants some more, because the ants were the interesting thing, and went back down to the transect, which was that way.
 
 He noticed the spit before he understood it.
 
 It was quiet. An hour ago the turnstones had been rattling all along it; now there was nothing but wind. He looked for them and saw them lifting, all together, off the far end of the spit and going away downwind over the water, and not coming back. The sanderlings were gone. The plovers were gone. The pools at the tip of the spit, half empty at lunch, were full, and water was running up toward the weed in long thin sheets that did not slide back as far as they had come.
 
-The wind had turned. He put his face into it. South now, with weight in it, smelling of rain that had not arrived.
+The wind had turned. He put his face into it. It was south now, with weight in it, and it smelled of rain that had not arrived.
 
 He looked up the beach, and the ants were still going up the hill.
 
@@ -199,13 +199,13 @@ Ines was already walking. "Ninety minutes is margin. I don't spend margin. Move.
 
 Nora sealed the count sheets, the laptop and the printed table into the dry bag and took the wet things, the gloves and the dripping net, into her own pack so nothing with writing on it would get wet. Marco put Caleb's pack on backwards over his own. Caleb got the net poles and the stakes and went to the front, because Ines pointed at him and said, "You walked the crest this morning. You know where the soft is. Go first with the pole. Say what you're standing on."
 
-The crest was dry all the way to the saddle. At the saddle there was water on the gravel now, a thin sheet sliding in from the windward side and across to the other, and the gravel under it was ticking. The whole bar was ticking and bubbling like something cooking, as the sea came up through the stones from underneath.
+The crest was dry all the way to the saddle. At the saddle there was water on the gravel now, a thin sheet sliding in from the windward side and across to the other, and the gravel under it was ticking. The whole bar was ticking and bubbling as the sea came up through the stones from underneath.
 
 "Ankle," Caleb said. "Firm. Stones. Keep to the right of me, the left was soft this morning."
 
 "Eleven twenty-two," said Nora behind him, in a voice a little higher than she probably wanted. "Ankle."
 
-Then the middle of the saddle, and the water was over his boots and at his shins, cold enough to hurt his teeth. It pulled at the pole sideways, because the two sides of the bar were filling at different speeds. A stone rolled under his foot; he put the pole down hard and it held. One stake slid out of the bundle under his arm and went away across the water, turning, and he let it go, because Ines had said the thing about margin.
+Then he was in the middle of the saddle, and the water was over his boots and at his shins, cold enough to hurt his teeth. It pulled at the pole sideways, because the two sides of the bar were filling at different speeds. A stone rolled under his foot; he put the pole down hard and it held. One stake slid out of the bundle under his arm and went away across the water, turning, and he let it go, because Ines had said the thing about margin.
 
 "Shin," he said. "Still firm."
 

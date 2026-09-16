@@ -22,6 +22,7 @@ file is updated.
 - 0011 — Dialogue carries a body: beats, looks and reactions on most lines, no bare back-and-forth — **Accepted (Joshua, 2026-09-16)**
 - 0012 — The series is written in US English — **Accepted (Joshua, 2026-09-16)**
 - 0013 — Complete sentences; fragments only for a joke, a cut-off or a trail-off — **Accepted (Joshua, 2026-09-16)**
+- 0014 — No accidental rhyme or verse cadence; Chapter 1 re-opened for 0013/0014 — **Accepted (Joshua, 2026-09-16)**
 
 ---
 
@@ -105,4 +106,10 @@ file is updated.
 **Context:** Joshua, reading Chapter 2: the prose should read like a plain modern translation rather than an ornate old one; "make sure it's a complete sentence unless a joke, someone is cutting them off, or they stop talking."
 **Decision:** Narration and dialogue in complete sentences. Fragments only as the joke, the interruption or the trail-off. Inventory-style lists become sentences. Applied to Chapter 2 in review (the two-count line, the jar slip, the photograph description, the repacking list, the ending's "Not at the keys"). Chapter 1 is approved and untouched; its fragments are listed in Chapter 2's handoff report for Joshua to keep or convert.
 **Consequences:** `CLAUDE.md` carries the rule; the scene specialist flags fragments in review.
+**Status:** Accepted, 2026-09-16.
+
+### 0014 — No accidental verse; Chapter 1 re-opened
+**Context:** Joshua: "make sure the words and sentences don't rhyme or sound like a poem unless needed for a reason," and, so the rule and decision 0013 could be applied to Chapter 1, "temporarily place back in pending."
+**Decision:** Prose avoids rhyme, chime and sing-song cadence unless the moment needs it. Chapter 1's `review_status` goes back to `in-review` on Joshua's instruction (the approval date is kept in a comment), its index row and the tracker say so, and it returns to `approved` only when he re-approves it. Applied to Chapter 1: eleven fragment passages rewritten as sentences (the joke "Not snatched. Took." kept), "dark trees on a dark hump" flattened, "ticking and bubbling like something cooking" and "Then the middle of the saddle" flattened.
+**Consequences:** `CLAUDE.md` carries the rule; the scene specialist flags rhyme and cadence in review.
 **Status:** Accepted, 2026-09-16.

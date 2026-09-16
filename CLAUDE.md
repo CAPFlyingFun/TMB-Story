@@ -91,6 +91,10 @@ These are craft invariants. The prose is heard, not seen.
   speaker trails off. Lists of kit, sights or steps are carried by full sentences, not
   by stacked fragments. The style to aim for is plain and clear, the way a modern
   translation reads next to an old one: nothing a listener has to untangle.
+- **No accidental verse (Joshua, 2026-09-16, decision 0014).** Prose should not
+  rhyme, chime or fall into a sing-song cadence unless the moment needs it. Watch
+  for stacked -ing words, matched pairs ("dark trees on a dark hump"), and rhythmic
+  triplets; read the line aloud and flatten it if it sounds like a poem.
 - **Profanity:** minimal to none.
 - **Violence:** real consequences with real weight, no graphic anatomical description,
   no lingering.

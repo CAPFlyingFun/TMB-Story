@@ -210,3 +210,17 @@ Marco Sato's introduction split into two sentences; "He went on up after them";
 the two "And ..." fragments joined to their lines. US English throughout: color,
 gray, meters, centimeters, rumor, math, pants, parking lot, turn around, gotten,
 twelve-thirty. Word count now 3,293.
+
+## Re-opened (Joshua, 2026-09-16): complete sentences and no accidental verse
+
+Joshua re-opened the chapter (`review_status: in-review`) so decisions 0013 and 0014
+could be applied. Changes: "He was a field assistant, seasonal, for three months";
+"It was a little black one with a hook"; "dark trees on a low hump"; "The job there
+was to download the memory, read the trace and swap the battery"; the bird count
+as three "There were" sentences; "By ten there were things up: a bumblebee ... and
+two striped flies"; "They were big ones ... They were not wandering. They were
+walking"; "followed the line up the beach, into the grass"; "That was where they were
+taking the babies: a dry stump"; the summit as one sentence; "It was south now ...
+and it smelled of rain"; "ticking and bubbling as the sea came up" (the "cooking"
+chime cut); "Then he was in the middle of the saddle". Kept as the joke: "Not
+snatched. Took." Word count 3,332. Waiting on Joshua's re-approval.
