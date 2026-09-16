@@ -55,4 +55,7 @@ rewrite.
 
 - Cite the file and line or quoted phrase for every claim about canon.
 - If the outline and the bible disagree about a character, name it; do not resolve it.
+- In review mode, flag any run of three or more bare dialogue lines and any stretch
+  where "said" alternates mechanically (decision 0011): most lines want an action, a
+  look or a reaction a listener can picture, in that character's own manner.
 - Ranked lists over essays. The main session decides.

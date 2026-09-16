@@ -43,3 +43,4 @@ Not met / changed by the draft (carry forward):
 - Ch 1 ending_type is now "unanswered question", not "funny character beat". Ch 2 may not end on an unanswered question.
 - The two `***` breaks are gone; transitions are spoken ("An hour later, at the island end of the bar", "Ten minutes down the road"). Ch 2 must do the same.
 - Length rule changed (decision 0010): average ~2,200, range 1,800–3,000. Ch 1 at 2,990 is in range; item 10 above is closed.
+- Dialogue rule (decision 0011): most lines carry a beat. Ch 1 revised; now 3,294 words. No fact changes except: Nora reads Mom's first text aloud in Mom's voice; Caleb has his eyes shut for the second and third texts.

@@ -1,6 +1,6 @@
 # Chapter 0001 — The Bar — handoff report
 
-Date: 2026-09-16 · POV: Caleb · Words: 2,990 · Ending type: unanswered question ·
+Date: 2026-09-16 · POV: Caleb · Words: 3,294 · Ending type: unanswered question ·
 Status: `in-review`, waiting on Joshua.
 
 Source of the plan: Trello card `01 — The Bar` in the `📖 STORY — Chapters 1–50`
@@ -43,12 +43,40 @@ Joshua: "95% there." Two changes, both now standing rules (decision 0009):
   may not end on one. Nora knowing something Caleb does not is the Chapter 2
   character note, started here.
 
+## Round three (Joshua's note, 2026-09-16): dialogue carries a body
+
+Every exchange revisited (decision 0011). Bare lines now carry an action, a look or
+a reaction: Caleb hefting the pack and nearly taking out a lamp; Nora not looking up
+from her laces; Nora setting the pack down "as if it had feelings"; Marco finding
+Caleb's eyes in the mirror; Ines not turning round; "Don't you—" "Sent."; Marco
+nodding "like a doctor" over the empty bag and looking at Caleb "with enormous
+pity" over the fly; Marco with his mouth full; Caleb waving the count sheet over his
+shoulder; Marco saying "Birds do that" kindly, "the way you talk to someone who has
+seen a ghost"; the twins asking "Where's Ines?" at once and neither laughing; Caleb
+wiping his hands on his trousers for something to do with them; Ines already walking
+on "Move"; Ines looking at each twin "for about a second each"; Caleb closing his
+eyes at the scale and answering the roof of the van; Nora reading Mom's text in
+Mom's voice; Caleb opening one eye. Speakers are named throughout. Ornate tags and
+adverbs were not used; the beat does the work.
+
 ## Word count
 
-The chapter runs 2,990 words. Joshua's rule (decision 0010, 2026-09-16) is about
-2,200 on average with a range of 1,800 to 3,000 as the plot needs, so this chapter
-is inside the range and no longer needs a beat cut. Two cutting passes brought it
-from 3,385 to 2,875; the hook added 115.
+The revision added about 300 words. Small trims took back about sixty. The chapter
+now stands at 3,294 words against decision 0010's range of 1,800 to 3,000. Three ways
+to go, Joshua's call:
+
+1. Accept it at this length. The range is a guide and the chapter is a set piece
+   with three scenes and the series' first day.
+2. Trim a beat. The candidates are the same as before: the pollinator sweep (about
+   110 words) or the plovers and sanderlings (about 50). Neither gets it under
+   3,000 alone.
+3. Split it. The natural seam is after the summit glimpse, at "He noticed the spit
+   before he understood it." But each half would be about 1,650 words, under the
+   floor, and a split moves every Trello chapter number from 02 onward, which is a
+   plan change for the board, not a prose change. Not recommended.
+
+Earlier history: cut from 3,385 to 2,875 in two passes; the hook added 115; the
+dialogue beats added about 300.
 
 ## What changed from the card and why
 
@@ -161,4 +189,5 @@ from 3,385 to 2,875; the hook added 115.
   off the bar.
 - No second-person command language; every beat in `playable_beat_flow` is an
   action Caleb performs on the page.
-- Length: 2,990, inside the 1,800–3,000 range (decision 0010).
+- Length: 3,294, over the 3,000 guide by a margin; flagged above for Joshua.
+- Dialogue: no run of bare lines; speakers named; beats vary (decision 0011).
