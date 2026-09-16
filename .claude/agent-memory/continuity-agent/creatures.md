@@ -22,3 +22,8 @@ Rules (bible/CREATURES.md): domestication / taming / bonding / training are four
 - Web: "a spider web strung between two alders, still beaded with dew" at the trailhead; Marco through it, Caleb round the next (ch:103). PRE-EMPTS Ch 3's web (MA1:167-169). Frontmatter names "Cross orb-weaver" (ch:16).
 - Sweep: first bag "a spider, a grass seed and some dew"; by ten a bumblebee and two hoverflies ("fly (bee costume)") (ch:107-115). Flowers: "the yellow sticky ones and the last purple asters" (ch:107).
 - NOT on the page: crabs (PLAN MA1:79), hallway photos. Ch 2 retells the ants (MA1:149); Ch 3 "The ants were first." (MA1:179-181); Ch 10 the summit ants "finished moving house" (MA1:429-430) — consistent with the summit stump.
+
+## DRAFT [ch 0002] (chapter-0002.md)
+- "a fat brown moth banging at the glass" at the kitchen window during "Did Dad ever work out there?", then walking upside down along the outside sill (c2:205, :235). Frontmatter names "A large yellow underwing moth (species in the bible, not on the page)" (c2:16) — CREATURES.md has NO moth entry; needs one on approval or the parenthesis is false.
+- A small dead "fly in a bee costume" (drone fly) shaken out of the net bag; Caleb keeps it a moment (c2:97-101) — on the page, not in frontmatter creatures.
+- Ants retold by Caleb (c2:117-121): black, rusty legs, log at the top of the beach, "babies... like rice", carrying other ants, up to a stump on the summit, "moving house. In the middle of the day", log "soaking, higher up than it should've been" — matches ch:126-146 ✓. Gull retold "the size of a dog" (c2:115) — self-declared exaggeration ✓. Crabs not cited ✓.

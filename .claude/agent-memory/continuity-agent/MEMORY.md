@@ -40,6 +40,10 @@ draft: mud 07:30 (ch:96), call at 11:00 (ch:194), saddle 11:22/11:24 (ch:206, :2
 (ch:72, :216), Ines "not wet above the shin" (ch:216), corridor photos ON the page (ch:70), Caleb HEARD "which
 island" (ch:258), text 3 unread on the page (ch:262). Line refs in topic files are draft numbers (~+2 after ch:70).
 
-Last pass: ADVISORY for Ch 0002 "Sixty-Two Grams of Salt" (2026-09-16; open-threads.md tail, timeline.md Ch 2
-line). Next: REVIEW of the Ch 0002 draft — check vials/jars, Saturday tide wording, fixed-words variant,
-"Gus's boat shed", text 3, box unmentioned, ending type ≠ unanswered question.
+Last pass: REVIEW of the Ch 0002 DRAFT "Sixty-Two Grams of Salt" (2026-09-16; chapters/part-01/chapter-0002.md,
+3,602 words, Nora POV, Tue 18:45–≈23:20). DRAFT [ch 0002] blocks appended to every topic file ("c2:" = its
+lines). Top flags: "Get it Saturday." unprompted (c2:151); August "twin thing" predates the twins' start
+(c2:193); frontmatter asserts "low after lunch", "by skiff", moth species, "both pairs", scale "lives at home"
+beyond the page; elapsed ≈ 4.5 h not 5; beat-flow order ≠ prose. Box unmentioned ✓, text 3 revealed ✓, ends
+on a quiet unsettling line ✓, fixed words = MA1 wording (overview.md:75 variant still conflicts). Next: on
+approval promote DRAFT → APPROVED [ch 0002] and check the bible entries listed in open-threads.md tail.

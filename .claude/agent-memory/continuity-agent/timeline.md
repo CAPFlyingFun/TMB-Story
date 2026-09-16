@@ -30,3 +30,10 @@ Clocks: outside (O) and island (I), tracked separately; no backward time; biolog
 - Nothing until Ch 44. Elena ~7 months pregnant at ~Ch 60–65 (TIMELINE.md:11).
 
 ## RETIRED clock facts (boatyard draft): "Mid-afternoon, about five hours", the customer's dates, "Rust takes hours", "first hard frost". RETIRED plan fact: "low tide in two hours" (pre-dd8b7cb MA1:59).
+
+## DRAFT [ch 0002] "Sixty-Two Grams of Salt" (chapters/part-01/chapter-0002.md, 3,602 words measured; c2: = its lines)
+- Same Tuesday. Marco drops the twins at the bottom of the hill "at a quarter to seven" (c2:47), first rain of the front "arriving in small handfuls" (c2:57); Rachel home "which she often was not at seven" (c2:69); "Half an hour later" Nora at the outside tap in the dark ≈ 19:15 (c2:93); dinner ≈ 19:45–20:15 (unstated); repack after dishes; bed with rain "properly now" (c2:255); Nora wakes "a quarter past eleven" (c2:257); ends ≈ 23:20. Frontmatter elapsed "about five hours, to near midnight" (c2:12) overstates: ≈ 4.5 h to 23:15.
+- Afternoon off-page as narrated (c2:67): count typed up, poles hosed, the station log written, kit sent home. Marco drives the dusk leg (third van ride); Ines not in the van.
+- SATURDAY plan on the page: "Eight o'clock Saturday. Gus is running you out in the skiff. Ines wants the morning." (c2:49); Ines "Bring them back Saturday" (c2:67). "Low after lunch" is FRONTMATTER ONLY (c2:35) — not in prose. Fits TIMELINE.md:18 lows ≈ 13:50/02:15; 08:00 skiff precedes the ≈ 10:50 walkable window ✓; Ch 3's "tide wrong for the bar" (MA1:162) stays a morning truth ✓.
+- Rachel "out doing their units in August" (c2:193) — before the twins' mid-September start (ch:70 three weeks in) → the "twin thing" remark needs the station to have met both twins by August. GAP, flagged.
+- Rachel says "Get it Saturday." (c2:151) before anyone on the page tells her the return day. Knowledge gap or deliberate M13 plant — flagged, not resolved.
