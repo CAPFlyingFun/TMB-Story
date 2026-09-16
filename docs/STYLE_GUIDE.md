@@ -88,13 +88,13 @@ Numbers are checked by `scripts/style-check.py`; targets are per chapter, prose 
 Before (68 words): "The net bag was hanging over the heater, dry now, stiff, with a
 white bloom of salt in every seam, and it smelled like low water warmed up, and
 Nora took it down and folded it and set it on her mother's kitchen scale, the
-little flat one that read in grams, and then went and got her kit sheet out of the
+little flat one that read in grams, and then went and got her gear sheet out of the
 front pocket of her pack."
 
 After: "The net bag hung over the heater. It was dry now, and stiff. There was a
 white bloom of salt in every seam. It smelled like low tide, warmed up. Nora took it
 down and folded it. She set it on her mother's kitchen scale, the little flat one
-that read in grams. Then she went to the hall and got her kit sheet out of her
+that read in grams. Then she went to the hall and got her gear sheet out of her
 pack."
 
 Before (59 words): "She was standing at the shelf by the door, where the keys lived

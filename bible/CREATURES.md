@@ -59,6 +59,8 @@ Individual entry template:
 
 Shorebird counts are tied to the tide `[ch 0003, in review]`. Near high water the birds are packed onto the spit's roost and are counted from a distance through binoculars, because they have nowhere to go if they are put up. The Saturday count was 36 turnstones, 24 sanderlings and the three plovers.
 
+No entry needed unless they recur: drone flies (*Eristalis* sp., unconfirmed), on the page only as "a fly in a bee costume" `[ch 0001]` and one dead specimen shaken out of the net bag `[ch 0002, in review]`.
+
 Also on the page in Part One, human scale, no entry needed unless they recur: black turnstones, sanderlings and three black-bellied plovers on the spit, which lift together and leave downwind before the surge; a gull that takes half a sandwich; a fall bumblebee and two drone flies in the sweep. `[ch 0001]`
 
 ## Wider bestiary (add as the twins' range and skill reach them)

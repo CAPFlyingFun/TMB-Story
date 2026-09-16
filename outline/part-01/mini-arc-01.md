@@ -77,7 +77,7 @@ Bennett home, Tidewater Instruments, Mercy General.
      kind of thing she does for fun.
   3. Two alarms from two instruments: Caleb notices the far spit has gone
      quiet, the shorebirds up and gone, the crabs off the mud; the ants are
-     still climbing. Nora notices the barometer has dropped like a stone in
+     still climbing. Nora notices the pressure has dropped like a stone in
      the last hour and the wind has backed; her own arithmetic says the
      water will be over the bar's low point well before the printed table
      says. They find each other. "Your ants and my numbers agree."
@@ -93,7 +93,7 @@ Bennett home, Tidewater Instruments, Mercy General.
      narrating. Everyone across with water at the shins, laughing the way
      you laugh when you were scared thirty seconds ago.
   6. Ines, dry as the mainland: "Good catch. Both of you." Caleb: "It was the
-     ants." Nora: "It was the barometer." Ines: "It was both, which is why
+     ants." Nora: "It was the pressure." Ines: "It was both, which is why
      I'm keeping you."
 - **Character:** the split shown, never explained: he reads living things,
   she reads numbers, both were right, neither alone was enough. Youth: mud,
@@ -107,7 +107,7 @@ Bennett home, Tidewater Instruments, Mercy General.
 - **Continuity:** no injuries; wet to the knees; the count unfinished, the
   logger's spare battery not swapped — a return trip is needed (sets up Ch. 3).
   Ines, Marco, Gus (radio voice only), the van, the station all established.
-- **Ending type:** funny character beat — in the van, the luggage scale:
+- **Ending type:** unanswered question — changed from funny character beat by decision 0009. The scale gag still happens, and then Rachel's texts close the chapter. In the van, the luggage scale:
   Nora's pack was heavier. By four hundred grams. "I said." "You said."
 - **Hands off:** home.
 
@@ -131,15 +131,17 @@ Bennett home, Tidewater Instruments, Mercy General.
      surge and then makes them eat.
   2. The two-count, in the car earlier, deciding which version to tell Mom
      (the fun one), and again at the table over the last of the bread.
-     "We built it the hard way" gets its first airing when Rachel says the
-     station manager told her the two of them "have that twin thing."
+     "We built it the hard way" gets its first airing when Rachel says
+     somebody at the station told her the two of them "have that twin thing."
+     The page keeps the source vague on purpose ("Somebody. When I was out
+     doing their units last month."): naming Ines would contradict her
+     Chapter 1 line, and naming a station manager would invent a character.
   3. The photograph on the shelf by the door, the man on a dock in a green
      jacket, squinting; eyes slide past it. Then Caleb, out of nowhere,
      because the station's hallway has photos from the nineties: "Did Dad
      ever work out there?" Rachel: "Your father did research." And the fixed
-     words, said as a door closing: research trip, the boat lost off the
-     coast, nobody ever found, eighteen years ago. "That's the whole story.
-     Pass your brother the salt."
+     words, said as a door closing. **The verbatim wording is canon and lives
+     only in Rachel's entry in `bible/CHARACTERS.md`; quote it from there.**
   4. Rachel's worry about the job, read by the twins as the obvious thing:
      of course Mom doesn't love them working somewhere Dad might have been.
   5. Nora, later, on the stairs with a glass of water, sees Rachel standing
@@ -177,7 +179,7 @@ Bennett home, Tidewater Instruments, Mercy General.
   3. Weather turns on the run back: rain, wind, the sound going gray. The
      van on the coast road, Marco driving, Ines following in her own car.
      The twins in the back seat arguing, warm and stupid and tired: "The
-     ants were first." "The barometer was right." "The ants were right and
+     ants were first." "The pressure was right." "The ants were right and
      first."
   4. The crash, mundane and mechanical: on a curve in the rain, an oncoming
      pickup towing a boat trailer, the trailer swaying wide across the

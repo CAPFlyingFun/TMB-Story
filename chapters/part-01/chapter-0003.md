@@ -24,6 +24,10 @@ status_changes:
   - "Injuries on the page: Caleb cannot close his left hand and does not notice. Nora is not moving. Other injuries are established in Chapter 4"
   - "The station van left the road and is wrecked. Nora's pack and the count sheets are in it"
 mysteries:
+  # Arrays are empty because no ladder id is formally introduced here: M34 enters
+  # at Ch 7 and M04/M05 at Ch 5. What this chapter PLANTS is recorded in the
+  # MYSTERIES.md clue table: the D.M. tag and its year, the enclosure's condition,
+  # the kneeling patch, and the first page appearance of M04/M05 in the vision.
   introduced: []
   advanced: []
   answered: []
@@ -264,7 +268,7 @@ In the back seat, Nora was finishing an argument that was four days old.
 
 "The ants were first," Caleb said.
 
-"The barometer was right," said Nora.
+"The pressure was right," said Nora.
 
 "The ants were right and first."
 

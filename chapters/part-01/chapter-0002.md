@@ -10,13 +10,13 @@ story_time:
   date: "Year 0, first week of October (the same Tuesday as Chapter 1)"
   opens: "A quarter to seven in the evening, dusk, at the bottom of the Bennetts' hill"
   elapsed: "about four and a half hours, to a quarter past eleven"
-objective: "Get the field kit clean, dry and repacked for Saturday's return trip, and get through the first family dinner after the surge without anyone saying anything that cannot be taken back."
+objective: "Get the field gear clean, dry and repacked for Saturday's return trip, and get through the first family dinner after the surge without anyone saying anything that cannot be taken back."
 locations: ["The road at the bottom of the Bennetts' hill", "The Bennett home (Port Alder): the front hall and the shelf by the door, the kitchen, the back step, the stairs"]
 characters: [Nora, Caleb, "Rachel Bennett", "Marco Sato (the drop-off only)"]
 creatures: ["A fat brown moth at the kitchen window (large yellow underwing in the bible; unnamed on the page)", "A dead drone fly shaken out of the net bag (the fly in a bee costume from Chapter 1)", "The Tern Island ants and the gull, retold"]
 status_changes:
   - "No injuries. Both twins showered; the field clothes in the machine"
-  - "Kit: boots rinsed and stuffed with newspaper; the station's net bag and the gloves dried on the heater under the kitchen window; six empty sample jars re-labeled in pencil for Saturday (date left blank); both packs repacked and standing by the front door (Nora's reads 6.4 kg with the station's net and gloves in it); Nora's luggage scale and kit sheet are at home"
+  - "Gear: boots rinsed and stuffed with newspaper; the station's net bag and the gloves dried on the heater under the kitchen window; six empty sample jars re-labeled in pencil for Saturday (date left blank); both packs repacked and standing by the front door (Nora's reads 6.4 kg with the station's net and gloves in it); Nora's luggage scale and kit sheet are at home"
   - "Knowledge: Nora knows Rachel's third text ('Ok. Straight home after. Both.') and that it arrived inside a minute; Caleb does not. Nora saw the letter go into the back pocket; Caleb did not. Both twins have now heard the family's story of Daniel, in Rachel's words, in one breath"
   - "Rachel knows: the surge, the logger's numbers, that the file is still on the unit, that Caleb followed ants up the hill, that the return trip is Saturday by skiff (Caleb told her in the hall)"
 mysteries:
@@ -33,7 +33,7 @@ new_canon:
   - "Someone at the station told Rachel the twins have 'that twin thing' when she was out doing the station's units last month (Tidewater Instruments services Alder Sound's loggers; the twins already knew that, it is how they heard about the jobs)"
   - "The afternoon at the station: Ines's log carries the word 'ants' in Caleb's hand in the box for cause, and Ines let it stand; the soft kit sent home to dry because the lab's drying corner is under a skylight that leaks"
   - "Saturday's return trip: Gus runs the team out in the skiff at eight; Ines wants the morning (Marco, at the drop-off)"
-  - "Nora keeps a kit sheet with the dry weight of everything she carries, weighed on her first day at the station (net bag 340 g); the Bennett kitchen scale reads in grams; the dried net bag read 402 g and Rachel did the arithmetic (35 g a liter; ten grams of it salt)"
+  - "Nora keeps a gear sheet with the dry weight of everything she carries, weighed on her first day at the station (net bag 340 g); the Bennett kitchen scale reads in grams; the dried net bag read 402 g and Rachel did the arithmetic (35 g a liter; ten grams of it salt)"
   - "Rachel came home in the Tidewater fleece and cooked in it; she answers questions with instructions"
 playable_beat_flow: ["climb the hill with the packs", "unload in the front hall (notice the letter)", "rinse boots and gloves at the outside faucet", "hang the net bag and gloves to dry", "tell the day to Rachel while working (the two-count)", "answer Rachel's logger questions", "re-label the sample jars", "weigh the net bag on the kitchen scale", "sit down to dinner (notice the photograph)", "repack both packs for Saturday and set them by the door", "come downstairs at night (see Rachel at the shelf)"]
 ending_type: quiet unsettling line

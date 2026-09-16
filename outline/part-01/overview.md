@@ -72,7 +72,7 @@ audio distinctness from the locked cast.
 - **HALCYON** — the designation in Daniel's journal margin, matching a redacted grant line.
 - **The two-count** — the twins' childhood ritual: count to two before doing anything stupid together.
 - **Daniel's fingerprint** — nested brackets with dot-subscripts, a doubled dot on the inner subscript of boundary terms, boundary term always solved first (instantiates Rev 3's "exact signature TBD").
-- **The official story** — a research trip, the boat lost off the coast (the page, Ch. 0002, supersedes older wording here), body never recovered; memorial arranged through the funder's lawyer.
+- **The official story** — a research trip, a boat lost, nobody found, eighteen years ago; memorial arranged through the funder's lawyer. **The wording is canon and lives in ONE place: Rachel's entry in `bible/CHARACTERS.md`. Do not paraphrase it and do not copy it here** (decision 0012 changed the closer once already, and a paraphrase in this file went stale as a result).
 - **The sealed envelope** — what the break-in takes: a letter Daniel left Rachel "to be opened only if," never opened. Contents unknown to everyone; a Part 9 payoff.
 - **The voicemail** — the only recording of Daniel's voice.
 
