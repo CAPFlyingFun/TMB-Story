@@ -1,35 +1,39 @@
 # Open threads — what the next chapter must honour
 
-MA1: = outline/part-01/mini-arc-01.md (PLAN, decision 0008).
+MA1: = outline/part-01/mini-arc-01.md (PLAN, decision 0008; line refs at dd8b7cb). ch: = chapters/part-01/chapter-0001.md (DRAFT at dd8b7cb, review_status: draft).
 
-## Into Ch 0001 "The Bar" (first chapter; nothing precedes it)
-- No previous chapter; no ending-type constraint. Ch 1 ending = funny character beat (MA1:109-110); Ch 2 = quiet unsettling line (MA1:154); Ch 3 = revelation (MA1:461-465).
+## Ch 0001 "The Bar" — DRAFT hand-off audit (2026-09-16 review pass)
+Met on the page: luggage scale is Nora's, verdict 400 g, "I said." "You said." (ch:51, :235-247) · battery + count left ("Battery stays. Count stays.", ch:195) · one stake lost at the saddle (ch:209) · box glimpsed by Caleb ALONE while following the ants, tag unread, not approached, padlocked, "clean and dry" (ch:147) · ants to a summit stump (ch:145) · gull/sandwich (ch:117) · mud photo sent to "his mother", no location, Rachel unnamed (ch:91-93) · Nora's trace + printed table + "pressure logger" (ch:101, :175) · Ines's two lines verbatim (ch:217, :223) · Marco two packs (ch:201) · Gus radio only, no Mercer (ch:191-195) · no injuries (frontmatter ch:18) · no two-count, no "twin thing", no fixed words, no "station manager" ✓ · ends in the van BEFORE any arrival → Ch 2's dusk drop is a second ride ✓ · mysteries all empty ✓.
+Not met / changed by the draft (carry forward):
+1. Frontmatter "download cut short (Nora has the live trace, not the file)" (ch:19) is NOT on the page. Ch 3's "download clean" (MA1:167) wants it. Either the prose gains a clause or the frontmatter drops it.
+2. The orb-weaver web is USED in Ch 1 (Marco walks through one, Caleb goes round the next, ch:103; new_canon ch:33). PLAN put the web in Ch 3 (MA1:167-169). If kept, Ch 3's web is a callback, not a first.
+3. Ines DROVE the van both legs (ch:67, :215, :249); Marco only "drove the van" as a role (ch:53). Ch 3 needs Marco driving + Ines in her own car (MA1:178) — no conflict, but Ch 1 shows no Marco driving.
+4. Nora "did not see" the box (ch:21) → Ch 3 is Nora's FIRST sight of the enclosure; Caleb's second.
+5. The box has a PADLOCK (ch:147); Ch 9–10 use a "lock code from the inventory" (MA1:403, :431) → it must be a combination padlock; Ch 3 "padlock is not rusted" (MA1:175-176) fits.
+6. "Wet to the shins" at the crossing (ch:213), Caleb "to the knee" from the mud (ch:89), Ines "not wet above the ankle" (ch:215) — PLAN said "wet to the knees" (MA1:107). Ch 2 "filthy" still fine.
+7. The gull was NOT photographed (Nora at the logger); only the mud photo exists (ch:93). PLAN MA1:68-69 "photographs both" — Ch 2's retelling ("a heroic sandwich", MA1:126-127) is spoken, fine.
+8. Crabs are NOT on the page (PLAN MA1:79 "the crabs off the mud") — Ch 2/3 retellings should not cite crabs.
+9. Both instruments are "a grey box" (shore logger ch:101; summit box "grey metal box" ch:147) — audio conflation risk; Ch 3 should keep them verbally distinct.
+10. Word count 2,996 measured (frontmatter 2989) vs target 2,300–2,500 (MA1:58) and ceiling 2,500 (CLAUDE.md). Not mine; noted.
+11. Hallway photos from the nineties (MA1:138) NOT planted in Ch 1; Ch 2's "Did Dad ever work out there?" must introduce them itself.
 
-## What Ch 2–10 need Ch 1 to leave standing (draft may not contradict)
-1. The luggage scale exists, is Nora's, and goes home (Ch 8 opens on Caleb hunting for it, MA1:358-360). The verdict: Nora's pack heavier by 400 g, "I said." "You said." (MA1:110).
-2. The count is UNFINISHED and the transect logger's spare battery NOT swapped → the Saturday return trip (Ch 3, MA1:106-107, :155, :161, :165-166).
-3. The enclosure is glimpsed, dry and cared-for, tag UNREAD, not approached, not opened (MA1:101-105; tag read Ch 3 MA1:171; opened Ch 10).
-4. The ant brood-move (retold at dinner Ch 2 MA1:148; argued Ch 3 MA1:178-180; "finished moving house" Ch 10 MA1:428-429), the gull/sandwich (MA1:127), the mud photo texted to Rachel (MA1:99-100).
-5. Nora's pressure trace + printed table + barometer arithmetic: Ch 2 Rachel "asks one professional question too many about the surge" and services that logger (MA1:128-130).
-6. Ines's "Good catch. Both of you." / "It was both, which is why I'm keeping you." (MA1:94-96); Marco carrying two packs and narrating (MA1:91-92); Gus on the radio only (MA1:108).
-7. No injuries; wet to the knees (MA1:106). No Mercer/tag/Dad talk at the station in Ch 1 (Ch 2's "Did Dad ever work out there?" rides on the hallway photos, MA1:137-138; Gus's line is Ch 3).
-8. The two-count is NOT SHOWN in Ch 1 (the card does not call for it); Ch 2 stages it "in the car earlier" and at the table (MA1:131-134) → Ch 1's van beat must stop before the drop-off and leave that room. "We built it the hard way" first airs Ch 2 (MA1:133). The fixed words first said Ch 2 (MA1:138-141).
-9. Rachel absent from the page (MA1:99-100). The letter is Ch 2's (MA1:118-120).
-10. Hallway photos from the nineties at the station (MA1:137) — may be planted in Ch 1 as texture, but Caleb must not recognise anyone in them.
-11. The count sheets are Nora's and physical (dried Ch 2, survive the crash Ch 3, returned Ch 4).
+## What Ch 2–10 still need from Ch 1 (unchanged)
+- Luggage scale goes home (Ch 8, MA1:359-361). Count sheets are physical, Nora's (dried Ch 2 MA1:123-124; survive Ch 3 MA1:203; returned Ch 4 MA1:229). Nora's dry bag held count sheets + laptop + printed table (ch:201) → the sheets are NOT in the van's wet load; Ch 2 "dry the count sheets on the radiator" (MA1:123-124) now reads as a light job or a small contradiction — soft.
+- Rachel services "the very logger Nora downloaded" (MA1:128-129) = the SHORE logger on the post (ch:101), never the summit box.
+- Ch 3 tag read (MA1:171-173), Ch 7 inventory, Ch 9 code, Ch 10 opened.
 
 ## PLAN-INTERNAL CONFLICTS / gaps (report, do not resolve)
-1. TIDE vs "back by one": low water ≈ 08:00 (MA1:59) + bar "about three hours either side" (MA1:37-38) → last printed crossing ≈ 11:00; "back by one" (MA1:66) can only be the station deadline; "ninety minutes early" (MA1:85) needs a stated planned off-the-bar time (≈ 11:00 → call at ≈ 09:30). See timeline.md.
-2. 6 a.m. is ≈ 75 min before sunrise in early-Oct PNW: the load is in the dark; the shining bar is ≥ 07:00 (MA1:59, :64).
-3. Day-shape gap: across by ≈ 10:15; Ch 1 ends "in the van" (MA1:109); Ch 2 opens with the van at dusk (MA1:117-118) → one dusk ride (afternoon at the station off-page) or two rides; the two-count "in the car earlier" (MA1:131) must fit between the scale beat and the drop-off.
-4. "Station manager" (Ch 2, MA1:134) vs Ines "field program lead" (MA1:40): same person? Ch 1 should not title Ines "station manager", and should not have anyone say "twin thing" TO the twins (Ch 2 has Rachel report it second-hand).
-5. "The barometer" (MA1:79) is not assigned to a device; the transect logger's "pressure trace" (MA1:75) is a water-level record. Ch 2's Rachel-services-that-logger (MA1:128-129) requires Ch 1's logger to be the station's, not the enclosure's (which runs secretly, MA1:430-431).
-6. Fixed words: MA1:139-140 "lost off the coast / nobody ever found" vs overview.md:75 "lost at sea / body never recovered". Ch 2's problem, but Ch 1 must not pre-empt by reciting either.
-7. Mini-arcs 2–5 still carry retired items under a supersession note: Harlow's / "the Bennett kid" (mini-arc-02.md:54-55 → now ~:62-63 after the note; mini-arc-03.md Halloran at Harlow's; mini-arc-04.md generator from Harlow's), the wasp nest knocked down (mini-arc-02.md), "the closure date" as a thing Nora holds (mini-arc-02.md Ch 11), the boatyard bilge, the archivist "sympathetic to a good digitizer". Not Ch 1's to fix; reconcile before Ch 11.
-8. Gus vs Rachel: Ch 7's Rachel initials on enclosure tickets (MA1:341-342) mean Rachel has been run out to Tern Island (Gus is the boat operator, MA1:44) → Gus plausibly knows "Rachel Bennett of Tidewater", yet Ch 3's "Your name's Bennett, though." "Our mother's." "Huh." (MA1:172) reads as no connection. Soft; Ch 3/7.
-9. Contracts end ≈ mid-December (MA1:15-16); MA3 (Dec–Feb) and the activity review's "Halloran at the Alder Sound dock" (Ch 28) assume the twins are still around the station. Needs a plan by MA3.
-10. Tag year "a year older than the twins" (MA1:171) → Y0−19 fits; Y0−18 only fits a January install (timeline.md). Ch 3.
-11. Ch 10's Thursday must be a tide-compatible Thursday (≈ 9 or ≈ 23 days after Ch 1's Tuesday, not 16) — timeline.md. Ch 9/10.
-12. Decision 0008 flags: Trello 41–50 card crosses at ~Ch 50 vs LOCKED spider-rescue ending; duplicate ten-chapter cards on both boards; TypeScript board lacks the "10 — Low Water" card (MA1:418). Not Ch 1's.
+1. CLOSED at dd8b7cb: the tide/"back by one" conflict — low water is 10:30, off the bar 12:30, station 13:00 (MA1:59-61). NEW on the page: 07:00 crossing vs "about three hours" (MA1:38) and PLAN 07:30; "Ninety minutes" vs 80 (ch:195-197); 42 min from "Move" to the saddle (timeline.md).
+2. CLOSED: 6 a.m. dark is now in the PLAN and on the page (ch:43, :65).
+3. CLOSED by the page: two van rides; the two-count fits the dusk ride.
+4. "Station manager" (Ch 2, MA1:135) vs Ines "field program lead" (MA1:40): same person? Ch 1 titles her "Dr." only (ch:63) ✓. Ch 2 must not have anyone say "twin thing" TO the twins.
+5. CLOSED by the page: the barometer is the "pressure logger", the second little box beside the shore logger (ch:101, :175); Gus's "Glass" is the station's (ch:193). PLAN's "It was the barometer." (MA1:96) became "It was the pressure." (ch:221) — Ch 3's "The barometer was right." (MA1:180) should echo the page's word or accept the variant.
+6. Fixed words: MA1:140-141 "lost off the coast / nobody ever found" vs overview.md:75 "lost at sea / body never recovered". Ch 2's problem; Ch 1 recites neither ✓.
+7. Mini-arcs 2–5 still carry retired items (Harlow's, wasp nest, closure date, boatyard bilge, digitizer). Reconcile before Ch 11.
+8. Gus vs Rachel: Rachel's initials on enclosure tickets (MA1:342-343) → Gus plausibly knows a Bennett of Tidewater, yet Ch 3's "Huh." (MA1:173). Soft; Ch 3/7.
+9. Contracts end ≈ mid-December; MA3 assumes the twins are still around the station. Needs a plan by MA3.
+10. Tag year Y0−19 fits; Y0−18 only a January install. Ch 3.
+11. Ch 10's Thursday must be tide-compatible: +9 d or +23 d from Ch 1's Tuesday (lows ≈ 18:00), NOT +16 d (timeline.md). Ch 3's Saturday (+4 d) has a ≈ 13:50 low → "tide wrong for the bar" in the MORNING only; plan the skiff run before ≈ 10:30 or restate.
+12. Decision 0008 flags: Trello 41–50 card crosses ~Ch 50 vs LOCKED spider-rescue ending; duplicate ten-chapter cards; TypeScript board lacks "10 — Low Water" (MA1:419). Not Ch 1's.
 
-## RETIRED hand-offs (boatyard draft): the customer returning "tomorrow after four"; "Tomorrow I am dealing with those wasps"; Nora's non-reaction to the recitation; the paper Rachel pocketed before Caleb entered (re-adopted as Ch 2's letter, MA1:118-120).
+## RETIRED hand-offs (boatyard draft): the customer "tomorrow after four"; the wasps; Nora's non-reaction to the recitation; the pocketed paper (re-adopted as Ch 2's letter, MA1:119-121).
