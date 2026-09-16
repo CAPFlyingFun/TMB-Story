@@ -92,7 +92,7 @@ She was still in the Tidewater fleece, zipped to the chin, straight from the ben
 
 Half an hour later, clean, in dry clothes, with her hair wet down her back, Nora stood on the back step in the dark with the outside faucet running and did the boots.
 
-You did not just leave field boots. The mud on Caleb's had gone to a gray paste that had to be scraped off on the edge of the step first, and then the boots went under the tap, and then the laces came out, and then the boots got stuffed with newspaper so they would dry into the shape of feet. Caleb stood at her shoulder with the gloves and held the headlamp, mostly on her hands and sometimes, when he forgot, on the firs.
+You did not just leave field boots. The mud on Caleb's had gone to a gray paste that had to be scraped off on the edge of the step first, and then the boots went under the faucet, and then the laces came out, and then the boots got stuffed with newspaper so they would dry into the shape of feet. Caleb stood at her shoulder with the gloves and held the headlamp, mostly on her hands and sometimes, when he forgot, on the firs.
 
 The gloves got rinsed and wrung. The net bag got shaken out over the step, and a great deal of Tern Island came out of it, weed and grit and a small dead fly in a bee costume that Caleb picked up and looked at for longer than a person should look at a dead fly.
 
