@@ -4,7 +4,7 @@ title: "The Wet Engine"
 part: 1
 mini_arc: 1
 pov: Caleb
-word_count: 2574
+word_count: 2476
 story_time:
   clock: outside
   date: "Year 0, early October (a Tuesday)"
@@ -51,7 +51,7 @@ They lived in a grey paper nest the size of his open hand, hung from one little 
 
 The biggest one Caleb called the Mayor. The Mayor never flew anywhere. The Mayor supervised.
 
-Caleb had been meaning to deal with the nest since August. He had said so at dinner more than once. Somebody had even left a note about it on the office door in September, in the kind of handwriting that expected to be obeyed. Caleb had taken the note down, folded it into his pocket, and gone back to work. The first hard frost would take care of the wasps for free. Until then, he did not see why anybody had to be the bad guy.
+Caleb had been meaning to deal with the nest since August. He had said so at dinner more than once. His boss had even left a note about it on the office door in September, in the kind of handwriting that expected to be obeyed. Caleb had taken the note down, folded it into his pocket, and gone back to work. The first hard frost would take care of the wasps for free. Until then, he did not see why anybody had to be the bad guy.
 
 A pickup truck came through the gate too fast and backed toward the wash bay. Caleb shut the barrel motor off, lifted it onto the rack, and went to see what the day had brought him.
 
@@ -59,7 +59,7 @@ What it had brought him was a man of about fifty with a sunburned neck and a sma
 
 "Stalled on me off the point," the man said, before Caleb had asked a single thing. "This morning, first light. I'm sitting there, the sea's coming up behind me, and a wave comes right over the back of the boat. Right over. And she won't start after that. I've got my nephew coming Saturday and I promised him fishing." He looked at the motor and not at Caleb. "So how would you write something like that up?"
 
-It was a good story. Caleb liked it. He especially liked how the man's voice had climbed a little at the end, the way a voice does when it is asking itself a question.
+It was a good story. Caleb liked it. He especially liked how the man's voice had climbed a little at the end, the way a voice climbs when it is hoping.
 
 He lifted the motor out of the truck himself. Six horsepower, pull-start, older than he was, light enough to swing over the tailgate one-handed. He set it on the stand and popped the cover off, and the smell that came out was not the smell of a wave. It was the smell of the bottom of the harbour. Old salt water and mud.
 
@@ -81,9 +81,9 @@ He turned the plug in the light so the man could see it if he felt like seeing i
 
 So the man already knew. He had known before he drove in. He had just been hoping, the way people do, that the story would be true if he told it to somebody who looked like he might believe it.
 
-Caleb did not mind the story. The story was not his problem. His problem was whether the boat was still sitting at the bottom of the harbour.
+Caleb did not mind the story. What he minded was whether the boat was still under water.
 
-He set the plug down. "Here's the thing," he said, to the motor, because it was easier on everybody if he said it to the motor. "Wave this morning, I drain her out and you're fishing Saturday. Under water for a couple of days and cranked wet, I have to go through the whole motor tonight or she's scrap by Monday." He wiped his hands on his rag. "So. Which motor did you bring me?"
+He set the plug down. "Here's the thing," he said, to the motor, because it was easier on everybody if he said it to the motor. "Wave this morning, I drain her out and you're fishing Saturday. Under water for a couple of days and yanked on wet, I have to go through the whole motor tonight or she's scrap by Monday." He wiped his hands on his rag. "So. Which motor did you bring me?"
 
 Then he waited. He did not look up. Above the office door one of the wasps let go of the nest and drifted down to the puddle the test barrel had slopped on the concrete, and stood at the edge of it, having a drink.
 
@@ -107,11 +107,11 @@ The man looked at him properly for the first time. Something in his shoulders ca
 
 "Research trip," Caleb said. "The boat was lost off the coast. Nobody was ever found. Eighteen years ago." The words came out in their usual order, the way they always did, and he was already reaching for the oil can, because the words did not need him for anything. "She'll run. Come by tomorrow after four."
 
-"You and your sister," the man said, easier now, the way people get once the hard part is behind them. "You've got that twin thing, I bet. Finish each other's sentences."
+"You and your sister," the man said, easier now. "You've got that twin thing, I bet. Finish each other's sentences."
 
 "Nope," said Caleb.
 
-He texted his mother that he would be late. Then he braced the motor, took hold of the rope with the plug still out, and pulled.
+He braced the motor, took hold of the rope with the plug still out, and pulled.
 
 A fan of grey harbour water shot out of the plug hole, sailed clean across the wash bay, and hit the man's truck.
 
@@ -119,13 +119,11 @@ A fan of grey harbour water shot out of the plug hole, sailed clean across the w
 
 The man laughed, one bark, out loud, before he could stop himself. Then he got in his wet truck and drove home.
 
-It took the rest of the daylight and a good bit of the dark. Oil down the hole. Rope pulled slow, again and again, until the fan of water was a spit and the spit was nothing. Plug dried off. The fuel bowl off and the milky water poured out of it. The intake picked clean and the seaweed cut off the propeller. Crows went over the yard toward wherever crows go at dusk, and the yard lights buzzed on, and a wind came up off the water and set every loose rope on every boat tapping against its mast, tick, tick, tick, with no rhythm at all.
+He texted his mother that he would be late. It took the rest of the daylight and a good bit of the dark. Oil down the hole. Rope pulled slow, again and again, until the fan of water was a spit and the spit was nothing. Plug dried off. The fuel bowl off and the milky water poured out of it. The intake picked clean and the seaweed cut off the propeller. Crows went over the yard toward wherever crows go at dusk, and the yard lights buzzed on, and a wind came up off the water and set every loose rope on every boat tapping against its mast, tick, tick, tick, with no rhythm at all.
 
 When he finally clamped the motor onto the barrel and pulled, it caught on the fourth try, ran rough, ran rougher, cleared its throat, and settled into a hum like a sewing machine. The little jet of cooling water came on strong.
 
-Caleb stood with his palm on the cover and listened. Somewhere deep inside there was still something he did not like. Two days of salt had been in there, and salt does not stop working just because you have covered it in oil.
-
-"I'll know when you've run a while," he told the motor, and shut it off.
+"Good," Caleb told it, and shut it off.
 
 On his way out he looked up. The wasps were all back on the nest now, every single one, not one of them moving, like a clock somebody had stopped. In the yard light the little cells of the nest were neat and exact, each one a tiny doorway with nothing behind it.
 
@@ -159,9 +157,9 @@ Rachel set the pot in the middle of the table. She still had her work fleece on,
 
 "So," she said. "The drowned outboard."
 
-He told it while they ate, and he told it the way he had seen it: the mud, the rope hitting the wall, the rusty plug, the groove across the man's fingers, the way the man's voice had climbed a little when he said *this morning*, which Caleb had noticed and put in his pocket until the rope agreed with him.
+He told it while they ate, and he told it the way he had seen it: the mud, the rope hitting the wall, the rusty plug, the groove across the man's fingers, the way the man's voice had climbed a little when he said *this morning*.
 
-Nora listened with her head tilted, the way she always did when she was building a thing back up from the other end.
+Nora listened with her head tilted, the way she always did when she was working something out backwards.
 
 "So the story was impossible," she said, "before he even opened his mouth."
 
@@ -215,7 +213,7 @@ They looked at each other across the table. It was a thing they had been doing s
 
 "I had a bet on."
 
-Rachel wiped her eyes with the heel of her hand and got up for the water jug. The window over the sink had gone black and showed the three of them back to themselves, warm and small and lit up, and Caleb thought that this was fine. All of it.
+Rachel wiped her eyes with the heel of her hand and got up for the water jug. The window over the sink had gone black, and there they were in it, the three of them, and Caleb thought that this was fine. All of it.
 
 "Tomorrow," he said, stretching until his back cracked, "I am dealing with those wasps."
 
