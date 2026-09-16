@@ -132,3 +132,36 @@ catches the rest. Watch-list, all checked by `scripts/style-check.py`:
 A dry British joke shape ("Then wear them wetter") reads as odd rather than funny
 to a US listener. Marco's jokes are American: a shrug, a fake apology, a made-up
 rule.
+
+## Audiobook-first dialogue: one narrator reads everyone (decision 0017)
+
+Joshua tested Chapters 1 and 2 through a single ElevenLabs voice and found what the
+page hides: a line that is obvious in print can be briefly confusing out loud,
+because the listener cannot see the paragraph break that tells them the speaker
+changed. Even a two-second "wait, who said that?" is a defect, worst of all in
+Chapter 1 where the audience is still learning the cast.
+
+The test, applied to every exchange: one narrator, one voice for everybody, no
+quotation marks, no paragraph breaks, no portraits, no screen, a listener who may
+have looked away. Would they know who is speaking, who is being spoken to, where
+everyone is, and what they are doing? "Probably, because the lines alternate" is a
+fail.
+
+Seven ways to anchor a line, in no order of preference:
+
+1. **A plain tag.** "I've got the water," Caleb said. Always acceptable.
+2. **Physical action.** Marco caught her reflection in the mirror. "You're eighteen."
+3. **Reaction.** Nora looked up from the logger. "That isn't what the table says."
+4. **Emotion or body language.** Caleb's smile disappeared. "Where's Ines?"
+5. **POV thought.** Caleb knew Marco was not going to let that one survive.
+6. **Environmental interaction.** Rachel set the spoon beside the stove. "What did the unit read?"
+7. **Movement or task.** Nora tightened the label around the jar. "Saturday?"
+
+The limit: a beat should do at least one job beyond naming the speaker. Do not
+build a chapter out of frowns, sighs, chuckles, raised eyebrows and shifted weight.
+If no natural beat exists, "Caleb said" is better than an invented gesture. Do not
+tag an exchange that is already unmistakable, and do not reach for "exclaimed",
+"retorted" or "opined"; "said" disappears into the narration, which is the point.
+
+`scripts/style-check.py` reports every run of three or more spoken lines that name
+nobody. Zero is the target for both chapters.

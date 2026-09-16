@@ -4,7 +4,7 @@ title: "The Bar"
 part: 1
 mini_arc: 1
 pov: Caleb
-word_count: 3393
+word_count: 3443
 story_time:
   clock: outside
   date: "Year 0, first week of October (a Tuesday)"
@@ -45,11 +45,11 @@ approved_on: ""  # approved 2026-09-16, re-approved the same day; re-opened for 
 
 At six in the morning the boathouse smelled like diesel and wet rope. It smelled like the coffee Marco had made too strong on purpose. And Caleb Bennett was losing an argument about a backpack.
 
-"Mine's heavier," he said. He hefted it to prove it, and nearly took out a lamp.
+"Mine's heavier," Caleb said. He hefted it to prove it, and nearly took out a lamp.
 
 "It isn't." Nora did not look up from her boot laces.
 
-"I've got the water."
+"I've got the water," Caleb said. He shook the pack so the bottles knocked.
 
 "I've got the jars, the stakes, the tape and the spare battery, which weighs as much as a cat." His sister finished the knot. She stood up. She unzipped her jacket and took out a luggage scale. It was a little black one with a hook, the kind people use at airports. She had brought a luggage scale to work.
 
@@ -77,9 +77,9 @@ Marco drove and talked enough for the van. Ines rode in front and let him.
 
 "Big day, kids." Marco found Caleb's eyes in the mirror. "First crossing on foot. Anybody scared?"
 
-"We're not kids," said Nora, to the window.
+"We're not kids," Nora said to the window.
 
-"You're eighteen. You're technically a rumor."
+Marco caught her reflection in the mirror. "You're eighteen. You're technically a rumor."
 
 Caleb laughed. Nora tried not to, and lost.
 
@@ -103,13 +103,13 @@ He went in up to the shin with both feet. When he pulled the first foot out, the
 
 He stood there with his arms out, filthy to the knee, at seven thirty on his first crossing. Marco laughed so hard he had to hold his knees.
 
-"And Bennett goes down. First ten minutes. Somebody call his mother."
+"And Bennett goes down," Marco said. "First ten minutes. Somebody call his mother."
 
 "I'm calling his mother," said Nora, and held up her phone. She had already taken the picture. Caleb saw her thumbs move and knew exactly where it was going.
 
-"Don't you—"
+"Don't you—" Caleb said.
 
-"Sent."
+"Sent." Nora put the phone back in her jacket.
 
 Ines did not laugh. She waited until he had squelched back onto the crest. She looked at his pants, and then at him. "Now you know," she said, and walked on. It took Caleb half the bar to figure out that she was not annoyed. She was pleased.
 
@@ -155,9 +155,9 @@ Caleb got up and followed the line. It went up the beach, into the grass, up a b
 
 "I know." Caleb did not stop.
 
-"You're walking the other way."
+"You're walking the other way," Marco called.
 
-"Also know that." He waved the count sheet over his shoulder and kept going.
+"Also know that." Caleb waved the count sheet over his shoulder and kept going.
 
 He went on up after them. The trail climbed through the firs and came out on top, where the wind was and the trees opened. The ants went to an old stump at the edge of the clearing and poured into it. That was where they were taking the babies. It was a dry stump on the summit, as far from the water as the island went.
 
@@ -181,11 +181,11 @@ Something in his stomach went cold and stayed cold. It was not a fact. It was th
 
 "Up at the logger." Marco squinted at him. "Why?"
 
-"The birds have gone."
+"The birds have gone," Caleb said.
 
-"Birds do that." He said it kindly, the way you talk to someone who has seen a ghost.
+"Birds do that." Marco said it kindly, the way you talk to someone who has seen a ghost.
 
-"It's not time for them to do that."
+"It's not time for them to do that," Caleb said.
 
 Caleb was walking, and then running, up the beach. He met Nora coming along the top of it from the logger. She had the station's little laptop open on one arm, like a tray. She had the look on her face that meant a number would not behave.
 
@@ -201,9 +201,9 @@ They looked at each other.
 
 "Your ants," Nora said slowly, "and my numbers agree."
 
-"Yeah." He wiped his hands on his pants, for something to do with them.
+"Yeah." Caleb wiped his hands on his pants, for something to do with them.
 
-"That's not a sentence I thought I'd say today."
+Nora shifted the laptop to her other arm. "That's not a sentence I thought I'd say today."
 
 Ines was on the crest at the island end of the bar. She was looking at the saddle, with her radio already in her hand. They both talked at once. She held up one finger.
 
@@ -215,7 +215,7 @@ Ines took the laptop and read the trace herself, one line at a time. Then she lo
 
 A man's voice came out of it, slow and old and completely unbothered. "Gone south on me the last half hour. Freshening. Glass is dropping. You want the boat?"
 
-"Stand by with it. Don't launch." She let go of the button. "Front's come in early," she said. "Six hours early. The table's not wrong. It's just not today's table." She looked at her watch. "Eleven. The plan was off by twelve thirty. We're walking now. Battery stays. Count stays. Download stays. Marco, packs."
+"Stand by with it. Don't launch," Ines said. She let go of the button. "Front's come in early," she said. "Six hours early. The table's not wrong. It's just not today's table." She looked at her watch. "Eleven. The plan was off by twelve thirty. We're walking now. Battery stays. Count stays. Download stays. Marco, packs."
 
 "Ninety minutes," said Nora, who could not help it.
 
@@ -235,7 +235,7 @@ Then he was in the middle of the saddle. The water was over his boots and at his
 
 A stone rolled under his foot. He put the pole down hard, and it held. One stake slid out of the bundle under his arm. It went away across the water, turning. He let it go, because Ines had said the thing about margin.
 
-"Shin," he said. "Still firm."
+"Shin," Caleb said. "Still firm."
 
 Marco had stopped talking. That was how Caleb knew it was real. For thirty steps there was no commentary at all. There was only breathing, and the tick of the gravel, and Nora saying "Shin. Eleven twenty-four." Then the ground came up under his boots. He was on the crest on the mainland side. He turned to look at the saddle. It was already a different color.
 
@@ -255,7 +255,7 @@ Ten minutes down the road, with the heater roaring and the smell of wet everythi
 
 Caleb saw it come out and closed his eyes. "No."
 
-"Rules are rules. Marco made them." She was already reaching for his pack.
+"Rules are rules. Marco made them." Nora was already reaching for his pack.
 
 "They're binding," said Marco from the front. He did not turn around.
 
@@ -265,7 +265,7 @@ Caleb sat up. "That's water. That's the gloves and the net. You took all the wet
 
 "I said heavier." Nora put the scale away with great care.
 
-"You said heavier this *morning*, when it wasn't."
+"You said heavier this *morning*, when it wasn't," Caleb said.
 
 Nora considered this, and him, and found neither convincing. "I said heavier, and it's heavier. I didn't say when. I didn't say why. I said."
 
@@ -277,14 +277,14 @@ Ines drove and said nothing at all. Caleb was fairly sure, from the back of her 
 
 Nora's phone buzzed against the dry bag. She looked at it and laughed. "Mom. About the picture." She read it out in Mom's voice. "'Boots go ON the gravel, Caleb.'"
 
-"Tell her I know that now." He put his head back against the seat.
+"Tell her I know that now." Caleb put his head back against the seat.
 
 It buzzed again. Nora read it. This time she did not laugh, and did not read it out. Her thumbs started to move, and stopped.
 
 "What?" Caleb opened one eye.
 
-"Nothing." She did not look up. "She wants to know which island."
+"Nothing." Nora did not look up from the phone. "She wants to know which island."
 
-"So tell her. It's not a secret." He shut the eye again.
+"So tell her. It's not a secret." Caleb shut the eye again.
 
 "It isn't," Nora said. She typed *Tern* and sent it. The phone lit up again before she had put it down.

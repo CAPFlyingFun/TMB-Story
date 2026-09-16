@@ -25,6 +25,7 @@ file is updated.
 - 0014 — No accidental rhyme or verse cadence; Chapter 1 re-opened for 0013/0014 — **Accepted (Joshua, 2026-09-16)**
 - 0015 — The plain register: Beyond Extinction's style is the model; measured by `scripts/style-check.py` — **Accepted (Joshua, 2026-09-16)**
 - 0016 — Batch approval: Chapters 1–10 pending together; rule changes are asked before being applied to earlier chapters — **Accepted (Joshua, 2026-09-16)**
+- 0017 — Audiobook-first dialogue: write for one narrator reading every character — **Accepted (Joshua, 2026-09-16)**
 
 ---
 
@@ -128,4 +129,10 @@ file is updated.
 **Context:** Joshua, after re-opening Chapter 1 twice in one day for new writing rules: "let me review both before approval again so it's not approved and disapproved the next message... How about I not approve it until chapter 10... keep it pending until chapter 10. However, I may approve it sooner if good this time... just make a note and ask if I change something with the writing later if I want to apply it to all past chapters. Hopefully, they will be the last major writing change."
 **Decision:** Chapters 1–10 stay `in-review` and are approved together once Chapter 10 is written, or sooner at Joshua's word. An in-review chapter is provisional canon: the next chapter builds on it as written; its index row, bible updates (tagged `[ch NNNN, in review]`) and the tracker move at draft-complete and are confirmed at approval. When a writing rule changes, Claude records it, applies it to the chapter in hand, and asks Joshua whether to apply it to earlier chapters before touching them.
 **Consequences:** Chapter 1 re-opened for decision 0015 and rewritten in the plain register; both chapters `in-review`. Chapter 2's bible updates applied now, tagged in review. `CLAUDE.md` workflow steps 7–8 and `outline/WORKFLOW.md` updated. The approved-chapter hook still guards `approved` files only.
+**Status:** Accepted, 2026-09-16.
+
+### 0017 — One narrator reads everyone
+**Context:** Joshua began testing Chapters 1 and 2 as an audiobook through a single ElevenLabs voice. It exposed a class of problem invisible on the page: lines whose speaker the reader infers from paragraph alternation are briefly ambiguous when one voice performs everybody. His example is Chapter 1's "I've got the water," clear in print, a two-second question out loud. He asked for a dialogue-clarity and scene-presence pass on both chapters, and set the principle for all future chapters.
+**Decision:** TMB is written as audiobook-first prose. The prose, not the layout, carries who is speaking, who is being spoken to, where people are and what they are doing. Dialogue is anchored to a character by name regularly, and more often early in the series; three spoken lines never pass in a row with nobody named. A plain "said" tag is good and often best. Where a natural beat exists, prefer one that also shows the task, the place, the look or the mood; where none exists, take the bare tag rather than invent a gesture. Exchanges that are already unmistakable are left alone. `scripts/style-check.py` gained an unanchored-run report.
+**Consequences:** Chapters 1 and 2 passed for clarity (16 and 15 changes), no story, clue, motivation, continuity or ending altered, and no bible-quoted line changed. `CLAUDE.md` and `docs/STYLE_GUIDE.md` carry the rule; the scene specialist runs the check. Both chapters remain `in-review` under decision 0016 pending Joshua's listening pass.
 **Status:** Accepted, 2026-09-16.

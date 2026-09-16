@@ -75,6 +75,18 @@ These are craft invariants. The prose is heard, not seen.
 - **Distinct voices, not tags.** Each recurring character has their own vocabulary and
   rhythm so dialogue identifies itself. Prefer action beats to dialogue tags. Use
   "said" sparingly and never ornate synonyms.
+- **One narrator reads everyone (Joshua, 2026-09-16, decision 0017).** Write as if a
+  single voice performs every character, because one will. The listener has no
+  quotation marks, no paragraph breaks and no second voice, so the PROSE has to say
+  who is speaking, who they are speaking to, where they are and what they are doing.
+  Anchor dialogue to a character by NAME regularly, and more often early, while the
+  audience is still learning the cast. Never let paragraph alternation alone carry
+  the speaker, and never let three spoken lines in a row pass with nobody named.
+  A plain "Caleb said" is good and often best: clarity beats avoiding "said", and
+  ornate synonyms stay out. Where a beat is natural, prefer one that also does a
+  second job (shows the task, the place, who is looking at whom, or the mood) over a
+  bare tag; where no such beat exists, use the bare tag rather than inventing a
+  shrug. Run `python3 scripts/style-check.py` — it reports unanchored runs.
 - **Dialogue carries a body (Joshua, 2026-09-16, decision 0011).** No runs of bare
   back-and-forth lines, and no "he said, she said" to fix them. Most lines in an
   exchange come with something a listener can picture: an action, a look, a reaction,

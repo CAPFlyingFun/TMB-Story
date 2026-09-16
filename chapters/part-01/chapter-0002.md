@@ -4,7 +4,7 @@ title: "Sixty-Two Grams of Salt"
 part: 1
 mini_arc: 1
 pov: Nora
-word_count: 3572
+word_count: 3602
 story_time:
   clock: outside
   date: "Year 0, first week of October (the same Tuesday as Chapter 1)"
@@ -46,11 +46,11 @@ approved_on: ""
 
 Marco let them out at the bottom of the hill at six forty-five. The van did not do the hill in the rain. Nobody had ever asked it to.
 
-"Out," he said. He leaned across and opened Nora's door for her. He had never done that before. "Eight o'clock Saturday. Gus is running you out in the skiff. Ines wants the morning. Wear the boots."
+"Out," Marco said. He leaned across and opened Nora's door for her. He had never done that before. "Eight o'clock Saturday. Gus is running you out in the skiff. Ines wants the morning. Wear the boots."
 
 "We only have these boots," said Caleb, from the back. His voice had been asleep until a moment ago.
 
-"Wear them wet. Sorry about that."
+"Wear them wet. Sorry about that," Marco said.
 
 The van went away down the road with one tail light. The twins stood at the bottom of their own hill with a pack each and looked up it.
 
@@ -58,7 +58,7 @@ It was not a big hill. On any other day you did not notice it. Tonight it had gr
 
 "Race you," said Caleb. He did not move.
 
-"No."
+"No," said Nora.
 
 "Good."
 
@@ -76,13 +76,13 @@ Her mother was in the front hall. She was standing at the shelf by the door. Tha
 
 As the door opened she folded it in three, quick and neat, the way you fold a letter that came in an envelope. She slid it into the back pocket of her jeans. Then she turned around, and her whole face was already smiling.
 
-"Look at you."
+"Look at you," their mother said.
 
 "Mom," said Nora, and let the pack down.
 
 "Look at *you*." Her mother took Nora's face in both hands. The hands were warm and smelled of onions. She turned Nora's face to the light and kissed her on the forehead. Then she looked past her to the door. "Where's the other one."
 
-"Coming."
+"Coming," Nora said.
 
 Caleb came in behind her, rained on. He saw nothing but his mother and the smell of dinner. He put his pack down on top of Nora's. "I fell in," he said, before anyone could say it for him. "And we're going back Saturday. In the skiff. Gus is taking us."
 
@@ -90,7 +90,7 @@ Caleb came in behind her, rained on. He saw nothing but his mother and the smell
 
 "Which color," said Caleb.
 
-"Any color that isn't that one."
+"Any color that isn't that one," their mother said.
 
 She was still in the Tidewater fleece, zipped to the chin. She had come straight from the bench. She had not changed. Nora noticed that the way she noticed the time on a clock she was not looking at.
 
@@ -102,7 +102,7 @@ Then the boots got stuffed with newspaper, so they would dry into the shape of f
 
 The gloves got rinsed and wrung. The net bag got shaken out over the step. A great deal of Tern Island came out of it. Seaweed. Grit. One small dead fly in a bee costume. Caleb picked it up and looked at it for longer than a person should look at a dead fly.
 
-"Put it down."
+"Put it down," Nora said.
 
 "He was my friend." Caleb held it up to the light on one finger, so she could see the stripes.
 
@@ -130,11 +130,11 @@ It was now roughly the size of a dog, and it had looked him in the eye. Their mo
 
 "Why," said their mother.
 
-"Because the log was wet. Underneath. It was soaking, higher up than it should've been. I think they knew before anybody."
+"Because the log was wet," Caleb said. "Underneath. It was soaking, higher up than it should've been. I think they knew before anybody."
 
 "Marco says he lay down in the seaweed," said Nora. "On his stomach. And then he followed them up a hill and Marco had to shout."
 
-"I could hear Marco fine."
+"I could hear Marco fine," Caleb said.
 
 "He shouted anyway."
 
@@ -150,7 +150,7 @@ Her mother listened to all of it with her back to the pot. That was the first th
 
 Nora told her.
 
-"Step, or ramp?"
+"Step, or ramp?" her mother said.
 
 Nora looked at the back of her mother's head. "What?"
 
@@ -160,7 +160,7 @@ Nora looked at the back of her mother's head. "What?"
 
 "Then it was weather." Her mother nodded once, to herself. She turned back to the pot. Then, without turning around again: "And did you get the file off it, or just the screen?"
 
-"The screen. Ines called it before I'd finished. It's still on the unit."
+"The screen," Nora said. "Ines called it before I'd finished. It's still on the unit."
 
 "Get it Saturday."
 
@@ -186,7 +186,7 @@ Nora took it down and folded it. She set it on her mother's kitchen scale, the l
 
 The sheet was every piece of gear she carried, with its dry weight, in a column. She had weighed everything on her first day at the station.
 
-"Net bag. Three forty, dry." She read the scale. "Four oh two." She looked up. "Sixty-two grams of salt."
+"Net bag. Three forty, dry." Nora read the scale. "Four oh two." She looked up. "Sixty-two grams of salt."
 
 "Sand," said Caleb.
 
@@ -226,7 +226,7 @@ The moth arrived at the window at the same moment. It was nothing. It was a fat 
 
 "Out where."
 
-"The station. Alder Sound. There's a hallway with all these photos, going back forever, people on boats, and it's the kind of place— I just wondered. If he was ever in one."
+"The station," Caleb said. "Alder Sound. There's a hallway with all these photos, going back forever, people on boats, and it's the kind of place— I just wondered. If he was ever in one."
 
 Her mother put the bread down. She put her hands flat on the table, one each side of her plate. She looked at Caleb. Her face was kind, and it was closed. A door can be both.
 
@@ -250,7 +250,7 @@ So Caleb ate, and looked at her the way you look at weather.
 
 "We were with Ines," said Nora.
 
-"I know who you were with."
+"I know who you were with," her mother said.
 
 "She got us off ninety minutes early." Nora heard herself using Ines's voice for it. "She doesn't spend margin."
 
@@ -276,13 +276,13 @@ The net bag went in folded, still smelling of the island. The spare battery went
 
 Caleb sat on the floor with his back against the cabinets and handed her things in the order she asked for them. For a while he did not talk. That was his way of saying he was still mad and had decided not to be.
 
-"Six point four," she said, when she hooked her pack on the luggage scale. She looked at him.
+"Six point four," Nora said, when she hooked her pack on the luggage scale. She looked at him.
 
-"Don't."
+"Don't," said Caleb.
 
 "I'm not. I'm just telling you the number."
 
-"Nora." He was nearly smiling. "You had your fun this morning. Let me live."
+"Nora." Caleb was nearly smiling. "You had your fun this morning. Let me live."
 
 She let him live. The packs went by the front door, side by side, ready for Saturday. They stood in the hall by the shelf where the keys were. She went up to bed. The rain was coming for real now, at last, in long pushes against the side of the house.
 

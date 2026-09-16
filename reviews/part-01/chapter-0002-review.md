@@ -1,6 +1,6 @@
 # Chapter 0002 — Sixty-Two Grams of Salt — handoff report
 
-Date: 2026-09-16 · POV: Nora · Words: 3,576 · Ending type: quiet unsettling line ·
+Date: 2026-09-16 · POV: Nora · Words: 3,602 · Ending type: quiet unsettling line ·
 Status: `in-review`; per decision 0016 it stays in review with Chapters 1–10 for batch approval unless Joshua approves sooner. Bible updates below were applied at draft-complete, tagged `[ch 0002, in review]`.
 
 Source of the plan: Trello card `02 — Sixty-Two Grams of Salt | Nora` in the
@@ -281,3 +281,43 @@ house, carpet, cupboards, weed, the sea, a stone in a boot, worked out, garden, 
 clock phrases, and the fixed words' closer "That's the whole of it" → "That's the
 whole story" (bible updated; M33 wording provisional until batch approval).
 `scripts/style-check.py` now flags British idioms; both chapters read zero.
+
+## Audiobook dialogue clarity pass (decision 0017, 2026-09-16)
+
+Joshua's one-voice ElevenLabs test. Prose-level only: no story event, clue, mystery
+timing, motivation, continuity fact, character relationship or chapter ending was
+touched, and no line quoted in the bible was changed (verified by grep against
+`bible/` and `outline/`). Both chapters stay `in-review`.
+
+**Word count: 3,572 → 3,602.** 15 clarity changes.
+
+The ones that mattered most:
+
+- **Marco's first line and his joke.** `"Out," Marco said.` and `"Wear them wet.
+  Sorry about that," Marco said.` The chapter opens on a voice; it should name it.
+- **Rachel's first words in the series.** `"Look at you," their mother said.` She
+  had been described but never attached to a spoken line.
+- **The hill, the hall, the dinner.** Six single-word or short replies that only
+  alternation identified: `"No," said Nora.` / `"Coming," Nora said.` / `"Any color
+  that isn't that one," their mother said.` / `"Put it down," Nora said.` / `"I
+  could hear Marco fine," Caleb said.` / `"I know who you were with," her mother
+  said.`
+- **The logger questions.** `"Step, or ramp?" her mother said.` and `"The screen,"
+  Nora said.` This is a three-way scene with a mother at a stove and two tired
+  teenagers; it needed the most anchoring.
+- **Caleb's question about Dad.** `"The station," Caleb said. "Alder Sound..."` The
+  most important exchange in the chapter now names its speaker before the hallway
+  detail arrives.
+- **The repack.** `"Six point four," Nora said` / `"Don't," said Caleb` / `"Nora."
+  Caleb was nearly smiling.`
+
+Left deliberately untagged: "He shouted anyway." (clear A/B, one line), "Sand falls
+out. I shook it. Salt stays." (Nora answering Caleb's "Sand"), and "Good." on the
+hill, which lands better bare.
+
+**Scene presence:** Chapter 2 already runs its dialogue over boots, gloves, the net
+bag, the jars, the scale, the stove and the packs, so it needed anchoring more than
+it needed new action. No new business was invented.
+
+Style checks after the pass: every sentence-level target passes, zero British-isms,
+zero unanchored dialogue runs of three or more.

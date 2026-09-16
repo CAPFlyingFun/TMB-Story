@@ -1,6 +1,6 @@
 # Chapter 0001 — The Bar — handoff report
 
-Date: 2026-09-16 · POV: Caleb · Words: 3,294 · Ending type: unanswered question ·
+Date: 2026-09-16 · POV: Caleb · Words: 3,443 · Ending type: unanswered question ·
 Status: `approved` by Joshua, 2026-09-16, at 3,294 words as-is ("the 1,800–3,000 range is a target, not a hard limit"). Bible updates below were applied on approval.
 
 Source of the plan: Trello card `01 — The Bar` in the `📖 STORY — Chapters 1–50`
@@ -239,3 +239,46 @@ batch approval, unless Joshua approves it sooner.
 
 Twenty-two idiom changes: properly, moving house, carpet, corridor, weed, the sea,
 parcel, backwards, work out, the clock phrases. The checker reads zero British-isms.
+
+## Audiobook dialogue clarity pass (decision 0017, 2026-09-16)
+
+Joshua's one-voice ElevenLabs test. Prose-level only: no story event, clue, mystery
+timing, motivation, continuity fact, character relationship or chapter ending was
+touched, and no line quoted in the bible was changed (verified by grep against
+`bible/` and `outline/`). Both chapters stay `in-review`.
+
+**Word count: 3,393 → 3,443.** 16 clarity changes.
+
+The ones that mattered most:
+
+- **"I've got the water."** Joshua's own example. Now `"I've got the water," Caleb
+  said. He shook the pack so the bottles knocked.` The tag names him; the bottles
+  are why he thinks he is winning.
+- **The van.** Joshua's own fix, taken as written: `"We're not kids," Nora said to
+  the window.` / `Marco caught her reflection in the mirror. "You're eighteen.
+  You're technically a rumor."` Names the speaker, keeps him driving, puts all four
+  bodies in the van, and shows who the joke is aimed at.
+- **The phone, after the mud.** `"Don't you—" Caleb said.` / `"Sent." Nora put the
+  phone back in her jacket.` Two unanchored lines became two anchored ones, and the
+  jacket makes the send final.
+- **The spit, three characters in play.** `"The birds have gone," Caleb said.` /
+  `"Birds do that." Marco said it kindly...` / `"It's not time for them to do that,"
+  Caleb said.` The "He said it kindly" was the worst offender: "he" had two
+  candidates in earshot.
+- **The radio.** After Gus's reply, `"Stand by with it. Don't launch," Ines said.`
+  Without the tag a listener can hear Gus still talking.
+- **Marco's heckle** (`"And Bennett goes down," Marco said.`), the trail exchange
+  (`"You're walking the other way," Marco called.` / `"Also know that." Caleb
+  waved...`), the depth call (`"Shin," Caleb said.`), and five van/text lines where
+  a bare "he" or "she" had two candidates.
+- **One beat added for scene, not just naming:** `Nora shifted the laptop to her
+  other arm.` before her line about ants and numbers agreeing. It reminds the
+  listener she is carrying the thing Ines is about to read.
+
+Left deliberately untagged, because one voice makes them unmistakable: the boathouse
+scale readings ("Six point two." / "Six point one."), Ines's "It's a statement.",
+"Where's Ines?" said by both twins at once, and the closing "You said." / "You
+said," which is the joke and needs no help.
+
+Style checks after the pass: every sentence-level target passes, zero British-isms,
+zero unanchored dialogue runs of three or more.

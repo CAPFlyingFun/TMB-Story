@@ -88,7 +88,44 @@ def british(path):
     for note, ctx in hits[:40]:
         print(f"    {note:45s} ...{ctx}...")
 
+NAMES = ["Caleb", "Nora", "Marco", "Ines", "Gus", "Rachel", "mother", "Mom", "sister", "brother"]
+NAME_RE = re.compile(r"\b(" + "|".join(NAMES) + r")\b")
+
+def audio(path):
+    """One-narrator clarity: find dialogue that names nobody for too long.
+
+    A listener has no quotation marks and no paragraph breaks. Two unanchored
+    lines in a clear A/B exchange are fine; three in a row is where "wait, who
+    said that?" happens. Reports each run so the writer can anchor one line.
+    """
+    t = prose(path)
+    paras = [p.strip() for p in t.split("\n") if p.strip() and not p.startswith("#")]
+    run, runs = [], []
+    for para in paras:
+        speech = '"' in para or '\u201c' in para
+        if not speech:
+            if NAME_RE.search(para):
+                run = []
+            continue
+        if NAME_RE.search(para):
+            run = []
+        else:
+            run.append(para)
+            if len(run) >= 3:
+                runs.append(list(run))
+    # keep only the longest version of each run
+    trimmed = []
+    for r in runs:
+        if not trimmed or r[:len(trimmed[-1])] != trimmed[-1]:
+            trimmed.append(r)
+        else:
+            trimmed[-1] = r
+    print(f"  unanchored dialogue runs (3+): {len(trimmed)}")
+    for r in trimmed:
+        print(f"    {len(r)} lines, starting: {r[0][:70]}")
+
 if __name__ == '__main__':
     for p in sys.argv[1:] or ['chapters/part-01/chapter-0001.md']:
         report(p)
         british(p)
+        audio(p)

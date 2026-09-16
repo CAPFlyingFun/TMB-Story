@@ -61,6 +61,10 @@ raised and then forgotten. Suggest the smallest fix for each. Do not rewrite.
   chapter's last lines hook the NEXT chapter's plan without revealing early, and
   every passage of time is spoken ("an hour later, at the spit"), never marked with
   `***` or a blank gap.
+- In review mode, apply the one-narrator test to EVERY exchange (decision 0017): one
+  voice for all characters, no quotation marks, no paragraph breaks. Flag any line
+  whose speaker a listener would have to infer from alternation, and say whether a
+  plain tag or a working beat is the better fix.
 - In review mode, run `python3 scripts/style-check.py <chapter>` and report every FLAG
   with the longest sentences it lists (decision 0015, docs/STYLE_GUIDE.md).
 - In review mode, flag rhyme, chime, stacked -ing words, matched pairs and sing-song
