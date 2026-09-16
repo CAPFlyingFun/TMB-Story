@@ -1,6 +1,6 @@
 # Chapter 0002 — Sixty-Two Grams of Salt — handoff report
 
-Date: 2026-09-16 · POV: Nora · Words: 3,575 · Ending type: quiet unsettling line ·
+Date: 2026-09-16 · POV: Nora · Words: 3,610 · Ending type: quiet unsettling line ·
 Status: `in-review`, waiting on Joshua. Not approved; no bible file changed.
 
 Source of the plan: Trello card `02 — Sixty-Two Grams of Salt | Nora` in the
@@ -222,3 +222,24 @@ luggage-scale callback (about 70).
 
 Converted while in review: color, gray, liters, labeled, turned around, outside
 faucet, "straight into the washer". Word count 3,575.
+
+## Complete-sentences pass (decision 0013, 2026-09-16)
+
+Five fragment passages in Chapter 2 rewritten as sentences: "older than school";
+the jar slip ("The slip said site, stop, date and initials, in that order"); the
+photograph ("It showed a man on a dock..."); the repacking inventory (now seven
+sentences); and the ending's "Not at the keys" ("She was not looking at the keys.
+She was looking at the photograph..."). Kept as the joke or the cut-off: "Sent.",
+"Don't you—", "—sentences", "Out where.", "Which colour." Word count 3,610.
+
+Chapter 1 is approved and was not touched. Its fragments, for Joshua to keep or
+convert in a flagged edit: "Field assistant. Seasonal. Three months."; "A little
+black one with a hook, the kind people use at airports."; "Not snatched. Took." (the
+joke; keep); "Big ones, black, with legs the color of rust, coming out of the log.";
+"Not wandering. Walking, in a line..."; "A bent metal post with nothing on it. A
+lump of concrete with a rusted ring. And, squatting in the grass, one gray metal
+box..."; "Three stops along the spit, ten minutes each."; "A bumblebee, huge and
+slow. Two striped flies that Caleb logged as honey bees..."; "Download the memory,
+read the trace, swap the battery."; "South now, with weight in it, smelling of rain
+that had not arrived."; "Up the beach, into the grass, up a bank and onto the
+trail..."; "Then the middle of the saddle, and the water was over his boots..."

@@ -4,7 +4,7 @@ title: "Sixty-Two Grams of Salt"
 part: 1
 mini_arc: 1
 pov: Nora
-word_count: 3575
+word_count: 3610
 story_time:
   clock: outside
   date: "Year 0, first week of October (the same Tuesday as Chapter 1)"
@@ -108,7 +108,7 @@ He brought the bag in. In the kitchen it was warm, and the window over the sink 
 
 That was when Nora looked at Caleb, and Caleb looked at Nora, and she held up one finger and then two, low, against her leg, where it was a thing nobody else in the world would see.
 
-The two-count was old. Older than school. You counted to two before you did anything stupid together, and on two you each said what you were going to do, and if you said the same thing, it was decided, and if you did not, you did not do it. It had kept them out of the river when they were seven. Tonight, on two, they both said, "Fun one," at exactly the same time, and their mother, who had not turned around, said, "I heard that."
+The two-count was old, older than school. You counted to two before you did anything stupid together, and on two you each said what you were going to do, and if you said the same thing, it was decided, and if you did not, you did not do it. It had kept them out of the river when they were seven. Tonight, on two, they both said, "Fun one," at exactly the same time, and their mother, who had not turned around, said, "I heard that."
 
 So they told her the fun one.
 
@@ -158,7 +158,7 @@ Then her mother put the spoon down and turned around properly and said, "And you
 
 "Those can both be true," said their mother, and went back to the pot. "Sit."
 
-They did not sit. They were not finished. Caleb got the sample jars out of Nora's pack in the hall, six little glass jars that had been carried to Tern Island and back and never opened, and set them on the table in a row, and Nora got the pencil, because you labeled a jar in pencil on a slip that went inside, since ink lifted and tape came off. Site. Stop. Date. Initials. She wrote *Sat* on all six and left the date blank, because a thing was not true until it was true.
+They did not sit. They were not finished. Caleb got the sample jars out of Nora's pack in the hall, six little glass jars that had been carried to Tern Island and back and never opened, and set them on the table in a row, and Nora got the pencil, because you labeled a jar in pencil on a slip that went inside, since ink lifted and tape came off. The slip said site, stop, date and initials, in that order. She wrote *Sat* on all six and left the date blank, because a thing was not true until it was true.
 
 It was while the jars were standing in their row with their slips inside that she weighed the net bag.
 
@@ -184,7 +184,7 @@ There was a pause, in which Nora did the sum and found it was right.
 
 Then they sat, because the food was on the table and their mother had used the voice, and for a while nobody said anything that was not about bread.
 
-It was a small kitchen and the table was against the wall, and from where Nora sat she could see through the door into the front hall, to the shelf by the door, where the keys lived and the photograph lived. The photograph had been there for as long as she had been anywhere. A man on a dock, in a green jacket, squinting into sun, with a boat's rail behind him. Nobody looked at it. You looked at the keys. Her eye did what it always did, which was slide from the door to the keys to the coat hooks without stopping in between, and she thought nothing, because there was nothing to think.
+It was a small kitchen and the table was against the wall, and from where Nora sat she could see through the door into the front hall, to the shelf by the door, where the keys lived and the photograph lived. The photograph had been there for as long as she had been anywhere. It showed a man on a dock, in a green jacket, squinting into sun, with a boat's rail behind him. Nobody looked at it. You looked at the keys. Her eye did what it always did, which was slide from the door to the keys to the coat hooks without stopping in between, and she thought nothing, because there was nothing to think.
 
 "Somebody at the station," said their mother, tearing bread, "told me you two have that twin thing."
 
@@ -242,7 +242,7 @@ And Nora and Caleb looked at each other, one look, and both of them understood t
 
 After the dishes there was the repacking, which Caleb wanted to leave until Friday and Nora wanted to do now, so they did it now.
 
-You unpacked everything onto the kitchen floor, both packs, and you did not put a single thing back until you had looked at it. Dry bag. Headlamps, both tested, one flickering, batteries swapped from the drawer. The jars, in their sleeve. Gloves, off the heater, stiff, worked soft again by hand. A note for Ines about the stake, which was on its way to Japan. The net bag, folded, still smelling of the island. The spare battery, unswapped, into the bottom of her own pack, because it was still her job. Caleb sat on the floor with his back against the cupboards and handed her things in the order she asked for them and, for a while, did not talk, which was his way of saying he was still cross and had decided not to be.
+You unpacked everything onto the kitchen floor, both packs, and you did not put a single thing back until you had looked at it. The dry bag went in first. Both headlamps were tested, and the one that flickered got new batteries from the drawer. The jars went in their sleeve. The gloves came off the heater stiff and were worked soft again by hand. She wrote a note for Ines about the stake, which was on its way to Japan. The net bag went in folded, still smelling of the island. The spare battery, unswapped, went into the bottom of her own pack, because it was still her job. Caleb sat on the floor with his back against the cupboards and handed her things in the order she asked for them and, for a while, did not talk, which was his way of saying he was still cross and had decided not to be.
 
 "Six point four," she said, when she hooked her pack on the luggage scale, and looked at him.
 
@@ -260,7 +260,7 @@ The kitchen light was off. The hall light was off. There was only the porch ligh
 
 Her mother was standing in it.
 
-She was standing at the shelf by the door, in the dark, in the fleece, with the keys in one hand as if she had been going out, or had just come in, and was doing neither. Her other hand was at the small of her back. And she was looking at the photograph. Not at the keys. At the photograph, the man on the dock in the green jacket, squinting into a sun that had gone down eighteen years ago.
+She was standing at the shelf by the door, in the dark, in the fleece, with the keys in one hand as if she had been going out, or had just come in, and was doing neither. Her other hand was at the small of her back. And she was looking at the photograph. She was not looking at the keys. She was looking at the photograph, at the man on the dock in the green jacket, squinting into a sun that had gone down eighteen years ago.
 
 Nora had lived in that house her whole life. She had never seen anyone look at it.
 

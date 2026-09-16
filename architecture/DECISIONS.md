@@ -21,6 +21,7 @@ file is updated.
 - 0010 — Chapter length about 2,200 average, range 1,800–3,000; amends 0001 — **Accepted (Joshua, 2026-09-16)**
 - 0011 — Dialogue carries a body: beats, looks and reactions on most lines, no bare back-and-forth — **Accepted (Joshua, 2026-09-16)**
 - 0012 — The series is written in US English — **Accepted (Joshua, 2026-09-16)**
+- 0013 — Complete sentences; fragments only for a joke, a cut-off or a trail-off — **Accepted (Joshua, 2026-09-16)**
 
 ---
 
@@ -98,4 +99,10 @@ file is updated.
 **Context:** Chapters 1 and 2 mixed "Mom" with British spelling and vocabulary (colour, metres, car park, trousers, maths, half twelve). Asked which English the series speaks, Joshua: "make it US English, not UK English."
 **Decision:** American spelling and vocabulary in all prose, bible and outline text. Metric units stay, spelled the American way (meters, centimeters, liters), because the characters are field scientists. Applied to the approved Chapter 1 on Joshua's instruction alongside his eleven approved proofing fixes, and to Chapter 2 in review; the bible, outline and review files converted in the same pass. `architecture/` is a historical record and is not edited.
 **Consequences:** `CLAUDE.md` carries the rule. The specialists' review passes flag British forms.
+**Status:** Accepted, 2026-09-16.
+
+### 0013 — Complete sentences
+**Context:** Joshua, reading Chapter 2: the prose should read like a plain modern translation rather than an ornate old one; "make sure it's a complete sentence unless a joke, someone is cutting them off, or they stop talking."
+**Decision:** Narration and dialogue in complete sentences. Fragments only as the joke, the interruption or the trail-off. Inventory-style lists become sentences. Applied to Chapter 2 in review (the two-count line, the jar slip, the photograph description, the repacking list, the ending's "Not at the keys"). Chapter 1 is approved and untouched; its fragments are listed in Chapter 2's handoff report for Joshua to keep or convert.
+**Consequences:** `CLAUDE.md` carries the rule; the scene specialist flags fragments in review.
 **Status:** Accepted, 2026-09-16.

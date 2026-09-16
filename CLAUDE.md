@@ -85,6 +85,12 @@ These are craft invariants. The prose is heard, not seen.
   vocabulary throughout: color, gray, meter, math, parking lot, pants, gotten,
   twelve-thirty, turn around, faucet, washer. The science stays metric because the
   characters are field scientists. "Mom", never "Mum".
+- **Complete sentences (Joshua, 2026-09-16, decision 0013).** Narration and
+  dialogue are written in complete sentences. A fragment is allowed only when it is
+  the joke ("Not snatched. Took."), when someone is cut off ("Don't you—"), or when a
+  speaker trails off. Lists of kit, sights or steps are carried by full sentences, not
+  by stacked fragments. The style to aim for is plain and clear, the way a modern
+  translation reads next to an old one: nothing a listener has to untangle.
 - **Profanity:** minimal to none.
 - **Violence:** real consequences with real weight, no graphic anatomical description,
   no lingering.
