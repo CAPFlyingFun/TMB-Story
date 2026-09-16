@@ -56,8 +56,9 @@ Bennett home, Tidewater Instruments, Mercy General.
 - **Trello:** Godot https://trello.com/c/y7dgXHZ2 · TypeScript https://trello.com/c/OFjCwBSI
 - **Playable beat flow:** Load gear → cross bar → survey wildlife → inspect ant behavior → regroup and compare findings → warn Ines → pack equipment → navigate rising crossing → return.
 - **POV:** Caleb · **Target:** 2,300–2,500 (the set piece earns it)
-- **Opening situation:** 6 a.m. at the station boathouse, low tide in two
-  hours. Marco loading the van with the enthusiasm of a man who is not
+- **Opening situation:** 6 a.m. at the station boathouse in the dark; on the bar by half past seven on
+  the falling tide; low water at half past ten; Ines's rule: off the bar by half past
+  twelve, back at the station by one. Marco loading the van with the enthusiasm of a man who is not
   carrying any of it. Caleb and Nora arguing about whose pack is heavier.
   Nora has brought a luggage scale. Of course she has.
 - **Scenes / beats:**
