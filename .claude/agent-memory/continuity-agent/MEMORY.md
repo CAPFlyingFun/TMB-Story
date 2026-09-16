@@ -7,10 +7,10 @@ overview.md; superseded by Trello ten-chapter cards where they differ) · APPROV
 under review) · APPROVED [ch NNNN] · RETIRED (the boatyard "The Wet Engine", deleted at 254158b,
 kept in history at a2a7320). Approved chapter beats memory; memory beats nothing. Cite file:line.
 
-Series state (2026-09-16, fourth pass, repo at dd8b7cb): Ch 0001 "The Bar" (Caleb POV) is APPROVEDED
-at chapters/part-01/chapter-0001.md — review_status: draft, 2,996 prose words measured (frontmatter
-2989), three scenes, ends in the van on the road back to the station. NOT approved. CHAPTER_INDEX.md
-empty. "MA1:" = outline/part-01/mini-arc-01.md (472 lines at dd8b7cb); "ch:" = chapter-0001.md lines.
+Series state (2026-09-16, fourth pass, repo at dd8b7cb): Ch 0001 "The Bar" (Caleb POV) is APPROVED (2026-09-16, 3,294 words; review_status: approved)
+at chapters/part-01/chapter-0001.md — (older line:) 2,996 prose words measured (frontmatter
+2989), three scenes, ends in the van on Rachel's texts. APPROVED; CHAPTER_INDEX.md has its row.
+"MA1:" = outline/part-01/mini-arc-01.md (472 lines at dd8b7cb); "ch:" = chapter-0001.md lines.
 
 - characters.md — Caleb, Nora, Rachel, Daniel, Ines, Marco, Gus per source; APPROVED Ch 1 block at end.
 - creatures.md — APPROVED Ch 1 ants/birds/gull/web/sweep; PLAN insect texture by chapter; RETIRED wasps.

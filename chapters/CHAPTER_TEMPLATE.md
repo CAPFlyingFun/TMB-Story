@@ -29,5 +29,6 @@ approved_on: ""            # YYYY-MM-DD, set only when review_status becomes app
 
 # Chapter 0 — Title
 
-(Prose begins here. No headings inside the chapter; scene breaks are a single line
-containing three asterisks.)
+(Prose begins here. No headings inside the chapter. No `***` scene breaks: time
+passing is spoken in the prose, "An hour later, at the spit" (decision 0009). The
+last lines hook the next chapter's plan without revealing early.)
