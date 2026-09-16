@@ -55,7 +55,7 @@ BRITISH = [
     (r"\bproperly\b", "properly -> all the way / really / right"),
     (r"\blove\b(?=[,.!?\"])", "love (endearment) -> hon / sweetheart"),
     (r"\bSorry\?", "Sorry? -> What?"),
-    (r"\bcross\b(?! the| it| to| over| out| off| a )", "cross (angry) -> mad"),
+    (r"\bcross\b(?! the| it| to| over| out| off| a | on)", "cross (angry) -> mad"),
     (r"\b(another|a|one more) go\b", "a go -> a try / round two"),
     (r"\bin the wet(?=[.,;!?])", "in the wet -> in the rain / when it's wet"),
     (r"\bkit\b", "kit -> gear"),
