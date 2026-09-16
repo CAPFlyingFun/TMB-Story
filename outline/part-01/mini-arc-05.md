@@ -82,7 +82,7 @@ committed in Part One.
 
 ### Chapter 0047 — The Line
 - **POV:** Nora · **Scenes:** 2
-- **Event:** Nora sees structure: the grass ahead has been cut in a corridor, and there is a post, waist-high to them, notched and weathered, made by hands. People. And the geography is wrong: the ridge she saw from the boat should be east; by the sun it is not, and the sun itself moved faster than her count. The island does not match the calculations; the anomaly is more complex than they modelled. Then the insects go quiet.
+- **Event:** Nora sees structure: the grass ahead has been cut in a corridor, and there is a post, waist-high to them, notched and weathered, made by hands. People. And the geography is wrong: the ridge she saw from the boat should be east; by the sun it is not, and the sun itself moved faster than her count. The island does not match the calculations; the anomaly is more complex than they modeled. Then the insects go quiet.
 - **Character beat:** Nora's certainty-need, turned outward, is what saves them here: she notices the silence and stops Caleb walking into it.
 - **Creature/world:** The managed corridor is the first sign of the settlement's reach. The silence is the wolf spider's.
 - **Mysteries:** M02 (answered: an organized human presence exists). M03, M12 (background: the geography and the sun). M17 (background).
@@ -93,7 +93,7 @@ committed in Part One.
 - **POV:** Caleb · **Scenes:** 2
 - **Event:** The wolf spider. Not gore: patience. It waits at the corridor's edge, larger than they are, eyes catching light, and when they move it follows at a distance that never changes. Caleb reads it the way he reads people and understands it is not hunting yet; it is learning them. Night falls with it still there.
 - **Character beat:** Caleb cannot tolerate not acting; Nora holds him still by the wrist he broke and they last the night.
-- **Creature/world:** Written from the bible's wolf-spider entry as it will be approved: a hunter that runs down prey, uses cover, and is patient. Its behaviour is normal for a spider and wrong for its location, which only the islanders will recognize.
+- **Creature/world:** Written from the bible's wolf-spider entry as it will be approved: a hunter that runs down prey, uses cover, and is patient. Its behavior is normal for a spider and wrong for its location, which only the islanders will recognize.
 - **Mysteries:** M17 (advanced: this one is at the twins' scale and lethal). M29 (seeded: something in known territory that shouldn't be there).
 - **Ending type:** decision (run for the post at first light)
 - **Hands off:** wrong prey.

@@ -40,7 +40,7 @@ kept hidden, and it's gone.
 
 ### Chapter 0023 — Kessler's Confession
 - **POV:** Nora · **Scenes:** 1
-- **Event:** In a diner off campus, Kessler tells them what he has kept his head down about for eighteen years: Daniel was drawn into private, defence-adjacent money; the "accident" story arrived pre-written; he suspected and did nothing. He gives them the funder's name, Corbel Applied Research (provisional), and one more thing: the after-hours access logs had a second name he never learned. Daniel was not working alone.
+- **Event:** In a diner off campus, Kessler tells them what he has kept his head down about for eighteen years: Daniel was drawn into private, defense-adjacent money; the "accident" story arrived pre-written; he suspected and did nothing. He gives them the funder's name, Corbel Applied Research (provisional), and one more thing: the after-hours access logs had a second name he never learned. Daniel was not working alone.
 - **Character beat:** Kessler's guilt is real and not the twins' to absolve; Nora doesn't try. Caleb does, and Kessler declines it gently.
 - **Creature/world:** Normal world.
 - **Mysteries:** +M07 (who funded/monitored; see the flag in `overview.md`). M30 (advanced: his connection is professional and guilty).
@@ -67,7 +67,7 @@ kept hidden, and it's gone.
 
 ### Chapter 0026 — Second Attempt
 - **POV:** Caleb · **Scenes:** 2
-- **Event:** With the real notebook the rig is rebuilt in a night. Second experiment: a glass marble on a scale loses its weight for four tenths of a second and reappears three centimetres to the left, warm. The coil browns the bench. It works, barely, and it is plainly dangerous. Rachel, Nora and Caleb sit on the garage floor and nobody speaks.
+- **Event:** With the real notebook the rig is rebuilt in a night. Second experiment: a glass marble on a scale loses its weight for four tenths of a second and reappears three centimeters to the left, warm. The coil browns the bench. It works, barely, and it is plainly dangerous. Rachel, Nora and Caleb sit on the garage floor and nobody speaks.
 - **Character beat:** Caleb's hands did this; his need to act is, for once, exactly right.
 - **Creature/world:** Every insect in the garage has gone still or gone. Caleb notices the silence before the result.
 - **Mysteries:** M02 (advanced: the effect is real, so the region matters). M23 (background only, not introduced: shift, not shrink).

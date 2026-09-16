@@ -38,7 +38,7 @@ story/cutscene chapter by design.
   happen while building the first rig; 27 (the cover-story timeline) assembled
   physically from documents in the boxes and crawlspace. Required fix: Ch. 28's
   Halloran encounter is at a boatyard that no longer exists; move it to the Alder
-  Sound dock or car park.
+  Sound dock or parking lot.
 - **Ch. 31–40 (Mini-Arc 4)** — move some research into field, water and equipment
   activity: 32 (modelling the region) as a first run on Wes's boat toward the shelf
   edge with the station's spare loggers; 34 (the buoy archive) as a decommissioned

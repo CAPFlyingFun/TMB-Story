@@ -77,7 +77,7 @@ the specific question you want answered. Ask for short, concrete, ranked input.
 |---|---|
 | `scene-agent` | The chapter's primary event: sequence, physical stakes, scale-true logistics, where the scene turns. |
 | `character-agent` | Emotional beats, relationship movement, dialogue opportunities, growth, voice notes for the POV character. |
-| `world-creature-agent` | Creature behaviour against `bible/CREATURES.md`, scale-state implications, survival logic, settlement and environment texture. |
+| `world-creature-agent` | Creature behavior against `bible/CREATURES.md`, scale-state implications, survival logic, settlement and environment texture. |
 | `mystery-agent` | Which `M##` questions this chapter can introduce/advance/answer, clues to plant, whether a reveal is due on the 5–15 chapter rhythm. |
 | `continuity-agent` | What must be true at the chapter's opening: positions, time on both clocks, injuries, equipment, knowledge, unresolved actions, active mysteries. |
 

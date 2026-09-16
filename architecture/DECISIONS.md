@@ -20,6 +20,7 @@ file is updated.
 - 0009 — Endings hook the next chapter; time passing is spoken, never `***` — **Accepted (Joshua, 2026-09-16)**
 - 0010 — Chapter length about 2,200 average, range 1,800–3,000; amends 0001 — **Accepted (Joshua, 2026-09-16)**
 - 0011 — Dialogue carries a body: beats, looks and reactions on most lines, no bare back-and-forth — **Accepted (Joshua, 2026-09-16)**
+- 0012 — The series is written in US English — **Accepted (Joshua, 2026-09-16)**
 
 ---
 
@@ -91,4 +92,10 @@ file is updated.
 **Context:** Joshua, on the round-two Chapter 1: avoid bare back-and-forth dialogue, and avoid fixing it with repetitive "he said, she said"; instead attach actions, emotion, reactions and looks to the lines. His example turned three bare lines into lines with a speaker, a feeling and a small action each.
 **Decision:** A standing audiobook rule in `CLAUDE.md`. Most lines in an exchange carry a beat a listener can picture; constructions vary; speakers are named often enough that nobody counts back. Ornate tags and stacked adverbs remain out; the beat does the work the adverb would.
 **Consequences:** Chapter 1 revised line by line. The revision added about 300 words; with small trims it stands at the count in its frontmatter, over decision 0010's 3,000 by a margin flagged in the handoff report for Joshua's ruling (accept, trim, or split, where a split would shift every Trello chapter number and produce two chapters under 1,800). The scene and character specialists check the rule in review.
+**Status:** Accepted, 2026-09-16.
+
+### 0012 — US English
+**Context:** Chapters 1 and 2 mixed "Mom" with British spelling and vocabulary (colour, metres, car park, trousers, maths, half twelve). Asked which English the series speaks, Joshua: "make it US English, not UK English."
+**Decision:** American spelling and vocabulary in all prose, bible and outline text. Metric units stay, spelled the American way (meters, centimeters, liters), because the characters are field scientists. Applied to the approved Chapter 1 on Joshua's instruction alongside his eleven approved proofing fixes, and to Chapter 2 in review; the bible, outline and review files converted in the same pass. `architecture/` is a historical record and is not edited.
+**Consequences:** `CLAUDE.md` carries the rule. The specialists' review passes flag British forms.
 **Status:** Accepted, 2026-09-16.

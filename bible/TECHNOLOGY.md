@@ -10,7 +10,7 @@ Rules carried from the architecture:
 - The device's basic function and look are to be concrete and stable by Chapter 50;
   whether it shrinks matter or shifts its state stays open (M23).
 - Human gear reads primitive, handmade, scale-appropriate, growing cleverer through
-  island engineering; no miniature firearms. Silk, fibre, membrane, bone, root.
+  island engineering; no miniature firearms. Silk, fiber, membrane, bone, root.
 - The emergency parachute/glider is plausible (surface-area-to-mass, spider
   ballooning); material and mechanism stay provisional until a scene needs them.
 
@@ -36,4 +36,4 @@ Entry template:
 ### Glider / parachute (provisional)
 
 ## Explicitly not possible yet
-- Return to normal size (M20) — rumour only until Part 14-era
+- Return to normal size (M20) — rumor only until Part 14-era

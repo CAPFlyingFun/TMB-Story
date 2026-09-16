@@ -98,7 +98,7 @@ Caleb carries six of these ten chapters; the building is his.
 
 ### Chapter 0039 — Provisioning
 - **POV:** Nora · **Scenes:** 2
-- **Event:** Preparation at two scales: what they can carry now, what will still be useful at seven millimetres (thread, needles, a blade, salt, the device's core). Nora's blind spot bites: she delays departure a week to verify one reading, and in that week the marina revokes Wes's slip on a paperwork "irregularity." Someone pays for her hesitation; they will have to leave from a different harbour, fast.
+- **Event:** Preparation at two scales: what they can carry now, what will still be useful at seven millimetres (thread, needles, a blade, salt, the device's core). Nora's blind spot bites: she delays departure a week to verify one reading, and in that week the marina revokes Wes's slip on a paperwork "irregularity." Someone pays for her hesitation; they will have to leave from a different harbor, fast.
 - **Character beat:** Nora owns it out loud. Caleb does not say "I told you," which is its own growth.
 - **Creature/world:** On the last test night a moth lands on the humming device and, for a second, is the wrong size.
 - **Mysteries:** M17 (background, sharpened: the field does something to insects). M06 (advanced: pressure through paperwork).
@@ -109,7 +109,7 @@ Caleb carries six of these ten chapters; the building is his.
 - **POV:** Caleb · **Scenes:** 2
 - **Event:** Departure at night from a borrowed berth. Rachel on the dock, staying: "someone has to be here when it comes back," a line the twins take as fear and the audience may take as more. As the lines go, a message reaches Caleb's phone from Halloran's number, the warning that closes the arc: they will find what they're looking for, and that is not the good news.
 - **Character beat:** Caleb and Nora, two-count, on the deck. Rachel does not wave; she watches until they're gone.
-- **Creature/world:** Harbour lights, moths, the last of the normal world.
+- **Creature/world:** Harbor lights, moths, the last of the normal world.
 - **Mysteries:** the warning implies knowledge: why warn them off something that supposedly doesn't exist, and what does the organization want (M07, M06 sharpened toward Part 6). M13 (Rachel's line).
 - **Ending type:** quiet unsettling line
 - **Hands off:** open water.

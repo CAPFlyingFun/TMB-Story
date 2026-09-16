@@ -37,7 +37,7 @@ A drowned outboard comes into the boatyard with a story that doesn't fit the dam
 ## Proposed bible updates (NOT applied; applied on approval)
 
 - `CHARACTERS.md`: Caleb, Nora, Rachel entries seeded from the page (voices, the two-count, the photograph, Rachel's fleece and bench, the trampoline anecdote). Unnamed customer as a minor witness who knew Daniel at the fuel dock (do not contradict in Ch. 24).
-- `CREATURES.md`: new "Normal world (Part One)" section with the paper-wasp entry as the world-creature agent proposed (sources: Reeve 1991; Heinrich 1993), labelled MEASURED / STORY.
+- `CREATURES.md`: new "Normal world (Part One)" section with the paper-wasp entry as the world-creature agent proposed (sources: Reeve 1991; Heinrich 1993), labeled MEASURED / STORY.
 - `LOCATIONS.md`: Harlow's Boatyard (name not yet spoken on the page), the fuel dock, the Bennett home's kitchen shelf.
 - `MYSTERIES.md`: clue-table rows for the fold (M13, subtext) and the fixed words said twice (M13; false as complete, answered Ch. 27), and an M01 background row for the fuel-dock witness; activate "who knows what" blocks for M13 and M01 as the mystery-agent drafted them.
 - `TIMELINE.md`: first outside-clock row: Year 0, early October, a Tuesday; boat found Sunday; crash window mid-to-late October.

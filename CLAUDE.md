@@ -81,6 +81,10 @@ These are craft invariants. The prose is heard, not seen.
   a feeling, a pause, what the hands are doing. Vary the construction (beat before
   the line, beat after, beat in the middle, the odd line left bare for pace). Name
   who is speaking often enough that a listener never has to count back.
+- **US English (Joshua, 2026-09-16, decision 0012).** American spelling and
+  vocabulary throughout: color, gray, meter, math, parking lot, pants, gotten,
+  twelve-thirty, turn around, faucet, washer. The science stays metric because the
+  characters are field scientists. "Mom", never "Mum".
 - **Profanity:** minimal to none.
 - **Violence:** real consequences with real weight, no graphic anatomical description,
   no lingering.

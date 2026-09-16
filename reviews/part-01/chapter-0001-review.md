@@ -19,7 +19,7 @@ Nora goes to the shore logger with Ines, Caleb counts birds and sweeps for
 pollinators with Marco. Lunch at low water, the gull, and the ant column leaving a
 soaked drift log for a stump on the summit, which is how Caleb glimpses the one
 clean, dry, padlocked box on a rusting hilltop and thinks nothing of it. The spit
-empties, the wind goes round, Nora's trace shows the water fifteen centimetres
+empties, the wind goes round, Nora's trace shows the water fifteen centimeters
 high at low and the pressure falling; the two halves of the warning meet in the
 twins and go to Ines, who verifies against Gus's station reading and pulls the team
 ninety minutes early, leaving the battery swap, the count and the download for a
@@ -48,12 +48,12 @@ Joshua: "95% there." Two changes, both now standing rules (decision 0009):
 Every exchange revisited (decision 0011). Bare lines now carry an action, a look or
 a reaction: Caleb hefting the pack and nearly taking out a lamp; Nora not looking up
 from her laces; Nora setting the pack down "as if it had feelings"; Marco finding
-Caleb's eyes in the mirror; Ines not turning round; "Don't you—" "Sent."; Marco
+Caleb's eyes in the mirror; Ines not turning around; "Don't you—" "Sent."; Marco
 nodding "like a doctor" over the empty bag and looking at Caleb "with enormous
 pity" over the fly; Marco with his mouth full; Caleb waving the count sheet over his
 shoulder; Marco saying "Birds do that" kindly, "the way you talk to someone who has
 seen a ghost"; the twins asking "Where's Ines?" at once and neither laughing; Caleb
-wiping his hands on his trousers for something to do with them; Ines already walking
+wiping his hands on his pants for something to do with them; Ines already walking
 on "Move"; Ines looking at each twin "for about a second each"; Caleb closing his
 eyes at the scale and answering the roof of the van; Nora reading Mom's text in
 Mom's voice; Caleb opening one eye. Speakers are named throughout. Ornate tags and
@@ -113,7 +113,7 @@ dialogue beats added about 300.
   warning are two different kinds of noticing that happen to agree, which is the
   Chapter 5 engine in miniature. Nora wins the order of speaking because she has
   the laptop; Caleb minds.
-- World-creature: ants black with rust-coloured legs, brood pale and rice-sized,
+- World-creature: ants black with rust-colored legs, brood pale and rice-sized,
   larger larvae carried out in front, a worker carried curled beneath another
   (adult transport, which is real); the trail is an existing route; crabs omitted
   (above); gull takes a sandwich by landing and considering, not by snatching.
@@ -146,10 +146,10 @@ dialogue beats added about 300.
 
 ## Proposed bible updates (NOT applied; applied on approval)
 
-- `bible/CREATURES.md`: carpenter ant entry (black, rust-coloured legs, daylight
+- `bible/CREATURES.md`: carpenter ant entry (black, rust-colored legs, daylight
   brood relocation from a flooded nest; the summit stump colony on Tern Island).
 - `bible/LOCATIONS.md`: Alder Sound Field Station (boathouse, photograph corridor,
-  van, radio, Gus and the boat) and Tern Island (bar of four hundred metres, crest
+  van, radio, Gus and the boat) and Tern Island (bar of four hundred meters, crest
   and saddle, lee beach and mud, shore logger and pressure logger, spit, trail,
   summit with the box).
 - `bible/CHARACTERS.md`: Ines Marchetti (rule-keeper, does not spend margin,
@@ -184,7 +184,7 @@ dialogue beats added about 300.
 - Voice follows mood: light in the boathouse, the count and the van; weight from
   "He noticed the spit before he understood it" to the mainland side of the saddle.
 - Humour from relationship, not jokes: the scale, the sandwich, "technically a
-  rumour", "Bennett loses to a wet glove".
+  rumor", "Bennett loses to a wet glove".
 - Insect beat structural: the ant column is half of the warning that gets the team
   off the bar.
 - No second-person command language; every beat in `playable_beat_flow` is an
@@ -197,3 +197,16 @@ dialogue beats added about 300.
 One line changed in the APPROVED chapter on Joshua's explicit instruction: "Hey,"
 Caleb said, to a bird. → "Hey," Caleb said, to the bird. Word count unchanged.
 Flagged here and in the commit subject per the canon-protection rule.
+
+## Post-approval edit 2 (Joshua, 2026-09-16): read-aloud proofing and US English
+
+Joshua asked for a read-aloud proofing pass on the approved chapter, approved all
+eleven candidates, and decided the series is written in US English (decision 0012).
+Applied to the APPROVED chapter on his instruction, flagged here and in the commit:
+the plovers sentence recast as dialogue; "a gull took half the sandwich"; "from his
+own sandwich"; "The plan was off by twelve-thirty"; Marco's colon line recast;
+"went in up to the shin"; the laptop sentence split, "on one arm"; "was not rusting";
+Marco Sato's introduction split into two sentences; "He went on up after them";
+the two "And ..." fragments joined to their lines. US English throughout: color,
+gray, meters, centimeters, rumor, math, pants, parking lot, turn around, gotten,
+twelve-thirty. Word count now 3,293.

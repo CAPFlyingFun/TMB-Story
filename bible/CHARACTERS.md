@@ -74,7 +74,7 @@ Entry template:
 - **Arc so far:** `[ch 0001]` set the rule (off by 12:30, back by 1); pulled the team at eleven; "Good catch. Both of you." "It was both. Which is why I'm keeping you." Drove the van home.
 ### Marco Sato (Alder Sound technician; provisional)
 - **Age:** 24 · **Role:** technician; usually drives the van; calls the birds.
-- **Voice:** commentary ("And Bennett goes down."), invented binding rules, "technically a rumour", "That's a fly in a bee costume", "Zero is science". Stops talking when it is real.
+- **Voice:** commentary ("And Bennett goes down."), invented binding rules, "technically a rumor", "That's a fly in a bee costume", "Zero is science". Stops talking when it is real.
 - **Arc so far:** `[ch 0001]` drove out; the count and the sweep with Caleb; carried two packs off the bar; sat in a puddle on purpose.
 ### Gus Pelletier (Alder Sound caretaker and boat operator; provisional)
 - **Voice:** slow, old, unbothered on the radio ("Gone south on me the last half hour. Freshening. Glass is dropping. You want the boat?").

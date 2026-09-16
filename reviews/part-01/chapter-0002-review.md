@@ -22,7 +22,7 @@ sees dinner. The long kitchen scene carries the physical spine: boots scraped an
 rinsed on the back step and stuffed with newspaper, the net bag shaken out (the dead
 fly in a bee costume), gloves and net on the heater under the black window, the
 two-count and "Fun one" in stereo, Caleb's telling (mud, gull, ants), Nora's numbers,
-Rachel's technician's questions, the jars re-labelled in pencil with the date left
+Rachel's technician's questions, the jars re-labeled in pencil with the date left
 blank, and the title beat: the dried net bag on the kitchen scale, sixty-two grams
 over its sheet weight, Rachel's arithmetic, and Nora calling it salt anyway. Dinner:
 the photograph shown being ignored, "that twin thing", "We built it the hard way",
@@ -69,9 +69,9 @@ packs and the door. Nora goes back up without the water.
 - **Rachel's questions are three, not one,** but only one is "too many" in kind;
   the mystery specialist's advice was to keep them all technician-shaped. Nora's
   conscious count of them was cut from the draft as too loud for Chapter 2.
-- **The "rinse the sample jars" beat became re-labelling empty jars.** Chapter 1's
+- **The "rinse the sample jars" beat became re-labeling empty jars.** Chapter 1's
   page shows an identify-and-release sweep; no samples were taken, so there is
-  nothing to rinse. The jars are re-labelled in pencil for Saturday instead.
+  nothing to rinse. The jars are re-labeled in pencil for Saturday instead.
 - **Count sheets are not dried on the radiator** (outline). Chapter 1 sealed them in
   the dry bag; they stay dry and stay at the station.
 - **The moth is unnamed on the page** ("a fat brown moth"); the bible will carry it as
@@ -91,7 +91,7 @@ packs and the door. Nora goes back up without the water.
   fun" and "I include the luggage scale" cut; the second wet-hair mention cut; "The
   piece of paper stayed where it was" added so the release does not cover the letter.
 - World-creature: the rain has been coming and going all afternoon, so "the van does
-  not do the hill in the wet" is true; boot mud is a grey paste, not a cracked
+  not do the hill in the wet" is true; boot mud is a gray paste, not a cracked
   riverbed; the moth walks upside down along the top of the frame, not the sill;
   "unit" throughout, not "gauge"; "Ten grams of that is salt" so it cannot be heard
   as "a tenth"; the rolled-up-carpet grubs added to Caleb's telling; the kitchen
@@ -173,7 +173,7 @@ luggage-scale callback (about 70).
 - `bible/LOCATIONS.md`: the Bennett home (top of a hill in Port Alder among firs;
   porch light; front hall with the shelf for keys and the photograph; small kitchen,
   table against the wall, heater under the window, the window a mirror at night;
-  back step with the outside tap; stairs silent on the outside edges; a river the
+  back step with the outside faucet; stairs silent on the outside edges; a river the
   twins were kept out of at seven). Alder Sound: the lab's drying corner under the
   leaking skylight and the log's "box for cause" are now on the page.
 - `bible/CHARACTERS.md`: Rachel (first on-page: imperatives as affection, answers
@@ -217,3 +217,8 @@ luggage-scale callback (about 70).
   she asks nothing about; the moth marks the stillness.
 - Rachel is mother first: every odd moment on the page has an innocent reading the
   twins themselves reach; the letter is the one thing left unexplained.
+
+## US English pass (decision 0012, 2026-09-16)
+
+Converted while in review: color, gray, liters, labeled, turned around, outside
+faucet, "straight into the washer". Word count 3,575.

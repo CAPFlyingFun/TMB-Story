@@ -62,8 +62,8 @@ audio distinctness from the locked cast.
 - **Alder Sound Field Station** — the twins' employer: a small, mostly honest coastal research nonprofit north of Port Alder; NOT the outside organization. Tidewater services its loggers.
 - **Tern Island** — wooded bird reserve in the sound, reachable across a gravel bar for about three hours either side of low water; the enclosure on its summit.
 - **Dr. Ines Marchetti** (field lead, mid-40s), **Marco Sato** (technician, 24, drives the van), **Gus Pelletier** (caretaker and boat operator, 60s, knew "a Mercer").
-- **The enclosure** — aluminium weatherproof monitoring box, tag `D.M.` and a year; Rachel has quietly kept it alive (Trello 21–30 card; M34).
-- **Cascade State University** — Kessler's department; the enclosure's programme partner; Daniel's institute was affiliated with it.
+- **The enclosure** — aluminum weatherproof monitoring box, tag `D.M.` and a year; Rachel has quietly kept it alive (Trello 21–30 card; M34).
+- **Cascade State University** — Kessler's department; the enclosure's program partner; Daniel's institute was affiliated with it.
 - **Tidewater Instruments** — Rachel's employer; she is a calibration engineer (her Rev 1 §5 technical background, made specific).
 - **Mercy General** — the hospital.
 - **Wes Tanaka** — mid-20s, runs his family's boat; his grandfather was harbourmaster where Daniel launched. Future recurring ally, likely in Rachel's thread.

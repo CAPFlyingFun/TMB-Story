@@ -6,7 +6,7 @@ loosely (Rev 3 §13); every distance is recorded at the scale it was lived at.
 Entry template:
 
 ### Name
-- **Status:** discovered | rumoured | inaccessible | destroyed/changed since first appearance
+- **Status:** discovered | rumored | inaccessible | destroyed/changed since first appearance
 - **Where:** relative to the settlement or another known place, with travel time at 7–10 mm and by what means
 - **What it is like:** sound, light, smell, footing, cover, hazards — what a listener needs
 - **Who controls it / lives there:** humans, colonies, predators
@@ -25,8 +25,8 @@ Entry template:
 - **First appears:** `[ch 0001]`
 ### Tern Island (the gravel bar, the transect, the summit, the enclosure)
 - **Status:** discovered `[ch 0001]`
-- **Where:** four hundred metres straight out from a mainland car park across a gravel bar that is walkable for a few hours around low water. The crest is dry gravel with driftwood; two-thirds across, near the island end, the crest sags for thirty steps into the saddle, which floods first and from the windward side; the gravel there "ticks" as the sea comes up through the stones. Smooth grey mud on the sheltered side of the bar takes a person to the shin. A soft patch on the left of the saddle (facing the island) in the morning.
-- **What it is like:** at the island end of the bar, a lee beach with a wrack line of dark weed and silver drift logs; at the top of the beach the shore logger (a box on a post with a wire down the beach into the water) and a second small pressure logger beside it; a transect of stakes along the top of the beach out to the spit; the spit, a low gravel finger with pools and shorebirds; a trail up through alders into firs; the summit, a hilltop of moss and rust with a bent metal post, a concrete lump with a rusted ring, an old stump at the edge of the clearing (the ants' new nest), and one knee-high grey metal box, square, clean and dry, padlocked, "the only thing up there that wasn't rusting". The box is the enclosure of M34; the page has not yet called it that. The padlock must be a combination padlock (Ch. 9 lock code).
+- **Where:** four hundred meters straight out from a mainland parking lot across a gravel bar that is walkable for a few hours around low water. The crest is dry gravel with driftwood; two-thirds across, near the island end, the crest sags for thirty steps into the saddle, which floods first and from the windward side; the gravel there "ticks" as the sea comes up through the stones. Smooth gray mud on the sheltered side of the bar takes a person to the shin. A soft patch on the left of the saddle (facing the island) in the morning.
+- **What it is like:** at the island end of the bar, a lee beach with a wrack line of dark weed and silver drift logs; at the top of the beach the shore logger (a box on a post with a wire down the beach into the water) and a second small pressure logger beside it; a transect of stakes along the top of the beach out to the spit; the spit, a low gravel finger with pools and shorebirds; a trail up through alders into firs; the summit, a hilltop of moss and rust with a bent metal post, a concrete lump with a rusted ring, an old stump at the edge of the clearing (the ants' new nest), and one knee-high gray metal box, square, clean and dry, padlocked, "the only thing up there that was not rusting". The box is the enclosure of M34; the page has not yet called it that. The padlock must be a combination padlock (Ch. 9 lock code).
 - **Ines's rule:** off the bar by half past twelve, back at the station by one. On the surge day the team left at eleven and crossed the saddle at shin depth at 11:22–11:24.
 - **First appears:** `[ch 0001]`
 ### The coast road (the crash site)
@@ -42,7 +42,7 @@ Entry template:
 ### Middle levels (older residential, storage, transit corridors, sealed early construction)
 ### Deepest levels (pre-Daniel tunnels; the sealed passage the humans did not dig — DO NOT EXPLAIN)
 ### The spider-rescue area
-### The abandoned second settlement (rumoured → discovered)
+### The abandoned second settlement (rumored → discovered)
 
 ## Beyond the shield
 

@@ -34,7 +34,7 @@ prevent a contradiction.
 | M17 | Can shrunk/shifted insects revert and stay dangerous? | Part 1 (spider) | Part 2 | Part 8/9 | open |
 | M18 | Where did Dad go, and why did he leave? | Part 3–4 | Parts 5–9 | Where: Part 9–10 · Why: Part 10–11 | open |
 | M19 | Is Dad alive right now? | Part 4 | Part 7–8 (unsettling signs) | Part 9–10 | open |
-| M20 | Can people return to normal size? | Part 2 (rumour) | Parts 8–13 | Part 14 | open |
+| M20 | Can people return to normal size? | Part 2 (rumor) | Parts 8–13 | Part 14 | open |
 | M21 | Who else received the "it's possible" signal? | Part 14 | — | Part 15 | not yet introduced |
 | M22 | Is the anomaly natural or artificial? | Part 1 (background) | — | Part 18 | open |
 | M23 | Does the device shrink matter, or shift its state? | Part 9 | — | Part 11/18 | not yet introduced (stays ambiguous even after) |
@@ -62,7 +62,7 @@ old signal was really from Daniel · the organization's full agenda beyond the s
 ## Clues planted / false clues
 | Id | Chapter | Clue (quoted or paraphrased) | Seen by | True/false |
 |---|---|---|---|---|
-| M34 | 0001 | On Tern Island's rusting summit, "one grey metal box about the height of his knee, square and clean and dry, with a padlock on it, the only thing up there that wasn't rusting." | Caleb alone, registered as nothing | true |
+| M34 | 0001 | On Tern Island's rusting summit, "one gray metal box about the height of his knee, square and clean and dry, with a padlock on it, the only thing up there that was not rusting." | Caleb alone, registered as nothing | true |
 | M13 | 0001 | Rachel, by text, after the joke about the boots: she wants to know which island; Nora sends "Tern"; the phone lights up again before Nora has put it down. | Nora (read); Caleb (heard "which island", saw nothing) | true (meaning open) |
 
 ## Who knows what

@@ -44,7 +44,7 @@ in his handwriting, in the notation Nora saw scratched into a wall in the dark.
 - **Gus Pelletier** — caretaker and boat operator, 60s, thirty years at the
   station, remembers "a Mercer" who put half the old gear in himself.
 - **The enclosure** — a weatherproof monitoring box on Tern Island's summit,
-  aluminium, older than the twins, a stamped tag reading `D.M.` and a year.
+  aluminum, older than the twins, a stamped tag reading `D.M.` and a year.
 
 Retired from the previous version: Harlow's Boatyard, the drowned engine, the
 customer, the Mayor, Nora's library digitization job. Kept: Port Alder, the
@@ -100,7 +100,7 @@ Bennett home, Tidewater Instruments, Mercy General.
   the gull, the packs, showing off for Marco. Rachel is off-page except as
   the person Nora texts a photo of Caleb in the mud.
 - **Creature/world:** the ant brood-move, the crab retreat, the birds'
-  silence, a glimpse (only a glimpse) of the old aluminium enclosure on the
+  silence, a glimpse (only a glimpse) of the old aluminum enclosure on the
   summit as they hurry past it; Caleb notices it is the one dry, cared-for
   thing on a neglected hilltop and thinks nothing of it.
 - **Mysteries:** none formally. The enclosure is a picture, not a clue yet.
@@ -168,20 +168,20 @@ Bennett home, Tidewater Instruments, Mercy General.
      across the trail and refuses to walk through it; the whole team goes
      around. Marco's commentary.
   2. The summit and the enclosure. Gus, waiting by the skiff, wanders up
-     with them: "That's from the old programme. Before most of us." Aluminium
+     with them: "That's from the old program. Before most of us." Aluminum
      box, weatherproof, a stamped tag: `D.M.` and a year older than the twins.
      Gus: "Mercer. Your name's Bennett, though." "Our mother's." "Huh."
      That's all he says. The twins barely react; Nora reads the year twice.
      Caleb notices the box is dry inside its seals and the padlock is not
      rusted, on a hilltop where everything else is.
-  3. Weather turns on the run back: rain, wind, the sound going grey. The
+  3. Weather turns on the run back: rain, wind, the sound going gray. The
      van on the coast road, Marco driving, Ines following in her own car.
      The twins in the back seat arguing, warm and stupid and tired: "The
      ants were first." "The barometer was right." "The ants were right and
      first."
   4. The crash, mundane and mechanical: on a curve in the rain, an oncoming
      pickup towing a boat trailer, the trailer swaying wide across the
-     centre line. Marco brakes and steers right; the van's wheels leave the
+     center line. Marco brakes and steers right; the van's wheels leave the
      wet road; the guardrail, then the ditch, then a tree. Loud, short,
      exact. No one is at fault in a way that matters.
   5. The impossible thing, inside the impact, from Caleb's side: dark, then a
@@ -219,7 +219,7 @@ Bennett home, Tidewater Instruments, Mercy General.
      asks one more thing, too specific ("Was it raining?"), then: water, the
      blanket, "Sleep." He sleeps. He does not register any of it. The
      audience does.
-  2. Morning. Nora in the next bay, awake, grey, furious about the light,
+  2. Morning. Nora in the next bay, awake, gray, furious about the light,
      told to rest and not think. The neurologist, kind and complete: both had
      brief loss of consciousness; both stay one night for observation;
      home tomorrow with concussion instructions. Nora says nothing about
@@ -300,7 +300,7 @@ Bennett home, Tidewater Instruments, Mercy General.
   3. Two in the morning. Caleb comes down for a painkiller, sees light under
      the kitchen door, stops, and then goes in: Rachel at the table with a
      folder open in front of her, which she closes before he is all the way
-     in the room. The one-handed frustration colours the week; it is not a
+     in the room. The one-handed frustration colors the week; it is not a
      task. "Can't sleep?" "Wrist."
      She makes him toast. He is foggy, but this time he registers it, and
      does not say so.
@@ -319,7 +319,7 @@ Bennett home, Tidewater Instruments, Mercy General.
 
 ### Chapter 0007 — Light Duty
 - **Trello:** Godot https://trello.com/c/tGY79b6a · TypeScript https://trello.com/c/CKVvoA4y
-- **Playable beat flow:** Return to station → light-duty inventory → locate enclosure records → compare service dates → question Gus → identify Rachel's initials and the programme code → decide next lead.
+- **Playable beat flow:** Return to station → light-duty inventory → locate enclosure records → compare service dates → question Gus → identify Rachel's initials and the program code → decide next lead.
 - **POV:** Nora · **Target:** 2,100–2,300
 - **Opening situation:** Nora on desk duty at Alder Sound because she is not
   allowed in the field yet: reconciling the equipment inventory against the
@@ -332,7 +332,7 @@ Bennett home, Tidewater Instruments, Mercy General.
   2. Ordinary work, ordinary discrepancy: the Tern Island enclosure is in
      the inventory as decommissioned in a year that matches the tag; but a
      Tidewater service ticket shows its battery swapped eight years later,
-     and again four years after that, under a programme code nobody at the
+     and again four years after that, under a program code nobody at the
      station recognizes. The installer's name on the original record is
      blank. She notes it, because she notes everything, and moves on.
   3. Gus, at lunch, when Nora asks who the Mercer was: quiet guy, weekends,
@@ -345,8 +345,8 @@ Bennett home, Tidewater Instruments, Mercy General.
   Gus; the station as a place they like, which matters for later.
 - **Creature/world:** the station's resident heron; the dock at low water.
 - **Mysteries:** proposed +M34 (who has been keeping the enclosure alive).
-  M13 (advanced, quietly: Rachel's initials). M30 seed (the programme code).
-- **Continuity:** the two service dates; the programme code; Rachel's initials
+  M13 (advanced, quietly: Rachel's initials). M30 seed (the program code).
+- **Continuity:** the two service dates; the program code; Rachel's initials
   on tickets; Gus knew Daniel.
 - **Ending type:** quiet unsettling line — Gus: "Funny thing. Somebody's still
   changing the batteries out there."
@@ -354,13 +354,13 @@ Bennett home, Tidewater Instruments, Mercy General.
 
 ### Chapter 0008 — Boxes
 - **Trello:** Godot https://trello.com/c/TQcG4Ea2 · TypeScript https://trello.com/c/pzZCdBnz
-- **Playable beat flow:** Search garage → open and catalogue boxes → inspect tide table and photo → preserve evidence → react to Rachel arriving → question her → roof, compare conclusions.
+- **Playable beat flow:** Search garage → open and catalog boxes → inspect tide table and photo → preserve evidence → react to Rachel arriving → question her → roof, compare conclusions.
 - **POV:** Caleb · **Target:** 2,100–2,300
 - **Opening situation:** Rachel at work; Caleb home alone, bored, looking for
   the luggage scale (of course), and finding instead the boxes at the back of
   the garage with his father's name on them, never opened by anyone but her.
 - **Scenes / beats:**
-  1. Caleb wants to read everything; Nora, arriving, wants to catalogue it.
+  1. Caleb wants to read everything; Nora, arriving, wants to catalog it.
      Silverfish in the lids. A spider's egg sac Caleb leaves alone. A tide
      table for a region of the Pacific thousands of miles from where the boat
      was supposedly lost, marked in a hand he doesn't know yet. He pockets a
@@ -389,12 +389,12 @@ Bennett home, Tidewater Instruments, Mercy General.
 - **POV:** Nora · **Target:** 2,100–2,300
 - **Opening situation:** Nora, cleared for screens, starts the wall map that
   will follow her for the rest of Part One: the tide-table region, the
-  enclosure's two service dates, the programme code, the year on the tag.
+  enclosure's two service dates, the program code, the year on the tag.
 - **Scenes / beats:**
   1. The old annual reports are not on anyone's desk; they are in the
      boathouse loft, behind Gus's keys, a ladder, dust and weathered boxes.
-     Getting them is a small expedition. They list programme partners by
-     year. The enclosure's programme was run "in partnership with" a lab at
+     Getting them is a small expedition. They list program partners by
+     year. The enclosure's program was run "in partnership with" a lab at
      Cascade State University, in the years before the tag's date. A name
      for a place, not a person. Nora writes it on the map.
   2. Caleb and Nora argue method again and this time land it: he wants to go
