@@ -66,6 +66,10 @@ old signal was really from Daniel · the organization's full agenda beyond the s
 | M13 | 0001 | Rachel, by text, after the joke about the boots: she wants to know which island; Nora sends "Tern"; the phone lights up again before Nora has put it down. | Nora (read); Caleb (heard "which island", saw nothing) | true (meaning open) |
 | M13 | 0002 (in review) | The third text was "Ok. Straight home after. Both.", inside a minute. Rachel folds a letter in three into her back pocket as the twins come in. She asks what the unit read, step or ramp, file or screen, before she asks about the saddle. At night she stands at the shelf with the keys in her hand, looking at the photograph. | Nora alone (letter, text wording, night look); Caleb (the questions, at the table) | true (meaning open) |
 | M33 | 0002 (in review) | The fixed words, verbatim: "Your father did research. He went out on a research trip. The boat was lost off the coast. Nobody was ever found. Eighteen years ago. That's the whole story." Closer: "Pass your brother the salt." The salt was already at Caleb's elbow. | Caleb and Nora (heard, as always); Nora noted the salt | order and truth open (Ch 8, Ch 27) |
+| M34 | 0003 (in review) | A stamped tag low on the enclosure door: `D.M.`, and a year from before the twins were born. Gus, with his hand on the lock: "Mercer. Your name's Bennett, though." The seal is even and soft, the hasp rivets are not weeping rust, the seam is clean of moss, the dial is legible. Caleb notices all of it and draws no conclusion. | Caleb, Nora, Gus; Marco repeats the name; Ines is in earshot | true |
+| M34 | 0003 (in review) | At the base of the enclosure the windrow of needles and moss is missing on one side. There is a bare patch pressed flat, about the size and shape of a person kneeling. Caleb notices it and forgets it. | Caleb alone | true |
+| M13 | 0003 (in review) | Nora copies the logger file to the lab machine before she takes her coat off, which is what Rachel asked for on Tuesday night. Caleb is fairly sure he knows who it is for. | Nora; Caleb guesses | true |
+| M29 | 0003 (in review) | Caleb refuses to walk through a dew-strung orb weaver's web and the whole team detours around it. | all five | true |
 | M34 | 0002 (in review) | Rachel with the keys in her hand at the door at night, "as if she had been going out, or had just come in, and was doing neither." Nothing says where. | Nora | seed only |
 
 ## Who knows what
@@ -76,6 +80,9 @@ old signal was really from Daniel · the organization's full agenda beyond the s
 
 ### M13 (subtext from Ch. 0001; Ch. 0002 in review)
 - Caleb: heard the fixed words; asked "Did Dad ever work out there?" and got the door; thinks Mom simply dislikes the job; knows Nora shut him down, not why · Nora: the letter, the third text's wording and speed, the order of Mom's questions, the night look at the photograph; has explained the text and the worry away; has told no one · Rachel: the twins were on Tern on the surge day; the logger numbers; the file is still on the unit; Saturday's skiff; Caleb's question; does not know Nora saw the letter or the look · audience: all of it.
+
+### M04 / M05 (first on the page Ch. 0003, in review; ladder entry Ch. 5)
+- Caleb: inside the blackout after the crash he had the dark, a drumming with a repeating beat, unseen people, a shaking cable, wet soil, a hoarse voice saying "Get them under. Hold the line.", and a man's back turning away. He knows without any right to that it is his father. He has told nobody. · Nora: was unconscious; whatever she has is off the page until Chapter 5 · Rachel: nothing yet · audience: has heard Caleb's half only.
 
 ### M33 (introduced Ch. 0002, in review)
 - Caleb and Nora: know the six sentences as the family story they were told before they could talk; neither has noticed they have an order · Rachel: recites them · audience: heard them once, verbatim; may suspect rehearsal; does not know they are false.

@@ -27,3 +27,17 @@ Rules (bible/CREATURES.md): domestication / taming / bonding / training are four
 - "a fat brown moth banging at the glass" at the kitchen window during "Did Dad ever work out there?", then walking upside down along the outside sill (c2:205, :235). Frontmatter names "A large yellow underwing moth (species in the bible, not on the page)" (c2:16) — CREATURES.md has NO moth entry; needs one on approval or the parenthesis is false.
 - A small dead "fly in a bee costume" (drone fly) shaken out of the net bag; Caleb keeps it a moment (c2:97-101) — on the page, not in frontmatter creatures.
 - Ants retold by Caleb (c2:117-121): black, rusty legs, log at the top of the beach, "babies... like rice", carrying other ants, up to a stump on the summit, "moving house. In the middle of the day", log "soaking, higher up than it should've been" — matches ch:126-146 ✓. Gull retold "the size of a dog" (c2:115) — self-declared exaggeration ✓. Crabs not cited ✓.
+
+## DRAFT [ch 0003]
+- CROSS ORBWEAVER (Araneus diadematus; bible-only name, needs a CREATURES.md entry on approval).
+  d3:137-141: strung across the trail between two alders at face height after a clear, cold night;
+  "a wheel of water", spokes bare and near-invisible, the spiral beaded all the way round; a big
+  brown spider with a white cross on her back, sitting head down, motionless. d3:233: by early
+  afternoon the dew has burned off and the whole web is invisible — nearly walked into on the way
+  down. The team goes around, both ways; it becomes a rule. FIRST APPEARANCE IN THE SERIES — the
+  old "ch 1 pre-empts it" flag is dead (ch 1 has no web).
+- SHOREBIRDS at the high-water roost (d3:109-119): the whole spit down to a gravel ridge "the size
+  of a driveway", every bird on it shoulder to shoulder, facing one way, asleep. Counts: turnstones
+  36, sanderlings 24, and the three black-bellied plovers back at the far end, where they were
+  Tuesday. Confirms the tide-tied count method (near high water they cannot spread out).
+- THE ANTS' SUMMIT STUMP (d3:165): quiet, occupied, busy. Consistent with CREATURES.md:48.

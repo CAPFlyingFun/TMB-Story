@@ -74,14 +74,16 @@ Entry template:
 ### Dr. Ines Marchetti (Alder Sound field lead; provisional)
 - **Voice:** does not waste words; statements, not questions ("Questions." "It's a statement."); "Now you know."; "I don't spend margin."
 - **Personality:** rule-keeper who is pleased, not annoyed, when someone learns the hard way; verifies before acting (reads the trace herself, checks the sky, the spit and the saddle, radios Gus) and then moves at once; leaves work undone rather than spend margin. Smiles from the back of her head.
-- **Arc so far:** `[ch 0001]` set the rule (off by 12:30, back by 1); pulled the team at eleven; "Good catch. Both of you." "It was both. Which is why I'm keeping you." Drove the van home.
+- **Arc so far:** `[ch 0003, in review]` set the morning window before loading (the birds are on the roost at high water, and she wanted to be off the island before the wind came around), gave the web one second and stepped into the salal, called the day over when the swell came around the point, and drove her own car on a Saturday because the district office was on her way home. She pulled out of the lot behind the van and stayed there. `[ch 0001]` set the rule (off by 12:30, back by 1); pulled the team at eleven; "Good catch. Both of you." "It was both. Which is why I'm keeping you." Drove the van home.
 ### Marco Sato (Alder Sound technician; provisional)
 - **Age:** 24 · **Role:** technician; usually drives the van; calls the birds.
 - **Voice:** commentary ("And Bennett goes down."), invented binding rules, "technically a rumor", "That's a fly in a bee costume", "Zero is science". Stops talking when it is real.
 - **Arc so far:** `[ch 0001]` drove out; the count and the sweep with Caleb; carried two packs off the bar; sat in a puddle on purpose.
 ### Gus Pelletier (Alder Sound caretaker and boat operator; provisional)
 - **Voice:** slow, old, unbothered on the radio ("Gone south on me the last half hour. Freshening. Glass is dropping. You want the boat?").
-- **Arc so far:** `[ch 0001]` radio only; stood by with the boat, stood down when the team was off.
+- **In person `[ch 0003, in review]`:** about sixty, gray beard cut close, a knit cap, hands never still. He keeps the boat, and the boat lives at the dock a quarter mile from the lab, which is why the twins had not met him in three weeks. He gives the weather instead of a greeting. He offers rather than instructs ("Packs forward. Nobody stands up. If you drop something, let it go."). He does not greet, does not say goodbye, and leaves a scene with a task.
+- **Knows `[ch 0003, in review]`:** that the summit enclosure is "from the old program. Before most of us.", and that it was Mercer's. He does not know that the twins are Mercer's, and nothing on the page says he connects Rachel to it.
+- **Arc so far:** `[ch 0001]` radio only; stood by with the boat, stood down when the team was off. `[ch 0003, in review]` ran the team to Tern Island in the skiff, kedged her off the drying beach, walked up to the summit, put his hand on the lock and said "Mercer. Your name's Bennett, though." Then "Huh.", and he went back down to the boat.
 ### Wes Tanaka (provisional)
 ### Halloran (provisional)
 

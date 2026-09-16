@@ -77,3 +77,29 @@ MUST STAY UNSPENT IN CH 3 (itemized):
 NEW CANON IF DRAFTED AS PLANNED: Gus Pelletier in person (first time); the station skiff and dock on the page; Ines's own car; the enclosure as aluminum/weatherproof with a stamped `D.M.` tag and a year older than the twins, dry inside its seals, padlock not rusted; the name Mercer spoken aloud; the twins carry their mother's name; an orb-weaver on the trail and Caleb's refusal (the trait Ch 6's bathroom spider and Ch 8's egg sac call back to); the Tuesday work completed (count, battery, file); the coast road crash site; the van totalled; the injuries; the canonical vision text; a TIMELINE row for the Saturday; CREATURES orb-weaver entry; MYSTERIES clue rows for M34 (the tag) and the M04/M05 seeding, with who-knows-what widened to Ines and Marco.
 
 STILL OPEN AFTER CH 2, carried in: whether Rachel was going out or coming in at 23:15; who "somebody at the station" is; whether Nora ever tells Caleb about text 3; the letter's content; whether Rachel ever receives the downloaded file she asked for.
+
+## DRAFT [ch 0003] — threads opened, spent and left
+OPENED by the draft:
+- The kneeling-sized bare patch at the enclosure's base (d3:221-223) + "forgot it for eleven days".
+  Not in the Ch 3 outline; Ch 10 owns "signs of very recent human presence" (MA1:444). Recall date
+  unassigned and inconsistent with TIMELINE.md:19's Ch 10 Thursday.
+- Gus knows the name Mercer and knows the twins are Bennetts (d3:209) — sanctioned by MA1:173.
+- Caleb's certainty about the back (d3:299-303) and the claim that ONE photograph of Daniel exists
+  in the world (d3:301). The second is new and unlisted in new_canon.
+- The year on the tag is READ by Nora but never GIVEN to the reader. Ch 7 matches it to a
+  decommission record (MA1:333-336) and Ch 9 puts it on the wall map (MA1:392) — both need a value.
+LEFT UNSPENT (as advised) ✓:
+- No lock code, no opening the box, no inside of the enclosure (Ch 10, MA1:431).
+- No Tidewater ticket, no program code, no Rachel's initials (Ch 7, MA1:332-343).
+- No laminated card, no nested-bracket notation, no wall map (Ch 9/10).
+- No Nora vision, no comparison of halves (Ch 5, MA1:255-265).
+- No "Where was he?" from Rachel (Ch 4, MA1:216-219).
+- No Mercy General, no hospital (MA1:206).
+- The padlock reads as a COMBINATION lock with a legible dial (d3:193) — LOCATIONS.md:33's Ch 9
+  lock-code requirement is protected. ✓
+PRE-EMPTED IN FRONTMATTER ONLY (not on the page, belongs to Ch 4 per MA1:200-203, :229, :237):
+Nora's concussion and cracked rib; Marco's bruising / neck; Ines uninjured and first on scene;
+the count sheets and Nora's pack surviving dry in the van. The page gives only Caleb's left hand
+("would not close", "lying there wrong") and Nora "not moving".
+CONTRADICTION vs the outline: MA1:178 has Ines FOLLOWING in her own car (and MA1:202 first on
+scene). d3:245 sends her to the district office "on her way home" — she is not behind the van.

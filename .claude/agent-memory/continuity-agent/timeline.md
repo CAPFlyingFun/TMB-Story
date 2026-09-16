@@ -44,3 +44,26 @@ Clocks: outside (O) and island (I), tracked separately; no backward time; biolog
 - Ch 3 CLOCK (advisory): Tue→Sat = four days ✓. Sat lows ≈ 13:50 / 02:15 (TIMELINE.md:19) → HIGH ≈ 07:45-08:05, so an 08:00 skiff is at local high water — the deepest, easiest boat water, and the bar is at its most covered. Bar IS walkable ≈ 10:50-16:50 by the 3-h rule (MA1:38): "tide wrong" is a MORNING truth only (TIMELINE.md:18 says so explicitly). Sunrise ESTIMATE (47.6°N, ~Oct 9-10, PDT): civil dawn ≈ 06:48, sunrise ≈ 07:20, sunset ≈ 18:32 — at 08:00 the sun is ~40 min up and low: "calm gold October morning" ✓, dew on webs still plausible to ≈ 09:30.
 - Ch 3 crash hour (advisory): skiff back ≈ 12:30-13:30, drive home ≈ 13:30-15:00, crash EARLY-TO-MID AFTERNOON in daylight rain. Ch 4 = that evening's ER + next morning; Ch 5 = Sunday discharge (MA1). An evening crash squeezes Ch 4's "Morning" beat.
 - GAP (pre-existing, not Ch 3's to invent): nothing on the page says how the twins REACH the station. Ch 1 opens at the boathouse at 06:00 with no ride shown; the twins have no vehicle. Saturday needs an answer or an elision.
+
+## DRAFT [ch 0003] — the Saturday clock, as the page has it
+(chapter-0003.md, review pass 2026-09-16; line refs are draft lines, `d3:`)
+- Saturday, four days after Ch 1's Tuesday, Year 0, first week of October. POV Caleb.
+- d3:69 high water "a few minutes either side of eight" — AGREES with TIMELINE.md:19
+  (Sat lows ~13:50 / ~02:15 → highs ~08:00 / ~20:05). The skiff is right; the bar is not.
+- d3:69 "By early afternoon it would come up again. You could walk home on it then." (bar
+  walkable ~10:50–16:50 around the 13:50 low). Nobody walks it.
+- 08:00 dock departure (Ch2:49 "Eight o'clock Saturday", TIMELINE.md:18) · d3:75 twenty-minute
+  run → land ~08:20 · d3:67 "The sun was barely up" (sunrise ~07:20, so up ~40 min).
+- Work 08:20–10:30: download, clock check, battery, count, transect, jars.
+- d3:133 "They went up the trail at ten thirty." All five go up.
+- d3:227 "By eleven" high cloud + sun ring · "By noon" the ring gone, swell in, Ines calls it.
+- d3:249 "By one in the afternoon" — the crash. GAP NOON→13:00 IS TIGHT: descend, re-pass the
+  web, float/pull off the skiff near the bottom of the ebb, 20-min run, unload, Nora copies the
+  file and writes the log, load the van, drive south out of Alder Sound. One hour, nothing spare.
+- Daylight after the crash ~5h45 (sunset ~18:40–18:50). Ch 4's ER evening + one night's
+  observation + next-morning discharge (MA1:212-241) are unthreatened.
+- Frontmatter `elapsed: "about seven hours, to mid-afternoon"` CONTRADICTS the page: 08:00→~13:05
+  is ~5 hours, and 13:00 is EARLY afternoon.
+- d3:221 "Then he forgot it for eleven days." Sat +11 = a WEDNESDAY = Ch1 Tuesday +15. TIMELINE.md:19
+  fixes Ch 10's Thursday at Tue +9 or +23 (= Sat +5 or +19). So the eleven-day recall does NOT
+  land on Ch 10. Unassigned.

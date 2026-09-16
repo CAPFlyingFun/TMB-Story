@@ -59,3 +59,27 @@ PLAN [ch 0003] — what changes hands, and the cost:
 - Caleb's vision: his half ONLY (a hoarse man's voice, "Get them under. Hold the line.", a rain-on-a-drum/hive sound, hands on a cable, wet soil, a man's back turning). **No wall, no marks, no nested brackets** — the notation is NORA's half and Ch 10's payoff ("Neither of them had seen the notation before that night", MA1 Ch 10). Whatever Ch 3 writes becomes the canonical vision text (MA1 Ch 5 continuity).
 - Caleb tells NOBODY in Ch 3. "Mom. I saw Dad." and Rachel's "Where was he?" are Ch 4; "You didn't say anything to me" is Ch 5's hinge.
 - Ch 4 says BOTH twins had brief loss of consciousness — Caleb's vision sits inside a blackout; he is not continuously conscious through the impact.
+
+## DRAFT [ch 0003] — who knows what after the draft
+- CALEB: has now seen the enclosure TWICE (d3:169 "ten feet from it four days ago"); read the
+  stamped tag "D.M." (d3:205); heard Gus say "Mercer" and connect it to Bennett (d3:209);
+  noticed the gasket, the absence of rust weep/moss/chalk, the cable fitting, and that the
+  combination dial's numbers are still legible (d3:189-193); concluded only "It looks cared for"
+  / "Somebody keeps it shut" (d3:195-197). Saw the kneeling-sized bare patch (d3:221-223) and
+  "forgot it for eleven days". Had the vision and KNOWS the back is his father (d3:299-303) — no
+  notation, no wall, no lights, no marks: HALF the vision only, as advised. Does NOT know the
+  year on the tag's value or why Nora read it twice (d3:219 "He did not ask her why").
+- NORA: has now seen the enclosure for the FIRST time (d3:173). Read the tag and read the YEAR
+  TWICE and said nothing (d3:219). Unconscious from the crash; no vision on the page.
+- GUS: knows the enclosure is "from the old program. Before most of us." (d3:185); reads "D.M."
+  as MERCER unprompted and knows the twins are Bennetts (d3:209). Checks the padlock like a gate
+  he has checked a thousand times (d3:207). This is Ch 7's "Gus knew Daniel" (MA1:350) arriving
+  four chapters early, but it IS sanctioned by the outline for Ch 3 (MA1:173).
+- INES and MARCO: frontmatter:21 claims both "heard Gus say the name Mercer". NOT ON THE PAGE —
+  after d3:161 neither is placed at the enclosure; d3:201-215 holds only Gus, Nora and Caleb.
+- RACHEL: off-page. Her Tuesday request (c2:163 "Get it Saturday") is satisfied in ACT (file
+  pulled and copied to the lab machine, d3:239-241) but NOT in DELIVERY — nothing reaches her,
+  and the twins are hospitalised that afternoon. Open thread for Ch 4 (which the outline does
+  not mention).
+- The twins' surname: Bennett is their mother's; the father's is Mercer (d3:209-211). Frontmatter
+  calls this "old furniture" they have always known — the page carries only Nora's "Our mother's."

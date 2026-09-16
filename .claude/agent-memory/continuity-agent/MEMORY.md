@@ -62,3 +62,26 @@ CAUTION (2026-09-16, end of the fifth pass): BOTH chapters were re-styled ON DIS
 Ch 1 3,443 -> 3,437 words, Ch 2 3,602 -> 3,636. No fact, clue, ending or bible-quoted line moved, but
 line numbers drift by one or two per pass. Treat every `ch1:`/`c2:` ref as approximate and re-grep the
 quoted phrase before citing it. `in-review` chapters are being edited continuously under decision 0016.
+
+SIXTH pass (2026-09-16): REVIEW of chapters/part-01/chapter-0003.md "The Enclosure" (Caleb POV,
+~3,055 words vs outline target 2,300–2,800, MA1:161). Ch 1 (3,437 w) and Ch 2 (3,636 w) re-read IN
+FULL after the re-style; no fact moved, so the fifth pass's CORRECTIONS blocks still stand. DRAFT
+[ch 0003] blocks appended to timeline.md, equipment.md, knowledge.md, open-threads.md,
+characters.md and creatures.md. Line refs to the draft use the prefix `d3:`.
+
+Ch 3 verdict: the seven advisory constraints ALL held — morning-only wrong tide (d3:69 vs
+TIMELINE.md:19), the battery is Nora's (d3:99), scale and kit sheet stayed home, the transect is
+still a stake short (d3:121), Caleb has seen the box and Nora has not (d3:169, :173), the padlock
+reads as a combination lock with a legible dial (d3:193, protects LOCATIONS.md:33 / Ch 9's code),
+the laptop and the file both stay at the station (d3:239), and the crash is at "by one in the
+afternoon" (d3:249). Nothing of Ch 4–10 is spent except the unassigned "eleven days" (d3:221).
+
+Top flags reported for Ch 3: (1) frontmatter:21 puts Ines and Marco in earshot of "Mercer" — after
+d3:161 neither is at the enclosure; (2) frontmatter:22-23 asserts Nora's concussion/cracked rib,
+Marco's bruising, "Ines uninjured, first on scene" and the dry count sheets, none on the page, all
+Ch 4's (MA1:200-203, :229); (3) d3:245 Ines drives to the district office, so she is NOT following
+the van (MA1:178) and cannot be first on scene; (4) `elapsed: about seven hours, to mid-afternoon`
+is ~5 hours to EARLY afternoon; (5) mysteries `advanced: [M34]` but MYSTERIES.md:51 introduces M34
+at Ch 7 and MA1:197 names M04/M05 for Ch 3 — neither is listed; (6) the tag's YEAR is read but
+never given, though Ch 7 and Ch 9 both need its value (MA1:333-336, :392); (7) "forgot it for
+eleven days" = Ch1 Tue +15, which is not Ch 10's Thursday (+9 or +23, TIMELINE.md:19).

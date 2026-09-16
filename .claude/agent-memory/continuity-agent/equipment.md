@@ -76,3 +76,23 @@ STATE OF THE GEAR AT CH 3 OPEN (hard):
 - THE SUMMIT BOX as the page has it (ch1:164-166): "one gray metal box, squatting in the grass, about the height of his knee... square and clean and dry, with a padlock on it... the only thing up there that was not rusting", beside a bent metal post with nothing on it and a lump of concrete with a rusted ring. No tag, no "aluminum", no seals, no rust state of the padlock, no D.M. PLAN [ch 0003] adds: aluminum, weatherproof, a stamped tag `D.M.` + a year older than the twins, dry inside its seals, padlock not rusted. It must read as a COMBINATION padlock or Ch 9's "lock code from the inventory" and Ch 10's opening break.
 - PLAN [ch 0003] new objects: the station SKIFF on the page for the first time (named in c2:49, never seen) and the station DOCK (LOCATIONS.md:27 calls the dock "planned, not yet on the page"); Ines's own car; the oncoming pickup and its swaying boat trailer; the guardrail, the ditch, the tree.
 - THE DOWNLOADED FILE: decide where it ends up. Rachel's live instruction is "Get it Saturday." (c2:163). If the machine holding it rides in the van, the crash can silently destroy the one thing Rachel asked for. Nothing downstream re-mentions it.
+
+## DRAFT [ch 0003] — kit as the page has it
+- d3:99 the download comes off the shore logger clean; record count and last time stamp read
+  BEFORE anything touches the battery. Nora's rule, on the page.
+- d3:99 the spare battery is swapped — IMPLIED ONLY, never stated as done ("she let anybody near
+  the battery"; "The battery was hers to swap"). d3:105 "a swap can knock the clock" is the
+  strongest evidence it happened. Carried since Tuesday (c2:273), "weighs as much as a cat" (ch1:54).
+- d3:101-105 the instrument clock checked against Nora's watch, number written down. New habit.
+- d3:121 the stake note (written c2:271) handed to Ines on the beach. Transect still one stake short.
+- d3:123-131 the date written on all six jars; jars still empty; back in the sleeve.
+- LAPTOP: never shown leaving the station or on the island. Appears only at d3:239 "She left the
+  laptop on the bench" after "Nora put the file on the lab machine". TWO copies at the station,
+  ZERO in the van → the file survives the crash. Frontmatter:23 is right about this.
+- The luggage scale and the kit/gear sheet stay at home (c2:19). Not used. ✓ advisory held.
+- d3:77-79 Gus's stern anchor: dropped going in at high water so the ebb cannot strand the skiff;
+  "This way I pull her off when I want her."
+- d3:61 life jackets handed out and watched onto each of five before the motor starts.
+- d3:279 the station van: guardrail down the whole left side, ditch, tree. Wrecked.
+- NOT ON THE PAGE (frontmatter asserts it): Nora's pack and the count sheets riding in the van, dry.
+  That is Ch 4's reveal (MA1:229 — Ines brings the bag and the sheets to the hospital).

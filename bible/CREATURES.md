@@ -48,9 +48,16 @@ Individual entry template:
 - **On the page:** a colony in a drift log at Tern Island's wrack line, soaked from underneath on the surge day, moves its brood up the beach, across the trail and into an old stump at the edge of the summit clearing. Caleb reads it as "moving out" and follows the line to the summit. `[ch 0001]`
 - **Locked / provisional:** provisional (species); the summit-stump colony is canon.
 
+### Cross orbweaver (*Araneus diadematus*)
+- **Real behaviour that matters:** introduced, and the commonest large orb-weaver on this coast; adult females are at their largest and most conspicuous in September and October, when they string webs across gaps in trails at about face height. Dew beads on the glue droplets of the capture spiral and not on the dry radials, so a dewed web reads as a wheel of dots rather than a sheet. She sits at the hub, head down. She rebuilds on a daily cycle. Once the dew burns off the web is very hard to see, and she stays on it all day.
+- **On the page:** "a big brown spider with a white cross on her back", strung across the Tern Island trail between two alders at the height of Caleb's face. Caleb refused to walk through it and the whole team went around. Coming down, the web was invisible and what saved him was the trodden salal of their own detour. `[ch 0003, in review]`
+- **Locked / provisional:** provisional (species). Latin stays bible-only.
+
 ### Large yellow underwing (*Noctua pronuba*)
 - **Real behaviour that matters:** an introduced moth, abundant at Pacific Northwest lit windows in September and October; fat, drab brown at rest, bangs the glass and walks the frame. On the page only as "a fat brown moth" `[ch 0002, in review]`; the species is bible-only. Seeds Mini-Arc 4's moth motif.
 - **Locked / provisional:** provisional (species).
+
+Shorebird counts are tied to the tide `[ch 0003, in review]`. Near high water the birds are packed onto the spit's roost and are counted from a distance through binoculars, because they have nowhere to go if they are put up. The Saturday count was 36 turnstones, 24 sanderlings and the three plovers.
 
 Also on the page in Part One, human scale, no entry needed unless they recur: black turnstones, sanderlings and three black-bellied plovers on the spit, which lift together and leave downwind before the surge; a gull that takes half a sandwich; a fall bumblebee and two drone flies in the sweep. `[ch 0001]`
 

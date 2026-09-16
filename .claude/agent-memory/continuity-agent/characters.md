@@ -57,3 +57,21 @@ MA1: = outline/part-01/mini-arc-01.md (approved PLAN). Nothing below is APPROVED
 - Rachel: home before the twins; folds a letter in three into the back pocket of her jeans (c2:73); hands smell of onions; "Look at the state of you"; "I know you fell in. I have a photograph." (c2:85); Tidewater fleece zipped to the chin, unchanged all night (c2:91, :263); "Talk... From the beginning." (c2:107); "I heard that." (c2:111); laughs at the ants; three logger questions — the gauge number at the low, "Step, or ramp?... A step is an instrument. A ramp is weather.", file or screen (c2:135-147); "Get it Saturday." (c2:151); salt arithmetic "Thirty-five grams to the litre, love" (c2:177); "Somebody at the station... that twin thing... When I was out doing their units in August" (c2:189-193); "Once. The second time was you." (c2:201); the fixed words verbatim (c2:213); "I don't love you out on that bar... I know who you were with... I know she doesn't [spend margin]" (c2:227-235) → knows Ines's habits; hand on the back of Caleb's neck (c2:241); 23:15 at the shelf, keys in one hand, other hand at the small of her back, looking at the photograph (c2:261-267). Normally "never answered anything from the bench inside an hour" (c2:237).
 - Marco: drives the dusk leg; opens Nora's door "which he had never done before"; "Eight o'clock Saturday... Wear the boots." / "Then wear them wetter." (c2:49-53). Ines (off-page): let "ants" stand in the log's cause box; sent the soft kit home; "wants the morning" Saturday (c2:49, :67). Gus: named as skiff runner only.
 - Daniel: the shelf photograph — dock, green jacket, squinting into sun, a boat's rail behind (c2:187, :263). Fixed words on the page: "Your father did research. He went out on a research trip. The boat was lost off the coast. Nobody was ever found. Eighteen years ago. That's the whole of it." "Pass your brother the salt." (c2:213). "eighteen years" only ✓ (c2:213, :223, :263).
+
+## DRAFT [ch 0003]
+- GUS PELLETIER, in person for the first time (ch1 was radio only; CHARACTERS.md:82-84).
+  d3:51 about sixty, gray beard cut close, a knit cap, hands never still. Gives the weather
+  instead of a greeting ("Flat now. Won't hold. There's something behind it.", d3:53). Safety by
+  practice, not speech: life jackets before lines, "Packs forward. Nobody stands up. If you drop
+  something, let it go." (d3:63). Offers rather than instructs. Went around the web widest of
+  anyone (d3:163). Knows the enclosure and the name on it (d3:185, :209-213).
+- CALEB: eighteen (d3:219, matches ch1:82); has a father "stacked away somewhere in a place he
+  had been told not to open"; would not ask Nora why she read the year twice. Out of his seatbelt
+  reaching for his sister before he knows his hand is broken (d3:283, MA1:194).
+- NORA: writes the date only when the day is true (c2:175 → d3:123); checks the instrument clock
+  unasked; hands a four-day-old note over on a beach; puts the file on the lab machine before
+  taking her coat off, for her mother (d3:239-241).
+- MARCO: drives the van (ch1 convention); "Okay, that's a good one" at the web in a completely
+  different voice (d3:149); stops joking when it is real (d3:277 "Hold on," in an ordinary voice).
+- INES: her own car on a Saturday, district office on her way home (d3:245). Calls the weather off
+  at noon and nobody argues.
