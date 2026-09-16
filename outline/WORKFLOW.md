@@ -6,9 +6,14 @@ talking to) owns every step and every write. The five specialists in
 
 ## 0. Preconditions, and the pre-draft check
 
-**Trello is checked FIRST, every chapter** (decision 0007). Read the 50-chapter
-overview, the current ten-chapter overview, this chapter's card, and nearby cards
-that affect continuity. Then read GitHub canon: the approved outline, the bible
+**Trello is checked FIRST, every chapter** (decision 0007). Where: the list
+`📖 STORY — Chapters 1–50` on the TRADDOMIUM: Micro Battle! boards (Godot
+https://trello.com/b/MS7jRvdI and TypeScript https://trello.com/b/DoBMcBRT; the
+STORY content is one plan mirrored on both, and a difference between them is a
+conflict to flag). Read the `📚 Chapters 1–50 — Master Story + Game Overview`
+card, the current ten-chapter overview, this chapter's card, and nearby cards
+that affect continuity. Plan content is in card DESCRIPTIONS; comments do not
+reach Claude. Then read GitHub canon: the approved outline, the bible
 files this chapter touches, the previous finalized chapter in FULL, the next
 planned chapter, `architecture/DECISIONS.md`. Compare the card against canon. If
 there is a meaningful conflict (a card contradicts an approved chapter, a LOCKED

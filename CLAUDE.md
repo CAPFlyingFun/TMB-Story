@@ -10,8 +10,15 @@ adapts what is strongest and stable here, never the other way round.
 
 1. **Joshua's newest explicit instruction.**
 2. **Trello, for what is PLANNED to happen** (Joshua, 2026-09-16, decision 0007).
-   Joshua and ChatGPT plan Chapters 1–50 on the TMB Story board at three levels:
-   the 50-chapter overview, the ten-chapter mini-arc overview, and one card per
+   There is NO separate story board. Story planning lives beside game planning,
+   in the list `📖 STORY — Chapters 1–50` on BOTH TRADDOMIUM: Micro Battle!
+   boards (Godot: https://trello.com/b/MS7jRvdI · TypeScript:
+   https://trello.com/b/DoBMcBRT), each with a `📚 Chapters 1–50 — Master Story
+   + Game Overview` card. The STORY content on the two boards is the same
+   canonical plan and must stay synchronized; the boards' GAME implementation
+   cards may diverge. If the two STORY lists disagree, that is a conflict to
+   flag, not a choice to make. Joshua and ChatGPT plan at three levels: the
+   50-chapter overview, the ten-chapter mini-arc overview, and one card per
    chapter. Trello says what we currently plan; GitHub says what has already
    become canon. A newer approved Trello plan outranks an older committed outline.
    Trello may never outrank an approved chapter or a LOCKED item: if a card
@@ -98,7 +105,17 @@ Every chapter should be able to answer the twelve chapter-as-mission
 questions in `outline/WORKFLOW.md` §0, and its frontmatter carries a compact
 `playable_beat_flow`: what the future player could actually do during this
 part of the canonical story. Gameplay comes from what the characters need to
-accomplish, never from chores added because there will be a game. When an
+accomplish, never from chores added because there will be a game.
+
+The test is NOT "does every chapter contain gameplay?" It is: **does the
+overall adventure give the future player meaningful opportunities to perform
+the same important actions the characters performed?** Some chapters and
+scenes should stay quiet, or work as cutscenes, when that serves the story.
+For a clue: **do not change the clue to create gameplay; change how and where
+the characters have to obtain it.** A clue found through travel, exploration,
+a person, a creature, a piece of equipment or a physical place is preferred
+over repeated desk research when both make narrative sense, and never
+manufactured when they do not. When an
 action could matter to the game, keep the concrete details straight: where
 people are, which route, what they carried, which hand is hurt, what was left
 behind, who witnessed it.
