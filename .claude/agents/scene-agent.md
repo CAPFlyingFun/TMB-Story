@@ -61,6 +61,8 @@ raised and then forgotten. Suggest the smallest fix for each. Do not rewrite.
   chapter's last lines hook the NEXT chapter's plan without revealing early, and
   every passage of time is spoken ("an hour later, at the spit"), never marked with
   `***` or a blank gap.
+- In review mode, run `python3 scripts/style-check.py <chapter>` and report every FLAG
+  with the longest sentences it lists (decision 0015, docs/STYLE_GUIDE.md).
 - In review mode, flag rhyme, chime, stacked -ing words, matched pairs and sing-song
   cadence in narration (decision 0014).
 - In review mode, flag sentence fragments in narration or dialogue that are not a

@@ -1,6 +1,6 @@
 # Chapter 0002 — Sixty-Two Grams of Salt — handoff report
 
-Date: 2026-09-16 · POV: Nora · Words: 3,613 · Ending type: quiet unsettling line ·
+Date: 2026-09-16 · POV: Nora · Words: 3,576 · Ending type: quiet unsettling line ·
 Status: `in-review`, waiting on Joshua. Not approved; no bible file changed.
 
 Source of the plan: Trello card `02 — Sixty-Two Grams of Salt | Nora` in the
@@ -254,3 +254,20 @@ photograph lived" kept once (the hall) and flattened at dinner; the ending's
 purpose: "Caleb did the talking, because Caleb was the talking" (the joke), "Caleb
 liked to arrive; Nora liked to have arrived" (the character pair), "She had always
 heard the door. She had never once heard it open." (the weight). Word count 3,613.
+
+## Rewritten in the plain register (decision 0015, 2026-09-16)
+
+Every narration paragraph rewritten in the Beyond Extinction register: one idea per
+sentence, commas cut, "and" chains broken, long paragraphs split. No beat, fact or
+line of dialogue changed. `scripts/style-check.py` before and after:
+
+| metric | before | after | target |
+|---|---|---|---|
+| average sentence | 13.0 w | 8.3 w | ≤ 9 |
+| median sentence | 7 | 7 | ≤ 7 |
+| narration sentences over 30 words | 19% | 0% | ≤ 2% |
+| commas per sentence | 1.08 | 0.42 | ≤ 0.5 |
+| "and" per sentence | 0.51 | 0.15 | ≤ 0.3 |
+| paragraphs over 80 words | 10% | 1% (Caleb's ants speech, dialogue) | 0% |
+
+Word count 3,576.

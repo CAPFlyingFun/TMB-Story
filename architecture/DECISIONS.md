@@ -23,6 +23,7 @@ file is updated.
 - 0012 — The series is written in US English — **Accepted (Joshua, 2026-09-16)**
 - 0013 — Complete sentences; fragments only for a joke, a cut-off or a trail-off — **Accepted (Joshua, 2026-09-16)**
 - 0014 — No accidental rhyme or verse cadence; Chapter 1 re-opened for 0013/0014 — **Accepted (Joshua, 2026-09-16)**
+- 0015 — The plain register: Beyond Extinction's style is the model; measured by `scripts/style-check.py` — **Accepted (Joshua, 2026-09-16)**
 
 ---
 
@@ -112,4 +113,11 @@ file is updated.
 **Context:** Joshua: "make sure the words and sentences don't rhyme or sound like a poem unless needed for a reason," and, so the rule and decision 0013 could be applied to Chapter 1, "temporarily place back in pending."
 **Decision:** Prose avoids rhyme, chime and sing-song cadence unless the moment needs it. Chapter 1's `review_status` goes back to `in-review` on Joshua's instruction (the approval date is kept in a comment), its index row and the tracker say so, and it returns to `approved` only when he re-approves it. Applied to Chapter 1: eleven fragment passages rewritten as sentences (the joke "Not snatched. Took." kept), "dark trees on a dark hump" flattened, "ticking and bubbling like something cooking" and "Then the middle of the saddle" flattened.
 **Consequences:** `CLAUDE.md` carries the rule; the scene specialist flags rhyme and cadence in review.
+**Status:** Accepted, 2026-09-16.
+
+### 0015 — The plain register (Beyond Extinction as the model)
+**Context:** Joshua, having read both chapters: "there is nothing really wrong with the story itself, it's the writing style that is slightly hard to understand in a few spots. It needs to be able to be understood from like a 5 year old to a 105 year old person. Please look and analyze Beyond Extinction's story and writing style to apply the same concept with TMB." He supplied Beyond Extinction Chapters 1–41.
+**Analysis:** measured in `docs/STYLE_GUIDE.md`. BE's finished chapters average 6 words a sentence (median 5), 0.13 commas a sentence, no sentence over 30 words, paragraphs of one or two sentences. TMB's chapters averaged 11–13 words a sentence with a comma in most and sentences of 60+ words. The habits that make BE readable: one idea per sentence, very short sentences, almost no commas, beat fragments that are whole images, short paragraphs, plain words and familiar similes, feelings named then shown, parallel structure for steps.
+**Decision:** TMB adopts the register. Numeric targets per chapter (average sentence ≤ 9 words, median ≤ 7, narration sentences over 30 words ≤ 2%, commas ≤ 0.5 a sentence, "and" ≤ 0.3, paragraphs ≤ 60 words with none over 80) are checked by `scripts/style-check.py` before a chapter goes to review. Decision 0013 is refined: beat fragments of one to five words are allowed; clause fragments are not. BE's "• • •" scene breaks and journal epigraphs are NOT adopted (decision 0009 stands; TMB has no narrator-character).
+**Consequences:** Chapter 2 (in review) rewritten in the register and passes every target. Chapter 1 is approved and untouched; its numbers fail every sentence-level target, so it needs Joshua's re-open to be rewritten. The scene specialist runs the checker in review. `CLAUDE.md` carries the rule.
 **Status:** Accepted, 2026-09-16.

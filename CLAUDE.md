@@ -85,11 +85,21 @@ These are craft invariants. The prose is heard, not seen.
   vocabulary throughout: color, gray, meter, math, parking lot, pants, gotten,
   twelve-thirty, turn around, faucet, washer. The science stays metric because the
   characters are field scientists. "Mom", never "Mum".
-- **Complete sentences (Joshua, 2026-09-16, decision 0013).** Narration and
+- **The plain register (Joshua, 2026-09-16, decision 0015).** The prose must be
+  understood by a five-year-old and a hundred-and-five-year-old on one hearing. The
+  model is Beyond Extinction's finished chapters, analyzed in `docs/STYLE_GUIDE.md`:
+  one idea per sentence; most sentences six words or fewer; almost no commas; no
+  narration sentence over 30 words; paragraphs of one to three sentences; plain
+  words and similes a child has seen; name the feeling, then show it. Measure every
+  chapter with `python3 scripts/style-check.py` before review; the targets are in
+  the guide and a FLAG is a rewrite, not a note.
+- **Complete sentences (Joshua, 2026-09-16, decision 0013; refined by 0015).** Narration and
   dialogue are written in complete sentences. A fragment is allowed only when it is
-  the joke ("Not snatched. Took."), when someone is cut off ("Don't you—"), or when a
-  speaker trails off. Lists of kit, sights or steps are carried by full sentences, not
-  by stacked fragments. The style to aim for is plain and clear, the way a modern
+  the joke ("Not snatched. Took."), when someone is cut off ("Don't you—"), when a
+  speaker trails off, or as a BEAT FRAGMENT in the Beyond Extinction manner: one to
+  five words that are a whole image or feeling on their own ("Weed. Grit. One small
+  dead fly in a bee costume."). What is not allowed is a clause fragment, a sentence
+  with the verb missing, or a stacked list of them. The style to aim for is plain and clear, the way a modern
   translation reads next to an old one: nothing a listener has to untangle.
 - **No accidental verse (Joshua, 2026-09-16, decision 0014).** Prose should not
   rhyme, chime or fall into a sing-song cadence unless the moment needs it. Watch
