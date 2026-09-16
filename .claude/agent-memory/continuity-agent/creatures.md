@@ -1,16 +1,16 @@
 # Creatures — continuity facts
 
-Rules (bible/CREATURES.md): domestication / taming / bonding / training are four things; skill-gated; creatures age, revert, die. No entries yet — CREATURES.md has templates only.
+Rules (bible/CREATURES.md): domestication / taming / bonding / training are four things; skill-gated; creatures age, revert, die. CREATURES.md has templates only.
 
-## Part One normal-world insect texture (OUTLINE, mini-arc-01.md)
-- Ch 1: wasp nest under Harlow's Boatyard eaves; Caleb "keeps meaning to deal with; watches instead" (mini-arc-01.md:26). Must still exist until Ch 15, when it is found knocked down and Caleb doubts it was wind (mini-arc-02.md:56). Draft must not have him remove it.
-- DRAFT ch0001 (rewrite) wasp facts: PAPER-WASP type — "grey paper nest the size of his open hand, hung from one little stalk in the corner where the roof met the wall", above the YARD OFFICE door (ch0001:48-50). "In August there had been dozens"; "Now, in October, there were maybe twelve" (ch0001:50). Slow flight, long back legs dangling (ch0001:50). "The first hard frost would take care of the wasps for free" (ch0001:54). Note about the nest on the office door in September, "handwriting that expected to be obeyed", left by "His boss" — Caleb HAS a boss at the yard, unnamed on the page; Caleb took the note down and pocketed it (ch0001:54). One wasp drinks at the test-barrel puddle (ch0001:88). At chapter end all back on the nest, "like a clock somebody had stopped"; empty cells "a tiny doorway with nothing behind it" (ch0001:128). NAMED WASP: "The biggest one Caleb called the Mayor. The Mayor never flew anywhere. The Mayor supervised." (ch0001:52); "Night, Mayor" (ch0001:130); "The Mayor has been very reasonable." (ch0001:240 — the chapter's last line). Twins have counted "four times" for the wasps (ch0001:228); Caleb's stated intent "Tomorrow... I am dealing with those wasps" (ch0001:218) — must NOT act before Ch 15.
-- The Mayor and Ch 15: no collision — the nest is knocked down (mini-arc-02.md:56), not the Mayor specifically. If a chapter before 15 shows a hard frost, the colony (Mayor included) may already be dead; the nest itself still stands until Ch 15. Whether "the Mayor" is a foundress/queen and whether one would sit unmoving in October = world-creature-agent's lane.
-- Ch 2: ant trail along the library old wing skirting, mapped in Nora's head.
-- Ch 3: silverfish in box lids; spider egg sac Caleb leaves alone.
-- Ch 5: moths at the roof light.
-- Season: early–mid October, Pacific NW — wasp colonies still active but declining (world-creature-agent's lane to confirm).
-- Other Ch 1 texture: crows over the yard at dusk (ch0001:122); seaweed on the propeller (ch0001:66).
+## PLAN Ch 1 "The Bar" (MA1: = outline/part-01/mini-arc-01.md)
+- Ant colony moving its brood UPHILL in the middle of the day, "a river of pale grubs carried in jaws", off-transect (MA1:71-72); "the ants are still climbing" as the surge builds (MA1:78-79). Location: on the way up toward the summit (Ch 10: "The ants on the summit have finished moving house", MA1:428-429). Ch 2: retold, makes Rachel laugh (MA1:148). Ch 3: "The ants were first." (MA1:178-180). Whether a midday brood-move reads as a flood response = world-creature-agent's lane.
+- A gull steals half Caleb's sandwich (MA1:67; Ch 2 "a heroic sandwich" MA1:127).
+- The far spit goes quiet: shorebirds up and gone, crabs off the mud (MA1:77-78).
+- Pollinator sweep (Caleb) and bird count are tasks (MA1:65); Tern Island = "wooded bird reserve" (MA1:37).
+- NOT in Ch 1: orb-weaver web across the trail (Ch 3, MA1:166-168), moth at the kitchen window (Ch 2, MA1:148-149), bathroom spider (Ch 6, MA1:311-312), station heron + dock life (Ch 7, MA1:345), silverfish/egg sac/roof moths (Ch 8, MA1:363-364, :376), break-room skirting ants Nora has timed "for weeks" (Ch 9, MA1:408-409 — may be planted earlier as texture; not required in Ch 1).
+
+## RETIRED (boatyard draft only)
+- Paper-wasp comb under the yard-office eave, "the Mayor", the September note, "first hard frost", crows over the yard, seaweed on the propeller. The old outline's Ch 15 "wasp nest knocked down" (mini-arc-02.md) now has no root; the activity review proposes the Tern Island enclosure found emptied / logger dead instead (docs/planning/2026-09-16-activity-review.md:33-35); Ch 10 already adds an unidentified visitor at the enclosure (MA1:439-446).
 
 ## Island (not before Ch 44)
-- Showcased: ants (colony-level), beetles (bonded/mounts), mantis (conditioned, reverts), wolf spider (tolerance only). Wolf spider rescue Ch 49–50; handler deliberately unnamed (overview.md:89-91).
+- Showcased: ants (colony-level), beetles, mantis, wolf spider. Wolf spider rescue Ch 49–50; handler unnamed (overview.md:90-92). Decision 0008 flag: Trello's 41–50 card crosses ~Ch 50 vs the LOCKED spider-rescue ending — unresolved.

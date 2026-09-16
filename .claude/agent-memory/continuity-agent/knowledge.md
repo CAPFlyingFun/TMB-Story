@@ -1,23 +1,23 @@
 # Who knows what — continuity facts
 
-## At Ch 0001 open (nothing yet on the page)
-- Caleb: the official story only (research trip, boat lost, body never recovered, ~18 years). Has never heard Daniel's voice (voicemail unplayed until Ch 16). Does not know of the tide table, journal, crawlspace, envelope, signal, interview, promise. Wants the best version of his father (history/01:56).
-- Nora: official story. Digitized the university's old bulletins last spring — she HOLDS the closure-date fact but has no sequence to compare it to until Rachel's story in Ch 6 (mini-arc-01.md:69). Does not yet suspect anything; her guardedness is about protecting Rachel, not about a clue.
-- Rachel: knows the story was handed to her ("they sent someone", Ch 27); the promise; the crawlspace materials; the envelope; the voicemail; the signal; the interview. Tells the twins none of it. Has a "script" (Ch 4).
-- Audience: official story + the STORY_OVERVIEW premise. No mystery ids formally introduced until Ch 10 (+M04, +M05); M13 runs as subtext from Ch 2.
+MA1: = outline/part-01/mini-arc-01.md (PLAN).
 
-## After Ch 0001 DRAFT (rewrite) — nothing changes hands
-- Caleb learns: nothing new. Saw Rachel fold a paper away (ch0001:136), no significance registered. Heard the customer knew Dad "to nod at" (ch0001:106) — treated as ordinary ("Lots of people did", Rachel, ch0001:182).
-- Nora learns: nothing new. Hears Rachel's recitation with no visible reaction (ch0001:186). Hears, second-hand, that the customer knew Dad (ch0001:180).
-- Rachel: recites the bare story and closes it (ch0001:186). The paper's contents known only to her. Learns Caleb told a customer "no" to the twin thing (ch0001:196).
-- Customer: knows Caleb is "Rachel Bennett's boy" and Mercer's son; got the bare story from Caleb (ch0001:108). Knows Caleb read his lie (ch0001:100).
-- Audience learns: the family's fixed wording (identical twice); the surname split is public in Port Alder; Daniel used the Port Alder fuel dock; the framed photo's image; the two-count and the "hard way" line; the trampoline anecdote; the Mayor. The page does NOT say the twins have never heard their father's voice (and the rewrite's frontmatter no longer claims it).
-- Frontmatter `mysteries` all empty — correct (mini-arc-01.md:27).
+## At Ch 0001 open (6 a.m., Tuesday, first week of October Y0)
+- Caleb: the official story only (as the family tells it; the fixed words are first heard on the page in Ch 2, MA1:138-141). Knows Tidewater services the station's loggers — how he heard of the job (MA1:33-34). Has worked at the station three weeks (MA1:15-16); has seen the hallway photos from the nineties (by Ch 2, MA1:137) and recognised nobody. Does NOT know Daniel had anything to do with the station or the summit gear. Has never heard Daniel's voice (voicemail Ch 16, OUTLINE). Knows the two-count and the "hard way" answer (PLAN, overview.md:73; first shown Ch 2).
+- Nora: same as Caleb. Holds NO clue (the closure-date fact is RETIRED with the library job, MA1:50). Has been timing the break-room ants "for weeks" (MA1:408-409; texture, optional).
+- Rachel (off-page): the letter (Ch 2); that Daniel built/serviced gear at the station; that she has serviced the enclosure herself (MA1:341-342; 0008: she kept it alive through Tidewater work and "has been watching for something"); the signal, promise, interview, crawlspace, envelope, voicemail, "they sent someone" (Ch 27). Worried about the twins working there (MA1:142-143). Tells them none of it.
+- Ines: runs the field programme; knows the twins as Bennetts and as seasonal assistants; no Mercer link on the page (MA1:172-173 implies nobody at the station has connected them by Ch 3). Whether she knows Rachel professionally: unstated.
+- Marco: nothing relevant; teases (MA1:42-43).
+- Gus (radio only): remembers "a Mercer" who put in half the old gear (MA1:44-45); does NOT connect the Bennett twins to him until Ch 3 (MA1:172). Must not surface any of it in Ch 1.
+- Audience: the STORY_OVERVIEW premise + the setting note that the summit gear predates the staff (MA1:39, :46-47) — but on the page, Ch 1 shows only "a picture, not a clue" (MA1:105).
 
-## Mystery ids in MA1 (mini-arc-01.md)
-- M13 subtext: Ch 2 letter, Ch 3 box taken back, Ch 4 script, Ch 6 curated story.
-- M02 seed unnamed: Ch 3 far-Pacific tide table. M03 breath: Ch 5 dead-zone sailor talk.
-- M04/M05 begin Ch 7–8; formally introduced Ch 10.
-- Ch 1 introduces/advances NOTHING formally (mini-arc-01.md:27). Frontmatter `mysteries` should be empty for Ch 1.
+## What Ch 1 is allowed to change (PLAN): NOTHING changes hands
+- Caleb learns: the surge, the ants, the bar; that the enclosure is the one cared-for thing up there (MA1:103-104) — an impression, no meaning attached. Nora learns: the surge from the numbers. Both: that Ines keeps them (MA1:96). Rachel receives a photo of Caleb in the mud (MA1:99-100) — she therefore knows they crossed to Tern Island today.
+- Frontmatter `mysteries` all EMPTY for Ch 1 (MA1:105). M33/M34 (MYSTERIES.md:50-51) begin Ch 2 / Ch 7.
 
-## Deliberately unknown (never answer): MYSTERIES.md:48-52.
+## Mystery ids in MA1 (MA1 by chapter)
+- Ch 2: M13 subtext (letter, photograph); +M33 rides on the recitation (MA1:150-151). Ch 3: M04/M05 begin on the page (MA1:196-198). Ch 4: M13 "Where was he?" (MA1:235). Ch 5: +M04, +M05 formal (MA1:274-275). Ch 6: M13 (folder). Ch 7: +M34; M30 seed (MA1:346-347). Ch 8: M02 seed (tide table); M33 advanced (MA1:377-378). Ch 9: M30 seed; M34 (MA1:410-411). Ch 10: M04, M34, M33 advanced (MA1:451-452).
+
+## Deliberately unknown (never answer): MYSTERIES.md:55-60.
+
+## RETIRED (boatyard draft): "nothing changes hands" facts tied to the customer, the fuel dock, "Half of them", the recitation heard by Nora in Ch 1, Rachel learning Caleb said "no" to a customer.

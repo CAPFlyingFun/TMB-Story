@@ -1,38 +1,34 @@
 # Continuity memory — index (keep under 200 lines)
 
-Status tags: LOCKED (architecture Rev 3 §1/§14 or Rev 2 LOCKED table) · OUTLINE (approved
-Part One outline, 2026-09-16; swappable until an approved chapter uses it) · DRAFT (a
-chapter draft under review) · APPROVED [ch NNNN]. Approved chapter beats memory; memory
-beats nothing. Cite file:line, never prose.
+Status tags: LOCKED (architecture Rev 3 §1/§14 or Rev 2 LOCKED table) · PLAN (approved
+Mini-Arc 1, decision 0008, 2026-09-16, mirrored from Trello into outline/part-01/mini-arc-01.md;
+swappable until an approved chapter uses it) · OUTLINE (mini-arcs 2–5 + overview.md; approved
+2026-09-16 but superseded by Trello ten-chapter cards where they differ — each carries a note) ·
+DRAFT (a chapter draft under review) · APPROVED [ch NNNN] · RETIRED (was DRAFT in the boatyard
+Ch 1 "The Wet Engine", deleted from chapters/ at commit 254158b, kept in history at a2a7320; no
+chapter establishes it now). Approved chapter beats memory; memory beats nothing. Cite file:line.
 
-Series state: Ch 0001 DRAFTED, REWRITTEN in the light register (DECISIONS.md 0006, 2026-09-16),
-under review, not approved. All ch0001 line refs below are to the REWRITE (2,477 words by my count, frontmatter 2476; 240
-lines). CHAPTER_INDEX.md is empty. Repo is NOT a git repository (no `git log`); read files directly.
+Series state (2026-09-16, third pass, repo at 254158b): NO chapter exists on disk. The NEW
+Ch 0001 is "The Bar" (Caleb POV) — NOT YET DRAFTED. CHAPTER_INDEX.md empty. Repo IS a git repo.
+"MA1:" below = outline/part-01/mini-arc-01.md (471 lines, the approved plan). The old
+REVISED-proposed file is gone; any "R:" ref in an older note is dead.
 
-- characters.md — Caleb, Nora, Rachel, Daniel, the Ch 1 customer: ages, jobs, condition, blind spots, per source; Ch 1 DRAFT facts inline.
-- creatures.md — normal-world insect texture (Part One); Ch 1 paper-wasp comb + "the Mayor"; island bestiary rules.
-- timeline.md — outside clock by mini-arc; Ch 1 = Tuesday, early Oct Y0, ~5 h; the "eighteen years" arithmetic; known outline date conflicts.
-- equipment.md — objects that recur (framed photo, folded paper, wasp nest, tide table, journal, envelope, voicemail, vehicle, cast) with the chapter they enter/leave; Ch 1 geography.
-- open-threads.md — hands-offs Ch 2 must honour; outline-level items awaiting Joshua.
-- knowledge.md — who knows what at Ch 1 open and after the Ch 1 draft (nothing changes hands).
+- characters.md — Caleb, Nora, Rachel, Daniel, Ines, Marco, Gus per source; RETIRED block at end.
+- creatures.md — Ch 1 ants/gull/crabs/birds; MA1 insect texture by chapter; RETIRED wasps/Mayor.
+- timeline.md — Ch 1 = Tuesday, first week Oct Y0; THE TIDE ARITHMETIC; day shape; MA1 calendar;
+  Ch 10's Thursday must be a tide-compatible Thursday; cast→brace; tag-year; contract dates.
+- equipment.md — luggage scale, packs, count sheets, the TWO loggers, the van, the enclosure; RETIRED table.
+- open-threads.md — what Ch 2–10 need from Ch 1; PLAN-INTERNAL CONFLICTS (numbered).
+- knowledge.md — who knows what at Ch 1 open (six people) and what changes hands in Ch 1 (nothing).
 
-Standing sources: bible/STORY_OVERVIEW.md · bible/TIMELINE.md · architecture/SERIES_ARCHITECTURE.md
-§1 (seven answers), §14 (canon table) · architecture/DECISIONS.md 0001–0006 ·
-outline/part-01/overview.md (clocks, status changes, provisional inventions) · outline/part-01/mini-arc-0N.md.
+Standing sources: bible/STORY_OVERVIEW.md · bible/TIMELINE.md · bible/MYSTERIES.md (M33, M34 added
+:50-51) · architecture/SERIES_ARCHITECTURE.md §1, §14 · architecture/DECISIONS.md 0001–0008 ·
+outline/part-01/overview.md (MA1 "The First Crack", first→last week Oct; MA2 = November) ·
+outline/part-01/mini-arc-01.md · mini-arc-02..05.md (OUTLINE with 0008 notes) ·
+docs/planning/2026-09-16-activity-review.md · reviews/part-01/chapter-0001-review-RETIRED-boatyard.md.
 
-Ch 0001 DRAFT (rewrite) proper nouns on the page: Port Alder (ch0001:106), Tidewater Instruments
-(ch0001:156), Rachel Bennett (ch0001:102,138), Caleb Bennett (ch0001:42), Mercer (ch0001:106),
-"the Mayor" (wasp; ch0001:52,130,240), "the point" (local water; ch0001:60). NOT on the page despite
-frontmatter/outline: Harlow's, Cascade State University, "calibration engineer", "digitization room".
+Kept from the old plan (MA1:49-51): Port Alder, the Bennett home, Tidewater Instruments, Mercy General.
+Retired (MA1:49-50): Harlow's Boatyard, the drowned engine, the customer, the Mayor, Nora's library job.
 
-Rewrite vs first draft — what changed (2026-09-16 second review): fixed words now IDENTICAL both
-times incl. "ago" (ch0001:108,186; first draft's Rachel dropped "ago" — fixed); motor 25 hp → 6 hp,
-"older than he was"; lie "yesterday morning" → "this morning, first light"; lower-unit seal on order
-DROPPED (motor runs same night); Caleb's answer to the customer now SHOWN ("Nope", ch0001:112);
-Nora's quiet beat after the recitation DROPPED; "tide tables" jab → "last week's rainfall"
-(ch0001:170); "cracked ceramic gull" → "lumpy clay seagull one of them had made" (ch0001:154);
-fleece now NAVY. New: the Mayor, "There's your wave" + truck hit, "It always is", the September note was left by "His boss" (unnamed) and Caleb pocketed it (ch0001:54). Third on-disk pass (same day): text moved to after the customer leaves (ch0001:122); the lingering-salt doubt beat dropped (ch0001:126 "Good"); note author = "His boss". Nothing dropped that a later outline chapter depends on.
-
-Last pass: REVIEW #2 (rewrite) for Ch 0001 (2026-09-16). Promote DRAFT → APPROVED [ch 0001] when
-told; at that point fix the official-story wording as the verbatim family line and re-check the
-trampoline arm/age remains unspecified.
+Last pass: ADVISORY sheet for the NEW Ch 0001 "The Bar" (2026-09-16). Next: REVIEW of its draft;
+mark what the draft fixes as DRAFT; promote on approval; fill bible/CHARACTERS.md-style facts then.

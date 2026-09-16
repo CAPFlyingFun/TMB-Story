@@ -1,29 +1,35 @@
 # Timeline — continuity facts
 
-Clocks: outside (O) and island (I), tracked separately; no backward time; biology follows lived time (TIMELINE.md:3-6).
+Clocks: outside (O) and island (I), tracked separately; no backward time; biology follows lived time (TIMELINE.md:3-6). MA1: = outline/part-01/mini-arc-01.md.
 
-## Outside clock, Part One (OUTLINE, overview.md:12-18)
-- MA1 Ch 1–10: early–mid October, Year 0. Ch 1 opens this window; Ch 7 crash is "the next week" after Ch 6; Ch 9–10 hospital.
-- MA2 Ch 11–20: late Oct–late Nov Y0. MA3 Ch 21–30: Dec Y0–Feb Y1. MA4 Ch 31–40: Mar–late Aug Y1. MA5 Ch 41–50: early Sep Y1; island clock starts Ch 44.
-- Part One ≈ eleven months (overview.md:20-22; not locked).
+## Outside clock, Part One (overview.md:14-20, updated 254158b)
+- MA1 Ch 1–10: FIRST to LAST week of October, Year 0 (MA1:14; overview.md:16). MA2: November Y0. MA3: Dec Y0–Feb Y1. MA4: Mar–late Aug Y1. MA5: early Sep Y1; island clock from Ch 44.
+- Contracts: three-month seasonal, began mid-September Y0, three weeks in at Ch 1 (MA1:15-16) → mid-Sept + 3 wk = first week of October ✓; contracts END ≈ mid-December Y0 (MA3 must handle this).
 
-## Ch 0001 DRAFT (rewrite) — what the page fixes
-- Frontmatter: "Year 0, early October (a Tuesday)"; opens "mid-afternoon"; elapsed "about five hours" (ch0001:10-12). Prose: "a very slow afternoon" (ch0001:48); boat found "Sunday" + rope yanked "for two days" (ch0001:92) → Tuesday; the lie is "This morning, first light" (ch0001:60; first draft said "yesterday morning"); "nephew coming Saturday" (ch0001:60); "scrap by Monday" (ch0001:86); "tomorrow after four" (ch0001:108) = Wednesday. Repair "took the rest of the daylight and a good bit of the dark" (ch0001:122; first draft: "three hours"); early-Oct PNW sunset ≈ 18:45 → done ≈ 19:30–20:00; walk home; dinner; window "gone black" (ch0001:216). ~5 h from mid-afternoon holds ("about").
-- Season on page: "in October" (ch0001:50); "all that rain last week" (ch0001:92); "first hard frost" still to come (ch0001:54).
-- Soft physics point, not continuity: Caleb's "Rust takes hours. It does not take a morning." (ch0001:78) — first light (~07:15) to mid-afternoon IS ~8 h. World-creature/scene lane if anyone cares; the plug-thread rust on a two-days-sunk motor is the real tell.
-- Downstream: Ch 2 "this weekend" clear-out (mini-arc-01.md:38) = the coming Sat/Sun; Ch 5 "Friday" sit-down; Ch 7 "next week" → crash ≈ mid/late October. All reachable.
-- Childhood anchors: two-count since age nine (ch0001:200); laptop-at-table since tenth grade (ch0001:144); clay seagull from second grade (ch0001:154); trampoline arm-break undated (ch0001:210); wasp nest since August, note in September (ch0001:50,54).
-- The customer's motor is "older than he was" (Caleb, 18) (ch0001:64) → pre-Y0−18. The customer (~50) knew Daniel at the fuel dock ≈ 19 years ago → he was ~31 then. Fine.
+## Ch 0001 "The Bar" — PLAN clock
+- Weekday: TUESDAY, first week of October Y0. Derivation: Ch 3 is "Saturday" (MA1:161) and "the return trip, four days later" (MA1:155) → Ch 1 = Tuesday. Ch 2 = the same day at dusk (MA1:117-118).
+- Opens 6 a.m. at the station boathouse; "low tide in two hours" (MA1:59) → low water ≈ 08:00.
+- Daylight (my estimate for ~47–48°N, early Oct, PDT): civil dawn ≈ 06:45, sunrise ≈ 07:15, sunset ≈ 18:40. So the 6 a.m. load is IN THE DARK; the "gravel bar shining" crossing (MA1:64) is ≈ 07:00 or later. Not a contradiction; a constraint on the prose.
+- TIDE ARITHMETIC the chapter must keep:
+  * Bar passable "about three hours either side of low water" (MA1:37-38) → printed window ≈ 05:00–11:00.
+  * "Back by one" (MA1:66) CANNOT be a bar-crossing time — 13:00 is five hours after low water. It only works as the STATION-return deadline (van included). The printed last crossing is ≈ 11:00.
+  * "Calls the retreat ninety minutes early" (MA1:85): early relative to a planned off-the-bar time, not to "one". If the plan was off the bar by ≈ 11:00, the call is ≈ 09:30 — only ~90 min after low water — and water is already sliding over the low point (MA1:89-90), i.e. the surge closed the bar ~1.5 h before the table. If "ninety minutes early" were measured from 13:00 (→ 11:30) the retreat would be AFTER the printed closing: impossible on foot. Recommend Ines's briefing state both numbers ("off the bar by eleven, back at the station by one").
+  * Everyone across ≈ 10:00–10:15, water at the shins (MA1:92).
+- Day shape: crossing done by ≈ 10:15; the chapter ends "in the van" (MA1:109); Ch 2 opens with "the van drops them at the bottom of the hill at dusk" (MA1:117-118) ≈ 18:40. Either Ch 1's van beat is the dusk ride home (afternoon at the station off-page; elapsed ≈ 12–13 h) or there are two van rides. Ch 2 also puts a two-count "in the car earlier" (MA1:131) → the ride home must have room for it AFTER the scale beat and BEFORE the drop-off, unshown in Ch 1.
+- Downstream days: Ch 3 Saturday (MA1:161) crash on the way back in rain; Ch 4 Sat night + Sunday morning (MA1:221-224 "one night", "home tomorrow"); Ch 5 Sunday discharge (MA1:246); Ch 6 the recovery week; Ch 7 back on light duty ≈ mid-Oct; Ch 8 a workday of Rachel's; Ch 9 sets "Thursday at dusk" (MA1:401); Ch 10 that Thursday "an hour before sunset" (MA1:421-422) — late-Oct sunset ≈ 18:05.
+- CH 10 TIDE CONSTRAINT (advisory): with low water ≈ 08:00 on Ch 1's Tuesday, lows shift ≈ +50 min/day. A dusk-low Thursday (low ≈ 15:30–17:00) falls ≈ 9 days later (Thursday of week 2, low ≈ 15:30) or ≈ 23 days later (week 4, low ≈ 15:25). Thursday of week 3 (+16 d) has lows ≈ 09:00/21:20 — NOT crossable at dusk. Whatever tables the author invents must be one consistent set across Ch 1, 3 ("the tide wrong for the bar", MA1:161) and 10.
+
+## Cast → brace (RESOLVED by the plan; old conflict closed)
+- Fractured Ch 3, set + cast Ch 4, cast six weeks to mid-November (MA2), removable brace through winter, off Ch 31 in March, weak/cold-shy after (MA1:467-471; overview.md:54). Mini-arcs 2–4 read "brace" where they say "cast" (0008 notes).
+
+## The "eighteen years" arithmetic
+- LOCKED: twins 18 + "a few months"; Daniel gone at week 7–8 of the pregnancy → gone ≈ 18 y 10–11 mo at Ch 1; TIMELINE.md:10 "roughly eighteen and a half". Safe phrasing: "eighteen years" (the plan's Ch 2 wording, MA1:140). AVOID "eighteen and a half", "nearly nineteen", "two decades", "21 years".
+- Twins' birthday ≈ June–August Y0 (not fixed). Daniel's disappearance ≈ Nov Y0−19 to Jan Y0−18.
+- TAG YEAR (Ch 3): "a year older than the twins" (MA1:171) = Y0−19 → fits (installed before he vanished). Y0−18 would only fit a January install; prefer Y0−19 or earlier. Gus's thirty years (since ≈ Y0−30) covers it (MA1:44-45).
+- Calendar anchor implied only by OUTLINE MA2 "2007 print run" (mini-arc-02.md:36, may be revised) → Y0 ≈ 2025–26. Name no year on the page unless Joshua does.
 
 ## Island clock
-- Nothing until Ch 44. Elena ~7 months pregnant at ~Ch 60–65; birth ~Ch 135–165 (TIMELINE.md:11).
+- Nothing until Ch 44. Elena ~7 months pregnant at ~Ch 60–65 (TIMELINE.md:11).
 
-## The "eighteen years" arithmetic (advisory, Ch 1)
-- LOCKED: twins 18 + "a few months"; Daniel gone since week 7–8 of the pregnancy.
-- Derived: Daniel gone ≈ 18 y 10–11 mo at Ch 1. TIMELINE.md:10 says "roughly eighteen and a half" — a few months short but "roughly". Safe phrasing: "eighteen years". AVOID: "eighteen and a half", "nearly nineteen", "two decades", "21 years" (Rev 1 §5 history/01:104,108 — superseded by Rev 2, history/02:14).
-- DRAFT ch0001 uses "Eighteen years ago" both times (ch0001:108,186) — safe and now identical.
-- Twins' birthday ≈ June–August Y0. Not fixed; do not name a date unless Joshua does.
-- Calendar anchor implied by outline: "2007 print run" of bulletins (mini-arc-02.md:36) → Year 0 ≈ 2025–2026. Ch 1 names no year; phones/texting present (ch0001:122).
-
-## Known outline-level date conflicts (report, do not resolve)
-- CAST DURATION: Ch 9 "fractured left wrist (cast for six weeks)" (mini-arc-01.md:96) vs cast still on through MA3 (mini-arc-03.md:26, Dec–Feb) and "cast comes off" Ch 31 in March Y1 (mini-arc-04.md:21; overview.md:53). Six weeks from mid-Oct = late Nov. One must change. Will bite at Ch 9.
+## RETIRED clock facts (boatyard draft)
+- "Mid-afternoon, about five hours", the customer's Sunday/Monday/Wednesday dates, "Rust takes hours", "first hard frost". Coincidence kept: that draft was also a Tuesday.
