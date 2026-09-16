@@ -1,7 +1,11 @@
 # Chapter 0001 — The Wet Engine — handoff report
 
-**Status:** in-review, awaiting Joshua. Draft committed as `abaa33b`; corrected draft in this commit.
-**POV:** Caleb · **Scenes:** 2 · **Words:** 2,437 · **Ending type:** funny character beat
+**Status:** in-review, awaiting Joshua. First draft `abaa33b`; corrected `1b18b82`; REWRITTEN in the light register after Joshua's feedback `3136d62`; tightened `b864343` and this commit.
+**POV:** Caleb · **Scenes:** 2 · **Words:** 2,479 · **Ending type:** funny character beat
+
+## Rewrite, 2026-09-16
+
+Joshua read the corrected draft: "a little boring and hard to follow ... didn't see a lot of humor." His steer, now decision 0006 and the first writing rule in `CLAUDE.md`: the voice follows the mood; light, simple and funny where the story is happy, dramatic where it is serious. This is a happy chapter, so it was rewritten in the light register. Every established fact was kept (checked by a second continuity pass): the fixed words, said twice and now word-for-word identical; the fold; the photograph; the two-count; the chorus; the trampoline; the wasps. New on the page: Caleb has named the biggest wasp the Mayor, the water fan hits the customer's truck ("There's your wave"), the boss left the September note, Rachel's fleece is navy. A second character pass judged the humour beat by beat (none dead) and asked for cuts that brought the count under the ceiling: the lingering-salt paragraph, three first-draft sentences of abstraction, and the narrator telling us the kitchen was warm. Applied.
 
 ## What the chapter does
 

@@ -4,7 +4,7 @@ title: "The Wet Engine"
 part: 1
 mini_arc: 1
 pov: Caleb
-word_count: 2476
+word_count: 2479
 story_time:
   clock: outside
   date: "Year 0, early October (a Tuesday)"
@@ -75,7 +75,7 @@ Here is the thing about a wave. A wave gets a motor wet on the top. It coughs, i
 
 "Right over the back," the man said again, to nobody.
 
-"Mm," said Caleb. He found the plug wrench on the bench without looking, and backed out the spark plug. Water beaded on the tip. The metal around the thread had already turned the orange-brown of a rusty nail. Rust takes hours. It does not take a morning.
+"Mm," said Caleb. He found the plug wrench on the bench without looking, and backed out the spark plug. Water beaded on the tip. The metal around the thread had already turned the orange-brown of a rusty nail. That kind of rust takes days. It does not take a morning.
 
 He turned the plug in the light so the man could see it if he felt like seeing it. Then he looked at the man's right hand, resting on the tailgate. There was a red groove worn across the inside of the fingers, the kind you get from yanking a starter rope that will not give. Not once or twice. Fifty times. A hundred.
 

@@ -1,20 +1,20 @@
 # Open threads — what the next chapter must honour
 
 ## Into Ch 0001 (first chapter; nothing precedes it)
-- No previous chapter; no ending-type constraint from before. Ch 1 ending type = funny character beat (mini-arc-01.md:28); Ch 2 = quiet unsettling line.
+- No previous chapter; no ending-type constraint from before. Ch 1 ending type = funny character beat (mini-arc-01.md:28; rewrite's last line ch0001:240 "The Mayor... has been very reasonable."); Ch 2 = quiet unsettling line.
 
-## Out of Ch 0001 — DRAFT (ch0001), pending approval
-- Hands off: Nora's POV (Ch 2). The paper Rachel folded into her back pocket (ch0001:115) — Ch 2's "folded letter" Rachel forces a smile over at dinner (mini-arc-01.md:34) must be placed where Nora can see it; if Ch 2's dinner is THIS dinner, Nora saw it before Caleb walked in (she was already at the table, ch0001:123).
-- Standing after Ch 1 (draft): two-count shown twice, dated to age nine, NOT DEFINED in words (ch0001:177-183, 199-205); "twin thing" answer = "We built it the hard way", in unison, after the count (ch0001:183); wasp nest still up, "fourth time we've counted for the wasps" (ch0001:205); Caleb's stated intent "Tomorrow I am dealing with those wasps" (ch0001:195) — he must NOT act on it before Ch 15; official story in bare form only ("That's the whole of it", ch0001:165) — Ch 6's fuller version still available.
-- Customer returns "tomorrow after four" (ch0001:97) — off-page unless Ch 3/5 wants him; lower-unit seal on order (ch0001:101).
-- Caleb saw the fold and read nothing (ch0001:115) ✓ for Ch 2's "Caleb doesn't notice" (mini-arc-01.md:34).
-- Nora "gone quiet a beat longer than the sentence needed" after the story (ch0001:169) — must stay protectiveness, not suspicion, until Ch 6 gives her a comparison.
+## Out of Ch 0001 — DRAFT (rewrite, ch0001), pending approval
+- Hands off: Nora's POV (Ch 2). The paper Rachel folded into her back pocket (ch0001:136) — Ch 2's "folded letter" Rachel forces a smile over at dinner (mini-arc-01.md:34) must be placed where Nora can see it; if Ch 2's dinner is THIS dinner, Nora was already at the table (ch0001:144) when Rachel pocketed it.
+- Standing after Ch 1: two-count shown twice, dated to age nine, NOT DEFINED in words (ch0001:200-206, 224-230); "twin thing" answer = "We built it the hard way", in unison, after the count (ch0001:206); Rachel knows it is "the answer" (ch0001:198); wasp nest still up, "fourth time we've counted for the wasps" (ch0001:228); Caleb's stated intent "Tomorrow... I am dealing with those wasps" (ch0001:218) — he must NOT act on it before Ch 15; the Mayor named (ch0001:52,240); official story in bare form only ("That's the whole of it", ch0001:186) — Ch 6's fuller version still available.
+- Customer returns "tomorrow after four" (ch0001:108) with a motor that runs (ch0001:124-126) — off-page unless Ch 3/5 wants him.
+- Caleb saw the fold and read nothing (ch0001:136) ✓ for Ch 2's "Caleb doesn't notice" (mini-arc-01.md:34).
+- Nora shows NO reaction to the recitation in the rewrite (ch0001:186-192). Her protectiveness-read-as-coldness now has to be built by Ch 2 from scratch; Ch 1 gives only "It always is" (ch0001:152) and the rope-vs-voice argument (ch0001:164-174).
 
-## Outline-level items awaiting Joshua (flagged 2026-09-16 advisory; updated after Ch 1 review)
-1. Surname split Bennett/Mercer unexplained — now stated publicly on the page by the customer (ch0001:91,95). Still unexplained; any explanation must fit a town that never remarked on it.
+## Outline-level items awaiting Joshua (updated after the Ch 1 rewrite review)
+1. Surname split Bennett/Mercer unexplained — stated publicly on the page (ch0001:102-106). Any explanation must fit a town that never remarked on it.
 2. Cast duration six weeks vs five months (see timeline.md).
-3. Vehicle and driver unspecified — Ch 1 shows Caleb walking (ch0001:111); still open.
-4. Whether Ch 2's dinner is Ch 1's dinner re-seen — Ch 1 leaves room for either; note the paper is in Rachel's pocket by the time Caleb enters.
-5. Where the customer's "you two" line lands — RESOLVED BY DRAFT: reported at dinner (ch0001:171), not shown in the yard scene; the practiced answer is performed for Rachel, and what Caleb told the customer is never stated.
-6. NEW: the official story's fixed wording — outline "lost at sea / body never recovered" vs draft "lost off the coast / Nobody was ever found" (ch0001:97,165). Decide once; every later recitation must match verbatim.
-7. NEW: Nora's trampoline arm — which arm, what age. Draft leaves both open (ch0001:187).
+3. Vehicle and driver unspecified — Ch 1 shows Caleb walking (ch0001:130); still open.
+4. Whether Ch 2's dinner is Ch 1's dinner re-seen — Ch 1 leaves room for either; the paper is in Rachel's pocket before Caleb enters.
+5. Customer's "you two" line — RESOLVED BY REWRITE: asked in the yard, answered "Nope" (ch0001:110-112); the practiced answer is performed at dinner for Rachel, who prompts it (ch0001:190-206). Outline's "gets the dry, practiced answer" (mini-arc-01.md:25) is honoured at home, not in the yard.
+6. The official story's fixed wording — outline "lost at sea / body never recovered" vs page "lost off the coast / Nobody was ever found" (ch0001:108,186, now identical). Decide once at approval; every later recitation must match verbatim.
+7. Nora's trampoline arm — which arm, what age. Rewrite leaves both open (ch0001:210).
