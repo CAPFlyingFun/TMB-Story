@@ -47,6 +47,8 @@ prevent a contradiction.
 | M30 | What is Professor Kessler's real connection to Dad's research? | Part 1, Mini-Arc 2 (decision 0005) | Part 3 | Part 6/7 | open |
 | M31 | What's sealed beneath the oldest underground level? | Part 3/4 (background texture) | — | Deliberately open | open — DO NOT ANSWER |
 | M32 | What has Dad actually been doing out there? | Part 4–5 | Parts 6–9 | Part 10 | not yet introduced |
+| M33 | Is the family's official story true, and who wrote it? | Part 1, Ch. 2 (the fixed words) | Part 1, Ch. 8 (the words have an order) | Part 1, Ch. 27 (a cover; "they sent someone") | open |
+| M34 | Who has been keeping Daniel's Tern Island enclosure alive? | Part 1, Ch. 7 | Part 1, Ch. 10 (the logger runs; someone was there) | Part 1, Mini-Arc 3 (Rachel, through legitimate Tidewater work; Trello 21–30 card) | open |
 
 Part references past Part 10 carry the roadmap note in `STORY_OVERVIEW.md`.
 

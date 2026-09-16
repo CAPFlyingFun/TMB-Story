@@ -1,5 +1,13 @@
 # Mini-Arc 3 — The Weight of the Journal (Chapters 21–30)
 
+> **Note (2026-09-16, decision 0008):** this file predates the Trello plan. The
+> ten-chapter overview cards on the TRADDOMIUM boards are the current plan for
+> these chapters; where they differ, Trello wins and this file is reconciled
+> before any of these chapters is drafted. Known ripples: Caleb's cast becomes a
+> brace after six weeks ("cast" below reads "brace" from mid-November); Ch. 28's
+> boatyard no longer exists (Halloran approaches Caleb at Alder Sound instead);
+> Ch. 18's "one detail" already landed in Ch. 10; Nora has no library job.
+
 **Purpose:** the real research surfaces; stakes become physical. Kessler becomes a
 cautious ally; Rachel moves from obstacle to reluctant ally; the break-in.
 **Outside clock:** December, Year 0, to February, Year 1.

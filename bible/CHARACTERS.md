@@ -53,6 +53,12 @@ Entry template:
 
 ## Recurring pool
 
+### Dr. Ines Marchetti (Alder Sound field lead; provisional)
+### Marco Sato (Alder Sound technician; provisional)
+### Gus Pelletier (Alder Sound caretaker and boat operator; provisional)
+### Wes Tanaka (provisional)
+### Halloran (provisional)
+
 ## Temporary arc characters
 
 ## Off-roster (alive, may return)

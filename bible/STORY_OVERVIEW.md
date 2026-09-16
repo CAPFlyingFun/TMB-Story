@@ -4,7 +4,7 @@ Read this every chapter. It is a distillation of `architecture/SERIES_ARCHITECTU
 (Revision 3, which layers on Rev 2 and Rev 1 in `architecture/history/`). If this file
 and the architecture disagree, the architecture wins and this file gets fixed.
 
-**Currently at: Part 1, Chapter 0 — Part One outline approved (`outline/part-01/`); Chapter 1 in progress.**
+**Currently at: Part 1, Chapter 0 — Mini-Arc 1 (Chapters 1–10) planned on Trello and mirrored in `outline/part-01/mini-arc-01.md`; Chapter 1 in progress.**
 
 ---
 

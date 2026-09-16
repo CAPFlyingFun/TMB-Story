@@ -1,8 +1,10 @@
 # Part One — The Impossible Island (Chapters 1–50)
 
-**Status: APPROVED by Joshua, 2026-09-16. Chapters may be drafted from this outline.
-Provisional inventions below are approved as working names and remain swappable
-until they appear in an approved chapter.**
+**Status: Mini-Arc 1 APPROVED via Trello, 2026-09-16 (decision 0008); Mini-Arcs 2–5
+here predate the Trello plan and are superseded by the ten-chapter cards where they
+differ. Trello (`📖 STORY — Chapters 1–50` on both TRADDOMIUM boards) is the plan;
+this directory mirrors the approved plan into canon. Provisional inventions remain
+swappable until they appear in an approved chapter.**
 
 Genre: mystery/investigation. Objective: prove the island is real and reach it.
 Source: `architecture/SERIES_ARCHITECTURE.md` (Rev 3) with Rev 2 §10 (redesigned
@@ -11,8 +13,8 @@ mini-arcs of ten chapters, one file each.
 
 | Mini-arc | File | Chapters | Outside clock |
 |---|---|---|---|
-| 1. Ordinary Gravity | `mini-arc-01.md` | 1–10 | early–mid October, Year 0 |
-| 2. What the Records Don't Say | `mini-arc-02.md` | 11–20 | late October–November, Year 0 |
+| 1. The First Crack | `mini-arc-01.md` | 1–10 | first to last week of October, Year 0 |
+| 2. What the Records Don't Say (Trello: Daniel's Footprints) | `mini-arc-02.md` | 11–20 | November, Year 0 |
 | 3. The Weight of the Journal | `mini-arc-03.md` | 21–30 | December, Year 0–February, Year 1 |
 | 4. Building the Impossible | `mini-arc-04.md` | 31–40 | March–late August, Year 1 |
 | 5. Crossing | `mini-arc-05.md` | 41–50 | early September, Year 1; island clock starts at Ch. 44 |
@@ -33,13 +35,12 @@ locked.
 
 ## Checks
 
-**POV:** Caleb 26, Nora 24. Mini-arc 2 leans Nora (6/4); mini-arcs 4 and 5 lean Caleb
-(6/4); the others are even. This follows Rev 1 §3 (Nora slightly more of the
+**POV:** Caleb 27, Nora 23. Mini-arc 1 leans Caleb (6/4, the crash and physical chapters); mini-arc 2 leans Nora (6/4); mini-arcs 4 and 5 lean Caleb (6/4); mini-arc 3 is even. This follows Rev 1 §3 (Nora slightly more of the
 investigative chapters, Caleb slightly more of the physical ones).
 
 **Ending types, in order** (no two alike back to back; "sudden danger" never the
-reflex): funny · quiet line · evidence · emotional · decision · question · revelation ·
-arrival · quiet line · discovery · decision · evidence · question · revelation · threat ·
+reflex): funny · quiet line · revelation · emotional · discovery · decision · quiet line ·
+evidence · question · revelation · decision · evidence · question · revelation · threat ·
 discovery · emotional · evidence · revelation · threat · discovery · funny · evidence ·
 question · emotional · discovery · revelation · quiet line · decision · threat ·
 decision · discovery · threat · revelation · funny · betrayal · discovery · emotional ·
@@ -50,10 +51,7 @@ quiet line · decision · arrival · question.
 twins understand (the ant column in 19, the silence in 26, the wrong-size moth in 39,
 the dragonfly in 43, the ant scout in 46, the whole showcased set in 49–50).
 
-**Status changes tracked:** Caleb's fractured left wrist (Ch. 9, cast off Ch. 31, weak
-for months); Nora's concussion and cracked rib (Ch. 9); Caleb's right hand after the
-field (Ch. 33, numb nine days, never trusts cold); Nora's ankle and Caleb's burned palm
-(Ch. 45); the device dead on arrival (Ch. 45).
+**Status changes tracked:** Caleb's fractured left wrist (Ch. 3; set Ch. 4; cast six weeks to mid-November, then a brace; brace off Ch. 31; weak and cold-shy for months); Nora's concussion and cracked rib (Ch. 3–4); Marco's bruising and whiplash (Ch. 3); Caleb's right hand after the field (Ch. 33, numb nine days, never trusts cold); Nora's ankle and Caleb's burned palm (Ch. 45); the device dead on arrival (Ch. 45).
 
 ## Provisional inventions (Joshua to approve or swap; none is locked)
 
@@ -61,8 +59,11 @@ These exist because chapters need concrete nouns. Every one is a placeholder cho
 audio distinctness from the locked cast.
 
 - **Port Alder** — the Bennetts' home city, Pacific Northwest coast.
-- **Harlow's Boatyard** — Caleb's workplace.
-- **Cascade State University** — Nora's library digitization job and Kessler's department; Daniel's institute was affiliated with it.
+- **Alder Sound Field Station** — the twins' employer: a small, mostly honest coastal research nonprofit north of Port Alder; NOT the outside organization. Tidewater services its loggers.
+- **Tern Island** — wooded bird reserve in the sound, reachable across a gravel bar for about three hours either side of low water; the enclosure on its summit.
+- **Dr. Ines Marchetti** (field lead, mid-40s), **Marco Sato** (technician, 24, drives the van), **Gus Pelletier** (caretaker and boat operator, 60s, knew "a Mercer").
+- **The enclosure** — aluminium weatherproof monitoring box, tag `D.M.` and a year; Rachel has quietly kept it alive (Trello 21–30 card; M34).
+- **Cascade State University** — Kessler's department; the enclosure's programme partner; Daniel's institute was affiliated with it.
 - **Tidewater Instruments** — Rachel's employer; she is a calibration engineer (her Rev 1 §5 technical background, made specific).
 - **Mercy General** — the hospital.
 - **Wes Tanaka** — mid-20s, runs his family's boat; his grandfather was harbourmaster where Daniel launched. Future recurring ally, likely in Rachel's thread.

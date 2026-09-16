@@ -1,5 +1,13 @@
 # Mini-Arc 4 — Building the Impossible (Chapters 31–40)
 
+> **Note (2026-09-16, decision 0008):** this file predates the Trello plan. The
+> ten-chapter overview cards on the TRADDOMIUM boards are the current plan for
+> these chapters; where they differ, Trello wins and this file is reconciled
+> before any of these chapters is drafted. Known ripples: Caleb's cast becomes a
+> brace after six weeks ("cast" below reads "brace" from mid-November); Ch. 28's
+> boatyard no longer exists (Halloran approaches Caleb at Alder Sound instead);
+> Ch. 18's "one detail" already landed in Ch. 10; Nora has no library job.
+
 **Purpose:** a working device, real danger, real confirmation, and someone trying
 directly to stop or warn them. First appearance of future recurring allies (Wes
 Tanaka, properly; Kessler's arc turns).

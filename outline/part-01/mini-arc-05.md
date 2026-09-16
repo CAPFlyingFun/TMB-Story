@@ -1,5 +1,13 @@
 # Mini-Arc 5 — Crossing (Chapters 41–50)
 
+> **Note (2026-09-16, decision 0008):** this file predates the Trello plan. The
+> ten-chapter overview cards on the TRADDOMIUM boards are the current plan for
+> these chapters; where they differ, Trello wins and this file is reconciled
+> before any of these chapters is drafted. Known ripples: Caleb's cast becomes a
+> brace after six weeks ("cast" below reads "brace" from mid-November); Ch. 28's
+> boatyard no longer exists (Halloran approaches Caleb at Alder Sound instead);
+> Ch. 18's "one detail" already landed in Ch. 10; Nora has no library job.
+
 **Purpose:** the voyage, the shrink, the arrival, the spider, the rescue. Per Rev 2
 §10, arrival does not mean walking up to a gate: the twins land in wild terrain,
 inexperienced, and are found by people who understand this world completely.

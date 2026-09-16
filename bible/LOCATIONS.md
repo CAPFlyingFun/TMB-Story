@@ -17,8 +17,10 @@ Entry template:
 
 ## Normal world (Part One)
 
-### The Bennett home
-### The crash site
+### The Bennett home (Port Alder)
+### Alder Sound Field Station (boathouse, lab with the leaking skylight, dock, van)
+### Tern Island (the gravel bar, the transect, the summit, the enclosure)
+### The coast road (the crash site)
 ### The hospital
 ### Professor Kessler's campus
 ### The lab / workshop
