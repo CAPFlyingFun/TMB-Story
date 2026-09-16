@@ -271,3 +271,13 @@ line of dialogue changed. `scripts/style-check.py` before and after:
 | paragraphs over 80 words | 10% | 1% (Caleb's ants speech, dialogue) | 0% |
 
 Word count 3,576.
+
+## US idiom pass (decision 0012 amended, 2026-09-16)
+
+Joshua: "Then wear them wetter" is not US English. Marco's line is now "Wear them
+wet. Sorry about that." Thirty-five idiom changes in this chapter: properly, love,
+Sorry?, cross, another go, in the wet, kit, did the boots, the state of you, moving
+house, carpet, cupboards, weed, the sea, a stone in a boot, worked out, garden, the
+clock phrases, and the fixed words' closer "That's the whole of it" → "That's the
+whole story" (bible updated; M33 wording provisional until batch approval).
+`scripts/style-check.py` now flags British idioms; both chapters read zero.

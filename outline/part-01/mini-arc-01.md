@@ -56,8 +56,8 @@ Bennett home, Tidewater Instruments, Mercy General.
 - **Trello:** Godot https://trello.com/c/y7dgXHZ2 · TypeScript https://trello.com/c/OFjCwBSI
 - **Playable beat flow:** Load gear → cross bar → survey wildlife → inspect ant behavior → regroup and compare findings → warn Ines → pack equipment → navigate rising crossing → return.
 - **POV:** Caleb · **Target:** 2,500–3,000 (the set piece earns it; decision 0010)
-- **Opening situation:** 6 a.m. at the station boathouse in the dark; on the bar by half past seven on
-  the falling tide; low water at half past ten; Ines's rule: off the bar by half past
+- **Opening situation:** 6 a.m. at the station boathouse in the dark; on the bar by seven thirty on
+  the falling tide; low water at ten thirty; Ines's rule: off the bar by half past
   twelve, back at the station by one. Marco loading the van with the enthusiasm of a man who is not
   carrying any of it. Caleb and Nora arguing about whose pack is heavier.
   Nora has brought a luggage scale. Of course she has.
@@ -138,7 +138,7 @@ Bennett home, Tidewater Instruments, Mercy General.
      because the station's hallway has photos from the nineties: "Did Dad
      ever work out there?" Rachel: "Your father did research." And the fixed
      words, said as a door closing: research trip, the boat lost off the
-     coast, nobody ever found, eighteen years ago. "That's the whole of it.
+     coast, nobody ever found, eighteen years ago. "That's the whole story.
      Pass your brother the salt."
   4. Rachel's worry about the job, read by the twins as the obvious thing:
      of course Mom doesn't love them working somewhere Dad might have been.
@@ -427,7 +427,7 @@ Bennett home, Tidewater Instruments, Mercy General.
   1. The crossing, alone this time: the island at dusk is theirs, and it is
      beautiful, and they are a little scared, and it's the best thing that
      has happened since the sandbar. The ants on the summit have finished
-     moving house.
+     moving out.
   2. The enclosure. The code works. Inside: dry, tidy, a battery newer than
      anything in the inventory, a logger that is still running. And a
      laminated card, old, with hand calculations on it: nested brackets, a

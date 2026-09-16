@@ -4,7 +4,7 @@ title: "Sixty-Two Grams of Salt"
 part: 1
 mini_arc: 1
 pov: Nora
-word_count: 3576
+word_count: 3572
 story_time:
   clock: outside
   date: "Year 0, first week of October (the same Tuesday as Chapter 1)"
@@ -27,7 +27,7 @@ new_canon:
   - "The Bennett home is at the top of a hill in Port Alder; the van does not do the hill in the wet. Front hall with a shelf by the door for the keys and one photograph; kitchen with a heater under the window; back step with the outside faucet; stairs that creak except at the edges"
   - "The photograph: Daniel on a dock in a green jacket, squinting into sun, a boat's rail behind him. It has stood on the shelf by the door for as long as the twins can remember and nobody looks at it"
   - "Rachel's third text, revealed: 'Ok. Straight home after. Both.' It arrived inside a minute; Rachel, from the bench, normally answers in hours"
-  - "Rachel's fixed words, verbatim: 'Your father did research. He went out on a research trip. The boat was lost off the coast. Nobody was ever found. Eighteen years ago. That's the whole of it. Pass your brother the salt.'"
+  - "Rachel's fixed words, verbatim: 'Your father did research. He went out on a research trip. The boat was lost off the coast. Nobody was ever found. Eighteen years ago. That's the whole story. Pass your brother the salt.'"
   - "The two-count: the twins count to two before doing anything stupid together; on two, each says what they would do; if it matches, it is decided. Used tonight to pick the fun version of the day for Mom"
   - "'We built it the hard way': Nora's flat answer to 'that twin thing'; Caleb's evidence is that she bit him, twice; Rachel's correction is that the second time was him"
   - "Someone at the station told Rachel the twins have 'that twin thing' when she was out doing the station's units last month (Tidewater Instruments services Alder Sound's loggers; the twins already knew that, it is how they heard about the jobs)"
@@ -44,17 +44,17 @@ approved_on: ""
 
 # Chapter 2 — Sixty-Two Grams of Salt
 
-Marco let them out at the bottom of the hill at a quarter to seven. The van did not do the hill in the wet. Nobody had ever asked it to.
+Marco let them out at the bottom of the hill at six forty-five. The van did not do the hill in the rain. Nobody had ever asked it to.
 
 "Out," he said. He leaned across and opened Nora's door for her. He had never done that before. "Eight o'clock Saturday. Gus is running you out in the skiff. Ines wants the morning. Wear the boots."
 
 "We only have these boots," said Caleb, from the back. His voice had been asleep until a moment ago.
 
-"Then wear them wetter."
+"Wear them wet. Sorry about that."
 
 The van went away down the road with one tail light. The twins stood at the bottom of their own hill with a pack each and looked up it.
 
-It was not a big hill. On any other day you did not notice it. Tonight it had grown. The rain that had chased them off the bar had come and gone all afternoon. Now it was coming back for another go, in small handfuls. Up at the top, the firs had started the low sound that comes before the loud one.
+It was not a big hill. On any other day you did not notice it. Tonight it had grown. The rain that had chased them off the bar had come and gone all afternoon. Now it was coming back for round two, in small handfuls. Up at the top, the firs had started the low sound that comes before the loud one.
 
 "Race you," said Caleb. He did not move.
 
@@ -66,7 +66,7 @@ They went up together, slowly, the way you carry a full cup.
 
 The afternoon had gone the way afternoons at the station went. Ines had written the day into the station's log in four lines. In the box for cause, Caleb had written *ants*. He did it in pencil, while she was out of the room. When she came back and read it, she looked at him for a second.
 
-Then she let it stand. Then she looked at the gloves and the net bag steaming in the corner of the lab, under the skylight that leaked. "Take those home," she said. "Dry them properly." That was why Nora's pack still smelled of low tide, all the way up the hill.
+Then she let it stand. Then she looked at the gloves and the net bag steaming in the corner of the lab, under the skylight that leaked. "Take those home," she said. "Dry them all the way." That was why Nora's pack still smelled of low tide, all the way up the hill.
 
 The porch light was on. The kitchen light was on. So their mother was home, which she often was not at seven.
 
@@ -76,17 +76,17 @@ Her mother was in the front hall. She was standing at the shelf by the door. Tha
 
 As the door opened she folded it in three, quick and neat, the way you fold a letter that came in an envelope. She slid it into the back pocket of her jeans. Then she turned around, and her whole face was already smiling.
 
-"Look at the state of you."
+"Look at you."
 
 "Mom," said Nora, and let the pack down.
 
-"Look at the *state* of you." Her mother took Nora's face in both hands. The hands were warm and smelled of onions. She turned Nora's face to the light and kissed her on the forehead. Then she looked past her to the door. "Where's the other one."
+"Look at *you*." Her mother took Nora's face in both hands. The hands were warm and smelled of onions. She turned Nora's face to the light and kissed her on the forehead. Then she looked past her to the door. "Where's the other one."
 
 "Coming."
 
 Caleb came in behind her, rained on. He saw nothing but his mother and the smell of dinner. He put his pack down on top of Nora's. "I fell in," he said, before anyone could say it for him. "And we're going back Saturday. In the skiff. Gus is taking us."
 
-"I know you fell in. I have a photograph." Their mother held him off at arm's length. She looked him up and down like a job. "Boots off. Both of you. Not on the mat, on the step. Then the wet things go straight into the washer, and you go straight in the shower. I don't want to see either of you again until you're a color."
+"I know you fell in. I have a picture." Their mother held him off at arm's length. She looked him up and down like a job. "Boots off. Both of you. Not on the mat, on the step. Then the wet things go straight into the washer, and you go straight in the shower. I don't want to see either of you again until you're a color."
 
 "Which color," said Caleb.
 
@@ -94,13 +94,13 @@ Caleb came in behind her, rained on. He saw nothing but his mother and the smell
 
 She was still in the Tidewater fleece, zipped to the chin. She had come straight from the bench. She had not changed. Nora noticed that the way she noticed the time on a clock she was not looking at.
 
-Half an hour later, Nora stood on the back step in the dark and did the boots. She was clean and in dry clothes. Her hair was wet down her back. The outside faucet was running.
+Half an hour later, Nora stood on the back step in the dark and cleaned the boots. She was clean and in dry clothes. Her hair was wet down her back. The outside faucet was running.
 
 You did not just leave field boots. The mud on Caleb's had gone to a gray paste. It had to be scraped off on the edge of the step first. Then the boots went under the faucet. Then the laces came out.
 
 Then the boots got stuffed with newspaper, so they would dry into the shape of feet. Caleb stood at her shoulder with the gloves and held the headlamp. Mostly he held it on her hands. Sometimes, when he forgot, he held it on the firs.
 
-The gloves got rinsed and wrung. The net bag got shaken out over the step. A great deal of Tern Island came out of it. Weed. Grit. One small dead fly in a bee costume. Caleb picked it up and looked at it for longer than a person should look at a dead fly.
+The gloves got rinsed and wrung. The net bag got shaken out over the step. A great deal of Tern Island came out of it. Seaweed. Grit. One small dead fly in a bee costume. Caleb picked it up and looked at it for longer than a person should look at a dead fly.
 
 "Put it down."
 
@@ -110,7 +110,7 @@ The gloves got rinsed and wrung. The net bag got shaken out over the step. A gre
 
 He brought the bag in. The kitchen was warm. The window over the sink had gone black and turned into a mirror. Nora hung the net bag and the gloves over the heater under it.
 
-In a minute the whole room smelled of warm low tide on top of onions. Their mother was at the stove. She did not so much as turn her head. She knew what field kit smelled like.
+In a minute the whole room smelled of warm low tide on top of onions. Their mother was at the stove. She did not so much as turn her head. She knew what field gear smelled like.
 
 "Talk," she said, to the pot. "Both of you. From the beginning."
 
@@ -124,27 +124,27 @@ So they told her the fun one.
 
 Caleb did the talking, because Caleb was the talking. He did the mud, with actions. He did Marco laughing so hard he had to hold his knees. He did the gull. The gull had grown since lunch.
 
-It was now roughly the size of a dog, and it had looked him in the eye. Their mother laughed, properly. It was the laugh she had when she had forgotten to be tired. She had to put the spoon down.
+It was now roughly the size of a dog, and it had looked him in the eye. Their mother really laughed. It was the laugh she had when she had forgotten to be tired. She had to put the spoon down.
 
-"And then the ants," Caleb said. "Mom. Big ones. Black, with rusty legs. They were coming out of this log at the top of the beach in a line, and they were all *carrying* something. Babies. Little white ones, like rice. Some of them had grubs as big as themselves, held out in front, like a man carrying a rolled-up carpet. Some of them were carrying other ants. Just picked them up and carried them. And they went up the beach and up the hill, all the way to the top, to a stump, and they went in. They were moving house. In the middle of the day."
+"And then the ants," Caleb said. "Mom. Big ones. Black, with rusty legs. They were coming out of this log at the top of the beach in a line, and they were all *carrying* something. Babies. Little white ones, like rice. Some of them had grubs as big as themselves, held out in front, like a man carrying a rolled-up rug. Some of them were carrying other ants. Just picked them up and carried them. And they went up the beach and up the hill, all the way to the top, to a stump, and they went in. They were moving out. In the middle of the day."
 
 "Why," said their mother.
 
 "Because the log was wet. Underneath. It was soaking, higher up than it should've been. I think they knew before anybody."
 
-"Marco says he lay down in the weed," said Nora. "On his stomach. And then he followed them up a hill and Marco had to shout."
+"Marco says he lay down in the seaweed," said Nora. "On his stomach. And then he followed them up a hill and Marco had to shout."
 
 "I could hear Marco fine."
 
 "He shouted anyway."
 
-Their mother had turned around now, with the spoon. She was looking at Caleb the way she looked at him when he was small and had brought something in from the garden in his hands. She pointed the spoon at the table. "Plates."
+Their mother had turned around now, with the spoon. She was looking at Caleb the way she looked at him when he was small and had brought something in from the yard in his hands. She pointed the spoon at the table. "Plates."
 
-Nora did the numbers while Caleb did the plates. The numbers were hers, and Caleb would have got them wrong. The low water had been fifteen centimeters above the table. Same minute. The pressure had dropped four in an hour.
+Nora gave the numbers while Caleb got the plates. The numbers were hers, and Caleb would have gotten them wrong. The low water had been fifteen centimeters above the table. Same minute. The pressure had dropped four in an hour.
 
 On the screen, the line had gone down like a cliff. The wind had gone around to the south, with weight in it. She said it plainly, like a report, because it had been one.
 
-Her mother listened to all of it with her back to the pot. That was the first thing. She did not say *goodness* or *my girl*. She did not say any of the things she said when Nora explained a spreadsheet. She listened like a person at a bench.
+Her mother listened to all of it with her back to the pot. That was the first thing. She did not say *wow* or *look at you go*. She did not say any of the things she said when Nora explained a spreadsheet. She listened like a person at a bench.
 
 "What did the unit read at the low," she said. "The number. Not the table, the number."
 
@@ -152,7 +152,7 @@ Nora told her.
 
 "Step, or ramp?"
 
-Nora looked at the back of her mother's head. "Sorry?"
+Nora looked at the back of her mother's head. "What?"
 
 "The pressure. When it dropped." The spoon drew it in the air. A stair, and then a slope. "Did it go down in a step, or did it slide? A step is an instrument. A ramp is weather."
 
@@ -164,11 +164,11 @@ Nora looked at the back of her mother's head. "Sorry?"
 
 "Get it Saturday."
 
-Then her mother put the spoon down. She turned around properly. "And you crossed in *that*," she said, in her real voice. She came across the kitchen and put a hand flat on the top of Nora's wet head, and left it there.
+Then her mother put the spoon down. She turned all the way around. "And you crossed in *that*," she said, in her real voice. She came across the kitchen and put a hand flat on the top of Nora's wet head, and left it there.
 
 "Ankle deep," said Nora, under the hand. "Then shin. Caleb went first with a pole and called the line. It was fine."
 
-"It was fine," said Caleb, from the plates, "and it was also the best day of my life."
+"It was fine," said Caleb, from the cabinet, "and it was also the best day of my life."
 
 "Those can both be true," said their mother. She went back to the pot. "Sit."
 
@@ -180,11 +180,11 @@ The jars stood in their row with their slips inside. That was when she weighed t
 
 Nobody had asked her to. The net bag hung over the heater. It was dry now, and stiff. There was a white bloom of salt in every seam. It smelled like low tide, warmed up.
 
-Nora took it down and folded it. She set it on her mother's kitchen scale, the little flat one that read in grams. Then she went to the hall and got her kit sheet out of the front pocket of her pack.
+Nora took it down and folded it. She set it on her mother's kitchen scale, the little flat one that read in grams. Then she went to the hall and got her gear sheet out of the front pocket of her pack.
 
 "Oh no," said Caleb. "She's got the sheet."
 
-The sheet was every piece of kit she carried, with its dry weight, in a column. She had weighed everything on her first day at the station.
+The sheet was every piece of gear she carried, with its dry weight, in a column. She had weighed everything on her first day at the station.
 
 "Net bag. Three forty, dry." She read the scale. "Four oh two." She looked up. "Sixty-two grams of salt."
 
@@ -192,9 +192,9 @@ The sheet was every piece of kit she carried, with its dry weight, in a column. 
 
 "Sand falls out. I shook it. Salt stays."
 
-"Thirty-five grams to the liter, love." Their mother did not look up from the pot. "You'd need two liters of seawater held in a mesh bag to leave that behind. You didn't dip it in the sea. You dragged it through wet weed. That's sand, and grit, and half a plant. Ten grams of that is salt. If you're lucky."
+"Thirty-five grams to the liter, hon." Their mother did not look up from the pot. "You'd need two liters of seawater held in a mesh bag to leave that behind. You didn't dip it in the ocean. You dragged it through wet seaweed. That's sand, and grit, and half a plant. Ten grams of that is salt. If you're lucky."
 
-There was a pause. Nora did the sum. It was right.
+There was a pause. Nora did the math. It was right.
 
 "It weighed sixty-two," Nora said. She put the bag back on the heater. "I'm calling it salt."
 
@@ -220,17 +220,17 @@ He was squinting into sun. There was a boat's rail behind him. Nobody looked at 
 
 "Once," said their mother. "The second time was you." She was smiling, because she had been there. For a moment the whole table was the same warm thing.
 
-Then Caleb spoke with his mouth full, out of nowhere, in the way that was the whole of Caleb. "Did Dad ever work out there?"
+Then Caleb spoke with his mouth full, out of nowhere, in the way that was pure Caleb. "Did Dad ever work out there?"
 
-The moth arrived at the window at the same moment. It was nothing. It was a fat brown moth banging at the glass. But Nora looked at the moth and not at her mother. So she heard the fork go down, rather than saw it.
+The moth arrived at the window at the same moment. It was nothing. It was a fat brown moth banging at the glass. But Nora looked at the moth and not at her mother. So she heard the fork go down instead of seeing it.
 
 "Out where."
 
-"The station. Alder Sound. There's a corridor with all these photos, going back forever, people on boats, and it's the kind of place— I just wondered. If he was ever in one."
+"The station. Alder Sound. There's a hallway with all these photos, going back forever, people on boats, and it's the kind of place— I just wondered. If he was ever in one."
 
 Her mother put the bread down. She put her hands flat on the table, one each side of her plate. She looked at Caleb. Her face was kind, and it was closed. A door can be both.
 
-"Your father did research," she said. "He went out on a research trip. The boat was lost off the coast. Nobody was ever found. Eighteen years ago. That's the whole of it." She picked the bread back up. "Pass your brother the salt."
+"Your father did research," she said. "He went out on a research trip. The boat was lost off the coast. Nobody was ever found. Eighteen years ago. That's the whole story." She picked the bread back up. "Pass your brother the salt."
 
 The salt was already at Caleb's elbow. Nora passed it anyway.
 
@@ -260,7 +260,7 @@ Nora and Caleb looked at each other. One look. They both understood the same thi
 
 Of course she had wanted to know which island. And Nora, alone, understood the rest of it. The third text, the one Caleb had never seen.
 
-*Ok. Straight home after. Both.* It had come inside a minute, and Mom never answered anything from the bench inside an hour. Nora had carried it around all afternoon like a stone in a boot. Now it was the most obvious thing in the world. She felt it go light. She was ashamed of herself, a little, and glad. The piece of paper stayed where it was.
+*Ok. Straight home after. Both.* It had come inside a minute, and Mom never answered anything from the bench inside an hour. Nora had carried it around all afternoon like a rock in her shoe. Now it was the most obvious thing in the world. She felt it go light. She was ashamed of herself, a little, and glad. The piece of paper stayed where it was.
 
 "It was fine, Mom," said Caleb, gently, for once. "Really."
 
@@ -274,7 +274,7 @@ The jars went in their sleeve. The gloves came off the heater stiff and were wor
 
 The net bag went in folded, still smelling of the island. The spare battery went into the bottom of her own pack, unswapped. It was still her job.
 
-Caleb sat on the floor with his back against the cupboards and handed her things in the order she asked for them. For a while he did not talk. That was his way of saying he was still cross and had decided not to be.
+Caleb sat on the floor with his back against the cabinets and handed her things in the order she asked for them. For a while he did not talk. That was his way of saying he was still mad and had decided not to be.
 
 "Six point four," she said, when she hooked her pack on the luggage scale. She looked at him.
 
@@ -284,9 +284,9 @@ Caleb sat on the floor with his back against the cupboards and handed her things
 
 "Nora." He was nearly smiling. "You had your fun this morning. Let me live."
 
-She let him live. The packs went by the front door, side by side, ready for Saturday. They stood in the hall by the shelf where the keys were. She went up to bed. The rain was coming properly now, at last, in long pushes against the side of the house.
+She let him live. The packs went by the front door, side by side, ready for Saturday. They stood in the hall by the shelf where the keys were. She went up to bed. The rain was coming for real now, at last, in long pushes against the side of the house.
 
-She woke at a quarter past eleven, thirsty. She lay for a minute and listened to the firs. Then she went down for water. She went the way she had gone down for water her whole life, on the outside edges of the stairs, where they did not creak. She had worked out where they creaked when she was six. She had never had to work it out again.
+She woke at eleven fifteen, thirsty. She lay for a minute and listened to the firs. Then she went down for water. She went the way she had gone down for water her whole life, on the outside edges of the stairs, where they did not creak. She had figured out where they creaked when she was six. She had never had to figure it out again.
 
 The kitchen light was off. The hall light was off. There was only the porch light, coming through the glass in the door. It laid a long yellow shape across the mat and the two packs and the floor.
 

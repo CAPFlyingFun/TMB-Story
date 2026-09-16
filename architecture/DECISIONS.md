@@ -101,6 +101,7 @@ file is updated.
 ### 0012 — US English
 **Context:** Chapters 1 and 2 mixed "Mom" with British spelling and vocabulary (colour, metres, car park, trousers, maths, half twelve). Asked which English the series speaks, Joshua: "make it US English, not UK English."
 **Decision:** American spelling and vocabulary in all prose, bible and outline text. Metric units stay, spelled the American way (meters, centimeters, liters), because the characters are field scientists. Applied to the approved Chapter 1 on Joshua's instruction alongside his eleven approved proofing fixes, and to Chapter 2 in review; the bible, outline and review files converted in the same pass. `architecture/` is a historical record and is not edited.
+**Amendment (Joshua, 2026-09-16):** US English is idiom and vocabulary, not only spelling. "Then wear them wetter" is a British joke shape; the American line is "Wear them wet. Sorry about that." A watch-list of British idioms lives in `docs/STYLE_GUIDE.md` and `scripts/style-check.py` flags them. Applied to both chapters: properly, love, Sorry?, cross, another go, in the wet, kit, do the boots, the state of you, moving house, carpet, corridor, cupboards, weed, the sea, parcel, backwards, work out, garden, half past, and the fixed words' closer "That's the whole of it" becomes "That's the whole story" (bible updated; M33 wording is provisional until batch approval).
 **Consequences:** `CLAUDE.md` carries the rule. The specialists' review passes flag British forms.
 **Status:** Accepted, 2026-09-16.
 

@@ -106,3 +106,29 @@ After: "She was standing at the shelf by the door. That was where the keys lived
 and the photograph. She had a sheet of paper in her hands. As the door opened she
 folded it in three, quick and neat, the way you fold a letter that came in an
 envelope. She slid it into the back pocket of her jeans."
+
+## US English is idiom, not just spelling (decision 0012, amended)
+
+Joshua, 2026-09-16: "Then wear them wetter" is not normal US English; "Wear them
+wet. Sorry about that." is. The spelling pass caught colour and metres; the ear
+catches the rest. Watch-list, all checked by `scripts/style-check.py`:
+
+| British | US |
+|---|---|
+| properly ("laughed properly", "dry them properly") | really, all the way, right |
+| love (as an endearment), Sorry? | hon, sweetheart; What? |
+| cross (angry), another go, in the wet | mad, round two / another try, in the rain |
+| kit, field kit, kit sheet | gear, field gear, gear sheet |
+| do the boots / plates / numbers / sum | clean the boots, get the plates, give the numbers, do the math |
+| the state of you, moving house | look at you, moving out |
+| corridor, cupboard, garden, carpet (rolled) | hallway, cabinet, yard, rug |
+| weed (on a beach), the sea | seaweed; the ocean, the tide, the water |
+| parcel, backwards, work out | package, backward, figure out |
+| half past seven, a quarter to seven | seven thirty, six forty-five |
+| the whole of it | the whole story, all of it |
+| have got, had got | have, had gotten |
+| whilst, quite, rather, a bit, brilliant, rubbish, sorted, mate | do not use |
+
+A dry British joke shape ("Then wear them wetter") reads as odd rather than funny
+to a US listener. Marco's jokes are American: a shrug, a fake apology, a made-up
+rule.

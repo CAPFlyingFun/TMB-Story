@@ -45,7 +45,7 @@ Individual entry template:
 ### Carpenter ant (Camponotus sp., unnamed on the page)
 - **Size relative to a human:** ordinary; the twins are full-size in Part One.
 - **Real behavior that matters:** nests in damp, decaying wood; a colony whose nest is flooded or soaked relocates brood, in daylight if it must, along an existing trail to a drier site; workers carry larvae and pupae (pale, rice-sized; larger larvae held out in front) and may carry other workers curled beneath them (adult transport). None of this is weather foresight; it is a reaction to a wet nest. Species and Latin name are bible-only; the page says "big ones, black, with legs the color of rust".
-- **On the page:** a colony in a drift log at Tern Island's wrack line, soaked from underneath on the surge day, moves its brood up the beach, across the trail and into an old stump at the edge of the summit clearing. Caleb reads it as "moving house" and follows the line to the summit. `[ch 0001]`
+- **On the page:** a colony in a drift log at Tern Island's wrack line, soaked from underneath on the surge day, moves its brood up the beach, across the trail and into an old stump at the edge of the summit clearing. Caleb reads it as "moving out" and follows the line to the summit. `[ch 0001]`
 - **Locked / provisional:** provisional (species); the summit-stump colony is canon.
 
 ### Large yellow underwing (*Noctua pronuba*)

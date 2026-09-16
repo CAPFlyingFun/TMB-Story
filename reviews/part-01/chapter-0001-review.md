@@ -234,3 +234,8 @@ before and after: average sentence 11.3 → 8.3 words; narration sentences over 
 words 10% → 0%; commas 0.80 → 0.38 a sentence; "and" 0.49 → 0.22. Word count
 3,392. Per decision 0016 the chapter stays `in-review` with Chapters 1–10 for
 batch approval, unless Joshua approves it sooner.
+
+## US idiom pass (decision 0012 amended, 2026-09-16)
+
+Twenty-two idiom changes: properly, moving house, carpet, corridor, weed, the sea,
+parcel, backwards, work out, the clock phrases. The checker reads zero British-isms.

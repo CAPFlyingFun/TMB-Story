@@ -83,8 +83,11 @@ These are craft invariants. The prose is heard, not seen.
   who is speaking often enough that a listener never has to count back.
 - **US English (Joshua, 2026-09-16, decision 0012).** American spelling and
   vocabulary throughout: color, gray, meter, math, parking lot, pants, gotten,
-  twelve-thirty, turn around, faucet, washer. The science stays metric because the
-  characters are field scientists. "Mom", never "Mum".
+  twelve thirty, turn around, faucet, washer. The science stays metric because the
+  characters are field scientists. "Mom", never "Mum". It is IDIOM as much as
+  spelling: no "properly", "love", "Sorry?", "cross", "a go", "kit", "corridor",
+  "the state of you", "half past"; the watch-list is in `docs/STYLE_GUIDE.md` and
+  `scripts/style-check.py` flags it. A joke has to be an American joke.
 - **The plain register (Joshua, 2026-09-16, decision 0015).** The prose must be
   understood by a five-year-old and a hundred-and-five-year-old on one hearing. The
   model is Beyond Extinction's finished chapters, analyzed in `docs/STYLE_GUIDE.md`:

@@ -51,6 +51,44 @@ def report(path):
     for p in lp:
         print(f"    {len(words(p)):3d}w  {p[:110]}")
 
+BRITISH = [
+    (r"\bproperly\b", "properly -> all the way / really / right"),
+    (r"\blove\b(?=[,.!?\"])", "love (endearment) -> hon / sweetheart"),
+    (r"\bSorry\?", "Sorry? -> What?"),
+    (r"\bcross\b(?! the| it| to| over| out| off| a )", "cross (angry) -> mad"),
+    (r"\b(another|a|one more) go\b", "a go -> a try / round two"),
+    (r"\bin the wet(?=[.,;!?])", "in the wet -> in the rain / when it's wet"),
+    (r"\bkit\b", "kit -> gear"),
+    (r"\bthe state of you\b", "the state of you -> look at you"),
+    (r"\bmoving house\b", "moving house -> moving out / moving"),
+    (r"\bcarpet\b", "carpet (rolled) -> rug"),
+    (r"\bcorridor\b", "corridor -> hallway"),
+    (r"\bcupboards?\b", "cupboard -> cabinet"),
+    (r"\bweed\b(?!s)", "weed (shore) -> seaweed"),
+    (r"\bthe sea\b", "the sea -> the ocean / the tide / the water"),
+    (r"\bparcel\b", "parcel -> package"),
+    (r"\bbackwards\b", "backwards -> backward"),
+    (r"\bworked? (it )?out\b", "work out -> figure out"),
+    (r"\bgarden\b", "garden (yard) -> yard"),
+    (r"\bhalf past\b|\bquarter (to|past)\b|\bhalf (one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\b", "clock -> six forty-five / ten thirty"),
+    (r"\bthe whole of it\b", "the whole of it -> the whole story / all of it"),
+    (r"\bwhilst\b|\bquite\b|\brather\b|\ba bit\b|\bbrilliant\b|\brubbish\b|\bsorted\b|\bmate\b|\bbloke\b|\bqueue\b|\bflat\b(?= (above|below|upstairs|downstairs))|\btorch\b|\btap\b|\bbin\b|\bjumper\b|\btrousers\b|\bholiday\b|\bfortnight\b|\bpost\b(?= (came|arrived|box))|\bpetrol\b|\blorry\b|\bpavement\b|\bmaths\b|\bMum\b|\bat the weekend\b|\bdifferent to\b|\bin hospital\b|\bhad got\b|\bhave got\b|\bhas got\b", "British word"),
+    (r"\bthe sum\b", "the sum -> the math"),
+    (r"\bdid the (boots|plates|numbers|dishes|jars)\b", "did the X -> cleaned / got / gave"),
+]
+
+def british(path):
+    t = prose(path)
+    hits = []
+    for pat, note in BRITISH:
+        for m in re.finditer(pat, t):
+            s = max(0, m.start() - 40); e = min(len(t), m.end() + 40)
+            hits.append((note, t[s:e].replace('\n', ' ')))
+    print(f"  british-isms: {len(hits)}")
+    for note, ctx in hits[:40]:
+        print(f"    {note:45s} ...{ctx}...")
+
 if __name__ == '__main__':
     for p in sys.argv[1:] or ['chapters/part-01/chapter-0001.md']:
         report(p)
+        british(p)
