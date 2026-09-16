@@ -4,7 +4,7 @@ title: "The Bar"
 part: 1
 mini_arc: 1
 pov: Caleb
-word_count: 2875
+word_count: 2990
 story_time:
   clock: outside
   date: "Year 0, first week of October (a Tuesday)"
@@ -19,6 +19,7 @@ status_changes:
   - "Left behind on purpose: the shore logger's spare battery unswapped, the bird count unfinished, the download not finished (Nora has the live trace on the laptop, not the file); a return trip is needed"
   - "Lost: one transect stake, taken by the current at the saddle"
   - "Knowledge: Caleb saw the summit box while following the ants and registered only that it was clean and dry on a rusting hilltop; Nora did not see it"
+  - "Rachel, by text, replied to the mud photo with a joke and then asked which island; Nora answered Tern; Rachel replied again at once. Caleb did not see either reply. Nora noticed the second question and did not say so"
 mysteries:
   introduced: []
   advanced: []
@@ -33,8 +34,8 @@ new_canon:
   - "Ants on Tern Island moved brood in daylight from a wet drift log at the wrack line up an existing trail to a stump at the edge of the summit clearing, on the day of the surge"
   - "Ines Marchetti: 'Good catch. Both of you.' 'It was both, which is why I'm keeping you.'"
   - "Ines's rule: off the bar by half past twelve, back at the station by one. She does not spend margin."
-playable_beat_flow: ["load gear at the boathouse", "cross the bar on the falling tide", "count birds on the spit", "sweep for pollinators", "get stuck in the lee-side mud", "follow the ant column uphill", "glimpse the summit box", "regroup with Nora and compare findings", "report to Ines", "pack equipment", "navigate the flooding saddle with a pole", "return to the van"]
-ending_type: funny character beat
+playable_beat_flow: ["load gear at the boathouse", "cross the bar on the falling tide", "count birds on the spit", "sweep for pollinators", "get stuck in the lee-side mud", "follow the ant column uphill", "glimpse the summit box", "regroup with Nora and compare findings", "report to Ines", "pack equipment", "navigate the flooding saddle with a pole", "return to the van", "read Mom's texts"]
+ending_type: unanswered question
 review_status: in-review
 audio_status: not-started
 approved_on: ""
@@ -96,9 +97,7 @@ He went in to the shin with both feet, and when he pulled the first one out the 
 
 Ines did not laugh. She waited until he had squelched back onto the crest and said, "Now you know," and walked on. It took Caleb half the bar to work out that she was not annoyed. She was pleased.
 
-***
-
-Up close the island kept unfolding: a beach where the bar landed, with a long line of dark weed and silver logs where the sea had left its laundry; a trail going up through alders into the firs; and on the far side the spit, a low gravel finger with pools in it and birds all over it.
+An hour later, at the island end of the bar, it was full daylight and the island was a different animal. Up close it kept unfolding: a beach where the bar landed, with a long line of dark weed and silver logs where the sea had left its laundry; a trail going up through alders into the firs; and on the far side the spit, a low gravel finger with pools in it and birds all over it.
 
 Ines split them at the beach. She and Nora went to the shore logger, a box on a post at the top of the lee beach with a wire running down the beach into the water, and a second little box beside it that Nora called *the pressure logger* and Marco called *the other one.* Download the memory, read the trace, swap the battery. Caleb and Marco took the count sheets and the binoculars along the transect, the marked line of stakes along the top of the beach, out to the spit.
 
@@ -218,9 +217,7 @@ Ines came last, on the right-hand line Caleb had called, not wet above the shin,
 
 "It was both," said Ines, "which is why I'm keeping you," and got in the van.
 
-***
-
-In the van, with the heater roaring and the smell of wet everything, Nora took out the luggage scale.
+Ten minutes down the road, with the heater roaring and the smell of wet everything, Nora took out the luggage scale.
 
 "No," said Caleb.
 
@@ -243,3 +240,17 @@ She hooked his pack. "Five point nine." She hooked her own, and it took two hand
 "Four hundred grams," said Marco. "Bennett loses to a wet glove."
 
 Ines drove, and said nothing at all, and Caleb was fairly sure, from the back of her head, that she was smiling.
+
+Nora's phone buzzed against the dry bag. She looked at it and laughed. "Mom. About the picture. 'Boots go ON the gravel, Caleb.'"
+
+"Tell her I know that now."
+
+It buzzed again. Nora read it, and this time she did not laugh, and did not read it out. Her thumbs started to move, and stopped.
+
+"What?"
+
+"Nothing. She wants to know which island."
+
+"So tell her. It's not a secret."
+
+"It isn't," Nora said, and typed *Tern*, and sent it, and the phone lit up again before she had put it down.

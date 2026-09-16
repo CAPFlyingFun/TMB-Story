@@ -1,6 +1,6 @@
 # Chapter 0001 — The Bar — handoff report
 
-Date: 2026-09-16 · POV: Caleb · Words: 2,875 · Ending type: funny character beat ·
+Date: 2026-09-16 · POV: Caleb · Words: 2,990 · Ending type: unanswered question ·
 Status: `in-review`, waiting on Joshua.
 
 Source of the plan: Trello card `01 — The Bar` in the `📖 STORY — Chapters 1–50`
@@ -11,7 +11,7 @@ and its report are kept as `chapter-0001-review-RETIRED-boatyard.md` for history
 
 ## What the chapter does
 
-Three scenes, one field day, six hours. Scene one: the boathouse at six, the
+Three scenes, one field day, six hours, joined by spoken transitions rather than breaks. Scene one: the boathouse at six, the
 luggage-scale argument, the van, the bar coming up out of the water, Ines's rule
 (off the bar by half past twelve, back at the station by one), and Caleb in the
 lee-side mud at half past seven. Scene two: the island. Ines splits the team;
@@ -24,13 +24,30 @@ high at low and the pressure falling; the two halves of the warning meet in the
 twins and go to Ines, who verifies against Gus's station reading and pulls the team
 ninety minutes early, leaving the battery swap, the count and the download for a
 return trip. The saddle crossing with the pole. Scene three: the van, the scale,
-and Caleb losing to a wet glove.
+Caleb losing to a wet glove, and Rachel's texts.
+
+## Round two (Joshua's notes, 2026-09-16)
+
+Joshua: "95% there." Two changes, both now standing rules (decision 0009):
+
+- **No `***` scene breaks.** Both replaced with spoken transitions: "An hour later,
+  at the island end of the bar, it was full daylight" and "Ten minutes down the
+  road".
+- **The ending hooks Chapter 2.** The scale gag stays, then Nora's phone: Rachel's
+  joke about the boots, a second text asking which island (Nora reads it and does
+  not read it out), Nora sends "Tern", and the phone lights up again before she has
+  put it down. Caleb sees none of the replies. That is the door Chapter 2's card
+  opens on (Rachel folding a letter; her one professional question too many about
+  the surge), and it reveals nothing: a mother who services those loggers asking
+  which island is deniable. `ending_type` is now "unanswered question"; Chapter 2
+  may not end on one. Nora knowing something Caleb does not is the Chapter 2
+  character note, started here.
 
 ## Word count
 
-The chapter runs 2,875 words against a ceiling of 2,500 (decision 0001). Two cutting
-passes brought it from 3,385 to 2,989 to 2,875; the remaining overage is a beat, not
-fat. The nearest clean cut is the pollinator sweep (about 110 words: the empty bag,
+The chapter runs 2,990 words against a ceiling of 2,500 (decision 0001). Two cutting
+passes brought it from 3,385 to 2,875; the hook added 115. The remaining overage is
+a beat, not fat. The nearest clean cut is the pollinator sweep (about 110 words: the empty bag,
 "zero is science", the fly in a bee costume); the next is the plovers and the
 sanderlings in the bird count (about 50). I did not take either, because the card
 names the sweep as a beat and the count is where Caleb's "best job in the world"
@@ -117,7 +134,8 @@ lands. Joshua's call: approve at this length, or name the beat to lose.
   nine-year spreadsheet; Nora's luggage scale).
 - `bible/MYSTERIES.md` M34: clue-table row for the box as first seen (Ch 1, Caleb,
   registered as nothing); who-knows-what: Caleb has seen it, Nora has not, neither
-  knows it matters.
+  knows it matters. M13: Rachel asked which island by text and replied at once;
+  Nora noticed, Caleb did not.
 - `bible/TIMELINE.md`: Year 0, Tuesday, first week of October; the surge day.
 - `bible/CHAPTER_INDEX.md`: row for 0001 on approval.
 
@@ -135,7 +153,9 @@ lands. Joshua's call: approve at this length, or name the beat to lose.
 - Past tense, close third, one POV (Caleb): yes.
 - Three scenes: yes.
 - Longest unbroken exposition: the van paragraph, under 120 words.
-- Ending type: funny character beat; no previous chapter to clash with.
+- Ending type: unanswered question; no previous chapter to clash with. The hook
+  leads into Chapter 2's opening (Rachel and the letter) without revealing it.
+- No `***`; both transitions spoken.
 - Voice follows mood: light in the boathouse, the count and the van; weight from
   "He noticed the spit before he understood it" to the mainland side of the saddle.
 - Humour from relationship, not jokes: the scale, the sandwich, "technically a

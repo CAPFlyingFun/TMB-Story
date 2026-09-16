@@ -82,6 +82,18 @@ These are craft invariants. The prose is heard, not seen.
   betrayal, piece of evidence, creature encounter. Never two of the same type back to
   back; never default to "sudden danger." The previous chapter's `ending_type` is in
   `bible/CHAPTER_INDEX.md`.
+- **Every ending hooks the next chapter (Joshua, 2026-09-16, decision 0009).** A
+  chapter never simply finishes; its last lines give the listener a reason to press
+  play on the next one. Ways in: a line of dialogue cut off unfinished, an event, a
+  sound, an arrival, an action started and not completed, a message received and not
+  read out. The hook must lead into what the next chapter's plan actually does, and
+  it must not reveal early. A funny or warm beat can still be the ending; it comes
+  before the hook, not instead of it.
+- **Time passing is said, never drawn.** No `***`, no row of asterisks, no blank
+  gap between scenes. A listener cannot hear a scene break, so the prose states it:
+  "An hour later, at the island end of the bar", "Ten minutes down the road", "That
+  night, after everyone had gone up". The transition names the time and, when the
+  place changes, the place.
 - **Humor** arises from the relationships, not from jokes.
 - **Insects stay structural.** Every Part needs at least one insect-driven beat that
   materially changes human stakes.

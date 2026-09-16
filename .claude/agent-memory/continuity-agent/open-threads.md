@@ -1,6 +1,6 @@
 # Open threads — what the next chapter must honour
 
-MA1: = outline/part-01/mini-arc-01.md (PLAN, decision 0008; line refs at dd8b7cb). ch: = chapters/part-01/chapter-0001.md (DRAFT at dd8b7cb, review_status: draft).
+MA1: = outline/part-01/mini-arc-01.md (PLAN, decision 0008; line refs at dd8b7cb). ch: = chapters/part-01/chapter-0001.md (DRAFT, review_status: in-review; line refs may have drifted after the 2026-09-16 hook rewrite).
 
 ## Ch 0001 "The Bar" — DRAFT hand-off audit (2026-09-16 review pass)
 Met on the page: luggage scale is Nora's, verdict 400 g, "I said." "You said." (ch:51, :235-247) · battery + count left ("Battery stays. Count stays.", ch:195) · one stake lost at the saddle (ch:209) · box glimpsed by Caleb ALONE while following the ants, tag unread, not approached, padlocked, "clean and dry" (ch:147) · ants to a summit stump (ch:145) · gull/sandwich (ch:117) · mud photo sent to "his mother", no location, Rachel unnamed (ch:91-93) · Nora's trace + printed table + "pressure logger" (ch:101, :175) · Ines's two lines verbatim (ch:217, :223) · Marco two packs (ch:201) · Gus radio only, no Mercer (ch:191-195) · no injuries (frontmatter ch:18) · no two-count, no "twin thing", no fixed words, no "station manager" ✓ · ends in the van BEFORE any arrival → Ch 2's dusk drop is a second ride ✓ · mysteries all empty ✓.
@@ -37,3 +37,8 @@ Not met / changed by the draft (carry forward):
 12. Decision 0008 flags: Trello 41–50 card crosses ~Ch 50 vs LOCKED spider-rescue ending; duplicate ten-chapter cards; TypeScript board lacks "10 — Low Water" (MA1:419). Not Ch 1's.
 
 ## RETIRED hand-offs (boatyard draft): the customer "tomorrow after four"; the wasps; Nora's non-reaction to the recitation; the pocketed paper (re-adopted as Ch 2's letter, MA1:119-121).
+
+## Added 2026-09-16 (hook rewrite, decision 0009) — Ch 2 must honour
+- Ch 1 now ENDS in the van on Rachel's texts: reply 1 to the mud photo, a joke ("Boots go ON the gravel, Caleb"); reply 2 asks WHICH ISLAND; Nora types "Tern" and sends it; the phone lights up again at once. Caleb never sees reply 2 or reply 3; Nora reads them and says nothing. Ch 2 (Nora POV) owns what reply 3 said and whether Nora tells Caleb. Rachel therefore KNOWS the island's name before the dusk drop-off and before the dinner telling.
+- Ch 1 ending_type is now "unanswered question", not "funny character beat". Ch 2 may not end on an unanswered question.
+- The two `***` breaks are gone; transitions are spoken ("An hour later, at the island end of the bar", "Ten minutes down the road"). Ch 2 must do the same.

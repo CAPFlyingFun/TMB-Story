@@ -57,4 +57,8 @@ raised and then forgotten. Suggest the smallest fix for each. Do not rewrite.
 - Cite the file and line or quoted phrase for every claim about canon.
 - If the outline, bible and architecture disagree, name the conflict; do not resolve
   it yourself.
+- In review mode, check two audiobook rules from `CLAUDE.md` (decision 0009): the
+  chapter's last lines hook the NEXT chapter's plan without revealing early, and
+  every passage of time is spoken ("an hour later, at the spit"), never marked with
+  `***` or a blank gap.
 - Be short. Ranked lists over essays. The main session decides.
