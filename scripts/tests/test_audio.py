@@ -435,6 +435,26 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(first, "generate",
                          "the step that holds the API key must name its subcommand")
 
+    def test_combine_runs_with_ffmpeg_and_refuses_a_gapless_export(self):
+        """The pauses are the whole reason pauses live in the manifest.
+
+        Chapter 1's first export was byte-identical to its own clips concatenated,
+        because the ubuntu-24.04 runner image has no ffmpeg and combine quietly took
+        its gapless fallback. A silent fallback in CI is a wrong file committed, so
+        the runner installs ffmpeg first and the step fails if the fallback speaks.
+        """
+        text = self.text
+        install = text.find("apt-get install")
+        combine = text.find("scripts/audio.py combine")
+        self.assertNotEqual(combine, -1, "the workflow should combine what it generates")
+        self.assertNotEqual(install, -1, "the runner has to install ffmpeg itself")
+        self.assertLess(install, combine, "ffmpeg must be installed before combining")
+        step = text[combine:combine + 600]
+        self.assertIn("without gaps", step,
+                      "the combine step must detect the gapless fallback")
+        self.assertIn("exit 1", step,
+                      "a gapless export must fail the run rather than be committed")
+
     def test_the_secret_is_never_interpolated_into_a_shell_line(self):
         self.assertIn("secrets.ELEVENLABS_API_KEY", self.text,
                       "the workflow has to read the secret from somewhere")

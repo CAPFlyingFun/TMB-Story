@@ -79,11 +79,28 @@ jobs:
           fi
           python3 scripts/audio.py "${ARGS[@]}"
 
+      - name: Install ffmpeg
+        if: inputs.mode != 'dry-run'
+        # NOT preinstalled: the ubuntu-24.04 runner image dropped ffmpeg, which is how
+        # the first Chapter 1 export came out exactly the length of its own clips with
+        # none of the manifest's 60 seconds of pauses in it.
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          ffmpeg -version | head -1
+
       - name: Combine each chapter into one listening file
         if: inputs.mode != 'dry-run'
-        # ffmpeg is preinstalled on ubuntu-latest, so the manifest's pauses are
-        # honoured here. combine never deletes the individual clips.
-        run: python3 scripts/audio.py combine --chapters "${{ inputs.chapters }}"
+        # combine never deletes the individual clips; they stay the master assets.
+        run: |
+          set -o pipefail
+          python3 scripts/audio.py combine --chapters "${{ inputs.chapters }}" | tee combine.log
+          if grep -q "without gaps" combine.log; then
+            echo "::error::combine fell back to a gapless join, so the export carries none"
+            echo "::error::of the manifest's pauses. ffmpeg is missing on this runner."
+            exit 1
+          fi
+          rm -f combine.log
 
       - name: Rebuild the game dialogue export
         if: inputs.mode != 'dry-run'
