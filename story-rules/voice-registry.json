@@ -22,20 +22,22 @@
       "name": "Narrator",
       "audioKey": "narrator",
       "kind": "narration",
-      "elevenLabsVoiceId": null,
+      "elevenLabsVoiceId": "GoGUcAZovo4MFeLxJdZd",
       "voiceVersion": 1,
       "gameExport": false,
-      "notes": "Audiobook only. Not exported to the game dialogue manifest."
+      "notes": "Audiobook only. Not exported to the game dialogue manifest.",
+      "voiceApproved": "2026-09-17"
     },
     "system": {
       "id": "system",
       "name": "TOMBS / settlement systems",
       "audioKey": "system",
       "kind": "system",
-      "elevenLabsVoiceId": null,
+      "elevenLabsVoiceId": "QpRibeuwXoGrlpLFDwqY",
       "voiceVersion": 1,
       "gameExport": true,
-      "notes": "Machine readouts. Spoken in the audiobook and reusable in the game."
+      "notes": "Machine readouts. Spoken in the audiobook and reusable in the game.",
+      "voiceApproved": "2026-09-17"
     },
     "jack-bennett": {
       "id": "jack-bennett",
@@ -52,7 +54,8 @@
         "he",
         "him",
         "his"
-      ]
+      ],
+      "voiceApproved": "2026-09-17"
     },
     "sarah-bennett": {
       "id": "sarah-bennett",
@@ -69,14 +72,15 @@
         "she",
         "her",
         "hers"
-      ]
+      ],
+      "voiceApproved": "2026-09-17"
     },
     "lena-ortiz": {
       "id": "lena-ortiz",
       "name": "Lena Ortiz",
       "audioKey": "lena",
       "kind": "character",
-      "elevenLabsVoiceId": null,
+      "elevenLabsVoiceId": "56AoDkrOh6qfVPDXZ7Pt",
       "voiceVersion": 1,
       "gameExport": true,
       "aliases": [
@@ -88,7 +92,8 @@
         "she",
         "her",
         "hers"
-      ]
+      ],
+      "voiceApproved": "2026-09-17"
     }
   }
 }
