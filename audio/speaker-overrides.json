@@ -1,0 +1,25 @@
+{
+  "_comment": [
+    "Human corrections to parser attribution, keyed by the clip id the parser produced.",
+    "This is the review step: the parser never guesses silently, and anything it cannot",
+    "resolve is pinned here by a person.",
+    "",
+    "A clip id is a hash of (speaker + spoken text), so it is stable against paragraph",
+    "insertion. When a segment is pinned to a different speaker its final clip id changes",
+    "to match the corrected speaker; that is intended, because a different voice is a",
+    "different clip.",
+    "",
+    "Each entry may set:",
+    "  speaker  - the correct speaker id from story-rules/voice-registry.json",
+    "  ttsText  - a pronunciation-only rewrite; displayText stays canonical",
+    "  note     - why",
+    "",
+    "Run `python3 scripts/audio.py validate` to see what still needs pinning."
+  ],
+  "clips": {
+    "REVIEW_REQUIRED-28f9c13a10b8": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 1, paragraph 26: 'Jack released the intercom and looked back at the monitor. The TOMBS directory was still open. \"Who are you?\"' Jack is the actor of the paragraph; the parser could not see it because the sentence immediately before the quote is about the directory rather than about a person. Reviewed against the manuscript 2026-09-17."
+    }
+  }
+}

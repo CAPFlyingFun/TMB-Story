@@ -1,0 +1,74 @@
+{
+  "_comment": [
+    "Centralized ElevenLabs generation settings. Everything here is part of the cache",
+    "fingerprint, so changing a value regenerates the clips it affects and nothing else.",
+    "No secret belongs in this file. The API key is read from the ELEVENLABS_API_KEY",
+    "environment variable at generation time only.",
+    "",
+    "These are reasonable starting defaults, not final artistic choices."
+  ],
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "defaultSettings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "speakerSettings": {
+    "narrator": {
+      "stability": 0.62,
+      "style": 0.0,
+      "_note": "Calmer, steadier audiobook delivery. Provisional."
+    },
+    "system": {
+      "stability": 0.85,
+      "similarity_boost": 0.6,
+      "style": 0.0,
+      "_note": "Flat, controlled machine delivery. Provisional."
+    },
+    "jack-bennett": { "_note": "Natural conversational delivery; defaults for now." },
+    "sarah-bennett": { "_note": "Natural conversational delivery; defaults for now." }
+  },
+  "pausesMs": {
+    "_comment": "Applied by the player between segments, and by the combined export. Kept out of the clips themselves so timing stays tunable without regenerating audio.",
+    "narration-narration": 260,
+    "narration-dialogue": 320,
+    "dialogue-narration": 320,
+    "dialogue-sameSpeaker": 200,
+    "dialogue-differentSpeaker": 420,
+    "system-any": 380,
+    "sceneBreak": 900,
+    "default": 300
+  },
+  "generation": {
+    "concurrency": 3,
+    "maxRetries": 4,
+    "baseBackoffSeconds": 2,
+    "requestTimeoutSeconds": 120
+  },
+  "systemLines": {
+    "_comment": [
+      "Exact machine readouts, from story-rules/TECHNOLOGY.md. A quoted span matching one of",
+      "these is attributed to the system speaker. This is a curated list rather than a guess:",
+      "add new readouts here as the manuscript introduces them.",
+      "Matching is case-insensitive and ignores surrounding punctuation."
+    ],
+    "exact": [
+      "Warning. unauthorized system access.",
+      "Security protocol violation.",
+      "Tombs project.",
+      "Boundary control.",
+      "Tombs array remote initialization request.",
+      "Request denied.",
+      "Access revoked.",
+      "Warning. array power above standby threshold.",
+      "Boundary acquisition in progress.",
+      "Boundary acquired.",
+      "Scale factor calculating.",
+      "Access denied.",
+      "Scale factor locked.",
+      "Boundary event complete."
+    ]
+  }
+}

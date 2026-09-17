@@ -409,6 +409,20 @@
 
   var BIBLE_TABS = ["CHARACTERS", "CREATURES", "LOCATIONS", "TECHNOLOGY", "MYSTERIES", "TIMELINE", "CONTINUITY_LOG"];
 
+  function viewListen() {
+    setActiveTab("listen");
+    if (!window.TMBPlayer) {
+      view.innerHTML = '<div class="empty"><h2>Player unavailable</h2>' +
+        '<p><code>reader/player.js</code> did not load.</p></div>';
+      return;
+    }
+    return loadManifest().then(function (m) {
+      window.TMBPlayer.mount(view, m);
+    }).catch(function (err) {
+      view.innerHTML = errorBlock(err, "reader/manifest.json");
+    });
+  }
+
   function viewRules(keyArg) {
     setActiveTab("rules");
     var key = String(keyArg || "characters").toLowerCase();
@@ -451,6 +465,7 @@
       case "overview": return viewOverview();
       case "outline": return viewOutline(arg || "1");
       case "story": return arg ? viewChapter(arg) : viewStoryList();
+      case "listen": return viewListen();
       case "rules": return viewRules(arg);
       case "index": return viewIndex();
       case "canon": return viewCanon(arg);

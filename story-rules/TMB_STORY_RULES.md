@@ -131,6 +131,38 @@ bends to the game.
   the canonical story.
 - Never manufacture an action because there will be a game.
 
+## Voice production
+
+The audiobook manuscript is canonical, and dialogue is written with later game reuse in
+mind. The pipeline that turns the manuscript into audio is documented in
+`docs/AUDIO_PIPELINE.md`. The rules that matter to writing:
+
+- **The manuscript comes first and is never rewritten to suit the tooling.** If the
+  parser cannot tell who is speaking, it flags the line for review. It does not guess,
+  and nothing edits the prose to make parsing easier.
+- **Character voice assignments live in `story-rules/voice-registry.json`,** beside the
+  prose canon in `CHARACTERS.md` rather than duplicating it. Currently assigned:
+  Jack Bennett `mkT7KpSQR9btjx2rHpQY`, Sarah Bennett `MClEFoImJXBTgLwdLI5n`. The
+  Narrator, the TOMBS system voice and Lena Ortiz are **unassigned**; generation refuses
+  to run for an unassigned speaker rather than substituting a voice.
+- **ElevenLabs voice IDs are not secrets** and belong in the repository. **The ElevenLabs
+  API key IS a secret**: environment only, never committed, never in the player, never
+  in a manifest. The browser player never calls ElevenLabs.
+- **Generated audio is cached and reused.** Unchanged audio is never regenerated. Editing
+  one line regenerates that line only.
+- **The audiobook and the game share the same character dialogue assets.** One generated
+  Jack line exists once and is referenced by both.
+- **Narration is audiobook-only.** It is excluded from the game dialogue export.
+- **System and computer lines may be reused in the game,** because TOMBS speaks in both.
+- **Audio manifests identify speakers explicitly.** Narration and dialogue are separate
+  segments even inside one paragraph, so a character's line stands alone as an asset.
+- **Ambiguous attribution is reviewed before generation,** not after. Validation reports
+  it and blocks the run.
+
+This is also why the craft rules below matter mechanically and not just aesthetically: a
+line that a listener can attribute is a line the parser can attribute, and a line the
+parser can attribute becomes a reusable game asset.
+
 ## Craft invariants carried through the reboot
 
 These survived the reboot because they are about the ear, not the plot.

@@ -1,0 +1,94 @@
+{
+  "_comment": [
+    "Machine-readable voice registry for the TMB audio pipeline. This file holds ONLY the",
+    "machine fields a script needs. The prose canon for each character stays in",
+    "story-rules/CHARACTERS.md, which points here for voice data, so voice IDs live in",
+    "exactly one place.",
+    "",
+    "ElevenLabs VOICE IDs are NOT secrets and belong in this repository.",
+    "The ElevenLabs API KEY is a secret and must never appear in any file here.",
+    "",
+    "A speaker with elevenLabsVoiceId null is UNASSIGNED. Validation reports it and",
+    "generation refuses to run for it. Never invent a voice ID.",
+    "",
+    "voiceVersion: bump this when a character's voice is re-cast or re-tuned in a way that",
+    "should invalidate their cached audio. It is part of the cache fingerprint, so bumping it",
+    "regenerates that character's clips and nobody else's.",
+    "pronouns: used by the parser to resolve an actor like \"He reached for the intercom.\" to a speaker. Resolution always picks the most recently NAMED character with that pronoun, and the attribution method is recorded as pronoun-actor so a reviewer can spot-check it."
+  ],
+  "speakers": {
+    "narrator": {
+      "id": "narrator",
+      "name": "Narrator",
+      "audioKey": "narrator",
+      "kind": "narration",
+      "elevenLabsVoiceId": null,
+      "voiceVersion": 1,
+      "gameExport": false,
+      "notes": "Audiobook only. Not exported to the game dialogue manifest."
+    },
+    "system": {
+      "id": "system",
+      "name": "TOMBS / settlement systems",
+      "audioKey": "system",
+      "kind": "system",
+      "elevenLabsVoiceId": null,
+      "voiceVersion": 1,
+      "gameExport": true,
+      "notes": "Machine readouts. Spoken in the audiobook and reusable in the game."
+    },
+    "jack-bennett": {
+      "id": "jack-bennett",
+      "name": "Jack Bennett",
+      "audioKey": "jack",
+      "kind": "character",
+      "elevenLabsVoiceId": "mkT7KpSQR9btjx2rHpQY",
+      "voiceVersion": 1,
+      "gameExport": true,
+      "aliases": [
+        "Jack"
+      ],
+      "pronouns": [
+        "he",
+        "him",
+        "his"
+      ]
+    },
+    "sarah-bennett": {
+      "id": "sarah-bennett",
+      "name": "Sarah Bennett",
+      "audioKey": "sarah",
+      "kind": "character",
+      "elevenLabsVoiceId": "MClEFoImJXBTgLwdLI5n",
+      "voiceVersion": 1,
+      "gameExport": true,
+      "aliases": [
+        "Sarah"
+      ],
+      "pronouns": [
+        "she",
+        "her",
+        "hers"
+      ]
+    },
+    "lena-ortiz": {
+      "id": "lena-ortiz",
+      "name": "Lena Ortiz",
+      "audioKey": "lena",
+      "kind": "character",
+      "elevenLabsVoiceId": null,
+      "voiceVersion": 1,
+      "gameExport": true,
+      "aliases": [
+        "Lena",
+        "Ortiz"
+      ],
+      "notes": "Heard only through a wrist-terminal call. A filtered/radio treatment may suit her.",
+      "pronouns": [
+        "she",
+        "her",
+        "hers"
+      ]
+    }
+  }
+}

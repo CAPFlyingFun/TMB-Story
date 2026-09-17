@@ -2,6 +2,11 @@
 
 Only what the approved manuscript establishes. Cite the chapter.
 
+> **Voice assignments** for audio production live in
+> `story-rules/voice-registry.json`, so they sit in exactly one place. Jack and Sarah are
+> assigned; the Narrator, the TOMBS system voice and Lena Ortiz are not yet. See
+> `docs/AUDIO_PIPELINE.md`.
+
 ## Dr. Jack Bennett
 
 - **Role:** TOMBS project administrator. Point of view for Chapters 1 to 3.

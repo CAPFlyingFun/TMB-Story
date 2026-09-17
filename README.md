@@ -21,7 +21,10 @@ inside it have to live there.
 - `architecture/DECISIONS.md` — dated decisions, append-only
 - `outline/` — the workflow and one record per three-chapter movement
 - `reviews/` — per-chapter handoff reports
-- `scripts/` — `build-manifest.py` for the reader, `style-check.py` for the prose
+- `scripts/` — `build-manifest.py` for the reader, `style-check.py` for the prose,
+  `audio.py` for the voice pipeline (`scripts/tmbaudio/`), tests in `scripts/tests/`
+- `audio/` — voice config, chapter segment manifests, cached clips, exports and the
+  game dialogue manifest. See `docs/AUDIO_PIPELINE.md`.
 - `docs/` — background reasoning, not canon, and superseded in places
 - `archive/pre-reboot/` — the superseded story and its planning. **Not canon.**
 - `index.html` + `reader/` — the reader page, served by GitHub Pages from `main`; after adding chapters or outline files run `python3 scripts/build-manifest.py` to refresh `reader/manifest.json`

@@ -5,3 +5,12 @@ Thumbs.db
 .claude/settings.local.json
 __pycache__/
 *.pyc
+
+# Secrets: the ElevenLabs API key is supplied through the environment only, never a file.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets.json
+audio/**/*.part

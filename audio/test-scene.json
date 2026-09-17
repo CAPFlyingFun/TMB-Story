@@ -1,0 +1,96 @@
+{
+  "_comment": [
+    "The audition scene. A short contiguous run from Chapter 1 that exercises every",
+    "transition we care about: narration into a system readout, a system readout into",
+    "dialogue, dialogue into narration, and a change of speaker.",
+    "",
+    "Generate it with:  python3 scripts/audio.py generate --scene",
+    "It costs only these clips, and it is the thing to listen to before committing to",
+    "three whole chapters."
+  ],
+  "chapter": 1,
+  "firstOrder": 16,
+  "lastOrder": 31,
+  "segments": [
+    {
+      "order": 16,
+      "speaker": "system",
+      "text": "Security protocol violation."
+    },
+    {
+      "order": 17,
+      "speaker": "jack-bennett",
+      "text": "Okay. Definitely awake now."
+    },
+    {
+      "order": 18,
+      "speaker": "narrator",
+      "text": "Jack entered a command and pulled up the laboratory access logs. Nothing looked unusual. He tried another search and got the same result."
+    },
+    {
+      "order": 19,
+      "speaker": "jack-bennett",
+      "text": "That's impossible."
+    },
+    {
+      "order": 20,
+      "speaker": "narrator",
+      "text": "The system beeped, and a directory opened by itself. Jack stopped typing when he recognized the folder."
+    },
+    {
+      "order": 21,
+      "speaker": "system",
+      "text": "Tombs project."
+    },
+    {
+      "order": 22,
+      "speaker": "jack-bennett",
+      "text": "Oh, no you don't."
+    },
+    {
+      "order": 23,
+      "speaker": "narrator",
+      "text": "He immediately locked the terminal. The screen went black for three seconds, then came back on and reopened the same directory."
+    },
+    {
+      "order": 24,
+      "speaker": "narrator",
+      "text": "Jack stared at it."
+    },
+    {
+      "order": 25,
+      "speaker": "jack-bennett",
+      "text": "Well, that's new."
+    },
+    {
+      "order": 26,
+      "speaker": "narrator",
+      "text": "He reached for the intercom."
+    },
+    {
+      "order": 27,
+      "speaker": "jack-bennett",
+      "text": "Sarah?"
+    },
+    {
+      "order": 28,
+      "speaker": "narrator",
+      "text": "Static answered him."
+    },
+    {
+      "order": 29,
+      "speaker": "narrator",
+      "text": "Jack tapped the button again."
+    },
+    {
+      "order": 30,
+      "speaker": "jack-bennett",
+      "text": "Sarah, you there?"
+    },
+    {
+      "order": 31,
+      "speaker": "sarah-bennett",
+      "text": "I'm here,"
+    }
+  ]
+}
