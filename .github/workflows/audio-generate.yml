@@ -104,7 +104,11 @@ jobs:
 
       - name: Rebuild the game dialogue export
         if: inputs.mode != 'dry-run'
-        run: python3 scripts/audio.py export-game --chapters "${{ inputs.chapters }}"
+        # Deliberately NOT scoped to inputs.chapters. The export is the index of every
+        # canonical line in the story, and narrowing it to the chapters this run touched
+        # deletes the others: a chapter-1 run once cut it from 237 lines to 88. A line
+        # whose clip is not generated yet is still a line the game can look up.
+        run: python3 scripts/audio.py export-game
 
       - name: Check that no secret reached the working tree
         if: inputs.mode != 'dry-run'

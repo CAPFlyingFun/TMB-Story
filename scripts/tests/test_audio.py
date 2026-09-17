@@ -455,6 +455,18 @@ class WorkflowTests(unittest.TestCase):
         self.assertIn("exit 1", step,
                       "a gapless export must fail the run rather than be committed")
 
+    def test_the_game_export_is_not_narrowed_to_the_generated_chapters(self):
+        """dialogue.json is the whole story's line index, not this run's output.
+
+        Scoping it to inputs.chapters rewrites the file with only those chapters in
+        it. A chapter-1 run cut it from 237 lines to 88 that way, silently dropping
+        chapters 2 and 3 from the index Godot reads.
+        """
+        step = [l for l in self._run_lines() if "audio.py export-game" in l]
+        self.assertTrue(step, "the workflow should refresh the game export")
+        self.assertNotIn("--chapters", step[0],
+                         "the game export must cover every chapter, not just this run's")
+
     def test_the_secret_is_never_interpolated_into_a_shell_line(self):
         self.assertIn("secrets.ELEVENLABS_API_KEY", self.text,
                       "the workflow has to read the secret from somewhere")
