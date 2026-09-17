@@ -68,7 +68,7 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: |
           set -euo pipefail
-          ARGS=(--chapters "${{ inputs.chapters }}")
+          ARGS=(generate --chapters "${{ inputs.chapters }}")
           case "${{ inputs.mode }}" in
             dry-run)       ARGS+=(--dry-run) ;;
             force-chapter) ARGS+=(--force-chapter "${{ inputs.chapters }}") ;;
@@ -78,6 +78,12 @@ jobs:
             ARGS+=(--force-speaker "${{ inputs.force_speaker }}")
           fi
           python3 scripts/audio.py "${ARGS[@]}"
+
+      - name: Combine each chapter into one listening file
+        if: inputs.mode != 'dry-run'
+        # ffmpeg is preinstalled on ubuntu-latest, so the manifest's pauses are
+        # honoured here. combine never deletes the individual clips.
+        run: python3 scripts/audio.py combine --chapters "${{ inputs.chapters }}"
 
       - name: Rebuild the game dialogue export
         if: inputs.mode != 'dry-run'

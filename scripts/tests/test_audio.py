@@ -9,6 +9,8 @@ a local fake, and one test asserts that no API key can reach any output file.
 
 import json
 import os
+import re
+import subprocess
 import shutil
 import sys
 import tempfile
@@ -384,6 +386,64 @@ class ExportTests(unittest.TestCase):
                       "a speaker with no voice id must be reported")
         self.assertFalse(s["ready"], "missing voices must block generation")
         self.assertTrue(s["inferred"], "inferred attributions must be surfaced for review")
+
+
+class WorkflowTests(unittest.TestCase):
+    """The CI workflow is the only place the secret is used, so it has to be right.
+
+    It cannot be exercised end to end from here, but parts of it are checkable as
+    text, and one of them earns its keep: the workflow once built its argv without
+    the `generate` subcommand, so argparse would have rejected the very step that
+    holds the API key. These tests make no network request.
+    """
+
+    WORKFLOW = os.path.join(os.path.dirname(os.path.dirname(HERE)),
+                            ".github", "workflows", "audio-generate.yml")
+    CLI = os.path.join(os.path.dirname(HERE), "audio.py")
+
+    def setUp(self):
+        if not os.path.exists(self.WORKFLOW):
+            self.skipTest("workflow file is not present")
+        with open(self.WORKFLOW) as fh:
+            self.text = fh.read()
+
+    def _run_lines(self):
+        """Every shell fragment the workflow runs, as flat lines."""
+        return [line.strip() for line in self.text.splitlines()]
+
+    def test_workflow_is_manual_only(self):
+        trigger = self.text.split("jobs:", 1)[0]
+        for auto in ("push:", "pull_request:", "schedule:"):
+            self.assertNotIn(auto, trigger,
+                             auto + " would let an ordinary commit spend credits")
+        self.assertIn("workflow_dispatch:", trigger)
+
+    def test_every_cli_invocation_is_a_command_the_cli_accepts(self):
+        calls = re.findall(r"scripts/audio\.py ([a-z][a-z-]*)", self.text)
+        self.assertTrue(calls, "expected the workflow to call the CLI")
+        for name in sorted(set(calls)):
+            done = subprocess.run([sys.executable, self.CLI, name, "--help"],
+                                  capture_output=True, text=True)
+            self.assertEqual(done.returncode, 0,
+                             "the workflow runs `audio.py " + name +
+                             "`, which this CLI rejects:\n" + done.stderr)
+
+    def test_the_generate_step_argv_begins_with_the_subcommand(self):
+        built = [l for l in self._run_lines() if l.startswith("ARGS=(")]
+        self.assertTrue(built, "expected the generate step to build an argv array")
+        first = built[0][len("ARGS=("):].split()[0]
+        self.assertEqual(first, "generate",
+                         "the step that holds the API key must name its subcommand")
+
+    def test_the_secret_is_never_interpolated_into_a_shell_line(self):
+        self.assertIn("secrets.ELEVENLABS_API_KEY", self.text,
+                      "the workflow has to read the secret from somewhere")
+        for line in self._run_lines():
+            if "secrets.ELEVENLABS_API_KEY" not in line:
+                continue
+            self.assertTrue(line.startswith("ELEVENLABS_API_KEY:"),
+                            "the secret may only be bound to an env var, never pasted "
+                            "into a command where a log could capture it: " + line)
 
 
 if __name__ == "__main__":
