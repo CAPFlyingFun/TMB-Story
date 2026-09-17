@@ -70,7 +70,11 @@ Default behaviour always minimises credit use: a clip is generated only when its
 is absent or when something that changes the audio has changed.
 
 Or run it in CI: Actions → **Generate TMB audio** → Run workflow. It is manual only and
-never runs on a push.
+never runs on a push. A CI run does the whole round trip: the tests, then validation,
+then generation, then `combine`, then `export-game`, then a check that the secret is
+nowhere in the working tree, and only then the commit. It has `ffmpeg`, which this
+development environment does not, so a CI run is currently the only way to get a
+combined chapter with the manifest's pauses in it.
 
 ## How to regenerate one line, or one chapter, or one character
 
