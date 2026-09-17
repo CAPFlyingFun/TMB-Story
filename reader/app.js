@@ -1,6 +1,6 @@
 /* TMB reader — vanilla JS, no build step.
    Routes: #overview, #outline/<part>, #story, #story/<NNNN>,
-           #bible/<key>, #index, #canon/<architecture|decisions>.
+           #rules/<key>, #index, #canon/<decisions>.
    Fetches Markdown relative to the page; caches in memory. */
 (function () {
   "use strict";
@@ -114,15 +114,15 @@
   function routeForPath(href) {
     var clean = href.replace(/^(\.\/|\/)+/, "").replace(/^(\.\.\/)+/, "").split("#")[0];
     var m;
-    if ((m = clean.match(/^bible\/([A-Z_]+)\.md$/))) {
+    if ((m = clean.match(/^story-rules\/([A-Z_]+)\.md$/))) {
       if (m[1] === "STORY_OVERVIEW") return "#overview";
       if (m[1] === "CHAPTER_INDEX") return "#index";
-      return "#bible/" + m[1].toLowerCase();
+      return "#rules/" + m[1].toLowerCase();
     }
     if (clean === "architecture/DECISIONS.md") return "#canon/decisions";
     if (clean === "architecture/SERIES_ARCHITECTURE.md") return "#canon/architecture";
-    if ((m = clean.match(/^chapters\/part-\d+\/chapter-(\d{4})\.md$/))) return "#story/" + m[1];
-    if ((m = clean.match(/^outline\/part-(\d+)\//))) return "#outline/" + parseInt(m[1], 10);
+    if ((m = clean.match(/^chapters\/movement-\d+\/chapter-(\d{4})\.md$/))) return "#story/" + m[1];
+    if ((m = clean.match(/^outline\/movement-(\d+)\//))) return "#outline/" + parseInt(m[1], 10);
     return null;
   }
 
@@ -252,7 +252,7 @@
 
   function viewOverview() {
     setActiveTab("overview");
-    return showMarkdownFile("bible/STORY_OVERVIEW.md");
+    return showMarkdownFile("story-rules/STORY_OVERVIEW.md");
   }
 
   function pillsHtml(items, activeKey) {
@@ -265,9 +265,9 @@
     setActiveTab("outline");
     setLoading();
     return loadManifest().then(function (m) {
-      var parts = m.parts || [];
+      var parts = m.movements || [];
       if (!parts.length) {
-        view.innerHTML = '<div class="empty"><h2>No outline yet</h2><p>Part folders will appear here once <code>outline/part-NN/</code> exists.</p></div>';
+        view.innerHTML = '<div class="empty"><h2>No outline yet</h2><p>Movement folders will appear here once <code>outline/movement-NN/</code> exists.</p></div>';
         return;
       }
       var num = parseInt(partArg, 10);
@@ -333,7 +333,7 @@
       var chapters = (m.chapters || []).slice().sort(function (a, b) { return a.number - b.number; });
       if (!chapters.length) {
         view.innerHTML = '<div class="empty"><h2>No chapters yet</h2>' +
-          '<p>The story has not been drafted. Chapters will appear here as <code>chapters/part-NN/chapter-NNNN.md</code> files are written and the manifest is rebuilt.</p>' +
+          '<p>The story has not been drafted. Chapters will appear here as <code>chapters/movement-NN/chapter-NNNN.md</code> files are written and the manifest is rebuilt.</p>' +
           '<p>Until then, the <a href="#overview">Overview</a> and <a href="#outline/1">Outline</a> are where the story lives.</p></div>';
         return;
       }
@@ -341,7 +341,7 @@
       var groups = {};
       var order = [];
       chapters.forEach(function (c) {
-        var k = c.part || 0;
+        var k = c.movement || 0;
         if (!groups[k]) { groups[k] = []; order.push(k); }
         groups[k].push(c);
       });
@@ -352,7 +352,7 @@
         if (lr) html += '<p class="state">Last read: <a href="#story/' + lastRead + '">Chapter ' + lastRead + (lr.title ? " — " + esc(lr.title) : "") + "</a></p>";
       }
       order.forEach(function (k) {
-        html += '<section class="part-group"><h2>Part ' + esc(k) + "</h2><ul class=\"chapter-list\">" +
+        html += '<section class="part-group"><h2>Movement ' + esc(k) + "</h2><ul class=\"chapter-list\">" +
           groups[k].map(function (c) { return chapterRow(c, lastRead); }).join("") + "</ul></section>";
       });
       view.innerHTML = html;
@@ -389,7 +389,7 @@
 
       return fetchText(c.path).then(function (text) {
         var parts = splitFrontmatter(text);
-        var head = '<header class="reader-head"><p class="reader-kicker">Part ' + esc(c.part) + " · Chapter " + pad4(c.number) + "</p>" +
+        var head = '<header class="reader-head"><p class="reader-kicker">Movement ' + esc(c.movement) + " · Chapter " + pad4(c.number) + "</p>" +
           '<h1 class="reader-title">' + (c.title ? esc(c.title) : "Untitled") + "</h1>" +
           '<div class="reader-meta">' + (c.pov ? "<span>POV: " + esc(c.pov) + "</span>" : "") +
           "<span>" + fmtWords(c.word_count) + " words</span>" + reviewBadge(c.review_status) + audioBadge(c.audio_status) + "</div></header>";
@@ -409,20 +409,20 @@
 
   var BIBLE_TABS = ["CHARACTERS", "CREATURES", "LOCATIONS", "TECHNOLOGY", "MYSTERIES", "TIMELINE", "CONTINUITY_LOG"];
 
-  function viewBible(keyArg) {
-    setActiveTab("bible");
+  function viewRules(keyArg) {
+    setActiveTab("rules");
     var key = String(keyArg || "characters").toLowerCase();
     var known = BIBLE_TABS.map(function (k) { return k.toLowerCase(); });
     if (known.indexOf(key) < 0) key = known[0];
     var pills = pillsHtml(BIBLE_TABS.map(function (k) {
       return { key: k.toLowerCase(), label: k.replace(/_/g, " ").toLowerCase().replace(/\b\w/g, function (ch) { return ch.toUpperCase(); }), href: "#bible/" + k.toLowerCase() };
     }), key);
-    return showMarkdownFile("bible/" + key.toUpperCase() + ".md", { before: pills });
+    return showMarkdownFile("story-rules/" + key.toUpperCase() + ".md", { before: pills });
   }
 
   function viewIndex() {
     setActiveTab("index");
-    return showMarkdownFile("bible/CHAPTER_INDEX.md");
+    return showMarkdownFile("story-rules/CHAPTER_INDEX.md");
   }
 
   function viewCanon(subArg) {
@@ -451,7 +451,7 @@
       case "overview": return viewOverview();
       case "outline": return viewOutline(arg || "1");
       case "story": return arg ? viewChapter(arg) : viewStoryList();
-      case "bible": return viewBible(arg);
+      case "rules": return viewRules(arg);
       case "index": return viewIndex();
       case "canon": return viewCanon(arg);
       default:

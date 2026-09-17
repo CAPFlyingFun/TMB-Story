@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build reader/manifest.json for the static reader page.
 
-Scans the repository (bible/, outline/, chapters/, architecture/) and writes a
+Scans the repository (story-rules/, outline/, chapters/, architecture/) and writes a
 JSON manifest the reader loads at boot. Python 3 standard library only.
 
 Usage:  python3 scripts/build-manifest.py   (from anywhere; paths are resolved
@@ -21,14 +21,15 @@ from datetime import date
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "reader", "manifest.json")
 
-BIBLE_ORDER = [
+RULES_ORDER = [
+    "TMB_STORY_RULES",
     "STORY_OVERVIEW",
     "CHARACTERS",
-    "CREATURES",
     "LOCATIONS",
     "TECHNOLOGY",
-    "MYSTERIES",
     "TIMELINE",
+    "OPEN_QUESTIONS",
+    "CREATURES",
     "CONTINUITY_LOG",
     "CHAPTER_INDEX",
 ]
@@ -188,29 +189,24 @@ def rel(path):
     return os.path.relpath(path, ROOT).replace(os.sep, "/")
 
 
-def scan_parts():
+def scan_movements():
     parts = []
     outline_dir = os.path.join(ROOT, "outline")
     if not os.path.isdir(outline_dir):
         return parts
     for name in sorted(os.listdir(outline_dir)):
-        m = re.fullmatch(r"part-(\d+)", name)
+        m = re.fullmatch(r"movement-(\d+)", name)
         if not m:
             continue
         d = os.path.join(outline_dir, name)
         if not os.path.isdir(d):
             continue
         overview = os.path.join(d, "overview.md")
-        arcs = sorted(
-            rel(os.path.join(d, f))
-            for f in os.listdir(d)
-            if re.fullmatch(r"mini-arc-\d+\.md", f)
-        )
         parts.append({
             "number": int(m.group(1)),
             "dir": rel(d),
             "overview": rel(overview) if os.path.isfile(overview) else None,
-            "miniArcs": arcs,
+            "miniArcs": [],
         })
     parts.sort(key=lambda p: p["number"])
     return parts
@@ -237,7 +233,7 @@ def scan_chapters():
     if not os.path.isdir(chapters_dir):
         return chapters
     for part_name in sorted(os.listdir(chapters_dir)):
-        pm = re.fullmatch(r"part-(\d+)", part_name)
+        pm = re.fullmatch(r"movement-(\d+)", part_name)
         if not pm:
             continue
         pd = os.path.join(chapters_dir, part_name)
@@ -257,7 +253,7 @@ def scan_chapters():
             chapters.append({
                 "number": number,
                 "path": rel(path),
-                "part": _as_int(fm.get("part"), int(pm.group(1))),
+                "movement": _as_int(fm.get("movement"), int(pm.group(1))),
                 "title": _as_str(fm.get("title")),
                 "pov": _as_str(fm.get("pov")),
                 "word_count": _as_int(fm.get("word_count"), 0),
@@ -269,26 +265,27 @@ def scan_chapters():
     return chapters
 
 
-def scan_bible():
-    bible_dir = os.path.join(ROOT, "bible")
+def scan_story_rules():
+    rules_dir = os.path.join(ROOT, "story-rules")
     files = []
-    if not os.path.isdir(bible_dir):
+    if not os.path.isdir(rules_dir):
         return files
-    present = {f[:-3]: f for f in os.listdir(bible_dir) if f.endswith(".md")}
-    ordered = [k for k in BIBLE_ORDER if k in present] + sorted(k for k in present if k not in BIBLE_ORDER)
+    present = {f[:-3]: f for f in os.listdir(rules_dir) if f.endswith(".md")}
+    ordered = [k for k in RULES_ORDER if k in present] + sorted(k for k in present if k not in RULES_ORDER)
     for key in ordered:
         files.append({
             "key": key,
             "label": key.replace("_", " ").title(),
-            "path": "bible/" + present[key],
+            "path": "story-rules/" + present[key],
         })
     return files
 
 
 def scan_architecture():
     out = {}
-    for key, name in (("architecture", "SERIES_ARCHITECTURE.md"), ("decisions", "DECISIONS.md")):
-        p = os.path.join(ROOT, "architecture", name)
+    for key, path in (("decisions", "architecture/DECISIONS.md"),
+                      ("archivedArchitecture", "archive/pre-reboot/SERIES_ARCHITECTURE.md")):
+        p = os.path.join(ROOT, path)
         out[key] = rel(p) if os.path.isfile(p) else None
     return out
 
@@ -296,17 +293,17 @@ def scan_architecture():
 def main():
     manifest = {
         "generated": date.today().isoformat(),
-        "parts": scan_parts(),
+        "movements": scan_movements(),
         "chapters": scan_chapters(),
-        "bible": scan_bible(),
+        "storyRules": scan_story_rules(),
         "architecture": scan_architecture(),
     }
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as fh:
         json.dump(manifest, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
-    print("wrote %s: %d part(s), %d chapter(s), %d bible file(s)" % (
-        rel(OUT), len(manifest["parts"]), len(manifest["chapters"]), len(manifest["bible"])))
+    print("wrote %s: %d movement(s), %d chapter(s), %d story-rules file(s)" % (
+        rel(OUT), len(manifest["movements"]), len(manifest["chapters"]), len(manifest["storyRules"])))
 
 
 if __name__ == "__main__":

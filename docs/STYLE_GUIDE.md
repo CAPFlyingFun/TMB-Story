@@ -1,3 +1,10 @@
+> **Superseded in part by the reboot (2026-09-17).** The craft analysis below still
+> holds and is why the prose reads the way it does. What is NO LONGER current: the
+> word-count table and targets (see `story-rules/TMB_STORY_RULES.md` for the
+> 1,200-1,400 band), the Beyond Extinction comparison metrics, and every example drawn
+> from the archived pre-reboot chapters. The authoritative rules now live in
+> `story-rules/TMB_STORY_RULES.md`.
+
 # TMB prose style guide — the Beyond Extinction register
 
 Joshua, 2026-09-16: "There is nothing really wrong with the story itself, it's the

@@ -1,103 +1,102 @@
 {
-  "generated": "2026-09-16",
-  "parts": [
+  "generated": "2026-09-17",
+  "movements": [
     {
       "number": 1,
-      "dir": "outline/part-01",
-      "overview": "outline/part-01/overview.md",
-      "miniArcs": [
-        "outline/part-01/mini-arc-01.md",
-        "outline/part-01/mini-arc-02.md",
-        "outline/part-01/mini-arc-03.md",
-        "outline/part-01/mini-arc-04.md",
-        "outline/part-01/mini-arc-05.md"
-      ]
+      "dir": "outline/movement-01",
+      "overview": "outline/movement-01/overview.md",
+      "miniArcs": []
     }
   ],
   "chapters": [
     {
       "number": 1,
-      "path": "chapters/part-01/chapter-0001.md",
-      "part": 1,
-      "title": "The Bar",
-      "pov": "Caleb",
-      "word_count": 3437,
-      "review_status": "in-review",
+      "path": "chapters/movement-01/chapter-0001.md",
+      "movement": 1,
+      "title": "The Alarm",
+      "pov": "Jack",
+      "word_count": 1160,
+      "review_status": "approved",
       "audio_status": "not-started",
       "ending_type": "unanswered question"
     },
     {
       "number": 2,
-      "path": "chapters/part-01/chapter-0002.md",
-      "part": 1,
-      "title": "Sixty-Two Grams of Salt",
-      "pov": "Nora",
-      "word_count": 3636,
-      "review_status": "in-review",
+      "path": "chapters/movement-01/chapter-0002.md",
+      "movement": 1,
+      "title": "The Boundary",
+      "pov": "Jack",
+      "word_count": 1083,
+      "review_status": "approved",
       "audio_status": "not-started",
-      "ending_type": "quiet unsettling line"
+      "ending_type": "revelation"
     },
     {
       "number": 3,
-      "path": "chapters/part-01/chapter-0003.md",
-      "part": 1,
-      "title": "The Enclosure",
-      "pov": "Caleb",
-      "word_count": 3243,
-      "review_status": "in-review",
+      "path": "chapters/movement-01/chapter-0003.md",
+      "movement": 1,
+      "title": "The Activation",
+      "pov": "Jack",
+      "word_count": 1384,
+      "review_status": "approved",
       "audio_status": "not-started",
       "ending_type": "revelation"
     }
   ],
-  "bible": [
+  "storyRules": [
+    {
+      "key": "TMB_STORY_RULES",
+      "label": "Tmb Story Rules",
+      "path": "story-rules/TMB_STORY_RULES.md"
+    },
     {
       "key": "STORY_OVERVIEW",
       "label": "Story Overview",
-      "path": "bible/STORY_OVERVIEW.md"
+      "path": "story-rules/STORY_OVERVIEW.md"
     },
     {
       "key": "CHARACTERS",
       "label": "Characters",
-      "path": "bible/CHARACTERS.md"
-    },
-    {
-      "key": "CREATURES",
-      "label": "Creatures",
-      "path": "bible/CREATURES.md"
+      "path": "story-rules/CHARACTERS.md"
     },
     {
       "key": "LOCATIONS",
       "label": "Locations",
-      "path": "bible/LOCATIONS.md"
+      "path": "story-rules/LOCATIONS.md"
     },
     {
       "key": "TECHNOLOGY",
       "label": "Technology",
-      "path": "bible/TECHNOLOGY.md"
-    },
-    {
-      "key": "MYSTERIES",
-      "label": "Mysteries",
-      "path": "bible/MYSTERIES.md"
+      "path": "story-rules/TECHNOLOGY.md"
     },
     {
       "key": "TIMELINE",
       "label": "Timeline",
-      "path": "bible/TIMELINE.md"
+      "path": "story-rules/TIMELINE.md"
+    },
+    {
+      "key": "OPEN_QUESTIONS",
+      "label": "Open Questions",
+      "path": "story-rules/OPEN_QUESTIONS.md"
+    },
+    {
+      "key": "CREATURES",
+      "label": "Creatures",
+      "path": "story-rules/CREATURES.md"
     },
     {
       "key": "CONTINUITY_LOG",
       "label": "Continuity Log",
-      "path": "bible/CONTINUITY_LOG.md"
+      "path": "story-rules/CONTINUITY_LOG.md"
     },
     {
       "key": "CHAPTER_INDEX",
       "label": "Chapter Index",
-      "path": "bible/CHAPTER_INDEX.md"
+      "path": "story-rules/CHAPTER_INDEX.md"
     }
   ],
   "architecture": {
-    "architecture": "architecture/SERIES_ARCHITECTURE.md",
-    "decisions": "architecture/DECISIONS.md"
+    "decisions": "architecture/DECISIONS.md",
+    "archivedArchitecture": "archive/pre-reboot/SERIES_ARCHITECTURE.md"
   }
 }

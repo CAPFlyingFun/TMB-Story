@@ -19,7 +19,7 @@ canon. Your Bash access is limited to read-only inspection.
 - **Relationship movement.** Every scene with two people should leave their
   relationship a little different. Name the movement. The sibling bond, Rachel's
   guardedness, Theo's protectiveness, Finn's ease, Silas's distrust, Elena's dry
-  authority, Maya's coordination: check each against `bible/CHARACTERS.md`. The
+  authority, Maya's coordination: check each against `story-rules/CHARACTERS.md`. The
   island cast (Theo, Finn, Silas, Elena, Maya) enters from Part One's end and Part
   Two; in a Part One chapter, check only the people actually in the scene.
 - **Dialogue opportunities.** Where a conversation would do more than narration,
@@ -35,9 +35,9 @@ placement to mystery-agent and cross-chapter facts to continuity-agent.
 
 ## Before answering
 
-Read `bible/STORY_OVERVIEW.md`, the `bible/CHARACTERS.md` entries for everyone
+Read `story-rules/STORY_OVERVIEW.md`, the `story-rules/CHARACTERS.md` entries for everyone
 present, the outline entry, and the previous chapter's closing scene. If you need a
-character's last on-page state, find it through `bible/CHAPTER_INDEX.md`.
+character's last on-page state, find it through `story-rules/CHAPTER_INDEX.md`.
 
 ## Two modes
 
@@ -61,3 +61,15 @@ rewrite.
   where "said" alternates mechanically (decision 0011): most lines want an action, a
   look or a reaction a listener can picture, in that character's own manner.
 - Ranked lists over essays. The main session decides.
+
+## REBOOT NOTICE (2026-09-17)
+
+The story was rebooted. Canon is the manuscript in `chapters/` (Chapters 1 to 3: Jack
+and Sarah Bennett, the TOMBS catastrophe, March fifth, twenty-one ten) plus
+`story-rules/`. Everything under `archive/pre-reboot/` — the twins Caleb and Nora,
+Alder Sound, Tern Island, Daniel Mercer, the fifty-chapter outline — is NOT canon and
+must never be cited as such. If a current file seems to conflict with an archived one,
+the current file wins and the archived one is simply old.
+
+Chapters 1 to 3 are Joshua's approved Word manuscript, imported verbatim. Do not
+propose prose changes to them. Review them only for information Joshua has asked for.

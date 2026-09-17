@@ -1,3 +1,8 @@
+> **PRE-REBOOT DOCUMENT (2026-09-17).** Written before the project started and
+> before the reboot. Its repository layout (`bible/`, `outline/part-NN/`, fifty-chapter
+> planning) no longer matches the repo. Kept for its reasoning only. Current guidance:
+> `CLAUDE.md` and `story-rules/TMB_STORY_RULES.md`.
+
 # TMB — Claude Code Writing Workflow & Repository Design
 
 > **This document is background reasoning, not canon.** Where it disagrees with

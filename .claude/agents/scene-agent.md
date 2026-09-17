@@ -35,9 +35,9 @@ notice something in their lanes, say so in one line and move on.
 
 ## Before answering
 
-Read `bible/STORY_OVERVIEW.md`, then exactly what the delegation prompt points you
+Read `story-rules/STORY_OVERVIEW.md`, then exactly what the delegation prompt points you
 at: the outline entry, the previous chapter (at least its closing scene), and the
-bible entries named. Use `bible/CHAPTER_INDEX.md` to find older chapters if a
+bible entries named. Use `story-rules/CHAPTER_INDEX.md` to find older chapters if a
 question needs them. Do not read the whole series.
 
 ## Two modes
@@ -78,3 +78,15 @@ raised and then forgotten. Suggest the smallest fix for each. Do not rewrite.
   where "said" alternates mechanically (decision 0011): most lines want an action, a
   look or a reaction a listener can picture.
 - Be short. Ranked lists over essays. The main session decides.
+
+## REBOOT NOTICE (2026-09-17)
+
+The story was rebooted. Canon is the manuscript in `chapters/` (Chapters 1 to 3: Jack
+and Sarah Bennett, the TOMBS catastrophe, March fifth, twenty-one ten) plus
+`story-rules/`. Everything under `archive/pre-reboot/` — the twins Caleb and Nora,
+Alder Sound, Tern Island, Daniel Mercer, the fifty-chapter outline — is NOT canon and
+must never be cited as such. If a current file seems to conflict with an archived one,
+the current file wins and the archived one is simply old.
+
+Chapters 1 to 3 are Joshua's approved Word manuscript, imported verbatim. Do not
+propose prose changes to them. Review them only for information Joshua has asked for.

@@ -8,8 +8,12 @@ and paragraphs so the writer can find them.
 import re, sys, statistics as st
 
 SPLIT = re.compile(r'(?<=[.!?])\s+')
-TARGETS = dict(avg_sentence=9.0, median_sentence=7, pct_over_30=0.02, commas=0.5,
-               ands=0.3, avg_para=45.0, pct_para_over_80=0.0)
+TARGETS = dict(avg_sentence=12.0, median_sentence=10, pct_over_30=0.03, commas=0.7,
+               ands=0.4, avg_para=45.0, pct_para_over_80=0.02)
+
+# Word-count guidance (decision 0020): about 1,200-1,400 normally, about 1,000 the
+# normal minimum, and about 1,600-1,800 for an important chapter that needs the room.
+WORDS_MIN, WORDS_LOW, WORDS_HIGH, WORDS_MAX = 1000, 1200, 1400, 1800
 
 def prose(path):
     t = open(path).read()
@@ -36,7 +40,16 @@ def report(path):
         ands=sum(len(re.findall(r'\band\b', s)) for s in sents) / len(sents),
         avg_para=st.mean(pl), pct_para_over_80=sum(1 for w in pl if w > 80) / len(pl),
     )
-    print(f"\n== {path}  ({sum(wl):,} words, {len(sents)} sentences, {len(paras)} paragraphs)")
+    total = sum(wl)
+    if total < WORDS_MIN:
+        note = f"under the {WORDS_MIN:,} minimum"
+    elif total > WORDS_MAX:
+        note = f"over the {WORDS_MAX:,} ceiling for an important chapter"
+    elif total > WORDS_HIGH:
+        note = f"above the normal {WORDS_LOW:,}-{WORDS_HIGH:,} band (fine if the chapter earns it)"
+    else:
+        note = "within target"
+    print(f"\n== {path}  ({total:,} words, {note}; {len(sents)} sentences, {len(paras)} paragraphs)")
     for k, target in TARGETS.items():
         v = m[k]; ok = v <= target
         fmt = f"{v:.0%}" if k.startswith('pct') else f"{v:.2f}"
@@ -62,7 +75,6 @@ BRITISH = [
     (r"\bthe state of you\b", "the state of you -> look at you"),
     (r"\bmoving house\b", "moving house -> moving out / moving"),
     (r"\bcarpet\b", "carpet (rolled) -> rug"),
-    (r"\bcorridor\b", "corridor -> hallway"),
     (r"\bcupboards?\b", "cupboard -> cabinet"),
     (r"\bweed\b(?!s)", "weed (shore) -> seaweed"),
     (r"\bthe sea\b", "the sea -> the ocean / the tide / the water"),
@@ -88,7 +100,7 @@ def british(path):
     for note, ctx in hits[:40]:
         print(f"    {note:45s} ...{ctx}...")
 
-NAMES = ["Caleb", "Nora", "Marco", "Ines", "Gus", "Rachel", "mother", "Mom", "sister", "brother"]
+NAMES = ["Jack", "Sarah", "Lena", "Ortiz", "Bennett", "TOMBS", "Tombs", "Control"]
 NAME_RE = re.compile(r"\b(" + "|".join(NAMES) + r")\b")
 
 def audio(path):
@@ -100,7 +112,7 @@ def audio(path):
 
     LATE   the paragraph names its speaker only after a long stretch of speech,
            so the listener hears the line first and learns who said it after.
-           A short line followed by a tag ("Mine's heavier," Caleb said.) is
+           A short line followed by a tag ("I'm here," Sarah said.) is
            fine and is not reported.
     OPEN   nothing in the paragraph, and nothing in the narration immediately
            before it, names a speaker. A/B alternation does NOT count: naming
@@ -110,7 +122,7 @@ def audio(path):
     """
     t = prose(path)
     paras = [p.strip() for p in t.split("\n") if p.strip() and not p.startswith("#")]
-    late, open_ = [], []
+    late, open_, streak = [], [], []
     carry = False          # the narration just before named somebody
     for para in paras:
         qi = para.find('"')
@@ -122,19 +134,28 @@ def audio(path):
         before, after = para[:qi], para[qi:]
         if NAME_RE.search(before):
             carry = False
+            streak = []
             continue
         m = NAME_RE.search(after)
         if m:
             spoken = len(re.findall(r"[A-Za-z']+", after[:m.start()]))
+            streak = []
             if spoken > 12 and not carry:
                 late.append((spoken, para))
         elif not carry:
-            open_.append(para)
+            streak.append(para)
+            # Decision 0020 / the two-turn guideline: up to two unanchored turns in a
+            # row are acceptable when the context carries them; the third wants an
+            # anchor.
+            if len(streak) >= 3:
+                open_.append(para)
+        else:
+            streak = []
         carry = False
     print(f"  dialogue anchored late (name arrives after the line): {len(late)}")
     for n, para in late:
         print(f"    {n} words before the name: {para[:90]}")
-    print(f"  dialogue with no anchor at or before the line: {len(open_)}")
+    print(f"  third-or-later unanchored dialogue turn in a row: {len(open_)}")
     for para in open_[:25]:
         print(f"    {para[:90]}")
 
