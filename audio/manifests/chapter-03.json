@@ -992,7 +992,7 @@
       "voiceVersion": 1,
       "fingerprint": "55ad087a70b9701e2542d5ab1661e075304e8c2b726315709a0ffd25edec170d",
       "audio": "audio/clips/jack/jack-bennett-a8a6aa7ae3b3.mp3",
-      "cached": false,
+      "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett"
     },
@@ -1262,7 +1262,7 @@
       "voiceVersion": 1,
       "fingerprint": "a1f2c4944c034915c3e5693641f08b2ff06ff25006c0136597a7611c39277aef",
       "audio": "audio/clips/jack/jack-bennett-a40ffc6ce592.mp3",
-      "cached": false,
+      "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett"
     },
@@ -2000,7 +2000,7 @@
       "voiceVersion": 1,
       "fingerprint": "ce684b8b4ffd2f67ea399f297aad82c2f42129ff170466476a570932db01e397",
       "audio": "audio/clips/sarah/sarah-bennett-ea3f24b4acf1.mp3",
-      "cached": false,
+      "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett"
     },
@@ -2360,7 +2360,7 @@
       "voiceVersion": 1,
       "fingerprint": "a1f2c4944c034915c3e5693641f08b2ff06ff25006c0136597a7611c39277aef",
       "audio": "audio/clips/jack/jack-bennett-a40ffc6ce592.mp3",
-      "cached": false,
+      "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett"
     },
@@ -2378,7 +2378,7 @@
       "voiceVersion": 1,
       "fingerprint": "ad113cdb64b8f5fe35725ced8cc76e32e71be8c101cb3bd502ff4caaecd21af1",
       "audio": "audio/clips/narrator/narrator-b5f5252f998d.mp3",
-      "cached": false,
+      "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator"
     },
