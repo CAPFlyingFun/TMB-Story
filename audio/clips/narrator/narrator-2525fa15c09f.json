@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-2525fa15c09f",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "decab24b69963eaf128814efabd5f04b4b4488a02537874a0a0e8d5099992511",
+  "text": "A new warning tone interrupted them. Both turned toward the main console as another message appeared.",
+  "bytes": 113311,
+  "generated": "2026-09-17T22:36:27Z"
+}

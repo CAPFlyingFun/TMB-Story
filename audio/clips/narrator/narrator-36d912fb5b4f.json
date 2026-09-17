@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-36d912fb5b4f",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8713d49263b5a3d2aabc0ee37a8da3033e07d5f9a2c5b139c9b11120b094e01c",
+  "text": "Jack entered a command and pulled up the laboratory access logs. Nothing looked unusual. He tried another search and got the same result.",
+  "bytes": 153435,
+  "generated": "2026-09-17T22:35:40Z"
+}

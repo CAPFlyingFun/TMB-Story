@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e2bfa452045f",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2a895537378ce491107c3f09f5e2cbec6aebc950969322dedf58065bebe1ddde",
+  "text": "He reached for the keyboard just as the laboratory door slid open behind him.",
+  "bytes": 68589,
+  "generated": "2026-09-17T22:35:53Z"
+}

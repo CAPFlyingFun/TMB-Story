@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d8826abbed8a",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e36d9639e4f18b7400c7bc92e9f7dff748da47d39fb8abf2f4d1a205967a7520",
+  "text": "Sarah stared at him for a moment before looking back at the monitor. Jack pointed at the screen.",
+  "bytes": 83635,
+  "generated": "2026-09-17T22:36:07Z"
+}

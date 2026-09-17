@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-a1dc5fafa6a9",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "36e15e5fdd746894f3e7c88abe595ed5cf1013e5f3e35b4934333500e92ff8e1",
+  "text": "You locked the terminal?",
+  "bytes": 18016,
+  "generated": "2026-09-17T22:36:05Z"
+}

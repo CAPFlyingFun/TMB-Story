@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b86243241021",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9c4fbe5ff8879577eab029e1ad5ca863513fae1b87eab67a78dfe193968c94d1",
+  "text": "Jack smiled at the movement beneath her hand.",
+  "bytes": 41839,
+  "generated": "2026-09-17T22:36:24Z"
+}

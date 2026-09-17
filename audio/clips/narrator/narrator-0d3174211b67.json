@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0d3174211b67",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a51f22384102d6e0bda6ce8b2d7c5b5fe4d721123ea0161a9d9547f923925d3b",
+  "text": "Jack nodded.",
+  "bytes": 18016,
+  "generated": "2026-09-17T22:36:05Z"
+}

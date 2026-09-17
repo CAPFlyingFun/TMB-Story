@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-acd5a4e16a58",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f5fd5f55b34d21a19975b0e530b09cf40770f3b0adff2452a4616d8347edacff",
+  "text": "Jack glanced at her stomach.",
+  "bytes": 26375,
+  "generated": "2026-09-17T22:36:19Z"
+}

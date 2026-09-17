@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0b2f58c70a4c",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4d2204204384257b7a2008294c331292165fd1d3884329f705801b911ae6722f",
+  "text": "Deep inside one of those laboratories, Dr. Jack Bennett was hard at work. Technically.",
+  "bytes": 99936,
+  "generated": "2026-09-17T22:35:31Z"
+}

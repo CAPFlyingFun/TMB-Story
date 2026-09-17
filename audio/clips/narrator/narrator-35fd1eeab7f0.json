@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-35fd1eeab7f0",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "292d90061ae6e2780a6036d3244e4f4664531951706f739068ead03473df021d",
+  "text": "Sarah tapped the edge of the keyboard.",
+  "bytes": 32226,
+  "generated": "2026-09-17T22:36:02Z"
+}

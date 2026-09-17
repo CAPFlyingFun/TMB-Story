@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-3141593a1c9d",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ee201a7ca97ef83737b9738c88cd109fc00fd96226562214896cb91124e4e5d0",
+  "text": "I've got something weird on my computer. It tripped a security alarm.",
+  "bytes": 54378,
+  "generated": "2026-09-17T22:35:45Z"
+}

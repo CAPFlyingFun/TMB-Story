@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4f160e832b0d",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "254bcedca60537deedef0133fe8f3c23ba1b4b054830a11672fdb3db1fc657ec",
+  "text": "Jack replied.",
+  "bytes": 20524,
+  "generated": "2026-09-17T22:35:54Z"
+}

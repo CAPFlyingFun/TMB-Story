@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-fb38695cee9c",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8467680a53bc0d1c87f22e752d37319f00edb965e172a91f81e5aac183a33b3e",
+  "text": "Sarah glanced at him.",
+  "bytes": 23449,
+  "generated": "2026-09-17T22:35:59Z"
+}

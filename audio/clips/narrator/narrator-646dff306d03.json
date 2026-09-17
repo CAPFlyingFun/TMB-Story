@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-646dff306d03",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4a552aa307e2974b118280e005444d8ccded3edfca7832365a64fd069e5804e4",
+  "text": "It was almost eleven at night on a remote island somewhere in the Atlantic Ocean. The island stretched roughly fifty-six kilometers across, about thirty-five miles from one side to the other, but most of it remained undeveloped wilderness. Near its center sat a research settlement of laboratories, homes, workshops, medical facilities, and other buildings supporting the nearly five hundred people who lived there.",
+  "bytes": 425944,
+  "generated": "2026-09-17T22:35:34Z"
+}

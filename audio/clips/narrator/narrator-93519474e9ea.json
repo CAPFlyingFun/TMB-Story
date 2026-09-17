@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-93519474e9ea",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "54b7f7227fa4f6bd64669cbf64864ba03540e9258c25cd296fde8435a99747e8",
+  "text": "Several windows were opening and closing on their own. Lines of commands streamed across one side of the display faster than he could read them. Jack grabbed the keyboard and opened the network monitor.",
+  "bytes": 166809,
+  "generated": "2026-09-17T22:35:37Z"
+}

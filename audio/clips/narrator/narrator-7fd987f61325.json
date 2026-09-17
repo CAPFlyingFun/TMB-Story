@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7fd987f61325",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f32668aae38ad62a16e4048dc638fecedd936ed5070c08ee99c2245926923bca",
+  "text": "Jack tried his credentials again.",
+  "bytes": 30973,
+  "generated": "2026-09-17T22:36:33Z"
+}

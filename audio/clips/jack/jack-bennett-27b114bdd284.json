@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-27b114bdd284",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a53e59a78e17e9bd1a75066380115358cbd9c7459648eb85b778bd5efa2afd23",
+  "text": "That's impossible.",
+  "bytes": 18016,
+  "generated": "2026-09-17T22:35:39Z"
+}

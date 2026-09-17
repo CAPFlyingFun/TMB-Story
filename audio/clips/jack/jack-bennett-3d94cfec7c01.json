@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-3d94cfec7c01",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "08f8e9cadd5eb2d159cda3f6884981e1a7cd3617a428483d7340cf24c2194ecf",
+  "text": "No. That's why I'm calling the smarter scientist.",
+  "bytes": 41004,
+  "generated": "2026-09-17T22:35:48Z"
+}

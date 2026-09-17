@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-37174f507f7e",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5fee24a62a250c6b8b680203d483d5cc24de3b23898e94fe0ff27e37efb1cfc9",
+  "text": "Jack kept one hand on the keyboard.",
+  "bytes": 35152,
+  "generated": "2026-09-17T22:36:08Z"
+}

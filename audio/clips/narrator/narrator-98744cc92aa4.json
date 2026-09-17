@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-98744cc92aa4",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3688a9eb1997225d04d1b4d4c47c438861be8221bc23e8af4862164e44945383",
+  "text": "Jack pointed toward the monitor as she walked over.",
+  "bytes": 41839,
+  "generated": "2026-09-17T22:35:57Z"
+}

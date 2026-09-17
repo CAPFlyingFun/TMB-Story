@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a4fba24c9781",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "59ebc9782055785850d18ee693b482a23efef67de5649f54a8f2353cf65bf2cc",
+  "text": "Sarah sat upright.",
+  "bytes": 23449,
+  "generated": "2026-09-17T22:36:27Z"
+}

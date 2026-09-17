@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-050e0785c171",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a4485bc1016dfd38b9fc0661059bbb5d592c394212a34532a1e66b97aa0d5483",
+  "text": "It's an advanced technique.",
+  "bytes": 25539,
+  "generated": "2026-09-17T22:36:00Z"
+}

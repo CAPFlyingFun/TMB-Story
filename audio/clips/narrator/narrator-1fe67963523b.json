@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-1fe67963523b",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f23c141223bae5aad6cbd3619cdc3a10baedbd5e1c8a91cc51706f6aa8eb0685",
+  "text": "Sarah Bennett stepped inside with a tablet tucked beneath one arm. She glanced from Jack to the computer.",
+  "bytes": 108713,
+  "generated": "2026-09-17T22:35:53Z"
+}

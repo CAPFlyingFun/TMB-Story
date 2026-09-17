@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7c57da6619ef",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "aa4ce064c9637c9dfadcee53e69ce12c68f35361117e974acc02398aea222d46",
+  "text": "Jack leaned back.",
+  "bytes": 19688,
+  "generated": "2026-09-17T22:36:06Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7942982ea850",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "95c645ecfb38f28a5d9b1f966936d62cd21624651fcaab5ae33a51be448867b5",
+  "text": "A warning tone chirped. Jack shifted but did not wake. A second tone followed, louder than the first, and then the entire console erupted with alarms.",
+  "bytes": 199410,
+  "generated": "2026-09-17T22:35:33Z"
+}

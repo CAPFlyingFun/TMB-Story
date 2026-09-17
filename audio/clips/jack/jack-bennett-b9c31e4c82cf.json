@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-b9c31e4c82cf",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e1cce8fe313ff6c200beebf0795572b04d730db835f104b8e321a33fc6e45ad7",
+  "text": "No. Where'd you go?",
+  "bytes": 18852,
+  "generated": "2026-09-17T22:35:38Z"
+}

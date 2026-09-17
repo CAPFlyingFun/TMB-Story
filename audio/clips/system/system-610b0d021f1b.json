@@ -1,0 +1,18 @@
+{
+  "clipId": "system-610b0d021f1b",
+  "speaker": "system",
+  "voiceId": "QpRibeuwXoGrlpLFDwqY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.85,
+    "similarity_boost": 0.6,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e78443bf09e43d6477d2e52556548c44163a3bd26b2d95075057d41c0b98bda4",
+  "text": "Security protocol violation.",
+  "bytes": 26375,
+  "generated": "2026-09-17T22:35:38Z"
+}

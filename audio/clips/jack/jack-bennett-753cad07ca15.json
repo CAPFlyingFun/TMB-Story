@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-753cad07ca15",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b5006df33d255bfb4e59eef78d74317d81314d672de62761a2b131386e9a6d61",
+  "text": "I wasn't uncomfortable?",
+  "bytes": 21777,
+  "generated": "2026-09-17T22:36:23Z"
+}

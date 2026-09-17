@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-cddc94b869d1",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "35265102283a1521a820c62fbe82013627cef512019e90dae0672b661442abc9",
+  "text": "He entered his administrator credentials, but a new message appeared before he could issue another command.",
+  "bytes": 87397,
+  "generated": "2026-09-17T22:36:31Z"
+}

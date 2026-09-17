@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-19f698a32342",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "91785d19d21ec676ddaa10f23f17550b5d5014d94a1e780f060810203387cf2e",
+  "text": "Jack shook his head.",
+  "bytes": 23449,
+  "generated": "2026-09-17T22:36:12Z"
+}

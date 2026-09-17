@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-29c879a5b799",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "00bad74128f74a4cd665d7f15e2a2c050c07eea4e2b3202a60b5e9e0b8828d76",
+  "text": "I was thinking eventually.",
+  "bytes": 23449,
+  "generated": "2026-09-17T22:36:17Z"
+}

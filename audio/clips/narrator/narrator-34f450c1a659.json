@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-34f450c1a659",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "33468a53bda5b1b9adc1d668e0f39c14bbc87b3b84f737b555b941a6c015a546",
+  "text": "The cursor moved without him touching anything.",
+  "bytes": 40586,
+  "generated": "2026-09-17T22:35:51Z"
+}

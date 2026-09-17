@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-cab4ca6ef144",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1d72fca77fe034434eb1b3e515022658e0a7d01d24042eeae246570749205247",
+  "text": "Sarah shook her head, but Jack caught the beginning of a smile. He glanced at the time and then at her.",
+  "bytes": 87397,
+  "generated": "2026-09-17T22:36:18Z"
+}

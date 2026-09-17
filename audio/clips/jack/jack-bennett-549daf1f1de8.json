@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-549daf1f1de8",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1537a1853ff2d4fdae534735b91cebf934498d505db8cf4fe619c60f06ec477c",
+  "text": "Okay. Definitely awake now.",
+  "bytes": 26375,
+  "generated": "2026-09-17T22:35:38Z"
+}

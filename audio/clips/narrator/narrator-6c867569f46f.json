@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6c867569f46f",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "87a4b375584a4be6bb7d932e58c6eb98af3b19714c5fd3fbfa1e31450acc38c4",
+  "text": "Jack reached for the console.",
+  "bytes": 28465,
+  "generated": "2026-09-17T22:36:28Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d4aef8b58a3e",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cb2bf08c3c7e73cffbf096ce384cf2dfac8258f73d7bf515f83971583e272169",
+  "text": "Jack watched as Sarah opened another window and began digging through the security logs.",
+  "bytes": 76112,
+  "generated": "2026-09-17T22:36:15Z"
+}

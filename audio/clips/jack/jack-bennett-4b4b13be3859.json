@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-4b4b13be3859",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7c27c7c89eb87e81840ab97da2685288ae9b78142f1d2d855a35f6a85c641d6e",
+  "text": "It opened the TOMBS directory.",
+  "bytes": 27211,
+  "generated": "2026-09-17T22:36:03Z"
+}

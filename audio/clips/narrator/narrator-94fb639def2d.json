@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-94fb639def2d",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "22309d8d5aaa89e179967ec8e9a3ee5bd39b64161e8470ba34b98d5513cf8ec9",
+  "text": "Sarah opened the connection history.",
+  "bytes": 33062,
+  "generated": "2026-09-17T22:36:12Z"
+}

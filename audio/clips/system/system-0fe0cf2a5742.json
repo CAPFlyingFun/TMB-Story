@@ -1,0 +1,18 @@
+{
+  "clipId": "system-0fe0cf2a5742",
+  "speaker": "system",
+  "voiceId": "QpRibeuwXoGrlpLFDwqY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.85,
+    "similarity_boost": 0.6,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f0599e03bcf8cffd50c209d08680f71ab7364276ebd9045159910627cd47b930",
+  "text": "Request denied.",
+  "bytes": 17598,
+  "generated": "2026-09-17T22:36:29Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-a376700976d7",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cc56542095e89708a827e152c9650b08c59cf65d45712c1df3ec5ad30d1d9384",
+  "text": "I think somebody's in the system.",
+  "bytes": 27629,
+  "generated": "2026-09-17T22:35:46Z"
+}

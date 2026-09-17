@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-06415c9f30d8",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1dc82db4b446de2c6fd3f368e2c82c0494af875d0f9f7e6ef9986787c18725f8",
+  "text": "Right. Problem.",
+  "bytes": 18852,
+  "generated": "2026-09-17T22:36:00Z"
+}

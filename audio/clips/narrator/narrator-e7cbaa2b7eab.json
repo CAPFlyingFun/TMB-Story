@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e7cbaa2b7eab",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "255c011aeca50f5b439fc4adac3d30c6e8d8b2da1b99de36c547746ea3d034f8",
+  "text": "Sarah gave him a look that answered the question for him.",
+  "bytes": 45601,
+  "generated": "2026-09-17T22:36:23Z"
+}

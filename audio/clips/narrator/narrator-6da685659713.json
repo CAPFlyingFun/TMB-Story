@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6da685659713",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bedee7fcf7541133545d13a75604b56fb45cb4868de42692baf5b2e5e73354b2",
+  "text": "Jack reached across the console and rejected the request.",
+  "bytes": 56050,
+  "generated": "2026-09-17T22:36:29Z"
+}

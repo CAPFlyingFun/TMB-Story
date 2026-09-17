@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-2a350447dd17",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "70f8fc25b506f8728ee4bad40edf0385d3e719d88d19c1320dc1356544668876",
+  "text": "I'm on my way,",
+  "bytes": 18016,
+  "generated": "2026-09-17T22:35:50Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "system-49a4bf38c005",
+  "speaker": "system",
+  "voiceId": "QpRibeuwXoGrlpLFDwqY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.85,
+    "similarity_boost": 0.6,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "74a656750793eed8326617a24d8193dc1dd6fe516a6ed4a1ae755b7845a02285",
+  "text": "Boundary control.",
+  "bytes": 19688,
+  "generated": "2026-09-17T22:35:51Z"
+}

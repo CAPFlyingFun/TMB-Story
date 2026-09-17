@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-492f4059781a",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7678c4674bca61352a95802db899d908c3d1e4201a5635c42a7fcb4a146e1532",
+  "text": "Come on. What are you doing?",
+  "bytes": 21777,
+  "generated": "2026-09-17T22:35:36Z"
+}

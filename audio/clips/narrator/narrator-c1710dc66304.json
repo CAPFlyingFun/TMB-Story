@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c1710dc66304",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "388c31d7d5e0b580fc37875819ee2a25030a8b212bcf41c14d83f3296b4f6bc2",
+  "text": "She leaned over his shoulder and studied the screen.",
+  "bytes": 43511,
+  "generated": "2026-09-17T22:36:00Z"
+}

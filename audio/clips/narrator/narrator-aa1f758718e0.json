@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-aa1f758718e0",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "76196773e083d101c660f45a9fbe124c7d7047961899889da625f90ecc67926f",
+  "text": "Jack stopped typing.",
+  "bytes": 24703,
+  "generated": "2026-09-17T22:36:34Z"
+}

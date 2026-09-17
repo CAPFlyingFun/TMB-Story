@@ -1,0 +1,18 @@
+{
+  "clipId": "system-2e8d8d3e2911",
+  "speaker": "system",
+  "voiceId": "QpRibeuwXoGrlpLFDwqY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.85,
+    "similarity_boost": 0.6,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9b58c6dd0c48a70bd81283f85a98fc29beef8b4474c93fd9c772bf8d96a37005",
+  "text": "Warning. unauthorized system access.",
+  "bytes": 35988,
+  "generated": "2026-09-17T22:35:34Z"
+}

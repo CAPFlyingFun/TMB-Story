@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d4abdf24a364",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b274c360f10bc782e297f547a77982f6f5843ffc51acaf9075920e967d970ec0",
+  "text": "Jack stared at the warning.",
+  "bytes": 26375,
+  "generated": "2026-09-17T22:36:32Z"
+}

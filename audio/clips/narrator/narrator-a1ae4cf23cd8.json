@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a1ae4cf23cd8",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f11b1d68810ff7f8a360050c375710bbe9359101e7ffd3c8dfd53d25946b42cf",
+  "text": "Sarah kept typing.",
+  "bytes": 22613,
+  "generated": "2026-09-17T22:36:18Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e7569b3cf356",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "59691f76fadd8e697206665e818539dd239abab74ac34c0c5a626196051093c2",
+  "text": "Sarah stopped typing long enough to look at him.",
+  "bytes": 40586,
+  "generated": "2026-09-17T22:36:22Z"
+}

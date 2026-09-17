@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-13662115397f",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8fd384d54d26ab6ac2ef60ebc0dd7edd8fc6b29fc72e1391c3d1668ab5f0f299",
+  "text": "I didn't.",
+  "bytes": 12164,
+  "generated": "2026-09-17T22:36:35Z"
+}

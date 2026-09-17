@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-765e3fa279dd",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "dc138f02e7918b751239b14276482834097f53eeb6f98b746f0ccdcd3c1a4900",
+  "text": "Jack sat slumped in his chair with his arms folded across his chest, his head tilted toward one shoulder, and several pages of diagnostic data glowing on the monitor in front of him. His eyes were closed.",
+  "bytes": 215711,
+  "generated": "2026-09-17T22:35:33Z"
+}

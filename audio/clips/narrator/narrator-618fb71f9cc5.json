@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-618fb71f9cc5",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6607478589f6fc4d4ead45ceda1a517e23540b7876619418deb78e2186e2121f",
+  "text": "Sarah nudged the arm of his chair.",
+  "bytes": 33898,
+  "generated": "2026-09-17T22:36:09Z"
+}

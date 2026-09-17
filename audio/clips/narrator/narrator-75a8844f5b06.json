@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-75a8844f5b06",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c2a4499442e395f1655972ca82de09b1c7a12204e5c78d31910aeb99da8a9444",
+  "text": "Sarah returned to the keyboard.",
+  "bytes": 28465,
+  "generated": "2026-09-17T22:36:26Z"
+}

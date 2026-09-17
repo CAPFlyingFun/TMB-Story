@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-45ac1e9fe1de",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f5aef9a6088a0a91dec0aff29e1632f495dc1a56d0c00ff244b62e93d2012f91",
+  "text": "Sarah, you there?",
+  "bytes": 20524,
+  "generated": "2026-09-17T22:35:43Z"
+}

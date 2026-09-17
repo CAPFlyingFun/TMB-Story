@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c9d9bba60b27",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "057cca04dce1c8ee8111fea8ee24dc21102abfa139af1a233b916a14604d07c5",
+  "text": "Jack frowned.",
+  "bytes": 18852,
+  "generated": "2026-09-17T22:35:37Z"
+}

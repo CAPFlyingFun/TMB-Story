@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-1c904f05b2e0",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "883ddbdb56f8d35f5301e96c05b0d8f6b54141d4ec230f6b9ee2e63012767e90",
+  "text": "Jack reopened the network monitor.",
+  "bytes": 34316,
+  "generated": "2026-09-17T22:35:46Z"
+}

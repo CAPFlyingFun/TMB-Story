@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d3ceae9f0f0b",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "71b8b4d8ff8f310c4a6e9db478422ba8b48e38d623ae42897ab56b068804cfed",
+  "text": "Static answered him.",
+  "bytes": 22613,
+  "generated": "2026-09-17T22:35:43Z"
+}

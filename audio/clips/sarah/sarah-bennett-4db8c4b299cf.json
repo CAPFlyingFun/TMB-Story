@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-4db8c4b299cf",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ac1451cc5bd29f3d80baeb83a6215eba102e9f51e7c5c8fc37f80b1c360ea6a2",
+  "text": "No. You're the one I found asleep at a laboratory terminal.",
+  "bytes": 47691,
+  "generated": "2026-09-17T22:36:21Z"
+}

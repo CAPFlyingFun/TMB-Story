@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-840d9089ed45",
+  "speaker": "narrator",
+  "voiceId": "GoGUcAZovo4MFeLxJdZd",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "71934639e6bbbd4d8af71f20fab0852b2bd51893df6ae941f7082f57961c9e23",
+  "text": "Jack smiled despite himself.",
+  "bytes": 31391,
+  "generated": "2026-09-17T22:35:49Z"
+}
