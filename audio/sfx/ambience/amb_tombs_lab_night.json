@@ -1,0 +1,16 @@
+{
+  "asset": "amb_tombs_lab_night",
+  "category": "ambience",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "Quiet room tone of an advanced, clean research laboratory late at night. Soft steady ventilation, a low continuous electrical hum from racked equipment, faint distant cooling fans, and a barely perceptible high shimmer from instruments on standby. Spacious but enclosed. No voices, no music, no alarms, no beeping, no footsteps. Even throughout so it loops.",
+  "durationSeconds": 20,
+  "promptInfluence": 0.3,
+  "loop": true,
+  "assetVersion": 1,
+  "fingerprint": "f05e5676ba1b1be4d710f762538831069ade7dd89ba5852bac23e8518cd960bf",
+  "bytes": 321036,
+  "generated": "2026-09-18T04:20:44Z"
+}

@@ -51,9 +51,9 @@
       "audio": "audio/sfx/ambience/amb_tombs_lab_night.mp3",
       "durationSeconds": 20,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.1,
-      "description": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed. Requested at 20s rather than 22: ElevenLabs rejected 22 with HTTP 400 while 20 generated fine, so 20 is the proven ceiling.",
+      "description": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed. Its prompt is deliberately terse: the first version was 476 characters and was rejected twice with HTTP 400, at 22 seconds and again at 20, while every other asset -- including a 20-second looping bed -- generated fine at 385 characters or fewer. The cause was prompt LENGTH, not duration. Nothing substantive was dropped, only words.",
       "chapters": [
         1
       ]

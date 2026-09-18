@@ -3348,7 +3348,7 @@
       "gain": 0.08,
       "loop": true,
       "audio": "audio/sfx/ambience/amb_tombs_lab_night.mp3",
-      "cached": false,
+      "cached": true,
       "why": "Enters on 'Deep inside one of those laboratories' -- the sentence that puts us in the room -- and never leaves, because the chapter never leaves. Establishes an occupied but near-empty building at night so that every later silence reads as a room and not as dead air.",
       "fadeInMs": 3000,
       "fadeOutMs": 4000,
