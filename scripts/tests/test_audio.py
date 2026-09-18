@@ -21,6 +21,7 @@ sys.path.insert(0, os.path.dirname(HERE))          # scripts/
 
 from tmbaudio import cache, elevenlabs, manifest as mf, parse          # noqa: E402
 from tmbaudio import sfx as sfxmod                                     # noqa: E402
+from tmbaudio import combine as combinemod, drama                      # noqa: E402
 from tmbaudio.parse import clip_id, split_paragraph                    # noqa: E402
 from tmbaudio.registry import NARRATOR, REVIEW, SYSTEM, Registry       # noqa: E402
 
@@ -987,6 +988,128 @@ class LayerClientTests(unittest.TestCase):
         self.assertIn("listen-layer-sfx", text)
         self.assertNotIn('id="listen-layer-voice"', text,
                          "voices are the reference layer, not a switch that mutes the book")
+
+
+class DramaExportTests(unittest.TestCase):
+    """The layered convenience mix. Builds its plan and graph with no ffmpeg."""
+
+    def setUp(self):
+        self.manifest = {
+            "chapter": 9,
+            "segments": [
+                {"order": 0, "audio": "a.mp3", "pauseBeforeMs": 0},
+                {"order": 1, "audio": "b.mp3", "pauseBeforeMs": 300},
+                {"order": 2, "audio": "c.mp3", "pauseBeforeMs": 500},
+            ],
+            "cues": [
+                {"cueId": "bed", "asset": "amb", "audio": "bed.mp3", "gain": 0.1,
+                 "timing": "before", "order": 0, "category": "ambience",
+                 "layer": "ambience", "loop": True, "stopOrder": 2,
+                 "fadeInMs": 1000, "fadeOutMs": 2000, "cached": True},
+                {"cueId": "hit", "asset": "sfx", "audio": "hit.mp3", "gain": 0.5,
+                 "timing": "before", "order": 2, "category": "alarm",
+                 "layer": "sfx", "loop": False, "cached": True},
+                {"cueId": "mid", "asset": "sfx", "audio": "hit.mp3", "gain": 0.4,
+                 "timing": "during", "offsetMs": 400, "order": 1,
+                 "category": "foley", "layer": "sfx", "loop": False, "cached": True},
+                {"cueId": "tail", "asset": "sfx", "audio": "hit.mp3", "gain": 0.3,
+                 "timing": "after", "order": 1, "category": "foley",
+                 "layer": "sfx", "loop": False, "cached": True},
+            ],
+        }
+        self._dur = drama.cache.mp3_duration_seconds
+        drama.cache.mp3_duration_seconds = lambda p: 2.0
+        self._isfile = drama.os.path.isfile
+        drama.os.path.isfile = lambda p: True
+
+    def tearDown(self):
+        drama.cache.mp3_duration_seconds = self._dur
+        drama.os.path.isfile = self._isfile
+
+    def test_timeline_is_pause_then_clip(self):
+        starts, ends, total = drama.timeline(self.manifest)
+        self.assertAlmostEqual(starts[0], 0.0)
+        self.assertAlmostEqual(ends[0], 2.0)
+        self.assertAlmostEqual(starts[1], 2.3, msg="the 300ms pause comes first")
+        self.assertAlmostEqual(starts[2], 4.8)
+        self.assertAlmostEqual(total, 6.8)
+
+    def test_before_lands_in_the_gap_and_after_lands_at_the_end(self):
+        """`before` must precede the line, or the cue sheet's reasoning is wrong.
+
+        The chirp is heard and THEN the narrator says a warning tone chirped.
+        """
+        starts, ends, _ = drama.timeline(self.manifest)
+        hit = [c for c in self.manifest["cues"] if c["cueId"] == "hit"][0]
+        at = drama.cue_start(hit, self.manifest, starts, ends)
+        self.assertLess(at, starts[2], "a before cue must start before its segment")
+        self.assertAlmostEqual(at, starts[2] - 0.5, msg="it starts at the top of the gap")
+
+        tail = [c for c in self.manifest["cues"] if c["cueId"] == "tail"][0]
+        self.assertAlmostEqual(drama.cue_start(tail, self.manifest, starts, ends), ends[1])
+
+        mid = [c for c in self.manifest["cues"] if c["cueId"] == "mid"][0]
+        self.assertAlmostEqual(drama.cue_start(mid, self.manifest, starts, ends),
+                               starts[1] + 0.4)
+
+    def test_a_bed_runs_from_its_anchor_to_its_stop(self):
+        spec = drama.plan(self.manifest, sfx_reg())
+        self.assertEqual(len(spec["beds"]), 1)
+        bed = spec["beds"][0]
+        self.assertAlmostEqual(bed["at"], 0.0)
+        self.assertAlmostEqual(bed["until"], 6.8)
+        self.assertAlmostEqual(bed["duration"], 6.8)
+        self.assertEqual(len(spec["shots"]), 3)
+        self.assertEqual(len(spec["voices"]), 3)
+
+    def test_the_graph_ducks_beds_and_never_averages_the_gains(self):
+        spec = drama.plan(self.manifest, sfx_reg())
+        inputs, graph, out = drama.build_graph(spec)
+        self.assertEqual(len(inputs), 7, "three voices, one bed, three one-shots")
+        self.assertIn("sidechaincompress", graph,
+                      "the beds must duck against the voice track")
+        self.assertNotIn("normalize=1", graph)
+        self.assertEqual(graph.count("normalize=0"), graph.count("amix"),
+                         "every amix must keep the gains the cue sheet decided")
+        self.assertIn("aloop", graph, "a bed has to loop to fill its span")
+        self.assertIn("afade=t=in", graph)
+        self.assertIn("afade=t=out", graph)
+        self.assertEqual(out, "[mix]")
+
+    def test_an_ungenerated_asset_is_left_out_rather_than_failing_the_mix(self):
+        drama.os.path.isfile = lambda p: not p.endswith("hit.mp3")
+        spec = drama.plan(self.manifest, sfx_reg())
+        self.assertEqual(spec["shots"], [])
+        self.assertEqual(len(spec["voices"]), 3, "the voice track is still complete")
+        self.assertIn("hit.mp3", spec["missing"])
+        inputs, graph, _ = drama.build_graph(spec)
+        self.assertEqual(len(inputs), 4)
+
+    def test_the_mix_is_never_written_into_a_voice_clip(self):
+        """The export is a convenience. The clips stay canonical."""
+        spec = drama.plan(self.manifest, sfx_reg())
+        for v in spec["voices"]:
+            self.assertEqual(v["gain"], 1.0, "voice is the reference level")
+        self.assertIn("-drama", "chapter-09-drama.mp3")
+        src = open(os.path.join(os.path.dirname(HERE), "tmbaudio", "drama.py"),
+                   encoding="utf-8").read()
+        self.assertIn("chapter-%02d-drama.mp3", src,
+                      "the layered mix must be its own file, not the voice export")
+        self.assertNotIn("clip_paths", src,
+                         "the drama export must never write into the clip cache")
+
+
+class CombineGuardTests(unittest.TestCase):
+    """Without ffmpeg the join has no gaps, which must not replace a good export."""
+
+    def test_source_refuses_to_overwrite_a_good_export_with_a_gapless_one(self):
+        src = open(os.path.join(os.path.dirname(HERE), "tmbaudio", "combine.py"),
+                   encoding="utf-8").read()
+        self.assertIn("force_gapless", src)
+        self.assertIn("Refusing", src)
+        head = src[src.index("else:"):]
+        self.assertLess(head.index("force_gapless"), head.index('open(out, "wb")'),
+                        "the guard has to come before the write")
 
 
 class WorkflowTests(unittest.TestCase):

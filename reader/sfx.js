@@ -33,7 +33,8 @@
     timers: [],          // pending `during` offsets
     speaking: false,
     unavailable: {},     // asset -> true once a fetch has failed
-    order: null
+    order: null,
+    prefired: null       // order whose `before` cues already fired during the gap
   };
 
   function num(v, fallback) {
@@ -218,13 +219,24 @@
       }
     },
 
-    /* Called as each voice segment begins. Fires its `before` cues, schedules its
-       `during` cues and brings the right beds in or out. */
+    /* Fires the NEXT segment's `before` cues at the top of the gap, so `before`
+       genuinely means before: the listener hears the chirp and then the narrator says
+       a warning tone chirped. The combined drama export places them at the same
+       instant, which is what keeps the browser and the file agreeing. */
+    prefireBefore: function (order) {
+      if (order === null || order === undefined) return;
+      state.prefired = order;
+      cuesAt(order, "before").forEach(fire);
+    },
+
+    /* Called as each voice segment begins: schedules its `during` cues, brings the
+       right beds in or out, and fires its `before` cues only if the gap did not. */
     enterSegment: function (order) {
       clearTimers();
       state.order = order;
       syncBeds(order);
-      cuesAt(order, "before").forEach(fire);
+      if (state.prefired !== order) cuesAt(order, "before").forEach(fire);
+      state.prefired = null;
       cuesAt(order, "during").forEach(function (cue) {
         var t = setTimeout(function () { fire(cue); }, Math.max(0, num(cue.offsetMs, 0)));
         state.timers.push(t);
@@ -253,6 +265,7 @@
       state.oneShots = [];
       state.speaking = false;
       state.order = null;
+      state.prefired = null;
     }
   };
 })();

@@ -147,6 +147,9 @@
     if (l) { l.setSpeaking(false); if (done) l.leaveSegment(done.order); }
     var next = segments()[state.index + 1];
     if (!next) { state.playing = false; render(); return; }
+    /* The next segment's `before` cues belong in this gap, not on top of its first
+       word. enterSegment will not fire them again. */
+    if (l && state.playing) l.prefireBefore(next.order);
     /* The gap between clips comes from the manifest, not from silence baked into the
        audio, so pacing can be retuned without regenerating anything. */
     var gap = Math.max(0, next.pauseBeforeMs || 0);

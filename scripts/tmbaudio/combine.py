@@ -24,7 +24,7 @@ def _have_ffmpeg():
     return shutil.which("ffmpeg") is not None
 
 
-def combine_chapter(number, registry, log=print):
+def combine_chapter(number, registry, log=print, force_gapless=False):
     man = mf.load(number)
     segs = man["segments"]
     missing = [s for s in segs if not os.path.isfile(os.path.join(ROOT, s["audio"]))]
@@ -61,6 +61,17 @@ def combine_chapter(number, registry, log=print):
                  "-i", listing, "-c", "copy", out], check=True)
         log("wrote %s  (%d clips, pauses included via ffmpeg)" % (cache.rel(out), len(segs)))
     else:
+        # Without ffmpeg the join has no gaps, which is strictly worse than what is
+        # already there. Overwriting a good export with it is how an 8-minute chapter
+        # silently lost its 60 seconds of pauses once; refuse instead.
+        if os.path.isfile(out) and not force_gapless:
+            log("chapter %d: ffmpeg is not on the path, and %s already exists. Refusing "
+                "to replace it with a gapless join.\n"
+                "  Install ffmpeg, or run a CI generation job, to rebuild it with the "
+                "manifest's pauses.\n"
+                "  Pass force_gapless=True only if a gapless file is genuinely what you "
+                "want." % (number, cache.rel(out)))
+            return None
         with open(out, "wb") as dest:
             for seg in segs:
                 with open(os.path.join(ROOT, seg["audio"]), "rb") as src:

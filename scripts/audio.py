@@ -363,10 +363,22 @@ def cmd_generate(args, reg):
 
 
 def cmd_combine(args, reg):
-    from tmbaudio import combine
+    from tmbaudio import combine, drama
     files = mf.chapter_files()
     for n in parse_range(args.chapters, files):
         combine.combine_chapter(n, reg)
+        if not getattr(args, "no_drama", False):
+            try:
+                sreg = _sfx_registry(reg)
+            except (OSError, ValueError):
+                continue
+            # A convenience output. A failure here must never cost the assets that
+            # were just generated, so it is reported and the run continues.
+            try:
+                drama.export_chapter(n, reg, sreg)
+            except Exception as exc:                  # noqa: BLE001
+                print("  drama export for chapter %d failed: %s" % (n, exc))
+                print("  the voice clips, ambience and effects are all unaffected.")
 
 
 def cmd_export_game(args, reg):
@@ -417,6 +429,9 @@ def main(argv=None):
                            help="show what would be generated; makes no request")
             p.add_argument("--scene", action="store_true",
                            help="only the audition scene in audio/test-scene.json")
+        if name == "combine":
+            p.add_argument("--no-drama", action="store_true",
+                           help="voices only; skip the layered audio-drama export")
         if name == "cues":
             p.add_argument("--timestamps", action="store_true",
                            help="approximate clock times, for human review only")
