@@ -25,11 +25,12 @@
     "nothing: it is one generated sound heard nine times. Long stretches are still",
     "deliberately voices and room tone and nothing else.",
     "",
-    "2026-09-18: every keyboard cue's gain was raised sharply -- Joshua still could not",
-    "hear the typing in the mix. The asset's own prompt asked for \"quick QUIET key",
-    "presses\", so 0.30 of a deliberately quiet recording is plausibly 20 dB under the",
-    "speech. These are provisional: scripts/measure-mix.py decodes the exported file and",
-    "reports the real levels, and gain costs nothing to change."
+    "2026-09-18: the keyboard cues' gains are PROVISIONAL and currently have no audible",
+    "effect. Measurement showed the keyboard asset is -46.9 dBFS RMS with a 3-second file",
+    "that sounds for 0.00s -- a few faint ticks in near-silence -- so no gain makes typing",
+    "audible under speech at about -22 dB. They are set to 0.42-0.55, which is right for a",
+    "correctly levelled asset, rather than left at the 0.85 I had tried: 0.85 of a good",
+    "recording would be far too loud. Re-measure once the asset is replaced."
   ],
   "chapter": 1,
   "cues": [
@@ -125,7 +126,7 @@
       },
       "timing": "during",
       "offsetMs": 4200,
-      "gain": 0.85,
+      "gain": 0.55,
       "why": "Lands on 'Jack grabbed the keyboard'. Establishes that he is working the problem with his hands, which is what makes the later moment when the cursor moves by itself frightening."
     },
     {
@@ -137,7 +138,7 @@
       },
       "timing": "during",
       "offsetMs": 1200,
-      "gain": 0.85,
+      "gain": 0.55,
       "why": "Jack entering a command and running a second search. The manuscript has him working the logs by hand here, and it was silent."
     },
     {
@@ -332,7 +333,7 @@
       },
       "timing": "during",
       "offsetMs": 300,
-      "gain": 0.85,
+      "gain": 0.55,
       "why": "'Sarah immediately started typing' -- the moment the competent one takes over. Marking who has the keyboard is the scene's quiet shift of authority."
     },
     {
@@ -344,7 +345,7 @@
       },
       "timing": "during",
       "offsetMs": 250,
-      "gain": 0.72,
+      "gain": 0.45,
       "why": "Sarah opening the connection history. She has the keyboard now and the scene should keep saying so."
     },
     {
@@ -356,7 +357,7 @@
       },
       "timing": "during",
       "offsetMs": 1600,
-      "gain": 0.85,
+      "gain": 0.55,
       "why": "“began digging through the security logs” is the longest stretch of work in the chapter and had no sound under it at all."
     },
     {
@@ -368,7 +369,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.68,
+      "gain": 0.42,
       "why": "The narration says plainly that she kept typing. Quiet, because it is under a line of banter rather than under the investigation."
     },
     {
@@ -380,7 +381,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.68,
+      "gain": 0.42,
       "why": "“Sarah continued typing.” Re-anchored on 2026-09-18 when Joshua's approved manuscript correction changed that line: the text changed, so the clip's identity changed, and this is the one case where an anchor is SUPPOSED to be edited. Validation caught it rather than letting the cue land somewhere plausible."
     },
     {
@@ -452,7 +453,7 @@
       },
       "timing": "during",
       "offsetMs": 500,
-      "gain": 0.85,
+      "gain": 0.55,
       "why": "Jack entering his administrator credentials. Slightly louder than the rest: this is the keystroke the chapter turns on, and the refusal answers it."
     },
     {
@@ -464,7 +465,7 @@
       },
       "timing": "during",
       "offsetMs": 250,
-      "gain": 0.75,
+      "gain": 0.5,
       "why": "“Jack tried his credentials again.” The same sound a second time is the information, exactly as the two denial tones are."
     }
   ]

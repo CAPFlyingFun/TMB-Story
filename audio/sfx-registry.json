@@ -18,7 +18,24 @@
     "",
     "Prompt discipline, from Joshua's brief: ambience carries no voices, no music, no",
     "prominent alarms, no footsteps and no cinematic gestures. Those are event sounds and",
-    "live as their own assets so they can be moved, retuned or switched off separately."
+    "live as their own assets so they can be moved, retuned or switched off separately.",
+    "",
+    "MEASURED LEVELS, 2026-09-18. scripts/measure-mix.py decoded every asset because",
+    "Joshua could not hear the typing even with all nine cues resolving. The finding is",
+    "not about the mixer: nine of the twenty assets came back 40 to 63 dB below full",
+    "scale in RMS, which no gain can rescue against speech at about -22 dB.",
+    "",
+    "The pattern is my prompts' fault, and it is consistent. Every prompt carrying a",
+    "LOUDNESS word -- soft, quiet, subtle, faint, barely perceptible -- came back nearly",
+    "silent; every prompt carrying an ENERGY word -- erupting, sharp, urgent, firm --",
+    "came back hot. The provider read those adjectives as absolute level rather than as",
+    "character. A prompt should describe the sound's character and its microphone",
+    "distance, and leave the level to the mix, where a number costs nothing to change.",
+    "",
+    "`soundsForSeconds` is the time the RMS envelope stays within 20 dB of the asset's",
+    "own peak. 0.00 on a 3-second file means a couple of transients in near-silence --",
+    "which is what the keyboard is, and why more gain would only make faint ticks",
+    "louder rather than making typing audible."
   ],
   "sfxVersion": 1,
   "characters": {
@@ -55,7 +72,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed. Its prompt is deliberately terse: the first version was 476 characters and was rejected twice with HTTP 400, at 22 seconds and again at 20, while every other asset -- including a 20-second looping bed -- generated fine at 385 characters or fewer. The cause was prompt LENGTH, not duration. Nothing substantive was dropped, only words."
+      "notes": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed. Its prompt is deliberately terse: the first version was 476 characters and was rejected twice with HTTP 400, at 22 seconds and again at 20, while every other asset -- including a 20-second looping bed -- generated fine at 385 characters or fewer. The cause was prompt LENGTH, not duration. Nothing substantive was dropped, only words.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 20.0,
+        "peakDbfs": -35.3,
+        "rmsDbfs": -47.8,
+        "soundsForSeconds": 20.0,
+        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+      }
     },
     "amb_console_alarm_bed": {
       "category": "alarm",
@@ -67,7 +92,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "Categorised `alarm`, not `ambience`, so switching ambience off does not silence the chapter's alarm. Loops under the opening sequence and is ducked hard beneath speech."
+      "notes": "Categorised `alarm`, not `ambience`, so switching ambience off does not silence the chapter's alarm. Loops under the opening sequence and is ducked hard beneath speech.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 12.0,
+        "peakDbfs": -0.2,
+        "rmsDbfs": -11.2,
+        "soundsForSeconds": 11.5,
+        "verdict": "usable"
+      }
     },
     "amb_intercom_channel_open": {
       "category": "interface",
@@ -79,7 +112,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "The cheapest honest way to tell the listener Sarah is on a speaker and not in the room. It sits under her intercom lines without touching her approved voice clips, which are never filtered or regenerated for this."
+      "notes": "The cheapest honest way to tell the listener Sarah is on a speaker and not in the room. It sits under her intercom lines without touching her approved voice clips, which are never filtered or regenerated for this.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 10.0,
+        "peakDbfs": -37.4,
+        "rmsDbfs": -52.2,
+        "soundsForSeconds": 10.0,
+        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+      }
     },
     "amb_tombs_array_power_rise": {
       "category": "system",
@@ -91,7 +132,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "The tension spine of the last third, and the beginning of the TOMBS Array's own sound identity. It enters when the remote initialization request appears and does not leave."
+      "notes": "The tension spine of the last third, and the beginning of the TOMBS Array's own sound identity. It enters when the remote initialization request appears and does not leave.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 20.0,
+        "peakDbfs": -0.4,
+        "rmsDbfs": -7.1,
+        "soundsForSeconds": 20.0,
+        "verdict": "usable"
+      }
     },
     "sfx_console_tone_soft": {
       "category": "interface",
@@ -103,7 +152,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "The polite tone that fails to wake Jack. Used twice in Chapter 1 -- the second, louder tone is this same asset at a higher gain, which is what the manuscript describes."
+      "notes": "The polite tone that fails to wake Jack. Used twice in Chapter 1 -- the second, louder tone is this same asset at a higher gain, which is what the manuscript describes.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 1.48,
+        "peakDbfs": -37.1,
+        "rmsDbfs": -54.5,
+        "soundsForSeconds": 0.25,
+        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+      }
     },
     "sfx_console_alarm_erupt": {
       "category": "alarm",
@@ -115,7 +172,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "The single biggest sound event in the chapter. The escalation from one chirp to this is the whole opening beat."
+      "notes": "The single biggest sound event in the chapter. The escalation from one chirp to this is the whole opening beat.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 3.0,
+        "peakDbfs": 0.0,
+        "rmsDbfs": -11.6,
+        "soundsForSeconds": 2.75,
+        "verdict": "usable"
+      }
     },
     "sfx_alert_warning_hit": {
       "category": "alarm",
@@ -127,7 +192,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "A single interruption, distinct from the polite chirp and from the full eruption. Used twice: the second alarm during the trace, and the tone that interrupts the couple much later."
+      "notes": "A single interruption, distinct from the polite chirp and from the full eruption. Used twice: the second alarm during the trace, and the tone that interrupts the couple much later.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 1.48,
+        "peakDbfs": -1.0,
+        "rmsDbfs": -19.1,
+        "soundsForSeconds": 0.25,
+        "verdict": "usable"
+      }
     },
     "sfx_system_notify_soft": {
       "category": "interface",
@@ -139,7 +212,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "Deliberately calm. The unsettling thing about TOMBS opening its own directory is how unbothered it sounds. Used twice: the directory opening itself, and the file opening itself."
+      "notes": "Deliberately calm. The unsettling thing about TOMBS opening its own directory is how unbothered it sounds. Used twice: the directory opening itself, and the file opening itself.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 1.48,
+        "peakDbfs": -16.8,
+        "rmsDbfs": -42.6,
+        "soundsForSeconds": 0.25,
+        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+      }
     },
     "sfx_terminal_lock_engage": {
       "category": "interface",
@@ -151,7 +232,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "Jack taking control back. It has to sound like it worked, so that the terminal coming back on by itself lands as a violation."
+      "notes": "Jack taking control back. It has to sound like it worked, so that the terminal coming back on by itself lands as a violation.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 2.0,
+        "peakDbfs": -15.2,
+        "rmsDbfs": -36.3,
+        "soundsForSeconds": 0.5,
+        "verdict": "quiet; gain can still rescue it"
+      }
     },
     "sfx_equipment_power_up_soft": {
       "category": "system",
@@ -163,7 +252,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "The terminal undoing Jack's lock without being asked. Soft on purpose: a bang would make it an attack, and the point is that it is calm."
+      "notes": "The terminal undoing Jack's lock without being asked. Soft on purpose: a bang would make it an attack, and the point is that it is calm.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 2.48,
+        "peakDbfs": -45.3,
+        "rmsDbfs": -63.1,
+        "soundsForSeconds": 1.0,
+        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+      }
     },
     "sfx_intercom_open": {
       "category": "interface",
@@ -175,7 +272,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "Marks the acoustic frame Sarah's remote voice arrives in. Used twice: reaching for the intercom, and tapping the button again."
+      "notes": "Marks the acoustic frame Sarah's remote voice arrives in. Used twice: reaching for the intercom, and tapping the button again.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 1.48,
+        "peakDbfs": 0.0,
+        "rmsDbfs": -26.9,
+        "soundsForSeconds": 0.0,
+        "verdict": "usable"
+      }
     },
     "sfx_intercom_static": {
       "category": "interface",
@@ -187,7 +292,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "The manuscript makes static the ANSWER to Jack's question, so this is dialogue's turn in the scene, not decoration."
+      "notes": "The manuscript makes static the ANSWER to Jack's question, so this is dialogue's turn in the scene, not decoration.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 2.48,
+        "peakDbfs": -2.1,
+        "rmsDbfs": -15.6,
+        "soundsForSeconds": 1.75,
+        "verdict": "usable"
+      }
     },
     "sfx_intercom_close": {
       "category": "interface",
@@ -199,7 +312,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "Closes the frame the intercom opened. Without it the listener has no cue that the channel is gone, and the room's silence afterward is part of the scene."
+      "notes": "Closes the frame the intercom opened. Without it the listener has no cue that the channel is gone, and the room's silence afterward is part of the scene.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 1.0,
+        "peakDbfs": -7.9,
+        "rmsDbfs": -21.5,
+        "soundsForSeconds": 0.5,
+        "verdict": "usable"
+      }
     },
     "sfx_lab_door_slide": {
       "category": "foley",
@@ -211,7 +332,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "Someone entering behind Jack while he is looking the other way. Pure spatial information, and the manuscript puts it mid-sentence on purpose."
+      "notes": "Someone entering behind Jack while he is looking the other way. Pure spatial information, and the manuscript puts it mid-sentence on purpose.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 2.48,
+        "peakDbfs": -1.5,
+        "rmsDbfs": -16.7,
+        "soundsForSeconds": 1.25,
+        "verdict": "usable"
+      }
     },
     "sfx_footsteps_sarah_sneakers": {
       "category": "foley",
@@ -223,7 +352,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "Sarah's gray sneakers, per Chapter 1 visual canon -- explicitly not heels. Used twice and only for spatial transitions: entering the laboratory, and crossing the room to Jack. The listener never hears her walk otherwise."
+      "notes": "Sarah's gray sneakers, per Chapter 1 visual canon -- explicitly not heels. Used twice and only for spatial transitions: entering the laboratory, and crossing the room to Jack. The listener never hears her walk otherwise.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 3.0,
+        "peakDbfs": -23.7,
+        "rmsDbfs": -54.3,
+        "soundsForSeconds": 0.0,
+        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+      }
     },
     "sfx_chair_roll_fast": {
       "category": "foley",
@@ -235,7 +372,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "Jack waking so hard the chair moves. It gives the alarm a physical consequence in a body rather than only on a screen."
+      "notes": "Jack waking so hard the chair moves. It gives the alarm a physical consequence in a body rather than only on a screen.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 2.0,
+        "peakDbfs": -21.5,
+        "rmsDbfs": -44.4,
+        "soundsForSeconds": 0.5,
+        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+      }
     },
     "sfx_chair_roll_slow": {
       "category": "foley",
@@ -247,7 +392,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "Two people arranging themselves around one workstation. Used twice: Sarah pulling a second chair over, and Jack rolling sideways to make room. Consciously different from the fast roll -- that one is a startle, this one is a marriage."
+      "notes": "Two people arranging themselves around one workstation. Used twice: Sarah pulling a second chair over, and Jack rolling sideways to make room. Consciously different from the fast roll -- that one is a startle, this one is a marriage.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 2.48,
+        "peakDbfs": -29.3,
+        "rmsDbfs": -47.4,
+        "soundsForSeconds": 1.5,
+        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+      }
     },
     "sfx_keyboard_typing_short": {
       "category": "foley",
@@ -259,7 +412,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "Used three times, only where the manuscript actually starts or resumes typing. It marks who has the keyboard, which is how the scene's authority shifts from Jack to Sarah."
+      "notes": "Used three times, only where the manuscript actually starts or resumes typing. It marks who has the keyboard, which is how the scene's authority shifts from Jack to Sarah.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 3.0,
+        "peakDbfs": -19.3,
+        "rmsDbfs": -46.9,
+        "soundsForSeconds": 0.0,
+        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+      }
     },
     "sfx_access_denied_tone": {
       "category": "system",
@@ -271,7 +432,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "Used twice, before each Request denied. Hearing the same refusal twice is the information: Jack tried again and got nowhere."
+      "notes": "Used twice, before each Request denied. Hearing the same refusal twice is the information: Jack tried again and got nowhere.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 1.48,
+        "peakDbfs": -10.7,
+        "rmsDbfs": -32.8,
+        "soundsForSeconds": 0.25,
+        "verdict": "quiet; gain can still rescue it"
+      }
     },
     "sfx_access_revoked_tone": {
       "category": "system",
@@ -283,7 +452,15 @@
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "Distinct from the denial tone on purpose. The story distinguishes being refused from being locked out, and that difference is the chapter's ending; it should not sound the same."
+      "notes": "Distinct from the denial tone on purpose. The story distinguishes being refused from being locked out, and that difference is the chapter's ending; it should not sound the same.",
+      "measured": {
+        "on": "2026-09-18",
+        "seconds": 2.0,
+        "peakDbfs": -11.9,
+        "rmsDbfs": -26.1,
+        "soundsForSeconds": 0.75,
+        "verdict": "usable"
+      }
     }
   }
 }

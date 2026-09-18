@@ -10,7 +10,7 @@ with `python3 scripts/render-cue-sheet.py 1`.
 |---|---|
 | Playback events | **35** |
 | Unique assets | **20** (0 still to generate) |
-| Chapter runtime as it plays today | 8:15 |
+| Chapter runtime as it plays today | 8:17 |
 | Voice clips regenerated for this | **none** |
 
 Events outnumber assets because sounds are reused: `sfx_access_denied_tone` x2, `sfx_alert_warning_hit` x2, `sfx_chair_roll_slow` x2, `sfx_console_tone_soft` x2, `sfx_footsteps_sarah_sneakers` x2, `sfx_intercom_open` x2, `sfx_keyboard_typing_short` x9, `sfx_system_notify_soft` x2.
@@ -155,7 +155,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 10 · clip `narrator-93519474e9ea` · occurrence 1 |
 | Timing | during +4200ms |
-| Gain | 0.85 |
+| Gain | 0.55 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~1:13 |
@@ -193,7 +193,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 18 · clip `narrator-36d912fb5b4f` · occurrence 1 |
 | Timing | during +1200ms |
-| Gain | 0.85 |
+| Gain | 0.55 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~1:47 |
@@ -480,7 +480,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 107 · clip `narrator-2fd1747b8b44` · occurrence 1 |
 | Timing | during +300ms |
-| Gain | 0.85 |
+| Gain | 0.55 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~5:24 |
@@ -499,7 +499,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 111 · clip `narrator-94fb639def2d` · occurrence 1 |
 | Timing | during +250ms |
-| Gain | 0.72 |
+| Gain | 0.45 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~5:32 |
@@ -518,7 +518,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 118 · clip `narrator-d4aef8b58a3e` · occurrence 1 |
 | Timing | during +1600ms |
-| Gain | 0.85 |
+| Gain | 0.55 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~5:45 |
@@ -537,7 +537,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 132 · clip `narrator-a1ae4cf23cd8` · occurrence 1 |
 | Timing | during +200ms |
-| Gain | 0.68 |
+| Gain | 0.42 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~6:21 |
@@ -556,7 +556,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 151 · clip `narrator-668b2dc69db1` · occurrence 1 |
 | Timing | during +200ms |
-| Gain | 0.68 |
+| Gain | 0.42 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~7:05 |
@@ -578,7 +578,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.48 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:07 |
+| Approx. review time | ~7:09 |
 
 **Manuscript:** Narrator — “A new warning tone interrupted them. Both turned toward the main console as another message appeared.”
 
@@ -599,7 +599,7 @@ anchor to its stop anchor and loops underneath.
 | Fades | in 6000ms · out -ms |
 | Duration requested | 20s, looping |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:14 |
+| Approx. review time | ~7:16 |
 
 **Manuscript:** TOMBS / settlement systems — “Tombs array remote initialization request.”
 
@@ -618,7 +618,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.42 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:31 |
+| Approx. review time | ~7:32 |
 
 **Manuscript:** TOMBS / settlement systems — “Request denied.”
 
@@ -637,7 +637,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.42 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:34 |
+| Approx. review time | ~7:35 |
 
 **Manuscript:** TOMBS / settlement systems — “Request denied.”
 
@@ -653,10 +653,10 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 167 · clip `narrator-cddc94b869d1` · occurrence 1 |
 | Timing | during +500ms |
-| Gain | 0.85 |
+| Gain | 0.55 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:39 |
+| Approx. review time | ~7:41 |
 
 **Manuscript:** Narrator — “He entered his administrator credentials, but a new message appeared before he could issue another command.”
 
@@ -675,7 +675,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.46 |
 | Duration requested | 2s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:45 |
+| Approx. review time | ~7:47 |
 
 **Manuscript:** TOMBS / settlement systems — “Access revoked.”
 
@@ -691,10 +691,10 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 175 · clip `narrator-7fd987f61325` · occurrence 1 |
 | Timing | during +250ms |
-| Gain | 0.75 |
+| Gain | 0.50 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:58 |
+| Approx. review time | ~8:00 |
 
 **Manuscript:** Narrator — “Jack tried his credentials again.”
 

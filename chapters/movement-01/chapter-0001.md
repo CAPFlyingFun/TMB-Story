@@ -20,7 +20,7 @@ new_canon:
   - "See story-rules/ for the canon this movement established. This file is the manuscript."
 playable_beat_flow: ["review diagnostic data", "read the access alarm", "open the network monitor", "trace the unknown connection", "lock the terminal", "call Sarah on the intercom", "search the access logs", "attempt to cancel the initialization request", "re-enter administrator credentials"]
 ending_type: unanswered question
-review_status: in-review
+review_status: approved
 audio_status: not-started
 approved_on: "2026-09-17"
 source: "Joshua's approved Word manuscript, 01-03 Chapters - TRADDOMIUM Micro Battle.docx, imported verbatim 2026-09-17. NO LONGER byte-identical to that document: one line was changed on 2026-09-18 on Joshua's explicit written instruction (see approved_edits below and decision 0022). This file is the manuscript and is not edited without his instruction."

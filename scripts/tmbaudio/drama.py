@@ -95,6 +95,8 @@ def plan(manifest, sfx_registry):
         if cue.get("stopOrder") is not None:
             entry["until"] = ends[cue["stopOrder"]]
             entry["duration"] = max(0.5, entry["until"] - entry["at"])
+            asset = sfx_registry.get(cue["asset"]) or {}
+            entry["assetSeconds"] = float(asset.get("durationSeconds") or 22)
             beds.append(entry)
         else:
             shots.append(entry)
@@ -124,8 +126,14 @@ def build_graph(spec):
         inputs.append(b["path"])
         idx = len(inputs) - 1
         label = "b%d" % i
+        # size is a SAMPLE COUNT that ffmpeg sizes a buffer from, so it is computed
+        # from the asset's own length rather than left as a huge sentinel: a 2e9
+        # sentinel asks for a two-billion-sample buffer per bed. It never actually
+        # misbehaved -- the combine has always run in about 17 seconds -- so this is
+        # a latent risk removed, not a fix for an observed slowdown.
+        loop_samples = int(b.get("assetSeconds") or 22) * 44100 + 4096
         chain = ["[%d:a]aresample=44100" % idx,
-                 "aloop=loop=-1:size=2e9",
+                 "aloop=loop=-1:size=%d" % loop_samples,
                  "atrim=duration=%.3f" % b["duration"],
                  "volume=%.4f" % b["gain"]]
         if b["fadeIn"]:

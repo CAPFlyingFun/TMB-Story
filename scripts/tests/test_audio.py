@@ -1117,6 +1117,23 @@ class DramaExportTests(unittest.TestCase):
         self.assertIn("afade=t=out", graph)
         self.assertEqual(out, "[mix]")
 
+    def test_the_loop_buffer_is_sized_from_the_asset_not_from_a_sentinel(self):
+        """aloop's `size` is a sample count and ffmpeg sizes a buffer from it.
+
+        A 2e9 sentinel asks for a two-billion-sample buffer per bed. It never
+        misbehaved in practice, so this guards a latent risk rather than fixing an
+        observed fault.
+        """
+        spec = drama.plan(self.manifest, sfx_reg())
+        bed = spec["beds"][0]
+        self.assertIn("assetSeconds", bed, "the bed must carry its own file length")
+        _inputs, graph, _out = drama.build_graph(spec)
+        self.assertNotIn("2e9", graph)
+        expected = int(bed["assetSeconds"]) * 44100 + 4096
+        self.assertIn("aloop=loop=-1:size=%d" % expected, graph)
+        self.assertLess(expected, 2_000_000,
+                        "a bed's loop buffer should be seconds of audio, not gigabytes")
+
     def test_an_ungenerated_asset_is_left_out_rather_than_failing_the_mix(self):
         drama.os.path.isfile = lambda p: not p.endswith("hit.mp3")
         spec = drama.plan(self.manifest, sfx_reg())
