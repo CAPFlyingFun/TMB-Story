@@ -294,6 +294,42 @@ check("the ambience bed is unaffected", "ch01-005-lab-bed" in bedsPlaying());
 check("other one-shots still fire", oneShotsFired().length > 0);
 console.log("");
 
+// ---- 7b. pause holds everything --------------------------------------------
+/* Joshua: "pause should pause any background and SFX playing." It used only to tell
+   the layers that speech had stopped, which un-ducked the beds -- so pressing pause
+   made the room tone LOUDER and left it running. */
+console.log("7b. Pause");
+reset();
+await walk(0, alarm.order + 1);
+const soundingBefore = Object.keys(bedsPlaying()).length;
+check("beds are sounding before the pause", soundingBefore > 0,
+      soundingBefore + " bed(s)");
+L.pauseAll();
+check("pauseAll stops every bed", Object.keys(bedsPlaying()).length === 0);
+check("pauseAll stops every one-shot", oneShotsFired().length === 0);
+check("the player can tell it is paused", L.isPaused() === true);
+
+const bedCount = live.filter((e) => e.loop).length;
+await walk(alarm.order + 2, alarm.order + 6);
+check("nothing new starts while paused",
+      Object.keys(bedsPlaying()).length === 0 && oneShotsFired().length === 0 &&
+      live.filter((e) => e.loop).length === bedCount,
+      "a cue firing under a paused audiobook is the bug being fixed");
+
+L.resumeAll();
+await flush();
+check("resumeAll brings the same beds back",
+      Object.keys(bedsPlaying()).length === soundingBefore,
+      Object.keys(bedsPlaying()).length + " of " + soundingBefore);
+check("resuming does not create a second element for a bed",
+      live.filter((e) => e.loop).length === bedCount,
+      "a bed must continue, not restart");
+check("the player can tell it has resumed", L.isPaused() === false);
+check("pause twice is harmless", (L.pauseAll(), L.pauseAll(), L.isPaused() === true));
+L.resumeAll();
+check("resume twice is harmless", (L.resumeAll(), L.isPaused() === false));
+console.log("");
+
 // ---- 8. the same module against chapters 2 and 3 -------------------------
 /* Sections 1-7 name chapter 1's cues on purpose: they check particular moments of a
    particular chapter. This section checks what has to hold in EVERY chapter, so a cue

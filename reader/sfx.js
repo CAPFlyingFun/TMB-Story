@@ -34,7 +34,9 @@
     speaking: false,
     unavailable: {},     // asset -> true once a fetch has failed
     order: null,
-    prefired: null       // order whose `before` cues already fired during the gap
+    prefired: null,      // order whose `before` cues already fired during the gap
+    paused: false,       // the listener pressed pause; nothing sounds until resume
+    held: []             // elements pauseAll() stopped, to be started again on resume
   };
 
   function num(v, fallback) {
@@ -110,7 +112,7 @@
   // ---- beds ----------------------------------------------------------------
   function startBed(cue) {
     if (state.beds[cue.cueId] || state.unavailable[cue.asset]) return;
-    if (!enabledFor(cue)) return;
+    if (!enabledFor(cue) || state.paused) return;
     var el = makeEl(cue, true);
     var bed = { el: el, cue: cue };
     state.beds[cue.cueId] = bed;
@@ -147,7 +149,7 @@
 
   // ---- one-shots -----------------------------------------------------------
   function fire(cue) {
-    if (!enabledFor(cue) || state.unavailable[cue.asset]) return;
+    if (!enabledFor(cue) || state.unavailable[cue.asset] || state.paused) return;
     var el = makeEl(cue, false);
     try { el.volume = clamp01(cue.gain); } catch (e) {}
     if (cue.fadeInMs) { try { el.volume = 0; } catch (e) {} ramp(el, cue.gain, cue.fadeInMs); }
@@ -260,6 +262,40 @@
       applyDucking();
     },
 
+    /* PAUSE HOLDS EVERYTHING, which is what a pause button means. Joshua: "pause
+       should pause any background and SFX playing." The beds keep their position so
+       resuming continues the room rather than restarting it.
+
+       Pending `during` offsets are dropped rather than held: a cue timed to land
+       inside a line has nothing to land on while the line is stopped, and firing it
+       on resume would put it in the wrong place. */
+    pauseAll: function () {
+      if (state.paused) return;
+      state.paused = true;
+      clearTimers();
+      state.held = [];
+      Object.keys(state.beds).forEach(function (id) {
+        var el = state.beds[id].el;
+        if (!el.paused) { state.held.push(el); try { el.pause(); } catch (e) {} }
+      });
+      state.oneShots.forEach(function (el) {
+        if (!el.paused) { state.held.push(el); try { el.pause(); } catch (e) {} }
+      });
+    },
+
+    resumeAll: function () {
+      if (!state.paused) return;
+      state.paused = false;
+      var held = state.held || [];
+      state.held = [];
+      held.forEach(function (el) {
+        var p = el.play();
+        if (p && p.catch) p.catch(function () {});
+      });
+    },
+
+    isPaused: function () { return !!state.paused; },
+
     stopAll: function () {
       clearTimers();
       Object.keys(state.beds).forEach(function (id) { stopBed(id, 150); });
@@ -270,6 +306,8 @@
       state.speaking = false;
       state.order = null;
       state.prefired = null;
+      state.paused = false;
+      state.held = [];
     }
   };
 })();

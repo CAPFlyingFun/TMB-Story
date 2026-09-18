@@ -143,6 +143,7 @@
     a.playbackRate = state.rate;
     state.playing = true;
     state.stalled = null;
+    var resume = layers(); if (resume) resume.resumeAll();
     var token = ++state.playToken;
     var l = layers(); if (l) l.enterSegment(seg.order);
     /* Deliberately NO success handler. A resolved play() means the request was
@@ -174,7 +175,7 @@
     state.playing = false;
     if (state.pauseTimer) { clearTimeout(state.pauseTimer); state.pauseTimer = null; }
     if (state.audio) state.audio.pause();
-    var l = layers(); if (l) l.setSpeaking(false);
+    var l = layers(); if (l) { l.setSpeaking(false); l.pauseAll(); }
     render();
   }
 

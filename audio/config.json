@@ -207,13 +207,18 @@
         "",
         "LOWERED 3.1 dB (30% in amplitude) on 2026-09-18: Joshua, on the retuned build, still",
         "found the sound too loud against the voices. Applied to every category so the layer",
-        "moves as one and the relationships between cues stay as they were."
+        "moves as one and the relationships between cues stay as they were.",
+        "",
+        "LOWERED A FURTHER 6 dB on 2026-09-18, third pass. Joshua, after the 30% cut: SFX",
+        "still too loud. Beds now sit about 29 dB under the narration and one-shot events",
+        "about 23. If that turns out to be too far, raise these five numbers -- nothing else",
+        "needs to change, because every gain is derived from them."
       ],
-      "ambience": -45.1,
-      "alarm": -39.1,
-      "interface": -39.1,
-      "system": -39.1,
-      "foley": -41.1
+      "ambience": -51.1,
+      "alarm": -45.1,
+      "interface": -45.1,
+      "system": -45.1,
+      "foley": -47.1
     }
   }
 }

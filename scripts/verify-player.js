@@ -237,13 +237,28 @@ async function main() {
         "a speed the listener did not choose has to come from somewhere");
   console.log("");
 
+  const a = created.find((e) => e._playCount > 0);
+  console.log("2b. The Pause button holds the whole mix");
+  /* The player's own pause, not the layer module's: the button has to reach both. */
+  const bedsLive = () => created.filter((e) => /\/sfx\//.test(e._src) && e.loop && !e.paused).length;
+  const toggle2 = nodes.get("listen-toggle");
+  check("beds are sounding while the chapter plays", bedsLive() > 0, bedsLive() + " bed(s)");
+  toggle2.onclick();                                  // Pause
+  await flush();
+  check("pressing Pause silences the background too", bedsLive() === 0,
+        bedsLive() + " bed(s) still sounding");
+  check("the voice is paused as well", a.paused === true);
+  nodes.get("listen-toggle").onclick();               // Play
+  await flush();
+  check("pressing Play brings the background back", bedsLive() > 0, bedsLive() + " bed(s)");
+  console.log("");
+
   console.log("3. A clip that will not load");
   /* The reported symptom, reproduced: the voice races through clip after clip and
      then dies while the beds keep looping. A real element fires `error` on itself
      with its src still set, so that is what the harness does -- an earlier version
      cleared data-src first, which the player rightly ignores as a stale error, and
      the check passed for the wrong reason. */
-  const a = created.find((e) => e._playCount > 0);
   function browserError() { (a._handlers.error || []).forEach((f) => f()); }
   function bedsSounding() {
     return created.filter((e) => /\/sfx\//.test(e._src) && e.loop && !e.paused).length;

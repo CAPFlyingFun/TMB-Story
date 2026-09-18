@@ -16,19 +16,6 @@
   "chapter": 3,
   "cues": [
     {
-      "cueId": "ch03-005-array-hum",
-      "asset": "amb_tombs_array_power_rise",
-      "anchor": {
-        "clipId": "narrator-59502f926e4e",
-        "occurrence": 1
-      },
-      "timing": "before",
-      "gain": 0.025,
-      "fadeInMs": 1000,
-      "fadeOutMs": 3000,
-      "why": "The array coming up, ONCE, at the chapter's opening. Deliberately not a bed: this asset is a 20-second RISE, and a bed loops, so as a bed it climbs, snaps back and climbs again every 20 seconds for the whole chapter. A sustained hum needs a seamless loop asset, which does not exist yet; until it does the room tone carries the chapter and the rise does what a rise is for."
-    },
-    {
       "cueId": "ch03-006-sirens",
       "asset": "amb_settlement_sirens",
       "anchor": {
@@ -36,7 +23,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.122,
+      "gain": 0.061,
       "fadeInMs": 1500,
       "fadeOutMs": 2500,
       "sustain": {
@@ -57,7 +44,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.501,
+      "gain": 0.251,
       "why": "The manuscript opens on his hands. Loudest of the typing cues because it is the first sound of the chapter."
     },
     {
@@ -69,7 +56,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.501,
+      "gain": 0.251,
       "why": "Sarah at the secondary console, working the interrupt."
     },
     {
@@ -80,7 +67,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.116,
+      "gain": 0.058,
       "why": "NEW. The shake arrives before the narration names it, so the listener feels it with Sarah rather than being told about it."
     },
     {
@@ -91,7 +78,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.116,
+      "gain": 0.058,
       "why": "NEW asset, second use, quieter. The manuscript calls it another vibration, so it should be the same sound diminished rather than a new one."
     },
     {
@@ -102,7 +89,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.1,
+      "gain": 0.05,
       "why": "Into the gap before Scale factor locked. Reused."
     },
     {
@@ -114,7 +101,7 @@
       },
       "timing": "during",
       "offsetMs": 1200,
-      "gain": 0.232,
+      "gain": 0.116,
       "why": "NEW. The event. It ends in real silence rather than a tail, because the manuscript is explicit that the sound does not fade or become muffled, it ceases to exist.",
       "emphasisDb": 6.0
     },
@@ -126,7 +113,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.269,
+      "gain": 0.135,
       "why": "NEW. The other half. The silence between the two is carried by the manifest's own pauses across the four narration segments in between, so the quiet is real rather than printed into a file.",
       "emphasisDb": 6.0
     },
@@ -138,7 +125,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.105,
+      "gain": 0.052,
       "fadeInMs": 200,
       "fadeOutMs": 2000,
       "sustain": {
@@ -159,7 +146,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.063,
+      "gain": 0.032,
       "fadeInMs": 4000,
       "sustain": {
         "until": "chapterEnd",
@@ -176,7 +163,7 @@
       },
       "timing": "during",
       "offsetMs": 900,
-      "gain": 0.501,
+      "gain": 0.251,
       "why": "Jack checking whether TOMBS is off. Quiet work in a quiet room."
     },
     {
@@ -187,7 +174,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.082,
+      "gain": 0.041,
       "why": "NEW asset, reused from chapter 2. Lena getting through is the first contact with anyone outside the room since the event."
     },
     {
@@ -198,7 +185,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.082,
+      "gain": 0.041,
       "fadeInMs": 300,
       "fadeOutMs": 800,
       "sustain": {
@@ -219,7 +206,7 @@
       },
       "timing": "during",
       "offsetMs": 1200,
-      "gain": 0.176,
+      "gain": 0.088,
       "why": "Reused. The cameras answering is the mechanism by which the chapter shows the scale of what happened."
     },
     {
@@ -231,7 +218,7 @@
       },
       "timing": "during",
       "offsetMs": 300,
-      "gain": 0.176,
+      "gain": 0.088,
       "why": "Reused, quieter. One more feed, and the drop of water."
     },
     {
@@ -242,7 +229,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.13,
+      "gain": 0.065,
       "why": "NEW, and the most important new asset in either chapter. The first sound of the giant world, arriving from outside with no seismic cause. It plays before the narration so the listener hears it exactly as Jack and Sarah do: an event first, an explanation never.",
       "emphasisDb": 4.0
     },
@@ -254,7 +241,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.13,
+      "gain": 0.065,
       "why": "NEW asset, second use. The manuscript brings it back and then lets it go, and Jack decides he is not certain he wants to know what it was. The same sound twice is the whole point.",
       "emphasisDb": 4.0
     },
@@ -267,7 +254,7 @@
       },
       "timing": "during",
       "offsetMs": 1000,
-      "gain": 0.176,
+      "gain": 0.088,
       "why": "Reused. One final record remains, and the machine reports the scale factor as calmly as it reported everything else."
     }
   ]
