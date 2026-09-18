@@ -3889,7 +3889,13 @@
         "",
         "AMBIENCE LOWERED A FURTHER 55% (-6.9 dB) on 2026-09-18 before being switched off,",
         "so that whenever it comes back it starts where Joshua asked rather than where the",
-        "last pass left it."
+        "last pass left it.",
+        "",
+        "A TONE IS NOT A NOISE, and this table targets RMS as though it were. A 500 Hz sine",
+        "at -50 dBFS is plainly audible where a broadband bed at -50 is not, so the sirens",
+        "needed roughly 14 dB more attenuation than the table gives -- not because the table",
+        "is wrong for beds, but because RMS is a poor predictor for anything tonal. When a",
+        "future asset is a tone, expect its emphasisDb to be large and negative."
       ],
       "ambience": -58.0,
       "alarm": -45.1,
