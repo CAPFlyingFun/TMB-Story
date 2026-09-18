@@ -35,7 +35,34 @@
     "`soundsForSeconds` is the time the RMS envelope stays within 20 dB of the asset's",
     "own peak. 0.00 on a 3-second file means a couple of transients in near-silence --",
     "which is what the keyboard is, and why more gain would only make faint ticks",
-    "louder rather than making typing audible."
+    "louder rather than making typing audible.",
+    "THE CORRECTED PROMPT STYLE, TESTED 2026-09-18. The eight assets chapters 2 and 3",
+    "added were written the new way -- character plus microphone distance, an explicit",
+    "\"recorded at a strong present level\", and not one loudness adjective -- and then",
+    "measured the same way. Five came back usable (-16.7 to -28.5 dBFS RMS), two came",
+    "back quiet, and one came back at -64.7, the lowest reading in the whole set. So the",
+    "style helps -- nine of twenty failed before, one of eight now -- but it is not the",
+    "whole rule, and the three that missed say what the rest of it is.",
+    "",
+    "A SUBJECT THAT IS FAR AWAY, OR THAT IS DEFINED BY ITS OWN ABSENCE, IS RENDERED THAT",
+    "WAY, AND \"recorded at a strong present level\" DOES NOT OVERRIDE IT. The three:",
+    "",
+    "  sfx_boundary_event_collapse  -64.7   \"pulled away into total silence\",",
+    "                                       \"ending in absolute nothing\"",
+    "  sfx_distant_vibration_deep   -38.9   \"from somewhere far outside\", \"felt through",
+    "                                       the structure rather than heard\"",
+    "  amb_settlement_sirens        -34.3   \"heard from indoors through walls and",
+    "                                       glass\", \"at different distances\"",
+    "",
+    "The five that landed all describe something close, present and physical: rings",
+    "turning on bearings, a chirp on a wrist, a floor shuddering, a lever thrown, sound",
+    "slamming back into a room.",
+    "",
+    "So the rule is: DESCRIBE THE SOUND AS IT REACHES THE MICROPHONE, not where it came",
+    "from. A siren through a wall is a muffled siren AT the microphone -- low-passed,",
+    "close, filling the frame -- not a siren somewhere else. A collapse into silence is",
+    "the last half second of sound and the pressure change, at the microphone; silence",
+    "itself cannot be generated loud, and asking for it gets a file of it."
   ],
   "sfxVersion": 1,
   "characters": {
@@ -74,12 +101,13 @@
       "approved": false,
       "notes": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed. Its prompt is deliberately terse: the first version was 476 characters and was rejected twice with HTTP 400, at 22 seconds and again at 20, while every other asset -- including a 20-second looping bed -- generated fine at 385 characters or fewer. The cause was prompt LENGTH, not duration. Nothing substantive was dropped, only words.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 20.0,
         "peakDbfs": -35.3,
         "rmsDbfs": -47.8,
         "soundsForSeconds": 20.0,
-        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+        "verdict": "too quiet to rescue with gain"
       }
     },
     "amb_console_alarm_bed": {
@@ -94,7 +122,8 @@
       "approved": false,
       "notes": "Categorised `alarm`, not `ambience`, so switching ambience off does not silence the chapter's alarm. Loops under the opening sequence and is ducked hard beneath speech.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 12.0,
         "peakDbfs": -0.2,
         "rmsDbfs": -11.2,
@@ -114,12 +143,13 @@
       "approved": false,
       "notes": "The cheapest honest way to tell the listener Sarah is on a speaker and not in the room. It sits under her intercom lines without touching her approved voice clips, which are never filtered or regenerated for this.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 10.0,
         "peakDbfs": -37.4,
         "rmsDbfs": -52.2,
         "soundsForSeconds": 10.0,
-        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+        "verdict": "too quiet to rescue with gain"
       }
     },
     "amb_tombs_array_power_rise": {
@@ -134,7 +164,8 @@
       "approved": false,
       "notes": "The tension spine of the last third, and the beginning of the TOMBS Array's own sound identity. It enters when the remote initialization request appears and does not leave.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 20.0,
         "peakDbfs": -0.4,
         "rmsDbfs": -7.1,
@@ -154,12 +185,13 @@
       "approved": false,
       "notes": "The polite tone that fails to wake Jack. Used twice in Chapter 1 -- the second, louder tone is this same asset at a higher gain, which is what the manuscript describes.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 1.48,
         "peakDbfs": -37.1,
         "rmsDbfs": -54.5,
         "soundsForSeconds": 0.25,
-        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+        "verdict": "too quiet to rescue with gain"
       }
     },
     "sfx_console_alarm_erupt": {
@@ -174,7 +206,8 @@
       "approved": false,
       "notes": "The single biggest sound event in the chapter. The escalation from one chirp to this is the whole opening beat.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 3.0,
         "peakDbfs": 0.0,
         "rmsDbfs": -11.6,
@@ -194,7 +227,8 @@
       "approved": false,
       "notes": "A single interruption, distinct from the polite chirp and from the full eruption. Used twice: the second alarm during the trace, and the tone that interrupts the couple much later.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 1.48,
         "peakDbfs": -1.0,
         "rmsDbfs": -19.1,
@@ -214,12 +248,13 @@
       "approved": false,
       "notes": "Deliberately calm. The unsettling thing about TOMBS opening its own directory is how unbothered it sounds. Used twice: the directory opening itself, and the file opening itself.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 1.48,
         "peakDbfs": -16.8,
         "rmsDbfs": -42.6,
         "soundsForSeconds": 0.25,
-        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+        "verdict": "too quiet to rescue with gain"
       }
     },
     "sfx_terminal_lock_engage": {
@@ -234,12 +269,13 @@
       "approved": false,
       "notes": "Jack taking control back. It has to sound like it worked, so that the terminal coming back on by itself lands as a violation.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 2.0,
         "peakDbfs": -15.2,
         "rmsDbfs": -36.3,
         "soundsForSeconds": 0.5,
-        "verdict": "quiet; gain can still rescue it"
+        "verdict": "quiet; needs a gain near the ceiling"
       }
     },
     "sfx_equipment_power_up_soft": {
@@ -254,12 +290,13 @@
       "approved": false,
       "notes": "The terminal undoing Jack's lock without being asked. Soft on purpose: a bang would make it an attack, and the point is that it is calm.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 2.48,
         "peakDbfs": -45.3,
         "rmsDbfs": -63.1,
         "soundsForSeconds": 1.0,
-        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+        "verdict": "too quiet to rescue with gain"
       }
     },
     "sfx_intercom_open": {
@@ -274,7 +311,8 @@
       "approved": false,
       "notes": "Marks the acoustic frame Sarah's remote voice arrives in. Used twice: reaching for the intercom, and tapping the button again.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 1.48,
         "peakDbfs": 0.0,
         "rmsDbfs": -26.9,
@@ -294,7 +332,8 @@
       "approved": false,
       "notes": "The manuscript makes static the ANSWER to Jack's question, so this is dialogue's turn in the scene, not decoration.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 2.48,
         "peakDbfs": -2.1,
         "rmsDbfs": -15.6,
@@ -314,7 +353,8 @@
       "approved": false,
       "notes": "Closes the frame the intercom opened. Without it the listener has no cue that the channel is gone, and the room's silence afterward is part of the scene.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 1.0,
         "peakDbfs": -7.9,
         "rmsDbfs": -21.5,
@@ -334,7 +374,8 @@
       "approved": false,
       "notes": "Someone entering behind Jack while he is looking the other way. Pure spatial information, and the manuscript puts it mid-sentence on purpose.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 2.48,
         "peakDbfs": -1.5,
         "rmsDbfs": -16.7,
@@ -354,12 +395,13 @@
       "approved": false,
       "notes": "Sarah's gray sneakers, per Chapter 1 visual canon -- explicitly not heels. Used twice and only for spatial transitions: entering the laboratory, and crossing the room to Jack. The listener never hears her walk otherwise.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 3.0,
         "peakDbfs": -23.7,
         "rmsDbfs": -54.3,
         "soundsForSeconds": 0.0,
-        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+        "verdict": "too quiet to rescue with gain"
       }
     },
     "sfx_chair_roll_fast": {
@@ -374,12 +416,13 @@
       "approved": false,
       "notes": "Jack waking so hard the chair moves. It gives the alarm a physical consequence in a body rather than only on a screen.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 2.0,
         "peakDbfs": -21.5,
         "rmsDbfs": -44.4,
         "soundsForSeconds": 0.5,
-        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+        "verdict": "too quiet to rescue with gain"
       }
     },
     "sfx_chair_roll_slow": {
@@ -394,12 +437,13 @@
       "approved": false,
       "notes": "Two people arranging themselves around one workstation. Used twice: Sarah pulling a second chair over, and Jack rolling sideways to make room. Consciously different from the fast roll -- that one is a startle, this one is a marriage.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 2.48,
         "peakDbfs": -29.3,
         "rmsDbfs": -47.4,
         "soundsForSeconds": 1.5,
-        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+        "verdict": "too quiet to rescue with gain"
       }
     },
     "sfx_keyboard_typing_short": {
@@ -414,12 +458,13 @@
       "approved": false,
       "notes": "Used three times, only where the manuscript actually starts or resumes typing. It marks who has the keyboard, which is how the scene's authority shifts from Jack to Sarah.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 3.0,
         "peakDbfs": -19.3,
         "rmsDbfs": -46.9,
         "soundsForSeconds": 0.0,
-        "verdict": "TOO QUIET TO RESCUE WITH GAIN"
+        "verdict": "too quiet to rescue with gain"
       }
     },
     "sfx_access_denied_tone": {
@@ -434,12 +479,13 @@
       "approved": false,
       "notes": "Used twice, before each Request denied. Hearing the same refusal twice is the information: Jack tried again and got nowhere.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 1.48,
         "peakDbfs": -10.7,
         "rmsDbfs": -32.8,
         "soundsForSeconds": 0.25,
-        "verdict": "quiet; gain can still rescue it"
+        "verdict": "usable"
       }
     },
     "sfx_access_revoked_tone": {
@@ -454,7 +500,8 @@
       "approved": false,
       "notes": "Distinct from the denial tone on purpose. The story distinguishes being refused from being locked out, and that difference is the chapter's ending; it should not sound the same.",
       "measured": {
-        "on": "2026-09-18",
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
         "seconds": 2.0,
         "peakDbfs": -11.9,
         "rmsDbfs": -26.1,
@@ -473,7 +520,16 @@
       "godotReuse": true,
       "approved": false,
       "notes": "Jack's wrist terminal, which carries every call with Lena across chapters 2 and 3. It needs to read as a different device from the laboratory console.",
-      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives",
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
+        "seconds": 1.48,
+        "peakDbfs": -6.9,
+        "rmsDbfs": -21.0,
+        "soundsForSeconds": 1.0,
+        "verdict": "usable"
+      }
     },
     "sfx_array_rings_move": {
       "category": "system",
@@ -486,7 +542,16 @@
       "godotReuse": true,
       "approved": false,
       "notes": "The TOMBS Array's rings, the signature machine sound of chapter 2. Loops because the manuscript has them moving, stopping and starting again across the whole scene.",
-      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives",
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
+        "seconds": 6.0,
+        "peakDbfs": -0.2,
+        "rmsDbfs": -16.7,
+        "soundsForSeconds": 6.0,
+        "verdict": "usable"
+      }
     },
     "sfx_shutdown_lever_pull": {
       "category": "foley",
@@ -499,7 +564,16 @@
       "godotReuse": true,
       "approved": false,
       "notes": "Jack's physical shutdown. It has to sound conclusive, because the room coming back on afterwards is the moment TOMBS stops being a malfunction.",
-      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives",
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
+        "seconds": 3.0,
+        "peakDbfs": -0.8,
+        "rmsDbfs": -28.5,
+        "soundsForSeconds": 0.0,
+        "verdict": "usable"
+      }
     },
     "amb_settlement_sirens": {
       "category": "alarm",
@@ -512,7 +586,16 @@
       "godotReuse": true,
       "approved": false,
       "notes": "Once Jack orders the settlement-wide emergency the sirens do not stop. Heard from inside, which is where both chapters stay.",
-      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives",
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
+        "seconds": 12.0,
+        "peakDbfs": -16.6,
+        "rmsDbfs": -34.3,
+        "soundsForSeconds": 5.5,
+        "verdict": "quiet; needs a gain near the ceiling"
+      }
     },
     "sfx_boundary_event_collapse": {
       "category": "system",
@@ -525,7 +608,16 @@
       "godotReuse": true,
       "approved": false,
       "notes": "The event itself. The manuscript is explicit that the sound does not fade or muffle, it ceases, so the asset has to end in real silence rather than a tail.",
-      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives",
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
+        "seconds": 4.0,
+        "peakDbfs": -45.3,
+        "rmsDbfs": -64.7,
+        "soundsForSeconds": 1.25,
+        "verdict": "too quiet to rescue with gain"
+      }
     },
     "sfx_boundary_event_return": {
       "category": "system",
@@ -538,7 +630,16 @@
       "godotReuse": true,
       "approved": false,
       "notes": "The other half of the event. These two are always used as a pair, with the silence between them carried by the manifest's own pause rather than by either file.",
-      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives",
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
+        "seconds": 3.0,
+        "peakDbfs": 0.0,
+        "rmsDbfs": -21.7,
+        "soundsForSeconds": 0.25,
+        "verdict": "usable"
+      }
     },
     "sfx_building_shake": {
       "category": "foley",
@@ -551,7 +652,16 @@
       "godotReuse": true,
       "approved": false,
       "notes": "The shake that makes Sarah catch herself against the console. Used where the manuscript shakes the building, not as general tension.",
-      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives",
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
+        "seconds": 4.0,
+        "peakDbfs": -8.9,
+        "rmsDbfs": -28.1,
+        "soundsForSeconds": 2.0,
+        "verdict": "usable"
+      }
     },
     "sfx_distant_vibration_deep": {
       "category": "system",
@@ -564,7 +674,16 @@
       "godotReuse": true,
       "approved": false,
       "notes": "The unexplained vibration that arrives twice at the end of chapter 3 and that Jack decides he does not want to explain. The single most important new asset: it is the first sound of the giant world and it will recur for a long time.",
-      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives",
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 11",
+        "seconds": 6.0,
+        "peakDbfs": -26.5,
+        "rmsDbfs": -38.9,
+        "soundsForSeconds": 4.25,
+        "verdict": "quiet; needs a gain near the ceiling"
+      }
     }
   }
 }

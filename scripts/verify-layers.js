@@ -1,7 +1,7 @@
 /* Layer verification: drive the REAL reader/sfx.js against the REAL chapter-01
-   manifest, inside a fake browser.
+   manifests, inside a fake browser.
  *
- *   node scripts/verify-layers.js .
+ *   node scripts/verify-layers.js [repo-root]
  *
  * The actual shipped file is loaded and exercised -- this is not a re-implementation
  * of the layer logic -- so every assertion is about behaviour that reaches a phone.
@@ -22,9 +22,13 @@ const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 
-const ROOT = process.argv[2];
-const manifest = JSON.parse(
-  fs.readFileSync(path.join(ROOT, "audio/manifests/chapter-01.json"), "utf8"));
+const ROOT = process.argv[2] || path.join(__dirname, "..");
+const manifestPath = (n) =>
+  path.join(ROOT, "audio/manifests/chapter-%s.json".replace("%s", String(n).padStart(2, "0")));
+// `let`, not `const`: section 8 runs the same fake browser over chapters 2 and 3, which
+// have cue sheets of their own now. Everything below reads this one binding, so swapping
+// it is how a second chapter gets driven without a second copy of the harness.
+let manifest = JSON.parse(fs.readFileSync(manifestPath(1), "utf8"));
 
 // ---- fake browser ---------------------------------------------------------
 const requests = [];          // every URL any Audio element is pointed at
@@ -132,8 +136,8 @@ async function walk(from, to, onSegment) {
 }
 
 async function main() {
-console.log("Chapter 1 layer verification — real reader/sfx.js, real manifest");
-console.log("segments: " + manifest.segments.length + "   cues: " + manifest.cues.length);
+console.log("TMB layer verification — real reader/sfx.js, real manifests");
+console.log("chapter 1: " + manifest.segments.length + " segments, " + manifest.cues.length + " cues   (chapters 2 and 3 in section 8)");
 console.log("");
 
 // ---- 1. ambience bed spans the chapter and loops --------------------------
@@ -289,6 +293,122 @@ check("the failing cue never sounds", !chairPlaying);
 check("the ambience bed is unaffected", "ch01-005-lab-bed" in bedsPlaying());
 check("other one-shots still fire", oneShotsFired().length > 0);
 console.log("");
+
+// ---- 8. the same module against chapters 2 and 3 -------------------------
+/* Sections 1-7 name chapter 1's cues on purpose: they check particular moments of a
+   particular chapter. This section checks what has to hold in EVERY chapter, so a cue
+   sheet written later cannot quietly break the player. It names no cue.
+
+   Everything here is keyed by ASSET rather than by cue, because chapters 2 and 3 do
+   something chapter 1 never did: two different bed cues share one sound file (the
+   array rings turn, stop, and turn again). A fake element only carries its src, so
+   "which cue is this element" is not a question the harness can answer -- and it does
+   not need to. What the player owes the listener is that the FILE is sounding exactly
+   over the union of its cues' spans, is started once per cue rather than restarted,
+   and is ducked to the levels those cues ask for. All three are asset-level facts. */
+for (const n of [2, 3]) {
+  manifest = JSON.parse(fs.readFileSync(manifestPath(n), "utf8"));
+  const last = manifest.segments[manifest.segments.length - 1].order;
+  const beds = manifest.cues.filter((c) => c.stopOrder !== undefined);
+  const oneShots = manifest.cues.filter((c) => c.stopOrder === undefined);
+  const bedAssets = [...new Set(beds.map((b) => b.audio))];
+  console.log("8." + n + " Chapter " + n + " — " + manifest.segments.length +
+              " segments, " + manifest.cues.length + " cues (" + beds.length +
+              " beds, " + oneShots.length + " one-shots)");
+
+  const liveBed = (src) => live.filter((e) => e._src === "./" + src && e.loop && !e.paused);
+  const cuesAt = (src, o) =>
+    beds.filter((b) => b.audio === src && o >= b.order && o <= b.stopOrder);
+
+  // A. every bed file sounds over exactly the union of its cues' spans.
+  const sounding = {};                       // src -> Set of orders it was playing at
+  bedAssets.forEach((src) => { sounding[src] = new Set(); });
+  reset();
+  await walk(0, last, (o) => {
+    bedAssets.forEach((src) => { if (liveBed(src).length) sounding[src].add(o); });
+  });
+  for (const src of bedAssets) {
+    const want = manifest.segments.map((s) => s.order)
+      .filter((o) => cuesAt(src, o).length > 0);
+    const got = [...sounding[src]].sort((a, b) => a - b);
+    const spans = beds.filter((b) => b.audio === src)
+      .map((b) => b.order + "-" + b.stopOrder).join(", ");
+    const missing = want.filter((o) => !sounding[src].has(o));
+    const extra = got.filter((o) => !want.includes(o));
+    check(src.split("/").pop() + " sounds over exactly " + spans,
+          missing.length === 0 && extra.length === 0,
+          missing.length + " silent inside the span, " + extra.length + " outside it");
+  }
+
+  // B. a file is fetched once per cue, never once per segment.
+  /* Counted from `requests` rather than from the live elements: stopBed releases the
+     file by setting src to "" when the fade finishes, so an element that has done its
+     job no longer carries the src it was created with. The request log is the record
+     of what was actually asked for. */
+  for (const src of bedAssets) {
+    const asked = requests.filter((u) => u === "./" + src).length;
+    const want = manifest.cues.filter((c) => c.audio === src).length;
+    check(src.split("/").pop() + " is fetched " + want + " time(s), one per cue",
+          asked === want, asked + " requests");
+  }
+
+  // C. one-shots.
+  const fired = new Set(oneShotsFired());
+  const missed = oneShots.filter((c) => !fired.has("./" + c.audio));
+  check("all " + oneShots.length + " one-shots fire during the walk",
+        missed.length === 0, missed.map((c) => c.cueId).join(", ") || "none missed");
+  check("every one-shot is below the voice reference (1.0)",
+        oneShots.every((c) => c.gain < 1.0));
+
+  // D. requests.
+  check("every request is a relative ./audio/sfx path",
+        requests.length > 0 && requests.every((u) => u.startsWith("./audio/sfx/")),
+        requests.length + " requests, " + new Set(requests).size + " distinct files");
+  check("no voice clip is ever touched by the layer module",
+        !requests.some((u) => u.includes("/clips/")));
+
+  // E. ducking, from the chapter's own mix table rather than a remembered number.
+  reset();
+  await walk(0, last - 1);
+  L.enterSegment(last); L.setSpeaking(false); await flush();
+  const quietBy = {}; bedAssets.forEach((src) => {
+    quietBy[src] = liveBed(src).map((e) => Number(e.volume.toFixed(4))).sort();
+  });
+  L.setSpeaking(true); await flush();
+  for (const src of bedAssets) {
+    const here = cuesAt(src, last);
+    if (!here.length) continue;
+    const open = here.map((c) => Number(c.gain.toFixed(4))).sort();
+    const duck = here.map((c) => Number(
+      (c.gain * manifest.mix.duckUnderSpeechTo[c.category]).toFixed(4))).sort();
+    const under = liveBed(src).map((e) => Number(e.volume.toFixed(4))).sort();
+    const same = (a, b) => a.length === b.length &&
+      a.every((v, i) => Math.abs(v - b[i]) < 0.002);
+    check(src.split("/").pop() + " ducks to [" + duck + "] under speech, back to [" +
+          open + "] in the gaps",
+          same(under, duck) && same(quietBy[src], open),
+          "speaking [" + under + "], quiet [" + quietBy[src] + "]");
+  }
+
+  // F. the toggles split by CATEGORY, not by whether a cue loops.
+  reset(); L.setEnabled("ambience", false); await walk(0, last);
+  const ambSrcs = new Set(beds.filter((b) => b.category === "ambience").map((b) => b.audio));
+  check("ambience off silences every ambience bed and nothing else",
+        [...ambSrcs].every((src) => liveBed(src).length === 0) &&
+        oneShotsFired().length > 0,
+        oneShotsFired().length + " one-shots still fired");
+  reset(); L.setEnabled("sfx", false); await walk(0, last);
+  const sfxSrcs = new Set(beds.filter((b) => b.category !== "ambience").map((b) => b.audio));
+  check("sfx off silences every sfx-layer cue and fires no one-shot",
+        [...sfxSrcs].every((src) => liveBed(src).length === 0) &&
+        oneShotsFired().length === 0);
+  reset(); L.setEnabled("ambience", false); L.setEnabled("sfx", false);
+  await walk(0, last);
+  check("both off: nothing sounds at all",
+        bedAssets.every((src) => liveBed(src).length === 0) &&
+        oneShotsFired().length === 0);
+  console.log("");
+}
 
 console.log(failures === 0
   ? "ALL CHECKS PASSED"
