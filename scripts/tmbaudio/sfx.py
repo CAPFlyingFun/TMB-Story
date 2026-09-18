@@ -281,6 +281,7 @@ def validate_cue(cue, registry, resolved_order, stop_order):
             problems.append("%s must not be negative" % key)
     if resolved_order is None:
         problems.append("anchor does not resolve to a segment in this chapter")
+    problems.extend(credit_problems(registry, asset_id))
     sustain = cue.get("sustain")
     if sustain is not None:
         if stop_order is None:
@@ -302,6 +303,43 @@ def validate_cue(cue, registry, resolved_order, stop_order):
                             "file with an audible seam; either drop the sustain or give "
                             "the cue an asset made to loop" % asset_id)
     return problems
+
+
+CREDIT_FIELDS = ("title", "author", "source", "license")
+
+
+def credit_problems(registry, asset_id):
+    """A hand-supplied file MUST say where it came from.
+
+    Joshua, 2026-09-18, sending the first one: "we need to keep track of who does it
+    for attribution." A credit written down once, next to the file, in the same place
+    the pipeline already reads -- rather than in someone's memory or a chat message
+    that scrolls away. Generated assets need no credit; their prompt is their
+    provenance.
+    """
+    asset = registry.get(asset_id) or {}
+    if asset.get("source") != "supplied":
+        return []
+    credit = asset.get("credit") or {}
+    missing = [f for f in CREDIT_FIELDS if not str(credit.get(f) or "").strip()]
+    if missing:
+        return ["supplied file with no %s in its credit block; a file we did not make "
+                "does not go in without one" % ", ".join(missing)]
+    return []
+
+
+def credits(registry):
+    """Every supplied asset's attribution, sorted, for the generated credits page."""
+    out = []
+    for aid in sorted(registry.assets):
+        asset = registry.get(aid) or {}
+        if asset.get("source") != "supplied":
+            continue
+        c = dict(asset.get("credit") or {})
+        c["asset"] = aid
+        c["category"] = registry.category(aid)
+        out.append(c)
+    return out
 
 
 def resolve_chapter_cues(segments, cue_doc, registry):

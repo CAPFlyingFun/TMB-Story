@@ -100,12 +100,26 @@ def plan_segment(registry, seg):
 
 
 # ---- durations -------------------------------------------------------------
-_BITRATES = [0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 0]
-_RATES = [44100, 48000, 32000, 0]
+# MPEG-1 and MPEG-2/2.5 Layer III differ in THREE ways at once -- bitrate table,
+# sample rate table, and samples per frame -- and reading a version-2 file with
+# version-1 numbers does not fail, it just lies. A 45-second 24 kHz file supplied by
+# Joshua read as 0.37 seconds, which as a bed would have been sized as a third-of-a-
+# second loop.
+_BITRATES_V1 = [0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 0]
+_BITRATES_V2 = [0, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160, 0]
+_RATES_V1 = [44100, 48000, 32000, 0]
+_RATES_V2 = [22050, 24000, 16000, 0]        # MPEG-2
+_RATES_V25 = [11025, 12000, 8000, 0]        # MPEG-2.5
 
 
 def mp3_duration_seconds(path):
-    """Length of an MPEG-1 Layer III file, by summing its frames. Stdlib only.
+    """Length of an MPEG Layer III file, by summing its frames. Stdlib only.
+
+    Handles MPEG-1, MPEG-2 and MPEG-2.5. It used to assume version 1 throughout, which
+    is true of everything ElevenLabs returns and false of the first file a human
+    supplied -- and the failure was silent: a real 45-second recording measured 0.37
+    seconds, because a version-2 header read with version-1 tables is still a number.
+
 
     Used for the cue sheet's approximate review timestamps and for reporting. It is
     NOT a synchronisation mechanism: cues anchor to clip identity, not to time.
@@ -126,14 +140,21 @@ def mp3_duration_seconds(path):
         if data[i] != 0xFF or (data[i + 1] & 0xE0) != 0xE0:
             i += 1
             continue
-        if ((data[i + 1] >> 3) & 3) != 3 or ((data[i + 1] >> 1) & 3) != 1:
+        version = (data[i + 1] >> 3) & 3         # 3 = MPEG-1, 2 = MPEG-2, 0 = MPEG-2.5
+        if version == 1 or ((data[i + 1] >> 1) & 3) != 1:   # 1 is reserved; layer must be III
             i += 1
             continue
-        bitrate = _BITRATES[(data[i + 2] >> 4) & 0xF]
-        rate = _RATES[(data[i + 2] >> 2) & 3]
+        if version == 3:
+            bitrate = _BITRATES_V1[(data[i + 2] >> 4) & 0xF]
+            rate = _RATES_V1[(data[i + 2] >> 2) & 3]
+            per_frame, coefficient = 1152.0, 144
+        else:
+            bitrate = _BITRATES_V2[(data[i + 2] >> 4) & 0xF]
+            rate = (_RATES_V2 if version == 2 else _RATES_V25)[(data[i + 2] >> 2) & 3]
+            per_frame, coefficient = 576.0, 72
         if bitrate == 0 or rate == 0:
             i += 1
             continue
-        i += 144 * bitrate * 1000 // rate + ((data[i + 2] >> 1) & 1)
-        total += 1152.0 / rate
+        i += coefficient * bitrate * 1000 // rate + ((data[i + 2] >> 1) & 1)
+        total += per_frame / rate
     return total

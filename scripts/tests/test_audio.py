@@ -1182,6 +1182,148 @@ class DramaExportTests(unittest.TestCase):
                          "the drama export must never write into the clip cache")
 
 
+def mpeg_frames(version, count):
+    """A synthetic Layer III file. version 3 = MPEG-1 44.1k/128k, 2 = MPEG-2 24k/160k."""
+    if version == 3:
+        header = bytes([0xFF, 0xFB, 0x90, 0x00])      # MPEG-1, layer III, 128 kbps, 44100
+        length = 144 * 128 * 1000 // 44100
+        seconds = 1152.0 / 44100
+    else:
+        header = bytes([0xFF, 0xF2, 0xE4, 0x00])      # MPEG-2, layer III, 160 kbps, 24000
+        length = 72 * 160 * 1000 // 24000
+        seconds = 576.0 / 24000
+    frame = header + b"\x00" * (length - 4)
+    return frame * count, seconds * count
+
+
+class Mp3DurationTests(unittest.TestCase):
+    """The reader used to assume MPEG-1 and say nothing when it was wrong.
+
+    Everything ElevenLabs returns is MPEG-1 44.1 kHz, so the assumption held until the
+    first file a human supplied: a real 45-second 24 kHz recording measured 0.37
+    seconds. Nothing raised -- a version-2 header read with version-1 tables is still
+    a number -- and as a bed it would have been treated as a third-of-a-second loop.
+    MPEG-2 and 2.5 differ in bitrate table, sample-rate table AND samples per frame.
+    """
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+
+    def tearDown(self):
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def _write(self, data):
+        path = os.path.join(self.dir, "x.mp3")
+        with open(path, "wb") as fh:
+            fh.write(data)
+        return path
+
+    def test_mpeg1_is_unchanged(self):
+        data, expected = mpeg_frames(3, 100)
+        self.assertAlmostEqual(cache.mp3_duration_seconds(self._write(data)), expected, places=6)
+
+    def test_mpeg2_is_not_read_with_mpeg1_numbers(self):
+        data, expected = mpeg_frames(2, 100)
+        got = cache.mp3_duration_seconds(self._write(data))
+        self.assertAlmostEqual(got, expected, places=6)
+        self.assertAlmostEqual(expected, 2.4, places=6)
+        self.assertGreater(got, 1.0,
+                           "the old reader returned a small fraction of the real length")
+
+    def test_an_id3_tag_is_skipped(self):
+        data, expected = mpeg_frames(2, 50)
+        tag = b"ID3\x03\x00\x00\x00\x00\x02\x01" + b"\x00" * 257
+        self.assertAlmostEqual(
+            cache.mp3_duration_seconds(self._write(tag + data)), expected, places=6)
+
+    def test_a_missing_file_is_zero_not_an_exception(self):
+        self.assertEqual(cache.mp3_duration_seconds(os.path.join(self.dir, "nope.mp3")), 0.0)
+
+
+class SuppliedAudioTests(unittest.TestCase):
+    """A file we did not make does not go in without saying who did."""
+
+    SUPPLIED = {"category": "ambience", "source": "supplied", "loop": True,
+                "durationSeconds": 30, "approved": True, "godotReuse": True}
+
+    def setUp(self):
+        data = json.loads(json.dumps(SFX_DATA))
+        data["assets"]["amb_supplied"] = dict(self.SUPPLIED)
+        self.sreg = sfxmod.SfxRegistry(data=data,
+                                       config=json.loads(json.dumps(SFX_CFG)))
+
+    def _credit(self, **fields):
+        self.sreg.assets["amb_supplied"]["credit"] = fields
+
+    def test_a_supplied_asset_without_a_credit_is_refused(self):
+        problems = sfxmod.credit_problems(self.sreg, "amb_supplied")
+        self.assertTrue(problems)
+        for field in ("title", "author", "source", "license"):
+            self.assertIn(field, problems[0])
+
+    def test_a_partial_credit_names_what_is_missing(self):
+        self._credit(title="Computer Lab", author="freesound_community")
+        problems = sfxmod.credit_problems(self.sreg, "amb_supplied")
+        self.assertTrue(problems)
+        self.assertIn("source", problems[0])
+        self.assertIn("license", problems[0])
+        self.assertNotIn("author", problems[0])
+
+    def test_a_complete_credit_passes(self):
+        self._credit(title="Computer Lab", author="freesound_community",
+                     source="Pixabay", license="Pixabay Content License")
+        self.assertEqual(sfxmod.credit_problems(self.sreg, "amb_supplied"), [])
+
+    def test_a_generated_asset_needs_no_credit(self):
+        self.assertEqual(sfxmod.credit_problems(self.sreg, "sfx_denied"), [],
+                         "a generated sound has no author but this project")
+
+    def test_credits_lists_only_supplied_assets(self):
+        self._credit(title="Computer Lab", author="freesound_community",
+                     source="Pixabay", license="Pixabay Content License")
+        rows = sfxmod.credits(self.sreg)
+        listed = [r["asset"] for r in rows]
+        self.assertIn("amb_supplied", listed)
+        self.assertEqual(rows[listed.index("amb_supplied")]["author"], "freesound_community")
+        for aid in listed:
+            self.assertEqual(self.sreg.source(aid), "supplied",
+                             "a generated asset has no credit to list")
+        self.assertNotIn("sfx_denied", listed)
+
+    def test_the_shipped_registry_credits_every_supplied_file(self):
+        root = os.path.dirname(os.path.dirname(HERE))
+        reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))
+        supplied = [a for a, v in reg["assets"].items() if v.get("source") == "supplied"]
+        self.assertTrue(supplied, "there is at least one supplied file by now")
+        page = open(os.path.join(root, "story-rules", "reference", "AUDIO_CREDITS.md"),
+                    encoding="utf-8").read()
+        for a in supplied:
+            self.assertIn(a, page, "%s is not on the credits page" % a)
+            for field in ("title", "author", "source", "license"):
+                self.assertTrue(str((reg["assets"][a].get("credit") or {}).get(field) or "").strip(),
+                                "%s has no %s" % (a, field))
+
+    def test_every_asset_file_sits_in_its_category_directory(self):
+        """Category decides the folder, so re-categorising ORPHANS the file.
+
+        Moving amb_intercom_channel_open from interface to ambience left its mp3
+        behind, and the report then offered to generate it again -- a recategorisation
+        that would have cost credits. Cheap to check, so it is checked.
+        """
+        root = os.path.dirname(os.path.dirname(HERE))
+        reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))
+        stray = []
+        for aid, a in reg["assets"].items():
+            expected = os.path.join(root, "audio", "sfx", a["category"], aid + ".mp3")
+            if not os.path.isfile(expected):
+                continue
+            for other in os.listdir(os.path.join(root, "audio", "sfx")):
+                wrong = os.path.join(root, "audio", "sfx", other, aid + ".mp3")
+                if other != a["category"] and os.path.isfile(wrong):
+                    stray.append(wrong)
+        self.assertEqual(stray, [], "a file left behind by a category change")
+
+
 class LayerSwitchTests(unittest.TestCase):
     """A layer switched off must be off in BOTH renderers.
 
@@ -1248,16 +1390,24 @@ class LayerSwitchTests(unittest.TestCase):
         finally:
             shutil.rmtree(tmp, ignore_errors=True)
 
-    def test_the_shipped_config_has_ambience_off_and_the_player_reads_it(self):
+    def test_one_switch_drives_both_renderers(self):
+        """Whatever the layers are set to, the page and the file must agree.
+
+        Ambience went off when Joshua had no bed he liked and back on when he supplied
+        one, so the VALUE is his to change. What must not change is that changing it
+        in one place changes both."""
         root = os.path.dirname(os.path.dirname(HERE))
         cfg = json.load(open(os.path.join(root, "audio", "config.json"), encoding="utf-8"))
-        self.assertIs(cfg["mix"]["layers"]["ambience"], False,
-                      "Joshua asked for ambience off until he supplies his own")
-        self.assertIs(cfg["mix"]["layers"]["sfx"], True)
-        self.assertIs(cfg["mix"]["layers"]["voice"], True)
+        layers = cfg["mix"]["layers"]
+        for name in ("voice", "ambience", "sfx"):
+            self.assertIsInstance(layers[name], bool, "%s must be a real switch" % name)
+        self.assertIs(layers["voice"], True, "the voices are never switched off")
         src = open(os.path.join(root, "reader", "sfx.js"), encoding="utf-8").read()
         self.assertIn("layers[name] === false", src,
-                      "the browser has to read the same switch the export does")
+                      "the browser reads the same switch")
+        dram = open(os.path.join(root, "scripts", "tmbaudio", "drama.py"), encoding="utf-8").read()
+        self.assertIn('layers_on.get(cue.get("layer")) is False', dram,
+                      "and so does the exported file")
 
 
 class CombineGuardTests(unittest.TestCase):

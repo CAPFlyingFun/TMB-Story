@@ -36,7 +36,7 @@
   "cues": [
     {
       "cueId": "ch01-005-lab-bed",
-      "asset": "amb_tombs_lab_night",
+      "asset": "amb_computer_lab",
       "anchor": {
         "clipId": "narrator-0b2f58c70a4c",
         "occurrence": 1
@@ -208,7 +208,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.299,
+      "gain": 0.01,
       "fadeInMs": 200,
       "fadeOutMs": 600,
       "sustain": {

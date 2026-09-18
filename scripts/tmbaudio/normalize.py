@@ -159,7 +159,16 @@ def plan_one(sreg, asset_id, conf, force=False, allow_attenuation=False):
     out = {"asset": asset_id, "audio": audio_path, "sidecar": sidecar_path,
            "appliedDb": 0.0, "action": "skip", "reason": ""}
     if sreg.source(asset_id) != "generated":
-        out["reason"] = "supplied by hand; the pipeline does not touch its level"
+        # A SUPPLIED FILE IS MEASURED BUT NEVER RE-ENCODED. Its level is the
+        # contributor's decision and its bytes are its identity, so re-encoding it
+        # would change what it is. But without a measurement its cue gain cannot be
+        # derived from it, and it keeps whatever number the previous asset happened
+        # to have -- which is how the supplied lab bed inherited 0.014.
+        if not os.path.isfile(audio_abs):
+            out["reason"] = "supplied, but no file is there yet"
+            return out
+        out["action"] = "measure"
+        out["reason"] = "supplied by hand: measured, never re-encoded"
         return out
     if not os.path.isfile(audio_abs):
         out["reason"] = "not generated yet"
@@ -223,6 +232,23 @@ def _encode(sreg, src_abs, audio_abs, gain_db):
                    + encode_args(sreg.output_format()) + ["-f", "mp3", tmp], check=True)
     os.replace(tmp, audio_abs)
     return measure(audio_abs)
+
+
+def measure_only(plan):
+    """Record what a supplied file's level IS, without changing a byte of it."""
+    audio_abs = os.path.join(ROOT, plan["audio"])
+    peak, rms, seconds = measure(audio_abs)
+    sidecar_abs = os.path.join(ROOT, plan["sidecar"])
+    side = cache.read_sidecar(sidecar_abs) or {}
+    side["measured"] = {
+        "measuredAt": time.strftime("%Y-%m-%d", time.gmtime()),
+        "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
+        "seconds": round(seconds, 2),
+        "peakDbfs": round(peak, 1) if peak != float("-inf") else None,
+        "rmsDbfs": round(rms, 1) if rms != float("-inf") else None,
+    }
+    cache.write_sidecar(sidecar_abs, side)
+    return side["measured"]
 
 
 def restore_one(plan):
@@ -294,9 +320,11 @@ def normalize_assets(sreg, asset_ids, force=False, allow_attenuation=False,
         % (conf["targetRmsDbfs"], conf["peakCeilingDbfs"],
            "raise or attenuate" if allow_attenuation else "raise only"))
     plans = [plan_one(sreg, a, conf, force, allow_attenuation) for a in sorted(asset_ids)]
-    todo = [p for p in plans if p["action"] in ("normalize", "restore")]
+    todo = [p for p in plans if p["action"] in ("normalize", "restore", "measure")]
     for p in plans:
-        if p["action"] == "restore":
+        if p["action"] == "measure":
+            log("  %-30s  measure   %s" % (p["asset"], p["reason"]))
+        elif p["action"] == "restore":
             log("  %-30s  restore   %s" % (p["asset"], p["reason"]))
         elif p["action"] == "normalize":
             log("  %-30s %+6.1f dB  %6.1f -> %6.1f dBFS rms   (%s)"
@@ -310,6 +338,12 @@ def normalize_assets(sreg, asset_ids, force=False, allow_attenuation=False,
     done = failed = 0
     for p in todo:
         try:
+            if p["action"] == "measure":
+                result = measure_only(p)
+                done += 1
+                log("  measured %-27s %s dBFS rms, peak %s"
+                    % (p["asset"], result["rmsDbfs"], result["peakDbfs"]))
+                continue
             if p["action"] == "restore":
                 restore_one(p)
                 done += 1

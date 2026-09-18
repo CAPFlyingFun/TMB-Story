@@ -167,17 +167,16 @@
     ],
     "layers": {
       "voice": true,
-      "ambience": false,
+      "ambience": true,
       "sfx": true,
       "_comment": [
-        "AMBIENCE IS OFF (Joshua, 2026-09-18): 'remove all ambient noise for the moment",
-        "(leave voices and SFX) and I can upload my own background ambient sounds.'",
+        "Ambience was switched OFF on 2026-09-18 while Joshua had no bed he liked, and back",
+        "ON the same day when he supplied one: amb_computer_lab, a real recorded computer",
+        "room. Both the browser and the exported mp3 read this switch, so the page and the",
+        "file always agree.",
         "",
-        "OFF, not deleted. The cue sheets keep every ambience cue with its reasoning, the",
-        "assets stay on disk, and turning this back to true restores all of it. Both the",
-        "browser and the exported mp3 read this switch, so the page and the file agree.",
-        "",
-        "To supply your own: see story-rules/reference/SUPPLYING_AMBIENCE.md."
+        "To supply more: story-rules/reference/SUPPLYING_AMBIENCE.md. Every supplied file",
+        "must carry a credit block -- validation refuses one without it."
       ]
     },
     "categoryGain": {

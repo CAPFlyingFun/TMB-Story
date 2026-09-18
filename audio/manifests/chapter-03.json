@@ -3432,14 +3432,14 @@
     },
     {
       "cueId": "ch03-080-lab-after",
-      "asset": "amb_tombs_lab_night",
+      "asset": "amb_computer_lab",
       "category": "ambience",
       "layer": "ambience",
       "timing": "after",
       "order": 61,
       "gain": 0.014,
       "loop": true,
-      "audio": "audio/sfx/ambience/amb_tombs_lab_night.mp3",
+      "audio": "audio/sfx/ambience/amb_computer_lab.mp3",
       "cached": true,
       "why": "Reused. The room tone returns alone into the silence the alarms left, and stays for the rest of the chapter. After the event it is the only thing that sounds normal.",
       "fadeInMs": 4000,
@@ -3480,10 +3480,10 @@
       "layer": "ambience",
       "timing": "before",
       "order": 83,
-      "gain": 0.299,
+      "gain": 0.01,
       "loop": true,
       "audio": "audio/sfx/ambience/amb_intercom_channel_open.mp3",
-      "cached": false,
+      "cached": true,
       "why": "Reused. The channel stays open through the communications check and closes on the sentence where Jack lowers his wrist.",
       "fadeInMs": 300,
       "fadeOutMs": 800,
@@ -3563,17 +3563,16 @@
   "mix": {
     "layers": {
       "voice": true,
-      "ambience": false,
+      "ambience": true,
       "sfx": true,
       "_comment": [
-        "AMBIENCE IS OFF (Joshua, 2026-09-18): 'remove all ambient noise for the moment",
-        "(leave voices and SFX) and I can upload my own background ambient sounds.'",
+        "Ambience was switched OFF on 2026-09-18 while Joshua had no bed he liked, and back",
+        "ON the same day when he supplied one: amb_computer_lab, a real recorded computer",
+        "room. Both the browser and the exported mp3 read this switch, so the page and the",
+        "file always agree.",
         "",
-        "OFF, not deleted. The cue sheets keep every ambience cue with its reasoning, the",
-        "assets stay on disk, and turning this back to true restores all of it. Both the",
-        "browser and the exported mp3 read this switch, so the page and the file agree.",
-        "",
-        "To supply your own: see story-rules/reference/SUPPLYING_AMBIENCE.md."
+        "To supply more: story-rules/reference/SUPPLYING_AMBIENCE.md. Every supplied file",
+        "must carry a credit block -- validation refuses one without it."
       ]
     },
     "categoryGain": {

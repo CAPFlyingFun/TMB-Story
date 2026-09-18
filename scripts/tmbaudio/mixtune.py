@@ -60,6 +60,10 @@ def asset_level(sreg, asset_id):
     norm = side.get("normalize") or {}
     if norm.get("resultRmsDbfs") is not None:
         return float(norm["resultRmsDbfs"]), "normalised"
+    # A supplied file is measured, never normalised: its bytes are its identity.
+    supplied = side.get("measured") or {}
+    if supplied.get("rmsDbfs") is not None:
+        return float(supplied["rmsDbfs"]), "supplied, measured"
     measured = (sreg.get(asset_id) or {}).get("measured") or {}
     if measured.get("rmsDbfs") is not None:
         return float(measured["rmsDbfs"]), "measured"

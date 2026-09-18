@@ -837,6 +837,27 @@
         "soundsForSeconds": 4.25,
         "verdict": "quiet; needs a gain near the ceiling"
       }
+    },
+    "amb_computer_lab": {
+      "category": "ambience",
+      "source": "supplied",
+      "loop": true,
+      "durationSeconds": 45.1,
+      "approved": true,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "notes": "Real recorded computer-room tone, supplied by Joshua and confirmed by him to loop seamlessly. Replaces the generated amb_tombs_lab_night as the lab bed. A SEPARATE ASSET rather than a replacement file, because an asset is its name: the generated one keeps its prompt, its measurements and its history, and switching back is repointing three cues. 24 kHz MPEG-2, which is what exposed the duration reader's version bug.",
+      "credit": {
+        "title": "Computer Lab",
+        "author": "freesound_community",
+        "authorUrl": "https://pixabay.com/users/freesound_community-46691455/",
+        "source": "Pixabay",
+        "sourceUrl": "https://pixabay.com/sound-effects/",
+        "license": "Pixabay Content License",
+        "licenseUrl": "https://pixabay.com/service/license-summary/",
+        "addedBy": "Joshua",
+        "addedOn": "2026-09-18"
+      }
     }
   }
 }
