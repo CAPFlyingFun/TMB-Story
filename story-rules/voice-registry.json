@@ -22,11 +22,11 @@
       "name": "Narrator",
       "audioKey": "narrator",
       "kind": "narration",
-      "elevenLabsVoiceId": "GoGUcAZovo4MFeLxJdZd",
+      "elevenLabsVoiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
       "gameExport": false,
       "notes": "Audiobook only. Not exported to the game dialogue manifest.",
-      "voiceApproved": "2026-09-17"
+      "voiceApproved": "2026-09-18"
     },
     "system": {
       "id": "system",
@@ -80,7 +80,7 @@
       "name": "Lena Ortiz",
       "audioKey": "lena",
       "kind": "character",
-      "elevenLabsVoiceId": "56AoDkrOh6qfVPDXZ7Pt",
+      "elevenLabsVoiceId": "4O1sYUnmtThcBoSBrri7",
       "voiceVersion": 1,
       "gameExport": true,
       "aliases": [
@@ -93,7 +93,7 @@
         "her",
         "hers"
       ],
-      "voiceApproved": "2026-09-17"
+      "voiceApproved": "2026-09-18"
     }
   }
 }
