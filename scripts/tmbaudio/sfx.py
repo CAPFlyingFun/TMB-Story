@@ -328,6 +328,27 @@ def credit_problems(registry, asset_id):
     return []
 
 
+def attribution_line(credit):
+    """The credit as a sentence, in the wording Joshua asked for.
+
+    Pixabay's own snippet reads "Sound Effect by <author> from Pixabay", and that is
+    the form he specified, so it is DERIVED rather than typed per asset: an author
+    renamed in one place cannot then disagree with a hand-written sentence. A credit
+    may still carry an explicit `attribution` when the standard form is wrong -- music
+    rather than a sound effect, say, or a source with its own required wording.
+    """
+    credit = credit or {}
+    explicit = str(credit.get("attribution") or "").strip()
+    if explicit:
+        return explicit
+    kind = str(credit.get("kind") or "Sound Effect").strip()
+    author = str(credit.get("author") or "").strip()
+    source = str(credit.get("source") or "").strip()
+    if not author or not source:
+        return ""
+    return "%s by %s from %s" % (kind, author, source)
+
+
 def credits(registry):
     """Every supplied asset's attribution, sorted, for the generated credits page."""
     out = []
@@ -338,6 +359,7 @@ def credits(registry):
         c = dict(asset.get("credit") or {})
         c["asset"] = aid
         c["category"] = registry.category(aid)
+        c["attributionLine"] = attribution_line(c)
         out.append(c)
     return out
 

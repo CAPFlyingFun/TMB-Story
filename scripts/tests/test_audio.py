@@ -1290,6 +1290,60 @@ class SuppliedAudioTests(unittest.TestCase):
                              "a generated asset has no credit to list")
         self.assertNotIn("sfx_denied", listed)
 
+    def test_the_attribution_sentence_is_the_wording_joshua_asked_for(self):
+        self._credit(title="Night Ambience", author="freesound_community",
+                     source="Pixabay", license="Pixabay Content License")
+        rows = sfxmod.credits(self.sreg)
+        line = [r for r in rows if r["asset"] == "amb_supplied"][0]["attributionLine"]
+        self.assertEqual(line, "Sound Effect by freesound_community from Pixabay")
+
+    def test_a_different_author_changes_only_the_name(self):
+        self._credit(title="Nature Ambience", author="u_vr5icvkppa",
+                     source="Pixabay", license="Pixabay Content License")
+        rows = sfxmod.credits(self.sreg)
+        line = [r for r in rows if r["asset"] == "amb_supplied"][0]["attributionLine"]
+        self.assertEqual(line, "Sound Effect by u_vr5icvkppa from Pixabay")
+
+    def test_the_sentence_is_derived_not_stored(self):
+        """An author corrected in one place must not leave a stale sentence behind."""
+        self._credit(title="X", author="old_name", source="Pixabay", license="L")
+        self.sreg.assets["amb_supplied"]["credit"]["author"] = "new_name"
+        rows = sfxmod.credits(self.sreg)
+        self.assertIn("new_name",
+                      [r for r in rows if r["asset"] == "amb_supplied"][0]["attributionLine"])
+
+    def test_an_explicit_attribution_wins_where_the_standard_form_is_wrong(self):
+        self._credit(title="X", author="a", source="Pixabay", license="L",
+                     attribution="Music by a from Pixabay")
+        self.assertEqual(sfxmod.attribution_line(self.sreg.assets["amb_supplied"]["credit"]),
+                         "Music by a from Pixabay")
+
+    def test_kind_can_be_set_without_writing_the_whole_sentence(self):
+        self.assertEqual(
+            sfxmod.attribution_line({"kind": "Music", "author": "a", "source": "Pixabay"}),
+            "Music by a from Pixabay")
+
+    def test_an_incomplete_credit_produces_no_sentence_rather_than_a_broken_one(self):
+        self.assertEqual(sfxmod.attribution_line({"author": "a"}), "")
+        self.assertEqual(sfxmod.attribution_line({}), "")
+        self.assertEqual(sfxmod.attribution_line(None), "")
+
+    def test_the_page_shows_the_credits_at_the_bottom(self):
+        root = os.path.dirname(os.path.dirname(HERE))
+        page = open(os.path.join(root, "index.html"), encoding="utf-8").read()
+        self.assertIn('id="audio-credits"', page)
+        self.assertIn("./reader/credits.js", page)
+        foot = page.index("<footer")
+        self.assertGreater(page.index('id="audio-credits"'), foot,
+                           "Joshua asked for it at the bottom")
+        feed = json.load(open(os.path.join(root, "reader", "credits.json"), encoding="utf-8"))
+        reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))
+        supplied = {a for a, v in reg["assets"].items() if v.get("source") == "supplied"}
+        self.assertEqual({e["asset"] for e in feed["attributions"]}, supplied,
+                         "the footer feed and the registry must list the same sounds")
+        for entry in feed["attributions"]:
+            self.assertTrue(entry["text"].strip(), "%s has no line" % entry["asset"])
+
     def test_the_shipped_registry_credits_every_supplied_file(self):
         root = os.path.dirname(os.path.dirname(HERE))
         reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))

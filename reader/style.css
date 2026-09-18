@@ -574,3 +574,16 @@ button {
   .listen-rate { margin-left: 0; width: 100%; }
   .listen-controls button { flex: 1 1 auto; }
 }
+
+/* Attribution for sound we did not make. Quiet, but present on every page. */
+.audio-credits { margin-top: 10px; }
+.audio-credits-head {
+  margin: 0 0 4px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.audio-credits ul { margin: 0; padding-left: 1.1em; }
+.audio-credits li { margin: 2px 0; }
+.audio-credits a { color: inherit; text-decoration: underline; }

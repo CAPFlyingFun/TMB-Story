@@ -14,6 +14,14 @@ credit: they have no author but this project.
 |---|---|---|---|---|
 | Computer Lab | `amb_computer_lab` | [freesound_community](https://pixabay.com/users/freesound_community-46691455/) | [Pixabay](https://pixabay.com/sound-effects/) | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
 
+## Attribution, as shown at the bottom of the page
+
+These are the exact lines the site displays. They are derived from the
+fields above, so an author corrected in one place cannot leave a
+hand-written sentence saying something else.
+
+- **Computer Lab** (`amb_computer_lab`): Sound Effect by freesound_community from Pixabay
+
 ## Added
 
 - `amb_computer_lab` — Computer Lab, added by Joshua on 2026-09-18.

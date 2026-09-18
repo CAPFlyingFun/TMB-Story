@@ -3,18 +3,60 @@
 Joshua, 2026-09-18: *"remove all ambient noise for the moment (leave voices and SFX)
 and I can upload my own background ambient sounds."*
 
-Ambience is **switched off**, not deleted. Every ambience cue is still in the cue
-sheets with its reasoning, the generated assets are still on disk, and one flag turns
-the whole layer back on. This is how to put your own files in its place.
+Ambience was switched off for a few hours while he had no bed he liked, and back on
+the same day when he supplied one. It is **on** now, with `amb_computer_lab` — a real
+recorded computer room — as the lab bed. `mix.layers.ambience` in `audio/config.json`
+is the switch, and both the browser and the exported mp3 read it, so the page and the
+file always agree. This is how to put more of your own files in.
 
 ## The short version
 
-1. Drop an mp3 into `audio/sfx/ambience/`, named after the asset it replaces.
-2. Mark that asset `"source": "supplied"` in `audio/sfx-registry.json`.
-3. Set `mix.layers.ambience` back to `true` in `audio/config.json`.
-4. Run `python3 scripts/audio.py retune-cues --chapters 1-3`.
+1. Drop an mp3 into `audio/sfx/ambience/`, named after the asset it is.
+2. Add it to `audio/sfx-registry.json` with `"source": "supplied"` **and a `credit`
+   block**. Validation refuses a supplied file without one.
+3. Push. The workflow adopts it, measures it, places it at the category target,
+   refreshes the credits and rebuilds the exports.
 
-No ElevenLabs credits are involved at any point. A supplied asset is never generated.
+No ElevenLabs credits are involved at any point. A supplied asset is never generated
+and never re-encoded — only measured, so its cue gain can be derived from its real
+level.
+
+## Attribution
+
+Every supplied file carries a `credit` block, and the sentence shown on the site is
+**derived** from it, so correcting an author in one place cannot leave a stale
+sentence somewhere else:
+
+```json
+"credit": {
+  "title": "Night Ambience",
+  "author": "freesound_community",
+  "authorUrl": "https://pixabay.com/users/freesound_community-46691455/",
+  "source": "Pixabay",
+  "sourceUrl": "https://pixabay.com/sound-effects/",
+  "license": "Pixabay Content License",
+  "licenseUrl": "https://pixabay.com/service/license-summary/",
+  "addedBy": "Joshua",
+  "addedOn": "2026-09-18"
+}
+```
+
+That produces **"Sound Effect by freesound_community from Pixabay"**, shown at the
+bottom of every page of the reader and listed in `AUDIO_CREDITS.md`. Add `"kind":
+"Music"` for music, or an explicit `"attribution"` string where a source demands its
+own wording.
+
+### Incoming, from Joshua on 2026-09-18
+
+Two more beds are on their way in a zip. Their attributions, as he gave them:
+
+| sound | author |
+|---|---|
+| Night Ambience | `freesound_community` |
+| Nature Ambience | `u_vr5icvkppa` |
+
+Both from Pixabay, both "Sound Effect by … from Pixabay". Recorded here so the
+attribution is not waiting on anyone's memory when the files arrive.
 
 ## What the pipeline does with a supplied file
 
