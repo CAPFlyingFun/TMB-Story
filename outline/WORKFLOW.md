@@ -7,7 +7,9 @@
    chapter touches. Check `story-rules/OPEN_QUESTIONS.md` so nothing is answered by
    accident.
 2. **Confirm the plan with Joshua** before drafting. There is no long outline to draft
-   from; the plan for the next three chapters comes from him.
+   from; the plan for the next three chapters comes from him. Read
+   `outline/STORY_DIRECTION.md` first: it says what the stretch after Chapter 3 is
+   about and, just as importantly, what has deliberately NOT been decided.
 3. **Draft the movement.** Roughly three connected chapters, about 1,200 to 1,400
    words each, about 1,000 the floor, about 1,600 to 1,800 when a chapter earns it.
    Find the natural chapter breaks and cliffhangers inside the material rather than

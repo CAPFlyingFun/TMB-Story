@@ -3,7 +3,7 @@
 Read this every chapter. Canon established by the approved manuscript only.
 
 **Currently at: Movement 1 (Chapters 1 to 3) approved and imported verbatim from
-Joshua's Word manuscript, 2026-09-17. Next: Chapters 4 to 6, the immediate aftermath.
+Joshua's Word manuscript, 2026-09-17. Next: the aftermath, at a length not yet fixed.
 Not yet outlined and not to be drafted unasked.**
 
 ## Premise
@@ -53,12 +53,23 @@ that no longer fits them.
 ## Where the story goes
 
 1. **Chapters 1 to 3, done.** The catastrophe.
-2. **Chapters 4 to 6, next.** Immediate aftermath: survival, community response,
-   adaptation, consequences.
-3. **Then, once the aftermath is established,** a time jump of about eighteen years.
+2. **The aftermath, next, and it is NOT a short bridge to the jump** (Joshua,
+   2026-09-18). Several chapters in the immediate aftermath, letting the
+   miniature-world situation become a mystery and giving the settlement time to
+   react, investigate, adapt and survive: emergency response across five hundred
+   people, what infrastructure survived, the loss of outside communications,
+   attempts to understand or reverse TOMBS, evidence the event was deliberate, the
+   unexplained external vibrations, first controlled exploration near the boundary,
+   Jack and Sarah coping while Sarah is still thirty-two weeks pregnant, the slow
+   realisation that this may not be reversible, and the early foundations of the
+   society that exists after the jump. **How many chapters this takes is open and
+   must not be fixed.** `outline/STORY_DIRECTION.md` holds the full note.
+3. **Then, when Joshua deliberately chooses the chapter for it,** a time jump of
+   about eighteen years. Not when the aftermath merely feels long enough.
 4. **After the jump,** Jack and Sarah's son, about eighteen, becomes the primary
    protagonist. He was born after the catastrophe and has never experienced normal
-   human scale. Academy and survival-training material belongs here.
+   human scale. Academy and survival-training material belongs here. He is not the
+   protagonist before the jump, and he is not born yet.
 
 We write about three connected chapters at a time. There is no fifty-chapter outline
 and one should not be created. The pre-reboot plan is archived and non-canon.

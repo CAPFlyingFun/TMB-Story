@@ -1,0 +1,276 @@
+{
+  "_comment": [
+    "PROPOSED cue sheet. The eight NEW assets it references are not generated yet.",
+    "",
+    "Reuse first: every existing asset that fits was reused rather than remade, so the",
+    "twenty assets from chapter 1 carry most of this and only eight are new.",
+    "",
+    "Anchors are clipId plus occurrence, never timestamps. Same rules as chapter 1:",
+    "`before` plays in the gap ahead of the line, `after` in the gap behind it,",
+    "`during` starts offsetMs into it, and a looping asset must say where it stops.",
+    "",
+    "CAUTION: some reused assets are measured TOO QUIET TO RESCUE WITH GAIN and are",
+    "marked so in the registry. Cues using them are written correctly and will simply",
+    "not be audible until those assets are replaced."
+  ],
+  "chapter": 3,
+  "cues": [
+    {
+      "cueId": "ch03-005-array-hum",
+      "asset": "amb_tombs_array_power_rise",
+      "anchor": {
+        "clipId": "narrator-59502f926e4e",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.2,
+      "fadeInMs": 1000,
+      "fadeOutMs": 3000,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-9d4ae01eedee",
+          "occurrence": 1
+        },
+        "timing": "after"
+      },
+      "why": "Chapter 3 opens inside the same rising array that ended chapter 2, and it runs until the event. Reused."
+    },
+    {
+      "cueId": "ch03-006-sirens",
+      "asset": "amb_settlement_sirens",
+      "anchor": {
+        "clipId": "narrator-59502f926e4e",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.14,
+      "fadeInMs": 1500,
+      "fadeOutMs": 2500,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-22150c29c9a0",
+          "occurrence": 1
+        },
+        "timing": "after"
+      },
+      "why": "NEW asset, carried over from chapter 2: the sirens Jack started are still going, and they stop where the manuscript says the alarms stop."
+    },
+    {
+      "cueId": "ch03-010-jack-typing",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-59502f926e4e",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 200,
+      "gain": 0.55,
+      "why": "The manuscript opens on his hands. Loudest of the typing cues because it is the first sound of the chapter."
+    },
+    {
+      "cueId": "ch03-020-sarah-console",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-6efc9471f9db",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 200,
+      "gain": 0.5,
+      "why": "Sarah at the secondary console, working the interrupt."
+    },
+    {
+      "cueId": "ch03-030-building-shake",
+      "asset": "sfx_building_shake",
+      "anchor": {
+        "clipId": "narrator-e9056d35cd7a",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.5,
+      "why": "NEW. The shake arrives before the narration names it, so the listener feels it with Sarah rather than being told about it."
+    },
+    {
+      "cueId": "ch03-040-second-vibration",
+      "asset": "sfx_building_shake",
+      "anchor": {
+        "clipId": "narrator-f252c126c3eb",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.38,
+      "why": "NEW asset, second use, quieter. The manuscript calls it another vibration, so it should be the same sound diminished rather than a new one."
+    },
+    {
+      "cueId": "ch03-050-scale-locked",
+      "asset": "sfx_alert_warning_hit",
+      "anchor": {
+        "clipId": "narrator-f252c126c3eb",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.48,
+      "why": "Into the gap before Scale factor locked. Reused."
+    },
+    {
+      "cueId": "ch03-060-event-collapse",
+      "asset": "sfx_boundary_event_collapse",
+      "anchor": {
+        "clipId": "narrator-9d4ae01eedee",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1200,
+      "gain": 0.62,
+      "why": "NEW. The event. It ends in real silence rather than a tail, because the manuscript is explicit that the sound does not fade or become muffled, it ceases to exist."
+    },
+    {
+      "cueId": "ch03-070-event-return",
+      "asset": "sfx_boundary_event_return",
+      "anchor": {
+        "clipId": "narrator-3057d4470777",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.6,
+      "why": "NEW. The other half. The silence between the two is carried by the manifest's own pauses across the four narration segments in between, so the quiet is real rather than printed into a file."
+    },
+    {
+      "cueId": "ch03-075-alarms-screaming",
+      "asset": "amb_console_alarm_bed",
+      "anchor": {
+        "clipId": "narrator-3057d4470777",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.2,
+      "fadeInMs": 200,
+      "fadeOutMs": 2000,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-22150c29c9a0",
+          "occurrence": 1
+        },
+        "timing": "after"
+      },
+      "why": "Reused. The alarms run from the landing to the sentence that stops them, and their stopping is what leaves the silence the scene needs."
+    },
+    {
+      "cueId": "ch03-080-lab-after",
+      "asset": "amb_tombs_lab_night",
+      "anchor": {
+        "clipId": "narrator-22150c29c9a0",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.22,
+      "fadeInMs": 4000,
+      "sustain": {
+        "until": "chapterEnd",
+        "timing": "after"
+      },
+      "why": "Reused. The room tone returns alone into the silence the alarms left, and stays for the rest of the chapter. After the event it is the only thing that sounds normal."
+    },
+    {
+      "cueId": "ch03-090-console-check",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-b77666d9bee8",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 900,
+      "gain": 0.48,
+      "why": "Jack checking whether TOMBS is off. Quiet work in a quiet room."
+    },
+    {
+      "cueId": "ch03-100-wrist-call",
+      "asset": "sfx_wrist_terminal_chirp",
+      "anchor": {
+        "clipId": "narrator-a19597e328c5",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.44,
+      "why": "NEW asset, reused from chapter 2. Lena getting through is the first contact with anyone outside the room since the event."
+    },
+    {
+      "cueId": "ch03-101-lena-channel",
+      "asset": "amb_intercom_channel_open",
+      "anchor": {
+        "clipId": "narrator-a19597e328c5",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.14,
+      "fadeInMs": 300,
+      "fadeOutMs": 800,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-27f572412f24",
+          "occurrence": 1
+        },
+        "timing": "after"
+      },
+      "why": "Reused. The channel stays open through the communications check and closes on the sentence where Jack lowers his wrist."
+    },
+    {
+      "cueId": "ch03-110-camera-feeds",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-1d87e70736f6",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1200,
+      "gain": 0.42,
+      "why": "Reused. The cameras answering is the mechanism by which the chapter shows the scale of what happened."
+    },
+    {
+      "cueId": "ch03-120-camera-switch",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-e1a1af798ecd",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 300,
+      "gain": 0.36,
+      "why": "Reused, quieter. One more feed, and the drop of water."
+    },
+    {
+      "cueId": "ch03-130-vibration-one",
+      "asset": "sfx_distant_vibration_deep",
+      "anchor": {
+        "clipId": "narrator-8f37a665e497",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.44,
+      "why": "NEW, and the most important new asset in either chapter. The first sound of the giant world, arriving from outside with no seismic cause. It plays before the narration so the listener hears it exactly as Jack and Sarah do: an event first, an explanation never."
+    },
+    {
+      "cueId": "ch03-140-vibration-two",
+      "asset": "sfx_distant_vibration_deep",
+      "anchor": {
+        "clipId": "narrator-cf34684c56da",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.4,
+      "why": "NEW asset, second use. The manuscript brings it back and then lets it go, and Jack decides he is not certain he wants to know what it was. The same sound twice is the whole point."
+    },
+    {
+      "cueId": "ch03-150-event-log",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-0608e9f2317e",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1000,
+      "gain": 0.38,
+      "why": "Reused. One final record remains, and the machine reports the scale factor as calmly as it reported everything else."
+    }
+  ]
+}

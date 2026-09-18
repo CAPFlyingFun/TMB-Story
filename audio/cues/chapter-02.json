@@ -1,0 +1,334 @@
+{
+  "_comment": [
+    "PROPOSED cue sheet. The eight NEW assets it references are not generated yet.",
+    "",
+    "Reuse first: every existing asset that fits was reused rather than remade, so the",
+    "twenty assets from chapter 1 carry most of this and only eight are new.",
+    "",
+    "Anchors are clipId plus occurrence, never timestamps. Same rules as chapter 1:",
+    "`before` plays in the gap ahead of the line, `after` in the gap behind it,",
+    "`during` starts offsetMs into it, and a looping asset must say where it stops.",
+    "",
+    "CAUTION: some reused assets are measured TOO QUIET TO RESCUE WITH GAIN and are",
+    "marked so in the registry. Cues using them are written correctly and will simply",
+    "not be audible until those assets are replaced."
+  ],
+  "chapter": 2,
+  "cues": [
+    {
+      "cueId": "ch02-005-array-hum",
+      "asset": "amb_tombs_array_power_rise",
+      "anchor": {
+        "clipId": "narrator-4d144a8eeedd",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.18,
+      "fadeInMs": 2000,
+      "sustain": {
+        "until": "chapterEnd",
+        "timing": "after"
+      },
+      "why": "The chapter opens on a hum passing through the floor and the array never stops drawing power. Reusing chapter 1's rise asset ties the two chapters together with one sound: the thing that started at the end of chapter 1 is what chapter 2 is standing inside."
+    },
+    {
+      "cueId": "ch02-006-lab-bed",
+      "asset": "amb_tombs_lab_night",
+      "anchor": {
+        "clipId": "narrator-4d144a8eeedd",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.2,
+      "fadeInMs": 1500,
+      "fadeOutMs": 2500,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-34cd647577e9",
+          "occurrence": 1
+        },
+        "timing": "after"
+      },
+      "why": "Carries chapter 1's room straight into chapter 2 and leaves when they leave the laboratory. Reused, not remade."
+    },
+    {
+      "cueId": "ch02-010-out-of-chair",
+      "asset": "sfx_chair_roll_fast",
+      "anchor": {
+        "clipId": "narrator-a1ccdfbe1f2b",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 200,
+      "gain": 0.42,
+      "why": "The same startled chair as chapter 1, and the chapter's first physical beat."
+    },
+    {
+      "cueId": "ch02-020-door-wider",
+      "asset": "sfx_lab_door_slide",
+      "anchor": {
+        "clipId": "narrator-912881d92852",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 900,
+      "gain": 0.38,
+      "why": "They leave the laboratory. The door marks the move to the corridor, which is the chapter's first location change."
+    },
+    {
+      "cueId": "ch02-025-corridor-walk",
+      "asset": "sfx_footsteps_sarah_sneakers",
+      "anchor": {
+        "clipId": "narrator-1d83d15de941",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 300,
+      "gain": 0.32,
+      "why": "Two people moving fast through a corridor. Sarah's sneakers, per chapter 1 canon."
+    },
+    {
+      "cueId": "ch02-030-overhead-alarm",
+      "asset": "sfx_alert_warning_hit",
+      "anchor": {
+        "clipId": "narrator-34cd647577e9",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.46,
+      "why": "The manuscript sounds the alarm as they move, so the hit lands before the narration names it."
+    },
+    {
+      "cueId": "ch02-031-alarm-bed",
+      "asset": "amb_console_alarm_bed",
+      "anchor": {
+        "clipId": "narrator-34cd647577e9",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.15,
+      "fadeInMs": 500,
+      "fadeOutMs": 3000,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-570485616099",
+          "occurrence": 1
+        },
+        "timing": "after"
+      },
+      "why": "The building is in alarm from here until they arrive at the control room. Reused at chapter 1's corrected level."
+    },
+    {
+      "cueId": "ch02-040-wrist-call",
+      "asset": "sfx_wrist_terminal_chirp",
+      "anchor": {
+        "clipId": "narrator-0dff474a87e9",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.42,
+      "why": "NEW. The wrist terminal is how Lena exists in this story, and it needs to read as a different device from the laboratory console."
+    },
+    {
+      "cueId": "ch02-041-lena-channel",
+      "asset": "amb_intercom_channel_open",
+      "anchor": {
+        "clipId": "narrator-a2cb0323305a",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.14,
+      "fadeInMs": 300,
+      "fadeOutMs": 800,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-0370b926457b",
+          "occurrence": 1
+        },
+        "timing": "after"
+      },
+      "why": "The same live-channel hiss that told chapter 1's listener Sarah was on a speaker, now telling them Lena is on a wrist call and not in the room."
+    },
+    {
+      "cueId": "ch02-050-wrist-chirp-2",
+      "asset": "sfx_wrist_terminal_chirp",
+      "anchor": {
+        "clipId": "narrator-84ed69735962",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.4,
+      "why": "NEW asset, second use. The manuscript says chirped again, so the listener should recognise it."
+    },
+    {
+      "cueId": "ch02-060-rings-turning",
+      "asset": "sfx_array_rings_move",
+      "anchor": {
+        "clipId": "narrator-a8a6d825be1f",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.3,
+      "fadeInMs": 800,
+      "fadeOutMs": 1500,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-46ff51bea4f0",
+          "occurrence": 1
+        },
+        "timing": "after"
+      },
+      "why": "NEW. The signature machine sound of the chapter. It starts when the manuscript reveals the rings and stops on the sentence that stops them."
+    },
+    {
+      "cueId": "ch02-070-emitter-work",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-65cca3e20e94",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 200,
+      "gain": 0.5,
+      "why": "Sarah at the emitter controls. Reuses the keyboard asset."
+    },
+    {
+      "cueId": "ch02-080-lever",
+      "asset": "sfx_shutdown_lever_pull",
+      "anchor": {
+        "clipId": "narrator-45604f264846",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1400,
+      "gain": 0.52,
+      "why": "NEW. The chapter's biggest physical act, and it has to sound conclusive so that the rings restarting lands as a violation."
+    },
+    {
+      "cueId": "ch02-085-rings-restart",
+      "asset": "sfx_array_rings_move",
+      "anchor": {
+        "clipId": "narrator-af235e0b4193",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.34,
+      "fadeInMs": 600,
+      "fadeOutMs": 2000,
+      "sustain": {
+        "until": "chapterEnd",
+        "timing": "after"
+      },
+      "why": "NEW asset, second use. They do not stop again, so this one runs to the end of the chapter."
+    },
+    {
+      "cueId": "ch02-090-lights-return",
+      "asset": "sfx_equipment_power_up_soft",
+      "anchor": {
+        "clipId": "narrator-9c9eeea288db",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.4,
+      "why": "Power returning to a room that should have been dead. Reuses chapter 1's equipment transition."
+    },
+    {
+      "cueId": "ch02-100-console-alive",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-9c9eeea288db",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1800,
+      "gain": 0.4,
+      "why": "The same calm notification as chapter 1's directory opening by itself: the machine is not warning anyone, it is working."
+    },
+    {
+      "cueId": "ch02-110-map-work",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-d65b688f1891",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 300,
+      "gain": 0.5,
+      "why": "Pulling up the island map, the moment before the red line appears."
+    },
+    {
+      "cueId": "ch02-120-intercom",
+      "asset": "sfx_intercom_open",
+      "anchor": {
+        "clipId": "narrator-6e6f9e1dbe3f",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 500,
+      "gain": 0.4,
+      "why": "Reuses chapter 1's intercom. Jack declaring a settlement-wide emergency is the chapter's turn outward from two people to five hundred."
+    },
+    {
+      "cueId": "ch02-130-sirens",
+      "asset": "amb_settlement_sirens",
+      "anchor": {
+        "clipId": "narrator-9e05ce60e7b8",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.16,
+      "fadeInMs": 3000,
+      "sustain": {
+        "until": "chapterEnd",
+        "timing": "after"
+      },
+      "why": "NEW. Once the emergency is called the sirens do not stop, and they are the only sound in either chapter that comes from outside the building. Heard through walls, which is where the chapters stay."
+    },
+    {
+      "cueId": "ch02-140-intercom-again",
+      "asset": "sfx_intercom_open",
+      "anchor": {
+        "clipId": "narrator-50d3345e6192",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 400,
+      "gain": 0.36,
+      "why": "Changing the evacuation order. Same asset, quieter: the second use is a correction rather than a declaration."
+    },
+    {
+      "cueId": "ch02-150-overrides",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-f0b9c61b577a",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 400,
+      "gain": 0.5,
+      "why": "Jack working the overrides while the boundary acquires. The last stretch of ordinary work before the readouts take over."
+    },
+    {
+      "cueId": "ch02-160-boundary-acquired",
+      "asset": "sfx_alert_warning_hit",
+      "anchor": {
+        "clipId": "narrator-6e1c3da3fb9d",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.48,
+      "why": "A hit into the gap before TOMBS says Boundary acquired, so the machine's announcement arrives out of an alert."
+    },
+    {
+      "cueId": "ch02-170-scale-calculating",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-ebb691a6c92b",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.4,
+      "why": "Scale factor calculating arrives quietly, which is worse. The chapter ends on the calm voice of something that has already decided."
+    }
+  ]
+}

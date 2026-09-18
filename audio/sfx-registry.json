@@ -461,6 +461,110 @@
         "soundsForSeconds": 0.75,
         "verdict": "usable"
       }
+    },
+    "sfx_wrist_terminal_chirp": {
+      "category": "interface",
+      "source": "generated",
+      "prompt": "An incoming call alert on a small wrist-worn device. Two rising electronic notes with a short clean decay, close to the microphone, recorded at a strong present level with plenty of body. Distinct from a desk console: smaller, tighter, worn on a person. No voices, no music, no alarm.",
+      "durationSeconds": 1.5,
+      "loop": false,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Jack's wrist terminal, which carries every call with Lena across chapters 2 and 3. It needs to read as a different device from the laboratory console.",
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+    },
+    "sfx_array_rings_move": {
+      "category": "system",
+      "source": "generated",
+      "prompt": "Large articulated machinery rotating. Heavy rings turning on precision bearings with a deep servo drive under them, metal sliding against metal, a sense of considerable mass moving under control. Full-bodied and close, recorded at a strong present level. No voices, no music, no alarm, no impact.",
+      "durationSeconds": 6,
+      "loop": true,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "The TOMBS Array's rings, the signature machine sound of chapter 2. Loops because the manuscript has them moving, stopping and starting again across the whole scene.",
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+    },
+    "sfx_shutdown_lever_pull": {
+      "category": "foley",
+      "source": "generated",
+      "prompt": "A heavy industrial disconnect lever thrown by hand, followed by electrical power dropping out of a room. A solid mechanical clack with weight behind it, then the collapse of every hum and fan into silence. Close and physical, recorded at a strong present level. No voices, no music.",
+      "durationSeconds": 3,
+      "loop": false,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Jack's physical shutdown. It has to sound conclusive, because the room coming back on afterwards is the moment TOMBS stops being a malfunction.",
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+    },
+    "amb_settlement_sirens": {
+      "category": "alarm",
+      "source": "generated",
+      "prompt": "Civil emergency sirens across a small town, heard from indoors through walls and glass. Several units at different distances, rising and falling out of step with each other, with the building muffling the high end. Even and continuous, recorded at a strong present level. No voices, no music, no interior alarm.",
+      "durationSeconds": 12,
+      "loop": true,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Once Jack orders the settlement-wide emergency the sirens do not stop. Heard from inside, which is where both chapters stay.",
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+    },
+    "sfx_boundary_event_collapse": {
+      "category": "system",
+      "source": "generated",
+      "prompt": "Every sound in a room being pulled away into total silence in under two seconds. A rising electrical charge with the whole ambience swallowing inward behind it, ending in absolute nothing. Close and enveloping, recorded at a strong present level. No voices, no music, no impact, no explosion.",
+      "durationSeconds": 4,
+      "loop": false,
+      "promptInfluence": 0.45,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "The event itself. The manuscript is explicit that the sound does not fade or muffle, it ceases, so the asset has to end in real silence rather than a tail.",
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+    },
+    "sfx_boundary_event_return": {
+      "category": "system",
+      "source": "generated",
+      "prompt": "Sound rushing back into a room all at once after total silence. A sharp pressure return with room ambience and machinery slamming back to full in a single instant, then settling. Close and enveloping, recorded at a strong present level. No voices, no music.",
+      "durationSeconds": 3,
+      "loop": false,
+      "promptInfluence": 0.45,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "The other half of the event. These two are always used as a pair, with the silence between them carried by the manifest's own pause rather than by either file.",
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+    },
+    "sfx_building_shake": {
+      "category": "foley",
+      "source": "generated",
+      "prompt": "A building structure shuddering. Low-frequency rumble through a concrete floor with light fittings and loose equipment rattling above it, building and then easing. Interior perspective, recorded at a strong present level with real low end. No voices, no music, no collapse, no debris.",
+      "durationSeconds": 4,
+      "loop": false,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "The shake that makes Sarah catch herself against the console. Used where the manuscript shakes the building, not as general tension.",
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
+    },
+    "sfx_distant_vibration_deep": {
+      "category": "system",
+      "source": "generated",
+      "prompt": "A deep vibration arriving from somewhere far outside a building and passing through it. Sub-bass swell with a slow approach and a slower departure, felt through the structure rather than heard as an event, like distant thunder with no crack. Recorded at a strong present level with real low end. No voices, no music, no impact.",
+      "durationSeconds": 6,
+      "loop": false,
+      "promptInfluence": 0.4,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "The unexplained vibration that arrives twice at the end of chapter 3 and that Jack decides he does not want to explain. The single most important new asset: it is the first sound of the giant world and it will recur for a long time.",
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
     }
   }
 }

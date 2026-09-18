@@ -67,7 +67,10 @@ not a fifty-chapter arc. Full version: `outline/WORKFLOW.md`. In short:
 7. On his approval, flip `review_status`, add the `CHAPTER_INDEX.md` rows, apply the
    story-rules updates, move the tracker line, and commit.
 
-Chapters 4 to 6 are not finalized. Do not draft them unasked.
+Chapters 4 onward are not finalized. Do not draft them unasked.
+`outline/STORY_DIRECTION.md` says what the stretch after Chapter 3 is about --
+several chapters of immediate aftermath before the eventual time jump -- and what
+has deliberately not been decided, including how many chapters that takes.
 
 ## Canon protection
 

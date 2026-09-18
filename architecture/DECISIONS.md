@@ -31,6 +31,7 @@ file is updated.
 - 0020 — Length band 1,200-1,400 (1,000 floor, 1,800 ceiling) and the three-chapter movement; supersedes 0001 and 0010 — **Accepted (Joshua, 2026-09-17)**
 - 0021 — The voice cast is a registry: one entry per speaker, a recast replaces it, a clip is identified by speaker and text but invalidated by voice — **Accepted (Joshua, 2026-09-18)**
 - 0022 — The first authorized edit to the imported manuscript; Chapters 1-3 are no longer byte-identical and the file says so — **Accepted (Joshua, 2026-09-18)**
+- 0023 — The aftermath is a stretch of its own, not a bridge to the time jump; its length is deliberately open — **Accepted (Joshua, 2026-09-18)**
 
 ---
 
@@ -183,4 +184,13 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 **Process:** the `review_status: approved` hook exists to stop exactly this kind of edit happening quietly. Joshua authorized flipping the status to `in-review` first, in writing, naming the chapter and the line; the flip was made, the prose edit went through the ordinary tools, validation ran, and the status returned to `approved`. The hook was not circumvented.
 
 **Consequences, and why they were cheap:** a clip is identified by its speaker and its text, so changing one line re-identified exactly one clip — `narrator-75a8844f5b06` became `narrator-668b2dc69db1` — and one narrator line was regenerated. Every other one of the chapter's 180 clips stayed cached. One cue, `ch01-140-sarah-resumes`, was anchored to the old clip; validation reported the broken anchor instead of letting the cue land on a plausible-looking neighbour, and it was re-anchored to the new identity. **That is the one case where a cue anchor is supposed to be edited:** the line's text changed, so its identity changed. Word count 1,160 to 1,158. The old clip is left on disk rather than deleted, because it is the cheapest possible revert.
+**Status:** Accepted, 2026-09-18.
+
+### 0023 — The aftermath is a stretch of its own, not a bridge to the time jump
+**Context:** Joshua, 2026-09-18, after approving Chapters 1 to 3: "We are NOT rushing directly into the 18-year time jump after Chapter 3. I want several chapters in the immediate aftermath first, letting the miniature-world situation become a mystery and giving the settlement time to react, investigate, adapt, and survive."
+**Decision:** Decision 0018's eventual eighteen-year jump still stands and is NOT next. The chapters after 3 explore the aftermath: emergency response across the five-hundred-person settlement, what infrastructure survived and what failed, the loss of outside communications, attempts to understand or reverse TOMBS, evidence the event was deliberate, the unexplained external vibrations and the threats of a giant world, first controlled exploration near the boundary, Jack and Sarah facing it while Sarah is still thirty-two weeks pregnant, the settlement realising this may not be reversible quickly, and the early foundations of the post-jump society.
+
+**What is deliberately left open, and must not be filled in:** the number of pre-jump chapters; any replacement long outline; the son as protagonist, who is not born yet; and when the jump happens, which is Joshua's choice of a specific chapter rather than a consequence of the aftermath feeling long enough. Chapters 4 onward are not drafted until he asks — recording a direction is not an instruction to write.
+
+**Consequences:** `outline/STORY_DIRECTION.md` holds the note. `story-rules/STORY_OVERVIEW.md` said "Chapters 4 to 6, next" followed immediately by the jump, which read as a three-chapter bridge; it now says the aftermath runs at a length not yet fixed. `outline/WORKFLOW.md` and `CLAUDE.md` point at the direction file. The aftermath grows from what the manuscript already planted — dead communications in every direction, two unexplained vibrations with no seismic cause, and Jack deciding he is not certain he wants to know what they were — rather than from a plan laid over it.
 **Status:** Accepted, 2026-09-18.
