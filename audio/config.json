@@ -121,7 +121,11 @@
       "A cue's own `gain` wins over `categoryGain`. `duckUnderSpeechTo` is a MULTIPLIER",
       "applied to a sustained bed while a voice clip is playing, so an alarm can be",
       "loud in the gaps and still sit under the dialogue. One-shot foley is not ducked;",
-      "it is short enough to read through speech and ducking it would make it mush."
+      "it is short enough to read through speech and ducking it would make it mush.",
+      "",
+      "ambience ducks to 0.70 rather than 0.55 after Joshua's first listen: at 0.55 of an",
+      "already-quiet bed the room tone was inaudible under speech, which is the opposite",
+      "of what a bed is for. It still loses a third of its level while a voice sounds."
     ],
     "layers": {
       "voice": true,
@@ -136,7 +140,7 @@
       "system": 0.45
     },
     "duckUnderSpeechTo": {
-      "ambience": 0.55,
+      "ambience": 0.7,
       "alarm": 0.4,
       "system": 0.5,
       "interface": 1.0,

@@ -8,12 +8,12 @@ with `python3 scripts/render-cue-sheet.py 1`.
 
 | | |
 |---|---|
-| Playback events | **29** |
+| Playback events | **35** |
 | Unique assets | **20** (0 still to generate) |
 | Chapter runtime as it plays today | 8:17 |
 | Voice clips regenerated for this | **none** |
 
-Events outnumber assets because sounds are reused: `sfx_access_denied_tone` x2, `sfx_alert_warning_hit` x2, `sfx_chair_roll_slow` x2, `sfx_console_tone_soft` x2, `sfx_footsteps_sarah_sneakers` x2, `sfx_intercom_open` x2, `sfx_keyboard_typing_short` x3, `sfx_system_notify_soft` x2.
+Events outnumber assets because sounds are reused: `sfx_access_denied_tone` x2, `sfx_alert_warning_hit` x2, `sfx_chair_roll_slow` x2, `sfx_console_tone_soft` x2, `sfx_footsteps_sarah_sneakers` x2, `sfx_intercom_open` x2, `sfx_keyboard_typing_short` x9, `sfx_system_notify_soft` x2.
 
 ## How to read the anchor column
 
@@ -38,7 +38,7 @@ anchor to its stop anchor and loops underneath.
 | Anchor | segment order 2 · clip `narrator-0b2f58c70a4c` · occurrence 1 |
 | Timing | before |
 | Sustain | loops to segment order 184 |
-| Gain | 0.08 |
+| Gain | 0.20 |
 | Fades | in 3000ms · out 4000ms |
 | Duration requested | 20s, looping |
 | Reusable in Godot | yes |
@@ -46,7 +46,7 @@ anchor to its stop anchor and loops underneath.
 
 **Manuscript:** Narrator — “Deep inside one of those laboratories, Dr. Jack Bennett was hard at work. Technically.”
 
-**Why:** Enters on 'Deep inside one of those laboratories' -- the sentence that puts us in the room -- and never leaves, because the chapter never leaves. Establishes an occupied but near-empty building at night so that every later silence reads as a room and not as dead air.
+**Why:** Enters on 'Deep inside one of those laboratories' -- the sentence that puts us in the room -- and never leaves, because the chapter never leaves. Establishes an occupied but near-empty building at night so that every later silence reads as a room and not as dead air. GAIN 0.08 -> 0.2: Joshua could not hear the room tone at all. 0.08 against a voice reference of 1.0 is roughly -22 dB, which is below the floor of a phone speaker in a room.
 
 **Prompt:** `Quiet room tone of an advanced, clean research laboratory late at night. Soft steady ventilation, a low continuous electrical hum from racked equipment, faint distant cooling fans, and a barely perceptible high shimmer from instruments on standby. Spacious but enclosed. No voices, no music, no alarms, no beeping, no footsteps. Even throughout so it loops.`
 
@@ -116,7 +116,7 @@ anchor to its stop anchor and loops underneath.
 | Anchor | segment order 4 · clip `narrator-7942982ea850` · occurrence 1 |
 | Timing | after |
 | Sustain | loops to segment order 19 |
-| Gain | 0.20 |
+| Gain | 0.15 |
 | Fades | in 400ms · out 2500ms |
 | Duration requested | 12s, looping |
 | Reusable in Godot | yes |
@@ -124,7 +124,7 @@ anchor to its stop anchor and loops underneath.
 
 **Manuscript:** Narrator — “A warning tone chirped. Jack shifted but did not wake. A second tone followed, louder than the first, and then the entire console erupted with alarms.”
 
-**Why:** The alarm does not stop when the sentence does -- the manuscript has the warning repeating and a second alarm sounding later. A low looping bed under the opening carries that, ducks hard beneath speech, and fades out after 'That's impossible', which is where the scene stops shouting and starts being strange.
+**Why:** The alarm does not stop when the sentence does -- the manuscript has the warning repeating and a second alarm sounding later. A low looping bed under the opening carries that, ducks hard beneath speech, and fades out after 'That's impossible', which is where the scene stops shouting and starts being strange. GAIN 0.2 -> 0.15: Joshua's instruction: turn the alarm bed down.
 
 **Prompt:** `A repeating electronic security alarm inside a laboratory, heard as a continuous background state rather than a single event. Insistent two-note warning tone cycling steadily with an even gap between repeats, slightly hard-edged and synthetic, with a faint room reflection. Consistent volume, no build, no crescendo, no siren sweep, no voices, no music. Even throughout so it can loop.`
 
@@ -184,6 +184,25 @@ anchor to its stop anchor and loops underneath.
 **Why:** One sharp hit on 'Another alarm sounded'. Distinct from the opening eruption: this is the system finding something new, not the system panicking.
 
 **Prompt:** `One sharp electronic warning tone announcing a new alert on a laboratory display. Single hard synthetic alert stab, urgent and attention-grabbing, short decay, slight room reflection. One hit only, no repeats, no siren, no voices, no music.`
+
+### `ch01-031-jack-searches`
+
+| | |
+|---|---|
+| Asset | `sfx_keyboard_typing_short` |
+| Category | foley (sfx layer) |
+| Anchor | segment order 18 · clip `narrator-36d912fb5b4f` · occurrence 1 |
+| Timing | during +1200ms |
+| Gain | 0.32 |
+| Duration requested | 3s |
+| Reusable in Godot | yes |
+| Approx. review time | ~1:47 |
+
+**Manuscript:** Narrator — “Jack entered a command and pulled up the laboratory access logs. Nothing looked unusual. He tried another search and got the same result.”
+
+**Why:** Jack entering a command and running a second search. The manuscript has him working the logs by hand here, and it was silent.
+
+**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
 
 ### `ch01-050-directory-opens`
 
@@ -270,7 +289,7 @@ anchor to its stop anchor and loops underneath.
 | Anchor | segment order 27 · clip `jack-bennett-a8a6aa7ae3b3` · occurrence 1 |
 | Timing | before |
 | Sustain | loops to segment order 49 |
-| Gain | 0.06 |
+| Gain | 0.14 |
 | Fades | in 200ms · out 600ms |
 | Duration requested | 10s, looping |
 | Reusable in Godot | yes |
@@ -278,7 +297,7 @@ anchor to its stop anchor and loops underneath.
 
 **Manuscript:** Jack Bennett — “Sarah?”
 
-**Why:** A faint live-channel hiss under the whole intercom exchange is the only way to make Sarah read as remote without filtering her approved voice clips. One asset covers twenty segments and nothing of hers is regenerated.
+**Why:** A faint live-channel hiss under the whole intercom exchange is the only way to make Sarah read as remote without filtering her approved voice clips. One asset covers twenty segments and nothing of hers is regenerated. GAIN 0.06 -> 0.14: Quieter than the bed he could not hear, so it cannot have been audible either -- and an inaudible intercom bed cannot be judged, which is what he approved it to test.
 
 **Prompt:** `The quiet open-channel hiss of an intercom speaker with the line live and nobody talking. Soft narrow-band electrical noise, a slight carrier hum, thin and boxy as if coming from a small wall-mounted speaker grille. Very low level and unchanging. No voices, no speech, no music, no clicks, no tones. Even throughout so it can loop.`
 
@@ -472,6 +491,63 @@ anchor to its stop anchor and loops underneath.
 
 **Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
 
+### `ch01-131-sarah-history`
+
+| | |
+|---|---|
+| Asset | `sfx_keyboard_typing_short` |
+| Category | foley (sfx layer) |
+| Anchor | segment order 111 · clip `narrator-94fb639def2d` · occurrence 1 |
+| Timing | during +250ms |
+| Gain | 0.30 |
+| Duration requested | 3s |
+| Reusable in Godot | yes |
+| Approx. review time | ~5:32 |
+
+**Manuscript:** Narrator — “Sarah opened the connection history.”
+
+**Why:** Sarah opening the connection history. She has the keyboard now and the scene should keep saying so.
+
+**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+
+### `ch01-132-sarah-digs`
+
+| | |
+|---|---|
+| Asset | `sfx_keyboard_typing_short` |
+| Category | foley (sfx layer) |
+| Anchor | segment order 118 · clip `narrator-d4aef8b58a3e` · occurrence 1 |
+| Timing | during +1600ms |
+| Gain | 0.30 |
+| Duration requested | 3s |
+| Reusable in Godot | yes |
+| Approx. review time | ~5:45 |
+
+**Manuscript:** Narrator — “Jack watched as Sarah opened another window and began digging through the security logs.”
+
+**Why:** “began digging through the security logs” is the longest stretch of work in the chapter and had no sound under it at all.
+
+**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+
+### `ch01-133-sarah-keeps-typing`
+
+| | |
+|---|---|
+| Asset | `sfx_keyboard_typing_short` |
+| Category | foley (sfx layer) |
+| Anchor | segment order 132 · clip `narrator-a1ae4cf23cd8` · occurrence 1 |
+| Timing | during +200ms |
+| Gain | 0.28 |
+| Duration requested | 3s |
+| Reusable in Godot | yes |
+| Approx. review time | ~6:21 |
+
+**Manuscript:** Narrator — “Sarah kept typing.”
+
+**Why:** The narration says plainly that she kept typing. Quiet, because it is under a line of banter rather than under the investigation.
+
+**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+
 ### `ch01-140-sarah-resumes`
 
 | | |
@@ -519,7 +595,7 @@ anchor to its stop anchor and loops underneath.
 | Anchor | segment order 154 · clip `system-f6a28699a3b1` · occurrence 1 |
 | Timing | after |
 | Sustain | loops to segment order 184 |
-| Gain | 0.09 |
+| Gain | 0.16 |
 | Fades | in 6000ms · out -ms |
 | Duration requested | 20s, looping |
 | Reusable in Godot | yes |
@@ -527,7 +603,7 @@ anchor to its stop anchor and loops underneath.
 
 **Manuscript:** TOMBS / settlement systems — “Tombs array remote initialization request.”
 
-**Why:** From the remote initialization request onward something enormous is waking up, and it never stops. A slow low rise under the last thirty segments carries the chapter's dread without a single extra beep, and it is where the TOMBS Array's sound identity begins.
+**Why:** From the remote initialization request onward something enormous is waking up, and it never stops. A slow low rise under the last thirty segments carries the chapter's dread without a single extra beep, and it is where the TOMBS Array's sound identity begins. GAIN 0.09 -> 0.16: Same reasoning. Meant to be felt more than heard, but at 0.09 it was neither.
 
 **Prompt:** `A very large machine beginning to draw power somewhere below and far away. Deep sub-bass hum rising slowly in pitch and intensity, layered with a distant electrical charging whine and a faint sense of enormous mass energising. Restrained and ominous, felt more than heard, no impact, no explosion, no siren, no voices, no music, no cinematic riser or trailer hit.`
 
@@ -569,6 +645,25 @@ anchor to its stop anchor and loops underneath.
 
 **Prompt:** `A system refusing a command. One short blunt descending two-note electronic rejection tone, flat and unsympathetic, close-mic with slight room. Final but not an alarm. No voices, no music, no siren.`
 
+### `ch01-171-jack-credentials`
+
+| | |
+|---|---|
+| Asset | `sfx_keyboard_typing_short` |
+| Category | foley (sfx layer) |
+| Anchor | segment order 167 · clip `narrator-cddc94b869d1` · occurrence 1 |
+| Timing | during +500ms |
+| Gain | 0.34 |
+| Duration requested | 3s |
+| Reusable in Godot | yes |
+| Approx. review time | ~7:41 |
+
+**Manuscript:** Narrator — “He entered his administrator credentials, but a new message appeared before he could issue another command.”
+
+**Why:** Jack entering his administrator credentials. Slightly louder than the rest: this is the keystroke the chapter turns on, and the refusal answers it.
+
+**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+
 ### `ch01-170-revoked`
 
 | | |
@@ -587,6 +682,25 @@ anchor to its stop anchor and loops underneath.
 **Why:** The chapter's turn. Being locked out is not the same event as being refused, and it should not sound like it -- heavier, lower, final. After this the sound design gets out of the way and leaves the last nine segments to two voices and the rising array.
 
 **Prompt:** `A system locking a user out for good. A heavier descending electronic tone with a low weighted thud underneath it and a short cold decay, more serious and more final than an ordinary rejection. Close-mic with slight room. No voices, no music, no siren, no alarm.`
+
+### `ch01-172-jack-retries`
+
+| | |
+|---|---|
+| Asset | `sfx_keyboard_typing_short` |
+| Category | foley (sfx layer) |
+| Anchor | segment order 175 · clip `narrator-7fd987f61325` · occurrence 1 |
+| Timing | during +250ms |
+| Gain | 0.32 |
+| Duration requested | 3s |
+| Reusable in Godot | yes |
+| Approx. review time | ~8:00 |
+
+**Manuscript:** Narrator — “Jack tried his credentials again.”
+
+**Why:** “Jack tried his credentials again.” The same sound a second time is the information, exactly as the two denial tones are.
+
+**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
 
 ## Unique assets
 
@@ -608,7 +722,7 @@ anchor to its stop anchor and loops underneath.
 | `sfx_intercom_close` | interface | no | 1 | 1 | yes | cached |
 | `sfx_intercom_open` | interface | no | 1.5 | 2 | yes | cached |
 | `sfx_intercom_static` | interface | no | 2.5 | 1 | yes | cached |
-| `sfx_keyboard_typing_short` | foley | no | 3 | 3 | yes | cached |
+| `sfx_keyboard_typing_short` | foley | no | 3 | 9 | yes | cached |
 | `sfx_lab_door_slide` | foley | no | 2.5 | 1 | yes | cached |
 | `sfx_system_notify_soft` | interface | no | 1.5 | 2 | yes | cached |
 | `sfx_terminal_lock_engage` | interface | no | 2 | 1 | yes | cached |
