@@ -14,15 +14,21 @@
   "bytes": 193141,
   "generated": "2026-09-18T11:58:37Z",
   "normalize": {
-    "appliedDb": 14.3,
+    "appliedDb": 11.0,
     "targetRmsDbfs": -20.0,
-    "peakCeilingDbfs": -1.0,
-    "limitedBy": "rms target",
+    "peakCeilingDbfs": -3.0,
+    "limitedBy": "peak ceiling, measured after encoding",
+    "corrections": [
+      {
+        "overBy": 2.5,
+        "newGainDb": 11.0
+      }
+    ],
     "sourceRmsDbfs": -34.3,
     "sourcePeakDbfs": -16.6,
-    "resultRmsDbfs": -17.5,
-    "resultPeakDbfs": 0.0,
+    "resultRmsDbfs": -20.8,
+    "resultPeakDbfs": -3.1,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/alarm/amb_settlement_sirens.source.mp3",
-    "at": "2026-09-18T12:33:48Z"
+    "at": "2026-09-18T12:41:09Z"
   }
 }

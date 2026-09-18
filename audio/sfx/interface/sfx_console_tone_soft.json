@@ -14,15 +14,21 @@
   "bytes": 24703,
   "generated": "2026-09-18T12:21:01Z",
   "normalize": {
-    "appliedDb": 18.5,
+    "appliedDb": 13.8,
     "targetRmsDbfs": -20.0,
-    "peakCeilingDbfs": -1.0,
-    "limitedBy": "peak ceiling",
+    "peakCeilingDbfs": -3.0,
+    "limitedBy": "peak ceiling, measured after encoding",
+    "corrections": [
+      {
+        "overBy": 2.6,
+        "newGainDb": 13.8
+      }
+    ],
     "sourceRmsDbfs": -40.1,
     "sourcePeakDbfs": -19.5,
-    "resultRmsDbfs": -19.1,
-    "resultPeakDbfs": 0.0,
+    "resultRmsDbfs": -23.7,
+    "resultPeakDbfs": -3.1,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/interface/sfx_console_tone_soft.source.mp3",
-    "at": "2026-09-18T12:33:49Z"
+    "at": "2026-09-18T12:41:10Z"
   }
 }
