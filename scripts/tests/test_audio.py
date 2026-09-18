@@ -1531,13 +1531,33 @@ class ProceduralTests(unittest.TestCase):
         swell = [c for c in cues if c["asset"] == "sfx_siren_winddown"][0]
         for c in beds:
             # Not a magic number: what matters is that a distant siren is well below
-            # the swell that is deliberately close, and Joshua has moved it twice.
-            self.assertLessEqual(c["emphasisDb"], -18.0)
+            # the swell that is deliberately close. The figure has moved four times --
+            # -4.4, -10, -18 (silent), now -14 -- so pinning one would only record
+            # whichever guess was last.
+            self.assertLessEqual(c["emphasisDb"], -10.0)
             self.assertLess(c["emphasisDb"], swell.get("emphasisDb", 0.0),
                             "the swell is meant to be the loud one")
             lp = reg["assets"][c["asset"]]["recipe"]["lowpassHz"]
             self.assertLessEqual(lp, 600,
                                  "a wall eats the high end; that is what makes it outside")
+
+    def test_the_swell_is_audibly_louder_than_the_distant_sirens(self):
+        """"Louder on purpose for a few seconds" is only true if it actually is.
+
+        At emphasis 0 the wind-down sat 23 dB under the narration while the beds sat
+        37 dB under -- a 14 dB difference that still left the loud moment quiet. The
+        gap is what the scene needs, not the absolute number.
+        """
+        root = os.path.dirname(os.path.dirname(HERE))
+        cues = json.load(open(os.path.join(root, "audio", "cues", "chapter-03.json"),
+                              encoding="utf-8"))["cues"]
+        swell = [c for c in cues if c["asset"] == "sfx_siren_winddown"][0]
+        beds = [c for c in cues if c["asset"].startswith("amb_sirens_")]
+        self.assertGreater(swell["emphasisDb"], 0.0,
+                           "the one close moment has to sit above its category")
+        for c in beds:
+            self.assertGreaterEqual(swell["emphasisDb"] - c["emphasisDb"], 15.0,
+                                    "the swell must be clearly the loud one")
 
     def test_the_manuscript_pitch_change_has_a_cue(self):
         """Chapter 3 says the sirens changed pitch; for a while the audio did not."""

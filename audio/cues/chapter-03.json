@@ -43,7 +43,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "emphasisDb": -18.0,
+      "emphasisDb": -14.0,
       "fadeInMs": 2500,
       "fadeOutMs": 1500,
       "sustain": {
@@ -53,8 +53,8 @@
         },
         "timing": "after"
       },
-      "why": "Civil sirens across the settlement, heard indoors. Procedural rather than recorded because the recorded one did not loop cleanly -- it was even for 5.5 of its 12 seconds and announced its own seam every time it wrapped. This one closes its phase exactly at 12 s. EMPHASIS -4.4 dB: Joshua asked for the sirens 40% quieter, and only the sirens, so it is a per-cue nudge rather than a move of the whole alarm category, which would have taken the console alarm bed he tuned by ear down with it. LEVEL -10 dB and the high end filtered away: Joshua heard it as beside them rather than outside. Distance is both, not either. LEVEL -18 dB total: still too loud at -10, so another 60% off.",
-      "gain": 0.003
+      "why": "Civil sirens across the settlement, heard indoors. Procedural rather than recorded because the recorded one did not loop cleanly -- it was even for 5.5 of its 12 seconds and announced its own seam every time it wrapped. This one closes its phase exactly at 12 s. EMPHASIS -4.4 dB: Joshua asked for the sirens 40% quieter, and only the sirens, so it is a per-cue nudge rather than a move of the whole alarm category, which would have taken the console alarm bed he tuned by ear down with it. LEVEL -10 dB and the high end filtered away: Joshua heard it as beside them rather than outside. Distance is both, not either. LEVEL -18 dB total: still too loud at -10, so another 60% off. LEVEL: -4.4 read as too loud, -10 still too loud, -18 vanished entirely. -14 bisects the last two. A siren is a TONE, and a tone carries far further than broadband noise at the same RMS, which is why the category target alone kept missing it.",
+      "gain": 0.004
     },
     {
       "cueId": "ch03-010-jack-typing",
@@ -89,7 +89,7 @@
       },
       "timing": "during",
       "offsetMs": 1200,
-      "emphasisDb": -18.0,
+      "emphasisDb": -14.0,
       "fadeInMs": 1200,
       "fadeOutMs": 2000,
       "sustain": {
@@ -99,8 +99,8 @@
         },
         "timing": "after"
       },
-      "why": "\"...the emergency sirens outside changed pitch.\" They did not: the same siren kept playing under the line that said it had changed, which Joshua caught. The first pattern stops on the previous line and this one comes in 1.2 s into the sentence, under the words themselves. Higher and faster, so it reads as the town escalating rather than as a different recording. LEVEL -10 dB and the high end filtered away: Joshua heard it as beside them rather than outside. Distance is both, not either. LEVEL -18 dB total: still too loud at -10, so another 60% off.",
-      "gain": 0.003
+      "why": "\"...the emergency sirens outside changed pitch.\" They did not: the same siren kept playing under the line that said it had changed, which Joshua caught. The first pattern stops on the previous line and this one comes in 1.2 s into the sentence, under the words themselves. Higher and faster, so it reads as the town escalating rather than as a different recording. LEVEL -10 dB and the high end filtered away: Joshua heard it as beside them rather than outside. Distance is both, not either. LEVEL -18 dB total: still too loud at -10, so another 60% off. LEVEL: -4.4 read as too loud, -10 still too loud, -18 vanished entirely. -14 bisects the last two. A siren is a TONE, and a tone carries far further than broadband noise at the same RMS, which is why the category target alone kept missing it.",
+      "gain": 0.005
     },
     {
       "cueId": "ch03-030-building-shake",
@@ -280,9 +280,9 @@
         "occurrence": 1
       },
       "timing": "before",
-      "emphasisDb": 0.0,
-      "why": "On 'He looked outside.' -- the same instant the forest bed comes in. The sirens have been distant all chapter; here the attention goes through the glass and they are briefly THERE, louder on purpose for a few seconds, and then they wind down and fade out completely. What is left is the world, which is the point of the scene: the last human sound gives way and the listener is alone with something enormous. Joshua asked for exactly this shape -- louder for a few seconds, then winding out to let silence and the background take over.",
-      "gain": 0.018
+      "emphasisDb": 6.0,
+      "why": "On 'He looked outside.' -- the same instant the forest bed comes in. The sirens have been distant all chapter; here the attention goes through the glass and they are briefly THERE, louder on purpose for a few seconds, and then they wind down and fade out completely. What is left is the world, which is the point of the scene: the last human sound gives way and the listener is alone with something enormous. Joshua asked for exactly this shape -- louder for a few seconds, then winding out to let silence and the background take over. EMPHASIS +6 dB: at 0 it sat 23 dB under the narration, which is not 'louder on purpose'. It is meant to be the one moment the sirens are close.",
+      "gain": 0.035
     },
     {
       "cueId": "ch03-120-camera-switch",
