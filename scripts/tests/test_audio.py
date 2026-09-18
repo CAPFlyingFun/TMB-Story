@@ -428,8 +428,8 @@ SFX_DATA = {
 SFX_CFG = dict(CFG)
 SFX_CFG["sfx"] = {
     "provider": "elevenlabs-sfx", "model": None, "outputFormat": "mp3_44100_128",
-    "defaultPromptInfluence": 0.3,
-    "durationLimitsSeconds": {"min": 0.5, "max": 22},
+    "defaultPromptInfluence": 0.3, "promptMaxCharacters": 400,
+    "durationLimitsSeconds": {"min": 0.5, "max": 20},
     "generation": {"concurrency": 1, "maxRetries": 2, "baseBackoffSeconds": 0,
                    "requestTimeoutSeconds": 5},
 }
@@ -581,6 +581,47 @@ CUE_DOC = {
          "anchor": {"clipId": None, "occurrence": 2}, "timing": "before"},
     ],
 }
+
+
+class SfxProviderLimitTests(unittest.TestCase):
+    """Limits learned by being refused, so they are never learned twice.
+
+    A 476-character prompt was rejected with HTTP 400 at 22 seconds and again at 20,
+    while every asset at 385 characters or fewer generated first time -- including a
+    20-second looping bed. The cause was prompt LENGTH. Both limits are now data, and
+    validation spends nothing to enforce them.
+    """
+
+    def setUp(self):
+        self.reg = sfx_reg()
+
+    def test_the_limits_are_configuration_rather_than_folklore(self):
+        self.assertEqual(self.reg.prompt_limit(), 400)
+        self.assertEqual(self.reg.duration_limits(), (0.5, 20.0))
+
+    def test_http_400_is_reported_as_malformed_and_never_retried(self):
+        src = open(os.path.join(os.path.dirname(HERE), "tmbaudio", "elevenlabs.py"),
+                   encoding="utf-8").read()
+        self.assertIn("if exc.code in (400, 422):", src)
+        self.assertNotIn("400", str(sorted(elevenlabs.RETRYABLE)),
+                         "a malformed request must not be retried")
+
+    def test_the_real_registry_is_inside_both_limits(self):
+        """The shipped prompts, checked against the limits that refused one of them."""
+        reg = sfxmod.SfxRegistry(config=json.loads(json.dumps(SFX_CFG)))
+        try:
+            real = sfxmod.SfxRegistry()
+        except (OSError, ValueError):
+            self.skipTest("no registry on disk")
+        lo, hi = reg.duration_limits()
+        for aid, asset in real.assets.items():
+            if asset.get("source") != "generated":
+                continue
+            self.assertLessEqual(len(asset.get("prompt") or ""), reg.prompt_limit(),
+                                 "%s has an over-long prompt" % aid)
+            self.assertTrue(lo <= float(asset["durationSeconds"]) <= hi,
+                            "%s requests %ss, outside %s-%ss"
+                            % (aid, asset["durationSeconds"], lo, hi))
 
 
 class CueSheetTests(unittest.TestCase):

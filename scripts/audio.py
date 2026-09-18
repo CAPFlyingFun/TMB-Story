@@ -221,6 +221,14 @@ def cmd_sfx(args, reg):
             flag = "  << duration outside %.1f-%.1fs" % (lo, hi)
             problems.append({"cueId": aid, "problems": ["requested duration %s is outside the "
                                                         "provider's %.1f-%.1fs range" % (dur, lo, hi)]})
+        # Prompt length is checked for free here, because discovering it by request
+        # costs a call: a 476-character prompt was rejected twice with HTTP 400.
+        prompt_len = len(plan.get("prompt") or "")
+        if plan["source"] == "generated" and prompt_len > sreg.prompt_limit():
+            flag = "  << prompt %d chars, over the %d limit" % (prompt_len, sreg.prompt_limit())
+            problems.append({"cueId": aid, "problems": [
+                "prompt is %d characters, over the measured %d-character limit; shorten it "
+                "rather than spending a call to be refused" % (prompt_len, sreg.prompt_limit())]})
         print("%-32s %-10s %-6s %-7s %-6s %s%s"
               % (aid, plan["category"], "yes" if plan["loop"] else "no",
                  dur if dur is not None else "-",

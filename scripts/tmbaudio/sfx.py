@@ -122,7 +122,11 @@ class SfxRegistry:
 
     def duration_limits(self):
         lim = self.block().get("durationLimitsSeconds") or {}
-        return float(lim.get("min", 0.5)), float(lim.get("max", 22))
+        return float(lim.get("min", 0.5)), float(lim.get("max", 20))
+
+    def prompt_limit(self):
+        """Measured, not documented: see the note in audio/config.json."""
+        return int(self.block().get("promptMaxCharacters", 400))
 
     def generation(self):
         return self.block().get("generation") or {}

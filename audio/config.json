@@ -85,7 +85,16 @@
       "which is better than inventing a model id. The fingerprint records null as a",
       "value, so naming a model later invalidates the assets and nothing before that.",
       "",
-      "durationLimitsSeconds.max is 20, not 22: a 22-second request was rejected with HTTP 400 on 2026-09-18 while 20 seconds generated fine. Validation now catches an over-long request before it costs a failed call."
+      "",
+      "promptMaxCharacters is 400, measured rather than documented. A 476-character",
+      "prompt was rejected twice with HTTP 400 -- at 22 seconds and again at 20 -- while",
+      "every asset at 385 characters or fewer generated first time, including a",
+      "20-second looping bed. So the boundary is somewhere between 386 and 475 and 400 is",
+      "a safe ceiling. Validation now catches an over-long prompt for free instead of",
+      "spending a call to discover it.",
+      "",
+      "durationLimitsSeconds.max stays at 20 because 20 is proven for a looping bed; 22",
+      "has never been shown to work and is not worth a call to find out."
     ],
     "provider": "elevenlabs-sfx",
     "model": null,
@@ -100,7 +109,8 @@
       "maxRetries": 4,
       "baseBackoffSeconds": 2,
       "requestTimeoutSeconds": 180
-    }
+    },
+    "promptMaxCharacters": 400
   },
   "mix": {
     "_comment": [

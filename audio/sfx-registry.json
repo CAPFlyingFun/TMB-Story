@@ -48,14 +48,14 @@
     "amb_tombs_lab_night": {
       "category": "ambience",
       "source": "generated",
-      "prompt": "Quiet interior room tone of an advanced, clean research laboratory late at night. Steady soft ventilation air movement, a low continuous electrical hum from racked equipment, a faint distant whir of cooling fans, and a barely perceptible high electronic shimmer from instruments on standby. Spacious but enclosed. No voices, no speech, no music, no alarms, no beeping, no footsteps, no door sounds, no dramatic swells. Even and unchanging throughout so it can loop seamlessly.",
+      "prompt": "Quiet room tone of an advanced, clean research laboratory late at night. Soft steady ventilation, a low continuous electrical hum from racked equipment, faint distant cooling fans, and a barely perceptible high shimmer from instruments on standby. Spacious but enclosed. No voices, no music, no alarms, no beeping, no footsteps. Even throughout so it loops.",
       "durationSeconds": 20,
       "loop": true,
       "promptInfluence": 0.3,
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed. Requested at 20s rather than 22: ElevenLabs rejected 22 with HTTP 400 while 20 generated fine, so 20 is the proven ceiling."
+      "notes": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed. Its prompt is deliberately terse: the first version was 476 characters and was rejected twice with HTTP 400, at 22 seconds and again at 20, while every other asset -- including a 20-second looping bed -- generated fine at 385 characters or fewer. The cause was prompt LENGTH, not duration. Nothing substantive was dropped, only words."
     },
     "amb_console_alarm_bed": {
       "category": "alarm",
