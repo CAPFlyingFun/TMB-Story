@@ -1694,6 +1694,49 @@ process.stdout.write(JSON.stringify({starts:tl.starts,ends:tl.ends,total:tl.tota
         self.assertLess(page.index("./reader/export.js"), page.index("./reader/player.js"),
                         "player.js checks for TMBExport when it renders")
 
+    def test_the_render_rate_follows_the_decoded_audio(self):
+        """A sample-rate mismatch is heard as the wrong SPEED, which is the report
+        that sent me looking. decodeAudioData resamples to the decoder's own rate and
+        a plain AudioContext runs at whatever the device wants -- 48000 on most
+        hardware -- so rendering into a hard-coded 44100 context plays everything
+        about 9% fast. The render must take its rate from the audio it actually got."""
+        script = """
+const fs=require('fs'),vm=require('vm');
+const sandbox={window:{},console:console};sandbox.globalThis=sandbox;
+vm.createContext(sandbox);
+vm.runInContext(fs.readFileSync(process.argv[2],'utf8'),sandbox);
+const E=sandbox.window.TMBExport;
+process.stdout.write(JSON.stringify({
+  device48: E.renderRateFor({a:{sampleRate:48000,duration:1}}),
+  device44: E.renderRateFor({a:{sampleRate:44100,duration:1}}),
+  odd: E.renderRateFor({a:{sampleRate:22050,duration:1}}),
+  skipsNulls: E.renderRateFor({a:null,b:{sampleRate:48000,duration:1}}),
+  nothing: E.renderRateFor({})
+}));
+"""
+        runner = os.path.join(self.dir, "rate.js")
+        with open(runner, "w", encoding="utf-8") as fh:
+            fh.write(script)
+        root = os.path.dirname(os.path.dirname(HERE))
+        out = subprocess.run(["node", runner, os.path.join(root, "reader", "export.js")],
+                             capture_output=True, text=True, check=True)
+        got = json.loads(out.stdout)
+        self.assertEqual(got["device48"], 48000,
+                         "a 48 kHz device must render at 48 kHz, not at 44100")
+        self.assertEqual(got["device44"], 44100)
+        self.assertEqual(got["odd"], 22050)
+        self.assertEqual(got["skipsNulls"], 48000, "a clip that failed to decode says nothing")
+        self.assertEqual(got["nothing"], 44100, "with no audio at all, fall back")
+
+    def test_the_decoder_is_asked_for_the_render_rate_and_the_answer_is_read_back(self):
+        root = os.path.dirname(os.path.dirname(HERE))
+        src = open(os.path.join(root, "reader", "export.js"), encoding="utf-8").read()
+        self.assertIn("new Dec({ sampleRate: RATE })", src, "ask for the rate")
+        self.assertIn("new Dec()", src, "and survive a browser that ignores the option")
+        self.assertNotIn("new Ctx(1, frames, RATE)", src,
+                         "the render must not be pinned to a constant the decoder "
+                         "may not have honoured")
+
     def test_the_exporter_asks_for_no_key_and_no_remote_host(self):
         root = os.path.dirname(os.path.dirname(HERE))
         src = open(os.path.join(root, "reader", "export.js"), encoding="utf-8").read()

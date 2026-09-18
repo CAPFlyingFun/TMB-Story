@@ -19,7 +19,7 @@
 (function () {
   "use strict";
 
-  var RATE = 44100;
+  var RATE = 44100;          // what we ASK for; what we get is read back, see below
   var DUCK_RAMP = 0.12;          // seconds; the live player ramps beds over 260 ms
 
   function ctxClass() {
@@ -200,15 +200,34 @@
     manifest.segments.forEach(function (s) { paths[s.audio] = true; });
     cues.forEach(function (c) { paths[c.audio] = true; });
 
-    var decoder = new Dec();
+    /* THE TWO CONTEXTS MUST AGREE ON SAMPLE RATE, and the only safe way to know the
+       rate is to read it off the decoded audio.
+
+       decodeAudioData resamples to the DECODER's rate, and a plain `new AudioContext()`
+       runs at whatever the device wants -- 48000 on most hardware. Rendering those
+       buffers in a 44100 offline context is a sample-rate mismatch, and a sample-rate
+       mismatch is heard as the wrong SPEED. Asking for 44100 is not enough either:
+       the option is ignored by older Safari, and a request that is silently refused
+       is the worst of both worlds.
+
+       So: ask, then look. The render runs at the rate the audio actually came back
+       at, whatever that turns out to be, and the WAV header carries the same number. */
+    var decoder;
+    try { decoder = new Dec({ sampleRate: RATE }); } catch (e) { decoder = new Dec(); }
     return decodeAll(Object.keys(paths), decoder, function (done, total) {
       if (onProgress) onProgress("loading", done, total);
     }).then(function (buffers) {
+      var rate = RATE;
+      var keys = Object.keys(buffers);
+      for (var k = 0; k < keys.length; k++) {
+        var got = buffers[keys[k]];
+        if (got && got.sampleRate > 0) { rate = got.sampleRate; break; }
+      }
       try { decoder.close(); } catch (e) {}
       var tl = timeline(manifest, buffers);
       if (!(tl.total > 0)) throw new Error("no audio to render: the clips are not generated yet");
-      var frames = Math.ceil((tl.total + 2) * RATE);
-      var ctx = new Ctx(1, frames, RATE);
+      var frames = Math.ceil((tl.total + 2) * rate);
+      var ctx = new Ctx(1, frames, rate);
 
       manifest.segments.forEach(function (seg) {
         var b = buffers[seg.audio];
@@ -258,6 +277,15 @@
     save: save,
     /* Rough, for the warning the button carries: mono 16-bit at 44.1 kHz. */
     estimateMb: function (seconds) { return Math.round(seconds * RATE * 2 / 1048576); },
+    /* Exposed so a test can prove the render follows the DECODED rate rather than a
+       constant: a mismatch between the two is heard as the wrong speed. */
+    renderRateFor: function (buffers) {
+      var keys = Object.keys(buffers || {});
+      for (var i = 0; i < keys.length; i++) {
+        if (buffers[keys[i]] && buffers[keys[i]].sampleRate > 0) return buffers[keys[i]].sampleRate;
+      }
+      return RATE;
+    },
     _internals: { timeline: timeline, cueStart: cueStart, toWav: toWav }
   };
 })();
