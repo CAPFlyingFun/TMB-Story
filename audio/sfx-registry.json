@@ -82,7 +82,41 @@
     "",
     "GAINS ARE DELIBERATELY NOT RETUNED IN THE SAME PASS. The current numbers were set",
     "against near-silent files; the right ones follow from measuring the retakes, which",
-    "is free. Generate, measure, then tune -- not guess twice."
+    "is free. Generate, measure, then tune -- not guess twice.",
+    "THE RETAKE'S RESULT, MEASURED. Five of the ten came good and five did not, and the",
+    "split is not about wording. It is about WHAT KIND OF SOUND was asked for.",
+    "",
+    "  DISCRETE EVENTS, all rescued by the rewrite:",
+    "    sfx_boundary_event_collapse  -64.7 -> -20.4   (+44.3 dB)",
+    "    sfx_equipment_power_up_soft  -63.1 -> -28.0   (+35.1 dB)",
+    "    sfx_system_notify_soft       -42.6 -> -24.0   (+18.6 dB)",
+    "    sfx_footsteps_sarah_sneakers -54.3 -> -38.2   (+16.1 dB)",
+    "    sfx_console_tone_soft        -54.5 -> -40.1   (+14.4 dB)",
+    "",
+    "  CONTINUOUS OR REPEATING TEXTURES, none rescued:",
+    "    amb_tombs_lab_night          -47.8 -> -42.5   (+5.3)",
+    "    amb_intercom_channel_open    -52.2 -> -47.5   (+4.7)",
+    "    sfx_keyboard_typing_short    -46.9 -> -42.6   (+4.3)",
+    "    sfx_chair_roll_slow          -47.4 -> -46.7   (+0.7)",
+    "    sfx_chair_roll_fast          -44.4 -> -48.3   (-3.9, WORSE)",
+    "",
+    "A one-off event gets rendered at whatever level the prompt's language implies, so",
+    "fixing the language fixes the level. A continuous bed, a hiss, a castor rumble or a",
+    "stream of keystrokes comes back near the noise floor whatever the prompt says. Two",
+    "rounds of prompt work moved the second group by an average of 2 dB. THAT IS THE",
+    "LIMIT OF PROMPTING, not a wording that has not been found yet, and a third round of",
+    "rewrites would be the \"random replacements\" Joshua's brief says not to buy.",
+    "",
+    "TWO ASSETS ALSO CAME BACK WORSE IN SHAPE, not only in level:",
+    "  - sfx_chair_roll_fast lost its peak as well (-21.5 -> -26.8).",
+    "  - amb_tombs_lab_night's envelope is no longer even: `soundsForSeconds` fell from",
+    "    20.00 to 5.50, so it now has a loud middle and quiet ends. That is a worse LOOP",
+    "    than the one it replaced, whatever its RMS says.",
+    "",
+    "The keyboard is still the one whose CONTENT is wrong: 0.00 seconds within 20 dB of",
+    "its own peak after a prompt that explicitly asked for keystrokes with no gap for the",
+    "whole recording, about six a second. The peak rose 8.6 dB, so the individual clicks",
+    "are louder; they are still isolated clicks."
   ],
   "sfxVersion": 1,
   "characters": {
@@ -129,6 +163,15 @@
         "rmsDbfs": -47.8,
         "soundsForSeconds": 20.0,
         "verdict": "too quiet to rescue with gain"
+      },
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 13 (after the retake)",
+        "seconds": 20.0,
+        "peakDbfs": -24.4,
+        "rmsDbfs": -42.5,
+        "soundsForSeconds": 5.5,
+        "verdict": "too quiet to rescue with gain"
       }
     },
     "amb_console_alarm_bed": {
@@ -170,6 +213,15 @@
         "seconds": 10.0,
         "peakDbfs": -37.4,
         "rmsDbfs": -52.2,
+        "soundsForSeconds": 10.0,
+        "verdict": "too quiet to rescue with gain"
+      },
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 13 (after the retake)",
+        "seconds": 10.0,
+        "peakDbfs": -34.0,
+        "rmsDbfs": -47.5,
         "soundsForSeconds": 10.0,
         "verdict": "too quiet to rescue with gain"
       }
@@ -215,6 +267,15 @@
         "rmsDbfs": -54.5,
         "soundsForSeconds": 0.25,
         "verdict": "too quiet to rescue with gain"
+      },
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 13 (after the retake)",
+        "seconds": 1.48,
+        "peakDbfs": -19.5,
+        "rmsDbfs": -40.1,
+        "soundsForSeconds": 0.25,
+        "verdict": "quiet; needs a gain near the ceiling"
       }
     },
     "sfx_console_alarm_erupt": {
@@ -279,6 +340,15 @@
         "rmsDbfs": -42.6,
         "soundsForSeconds": 0.25,
         "verdict": "too quiet to rescue with gain"
+      },
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 13 (after the retake)",
+        "seconds": 1.48,
+        "peakDbfs": -2.2,
+        "rmsDbfs": -24.0,
+        "soundsForSeconds": 0.25,
+        "verdict": "usable"
       }
     },
     "sfx_terminal_lock_engage": {
@@ -322,6 +392,15 @@
         "rmsDbfs": -63.1,
         "soundsForSeconds": 1.0,
         "verdict": "too quiet to rescue with gain"
+      },
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 13 (after the retake)",
+        "seconds": 2.48,
+        "peakDbfs": -10.8,
+        "rmsDbfs": -28.0,
+        "soundsForSeconds": 1.25,
+        "verdict": "usable"
       }
     },
     "sfx_intercom_open": {
@@ -428,6 +507,15 @@
         "rmsDbfs": -54.3,
         "soundsForSeconds": 0.0,
         "verdict": "too quiet to rescue with gain"
+      },
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 13 (after the retake)",
+        "seconds": 3.0,
+        "peakDbfs": -11.7,
+        "rmsDbfs": -38.2,
+        "soundsForSeconds": 0.25,
+        "verdict": "quiet; needs a gain near the ceiling"
       }
     },
     "sfx_chair_roll_fast": {
@@ -448,6 +536,15 @@
         "seconds": 2.0,
         "peakDbfs": -21.5,
         "rmsDbfs": -44.4,
+        "soundsForSeconds": 0.5,
+        "verdict": "too quiet to rescue with gain"
+      },
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 13 (after the retake)",
+        "seconds": 2.0,
+        "peakDbfs": -26.8,
+        "rmsDbfs": -48.3,
         "soundsForSeconds": 0.5,
         "verdict": "too quiet to rescue with gain"
       }
@@ -472,6 +569,15 @@
         "rmsDbfs": -47.4,
         "soundsForSeconds": 1.5,
         "verdict": "too quiet to rescue with gain"
+      },
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 13 (after the retake)",
+        "seconds": 2.48,
+        "peakDbfs": -32.6,
+        "rmsDbfs": -46.7,
+        "soundsForSeconds": 2.25,
+        "verdict": "too quiet to rescue with gain"
       }
     },
     "sfx_keyboard_typing_short": {
@@ -492,6 +598,15 @@
         "seconds": 3.0,
         "peakDbfs": -19.3,
         "rmsDbfs": -46.9,
+        "soundsForSeconds": 0.0,
+        "verdict": "too quiet to rescue with gain"
+      },
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 13 (after the retake)",
+        "seconds": 3.0,
+        "peakDbfs": -10.7,
+        "rmsDbfs": -42.6,
         "soundsForSeconds": 0.0,
         "verdict": "too quiet to rescue with gain"
       }
@@ -646,6 +761,15 @@
         "rmsDbfs": -64.7,
         "soundsForSeconds": 1.25,
         "verdict": "too quiet to rescue with gain"
+      },
+      "measured": {
+        "measuredAt": "2026-09-18",
+        "source": "scripts/measure-mix.py, decoded PCM, CI run 13 (after the retake)",
+        "seconds": 4.0,
+        "peakDbfs": -0.1,
+        "rmsDbfs": -20.4,
+        "soundsForSeconds": 1.25,
+        "verdict": "usable"
       }
     },
     "sfx_boundary_event_return": {
