@@ -30,6 +30,7 @@ file is updated.
 - 0019 — "Story bible" renamed "TMB Story Rules"; `bible/` becomes `story-rules/` — **Accepted (Joshua, 2026-09-17)**
 - 0020 — Length band 1,200-1,400 (1,000 floor, 1,800 ceiling) and the three-chapter movement; supersedes 0001 and 0010 — **Accepted (Joshua, 2026-09-17)**
 - 0021 — The voice cast is a registry: one entry per speaker, a recast replaces it, a clip is identified by speaker and text but invalidated by voice — **Accepted (Joshua, 2026-09-18)**
+- 0022 — The first authorized edit to the imported manuscript; Chapters 1-3 are no longer byte-identical and the file says so — **Accepted (Joshua, 2026-09-18)**
 
 ---
 
@@ -171,4 +172,15 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 **A clip is identified by its speaker and its text; it is invalidated by its voice.** `clipId` is `<speaker>-<sha1(speaker + normalized text)[:12]>`, so inserting a paragraph renames nothing and a line repeated later is the same clip already paid for. The separate fingerprint covers text, voice, voice version, model, format and settings, which is what makes a recast cost one speaker instead of a chapter.
 
 **Consequences:** Replacing the narrator invalidated 92 of chapter 1's 180 clips and left Jack's 47, Sarah's 34 and TOMBS' 7 as verified cache hits — 4,893 characters rather than 6,789 — and Lena's replacement cost nothing in chapter 1, where she does not speak. The new narrator audio landed at the same 92 paths, so nothing was orphaned. Generation runs only in the manual `Generate TMB audio` workflow, which validates before spending anything and refuses to commit if the key appears in the working tree. The browser plays static files and has no path to ElevenLabs, so listening and replaying are free.
+**Status:** Accepted, 2026-09-18.
+
+### 0022 — The first authorized edit to the imported manuscript
+**Context:** Joshua, 2026-09-18, listening to the Chapter 1 audio drama: "I don't know I missed it before but was obvious this time and that's in the dialogue, it says she resumes back to the keyboard." Paragraph 76 ends "before returning to the keyboard" and paragraph 78 then opens "Sarah returned to the keyboard." — a repetition invisible on the page and obvious out loud, two narration lines and about five seconds apart. He proposed the fix himself: "make the actual text and that one narration like 'Sarah continued typing' or something that fits."
+**Decision:** Paragraph 78's narration becomes **"Sarah continued typing."** His wording, used as given. "Sarah kept typing." was not available as a fix because it is already the narration at paragraph 68, and a third phrasing of the same idea was the problem rather than the solution. This is the ONLY change; no other line of Chapters 1 to 3 was touched.
+
+**Chapters 1 to 3 are no longer byte-identical to the imported Word document, and the manuscript now says so.** Decision 0018 recorded a verbatim import verified at 304 paragraphs with zero mismatches, and that is still how the file began. Chapter 1's `source:` line now records the deviation, and an `approved_edits:` block in its frontmatter carries the date, the authorization, the exact before and after, the reason and the audio consequence. A future agent reading "imported verbatim" must not conclude the file has never been touched.
+
+**Process:** the `review_status: approved` hook exists to stop exactly this kind of edit happening quietly. Joshua authorized flipping the status to `in-review` first, in writing, naming the chapter and the line; the flip was made, the prose edit went through the ordinary tools, validation ran, and the status returned to `approved`. The hook was not circumvented.
+
+**Consequences, and why they were cheap:** a clip is identified by its speaker and its text, so changing one line re-identified exactly one clip — `narrator-75a8844f5b06` became `narrator-668b2dc69db1` — and one narrator line was regenerated. Every other one of the chapter's 180 clips stayed cached. One cue, `ch01-140-sarah-resumes`, was anchored to the old clip; validation reported the broken anchor instead of letting the cue land on a plausible-looking neighbour, and it was re-anchored to the new identity. **That is the one case where a cue anchor is supposed to be edited:** the line's text changed, so its identity changed. Word count 1,160 to 1,158. The old clip is left on disk rather than deleted, because it is the cheapest possible revert.
 **Status:** Accepted, 2026-09-18.

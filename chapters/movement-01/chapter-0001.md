@@ -3,7 +3,7 @@ chapter: 1
 title: "The Alarm"
 movement: 1
 pov: Jack
-word_count: 1160
+word_count: 1158
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -20,10 +20,17 @@ new_canon:
   - "See story-rules/ for the canon this movement established. This file is the manuscript."
 playable_beat_flow: ["review diagnostic data", "read the access alarm", "open the network monitor", "trace the unknown connection", "lock the terminal", "call Sarah on the intercom", "search the access logs", "attempt to cancel the initialization request", "re-enter administrator credentials"]
 ending_type: unanswered question
-review_status: approved
+review_status: in-review
 audio_status: not-started
 approved_on: "2026-09-17"
-source: "Joshua's approved Word manuscript, 01-03 Chapters - TRADDOMIUM Micro Battle.docx, imported verbatim 2026-09-17. This file is the manuscript and is not edited without his instruction."
+source: "Joshua's approved Word manuscript, 01-03 Chapters - TRADDOMIUM Micro Battle.docx, imported verbatim 2026-09-17. NO LONGER byte-identical to that document: one line was changed on 2026-09-18 on Joshua's explicit written instruction (see approved_edits below and decision 0022). This file is the manuscript and is not edited without his instruction."
+approved_edits:
+  - date: "2026-09-18"
+    authorized_by: "Joshua, explicit written instruction naming this chapter and this line"
+    from: 'Sarah returned to the keyboard. "That''s what I''m afraid of."'
+    to: 'Sarah continued typing. "That''s what I''m afraid of."'
+    why: "He heard the repetition in the audiobook mix: the paragraph two above already ends 'before returning to the keyboard', so the narration said the same thing twice within a few seconds. 'Sarah kept typing.' was unavailable as a fix because it is already the narration at paragraph 68."
+    audio_effect: "One narrator clip re-identified, narrator-75a8844f5b06 to narrator-668b2dc69db1, and regenerated. Cue ch01-140-sarah-resumes re-anchored to the new clip. No other voice clip or sound asset affected."
 ---
 
 # Chapter 1: The Alarm
@@ -184,7 +191,7 @@ Jack surrendered with a small nod. "Fair."
 
 Jack smiled at the movement beneath her hand. "Already takes after me."
 
-Sarah returned to the keyboard. "That's what I'm afraid of."
+Sarah continued typing. "That's what I'm afraid of."
 
 A new warning tone interrupted them. Both turned toward the main console as another message appeared.
 

@@ -135,6 +135,15 @@ jobs:
           fi
           rm -f combine.log
 
+      - name: Measure what is actually in the mix
+        if: inputs.mode != 'dry-run'
+        # Decodes the exported file and reports real levels. Added because a cue sheet
+        # can be perfectly correct and the sound still inaudible: all nine keyboard
+        # cues resolved and Joshua could not hear one of them. Free, and never fatal --
+        # a measurement that fails must not cost the audio that was just generated.
+        continue-on-error: true
+        run: python3 scripts/measure-mix.py --chapter "${{ inputs.chapters }}"
+
       - name: Rebuild the game dialogue export
         if: inputs.mode != 'dry-run'
         # Deliberately NOT scoped to inputs.chapters. The export is the index of every

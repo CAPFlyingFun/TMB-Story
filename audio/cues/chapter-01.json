@@ -23,7 +23,13 @@
     "35 events, 20 unique assets after Joshua's first listen. The six typing cues added",
     "then are all the SAME keyboard asset the chapter already used, so more typing cost",
     "nothing: it is one generated sound heard nine times. Long stretches are still",
-    "deliberately voices and room tone and nothing else."
+    "deliberately voices and room tone and nothing else.",
+    "",
+    "2026-09-18: every keyboard cue's gain was raised sharply -- Joshua still could not",
+    "hear the typing in the mix. The asset's own prompt asked for \"quick QUIET key",
+    "presses\", so 0.30 of a deliberately quiet recording is plausibly 20 dB under the",
+    "speech. These are provisional: scripts/measure-mix.py decodes the exported file and",
+    "reports the real levels, and gain costs nothing to change."
   ],
   "chapter": 1,
   "cues": [
@@ -119,7 +125,7 @@
       },
       "timing": "during",
       "offsetMs": 4200,
-      "gain": 0.32,
+      "gain": 0.85,
       "why": "Lands on 'Jack grabbed the keyboard'. Establishes that he is working the problem with his hands, which is what makes the later moment when the cursor moves by itself frightening."
     },
     {
@@ -131,7 +137,7 @@
       },
       "timing": "during",
       "offsetMs": 1200,
-      "gain": 0.32,
+      "gain": 0.85,
       "why": "Jack entering a command and running a second search. The manuscript has him working the logs by hand here, and it was silent."
     },
     {
@@ -326,7 +332,7 @@
       },
       "timing": "during",
       "offsetMs": 300,
-      "gain": 0.32,
+      "gain": 0.85,
       "why": "'Sarah immediately started typing' -- the moment the competent one takes over. Marking who has the keyboard is the scene's quiet shift of authority."
     },
     {
@@ -338,7 +344,7 @@
       },
       "timing": "during",
       "offsetMs": 250,
-      "gain": 0.3,
+      "gain": 0.72,
       "why": "Sarah opening the connection history. She has the keyboard now and the scene should keep saying so."
     },
     {
@@ -350,7 +356,7 @@
       },
       "timing": "during",
       "offsetMs": 1600,
-      "gain": 0.3,
+      "gain": 0.85,
       "why": "“began digging through the security logs” is the longest stretch of work in the chapter and had no sound under it at all."
     },
     {
@@ -362,20 +368,20 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.28,
+      "gain": 0.68,
       "why": "The narration says plainly that she kept typing. Quiet, because it is under a line of banter rather than under the investigation."
     },
     {
       "cueId": "ch01-140-sarah-resumes",
       "asset": "sfx_keyboard_typing_short",
       "anchor": {
-        "clipId": "narrator-75a8844f5b06",
+        "clipId": "narrator-668b2dc69db1",
         "occurrence": 1
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.24,
-      "why": "'Sarah returned to the keyboard' after the moment with the baby. Quiet and brief: it restores the working room the banter stepped out of, and it is the last calm sound before the warning tone."
+      "gain": 0.68,
+      "why": "“Sarah continued typing.” Re-anchored on 2026-09-18 when Joshua's approved manuscript correction changed that line: the text changed, so the clip's identity changed, and this is the one case where an anchor is SUPPOSED to be edited. Validation caught it rather than letting the cue land somewhere plausible."
     },
     {
       "cueId": "ch01-150-interrupting-tone",
@@ -446,7 +452,7 @@
       },
       "timing": "during",
       "offsetMs": 500,
-      "gain": 0.34,
+      "gain": 0.85,
       "why": "Jack entering his administrator credentials. Slightly louder than the rest: this is the keystroke the chapter turns on, and the refusal answers it."
     },
     {
@@ -458,7 +464,7 @@
       },
       "timing": "during",
       "offsetMs": 250,
-      "gain": 0.32,
+      "gain": 0.75,
       "why": "“Jack tried his credentials again.” The same sound a second time is the information, exactly as the two denial tones are."
     }
   ]
