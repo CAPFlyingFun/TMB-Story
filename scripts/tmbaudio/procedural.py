@@ -62,6 +62,8 @@ def seam_problems(recipe):
     """
     if recipe.get("loop") is False or recipe.get("kind") == "winddown":
         return []
+    if recipe.get("kind") == "pulse":
+        return pulse_seam_problems(recipe)
     problems = []
     seconds = float(recipe.get("seconds") or 0)
     if seconds <= 0:
@@ -90,6 +92,77 @@ def seam_problems(recipe):
     return problems
 
 
+def pulse_expression(recipe):
+    """A smoke-alarm pattern: pulse, pulse, pulse, gap. ONE tone, gated.
+
+    Joshua, hearing the wailing version: "I'm also hearing a crossing two sirens at
+    once? Maybe do something more like a smoke alarm style sound or like a pulse,
+    pulse, pulse." He was hearing three detuned sweeps drifting against each other,
+    which I had put in deliberately and which reads as several machines rather than
+    one alarm.
+
+    A pulse pattern also fixes the seam for good, and that is the part worth
+    understanding. A continuous tone has to close its phase exactly or the join
+    clicks, and even then the CONTAINER can add a gap. A pulsed pattern BEGINS AND
+    ENDS IN SILENCE, so a few milliseconds of encoder padding land inside a gap that
+    is supposed to be there. There is nothing to hear at the loop point because there
+    is nothing sounding at the loop point.
+
+    Each pulse is shaped by a half-sine, not switched on and off: a hard gate on a
+    tone clicks at both edges, and the envelope is zero exactly where the gate is.
+    """
+    tone = float(recipe["toneHz"])
+    on = float(recipe["onSeconds"])
+    off = float(recipe["offSeconds"])
+    pulses = int(recipe["pulsesPerGroup"])
+    gap = float(recipe["gapSeconds"])
+    level = float(recipe.get("level") or 0.5)
+    onoff = on + off
+    span = pulses * onoff
+    group = span + gap
+    # NESTED mod, not a global one. `mod(t, onoff)` counts pulses from the start of the
+    # FILE, so it only lines up with the group when the gap happens to be a whole
+    # number of on/off cycles -- which forced the gap to a value nobody asked for.
+    # `mod(mod(t, group), onoff)` counts from the start of the GROUP, so any gap works
+    # and Joshua's "2 s silence" can be exactly two seconds.
+    within = "mod(mod(t,%g),%g)" % (group, onoff)
+    return ("%g*lt(mod(t,%g),%g)*lt(%s,%g)*sin(PI*%s/%g)*sin(2*PI*%g*t)"
+            % (level, group, span, within, on, within, on, tone))
+
+
+def pulse_seam_problems(recipe):
+    """What a pulsed loop needs, which is not what a continuous one needs.
+
+    The carrier does not have to close, because it is SILENT at the join. What must
+    hold is that the pattern is whole: an exact number of groups in the file, an exact
+    number of on/off cycles in a group (or the global `mod` drifts against the group),
+    and a gap at the end of each group so the file really does begin and end quiet.
+    """
+    problems = []
+    try:
+        on = float(recipe["onSeconds"])
+        off = float(recipe["offSeconds"])
+        pulses = int(recipe["pulsesPerGroup"])
+        gap = float(recipe["gapSeconds"])
+        seconds = float(recipe["seconds"])
+        float(recipe["toneHz"])
+    except (KeyError, TypeError, ValueError):
+        return ["a pulse needs toneHz, onSeconds, offSeconds, pulsesPerGroup, "
+                "gapSeconds and seconds"]
+    if on <= 0 or off <= 0 or pulses < 1 or seconds <= 0:
+        return ["onSeconds, offSeconds, pulsesPerGroup and seconds must be positive"]
+    if gap <= 0:
+        problems.append("gapSeconds must be positive: the gap is what makes the loop "
+                        "point silent, and silence is what makes it seamless")
+    onoff = on + off
+    group = pulses * onoff + gap
+    groups = seconds / group
+    if abs(groups - round(groups)) > 1e-9:
+        problems.append("the %gs file is %.3f groups of %gs: it would cut a group in "
+                        "half at the loop point" % (seconds, groups, group))
+    return problems
+
+
 def winddown_expression(recipe):
     """A siren losing power: it holds, then its pitch falls away.
 
@@ -115,6 +188,8 @@ def expression(recipe):
     """The ffmpeg `aevalsrc` expression: the summed phase integrals, as written above."""
     if recipe.get("kind") == "winddown":
         return winddown_expression(recipe)
+    if recipe.get("kind") == "pulse":
+        return pulse_expression(recipe)
     parts = []
     for u in recipe.get("units") or []:
         centre = float(u["centreHz"])

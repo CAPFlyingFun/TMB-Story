@@ -901,80 +901,6 @@
         "authorUrl": "https://pixabay.com/users/u_vr5icvkppa-52084143/"
       }
     },
-    "amb_sirens_wail": {
-      "category": "alarm",
-      "source": "procedural",
-      "loop": true,
-      "durationSeconds": 12,
-      "approved": true,
-      "assetVersion": 1,
-      "godotReuse": true,
-      "notes": "Civil sirens across the settlement, heard indoors through a wall. Three units on different sweeps so they drift out of step with each other, which is what a town full of sirens sounds like -- and all three close their phase at 12 seconds, so the loop is silent by construction rather than by somebody matching the ends by ear. LOWPASS TIGHTENED so it reads as outside rather than beside them: a wall eats the high end, and the high end is what makes a sound feel close. WRITTEN AS WAV: the waveform closed exactly and the file still looped late, because an mp3 carries encoder delay in front and padding behind and `<audio loop>` plays both. WAV stores an exact sample count. At 8 kHz -- lossless for something filtered to a few hundred hertz -- twelve seconds is under 200 KB.",
-      "recipe": {
-        "kind": "siren",
-        "seconds": 12,
-        "sampleRate": 8000,
-        "lowpassHz": 420,
-        "units": [
-          {
-            "centreHz": 500,
-            "sweepHz": 120,
-            "periodSeconds": 6,
-            "level": 0.5
-          },
-          {
-            "centreHz": 430,
-            "sweepHz": 90,
-            "periodSeconds": 4,
-            "level": 0.28
-          },
-          {
-            "centreHz": 610,
-            "sweepHz": 70,
-            "periodSeconds": 12,
-            "level": 0.16
-          }
-        ]
-      },
-      "fileExtension": "wav"
-    },
-    "amb_sirens_urgent": {
-      "category": "alarm",
-      "source": "procedural",
-      "loop": true,
-      "durationSeconds": 12,
-      "approved": true,
-      "assetVersion": 1,
-      "godotReuse": true,
-      "notes": "The same town, sirens switched to a second pattern. Chapter 3 says the sirens outside CHANGED PITCH and the audio went on playing the first one; this is what changes. Higher centres and a sweep twice as fast, so it reads as an escalation rather than as a different recording. LOWPASS TIGHTENED so it reads as outside rather than beside them: a wall eats the high end, and the high end is what makes a sound feel close. WRITTEN AS WAV: the waveform closed exactly and the file still looped late, because an mp3 carries encoder delay in front and padding behind and `<audio loop>` plays both. WAV stores an exact sample count. At 8 kHz -- lossless for something filtered to a few hundred hertz -- twelve seconds is under 200 KB.",
-      "recipe": {
-        "kind": "siren",
-        "seconds": 12,
-        "sampleRate": 8000,
-        "lowpassHz": 520,
-        "units": [
-          {
-            "centreHz": 760,
-            "sweepHz": 200,
-            "periodSeconds": 3,
-            "level": 0.5
-          },
-          {
-            "centreHz": 620,
-            "sweepHz": 140,
-            "periodSeconds": 4,
-            "level": 0.28
-          },
-          {
-            "centreHz": 880,
-            "sweepHz": 90,
-            "periodSeconds": 2,
-            "level": 0.16
-          }
-        ]
-      },
-      "fileExtension": "wav"
-    },
     "sfx_siren_winddown": {
       "category": "alarm",
       "source": "procedural",
@@ -983,20 +909,66 @@
       "approved": true,
       "assetVersion": 1,
       "godotReuse": true,
-      "notes": "A siren losing power: it holds, then its pitch falls away to nothing. Played once at the window, deliberately louder than the distant beds for a few seconds, then gone -- so the silence and the forest can take over. A one-shot, so it is allowed the fades a loop must never have.",
+      "notes": "A siren losing power: it holds, then its pitch falls away to nothing. Played once at the window, deliberately louder than the distant beds for a few seconds, then gone -- so the silence and the forest can take over. A one-shot, so it is allowed the fades a loop must never have. Its tone is now 760 Hz, the pulse alarm's own note, so the swell at the window is that machine running down rather than a fourth sound.",
       "recipe": {
         "kind": "winddown",
         "seconds": 12,
         "sampleRate": 44100,
         "kbps": 64,
-        "startHz": 560,
+        "startHz": 760,
         "holdSeconds": 3.5,
         "tauSeconds": 2.8,
         "level": 0.6,
-        "lowpassHz": 900,
+        "lowpassHz": 3000,
         "fadeInMs": 1500,
         "fadeOutMs": 5000,
         "loop": false
+      }
+    },
+    "amb_alarm_pulse": {
+      "category": "alarm",
+      "source": "procedural",
+      "loop": true,
+      "fileExtension": "wav",
+      "durationSeconds": 18.6,
+      "approved": true,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "notes": "The settlement's alert, exactly as Joshua specified it: a 0.65-second ping, one second from ping to ping, three pings, then two seconds of silence. ONE tone -- the wailing version stacked three detuned sweeps and he heard them crossing each other, which read as several machines rather than one alarm. And because the pattern begins and ends in SILENCE, the loop point has nothing sounding at it: the slight pause he kept hearing cannot occur, whatever the container does. Filtered just above its own tone, so the note survives and the edge does not -- which is what a wall does to a sound. The swell at the window is deliberately left open by comparison.",
+      "recipe": {
+        "kind": "pulse",
+        "seconds": 18.6,
+        "sampleRate": 22050,
+        "toneHz": 760,
+        "onSeconds": 0.65,
+        "offSeconds": 0.35,
+        "pulsesPerGroup": 3,
+        "gapSeconds": 1.65,
+        "level": 0.5,
+        "lowpassHz": 950
+      }
+    },
+    "amb_alarm_pulse_fast": {
+      "category": "alarm",
+      "source": "procedural",
+      "loop": true,
+      "fileExtension": "wav",
+      "durationSeconds": 18.0,
+      "approved": true,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "notes": "The same alert after the manuscript says the sirens changed pitch: higher, four pings instead of three, and quicker between them. The same machine escalating, not a different recording. Filtered just above its own tone, so the note survives and the edge does not -- which is what a wall does to a sound. The swell at the window is deliberately left open by comparison.",
+      "recipe": {
+        "kind": "pulse",
+        "seconds": 18.0,
+        "sampleRate": 22050,
+        "toneHz": 1040,
+        "onSeconds": 0.4,
+        "offSeconds": 0.2,
+        "pulsesPerGroup": 4,
+        "gapSeconds": 1.2,
+        "level": 0.5,
+        "lowpassHz": 1250
       }
     }
   }

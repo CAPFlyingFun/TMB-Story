@@ -1481,7 +1481,7 @@ class ProceduralTests(unittest.TestCase):
         root = os.path.dirname(os.path.dirname(HERE))
         man = json.load(open(os.path.join(root, "audio", "manifests", "chapter-03.json"),
                              encoding="utf-8"))
-        sirens = [c for c in man["cues"] if c["asset"].startswith("amb_sirens_")]
+        sirens = [c for c in man["cues"] if c["asset"].startswith("amb_alarm_pulse")]
         self.assertTrue(sirens)
         for c in sirens:
             self.assertTrue(c["audio"].endswith(".wav"),
@@ -1493,6 +1493,67 @@ class ProceduralTests(unittest.TestCase):
         self.assertIn('sreg.source(asset_id) == "procedural"', src)
         self.assertIn("encoder padding", src,
                       "compressing a wav loop to mp3 would undo the fix")
+
+    PULSE = {"kind": "pulse", "seconds": 18.6, "toneHz": 760, "onSeconds": 0.65,
+             "offSeconds": 0.35, "pulsesPerGroup": 3, "gapSeconds": 1.65, "level": 0.5}
+
+    def test_joshuas_pattern_is_what_gets_built(self):
+        """"Ping (last 0.65s) > (Duration between next ping 1s) for a total of 3 pings
+        > 2s silence." Every one of those numbers has to survive into the file."""
+        self.assertEqual(procmod.pulse_seam_problems(self.PULSE), [])
+        r = self.PULSE
+        period = r["onSeconds"] + r["offSeconds"]
+        group = r["pulsesPerGroup"] * period + r["gapSeconds"]
+        self.assertAlmostEqual(period, 1.0, places=9, msg="one second from ping to ping")
+        self.assertAlmostEqual(r["onSeconds"], 0.65, places=9)
+        self.assertEqual(r["pulsesPerGroup"], 3)
+        self.assertAlmostEqual(r["offSeconds"] + r["gapSeconds"], 2.0, places=9,
+                               msg="two seconds of silence after the third ping")
+        self.assertAlmostEqual(r["seconds"] / group, round(r["seconds"] / group), places=9)
+
+    def test_the_pulse_is_timed_from_the_group_not_the_file(self):
+        """A global mod counts from the start of the FILE, so it only lines up when the
+        gap is a whole number of on/off cycles -- which would have forced the 2-second
+        silence to some other number. Nesting the mods removes the constraint."""
+        expr = procmod.expression(self.PULSE)
+        self.assertIn("mod(mod(t,4.65),1)", expr)
+        self.assertNotIn("*lt(mod(t,1),", expr, "that is the file-relative version")
+
+    def test_a_pulse_is_one_tone_not_several(self):
+        """Joshua: "I'm also hearing a crossing two sirens at once?" He was."""
+        expr = procmod.expression(self.PULSE)
+        self.assertEqual(expr.count("sin(2*PI*"), 1, "one carrier, one machine")
+
+    def test_the_loop_point_falls_inside_silence(self):
+        """Which is why the pause cannot come back, whatever the container adds."""
+        r = self.PULSE
+        group = r["pulsesPerGroup"] * (r["onSeconds"] + r["offSeconds"]) + r["gapSeconds"]
+        last_ping_ends = (r["pulsesPerGroup"] - 1) * (r["onSeconds"] + r["offSeconds"]) \
+            + r["onSeconds"]
+        self.assertLess(last_ping_ends, group,
+                        "the group must end quiet, or the join is audible again")
+        self.assertGreater(group - last_ping_ends, 1.0,
+                           "and with room to spare, so padding is swallowed by it")
+
+    def test_a_gap_of_zero_is_refused(self):
+        bad = dict(self.PULSE, gapSeconds=0)
+        problems = procmod.pulse_seam_problems(bad)
+        self.assertTrue(problems)
+        self.assertIn("silence", problems[0])
+
+    def test_a_file_that_cuts_a_group_in_half_is_refused(self):
+        bad = dict(self.PULSE, seconds=17.0)
+        self.assertIn("cut a group in half", procmod.pulse_seam_problems(bad)[0])
+
+    def test_the_alarms_joshua_kept_are_untouched(self):
+        """"Alarms are fine with the existing audio files." Only the sirens changed."""
+        root = os.path.dirname(os.path.dirname(HERE))
+        reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))
+        for aid in ("amb_console_alarm_bed", "sfx_alert_warning_hit",
+                    "sfx_console_alarm_erupt"):
+            self.assertEqual(reg["assets"][aid]["source"], "generated",
+                             "%s must stay the file it already is" % aid)
+            self.assertNotIn("recipe", reg["assets"][aid])
 
     def test_a_one_shot_may_fade_and_a_loop_may_not(self):
         """A fade is a seam. On a one-shot it is shape; on a loop it is the bug."""
@@ -1527,18 +1588,26 @@ class ProceduralTests(unittest.TestCase):
         reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))
         cues = json.load(open(os.path.join(root, "audio", "cues", "chapter-03.json"),
                               encoding="utf-8"))["cues"]
-        beds = [c for c in cues if c["asset"].startswith("amb_sirens_")]
+        beds = [c for c in cues if c["asset"].startswith("amb_alarm_pulse")]
         swell = [c for c in cues if c["asset"] == "sfx_siren_winddown"][0]
         for c in beds:
             # Not a magic number: what matters is that a distant siren is well below
             # the swell that is deliberately close. The figure has moved four times --
             # -4.4, -10, -18 (silent), now -14 -- so pinning one would only record
             # whichever guess was last.
-            self.assertLessEqual(c["emphasisDb"], -10.0)
+            self.assertLessEqual(c["emphasisDb"], -14.0)
             self.assertLess(c["emphasisDb"], swell.get("emphasisDb", 0.0),
                             "the swell is meant to be the loud one")
-            lp = reg["assets"][c["asset"]]["recipe"]["lowpassHz"]
-            self.assertLessEqual(lp, 600,
+            # Relative to the TONE, not an absolute cutoff: a filter below the tone
+            # erases the sound, and one far above it does nothing. What says "outside"
+            # is that the distant sirens are filtered harder than the close swell.
+            r = reg["assets"][c["asset"]]["recipe"]
+            bed = r["lowpassHz"] / float(r.get("toneHz") or r["startHz"])
+            sw = reg["assets"]["sfx_siren_winddown"]["recipe"]
+            close = sw["lowpassHz"] / float(sw.get("toneHz") or sw["startHz"])
+            self.assertLess(bed, close,
+                            "the distant sirens must be duller than the one at the window")
+            self.assertLessEqual(bed, 2.0,
                                  "a wall eats the high end; that is what makes it outside")
 
     def test_the_swell_is_audibly_louder_than_the_distant_sirens(self):
@@ -1552,7 +1621,7 @@ class ProceduralTests(unittest.TestCase):
         cues = json.load(open(os.path.join(root, "audio", "cues", "chapter-03.json"),
                               encoding="utf-8"))["cues"]
         swell = [c for c in cues if c["asset"] == "sfx_siren_winddown"][0]
-        beds = [c for c in cues if c["asset"].startswith("amb_sirens_")]
+        beds = [c for c in cues if c["asset"].startswith("amb_alarm_pulse")]
         self.assertGreater(swell["emphasisDb"], 0.0,
                            "the one close moment has to sit above its category")
         for c in beds:
@@ -1564,7 +1633,7 @@ class ProceduralTests(unittest.TestCase):
         root = os.path.dirname(os.path.dirname(HERE))
         cues = json.load(open(os.path.join(root, "audio", "cues", "chapter-03.json"),
                               encoding="utf-8"))["cues"]
-        beds = [c for c in cues if c["asset"].startswith("amb_sirens_")]
+        beds = [c for c in cues if c["asset"].startswith("amb_alarm_pulse")]
         self.assertEqual(len(beds), 2, "one before the line, a different one after")
         self.assertEqual(len({c["asset"] for c in beds}), 2,
                          "the same asset twice would change nothing")

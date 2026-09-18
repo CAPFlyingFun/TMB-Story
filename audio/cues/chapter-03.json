@@ -37,13 +37,13 @@
     },
     {
       "cueId": "ch03-006-sirens-wail",
-      "asset": "amb_sirens_wail",
+      "asset": "amb_alarm_pulse",
       "anchor": {
         "clipId": "narrator-59502f926e4e",
         "occurrence": 1
       },
       "timing": "before",
-      "emphasisDb": -14.0,
+      "emphasisDb": -20.0,
       "fadeInMs": 2500,
       "fadeOutMs": 1500,
       "sustain": {
@@ -82,14 +82,14 @@
     },
     {
       "cueId": "ch03-024-sirens-changed-pitch",
-      "asset": "amb_sirens_urgent",
+      "asset": "amb_alarm_pulse_fast",
       "anchor": {
         "clipId": "narrator-f252c126c3eb",
         "occurrence": 1
       },
       "timing": "during",
       "offsetMs": 1200,
-      "emphasisDb": -14.0,
+      "emphasisDb": -20.0,
       "fadeInMs": 1200,
       "fadeOutMs": 2000,
       "sustain": {
