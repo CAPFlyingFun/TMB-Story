@@ -196,7 +196,7 @@
       }
     },
     "amb_intercom_channel_open": {
-      "category": "interface",
+      "category": "ambience",
       "source": "generated",
       "prompt": "An intercom speaker with the line open and nobody talking, microphone right at the grille. Narrow-band electrical hiss with a steady carrier hum under it, band-limited and boxy the way a small wall-mounted speaker colours everything. Filling the frame, recorded at a strong present level. Even throughout so it loops. No voices, no speech, no music, no clicks, no tones.",
       "durationSeconds": 10,
@@ -205,7 +205,7 @@
       "assetVersion": 2,
       "godotReuse": true,
       "approved": false,
-      "notes": "The cheapest honest way to tell the listener Sarah is on a speaker and not in the room. It sits under her intercom lines without touching her approved voice clips, which are never filtered or regenerated for this.",
+      "notes": "Open intercom channel with the line live and nobody talking. AMBIENCE, not interface: it is room noise that sits under a scene, so it belongs with the backgrounds the listener can switch off. The intercom's clicks and static are separate assets on the sfx layer, because those are events.",
       "promptStyle": "retake-2026-09-18: character and mic distance only, no loudness adjective, described at the microphone",
       "previousMeasured": {
         "measuredAt": "2026-09-18",

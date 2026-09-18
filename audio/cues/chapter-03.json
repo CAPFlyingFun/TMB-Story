@@ -146,7 +146,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.032,
+      "gain": 0.014,
       "fadeInMs": 4000,
       "sustain": {
         "until": "chapterEnd",
@@ -185,7 +185,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.041,
+      "gain": 0.299,
       "fadeInMs": 300,
       "fadeOutMs": 800,
       "sustain": {

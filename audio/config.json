@@ -167,8 +167,18 @@
     ],
     "layers": {
       "voice": true,
-      "ambience": true,
-      "sfx": true
+      "ambience": false,
+      "sfx": true,
+      "_comment": [
+        "AMBIENCE IS OFF (Joshua, 2026-09-18): 'remove all ambient noise for the moment",
+        "(leave voices and SFX) and I can upload my own background ambient sounds.'",
+        "",
+        "OFF, not deleted. The cue sheets keep every ambience cue with its reasoning, the",
+        "assets stay on disk, and turning this back to true restores all of it. Both the",
+        "browser and the exported mp3 read this switch, so the page and the file agree.",
+        "",
+        "To supply your own: see story-rules/reference/SUPPLYING_AMBIENCE.md."
+      ]
     },
     "categoryGain": {
       "ambience": 0.1,
@@ -212,9 +222,13 @@
         "LOWERED A FURTHER 6 dB on 2026-09-18, third pass. Joshua, after the 30% cut: SFX",
         "still too loud. Beds now sit about 29 dB under the narration and one-shot events",
         "about 23. If that turns out to be too far, raise these five numbers -- nothing else",
-        "needs to change, because every gain is derived from them."
+        "needs to change, because every gain is derived from them.",
+        "",
+        "AMBIENCE LOWERED A FURTHER 55% (-6.9 dB) on 2026-09-18 before being switched off,",
+        "so that whenever it comes back it starts where Joshua asked rather than where the",
+        "last pass left it."
       ],
-      "ambience": -51.1,
+      "ambience": -58.0,
       "alarm": -45.1,
       "interface": -45.1,
       "system": -45.1,

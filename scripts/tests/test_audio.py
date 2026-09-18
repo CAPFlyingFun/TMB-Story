@@ -1182,6 +1182,84 @@ class DramaExportTests(unittest.TestCase):
                          "the drama export must never write into the clip cache")
 
 
+class LayerSwitchTests(unittest.TestCase):
+    """A layer switched off must be off in BOTH renderers.
+
+    drama.py used to ignore mix.layers, so turning ambience off silenced it in the
+    browser while the delivered mp3 still carried it -- the page and the file quietly
+    disagreeing, which is the failure mode this project has paid for twice.
+    """
+
+    def _manifest(self, layers):
+        return {
+            "chapter": 1,
+            "segments": [{"order": 0, "audio": "a.mp3", "pauseBeforeMs": 0}],
+            "mix": {"layers": layers},
+            "cues": [
+                {"cueId": "bed", "asset": "amb", "category": "ambience",
+                 "layer": "ambience", "timing": "before", "order": 0, "gain": 0.1,
+                 "audio": "amb.mp3", "stopOrder": 0},
+                {"cueId": "hit", "asset": "fx", "category": "foley", "layer": "sfx",
+                 "timing": "during", "order": 0, "gain": 0.4, "audio": "fx.mp3"},
+            ],
+        }
+
+    def _plan(self, layers, tmp):
+        for name in ("a.mp3", "amb.mp3", "fx.mp3"):
+            with open(os.path.join(tmp, name), "wb") as fh:
+                fh.write(FAKE_AUDIO)
+        real_root = drama.ROOT
+        real_dur = cache.mp3_duration_seconds
+        drama.ROOT = tmp
+        cache.mp3_duration_seconds = lambda p: 2.0
+        try:
+            return drama.plan(self._manifest(layers), sfx_reg())
+        finally:
+            drama.ROOT = real_root
+            cache.mp3_duration_seconds = real_dur
+
+    def test_ambience_off_keeps_it_out_of_the_exported_file(self):
+        tmp = tempfile.mkdtemp()
+        try:
+            spec = self._plan({"voice": True, "ambience": False, "sfx": True}, tmp)
+            self.assertEqual(spec["beds"], [],
+                             "an ambience bed must not reach the mp3 when the layer is off")
+            self.assertEqual([s["cueId"] for s in spec["shots"]], ["hit"],
+                             "the sfx layer is unaffected")
+            self.assertEqual(len(spec["voices"]), 1, "the voices are never switched off")
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+
+    def test_both_layers_on_is_the_old_behaviour(self):
+        tmp = tempfile.mkdtemp()
+        try:
+            spec = self._plan({"voice": True, "ambience": True, "sfx": True}, tmp)
+            self.assertEqual([b["cueId"] for b in spec["beds"]], ["bed"])
+            self.assertEqual([s["cueId"] for s in spec["shots"]], ["hit"])
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+
+    def test_a_missing_layers_block_switches_nothing_off(self):
+        tmp = tempfile.mkdtemp()
+        try:
+            spec = self._plan({}, tmp)
+            self.assertEqual(len(spec["beds"]) + len(spec["shots"]), 2,
+                             "absence of a switch is not the same as off")
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+
+    def test_the_shipped_config_has_ambience_off_and_the_player_reads_it(self):
+        root = os.path.dirname(os.path.dirname(HERE))
+        cfg = json.load(open(os.path.join(root, "audio", "config.json"), encoding="utf-8"))
+        self.assertIs(cfg["mix"]["layers"]["ambience"], False,
+                      "Joshua asked for ambience off until he supplies his own")
+        self.assertIs(cfg["mix"]["layers"]["sfx"], True)
+        self.assertIs(cfg["mix"]["layers"]["voice"], True)
+        src = open(os.path.join(root, "reader", "sfx.js"), encoding="utf-8").read()
+        self.assertIn("layers[name] === false", src,
+                      "the browser has to read the same switch the export does")
+
+
 class CombineGuardTests(unittest.TestCase):
     """Without ffmpeg the join has no gaps, which must not replace a good export."""
 

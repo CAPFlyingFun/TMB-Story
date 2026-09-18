@@ -42,7 +42,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.032,
+      "gain": 0.014,
       "fadeInMs": 3000,
       "fadeOutMs": 4000,
       "sustain": {
@@ -208,7 +208,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.041,
+      "gain": 0.299,
       "fadeInMs": 200,
       "fadeOutMs": 600,
       "sustain": {
@@ -406,12 +406,8 @@
       },
       "timing": "after",
       "gain": 0.013,
-      "fadeInMs": 6000,
-      "sustain": {
-        "until": "chapterEnd",
-        "timing": "after"
-      },
-      "why": "From the remote initialization request onward something enormous is waking up, and it never stops. A slow low rise under the last thirty segments carries the chapter's dread without a single extra beep, and it is where the TOMBS Array's sound identity begins. GAIN 0.09 -> 0.16: Same reasoning. Meant to be felt more than heard, but at 0.09 it was neither."
+      "fadeInMs": 4000,
+      "why": "The array waking up, ONCE, from the remote initialization request. It used to sustain to the end of the chapter, and that was the same mistake chapters 2 and 3 carried: this asset is a 20-second RISE, a bed loops, so it climbed, snapped back and climbed again under the last thirty segments. A rise played once is what the moment actually is -- something enormous starting -- and the chapter ends before it would have needed to repeat."
     },
     {
       "cueId": "ch01-160-denied-first",

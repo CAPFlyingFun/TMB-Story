@@ -80,7 +80,13 @@ def plan(manifest, sfx_registry):
             missing.append(seg["audio"])
             continue
         voices.append({"path": path, "at": starts[seg["order"]], "gain": 1.0})
+    # THE EXPORT OBEYS THE SAME LAYER SWITCHES THE PLAYER DOES. It did not, and that
+    # was a quiet way for the file and the page to disagree: turning ambience off in
+    # the mix silenced it in the browser while the delivered mp3 still carried it.
+    layers_on = (manifest.get("mix") or {}).get("layers") or {}
     for cue in manifest.get("cues") or []:
+        if layers_on.get(cue.get("layer")) is False:
+            continue
         path = os.path.join(ROOT, cue["audio"])
         if not os.path.isfile(path):
             missing.append(cue["audio"])
