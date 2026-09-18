@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-44e0124c34e7",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "11868a36a639f54c99851de815eca0e7008e33fa3b8a196ee6870fb795db490f",
+  "text": "Sarah followed the boundary around the settlement.",
+  "bytes": 46437,
+  "generated": "2026-09-18T11:51:12Z"
+}

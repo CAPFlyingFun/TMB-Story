@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-f9af46b91604",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e3cf6eaf6db4874f276d3028373072bd1ba1e31c827fff150c3ca3204abd48fe",
+  "text": "Everything says we're fine.",
+  "bytes": 25539,
+  "generated": "2026-09-18T11:51:56Z"
+}

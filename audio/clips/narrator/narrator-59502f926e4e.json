@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-59502f926e4e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "57bea64b542eb6e39745a14b2e0899062b2c698ab8087cf76236b292e1517e36",
+  "text": "Jack's fingers raced over the keyboard.",
+  "bytes": 38914,
+  "generated": "2026-09-18T11:51:29Z"
+}

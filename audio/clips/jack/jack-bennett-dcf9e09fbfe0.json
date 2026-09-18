@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-dcf9e09fbfe0",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ee03049dd7730aa69d09d42a5f215e00175ef86be52d551e5344fa043b1a8f5e",
+  "text": "Give me manual control.",
+  "bytes": 22613,
+  "generated": "2026-09-18T11:51:29Z"
+}

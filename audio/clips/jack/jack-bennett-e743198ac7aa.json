@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-e743198ac7aa",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "844d6aa95cd4361d10730cad9a01b88f5ceddce1cae3f18c191767dac60c69ca",
+  "text": "Satellite?",
+  "bytes": 17598,
+  "generated": "2026-09-18T11:52:03Z"
+}

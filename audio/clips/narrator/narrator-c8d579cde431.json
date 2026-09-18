@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c8d579cde431",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1ee5ed2589350a6e183225865a2f7e8e1d894a6ba7c5b466e926c95885486f47",
+  "text": "Jack looked at the expanding boundary.",
+  "bytes": 37660,
+  "generated": "2026-09-18T11:51:16Z"
+}

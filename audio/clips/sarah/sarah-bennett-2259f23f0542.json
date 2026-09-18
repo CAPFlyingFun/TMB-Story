@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-2259f23f0542",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3f583efdc89f7b6241e06e8ade1fe6fa8048a05a1242c5004f0aa5986b90947d",
+  "text": "And you're his father.",
+  "bytes": 21777,
+  "generated": "2026-09-18T11:50:34Z"
+}

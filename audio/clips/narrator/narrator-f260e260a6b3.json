@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f260e260a6b3",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "22bf17f8b1037a28255508c5d3b340f865c4fe748bd758c56731ca4541a3a42c",
+  "text": "Lena asked through the call.",
+  "bytes": 34316,
+  "generated": "2026-09-18T11:51:15Z"
+}

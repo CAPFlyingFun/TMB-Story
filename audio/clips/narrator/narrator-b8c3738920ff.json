@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b8c3738920ff",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6fa26cf15bf5d00f4e68ec359cc65036eee59ab6ee18171367ed792d49d11033",
+  "text": "Jack cycled through another channel.",
+  "bytes": 34316,
+  "generated": "2026-09-18T11:52:07Z"
+}

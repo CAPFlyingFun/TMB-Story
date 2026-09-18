@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-cf34684c56da",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "513048d1a9d15b6ef4775dfefae3ec7a9f74bc945c8524136f13f6f54262389b",
+  "text": "The vibration came again, then faded into the night.",
+  "bytes": 54378,
+  "generated": "2026-09-18T11:52:23Z"
+}

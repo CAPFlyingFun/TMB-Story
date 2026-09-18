@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-570485616099",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bcf52b72784e2c1934983b42056a84189adbd5c5a43d0b383cf0bbbe471b0351",
+  "text": "They reached the main control room, where a reinforced window looked into the chamber beyond. At its center stood the TOMBS Array, the Temporal Object Manipulation and Boundary System. Several articulated rings surrounded a central platform. Under normal operation, the rings positioned themselves around a target while the system established a controlled boundary.",
+  "bytes": 361996,
+  "generated": "2026-09-18T11:50:54Z"
+}

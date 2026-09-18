@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-50d3345e6192",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3a6a743e932ca822067f9073e207b31f1d8ad7e5833645236cd583fe2dff70c3",
+  "text": "Jack keyed the intercom again.",
+  "bytes": 36824,
+  "generated": "2026-09-18T11:51:19Z"
+}

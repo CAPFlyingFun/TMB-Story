@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-01bc4c5eccf6",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7687b29b4af8689d8f4890a5e455a9a73d59accd46c7a40aaef869472711e7eb",
+  "text": "Is that... grass?",
+  "bytes": 18852,
+  "generated": "2026-09-18T11:52:12Z"
+}

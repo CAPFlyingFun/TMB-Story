@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-20e4802bf61f",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0c73417243e74e369be3b47f737223b60e3f9c4cea9613d658ee0490cfae41cf",
+  "text": "Which means something is very wrong.",
+  "bytes": 33062,
+  "generated": "2026-09-18T11:51:57Z"
+}

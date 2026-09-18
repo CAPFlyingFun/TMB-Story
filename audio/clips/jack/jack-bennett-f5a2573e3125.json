@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-f5a2573e3125",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c805987ae6be2cc82b276135a8d32f8ceeb949bbaaf74e153c19465f17f200bd",
+  "text": "Sarah.",
+  "bytes": 12164,
+  "generated": "2026-09-18T11:51:35Z"
+}

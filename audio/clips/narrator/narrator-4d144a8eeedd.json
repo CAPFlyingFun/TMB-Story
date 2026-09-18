@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4d144a8eeedd",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d710fd1c619e8f21cb4e7c4f4dffc05414c6e22555adf8a3005f1f2eb8202fc6",
+  "text": "The lights flickered as a low hum passed through the floor. Sarah turned toward the far end of the laboratory.",
+  "bytes": 111221,
+  "generated": "2026-09-18T11:50:29Z"
+}

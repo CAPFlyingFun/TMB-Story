@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-1d1d43e74d4b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7410a2ea6e0d3a67e19cf87f0fd8a7ca24ff1ffb79f29b5085fe2beaecd3d094",
+  "text": "Sarah pulled up the emitter load.",
+  "bytes": 33898,
+  "generated": "2026-09-18T11:51:21Z"
+}

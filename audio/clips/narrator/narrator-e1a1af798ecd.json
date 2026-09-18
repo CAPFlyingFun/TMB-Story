@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e1a1af798ecd",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d7683bd0af684ad07b07a231caa99456b89c95ea32aed3900bfd36d6b4df821e",
+  "text": "Jack changed cameras again. A security light near the southern boundary illuminated what looked like a curved glass wall. For a moment he could not place it. Then a bead of water slid down the surface, trembling in the light.",
+  "bytes": 229921,
+  "generated": "2026-09-18T11:52:20Z"
+}

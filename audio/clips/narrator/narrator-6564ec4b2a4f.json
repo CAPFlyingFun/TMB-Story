@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6564ec4b2a4f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "da423068342e2c5bb75cbf286ca701cb9209b7c392b710e434a8ca03fe0c3a3f",
+  "text": "Jack opened another control route.",
+  "bytes": 35988,
+  "generated": "2026-09-18T11:51:28Z"
+}

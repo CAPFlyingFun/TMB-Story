@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-42c3bfb9a2b4",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "951384b6fe053d3e79651b8caf0006d3b93084a304deedb59bf47ca60676decb",
+  "text": "I cut the physical connection.",
+  "bytes": 27211,
+  "generated": "2026-09-18T11:51:00Z"
+}

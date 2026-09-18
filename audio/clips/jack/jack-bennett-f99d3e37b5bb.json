@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-f99d3e37b5bb",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "61e66d8509bf97e44b17cbb9bb297e5954ad2476999d6431c6624f26d3a162af",
+  "text": "Do it now.",
+  "bytes": 15090,
+  "generated": "2026-09-18T11:51:15Z"
+}

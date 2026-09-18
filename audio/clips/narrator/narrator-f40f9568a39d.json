@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f40f9568a39d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1d59ed1b88aff8ad0d18329c0d36ab546c1600446c43746a83cdd2c930328ba1",
+  "text": "For several seconds, his mind refused to understand what he was seeing. The street was there. The building across from them was there. Streetlights still glowed, and a parked utility vehicle sat exactly where it had been.",
+  "bytes": 224070,
+  "generated": "2026-09-18T11:52:10Z"
+}

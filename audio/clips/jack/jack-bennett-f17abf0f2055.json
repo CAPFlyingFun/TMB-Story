@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-f17abf0f2055",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "83b25d218690a48637164cffe4b99dc1956c7d25a7f9cc4b8d27a701c3386151",
+  "text": "Then we'll do it the old-fashioned way.",
+  "bytes": 28465,
+  "generated": "2026-09-18T11:50:56Z"
+}

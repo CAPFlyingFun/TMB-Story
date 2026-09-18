@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-8658e8eff48a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7871ab7f46aa1e91c5235e11d2d3773fd96ea3fc0236cea1be5f0df194222976",
+  "text": "Jack crawled toward her.",
+  "bytes": 29301,
+  "generated": "2026-09-18T11:51:44Z"
+}

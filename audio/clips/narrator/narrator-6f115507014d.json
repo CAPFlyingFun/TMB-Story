@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6f115507014d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8d4c08fdbfceca0961e1bd2a63653d8d232f74876bb9d180122c821403a52a4a",
+  "text": "Sarah's voice dropped as she stared through the reinforced window.",
+  "bytes": 58976,
+  "generated": "2026-09-18T11:50:51Z"
+}

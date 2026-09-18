@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-947458aaa93f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "98c238b39e139645b340c963ea983e0bde054ee342e41015fe9ba8d0498ff575",
+  "text": "Jack did not answer. He was no longer certain he wanted to know.",
+  "bytes": 67753,
+  "generated": "2026-09-18T11:52:24Z"
+}

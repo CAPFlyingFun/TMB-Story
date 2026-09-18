@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e984812fa50a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b6a142f6edb888306b3588871fe920b841abb16ce54a65e247ce0c650e2f52c8",
+  "text": "The hills beyond the research district were gone. In their place stood enormous shapes reaching into the darkness.",
+  "bytes": 105787,
+  "generated": "2026-09-18T11:52:12Z"
+}

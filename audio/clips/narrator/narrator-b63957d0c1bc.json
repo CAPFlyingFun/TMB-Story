@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b63957d0c1bc",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9fa02e53d0159dcb94d73a76281bfe70e2ae7b74621203075ded2bb984d1309b",
+  "text": "She looked at him, then back at the image.",
+  "bytes": 38914,
+  "generated": "2026-09-18T11:52:18Z"
+}

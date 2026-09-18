@@ -1,0 +1,18 @@
+{
+  "clipId": "system-e71707fdf287",
+  "speaker": "system",
+  "voiceId": "QpRibeuwXoGrlpLFDwqY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.85,
+    "similarity_boost": 0.6,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e71ceb49dab3e4ca98a099971fc589edab26d8ea4ac9e19396d1272d93ebdcb9",
+  "text": "Scale factor locked.",
+  "bytes": 20524,
+  "generated": "2026-09-18T11:51:36Z"
+}

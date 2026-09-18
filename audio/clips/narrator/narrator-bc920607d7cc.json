@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-bc920607d7cc",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cb7403e615c030c5307b2b92e38182b7f1db0922e740ed9a349eb6fa599aa466",
+  "text": "Below it was the scale factor.",
+  "bytes": 38914,
+  "generated": "2026-09-18T11:52:25Z"
+}

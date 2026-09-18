@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-f2aea80be3e4",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7a38ad6e5862fa4ca2442d70640aa637a86239cef01bcae0cb0171492d7283a5",
+  "text": "Are you hurt?",
+  "bytes": 15926,
+  "generated": "2026-09-18T11:51:44Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-11d55c44014b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8a75ebe5b0654f9bf073a1f62b6cc0946eea6d5ee4a00a0386dbdf2bef670f35",
+  "text": "Sarah caught Jack's arm as they resumed walking.",
+  "bytes": 50199,
+  "generated": "2026-09-18T11:50:47Z"
+}

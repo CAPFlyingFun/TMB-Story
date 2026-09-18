@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-1f9037faae4f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "99f8743f2eabe488696b194ee52a05539cb76e39e4f163f80eab5b67f5e83b7b",
+  "text": "Jack looked toward the array chamber.",
+  "bytes": 36824,
+  "generated": "2026-09-18T11:50:45Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-86b55fe3bf7c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c64e497558a3659d522fd0a29456a3000cbd375535b20d1808c8b8f4ea2d9b11",
+  "text": "Sarah traced the red outline with one finger.",
+  "bytes": 44765,
+  "generated": "2026-09-18T11:51:10Z"
+}

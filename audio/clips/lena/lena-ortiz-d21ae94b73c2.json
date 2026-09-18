@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-d21ae94b73c2",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a6fda05022ee1e4c4e9d9460418bd3bccd54d5aba1e8ec1cccf6ede2513b536f",
+  "text": "Fourteen megawatts and climbing.",
+  "bytes": 33062,
+  "generated": "2026-09-18T11:50:39Z"
+}

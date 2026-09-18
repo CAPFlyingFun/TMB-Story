@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-200595efed86",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8090ab169be7b5c08fb7b02f3656e3d5b4315bcebf0548e459c43cfc7c3cf8df",
+  "text": "Machines don't get opinions.",
+  "bytes": 24703,
+  "generated": "2026-09-18T11:51:01Z"
+}

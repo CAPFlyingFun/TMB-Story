@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4b7adff24768",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c7ef017ad97d50ec80d5f8d838da91fa770be926228bd4e82c151edec019bc88",
+  "text": "Jack switched the feed to a camera mounted higher on the communications building and rotated it toward the coastline. The camera moved normally, but the horizon never appeared. Grass stems, leaves, and dark walls of soil filled the view in every direction.",
+  "bytes": 258760,
+  "generated": "2026-09-18T11:52:18Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-ebb691a6c92b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "57c8b49cead7d28ce0d24d100e547101769fd36d36035e4202c7a8e69e35e14a",
+  "text": "A second line appeared.",
+  "bytes": 27211,
+  "generated": "2026-09-18T11:51:26Z"
+}

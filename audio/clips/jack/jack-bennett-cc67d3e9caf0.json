@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-cc67d3e9caf0",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5366ad85378b88776080cd056943a123f35391eba1c16aaf47df6a932e48e9fc",
+  "text": "Everyone inside the boundary.",
+  "bytes": 26375,
+  "generated": "2026-09-18T11:52:30Z"
+}

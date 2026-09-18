@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-bb45f7ba4dcc",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "249e9281702ae8f9ff652f47e35dfa4db42e3572c0d67869028ecbcc472ca45f",
+  "text": "Jack kept typing.",
+  "bytes": 25539,
+  "generated": "2026-09-18T11:51:27Z"
+}

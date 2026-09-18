@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-45604f264846",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "56fbbf2cf167dd21a08734cd3d697db647e427aa58e37e72f8f79df611ddf932",
+  "text": "He pulled the physical shutdown lever, and the room went dark.",
+  "bytes": 56886,
+  "generated": "2026-09-18T11:50:57Z"
+}

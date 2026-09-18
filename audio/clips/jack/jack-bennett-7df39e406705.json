@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-7df39e406705",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "94c1f6bd2edd9619ac03cf4703a26f3261c4d239df28a23a514e4deddd2d2246",
+  "text": "So we're both going.",
+  "bytes": 21777,
+  "generated": "2026-09-18T11:50:34Z"
+}

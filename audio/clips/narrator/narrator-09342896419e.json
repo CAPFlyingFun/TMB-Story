@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-09342896419e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d12dafea6137458668fef0adea81895dfb1f42ffb6a166e53ea9f67433578946",
+  "text": "Sarah moved to the secondary console.",
+  "bytes": 40586,
+  "generated": "2026-09-18T11:51:31Z"
+}

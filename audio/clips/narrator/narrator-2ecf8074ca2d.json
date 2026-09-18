@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-2ecf8074ca2d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6c24a1b3ec3f0f13c8b98fbeb1045fa6af9cc4d29c2ac09cd4fd6551af3769ad",
+  "text": "Lena checked the readout on her end.",
+  "bytes": 38078,
+  "generated": "2026-09-18T11:50:39Z"
+}

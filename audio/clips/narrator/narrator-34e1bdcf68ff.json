@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-34e1bdcf68ff",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ab94296f4b21ae15d2f97a3b196a05e773d5c2c5356916d9f36ba9aab7b696ff",
+  "text": "Sarah got to her feet beside him and looked around.",
+  "bytes": 46437,
+  "generated": "2026-09-18T11:51:50Z"
+}

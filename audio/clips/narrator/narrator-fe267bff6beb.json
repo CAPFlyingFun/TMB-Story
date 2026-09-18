@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-fe267bff6beb",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "09219960ea4fab09aca4358a17a1d3d0a1f3456544fc3c81143aba922b37d2fb",
+  "text": "Jack could see Sarah shouting, but he couldn't hear her. The laboratory seemed to stretch around them, the walls impossibly far away for a fraction of a second and then impossibly close. His stomach dropped as light bent around Sarah's body.",
+  "bytes": 232847,
+  "generated": "2026-09-18T11:51:43Z"
+}

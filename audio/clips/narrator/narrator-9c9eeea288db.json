@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-9c9eeea288db",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "516bf8ad7393dbdab439bd3882045fc738be31ec9b6ce9ea9b8de5b437b3df09",
+  "text": "The emergency lights switched on. Jack rushed back to the console, which should have been dead. Instead, the screen was filling with data.",
+  "bytes": 130447,
+  "generated": "2026-09-18T11:51:03Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "system-fcd581c75258",
+  "speaker": "system",
+  "voiceId": "QpRibeuwXoGrlpLFDwqY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.85,
+    "similarity_boost": 0.6,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "897db0c9690d98ee9b200247126f39dd45b8c1045e3582f823f80395e9874033",
+  "text": "Boundary acquisition in progress.",
+  "bytes": 30137,
+  "generated": "2026-09-18T11:51:02Z"
+}

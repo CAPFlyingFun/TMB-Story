@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6e6f9e1dbe3f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f581c2436757f8e039be5b1075bfee6a1d98df20cdc3859eb29cf79df005fcf4",
+  "text": "Jack grabbed the intercom.",
+  "bytes": 31391,
+  "generated": "2026-09-18T11:51:14Z"
+}

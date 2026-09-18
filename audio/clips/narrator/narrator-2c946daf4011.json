@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-2c946daf4011",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "afdce910e5e912655da0bec73cf482afe365cb611084d4088002f1aaf1ae854f",
+  "text": "The floor seemed to disappear beneath his feet.",
+  "bytes": 44765,
+  "generated": "2026-09-18T11:51:43Z"
+}

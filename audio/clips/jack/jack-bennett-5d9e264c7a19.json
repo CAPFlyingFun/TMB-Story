@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-5d9e264c7a19",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d73d8b3f55fbe2e53536e9dd0f002965f925e98198d24f825110060d7b58ae68",
+  "text": "It was designed for controlled objects. Laboratory-scale targets. We tested equipment, vehicles, biological samples. Not...",
+  "bytes": 136298,
+  "generated": "2026-09-18T11:51:13Z"
+}

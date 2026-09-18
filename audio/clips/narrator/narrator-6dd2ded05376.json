@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6dd2ded05376",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "eac8aeb4e0528fea1f43c5ad2f9c0ef321ed640877b7c90f3c1a72a20314c6df",
+  "text": "That bothered him more than a room full of broken equipment would have.",
+  "bytes": 66499,
+  "generated": "2026-09-18T11:51:55Z"
+}

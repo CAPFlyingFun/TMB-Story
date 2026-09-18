@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-3f5f52025be5",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "48f39ee18fb19c202ed5f2ac4f84b1892dc2d114f848e3861116b4dcc4e02f2d",
+  "text": "Sarah followed more carefully, one hand resting beneath her stomach.",
+  "bytes": 69425,
+  "generated": "2026-09-18T11:51:52Z"
+}

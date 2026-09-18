@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-ed9db40f75e7",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8e9066b7233725559aad2d93244ec58deaff308307db6c5c78a4bea72f8bae59",
+  "text": "Sarah checked another display.",
+  "bytes": 34316,
+  "generated": "2026-09-18T11:51:14Z"
+}

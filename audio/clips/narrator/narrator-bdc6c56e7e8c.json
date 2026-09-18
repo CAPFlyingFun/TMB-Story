@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-bdc6c56e7e8c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "efef6c9bab9a20c190d2e4d6b6b1dbbd53e11678f0e6be654f252d837fcd185b",
+  "text": "Beyond it, the world was wrong.",
+  "bytes": 37660,
+  "generated": "2026-09-18T11:52:10Z"
+}

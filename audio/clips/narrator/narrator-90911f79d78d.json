@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-90911f79d78d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "12c6faf26ff07b8970b1effc1947794a78ce063c1b5a6c33c3924b45e5865f3e",
+  "text": "Everything inside the settlement looked normal.",
+  "bytes": 47273,
+  "generated": "2026-09-18T11:52:10Z"
+}

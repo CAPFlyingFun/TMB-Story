@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-81be04b23e76",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "10b4544a396f6fe24b889a41444e94f192a917b9bbc58f43dfe7577d00e484b9",
+  "text": "External cameras.",
+  "bytes": 19688,
+  "generated": "2026-09-18T11:52:14Z"
+}

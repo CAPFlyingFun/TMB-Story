@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6e1c3da3fb9d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6d0015a9593d4e4f9ae99f5635b2d7e25d360cca9684d2d6c3c276ab364ed24f",
+  "text": "The display changed.",
+  "bytes": 26375,
+  "generated": "2026-09-18T11:51:25Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-1d9f80cf34fe",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b53a0b00e196aa10f843757e73805c96141bd37911de5e5f8e4ce5df0b35a7a8",
+  "text": "Fifteen now.",
+  "bytes": 18852,
+  "generated": "2026-09-18T11:50:41Z"
+}

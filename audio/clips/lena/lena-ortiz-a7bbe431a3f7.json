@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-a7bbe431a3f7",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d79a3df489fd8cd05be65076cb1c1e85a23daaa3389a5de2f3ef4a0ec0412da3",
+  "text": "Jack, we were about to call you. We're seeing a massive draw from your building.",
+  "bytes": 65663,
+  "generated": "2026-09-18T11:50:38Z"
+}

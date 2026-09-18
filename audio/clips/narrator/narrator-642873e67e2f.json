@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-642873e67e2f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9f20ba33c3eea0c3a64dc6af9b35ecd3b0c40766387078720296b3db3ade2632",
+  "text": "Sarah looked down at her stomach and then toward the darkened town beyond the glass.",
+  "bytes": 75276,
+  "generated": "2026-09-18T11:52:32Z"
+}

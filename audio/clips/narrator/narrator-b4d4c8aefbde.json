@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b4d4c8aefbde",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0c9dbdf884f8761d633b21b19f4e36362a1b5278d18a6b142183f743059d55be",
+  "text": "Jack opened the target parameters.",
+  "bytes": 36824,
+  "generated": "2026-09-18T11:51:04Z"
+}

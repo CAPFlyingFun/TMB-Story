@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a5c0e66f93e6",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e48ae50b279aec9518e6ccfc2889d7d19267b7e53c4bd2fce3d443cbda3e3402",
+  "text": "Sarah steadied herself against the console.",
+  "bytes": 44765,
+  "generated": "2026-09-18T11:51:34Z"
+}

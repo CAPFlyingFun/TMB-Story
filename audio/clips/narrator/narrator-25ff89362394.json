@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-25ff89362394",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "94bbe1f7c1aae244870bd996380158f5f7c58731800add1ef2aa6d1fdf55c729",
+  "text": "The computer calmly displayed what neither of them was ready to say. The island hadn't grown. The wilderness hadn't changed. The ocean hadn't changed. The rest of the world was exactly the same size it had been ten minutes ago.",
+  "bytes": 227831,
+  "generated": "2026-09-18T11:52:28Z"
+}

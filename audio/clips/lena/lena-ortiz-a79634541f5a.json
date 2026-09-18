@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-a79634541f5a",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "443e1e457aff419c3d1ac6cfbfd4041a3215f0516c80d2610c17575d6399e974",
+  "text": "Jack?",
+  "bytes": 13000,
+  "generated": "2026-09-18T11:51:18Z"
+}

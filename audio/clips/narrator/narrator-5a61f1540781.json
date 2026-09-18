@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5a61f1540781",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "dcb2c9c9b1cb7eeeb7ca8108ced4b188222b086bf2c3cd6b8844b83f5bbbeff4",
+  "text": "Sarah tried the command a second time.",
+  "bytes": 38914,
+  "generated": "2026-09-18T11:51:33Z"
+}

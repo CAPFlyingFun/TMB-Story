@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-b51e598bf09f",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0da988ba54a18271d493b4bb8f70338e575ae3bace8057d985eb6e842b718d0d",
+  "text": "What's happening over there?",
+  "bytes": 22613,
+  "generated": "2026-09-18T11:50:42Z"
+}

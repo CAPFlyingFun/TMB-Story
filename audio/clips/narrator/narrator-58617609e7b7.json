@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-58617609e7b7",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d30cfb7a2d43f5523408111a20bb469b3e90bbf4b08137e2987471461da42365",
+  "text": "Jack kept his hand on the shutdown lever.",
+  "bytes": 41839,
+  "generated": "2026-09-18T11:50:58Z"
+}

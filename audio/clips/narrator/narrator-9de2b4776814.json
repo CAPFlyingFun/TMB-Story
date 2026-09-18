@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-9de2b4776814",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b82220320e92c3d1df2204bb8b82909c1abd1bbec459080ac32c458cbcf8b130",
+  "text": "Jack opened a diagnostic window and searched for another route into the controls.",
+  "bytes": 73186,
+  "generated": "2026-09-18T11:51:24Z"
+}

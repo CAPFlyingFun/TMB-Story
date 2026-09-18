@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-7eb5cca77acb",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7d9b3393bd8d4a5b09b6ce8962d7424cde7b298164588942adb5dd1ef0e22001",
+  "text": "The baby?",
+  "bytes": 14254,
+  "generated": "2026-09-18T11:51:46Z"
+}

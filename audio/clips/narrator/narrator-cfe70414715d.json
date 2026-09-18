@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-cfe70414715d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d0268cbc1121c8831182a4c3dbd00f563d78b6a8163319ab828c8704a3638f69",
+  "text": "Sarah moved beside him.",
+  "bytes": 29301,
+  "generated": "2026-09-18T11:51:04Z"
+}

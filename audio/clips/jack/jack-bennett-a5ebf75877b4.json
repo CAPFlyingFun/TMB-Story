@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-a5ebf75877b4",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2208f2cad55f7adf813a30e706d7025715dab36b27043a3d4d8473e61540ae93",
+  "text": "Control, initiate a settlement-wide emergency.",
+  "bytes": 41004,
+  "generated": "2026-09-18T11:51:15Z"
+}

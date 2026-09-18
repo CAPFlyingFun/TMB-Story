@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-8a2bc98d79c3",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3ce22ca91269e57b1fe917b202f98fc691858fbee9464561ccb3eba03eef6afc",
+  "text": "We've got power. Most systems are responding, but communications are down.",
+  "bytes": 82799,
+  "generated": "2026-09-18T11:52:01Z"
+}

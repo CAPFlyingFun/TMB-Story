@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f1f2c92be2cc",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c68e2f0f69d9e013cc08d28a83393fbe189aac66384ef6fd58e810ded5904185",
+  "text": "She didn't answer.",
+  "bytes": 24285,
+  "generated": "2026-09-18T11:52:09Z"
+}

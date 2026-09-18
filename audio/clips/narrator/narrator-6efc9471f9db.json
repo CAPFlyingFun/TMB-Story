@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6efc9471f9db",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fb64aab7edbf995c55f5cf4d3b7be0185d6a421bd7f37fdc45d6f9622e436877",
+  "text": "Her fingers moved quickly across the controls.",
+  "bytes": 47691,
+  "generated": "2026-09-18T11:51:32Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-73860b2ad59f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e5d743563945f38382e64b1a98b25d7739a53603ec9dc05471de5917944c4825",
+  "text": "Sarah came up beside him and stared at the feeds.",
+  "bytes": 47273,
+  "generated": "2026-09-18T11:52:24Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-bd00dcb7c5b7",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a94be6a463a9d2eb5a25eb9763ae38c3529e534da5afe4c8dc6fd0784262ce80",
+  "text": "Stay here.",
+  "bytes": 14254,
+  "generated": "2026-09-18T11:50:29Z"
+}

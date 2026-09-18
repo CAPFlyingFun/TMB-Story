@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a1ccdfbe1f2b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "845d24bcba532b58050e616af6a222e6ade1108b444f347b6b695711ea46c1a5",
+  "text": "Jack was already out of his chair.",
+  "bytes": 35152,
+  "generated": "2026-09-18T11:50:29Z"
+}

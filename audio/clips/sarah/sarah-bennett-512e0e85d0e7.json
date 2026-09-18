@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-512e0e85d0e7",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "618693537c72bed36fd9559ea3fcaecb97ba18b23df4c90d71cce700bdc80e74",
+  "text": "Five hundred people.",
+  "bytes": 20524,
+  "generated": "2026-09-18T11:52:31Z"
+}

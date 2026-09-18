@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-abe1378fe191",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "941de243a207f93d2e9f4d4b0a40909e4ffe3addedf3ed3de7b836b6cc267332",
+  "text": "Sarah whispered,",
+  "bytes": 21777,
+  "generated": "2026-09-18T11:52:19Z"
+}

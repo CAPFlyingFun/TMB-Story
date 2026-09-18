@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c0a3dde03fdc",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6f2916997294168dfd51372457a958debf495dee24b1b6f3fb8637bb76c792f4",
+  "text": "Jack looked through the window again at the impossible forest beyond the streetlights. Five hundred people, their homes, laboratories, vehicles, and everything else inside the TOMBS boundary had been caught in the same event.",
+  "bytes": 211949,
+  "generated": "2026-09-18T11:52:34Z"
+}

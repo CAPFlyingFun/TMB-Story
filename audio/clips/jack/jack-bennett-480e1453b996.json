@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-480e1453b996",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9bbc4d065fe3a759606a051538000d82886e67e83dcda3ece986073d2a9ada4b",
+  "text": "It is zoomed out.",
+  "bytes": 19688,
+  "generated": "2026-09-18T11:52:18Z"
+}

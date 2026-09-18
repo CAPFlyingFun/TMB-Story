@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-17886a6a8364",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9e5aa8f3ebafc0098e7f716069f8fa00b9b6be1838cb82b2e3d479a057a641c0",
+  "text": "Jack tried the controls again.",
+  "bytes": 34316,
+  "generated": "2026-09-18T11:51:53Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-d9e226e24077",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "acad60f32e5de9673cc1896a376dec909fe7552a108d5717c84726b3c84e01a9",
+  "text": "Jack, what's happening?",
+  "bytes": 23449,
+  "generated": "2026-09-18T11:51:15Z"
+}

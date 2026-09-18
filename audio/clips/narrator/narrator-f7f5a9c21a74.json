@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f7f5a9c21a74",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6b2741c717fbe5d06215ed6928741715c9293d9f58e22699a6eb2465858f2aa8",
+  "text": "Behind him, Sarah had walked toward a window.",
+  "bytes": 51453,
+  "generated": "2026-09-18T11:52:05Z"
+}

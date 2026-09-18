@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-5a95550ec41a",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7fdd7a84a4e7dee8e64aea9c5e32bea23729b35d3e368070d99ed6cf4270b832",
+  "text": "They're not responding.",
+  "bytes": 21777,
+  "generated": "2026-09-18T11:50:56Z"
+}

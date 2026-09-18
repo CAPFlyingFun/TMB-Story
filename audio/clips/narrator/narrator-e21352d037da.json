@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e21352d037da",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f1da8586c1f97ce6132dd07b96caee061ee87007d3d3422661cef6d5f6590f87",
+  "text": "Sarah watched him move through the readings.",
+  "bytes": 43511,
+  "generated": "2026-09-18T11:51:55Z"
+}

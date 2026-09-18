@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-baa0baf1f9c0",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4f5c8e7b4efadb56487beee3adab09dd867cf61914cf95001812db69f6ad8c1d",
+  "text": "That I can do.",
+  "bytes": 17598,
+  "generated": "2026-09-18T11:50:35Z"
+}

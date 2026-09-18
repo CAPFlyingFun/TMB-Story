@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-66bd25b94ecd",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a4aaed95bfcd8558a8a1b037f2bfffcb7e4ebdc6195f8fe93f5cbd3ecd92d330",
+  "text": "Sarah turned from the rings to him.",
+  "bytes": 34316,
+  "generated": "2026-09-18T11:50:52Z"
+}

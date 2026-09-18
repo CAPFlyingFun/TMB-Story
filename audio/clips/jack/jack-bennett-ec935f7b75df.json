@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-ec935f7b75df",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4b91cb1ef90cd494599c9bf7b0cb463eda5403f6d63ed85091234ea5a50acea2",
+  "text": "It's still running.",
+  "bytes": 19688,
+  "generated": "2026-09-18T11:50:45Z"
+}

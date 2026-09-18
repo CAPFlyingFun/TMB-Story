@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-90d6c9b3d753",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "43c47753351325f3813733085f6299c9ea532f6696bf6ef541ac910b2db7929d",
+  "text": "Jack? We disconnected you.",
+  "bytes": 24285,
+  "generated": "2026-09-18T11:50:44Z"
+}
