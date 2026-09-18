@@ -1455,18 +1455,65 @@ class ProceduralTests(unittest.TestCase):
             self.assertIsNone(asset.get("prompt"),
                               "a procedural asset has a recipe, not a prompt")
 
+    def test_a_one_shot_may_fade_and_a_loop_may_not(self):
+        """A fade is a seam. On a one-shot it is shape; on a loop it is the bug."""
+        winddown = {"kind": "winddown", "seconds": 10, "startHz": 600,
+                    "holdSeconds": 3, "tauSeconds": 3, "fadeOutMs": 4000, "loop": False}
+        self.assertEqual(procmod.seam_problems(winddown), [],
+                         "a sound played once has nothing to close")
+        self.assertEqual(procmod.seam_problems({"seconds": 12, "loop": False,
+                                                "units": []}), [])
+
+    def test_the_winddown_phase_falls_away_rather_than_sweeping(self):
+        expr = procmod.expression({"kind": "winddown", "seconds": 10, "startHz": 600,
+                                   "holdSeconds": 3, "tauSeconds": 3, "level": 0.6})
+        self.assertIn("min(t,3)", expr, "it holds before it falls")
+        self.assertIn("exp(-max(0,t-3)/3)", expr, "and then decays")
+        self.assertNotIn("cos(", expr, "a wind-down does not sweep back up")
+
+    def test_the_shipped_winddown_is_a_one_shot_with_a_fade(self):
+        root = os.path.dirname(os.path.dirname(HERE))
+        reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))
+        a = reg["assets"]["sfx_siren_winddown"]
+        self.assertIs(a["loop"], False)
+        self.assertTrue(a["recipe"]["fadeOutMs"] > 0)
+        cues = json.load(open(os.path.join(root, "audio", "cues", "chapter-03.json"),
+                              encoding="utf-8"))["cues"]
+        cue = [c for c in cues if c["asset"] == "sfx_siren_winddown"][0]
+        self.assertNotIn("sustain", cue, "a wind-down that looped would never wind down")
+
+    def test_the_sirens_sit_further_away_than_the_swell(self):
+        """Distance is level AND filtering; the swell at the window is neither."""
+        root = os.path.dirname(os.path.dirname(HERE))
+        reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))
+        cues = json.load(open(os.path.join(root, "audio", "cues", "chapter-03.json"),
+                              encoding="utf-8"))["cues"]
+        beds = [c for c in cues if c["asset"].startswith("amb_sirens_")]
+        swell = [c for c in cues if c["asset"] == "sfx_siren_winddown"][0]
+        for c in beds:
+            self.assertEqual(c["emphasisDb"], -10.0)
+            self.assertLess(c["emphasisDb"], swell.get("emphasisDb", 0.0),
+                            "the swell is meant to be the loud one")
+            lp = reg["assets"][c["asset"]]["recipe"]["lowpassHz"]
+            self.assertLessEqual(lp, 600,
+                                 "a wall eats the high end; that is what makes it outside")
+
     def test_the_manuscript_pitch_change_has_a_cue(self):
         """Chapter 3 says the sirens changed pitch; for a while the audio did not."""
         root = os.path.dirname(os.path.dirname(HERE))
         cues = json.load(open(os.path.join(root, "audio", "cues", "chapter-03.json"),
                               encoding="utf-8"))["cues"]
-        sirens = [c for c in cues if "siren" in c["cueId"]]
-        self.assertEqual(len(sirens), 2, "one before the line, a different one after")
-        assets = {c["asset"] for c in sirens}
-        self.assertEqual(len(assets), 2, "the same asset twice would change nothing")
-        for c in sirens:
-            self.assertEqual(c.get("emphasisDb"), -4.4,
-                             "Joshua asked for the sirens 40% quieter")
+        beds = [c for c in cues if c["asset"].startswith("amb_sirens_")]
+        self.assertEqual(len(beds), 2, "one before the line, a different one after")
+        self.assertEqual(len({c["asset"] for c in beds}), 2,
+                         "the same asset twice would change nothing")
+        change = [c for c in beds if "changed-pitch" in c["cueId"]][0]
+        first = [c for c in beds if c is not change][0]
+        # The one that changes must START on the line that says it changed, and the
+        # other must have STOPPED by then -- two sirens overlapping is not a change.
+        self.assertEqual(change["anchor"]["clipId"], "narrator-f252c126c3eb")
+        self.assertNotEqual(first["sustain"]["until"], change["anchor"],
+                            "the first has to end before the second begins")
 
 
 class WebEncodeTests(unittest.TestCase):

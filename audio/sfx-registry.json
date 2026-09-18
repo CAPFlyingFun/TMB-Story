@@ -909,13 +909,13 @@
       "approved": true,
       "assetVersion": 1,
       "godotReuse": true,
-      "notes": "Civil sirens across the settlement, heard indoors through a wall. Three units on different sweeps so they drift out of step with each other, which is what a town full of sirens sounds like -- and all three close their phase at 12 seconds, so the loop is silent by construction rather than by somebody matching the ends by ear.",
+      "notes": "Civil sirens across the settlement, heard indoors through a wall. Three units on different sweeps so they drift out of step with each other, which is what a town full of sirens sounds like -- and all three close their phase at 12 seconds, so the loop is silent by construction rather than by somebody matching the ends by ear. LOWPASS TIGHTENED so it reads as outside rather than beside them: a wall eats the high end, and the high end is what makes a sound feel close.",
       "recipe": {
         "kind": "siren",
         "seconds": 12,
         "sampleRate": 44100,
         "kbps": 64,
-        "lowpassHz": 1100,
+        "lowpassHz": 420,
         "units": [
           {
             "centreHz": 500,
@@ -946,13 +946,13 @@
       "approved": true,
       "assetVersion": 1,
       "godotReuse": true,
-      "notes": "The same town, sirens switched to a second pattern. Chapter 3 says the sirens outside CHANGED PITCH and the audio went on playing the first one; this is what changes. Higher centres and a sweep twice as fast, so it reads as an escalation rather than as a different recording.",
+      "notes": "The same town, sirens switched to a second pattern. Chapter 3 says the sirens outside CHANGED PITCH and the audio went on playing the first one; this is what changes. Higher centres and a sweep twice as fast, so it reads as an escalation rather than as a different recording. LOWPASS TIGHTENED so it reads as outside rather than beside them: a wall eats the high end, and the high end is what makes a sound feel close.",
       "recipe": {
         "kind": "siren",
         "seconds": 12,
         "sampleRate": 44100,
         "kbps": 64,
-        "lowpassHz": 1400,
+        "lowpassHz": 520,
         "units": [
           {
             "centreHz": 760,
@@ -973,6 +973,30 @@
             "level": 0.16
           }
         ]
+      }
+    },
+    "sfx_siren_winddown": {
+      "category": "alarm",
+      "source": "procedural",
+      "loop": false,
+      "durationSeconds": 12,
+      "approved": true,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "notes": "A siren losing power: it holds, then its pitch falls away to nothing. Played once at the window, deliberately louder than the distant beds for a few seconds, then gone -- so the silence and the forest can take over. A one-shot, so it is allowed the fades a loop must never have.",
+      "recipe": {
+        "kind": "winddown",
+        "seconds": 12,
+        "sampleRate": 44100,
+        "kbps": 64,
+        "startHz": 560,
+        "holdSeconds": 3.5,
+        "tauSeconds": 2.8,
+        "level": 0.6,
+        "lowpassHz": 900,
+        "fadeInMs": 1500,
+        "fadeOutMs": 5000,
+        "loop": false
       }
     }
   }

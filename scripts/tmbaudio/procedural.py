@@ -55,7 +55,13 @@ def recipe_fingerprint(recipe):
 
 
 def seam_problems(recipe):
-    """Every reason this recipe would not loop cleanly, as plain sentences."""
+    """Every reason this recipe would not loop cleanly, as plain sentences.
+
+    A recipe that does NOT loop is exempt, and that is the point rather than a let-off:
+    a one-shot may fade, and a fade is exactly what a loop must not have.
+    """
+    if recipe.get("loop") is False or recipe.get("kind") == "winddown":
+        return []
     problems = []
     seconds = float(recipe.get("seconds") or 0)
     if seconds <= 0:
@@ -84,8 +90,31 @@ def seam_problems(recipe):
     return problems
 
 
+def winddown_expression(recipe):
+    """A siren losing power: it holds, then its pitch falls away.
+
+    Same principle -- phase is the integral of frequency -- with a frequency that
+    decays instead of sweeping:
+
+        f(t)     = start                       while t < hold
+                 = start * exp(-(t-hold)/tau)  after
+        phase(t) = 2*pi*[ start*min(t,hold) + start*tau*(1 - exp(-max(0,t-hold)/tau)) ]
+
+    Nothing here has to close, because this one is played once.
+    """
+    start = float(recipe["startHz"])
+    hold = float(recipe.get("holdSeconds") or 0)
+    tau = float(recipe.get("tauSeconds") or 2)
+    level = float(recipe.get("level") or 0.5)
+    phase = ("2*PI*(%g*min(t,%g)+%g*(1-exp(-max(0,t-%g)/%g)))"
+             % (start, hold, start * tau, hold, tau))
+    return "%g*sin(%s)" % (level, phase)
+
+
 def expression(recipe):
     """The ffmpeg `aevalsrc` expression: the summed phase integrals, as written above."""
+    if recipe.get("kind") == "winddown":
+        return winddown_expression(recipe)
     parts = []
     for u in recipe.get("units") or []:
         centre = float(u["centreHz"])
@@ -113,7 +142,11 @@ def build_one(registry, asset_id, log=print):
     rate = int(recipe.get("sampleRate") or DEFAULT_SAMPLE_RATE)
     seconds = float(recipe["seconds"])
 
-    src = "aevalsrc=exprs=%s:d=%g:s=%d" % (expression(recipe), seconds, rate)
+    # A comma separates FILTERS in a filtergraph, so any comma inside the expression --
+    # min(), max(), exp() all take them -- has to be escaped or ffmpeg reads the rest of
+    # the formula as a second filter.
+    src = "aevalsrc=exprs=%s:d=%g:s=%d" % (expression(recipe).replace(",", "\\,"),
+                                           seconds, rate)
     chain = []
     if recipe.get("lowpassHz"):
         # Heard through a wall, which is what the manuscript says. A filter, not a
@@ -121,6 +154,18 @@ def build_one(registry, asset_id, log=print):
         chain.append("lowpass=f=%g" % float(recipe["lowpassHz"]))
     if recipe.get("highpassHz"):
         chain.append("highpass=f=%g" % float(recipe["highpassHz"]))
+    # Fades belong ONLY to a one-shot. On a loop they would put back the seam the whole
+    # module exists to remove, so they are refused rather than quietly ignored.
+    fade_in = float(recipe.get("fadeInMs") or 0) / 1000.0
+    fade_out = float(recipe.get("fadeOutMs") or 0) / 1000.0
+    if (fade_in or fade_out) and recipe.get("loop") is not False \
+            and recipe.get("kind") != "winddown":
+        raise RuntimeError("%s: a looping recipe cannot have fades; that is a seam"
+                           % asset_id)
+    if fade_in:
+        chain.append("afade=t=in:st=0:d=%g" % fade_in)
+    if fade_out:
+        chain.append("afade=t=out:st=%g:d=%g" % (max(0.0, seconds - fade_out), fade_out))
 
     tmp = audio_abs + ".part"
     cmd = [ffmpeg(), "-v", "error", "-y", "-f", "lavfi", "-i", src]
