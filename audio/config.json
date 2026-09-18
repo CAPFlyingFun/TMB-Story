@@ -94,7 +94,13 @@
       "spending a call to discover it.",
       "",
       "durationLimitsSeconds.max stays at 20 because 20 is proven for a looping bed; 22",
-      "has never been shown to work and is not worth a call to find out."
+      "has never been shown to work and is not worth a call to find out.",
+      "",
+      "ONE EXCEPTION to the fingerprint line above, and it is deliberate: the `normalize`",
+      "block is NOT part of the fingerprint. Its own comment says why -- a level is baked",
+      "into the file after generation, so changing the target re-encodes what is already",
+      "on disk and never buys the asset again. sfx.fingerprint() names its inputs",
+      "explicitly, which is what keeps that true rather than hopeful."
     ],
     "provider": "elevenlabs-sfx",
     "model": null,
@@ -110,7 +116,31 @@
       "baseBackoffSeconds": 2,
       "requestTimeoutSeconds": 180
     },
-    "promptMaxCharacters": 400
+    "promptMaxCharacters": 400,
+    "normalize": {
+      "_comment": [
+        "Level baked into the asset FILE after generation, because neither prompting nor",
+        "the player can do it. ElevenLabs returns a one-off event at whatever level the",
+        "prompt implies but returns a continuous texture -- room tone, channel hiss, a",
+        "castor rumble, a stream of keystrokes -- near the noise floor whatever the prompt",
+        "says; two rounds of prompt work moved that group about 2 dB. And HTML `volume` is",
+        "capped at 1.0, so a cue gain can only ever attenuate.",
+        "",
+        "So the asset is normalised and the cue gain goes back to being a MIX decision.",
+        "targetRmsDbfs is where a normalised asset lands: loud enough to sit under speech",
+        "at about -22 dBFS without disappearing. peakCeilingDbfs is the harder constraint --",
+        "the applied gain is the smaller of what the target asks and what the peak allows,",
+        "so a transient-heavy one-shot never clips. Raising is the default and attenuation",
+        "is opt-in, so nothing already approved gets quieter by accident.",
+        "",
+        "maxGainDb is a refusal, not a clamp: a file needing more than 40 dB is broken",
+        "rather than quiet, and amplifying it 40 dB would deliver 40 dB of hiss."
+      ],
+      "targetRmsDbfs": -20.0,
+      "peakCeilingDbfs": -1.0,
+      "minChangeDb": 0.5,
+      "maxGainDb": 40.0
+    }
   },
   "mix": {
     "_comment": [

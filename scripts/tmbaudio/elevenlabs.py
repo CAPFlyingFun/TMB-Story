@@ -256,6 +256,12 @@ def generate_one_sfx(plan, sfx_registry, log=print):
             with open(tmp, "wb") as fh:
                 fh.write(data)
             os.replace(tmp, audio_path)
+            # A REGENERATED ASSET IS ITS OWN NEW MASTER. normalize.py keeps the
+            # generated file as `<asset>.source.mp3` and always encodes from that
+            # snapshot so a gain can never stack; leaving a stale snapshot here would
+            # make the next normalise pass work from the file this one replaced.
+            from . import normalize as _norm
+            _norm.clear_source(audio_path)
             cache.write_sidecar(sidecar_path, {
                 "asset": asset_id,
                 "category": plan["category"],

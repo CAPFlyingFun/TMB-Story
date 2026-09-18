@@ -114,6 +114,7 @@ jobs:
 
       - name: Install ffmpeg
         if: inputs.mode != 'dry-run'
+        # Needed by the normalise step below as well as by combine.
         # NOT preinstalled: the ubuntu-24.04 runner image dropped ffmpeg, which is how
         # the first Chapter 1 export came out exactly the length of its own clips with
         # none of the manifest's 60 seconds of pauses in it.
@@ -121,6 +122,21 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg
           ffmpeg -version | head -1
+
+      - name: Normalise the generated sound assets
+        if: inputs.mode != 'dry-run'
+        # FREE, and deliberately not gated on generate_sfx: a level is a property of a
+        # file, not of a run that paid for one, so a normalise pass must be reachable
+        # without buying anything. It decodes each asset, bakes a gain into the mp3 and
+        # keeps the generated file as <asset>.source.mp3, and it never touches a
+        # generation fingerprint -- so nothing here can cause a credit to be spent.
+        #
+        # continue-on-error for the same reason the generate steps have it: this runs
+        # AFTER generation, so a failure here must not skip the commit and throw away
+        # audio that has already been paid for. The measurement step prints the levels
+        # immediately below, which is where a silent failure would show up.
+        continue-on-error: true
+        run: python3 scripts/audio.py normalize-sfx --all
 
       - name: Combine each chapter into one listening file
         if: inputs.mode != 'dry-run'

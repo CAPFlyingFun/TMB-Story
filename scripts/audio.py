@@ -292,6 +292,34 @@ def cmd_generate_sfx(args, reg):
     return 1 if failed else 0
 
 
+def cmd_normalize_sfx(args, reg):
+    """Bake a level into the generated assets. Free: decodes and re-encodes locally,
+    and never touches a generation fingerprint, so no run spends a credit for it."""
+    from tmbaudio import normalize as norm
+    sreg = _sfx_registry(reg)
+    files = mf.chapter_files()
+    if args.all or not args.chapters:
+        wanted = set(sreg.assets)
+    else:
+        wanted = set()
+        for n in parse_range(args.chapters, files):
+            _, resolved, _ = _chapter_cues(n, reg, sreg)
+            wanted.update(c["asset"] for c in resolved)
+    if args.asset:
+        if args.asset not in sreg.assets:
+            print("no such asset: %s" % args.asset)
+            return 1
+        wanted = {args.asset}
+    try:
+        done, failed = norm.normalize_assets(
+            sreg, wanted, force=args.force, allow_attenuation=args.allow_attenuation,
+            dry_run=args.dry_run)
+    except RuntimeError as exc:
+        print(exc)
+        return 1
+    return 1 if failed else 0
+
+
 def cmd_voices(args, reg):
     print("%-30s %-10s %-26s %s" % ("speaker", "audioKey", "voice id", "game export"))
     for sid, s in reg.speakers.items():
@@ -421,7 +449,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description="TMB audio pipeline")
     sub = ap.add_subparsers(dest="cmd", required=True)
     for name in ("parse", "validate", "generate", "combine", "export-game",
-                 "cues", "sfx", "generate-sfx"):
+                 "cues", "sfx", "generate-sfx", "normalize-sfx"):
         p = sub.add_parser(name)
         p.add_argument("--chapters", help="e.g. 1, 1-3, 1,3")
         if name == "validate":
@@ -443,6 +471,18 @@ def main(argv=None):
         if name == "cues":
             p.add_argument("--timestamps", action="store_true",
                            help="approximate clock times, for human review only")
+        if name == "normalize-sfx":
+            p.add_argument("--all", action="store_true",
+                           help="every registered asset, not only the cued ones")
+            p.add_argument("--asset", metavar="ASSET_ID", default=None,
+                           help="normalise one asset only")
+            p.add_argument("--force", action="store_true",
+                           help="redo assets already normalised at this target")
+            p.add_argument("--allow-attenuation", action="store_true",
+                           help="also turn DOWN assets above the target (off by default: "
+                                "nothing already approved gets quieter by accident)")
+            p.add_argument("--dry-run", action="store_true",
+                           help="show the gains; writes nothing")
         if name == "generate-sfx":
             p.add_argument("--all", action="store_true",
                            help="every registered asset, not only the cued ones")
@@ -457,6 +497,7 @@ def main(argv=None):
         "parse": cmd_parse, "validate": cmd_validate, "generate": cmd_generate,
         "combine": cmd_combine, "export-game": cmd_export_game, "voices": cmd_voices,
         "cues": cmd_cues, "sfx": cmd_sfx, "generate-sfx": cmd_generate_sfx,
+        "normalize-sfx": cmd_normalize_sfx,
     }
     return handlers[args.cmd](args, reg) or 0
 

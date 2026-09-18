@@ -22,6 +22,7 @@ sys.path.insert(0, os.path.dirname(HERE))          # scripts/
 from tmbaudio import cache, elevenlabs, manifest as mf, parse          # noqa: E402
 from tmbaudio import sfx as sfxmod                                     # noqa: E402
 from tmbaudio import combine as combinemod, drama                      # noqa: E402
+from tmbaudio import normalize as normmod                              # noqa: E402
 from tmbaudio.parse import clip_id, split_paragraph                    # noqa: E402
 from tmbaudio.registry import NARRATOR, REVIEW, SYSTEM, Registry       # noqa: E402
 
@@ -1314,6 +1315,199 @@ class WorkflowTests(unittest.TestCase):
             self.assertTrue(line.startswith("ELEVENLABS_API_KEY:"),
                             "the secret may only be bound to an env var, never pasted "
                             "into a command where a log could capture it: " + line)
+
+
+# ---- normalisation ---------------------------------------------------------
+# No ffmpeg and no audio. The fake below stands in for BOTH the decoder and the
+# encoder, carrying a level in the file's own bytes, so the tests exercise the real
+# decision-making and the real file handling rather than a description of them.
+
+def fake_file(rms, peak):
+    return ("LEVEL rms=%.2f peak=%.2f" % (rms, peak)).encode()
+
+
+def read_level(path):
+    text = open(path, "rb").read().decode()
+    rms = float(text.split("rms=")[1].split()[0])
+    peak = float(text.split("peak=")[1].split()[0])
+    return peak, rms, 3.0
+
+
+class NormalizeMathTests(unittest.TestCase):
+    """The gain is a decision with two constraints, and the tighter one wins."""
+
+    CONF = dict(normmod.DEFAULTS)
+
+    def test_rms_target_when_there_is_headroom(self):
+        applied, why = normmod.gain_for(-40.0, -50.0, self.CONF)
+        self.assertEqual(applied, 30.0)          # -50 -> -20
+        self.assertEqual(why, "rms target")
+
+    def test_peak_ceiling_wins_over_the_rms_target(self):
+        # A transient-heavy one-shot: quiet on average, already loud at its peak.
+        applied, why = normmod.gain_for(-6.0, -40.0, self.CONF)
+        self.assertEqual(applied, 5.0)           # -6 -> -1, not -40 -> -20
+        self.assertEqual(why, "peak ceiling")
+
+    def test_raise_only_by_default(self):
+        applied, why = normmod.gain_for(-3.0, -11.0, self.CONF)
+        self.assertEqual(applied, 0.0)
+        self.assertIn("raise-only", why)
+
+    def test_attenuation_when_explicitly_allowed(self):
+        applied, _ = normmod.gain_for(-30.0, -11.0, self.CONF, allow_attenuation=True)
+        self.assertEqual(applied, -9.0)
+
+    def test_a_file_needing_absurd_gain_is_refused_not_amplified(self):
+        applied, why = normmod.gain_for(-90.0, -95.0, self.CONF)
+        self.assertEqual(applied, 0.0)
+        self.assertIn("broken asset", why)
+
+    def test_close_enough_is_left_alone(self):
+        applied, why = normmod.gain_for(-10.0, -20.2, self.CONF)
+        self.assertEqual(applied, 0.0)
+        self.assertIn("within", why)
+
+    def test_silence_is_not_divided_by(self):
+        applied, why = normmod.gain_for(float("-inf"), float("-inf"), self.CONF)
+        self.assertEqual(applied, 0.0)
+        self.assertIn("silent", why)
+
+    def test_encode_args_follow_the_registry_format(self):
+        self.assertEqual(normmod.encode_args("mp3_44100_128"),
+                         ["-ar", "44100", "-ac", "1", "-b:a", "128k"])
+        self.assertEqual(normmod.encode_args("mp3_22050_64"),
+                         ["-ar", "22050", "-ac", "1", "-b:a", "64k"])
+        # An unparseable format must not produce a broken ffmpeg command line.
+        self.assertEqual(normmod.encode_args("weird"),
+                         ["-ar", "44100", "-ac", "1", "-b:a", "128k"])
+
+    def test_settings_come_from_the_registry_when_present(self):
+        sreg = sfx_reg()
+        sreg.config["sfx"]["normalize"] = {"targetRmsDbfs": -14.0, "_comment": ["x"]}
+        conf = normmod.settings(sreg)
+        self.assertEqual(conf["targetRmsDbfs"], -14.0)
+        self.assertEqual(conf["peakCeilingDbfs"], normmod.DEFAULTS["peakCeilingDbfs"])
+        self.assertNotIn("_comment", conf)
+
+
+class NormalizeFileTests(unittest.TestCase):
+    """The master is kept, the gain never stacks, and no credit is ever implied."""
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self.sreg = sfx_reg()
+        self._sfx_dir = sfxmod.SFX_DIR
+        sfxmod.SFX_DIR = os.path.join(self.dir, "sfx")
+        self._measure, self._ffmpeg, self._run = (
+            normmod.measure, normmod.ffmpeg, normmod.subprocess.run)
+        normmod.measure = read_level
+        normmod.ffmpeg = lambda: "ffmpeg"
+        self.encodes = []
+
+        def fake_run(cmd, **kw):
+            gain = float([a for a in cmd if a.startswith("volume=")][0][7:-2])
+            src = cmd[cmd.index("-i") + 1]
+            peak, rms, _ = read_level(src)
+            self.encodes.append((src, gain))
+            with open(cmd[-1], "wb") as fh:
+                fh.write(fake_file(rms + gain, peak + gain))
+            return None
+        normmod.subprocess.run = fake_run
+
+    def tearDown(self):
+        normmod.measure, normmod.ffmpeg = self._measure, self._ffmpeg
+        normmod.subprocess.run = self._run
+        sfxmod.SFX_DIR = self._sfx_dir
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def _place(self, asset_id, rms, peak):
+        audio, sidecar = sfxmod.asset_paths(self.sreg, asset_id)
+        os.makedirs(os.path.dirname(audio), exist_ok=True)
+        with open(audio, "wb") as fh:
+            fh.write(fake_file(rms, peak))
+        plan = sfxmod.plan_asset(self.sreg, asset_id)
+        cache.write_sidecar(sidecar, {"asset": asset_id, "fingerprint": plan["fingerprint"],
+                                      "bytes": os.path.getsize(audio)})
+        return audio, sidecar
+
+    def test_normalises_and_keeps_the_generated_master(self):
+        audio, sidecar = self._place("sfx_denied", rms=-50.0, peak=-40.0)
+        done, failed = normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        self.assertEqual((done, failed), (1, 0))
+        self.assertTrue(os.path.isfile(normmod.source_path(audio)),
+                        "the generated file must be kept as the master")
+        self.assertEqual(read_level(normmod.source_path(audio))[1], -50.0,
+                         "the master keeps the level it was generated at")
+        self.assertEqual(read_level(audio)[1], -20.0, "the served file hits the target")
+        block = cache.read_sidecar(sidecar)["normalize"]
+        self.assertEqual(block["appliedDb"], 30.0)
+        self.assertEqual(block["resultRmsDbfs"], -20.0)
+        self.assertEqual(block["limitedBy"], "rms target")
+
+    def test_the_gain_never_stacks(self):
+        audio, _ = self._place("sfx_denied", rms=-50.0, peak=-40.0)
+        normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        normmod.normalize_assets(self.sreg, ["sfx_denied"], force=True, log=lambda *a: None)
+        self.assertEqual(read_level(audio)[1], -20.0,
+                         "a second pass must re-derive from the master, not add to the "
+                         "file it already lifted")
+        self.assertTrue(all(src.endswith(normmod.SOURCE_SUFFIX)
+                            for src in [s for s, _ in self.encodes][1:]),
+                        "every pass after the first encodes from the snapshot")
+
+    def test_second_run_is_a_no_op_without_force(self):
+        self._place("sfx_denied", rms=-50.0, peak=-40.0)
+        normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        done, failed = normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        self.assertEqual((done, failed), (0, 0))
+        self.assertEqual(len(self.encodes), 1)
+
+    def test_a_changed_target_re_plans_without_force(self):
+        self._place("sfx_denied", rms=-50.0, peak=-40.0)
+        normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        self.sreg.config["sfx"]["normalize"] = {"targetRmsDbfs": -16.0}
+        done, _ = normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        self.assertEqual(done, 1, "a new target is a new decision, not a cached one")
+
+    def test_normalising_never_makes_an_asset_look_uncached(self):
+        audio, sidecar = self._place("sfx_denied", rms=-50.0, peak=-40.0)
+        before = cache.read_sidecar(sidecar)["fingerprint"]
+        normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        after = cache.read_sidecar(sidecar)
+        self.assertEqual(after["fingerprint"], before,
+                         "normalising is not generating: a changed fingerprint would "
+                         "buy the asset again on the next run")
+        plan = sfxmod.plan_asset(self.sreg, "sfx_denied")
+        self.assertTrue(cache.is_cached(audio, sidecar, plan["fingerprint"]))
+
+    def test_dry_run_writes_nothing(self):
+        audio, sidecar = self._place("sfx_denied", rms=-50.0, peak=-40.0)
+        normmod.normalize_assets(self.sreg, ["sfx_denied"], dry_run=True, log=lambda *a: None)
+        self.assertEqual(self.encodes, [])
+        self.assertFalse(os.path.isfile(normmod.source_path(audio)))
+        self.assertNotIn("normalize", cache.read_sidecar(sidecar))
+
+    def test_regenerating_an_asset_drops_the_stale_master(self):
+        audio, _ = self._place("sfx_denied", rms=-50.0, peak=-40.0)
+        normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        self.assertTrue(os.path.isfile(normmod.source_path(audio)))
+        self.assertTrue(normmod.clear_source(audio))
+        self.assertFalse(os.path.isfile(normmod.source_path(audio)),
+                         "a regenerated asset is its own new master")
+
+    def test_the_generator_clears_the_master_itself(self):
+        src = open(os.path.join(os.path.dirname(os.path.abspath(normmod.__file__)),
+                                "elevenlabs.py"), encoding="utf-8").read()
+        self.assertIn("clear_source(audio_path)", src,
+                      "generate_one_sfx must drop the snapshot, or the next normalise "
+                      "pass would work from the file it just replaced")
+
+    def test_an_ungenerated_or_supplied_asset_is_left_alone(self):
+        conf = normmod.settings(self.sreg)
+        plan = normmod.plan_one(self.sreg, "sfx_denied", conf)
+        self.assertEqual(plan["action"], "skip")
+        self.assertIn("not generated yet", plan["reason"])
 
 
 if __name__ == "__main__":
