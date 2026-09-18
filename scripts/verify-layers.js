@@ -294,6 +294,62 @@ check("the ambience bed is unaffected", "ch01-005-lab-bed" in bedsPlaying());
 check("other one-shots still fire", oneShotsFired().length > 0);
 console.log("");
 
+// ---- 7b. the listener's own volume ---------------------------------------
+/* A cue's GAIN is the story's mix and belongs to the cue sheet. A layer's VOLUME is
+   the listener's and belongs to the listener. These check that the two multiply and
+   never overwrite one another -- which is the whole reason the volume is a separate
+   number instead of the sliders editing the gains. */
+console.log("7b. Layer volume");
+reset();
+L.setVolume("ambience", 1); L.setVolume("sfx", 1);
+await walk(0, alarm.order + 1);
+const fullBeds = bedsPlaying();
+const fullShots = live.filter((e) => !e.loop && e.volume > 0).length;
+
+reset();
+L.setVolume("ambience", 0.5);
+await walk(0, alarm.order + 1);
+const halfBeds = bedsPlaying();
+check("a bed at 50% is half its cue gain, not half the manifest",
+      Object.keys(fullBeds).every((id) => {
+        const c = cue(id);
+        if (c.category !== "ambience") return true;
+        return Math.abs(halfBeds[id] - fullBeds[id] * 0.5) < 0.002;
+      }),
+      "ambience beds: " + JSON.stringify(halfBeds));
+check("an sfx-layer bed is untouched by the ambience slider",
+      Object.keys(fullBeds).every((id) => {
+        const c = cue(id);
+        if (c.category === "ambience") return true;
+        return Math.abs(halfBeds[id] - fullBeds[id]) < 0.002;
+      }));
+check("the cue sheet itself is never edited",
+      manifest.cues.every((c) => typeof c.gain === "number" && c.gain > 0 && c.gain <= 1),
+      "a slider that wrote back to the manifest would change the story's mix");
+
+reset();
+L.setVolume("sfx", 0);
+await walk(0, alarm.order + 1);
+check("sfx at 0% fires no one-shot and fetches nothing for it",
+      oneShotsFired().length === 0 && fullShots > 0,
+      "a slider at zero is a mute, and a mute should not download audio");
+check("ambience still sounds with the sfx slider at zero",
+      "ch01-005-lab-bed" in bedsPlaying());
+
+L.setVolume("ambience", 1); L.setVolume("sfx", 1);
+reset();
+await walk(0, alarm.order + 1);
+check("putting the sliders back restores every level",
+      JSON.stringify(bedsPlaying()) === JSON.stringify(fullBeds));
+check("an out-of-range volume is clamped rather than trusted",
+      (L.setVolume("ambience", 5), L.volume("ambience") === 1) &&
+      (L.setVolume("ambience", -3), L.volume("ambience") === 0));
+L.setVolume("ambience", 1);
+check("an unknown layer name is ignored",
+      (L.setVolume("voices", 0.2), L.volume("voices") === 1),
+      "voices are the player's, not the layer module's");
+console.log("");
+
 // ---- 8. the same module against chapters 2 and 3 -------------------------
 /* Sections 1-7 name chapter 1's cues on purpose: they check particular moments of a
    particular chapter. This section checks what has to hold in EVERY chapter, so a cue

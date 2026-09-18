@@ -1577,5 +1577,131 @@ class NormalizeOvershootTests(NormalizeFileTests):
                          "re-encoding every time")
 
 
+class BrowserExportAgreesWithFfmpegTests(unittest.TestCase):
+    """reader/export.js and drama.py must place every cue at the same instant.
+
+    The download rebuilds the mix in the browser so it can carry the listener's own
+    volumes, which means there are now TWO renderers for one chapter. Two renderers
+    that disagree are worse than one, so this drives the REAL reader/export.js with
+    the same timings drama.py computes and compares the answers to the microsecond.
+
+    No audio and no ffmpeg: the clip durations are supplied, which is exactly the
+    thing the browser gets from decodeAudioData and Python gets from an mp3 header.
+    """
+
+    DURATIONS = [1.5, 0.75, 2.25, 3.0, 0.5, 1.125]
+
+    def setUp(self):
+        if not shutil.which("node"):
+            self.skipTest("node is not installed")
+        self.dir = tempfile.mkdtemp()
+
+    def tearDown(self):
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def _manifest(self):
+        segs = []
+        for i, dur in enumerate(self.DURATIONS):
+            segs.append({"order": i, "audio": "clip-%d.mp3" % i,
+                         "pauseBeforeMs": 0 if i == 0 else 250 * (i % 3 + 1),
+                         "speaker": "narrator"})
+        cues = [
+            {"cueId": "c-before", "asset": "a", "category": "foley", "layer": "sfx",
+             "timing": "before", "order": 2, "gain": 0.3, "audio": "a.mp3"},
+            {"cueId": "c-during", "asset": "a", "category": "foley", "layer": "sfx",
+             "timing": "during", "order": 3, "offsetMs": 400, "gain": 0.3, "audio": "a.mp3"},
+            {"cueId": "c-after", "asset": "a", "category": "foley", "layer": "sfx",
+             "timing": "after", "order": 4, "gain": 0.3, "audio": "a.mp3"},
+            {"cueId": "c-before-first", "asset": "a", "category": "foley", "layer": "sfx",
+             "timing": "before", "order": 0, "gain": 0.3, "audio": "a.mp3"},
+            {"cueId": "c-bed", "asset": "b", "category": "ambience", "layer": "ambience",
+             "timing": "before", "order": 1, "stopOrder": 5, "gain": 0.1, "audio": "b.mp3"},
+        ]
+        return {"chapter": 1, "segments": segs, "cues": cues, "mix": {}}
+
+    def _python_side(self, manifest):
+        starts, ends, total = {}, {}, 0.0
+        for seg, dur in zip(manifest["segments"], self.DURATIONS):
+            total += (seg.get("pauseBeforeMs") or 0) / 1000.0
+            starts[seg["order"]] = total
+            total += dur
+            ends[seg["order"]] = total
+        cues = {c["cueId"]: drama.cue_start(c, manifest, starts, ends)
+                for c in manifest["cues"]}
+        return starts, ends, total, cues
+
+    def _js_side(self, manifest):
+        script = """
+const fs=require('fs'),vm=require('vm');
+const sandbox={window:{},console:console};sandbox.globalThis=sandbox;
+vm.createContext(sandbox);
+vm.runInContext(fs.readFileSync(process.argv[2],'utf8'),sandbox);
+const T=sandbox.window.TMBExport._internals;
+const manifest=JSON.parse(fs.readFileSync(process.argv[3],'utf8'));
+const durs=JSON.parse(fs.readFileSync(process.argv[4],'utf8'));
+const buffers={};manifest.segments.forEach((s,i)=>{buffers[s.audio]={duration:durs[i]};});
+const tl=T.timeline(manifest,buffers);
+const cues={};manifest.cues.forEach(c=>{cues[c.cueId]=T.cueStart(c,manifest,tl);});
+process.stdout.write(JSON.stringify({starts:tl.starts,ends:tl.ends,total:tl.total,cues}));
+"""
+        runner = os.path.join(self.dir, "run.js")
+        mpath = os.path.join(self.dir, "m.json")
+        dpath = os.path.join(self.dir, "d.json")
+        with open(runner, "w", encoding="utf-8") as fh:
+            fh.write(script)
+        with open(mpath, "w", encoding="utf-8") as fh:
+            json.dump(manifest, fh)
+        with open(dpath, "w", encoding="utf-8") as fh:
+            json.dump(self.DURATIONS, fh)
+        root = os.path.dirname(os.path.dirname(HERE))
+        out = subprocess.run(
+            ["node", runner, os.path.join(root, "reader", "export.js"), mpath, dpath],
+            capture_output=True, text=True, check=True)
+        return json.loads(out.stdout)
+
+    def test_the_two_renderers_agree_on_every_time(self):
+        manifest = self._manifest()
+        starts, ends, total, cues = self._python_side(manifest)
+        js = self._js_side(manifest)
+        self.assertAlmostEqual(total, js["total"], places=9,
+                               msg="the chapters would be different lengths")
+        for order in starts:
+            self.assertAlmostEqual(starts[order], js["starts"][str(order)], places=9,
+                                   msg="segment %s starts in a different place" % order)
+            self.assertAlmostEqual(ends[order], js["ends"][str(order)], places=9)
+        for cue_id, when in cues.items():
+            self.assertAlmostEqual(when, js["cues"][cue_id], places=9,
+                                   msg="%s lands somewhere else in the browser" % cue_id)
+
+    def test_before_really_means_before(self):
+        """The rule the whole cue sheet's reasoning rests on."""
+        manifest = self._manifest()
+        _, _, _, cues = self._python_side(manifest)
+        js = self._js_side(manifest)
+        starts = js["starts"]
+        self.assertLess(js["cues"]["c-before"], starts["2"],
+                        "a `before` cue must sound in the gap, not on top of the line")
+        self.assertEqual(js["cues"]["c-before-first"], 0.0,
+                         "the first segment has no gap to back into, so it clamps at 0")
+        self.assertAlmostEqual(js["cues"]["c-during"], starts["3"] + 0.4, places=9)
+        self.assertAlmostEqual(js["cues"]["c-after"], js["ends"]["4"], places=9)
+        self.assertEqual(set(cues), set(js["cues"]))
+
+    def test_the_page_loads_the_exporter(self):
+        root = os.path.dirname(os.path.dirname(HERE))
+        page = open(os.path.join(root, "index.html"), encoding="utf-8").read()
+        self.assertIn("./reader/export.js", page)
+        self.assertLess(page.index("./reader/export.js"), page.index("./reader/player.js"),
+                        "player.js checks for TMBExport when it renders")
+
+    def test_the_exporter_asks_for_no_key_and_no_remote_host(self):
+        root = os.path.dirname(os.path.dirname(HERE))
+        src = open(os.path.join(root, "reader", "export.js"), encoding="utf-8").read()
+        self.assertNotIn("elevenlabs", src.lower())
+        self.assertNotIn("api_key", src.lower())
+        self.assertNotIn("http://", src)
+        self.assertNotIn("https://", src)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

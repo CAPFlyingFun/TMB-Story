@@ -24,10 +24,35 @@
 
   var LAYERS = ["ambience", "sfx"];
 
+  var STORE = "tmb.layerVolume";
+
+  /* Per-layer volume, 0..1, on top of every cue's own gain. The gain says how loud
+     this sound is IN THE MIX and belongs to the cue sheet; the volume says how loud
+     the listener wants that layer and belongs to the listener. Kept apart so turning
+     the ambience down never edits the story's mix.
+
+     localStorage only, wrapped: it is a per-viewer convenience, it never leaves the
+     browser, and a private window that refuses it must still play the audiobook. */
+  function loadVolumes() {
+    var v = { ambience: 1, sfx: 1 };
+    try {
+      var raw = JSON.parse(window.localStorage.getItem(STORE) || "{}");
+      ["ambience", "sfx"].forEach(function (k) {
+        if (isFinite(parseFloat(raw[k]))) v[k] = clamp01(raw[k]);
+      });
+    } catch (e) {}
+    return v;
+  }
+
+  function saveVolumes() {
+    try { window.localStorage.setItem(STORE, JSON.stringify(state.volume)); } catch (e) {}
+  }
+
   var state = {
     cues: [],
     mix: {},
     enabled: { ambience: true, sfx: true },
+    volume: null,        // filled after clamp01 is defined; see initVolume() below
     beds: {},            // cueId -> {el, cue, target}
     oneShots: [],        // live one-shot elements, reaped when they end
     timers: [],          // pending `during` offsets
@@ -44,6 +69,16 @@
 
   function clamp01(v) {
     return Math.max(0, Math.min(1, num(v, 0)));
+  }
+
+  function initVolume() {
+    if (!state.volume) state.volume = loadVolumes();
+    return state.volume;
+  }
+
+  function volumeFor(cue) {
+    var v = initVolume()[layerOf(cue)];
+    return isFinite(v) ? v : 1;
   }
 
   function duckFor(category) {
@@ -96,7 +131,7 @@
   }
 
   function bedTarget(bed) {
-    var base = clamp01(bed.cue.gain);
+    var base = clamp01(bed.cue.gain * volumeFor(bed.cue));
     return state.speaking ? clamp01(base * duckFor(bed.cue.category)) : base;
   }
 
@@ -149,8 +184,10 @@
   function fire(cue) {
     if (!enabledFor(cue) || state.unavailable[cue.asset]) return;
     var el = makeEl(cue, false);
-    try { el.volume = clamp01(cue.gain); } catch (e) {}
-    if (cue.fadeInMs) { try { el.volume = 0; } catch (e) {} ramp(el, cue.gain, cue.fadeInMs); }
+    var level = clamp01(cue.gain * volumeFor(cue));
+    if (level <= 0) return;                 // a slider at zero is a mute, not a fetch
+    try { el.volume = level; } catch (e) {}
+    if (cue.fadeInMs) { try { el.volume = 0; } catch (e) {} ramp(el, level, cue.fadeInMs); }
     el.addEventListener("ended", function () {
       state.oneShots = state.oneShots.filter(function (x) { return x !== el; });
     });
@@ -204,6 +241,22 @@
     },
 
     isEnabled: function (layer) { return state.enabled[layer] !== false; },
+
+    /* 0..1, remembered per browser. Applied ON TOP of each cue's gain, so a listener
+       can quiet the ambience without the story's mix changing underneath them. */
+    volume: function (layer) {
+      var v = initVolume()[layer];
+      return isFinite(v) ? v : 1;
+    },
+
+    setVolume: function (layer, value) {
+      if (!initVolume().hasOwnProperty(layer)) return;
+      state.volume[layer] = clamp01(value);
+      saveVolumes();
+      // Live beds follow immediately; a one-shot already sounding keeps the level it
+      // started at, which is what a mixing desk does and what sounds least strange.
+      applyDucking();
+    },
 
     setEnabled: function (layer, on) {
       state.enabled[layer] = !!on;

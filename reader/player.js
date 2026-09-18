@@ -11,8 +11,24 @@
 (function () {
   "use strict";
 
+  var VOICE_STORE = "tmb.voiceVolume";
+
+  /* The voice level is the player's, not the layer module's: it multiplies the one
+     <audio> element the chapter plays through. Remembered per browser and wrapped,
+     like the layer volumes, and it deliberately has no OFF -- the audiobook is the
+     thing this page is for. */
+  function loadVoiceVolume() {
+    try {
+      var v = parseFloat(window.localStorage.getItem(VOICE_STORE));
+      if (isFinite(v)) return Math.max(0.1, Math.min(1, v));
+    } catch (e) {}
+    return 1;
+  }
+
   var state = {
     chapter: null,
+    voiceVolume: loadVoiceVolume(),
+    exporting: false,
     manifest: null,
     index: 0,
     playing: false,
@@ -42,6 +58,7 @@
       a.addEventListener("ended", onEnded);
       a.addEventListener("timeupdate", renderProgress);
       a.addEventListener("error", onError);
+      a.volume = state.voiceVolume;
       a.addEventListener("playing", function () {
         var l = layers(); if (l) l.setSpeaking(true);
       });
@@ -195,6 +212,14 @@
     });
   }
 
+  function setVoiceVolume(v) {
+    state.voiceVolume = Math.max(0.1, Math.min(1, v));
+    if (state.audio) state.audio.volume = state.voiceVolume;
+    try { window.localStorage.setItem(VOICE_STORE, String(state.voiceVolume)); } catch (e) {}
+    var out = document.getElementById("listen-vol-voice-out");
+    if (out) out.textContent = Math.round(state.voiceVolume * 100) + "%";
+  }
+
   function setRate(r) {
     state.rate = r;
     if (state.audio) state.audio.playbackRate = r;
@@ -208,15 +233,34 @@
      could silence the audiobook. Ambience and Sound Effects are real toggles, and the
      whole block is absent when a chapter has no cue sheet -- there is nothing to
      switch, and an empty control panel is a worse answer than no panel. */
+  function sliderHtml(id, label, value, min) {
+    return '<div class="listen-vol">' +
+      '<label for="' + id + '">' + label + '</label>' +
+      '<input id="' + id + '" type="range" min="' + min + '" max="100" step="1" value="' +
+        Math.round(value * 100) + '" aria-label="' + label + ' volume">' +
+      '<output id="' + id + '-out">' + Math.round(value * 100) + '%</output></div>';
+  }
+
+  /* Voices is present but has no OFF switch and its slider floors at 10%: it is the
+     reference layer and the thing the page exists for, so it reads as the anchor
+     rather than as a control that could silence the audiobook. Ambience and Sound
+     effects get both a switch and a slider, and the whole block is absent when a
+     chapter has no cue sheet -- an empty control panel is a worse answer than none. */
   function layerControlsHtml() {
     var l = layers();
-    if (!l || !l.has()) return "";
+    var voice = '<div class="listen-vols">' +
+      sliderHtml("listen-vol-voice", "Voices", state.voiceVolume, 10);
+    if (!l || !l.has()) return voice + '</div>';
     var c = l.count();
     var ungenerated = c.ungenerated
       ? '<span class="listen-layer-note">' + c.ungenerated +
         ' of ' + c.assets + ' sound assets not generated yet; those cues are skipped.</span>'
       : '<span class="listen-layer-note">' + c.events + ' cues · ' + c.assets + ' assets</span>';
-    return '<div class="listen-layers" role="group" aria-label="Audio layers">' +
+    return voice +
+      sliderHtml("listen-vol-ambience", "Ambience", l.volume("ambience"), 0) +
+      sliderHtml("listen-vol-sfx", "Sound effects", l.volume("sfx"), 0) +
+      '</div>' +
+      '<div class="listen-layers" role="group" aria-label="Audio layers">' +
       '<span class="listen-layer listen-layer-fixed">' +
         '<input type="checkbox" checked disabled aria-label="Voices (always on)"> Voices</span>' +
       '<label class="listen-layer"><input id="listen-layer-ambience" type="checkbox"' +
@@ -228,11 +272,78 @@
 
   function bindLayerControls() {
     var l = layers();
+    var voice = document.getElementById("listen-vol-voice");
+    if (voice) voice.oninput = function (e) { setVoiceVolume(parseInt(e.target.value, 10) / 100); };
     if (!l || !l.has()) return;
     [["listen-layer-ambience", "ambience"], ["listen-layer-sfx", "sfx"]].forEach(function (pair) {
       var el = document.getElementById(pair[0]);
       if (el) el.onchange = function (e) { l.setEnabled(pair[1], e.target.checked); };
     });
+    ["ambience", "sfx"].forEach(function (layer) {
+      var el = document.getElementById("listen-vol-" + layer);
+      if (!el) return;
+      el.oninput = function (e) {
+        var v = parseInt(e.target.value, 10) / 100;
+        l.setVolume(layer, v);
+        var out = document.getElementById("listen-vol-" + layer + "-out");
+        if (out) out.textContent = Math.round(v * 100) + "%";
+      };
+    });
+  }
+
+  /* ---- download ------------------------------------------------------------
+     Rebuilt in the browser rather than served from audio/exports/, because the point
+     is the listener's own levels. reader/export.js mirrors drama.py's timeline and
+     mixing so the file is the same mix the page just played. */
+  function downloadHtml() {
+    if (!window.TMBExport || !window.TMBExport.available()) return "";
+    var m = state.manifest;
+    var mins = m ? Math.round((m.segments.length * 2.7) / 60) : 0;
+    return '<div class="listen-save">' +
+      '<button id="listen-save" type="button"' + (state.exporting ? " disabled" : "") + '>' +
+        (state.exporting ? "Building…" : "Download this chapter (WAV)") + '</button>' +
+      '<span id="listen-save-note" class="listen-layer-note">' +
+        'Mixed here with the volumes above, so the file matches what you are hearing. ' +
+        'Roughly ' + Math.max(1, mins * 5) + ' MB; best on a computer.</span></div>';
+  }
+
+  function bindDownload() {
+    var btn = document.getElementById("listen-save");
+    if (!btn) return;
+    btn.onclick = function () {
+      var m = state.manifest, l = layers();
+      if (!m || state.exporting) return;
+      state.exporting = true;
+      btn.disabled = true;
+      var note = document.getElementById("listen-save-note");
+      function say(text) { if (note) note.textContent = text; }
+      window.TMBExport.render(m, {
+        volumes: {
+          voice: state.voiceVolume,
+          ambience: l ? l.volume("ambience") : 0,
+          sfx: l ? l.volume("sfx") : 0
+        },
+        enabled: {
+          ambience: l ? l.isEnabled("ambience") : false,
+          sfx: l ? l.isEnabled("sfx") : false
+        }
+      }, function (phase, done, total) {
+        if (phase === "loading") say("Loading audio… " + done + " of " + total);
+        else if (phase === "rendering") say("Mixing the chapter…");
+        else say("Writing the file…");
+      }).then(function (result) {
+        window.TMBExport.save(result.blob,
+          "TMB-chapter-" + String(m.chapter).padStart(2, "0") + "-mix.wav");
+        say("Saved. " + Math.round(result.seconds / 60) + " min, " +
+            window.TMBExport.estimateMb(result.seconds) + " MB.");
+      }).catch(function (err) {
+        say("Could not build the file: " + err.message);
+      }).then(function () {
+        state.exporting = false;
+        btn.disabled = false;
+        btn.textContent = "Download this chapter (WAV)";
+      });
+    };
   }
 
   // ---- rendering -----------------------------------------------------------
@@ -279,6 +390,7 @@
         return '<option value="' + r + '"' + (r === state.rate ? " selected" : "") + '>' + r + '×</option>';
       }).join("") + '</select></label></div>' +
       layerControlsHtml() +
+      downloadHtml() +
       '<input id="listen-seg-bar" class="listen-bar" type="range" min="0" max="100" value="0" ' +
         'aria-label="Position in this segment">' +
       '<p class="listen-meta"><span id="listen-position">Segment ' + (state.index + 1) +
@@ -297,6 +409,7 @@
       if (a && a.duration) a.currentTime = (parseFloat(e.target.value) / 100) * a.duration;
     };
     bindLayerControls();
+    bindDownload();
     renderProgress();
   }
 

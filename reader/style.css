@@ -574,3 +574,44 @@ button {
   .listen-rate { margin-left: 0; width: 100%; }
   .listen-controls button { flex: 1 1 auto; }
 }
+
+/* Volume sliders. One row per layer so the labels line up and a thumb is easy to hit
+   with a thumb; the readout is an <output> so a screen reader announces the change. */
+.listen-vols {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0.9rem 0 0.35rem;
+}
+.listen-vol {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr 3rem;
+  align-items: center;
+  gap: 0.6rem;
+}
+.listen-vol label {
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--ink-soft, #5a5f68);
+}
+.listen-vol input[type="range"] { width: 100%; min-height: 1.6rem; }
+.listen-vol output {
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  color: var(--ink-soft, #5a5f68);
+}
+.listen-save {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.8rem 0 0.4rem;
+}
+.listen-save button { min-height: 2.4rem; }
+.listen-save button[disabled] { opacity: 0.6; cursor: progress; }
+
+@media (max-width: 30rem) {
+  .listen-vol { grid-template-columns: 6rem 1fr 2.6rem; gap: 0.4rem; }
+  .listen-vol label { font-size: 0.8rem; }
+}
