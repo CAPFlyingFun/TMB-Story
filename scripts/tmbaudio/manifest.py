@@ -5,6 +5,7 @@ import os
 import re
 
 from . import cache
+from . import sfx as sfxmod
 from .parse import parse_chapter
 from .registry import NARRATOR, REVIEW, ROOT, SYSTEM
 
@@ -54,7 +55,7 @@ def _pause_for(prev, seg, pauses):
     return pauses.get("dialogue-differentSpeaker", pauses.get("default", 300))
 
 
-def build(number, path, registry, overrides=None):
+def build(number, path, registry, overrides=None, sfx_registry=None):
     parsed = parse_chapter(path, registry, overrides or load_overrides())
     pauses = registry.pauses()
     segments = []
@@ -65,7 +66,7 @@ def build(number, path, registry, overrides=None):
         planned["speakerName"] = registry.name(planned["speaker"])
         segments.append(planned)
         prev = planned
-    return {
+    manifest = {
         "chapter": number,
         "title": parsed["title"],
         "source": cache.rel(path),
@@ -74,6 +75,30 @@ def build(number, path, registry, overrides=None):
         "segmentCount": len(segments),
         "segments": segments,
     }
+    attach_cues(manifest, registry, sfx_registry)
+    return manifest
+
+
+def attach_cues(manifest, registry, sfx_registry=None):
+    """Resolve this chapter's cue sheet into the manifest, or record that there is none.
+
+    Additive on purpose. `segments` keeps its existing shape, so a player that knows
+    nothing about `cues` still plays the voice track exactly as before. Ambience and
+    effects are optional decoration on a voice track that must never depend on them.
+    """
+    try:
+        sreg = sfx_registry if sfx_registry is not None else sfxmod.SfxRegistry(
+            config=registry.config)
+    except (OSError, ValueError):
+        manifest["cues"] = []
+        manifest["cueProblems"] = []
+        return manifest
+    doc = sfxmod.load_cues(manifest["chapter"])
+    resolved, problems = sfxmod.resolve_chapter_cues(manifest["segments"], doc, sreg)
+    manifest["cues"] = resolved
+    manifest["cueProblems"] = problems
+    manifest["mix"] = sreg.mix()
+    return manifest
 
 
 def write(manifest):

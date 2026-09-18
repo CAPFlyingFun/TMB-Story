@@ -1,0 +1,286 @@
+{
+  "_comment": [
+    "Chapter 1 cue sheet -- PROPOSED, awaiting Joshua's approval. Nothing is generated.",
+    "",
+    "A cue says WHEN an asset plays. It never defines the asset; that lives in",
+    "audio/sfx-registry.json and is shared with later chapters and with Godot.",
+    "",
+    "ANCHORS, NOT TIMESTAMPS. Each cue points at a voice segment by its clipId plus",
+    "WHICH occurrence of that clip it is. The occurrence matters: a clipId can appear",
+    "twice in one chapter, and five do here -- \"Yep.\", \"I know.\", \"Jack.\", \"Jack",
+    "nodded.\" and \"Request denied.\" are each one asset heard twice. Regenerating a",
+    "voice clip changes its length but not its identity, and inserting a paragraph",
+    "shifts every absolute time but no anchor, which is why timestamps are computed",
+    "for human review only and are never the synchronisation mechanism.",
+    "",
+    "timing: `before` plays the cue in the gap ahead of that segment, `after` in the",
+    "gap behind it, `during` starts it offsetMs into the segment. A sustained cue",
+    "starts at its anchor and stops at sustain.until.",
+    "",
+    "gain here overrides the category default in audio/config.json. Every number is a",
+    "starting point for Joshua's ear, not a finished mix.",
+    "",
+    "29 events, 20 unique assets. The gaps are deliberate: long stretches of this",
+    "chapter are voices and room tone and nothing else."
+  ],
+  "chapter": 1,
+  "cues": [
+    {
+      "cueId": "ch01-005-lab-bed",
+      "asset": "amb_tombs_lab_night",
+      "anchor": { "clipId": "narrator-0b2f58c70a4c", "occurrence": 1 },
+      "timing": "before",
+      "gain": 0.08,
+      "fadeInMs": 3000,
+      "fadeOutMs": 4000,
+      "sustain": { "until": "chapterEnd", "timing": "after" },
+      "why": "Enters on 'Deep inside one of those laboratories' -- the sentence that puts us in the room -- and never leaves, because the chapter never leaves. Establishes an occupied but near-empty building at night so that every later silence reads as a room and not as dead air."
+    },
+    {
+      "cueId": "ch01-010-first-chirp",
+      "asset": "sfx_console_tone_soft",
+      "anchor": { "clipId": "narrator-7942982ea850", "occurrence": 1 },
+      "timing": "before",
+      "gain": 0.34,
+      "why": "The listener hears the chirp, then the narrator says a warning tone chirped. Putting it first makes the sound the event and the narration the confirmation, which is how the scene actually happens to Jack."
+    },
+    {
+      "cueId": "ch01-011-second-chirp",
+      "asset": "sfx_console_tone_soft",
+      "anchor": { "clipId": "narrator-7942982ea850", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 2600,
+      "gain": 0.5,
+      "why": "The same asset, louder, because the manuscript says the second tone was louder than the first. One generated sound covers both, and the escalation is done with gain rather than with a second file."
+    },
+    {
+      "cueId": "ch01-012-console-erupts",
+      "asset": "sfx_console_alarm_erupt",
+      "anchor": { "clipId": "narrator-7942982ea850", "occurrence": 1 },
+      "timing": "after",
+      "gain": 0.52,
+      "why": "The console erupting is the chapter's inciting sound. It lands in the gap between that narration and the TOMBS warning, so the machine voice arrives out of an alarm that is already going."
+    },
+    {
+      "cueId": "ch01-013-alarm-bed",
+      "asset": "amb_console_alarm_bed",
+      "anchor": { "clipId": "narrator-7942982ea850", "occurrence": 1 },
+      "timing": "after",
+      "gain": 0.2,
+      "fadeInMs": 400,
+      "fadeOutMs": 2500,
+      "sustain": { "until": { "clipId": "jack-bennett-27b114bdd284", "occurrence": 1 }, "timing": "after" },
+      "why": "The alarm does not stop when the sentence does -- the manuscript has the warning repeating and a second alarm sounding later. A low looping bed under the opening carries that, ducks hard beneath speech, and fades out after 'That's impossible', which is where the scene stops shouting and starts being strange."
+    },
+    {
+      "cueId": "ch01-020-chair-startle",
+      "asset": "sfx_chair_roll_fast",
+      "anchor": { "clipId": "narrator-32bdc09c24ff", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 1100,
+      "gain": 0.42,
+      "why": "Gives the alarm a physical consequence in a body rather than only on a screen. It is the one sound in the chapter that tells the listener how hard Jack was asleep."
+    },
+    {
+      "cueId": "ch01-030-jack-types",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": { "clipId": "narrator-93519474e9ea", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 4200,
+      "gain": 0.32,
+      "why": "Lands on 'Jack grabbed the keyboard'. Establishes that he is working the problem with his hands, which is what makes the later moment when the cursor moves by itself frightening."
+    },
+    {
+      "cueId": "ch01-040-second-alarm",
+      "asset": "sfx_alert_warning_hit",
+      "anchor": { "clipId": "narrator-06cb6e60aafc", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 2300,
+      "gain": 0.45,
+      "why": "One sharp hit on 'Another alarm sounded'. Distinct from the opening eruption: this is the system finding something new, not the system panicking."
+    },
+    {
+      "cueId": "ch01-050-directory-opens",
+      "asset": "sfx_system_notify_soft",
+      "anchor": { "clipId": "narrator-1008b9e9b430", "occurrence": 1 },
+      "timing": "before",
+      "gain": 0.36,
+      "why": "The manuscript says the system beeped and a directory opened by itself. A calm, polite notification is more unsettling here than an alarm would be -- the machine is not warning him, it is working."
+    },
+    {
+      "cueId": "ch01-060-terminal-lock",
+      "asset": "sfx_terminal_lock_engage",
+      "anchor": { "clipId": "narrator-c2bcc3f581cf", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 800,
+      "gain": 0.4,
+      "why": "It has to sound like the lock worked, or the terminal coming back on by itself is not a violation."
+    },
+    {
+      "cueId": "ch01-061-terminal-returns",
+      "asset": "sfx_equipment_power_up_soft",
+      "anchor": { "clipId": "narrator-c2bcc3f581cf", "occurrence": 1 },
+      "timing": "after",
+      "gain": 0.34,
+      "why": "Three seconds of black screen and then the machine wakes itself. Placed after the narration so the listener hears the thing happen having just been told it would not."
+    },
+    {
+      "cueId": "ch01-070-intercom-open",
+      "asset": "sfx_intercom_open",
+      "anchor": { "clipId": "jack-bennett-a8a6aa7ae3b3", "occurrence": 1 },
+      "timing": "before",
+      "gain": 0.38,
+      "why": "Jack's 'Sarah?' has to arrive into an open channel, or the listener does not know he is talking to a wall. This is the cue that changes the acoustic space for the next twenty segments."
+    },
+    {
+      "cueId": "ch01-071-channel-bed",
+      "asset": "amb_intercom_channel_open",
+      "anchor": { "clipId": "jack-bennett-a8a6aa7ae3b3", "occurrence": 1 },
+      "timing": "before",
+      "gain": 0.06,
+      "fadeInMs": 200,
+      "fadeOutMs": 600,
+      "sustain": { "until": { "clipId": "narrator-91b25dbe2d24", "occurrence": 1 }, "timing": "before" },
+      "why": "A faint live-channel hiss under the whole intercom exchange is the only way to make Sarah read as remote without filtering her approved voice clips. One asset covers twenty segments and nothing of hers is regenerated."
+    },
+    {
+      "cueId": "ch01-072-static-answers",
+      "asset": "sfx_intercom_static",
+      "anchor": { "clipId": "narrator-d3ceae9f0f0b", "occurrence": 1 },
+      "timing": "before",
+      "gain": 0.42,
+      "why": "The manuscript makes static the answer to his question. It is the scene's reply, so it plays before the line that names it."
+    },
+    {
+      "cueId": "ch01-073-intercom-retap",
+      "asset": "sfx_intercom_open",
+      "anchor": { "clipId": "narrator-ed5637682370", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 500,
+      "gain": 0.34,
+      "why": "'Jack tapped the button again' -- the same asset, slightly quieter. The repeat is the information: he is not getting an answer."
+    },
+    {
+      "cueId": "ch01-080-intercom-close",
+      "asset": "sfx_intercom_close",
+      "anchor": { "clipId": "narrator-91b25dbe2d24", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 700,
+      "gain": 0.34,
+      "why": "Closes the frame cue ch01-070 opened. Without it the listener has no signal that Sarah's channel is gone, and the room he is left alone in is the point of the next four segments."
+    },
+    {
+      "cueId": "ch01-090-file-opens",
+      "asset": "sfx_system_notify_soft",
+      "anchor": { "clipId": "system-49a4bf38c005", "occurrence": 1 },
+      "timing": "before",
+      "gain": 0.36,
+      "why": "'Jack froze as a file opened', then TOMBS says Boundary control. Reusing the same calm notification ties this to the directory opening earlier: it is the same intruder, doing the same unhurried thing."
+    },
+    {
+      "cueId": "ch01-100-door-slides",
+      "asset": "sfx_lab_door_slide",
+      "anchor": { "clipId": "narrator-e2bfa452045f", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 1500,
+      "gain": 0.4,
+      "why": "The manuscript puts the door mid-sentence and behind him. The listener should know someone is in the room a beat before Jack does."
+    },
+    {
+      "cueId": "ch01-101-sarah-enters",
+      "asset": "sfx_footsteps_sarah_sneakers",
+      "anchor": { "clipId": "narrator-1fe67963523b", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 300,
+      "gain": 0.3,
+      "why": "Someone entering is one of the few things footsteps are for. Soft rubber soles on a hard floor, because Chapter 1 canon puts her in gray sneakers."
+    },
+    {
+      "cueId": "ch01-110-sarah-crosses",
+      "asset": "sfx_footsteps_sarah_sneakers",
+      "anchor": { "clipId": "narrator-98744cc92aa4", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 900,
+      "gain": 0.22,
+      "why": "'as she walked over' -- the second and last time the chapter hears her walk. It moves her from the doorway to Jack's shoulder, which is where she stays."
+    },
+    {
+      "cueId": "ch01-120-second-chair",
+      "asset": "sfx_chair_roll_slow",
+      "anchor": { "clipId": "narrator-a1d352c4ee9f", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 400,
+      "gain": 0.34,
+      "why": "Two people arranging themselves around one workstation. The chairs are how the chapter shows them working as a pair, and it is worth hearing once."
+    },
+    {
+      "cueId": "ch01-121-jack-makes-room",
+      "asset": "sfx_chair_roll_slow",
+      "anchor": { "clipId": "narrator-0444653f442f", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 200,
+      "gain": 0.3,
+      "why": "The same asset closing the small joke that started with 'Move.' Jack gives up the keyboard, physically."
+    },
+    {
+      "cueId": "ch01-130-sarah-types",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": { "clipId": "narrator-2fd1747b8b44", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 300,
+      "gain": 0.32,
+      "why": "'Sarah immediately started typing' -- the moment the competent one takes over. Marking who has the keyboard is the scene's quiet shift of authority."
+    },
+    {
+      "cueId": "ch01-140-sarah-resumes",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": { "clipId": "narrator-75a8844f5b06", "occurrence": 1 },
+      "timing": "during",
+      "offsetMs": 200,
+      "gain": 0.24,
+      "why": "'Sarah returned to the keyboard' after the moment with the baby. Quiet and brief: it restores the working room the banter stepped out of, and it is the last calm sound before the warning tone."
+    },
+    {
+      "cueId": "ch01-150-interrupting-tone",
+      "asset": "sfx_alert_warning_hit",
+      "anchor": { "clipId": "narrator-2525fa15c09f", "occurrence": 1 },
+      "timing": "before",
+      "gain": 0.48,
+      "why": "The manuscript says a new warning tone interrupted them, so the tone must arrive before the narration, into the middle of the warmest moment in the chapter. Same asset as the earlier alert -- the same machine is calling again."
+    },
+    {
+      "cueId": "ch01-151-array-rise",
+      "asset": "amb_tombs_array_power_rise",
+      "anchor": { "clipId": "system-f6a28699a3b1", "occurrence": 1 },
+      "timing": "after",
+      "gain": 0.09,
+      "fadeInMs": 6000,
+      "sustain": { "until": "chapterEnd", "timing": "after" },
+      "why": "From the remote initialization request onward something enormous is waking up, and it never stops. A slow low rise under the last thirty segments carries the chapter's dread without a single extra beep, and it is where the TOMBS Array's sound identity begins."
+    },
+    {
+      "cueId": "ch01-160-denied-first",
+      "asset": "sfx_access_denied_tone",
+      "anchor": { "clipId": "system-0fe0cf2a5742", "occurrence": 1 },
+      "timing": "before",
+      "gain": 0.42,
+      "why": "The refusal tone before TOMBS says Request denied, so the system rejects him and then explains itself."
+    },
+    {
+      "cueId": "ch01-161-denied-second",
+      "asset": "sfx_access_denied_tone",
+      "anchor": { "clipId": "system-0fe0cf2a5742", "occurrence": 2 },
+      "timing": "before",
+      "gain": 0.42,
+      "why": "The second occurrence of the same clip, and the same asset again. Hearing the identical refusal twice is the information: he tried again and got exactly nowhere. This cue is why anchors carry an occurrence number."
+    },
+    {
+      "cueId": "ch01-170-revoked",
+      "asset": "sfx_access_revoked_tone",
+      "anchor": { "clipId": "system-28a18477a67e", "occurrence": 1 },
+      "timing": "before",
+      "gain": 0.46,
+      "why": "The chapter's turn. Being locked out is not the same event as being refused, and it should not sound like it -- heavier, lower, final. After this the sound design gets out of the way and leaves the last nine segments to two voices and the rising array."
+    }
+  ]
+}

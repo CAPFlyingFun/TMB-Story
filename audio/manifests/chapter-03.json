@@ -2378,7 +2378,7 @@
       "voiceVersion": 1,
       "fingerprint": "dc8830e919a0ee9f5d6320ac77e95e143717c8dcb7137017bc33f1655bea6e03",
       "audio": "audio/clips/narrator/narrator-b5f5252f998d.mp3",
-      "cached": false,
+      "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator"
     },
@@ -3300,5 +3300,32 @@
       "pauseBeforeMs": 260,
       "speakerName": "Narrator"
     }
-  ]
+  ],
+  "cues": [],
+  "cueProblems": [],
+  "mix": {
+    "layers": {
+      "voice": true,
+      "ambience": true,
+      "sfx": true
+    },
+    "categoryGain": {
+      "ambience": 0.1,
+      "foley": 0.45,
+      "interface": 0.4,
+      "alarm": 0.5,
+      "system": 0.45
+    },
+    "duckUnderSpeechTo": {
+      "ambience": 0.55,
+      "alarm": 0.4,
+      "system": 0.5,
+      "interface": 1.0,
+      "foley": 1.0
+    },
+    "defaultFadeMs": {
+      "in": 800,
+      "out": 1200
+    }
+  }
 }

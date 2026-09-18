@@ -558,6 +558,18 @@ button {
   color: #8B7E6E; font-size: .9rem; }
 .listen-bar { width: 100%; margin: .3rem 0 .2rem; accent-color: #D4A853; height: 1.6rem; }
 .listen-meta { color: #8B7E6E; font-size: .88rem; margin: 0; }
+
+/* Audio layers: voices, ambience, sound effects. */
+.listen-layers {
+  display: flex; gap: .9rem; align-items: center; flex-wrap: wrap;
+  margin: .2rem 0 .8rem; font-size: .9rem; color: #C4B49A;
+}
+.listen-layer { display: inline-flex; gap: .35rem; align-items: center;
+  min-height: 2.2rem; cursor: pointer; }
+.listen-layer input { accent-color: #D4A853; width: 1.05rem; height: 1.05rem; }
+.listen-layer-fixed { color: #8B7E6E; cursor: default; }
+.listen-layer-fixed input { cursor: default; }
+.listen-layer-note { color: #8B7E6E; font-size: .84rem; margin-left: auto; }
 @media (max-width: 30rem) {
   .listen-rate { margin-left: 0; width: 100%; }
   .listen-controls button { flex: 1 1 auto; }

@@ -20,6 +20,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))          # scripts/
 
 from tmbaudio import cache, elevenlabs, manifest as mf, parse          # noqa: E402
+from tmbaudio import sfx as sfxmod                                     # noqa: E402
 from tmbaudio.parse import clip_id, split_paragraph                    # noqa: E402
 from tmbaudio.registry import NARRATOR, REVIEW, SYSTEM, Registry       # noqa: E402
 
@@ -388,6 +389,606 @@ class ExportTests(unittest.TestCase):
         self.assertTrue(s["inferred"], "inferred attributions must be surfaced for review")
 
 
+# ---------------------------------------------------------------------------
+# Sound effects and ambience
+# ---------------------------------------------------------------------------
+SFX_DATA = {
+    "sfxVersion": 1,
+    "characters": {
+        "sarah-bennett": {"footwear": "gray sneakers",
+                          "footstepProfile": "adult-sneakers-lighter",
+                          "footstepAsset": "sfx_footsteps_sarah_sneakers"},
+        "jack-bennett": {"footwear": "gray sneakers",
+                         "footstepProfile": "adult-sneakers-heavier",
+                         "footstepAsset": None},
+    },
+    "assets": {
+        "amb_lab_night": {"category": "ambience", "source": "generated",
+                          "prompt": "quiet lab room tone", "durationSeconds": 22,
+                          "loop": True, "promptInfluence": 0.3, "assetVersion": 1,
+                          "godotReuse": True},
+        "sfx_chair_roll_fast": {"category": "foley", "source": "generated",
+                                "prompt": "chair shoved back", "durationSeconds": 2,
+                                "loop": False, "promptInfluence": 0.35,
+                                "assetVersion": 1, "godotReuse": True},
+        "sfx_denied": {"category": "system", "source": "generated",
+                       "prompt": "rejection tone", "durationSeconds": 1.5,
+                       "loop": False, "promptInfluence": 0.4, "assetVersion": 1,
+                       "godotReuse": True},
+        "sfx_narration_only": {"category": "interface", "source": "generated",
+                               "prompt": "page turn", "durationSeconds": 1,
+                               "loop": False, "promptInfluence": 0.3,
+                               "assetVersion": 1, "godotReuse": False},
+        "sfx_handmade": {"category": "foley", "source": "supplied",
+                         "loop": False, "assetVersion": 1, "godotReuse": True},
+    },
+}
+
+SFX_CFG = dict(CFG)
+SFX_CFG["sfx"] = {
+    "provider": "elevenlabs-sfx", "model": None, "outputFormat": "mp3_44100_128",
+    "defaultPromptInfluence": 0.3,
+    "durationLimitsSeconds": {"min": 0.5, "max": 22},
+    "generation": {"concurrency": 1, "maxRetries": 2, "baseBackoffSeconds": 0,
+                   "requestTimeoutSeconds": 5},
+}
+SFX_CFG["mix"] = {
+    "layers": {"voice": True, "ambience": True, "sfx": True},
+    "categoryGain": {"ambience": 0.10, "foley": 0.45, "interface": 0.40,
+                     "alarm": 0.50, "system": 0.45},
+    "duckUnderSpeechTo": {"ambience": 0.55, "alarm": 0.40},
+    "defaultFadeMs": {"in": 800, "out": 1200},
+}
+
+
+def sfx_reg():
+    return sfxmod.SfxRegistry(data=json.loads(json.dumps(SFX_DATA)),
+                              config=json.loads(json.dumps(SFX_CFG)))
+
+
+class SfxIdentityTests(unittest.TestCase):
+    """An asset is its name. Where it plays is somebody else's document."""
+
+    def setUp(self):
+        self.reg = sfx_reg()
+
+    def test_asset_id_is_not_derived_from_a_chapter_or_a_position(self):
+        plan = sfxmod.plan_asset(self.reg, "sfx_chair_roll_fast")
+        self.assertEqual(plan["asset"], "sfx_chair_roll_fast")
+        self.assertNotIn("chapter", plan["audio"])
+        self.assertNotIn("01", plan["audio"],
+                         "an asset path must not encode the chapter that first used it")
+        self.assertEqual(plan["audio"], "audio/sfx/foley/sfx_chair_roll_fast.mp3")
+
+    def test_layer_comes_from_the_category_not_from_looping(self):
+        """A looping alarm is still an effect. Turning ambience off must not mute it."""
+        data = json.loads(json.dumps(SFX_DATA))
+        data["assets"]["amb_alarm"] = {"category": "alarm", "source": "generated",
+                                       "prompt": "alarm bed", "durationSeconds": 12,
+                                       "loop": True, "assetVersion": 1, "godotReuse": True}
+        reg = sfxmod.SfxRegistry(data=data, config=json.loads(json.dumps(SFX_CFG)))
+        self.assertTrue(reg.loops("amb_alarm"))
+        self.assertEqual(reg.layer("amb_alarm"), "sfx")
+        self.assertEqual(reg.layer("amb_lab_night"), "ambience")
+
+    def test_generated_and_supplied_assets_are_distinguishable(self):
+        self.assertTrue(self.reg.is_generated("sfx_chair_roll_fast"))
+        self.assertFalse(self.reg.is_generated("sfx_handmade"))
+
+    def test_character_footstep_profile_is_available_but_optional(self):
+        sarah = self.reg.character_profile("sarah-bennett")
+        jack = self.reg.character_profile("jack-bennett")
+        self.assertEqual(sarah["footstepAsset"], "sfx_footsteps_sarah_sneakers")
+        self.assertIn("sneaker", sarah["footstepProfile"])
+        self.assertNotIn("heel", json.dumps(sarah).lower(),
+                         "Chapter 1 canon puts Sarah in gray sneakers, not heels")
+        self.assertIsNone(jack["footstepAsset"],
+                          "Jack never walks in chapter 1; no asset should be implied")
+
+
+class SfxFingerprintTests(unittest.TestCase):
+    def setUp(self):
+        self.reg = sfx_reg()
+
+    def _fp(self, asset_id):
+        return sfxmod.fingerprint(self.reg.get(asset_id), self.reg.provider(),
+                                  self.reg.model(), self.reg.output_format(),
+                                  self.reg.sfx_version())
+
+    def test_same_inputs_give_the_same_fingerprint(self):
+        self.assertEqual(self._fp("sfx_denied"), self._fp("sfx_denied"))
+
+    def test_reflowing_a_prompt_does_not_invalidate_the_audio(self):
+        a = dict(self.reg.get("sfx_denied"))
+        b = dict(a, prompt="  rejection\n   tone  ")
+        self.assertEqual(
+            sfxmod.fingerprint(a, "p", None, "f", 1),
+            sfxmod.fingerprint(b, "p", None, "f", 1),
+            "whitespace is not a material change to the requested sound")
+
+    def test_each_generation_input_changes_the_fingerprint(self):
+        base = self.reg.get("sfx_denied")
+        original = sfxmod.fingerprint(base, "p", None, "f", 1)
+        for field, value in (("prompt", "a different sound"),
+                             ("durationSeconds", 4),
+                             ("loop", True),
+                             ("promptInfluence", 0.9),
+                             ("assetVersion", 2)):
+            changed = dict(base)
+            changed[field] = value
+            self.assertNotEqual(original, sfxmod.fingerprint(changed, "p", None, "f", 1),
+                                "%s must invalidate the asset" % field)
+        self.assertNotEqual(original, sfxmod.fingerprint(base, "other", None, "f", 1))
+        self.assertNotEqual(original, sfxmod.fingerprint(base, "p", "a-model", "f", 1))
+        self.assertNotEqual(original, sfxmod.fingerprint(base, "p", None, "f", 2),
+                            "the registry-wide sfxVersion must invalidate assets")
+
+    def test_cosmetic_metadata_does_not_cost_a_regeneration(self):
+        base = self.reg.get("sfx_denied")
+        original = sfxmod.fingerprint(base, "p", None, "f", 1)
+        for field, value in (("category", "alarm"), ("godotReuse", False),
+                             ("notes", "a better explanation"), ("approved", True)):
+            self.assertEqual(original,
+                             sfxmod.fingerprint(dict(base, **{field: value}), "p", None, "f", 1),
+                             "%s is not part of the audio and must not invalidate it" % field)
+
+    def test_bumping_one_asset_version_leaves_the_others_alone(self):
+        data = json.loads(json.dumps(SFX_DATA))
+        before = {k: sfxmod.fingerprint(v, "p", None, "f", 1)
+                  for k, v in data["assets"].items() if v.get("prompt")}
+        data["assets"]["sfx_denied"]["assetVersion"] = 2
+        after = {k: sfxmod.fingerprint(v, "p", None, "f", 1)
+                 for k, v in data["assets"].items() if v.get("prompt")}
+        changed = [k for k in before if before[k] != after[k]]
+        self.assertEqual(changed, ["sfx_denied"])
+
+
+CUE_CHAPTER = """---
+chapter: 9
+title: "Cue fixture"
+---
+
+# Chapter 9: Cue fixture
+
+It was late.
+
+Jack jerked awake so quickly that his chair rolled backward.
+
+Jack reached across the console and rejected the request.
+
+"Access denied." He tried again.
+
+"Access denied." Jack's expression hardened.
+
+Sarah turned toward him. "Jack."
+"""
+
+
+CUE_DOC = {
+    "chapter": 9,
+    "cues": [
+        {"cueId": "c-bed", "asset": "amb_lab_night", "gain": 0.08,
+         "anchor": {"clipId": None, "occurrence": 1},
+         "timing": "before",
+         "sustain": {"until": "chapterEnd", "timing": "after"}},
+        {"cueId": "c-chair", "asset": "sfx_chair_roll_fast", "gain": 0.4,
+         "anchor": {"clipId": None, "occurrence": 1}, "timing": "during",
+         "offsetMs": 900},
+        {"cueId": "c-denied-1", "asset": "sfx_denied",
+         "anchor": {"clipId": None, "occurrence": 1}, "timing": "before"},
+        {"cueId": "c-denied-2", "asset": "sfx_denied",
+         "anchor": {"clipId": None, "occurrence": 2}, "timing": "before"},
+    ],
+}
+
+
+class CueSheetTests(unittest.TestCase):
+    """Cues anchor to clip identity plus occurrence. Never to a timestamp."""
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self.path = os.path.join(self.dir, "chapter-0009.md")
+        self.reg = reg()
+        self.sreg = sfx_reg()
+        self._write(CUE_CHAPTER)
+
+    def tearDown(self):
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def _write(self, text):
+        with open(self.path, "w", encoding="utf-8") as fh:
+            fh.write(text)
+
+    def _segments(self):
+        return mf.build(9, self.path, self.reg, overrides={},
+                        sfx_registry=self.sreg)["segments"]
+
+    def _doc(self, segments):
+        """Point the fixture cues at real clips: the first narration, and the twice-used
+        system line, which is the case that makes an occurrence number necessary."""
+        doc = json.loads(json.dumps(CUE_DOC))
+        narration = [s for s in segments if s["speaker"] == NARRATOR]
+        repeated = [s for s in segments if s["displayText"] == "Access denied."]
+        doc["cues"][0]["anchor"]["clipId"] = narration[0]["clipId"]
+        doc["cues"][1]["anchor"]["clipId"] = narration[1]["clipId"]
+        doc["cues"][2]["anchor"]["clipId"] = repeated[0]["clipId"]
+        doc["cues"][3]["anchor"]["clipId"] = repeated[0]["clipId"]
+        return doc
+
+    def test_cues_resolve_to_segment_orders(self):
+        segs = self._segments()
+        doc = self._doc(segs)
+        doc["cues"] = doc["cues"][:2]
+        resolved, problems = sfxmod.resolve_chapter_cues(segs, doc, self.sreg)
+        self.assertEqual(problems, [])
+        self.assertEqual(len(resolved), 2)
+        for cue in resolved:
+            self.assertIsInstance(cue["order"], int)
+
+    def test_a_repeated_line_is_disambiguated_by_occurrence(self):
+        """"Access denied." is one clip heard twice, so a clipId alone is not a position.
+
+        This is the property that makes anchors work at all: the same asset identity
+        that lets one generated line serve two places makes the clipId ambiguous as a
+        cue target, and the occurrence number resolves it.
+        """
+        segs = self._segments()
+        doc = self._doc(segs)
+        repeated = [s for s in segs if s["displayText"] == "Access denied."]
+        self.assertGreaterEqual(len(repeated), 2, "fixture must repeat a line")
+        self.assertEqual(repeated[0]["clipId"], repeated[1]["clipId"],
+                         "a repeated line shares one clip")
+        resolved, problems = sfxmod.resolve_chapter_cues(segs, doc, self.sreg)
+        self.assertEqual(problems, [])
+        orders = {c["cueId"]: c["order"] for c in resolved}
+        self.assertNotEqual(orders["c-denied-1"], orders["c-denied-2"])
+        self.assertEqual(orders["c-denied-1"], repeated[0]["order"])
+        self.assertEqual(orders["c-denied-2"], repeated[1]["order"])
+
+    def test_inserting_a_paragraph_does_not_move_any_cue(self):
+        """The whole reason anchors are not timestamps."""
+        segs = self._segments()
+        doc = self._doc(segs)
+        before, problems = sfxmod.resolve_chapter_cues(segs, doc, self.sreg)
+        self.assertEqual(problems, [])
+        orders_before = {c["cueId"]: c["order"] for c in before}
+
+        self._write(CUE_CHAPTER.replace("It was late.",
+                                        "A brand new opening paragraph.\n\nIt was late."))
+        after, problems2 = sfxmod.resolve_chapter_cues(self._segments(), doc, self.sreg)
+        self.assertEqual(problems2, [], "every anchor must still resolve")
+
+        # The cue sheet is untouched and every cue still points at its own line...
+        self.assertEqual({c["cueId"]: c["asset"] for c in after},
+                         {c["cueId"]: c["asset"] for c in before})
+        # ...even though every segment order moved, which is the point.
+        orders_after = {c["cueId"]: c["order"] for c in after}
+        self.assertNotEqual(orders_after, orders_before)
+        self.assertTrue(all(orders_after[k] == orders_before[k] + 1 for k in orders_before),
+                        "one inserted paragraph shifts every order by one, and the cue "
+                        "sheet needed no edit to survive it")
+
+    def test_inserting_a_cue_does_not_invalidate_any_asset(self):
+        """A cue sheet edit is editorial. It must never cost a single generation."""
+        segs = self._segments()
+        doc = self._doc(segs)
+        fps_before = {a: sfxmod.plan_asset(self.sreg, a)["fingerprint"]
+                      for a in self.sreg.assets if self.sreg.is_generated(a)}
+        doc["cues"].insert(0, {"cueId": "c-new", "asset": "sfx_denied", "gain": 0.3,
+                               "anchor": doc["cues"][0]["anchor"], "timing": "after"})
+        resolved, problems = sfxmod.resolve_chapter_cues(segs, doc, self.sreg)
+        self.assertEqual(problems, [])
+        self.assertEqual(len(resolved), 5)
+        fps_after = {a: sfxmod.plan_asset(self.sreg, a)["fingerprint"]
+                     for a in self.sreg.assets if self.sreg.is_generated(a)}
+        self.assertEqual(fps_before, fps_after)
+
+    def test_one_asset_can_serve_several_events(self):
+        segs = self._segments()
+        resolved, _ = sfxmod.resolve_chapter_cues(segs, self._doc(segs), self.sreg)
+        summary = sfxmod.summarize_chapter(resolved, [], self.sreg)
+        self.assertEqual(summary["events"], 4)
+        self.assertEqual(summary["uniqueAssets"], 3,
+                         "four events, three assets: the denial tone is heard twice")
+        self.assertEqual(summary["reusedAssets"], {"sfx_denied": 2})
+
+    def test_an_unresolvable_anchor_is_reported_and_never_guessed(self):
+        segs = self._segments()
+        doc = {"chapter": 9, "cues": [
+            {"cueId": "c-ghost", "asset": "sfx_denied", "timing": "before",
+             "anchor": {"clipId": "narrator-doesnotexist", "occurrence": 1}}]}
+        resolved, problems = sfxmod.resolve_chapter_cues(segs, doc, self.sreg)
+        self.assertEqual(resolved, [])
+        self.assertEqual(len(problems), 1)
+        self.assertIn("anchor does not resolve", problems[0]["problems"][0])
+
+    def test_a_third_occurrence_of_a_twice_used_clip_is_reported(self):
+        segs = self._segments()
+        repeated = [s for s in segs if s["displayText"] == "Access denied."]
+        doc = {"chapter": 9, "cues": [
+            {"cueId": "c-too-far", "asset": "sfx_denied", "timing": "before",
+             "anchor": {"clipId": repeated[0]["clipId"], "occurrence": 3}}]}
+        resolved, problems = sfxmod.resolve_chapter_cues(segs, doc, self.sreg)
+        self.assertEqual(resolved, [])
+        self.assertTrue(problems)
+
+    def test_an_unknown_asset_is_refused_rather_than_invented(self):
+        segs = self._segments()
+        doc = {"chapter": 9, "cues": [
+            {"cueId": "c-bad", "asset": "sfx_not_registered", "timing": "before",
+             "anchor": {"clipId": segs[0]["clipId"], "occurrence": 1}}]}
+        resolved, problems = sfxmod.resolve_chapter_cues(segs, doc, self.sreg)
+        self.assertEqual(resolved, [])
+        self.assertIn("unknown asset", problems[0]["problems"][0])
+
+    def test_gain_outside_zero_to_one_is_rejected(self):
+        segs = self._segments()
+        for bad in (-0.1, 1.4, "loud"):
+            doc = {"chapter": 9, "cues": [
+                {"cueId": "c-gain", "asset": "sfx_denied", "timing": "before",
+                 "gain": bad, "anchor": {"clipId": segs[0]["clipId"], "occurrence": 1}}]}
+            resolved, problems = sfxmod.resolve_chapter_cues(segs, doc, self.sreg)
+            self.assertEqual(resolved, [], "gain %r must not be accepted" % (bad,))
+            self.assertTrue(problems)
+
+    def test_a_cue_without_a_gain_falls_back_to_its_category_default(self):
+        segs = self._segments()
+        doc = self._doc(segs)
+        resolved, _ = sfxmod.resolve_chapter_cues(segs, doc, self.sreg)
+        denied = [c for c in resolved if c["asset"] == "sfx_denied"][0]
+        self.assertAlmostEqual(denied["gain"], 0.45)
+        bed = [c for c in resolved if c["asset"] == "amb_lab_night"][0]
+        self.assertAlmostEqual(bed["gain"], 0.08, msg="the cue's own gain wins")
+
+    def test_a_looping_asset_must_say_where_it_stops(self):
+        segs = self._segments()
+        doc = {"chapter": 9, "cues": [
+            {"cueId": "c-runaway", "asset": "amb_lab_night", "timing": "before",
+             "anchor": {"clipId": segs[0]["clipId"], "occurrence": 1}}]}
+        resolved, problems = sfxmod.resolve_chapter_cues(segs, doc, self.sreg)
+        self.assertEqual(resolved, [])
+        self.assertIn("sustain", problems[0]["problems"][0])
+
+    def test_looping_metadata_survives_into_the_resolved_cue(self):
+        segs = self._segments()
+        resolved, _ = sfxmod.resolve_chapter_cues(segs, self._doc(segs), self.sreg)
+        bed = [c for c in resolved if c["cueId"] == "c-bed"][0]
+        self.assertTrue(bed["loop"])
+        self.assertEqual(bed["layer"], "ambience")
+        self.assertEqual(bed["stopOrder"], segs[-1]["order"])
+        chair = [c for c in resolved if c["cueId"] == "c-chair"][0]
+        self.assertFalse(chair["loop"])
+        self.assertNotIn("stopOrder", chair)
+        self.assertEqual(chair["offsetMs"], 900)
+
+    def test_a_sustain_that_ends_before_it_starts_is_rejected(self):
+        segs = self._segments()
+        doc = {"chapter": 9, "cues": [
+            {"cueId": "c-backwards", "asset": "amb_lab_night", "timing": "before",
+             "anchor": {"clipId": segs[-1]["clipId"], "occurrence": 1},
+             "sustain": {"until": {"clipId": segs[0]["clipId"], "occurrence": 1}}}]}
+        resolved, problems = sfxmod.resolve_chapter_cues(segs, doc, self.sreg)
+        self.assertEqual(resolved, [])
+        self.assertTrue(problems)
+
+
+class SfxGenerationTests(unittest.TestCase):
+    """Every request is mocked. No ElevenLabs sound-effects call happens in the suite."""
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self.sreg = sfx_reg()
+        self._sfx_dir = sfxmod.SFX_DIR
+        sfxmod.SFX_DIR = os.path.join(self.dir, "sfx")
+        self._real = elevenlabs._sfx_request
+        self.calls = []
+
+        def fake(plan, timeout):
+            self.calls.append(plan["asset"])
+            return FAKE_AUDIO + plan["asset"].encode()
+        elevenlabs._sfx_request = fake
+        os.environ["ELEVENLABS_API_KEY"] = "test-key-never-written-anywhere"
+
+    def tearDown(self):
+        elevenlabs._sfx_request = self._real
+        sfxmod.SFX_DIR = self._sfx_dir
+        os.environ.pop("ELEVENLABS_API_KEY", None)
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def _plan(self, asset_id):
+        return sfxmod.plan_asset(self.sreg, asset_id)
+
+    def test_generates_then_skips_when_unchanged(self):
+        ok, failed = elevenlabs.generate_all_sfx([self._plan("sfx_denied")], self.sreg)
+        self.assertEqual((ok, failed), (1, 0))
+        self.assertEqual(self.calls, ["sfx_denied"])
+        ok2, failed2 = elevenlabs.generate_all_sfx([self._plan("sfx_denied")], self.sreg)
+        self.assertEqual((ok2, failed2), (0, 0))
+        self.assertEqual(self.calls, ["sfx_denied"],
+                         "an approved sound must never be paid for twice")
+
+    def test_another_chapter_reusing_an_asset_spends_nothing(self):
+        elevenlabs.generate_all_sfx([self._plan("sfx_chair_roll_fast")], self.sreg)
+        self.assertEqual(len(self.calls), 1)
+        # A second chapter cues the same asset. Same name, same fingerprint, no request.
+        plan = self._plan("sfx_chair_roll_fast")
+        self.assertTrue(plan["cached"])
+        elevenlabs.generate_all_sfx([plan], self.sreg)
+        self.assertEqual(len(self.calls), 1)
+
+    def test_changing_one_prompt_leaves_the_other_assets_cached(self):
+        for a in ("sfx_denied", "sfx_chair_roll_fast"):
+            elevenlabs.generate_all_sfx([self._plan(a)], self.sreg)
+        self.calls = []
+        self.sreg.assets["sfx_denied"]["prompt"] = "a completely different tone"
+        self.assertFalse(self._plan("sfx_denied")["cached"])
+        self.assertTrue(self._plan("sfx_chair_roll_fast")["cached"])
+        elevenlabs.generate_all_sfx(
+            [self._plan("sfx_denied"), self._plan("sfx_chair_roll_fast")], self.sreg)
+        self.assertEqual(self.calls, ["sfx_denied"])
+
+    def test_a_supplied_asset_is_never_generated(self):
+        ok, failed = elevenlabs.generate_all_sfx([self._plan("sfx_handmade")], self.sreg)
+        self.assertEqual((ok, failed), (0, 0))
+        self.assertEqual(self.calls, [], "a hand-supplied file must not be requested")
+
+    def test_an_asset_with_no_prompt_refuses_rather_than_inventing_one(self):
+        self.sreg.assets["sfx_denied"]["prompt"] = ""
+        ok, failed = elevenlabs.generate_all_sfx([self._plan("sfx_denied")], self.sreg)
+        self.assertEqual((ok, failed), (0, 1))
+        self.assertEqual(self.calls, [])
+
+    def test_no_secret_reaches_any_sfx_output_file(self):
+        secret = os.environ["ELEVENLABS_API_KEY"]
+        elevenlabs.generate_all_sfx([self._plan("sfx_denied")], self.sreg)
+        found = []
+        for root, _dirs, names in os.walk(self.dir):
+            for name in names:
+                with open(os.path.join(root, name), "rb") as fh:
+                    if secret.encode() in fh.read():
+                        found.append(name)
+        self.assertEqual(found, [], "the API key must not appear in audio or sidecars")
+
+    def test_sfx_generation_does_not_touch_the_voice_cache(self):
+        """Changing sound design must never invalidate an approved performance."""
+        vreg = reg()
+        seg = {"speaker": "jack-bennett", "clipId": "jack-x", "ttsText": "Yep."}
+        planned = cache.plan_segment(vreg, seg)
+        before = planned["fingerprint"]
+        self.sreg.assets["sfx_denied"]["prompt"] = "something else entirely"
+        self.sreg.data["sfxVersion"] = 99
+        elevenlabs.generate_all_sfx([self._plan("sfx_chair_roll_fast")], self.sreg)
+        after = cache.plan_segment(vreg, seg)["fingerprint"]
+        self.assertEqual(before, after)
+
+
+class SfxExportAndPlayerTests(unittest.TestCase):
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self.path = os.path.join(self.dir, "chapter-0009.md")
+        with open(self.path, "w", encoding="utf-8") as fh:
+            fh.write(CHAPTER)
+        self.reg = reg()
+        self.sreg = sfx_reg()
+
+    def tearDown(self):
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def test_game_export_shares_the_asset_and_not_the_timing(self):
+        cues = {"chapter": 9, "cues": [
+            {"cueId": "c1", "asset": "sfx_chair_roll_fast", "timing": "before",
+             "anchor": {"clipId": "x", "occurrence": 1}},
+            {"cueId": "c2", "asset": "sfx_narration_only", "timing": "before",
+             "anchor": {"clipId": "x", "occurrence": 1}}]}
+        real = sfxmod.load_cues
+        sfxmod.load_cues = lambda n: cues
+        try:
+            data = sfxmod.game_export([9], self.sreg)
+        finally:
+            sfxmod.load_cues = real
+        ids = [a["assetId"] for a in data["assets"]]
+        self.assertIn("sfx_chair_roll_fast", ids)
+        self.assertNotIn("sfx_narration_only", ids,
+                         "godotReuse false must keep an asset out of the game export")
+        entry = data["assets"][0]
+        self.assertEqual(entry["audio"], "audio/sfx/foley/sfx_chair_roll_fast.mp3")
+        for forbidden in ("timing", "order", "anchor", "cueId", "offsetMs"):
+            self.assertNotIn(forbidden, entry,
+                             "the audiobook's playback timing is not the game's business")
+
+    def test_the_manifest_carries_cues_without_disturbing_the_voice_track(self):
+        plain = mf.build(9, self.path, self.reg, overrides={})
+        voice_only = [dict(s) for s in plain["segments"]]
+        real = sfxmod.load_cues
+        sfxmod.load_cues = lambda n: {"chapter": 9, "cues": [
+            {"cueId": "c1", "asset": "sfx_denied", "timing": "before",
+             "anchor": {"clipId": voice_only[0]["clipId"], "occurrence": 1}}]}
+        try:
+            withcues = mf.build(9, self.path, self.reg, overrides={},
+                                sfx_registry=self.sreg)
+        finally:
+            sfxmod.load_cues = real
+        self.assertEqual(withcues["segments"], voice_only,
+                         "adding a cue sheet must not alter one voice segment")
+        self.assertEqual(len(withcues["cues"]), 1)
+        self.assertIn("mix", withcues)
+
+    def test_a_missing_sound_asset_leaves_the_voice_track_playable(self):
+        """The cue is still published with cached false; the player skips it.
+
+        The audiobook must never fail merely because optional ambience is unavailable.
+        """
+        real = sfxmod.load_cues
+        sfxmod.load_cues = lambda n: {"chapter": 9, "cues": [
+            {"cueId": "c1", "asset": "sfx_denied", "timing": "before",
+             "anchor": {"clipId": "narrator-nope", "occurrence": 1}},
+            {"cueId": "c2", "asset": "amb_lab_night", "timing": "before",
+             "anchor": {"clipId": "narrator-nope", "occurrence": 1},
+             "sustain": {"until": "chapterEnd"}}]}
+        try:
+            man = mf.build(9, self.path, self.reg, overrides={}, sfx_registry=self.sreg)
+        finally:
+            sfxmod.load_cues = real
+        self.assertEqual(man["cues"], [], "unresolvable cues are dropped, not fatal")
+        self.assertEqual(len(man["cueProblems"]), 2)
+        self.assertTrue(man["segments"], "the voice track survives a broken cue sheet")
+        self.assertTrue(all(s["audio"] for s in man["segments"]))
+
+    def test_a_chapter_with_no_cue_sheet_still_builds(self):
+        real = sfxmod.load_cues
+        sfxmod.load_cues = lambda n: {"chapter": n, "cues": []}
+        try:
+            man = mf.build(9, self.path, self.reg, overrides={}, sfx_registry=self.sreg)
+        finally:
+            sfxmod.load_cues = real
+        self.assertEqual(man["cues"], [])
+        self.assertEqual(man["cueProblems"], [])
+
+
+class LayerClientTests(unittest.TestCase):
+    """The browser gets static files and no credentials. Asserted as text."""
+
+    READER = os.path.join(os.path.dirname(os.path.dirname(HERE)), "reader")
+    SFX_JS = os.path.join(READER, "sfx.js")
+    PLAYER_JS = os.path.join(READER, "player.js")
+
+    def _read(self, path):
+        with open(path, encoding="utf-8") as fh:
+            return fh.read()
+
+    def test_the_layer_client_holds_no_key_and_no_elevenlabs_endpoint(self):
+        text = self._read(self.SFX_JS)
+        for forbidden in ("api.elevenlabs.io", "xi-api-key", "ELEVENLABS_API_KEY",
+                          "sound-generation"):
+            self.assertNotIn(forbidden, text,
+                             "%s must never appear in browser code" % forbidden)
+
+    def test_the_layer_client_only_fetches_relative_paths(self):
+        text = self._read(self.SFX_JS)
+        self.assertNotIn("http://", text)
+        self.assertNotIn("https://", text)
+        self.assertIn('"./" + cue.audio', text)
+
+    def test_the_player_guards_every_call_into_the_optional_layers(self):
+        """If reader/sfx.js does not load, the audiobook must be exactly as before."""
+        text = self._read(self.PLAYER_JS)
+        self.assertIn("window.TMBLayers || null", text)
+        calls = re.findall(r"l\.(setSpeaking|enterSegment|leaveSegment|stopAll|load)\(", text)
+        self.assertTrue(calls, "expected the player to drive the layers")
+        for line in text.splitlines():
+            if re.search(r"\bl\.(setSpeaking|enterSegment|leaveSegment|stopAll|load)\(", line):
+                self.assertIn("if (l)", line,
+                              "an unguarded layer call would break voice-only "
+                              "playback when sfx.js is absent: " + line.strip())
+
+    def test_the_voice_toggle_cannot_silence_the_audiobook(self):
+        text = self._read(self.PLAYER_JS)
+        self.assertIn("listen-layer-ambience", text)
+        self.assertIn("listen-layer-sfx", text)
+        self.assertNotIn('id="listen-layer-voice"', text,
+                         "voices are the reference layer, not a switch that mutes the book")
+
+
 class WorkflowTests(unittest.TestCase):
     """The CI workflow is the only place the secret is used, so it has to be right.
 
@@ -466,6 +1067,22 @@ class WorkflowTests(unittest.TestCase):
         self.assertTrue(step, "the workflow should refresh the game export")
         self.assertNotIn("--chapters", step[0],
                          "the game export must cover every chapter, not just this run's")
+
+    def test_sfx_generation_is_opt_in_and_unreachable_from_a_push(self):
+        """Joshua's rule: sound generation is never wired to a push or a deploy.
+
+        Two independent guards: the workflow is workflow_dispatch only (asserted
+        above), and the sound step additionally requires an input that defaults to
+        false, so even a manual voice run does not quietly spend credits on audio.
+        """
+        text = self.text
+        self.assertIn("generate_sfx:", text, "expected an explicit opt-in input")
+        block = text[text.index("generate_sfx:"):text.index("generate_sfx:") + 260]
+        self.assertIn("default: false", block,
+                      "sound generation must be off unless a human ticks it")
+        step = text[text.index("Generate sound effects"):]
+        self.assertIn("if: inputs.generate_sfx", step.split("run:")[0],
+                      "the sound step must be gated on that input")
 
     def test_the_secret_is_never_interpolated_into_a_shell_line(self):
         self.assertIn("secrets.ELEVENLABS_API_KEY", self.text,

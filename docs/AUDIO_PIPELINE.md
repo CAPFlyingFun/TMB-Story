@@ -114,6 +114,19 @@ With `ffmpeg` on the path the manifest's pauses are inserted accurately. Without
 clips are joined directly, which plays but has no gaps. The player applies the pauses
 properly either way, which is why pauses are kept out of the clips themselves.
 
+## Ambience and sound effects
+
+A separate document: `docs/AUDIO_SFX.md`. In short, sound assets are identified by name
+and cued by clip identity rather than by timestamp, they are never baked into a voice
+clip, generation is manual and gated behind its own opt-in, and the voice track never
+depends on any of it.
+
+```
+python3 scripts/audio.py sfx   --chapters 1                 # free
+python3 scripts/audio.py cues  --chapters 1 --timestamps     # free
+python3 scripts/render-cue-sheet.py 1                        # the reviewable document
+```
+
 ## How Godot consumes the dialogue manifest
 
 ```

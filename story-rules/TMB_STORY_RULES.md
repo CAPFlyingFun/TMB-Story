@@ -141,10 +141,11 @@ mind. The pipeline that turns the manuscript into audio is documented in
   parser cannot tell who is speaking, it flags the line for review. It does not guess,
   and nothing edits the prose to make parsing easier.
 - **Character voice assignments live in `story-rules/voice-registry.json`,** beside the
-  prose canon in `CHARACTERS.md` rather than duplicating it. Currently assigned:
-  Jack Bennett `mkT7KpSQR9btjx2rHpQY`, Sarah Bennett `MClEFoImJXBTgLwdLI5n`. The
-  Narrator, the TOMBS system voice and Lena Ortiz are **unassigned**; generation refuses
-  to run for an unassigned speaker rather than substituting a voice.
+  prose canon in `CHARACTERS.md` rather than duplicating it. All five are assigned as
+  of 2026-09-18; read the registry for the current IDs rather than trusting a list
+  here. A speaker has exactly one entry and a recast replaces it, never adds a second
+  (decision 0021). An unassigned voice is `null`, and generation refuses to run for it
+  rather than substituting one.
 - **ElevenLabs voice IDs are not secrets** and belong in the repository. **The ElevenLabs
   API key IS a secret**: environment only, never committed, never in the player, never
   in a manifest. The browser player never calls ElevenLabs.
@@ -156,6 +157,11 @@ mind. The pipeline that turns the manuscript into audio is documented in
 - **System and computer lines may be reused in the game,** because TOMBS speaks in both.
 - **Audio manifests identify speakers explicitly.** Narration and dialogue are separate
   segments even inside one paragraph, so a character's line stands alone as an asset.
+- **Ambience and sound effects are separate assets, never baked into a voice clip.**
+  They are proposed as a cue sheet and approved before generation; `docs/AUDIO_SFX.md`
+  has the model. Nothing about sound design may change the manuscript: a cue is added
+  because the prose already contains the action, and where narration already carries a
+  moment adequately, the sound is omitted rather than duplicated.
 - **Ambiguous attribution is reviewed before generation,** not after. Validation reports
   it and blocks the run.
 

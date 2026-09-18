@@ -7,6 +7,9 @@
     python3 scripts/audio.py combine     [--chapters 1-3]
     python3 scripts/audio.py export-game [--chapters 1-3]
     python3 scripts/audio.py voices
+    python3 scripts/audio.py cues        [--chapters 1-3] [--timestamps]
+    python3 scripts/audio.py sfx         [--chapters 1-3]
+    python3 scripts/audio.py generate-sfx [--chapters 1-3] [--all] [--force-asset ID] [--dry-run]
 
 The repository's toolchain is Python 3 standard library (see scripts/build-manifest.py),
 so this is a Python CLI rather than npm scripts. Generation is the only subcommand that
@@ -20,7 +23,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from tmbaudio import cache, manifest as mf  # noqa: E402
+from tmbaudio import cache, manifest as mf, sfx as sfxmod  # noqa: E402
 from tmbaudio.registry import REVIEW, Registry, ROOT  # noqa: E402
 
 
@@ -94,6 +97,191 @@ def cmd_validate(args, reg):
         print("Add the voice id to story-rules/voice-registry.json. Never invent one.")
     print("OVERALL READY FOR GENERATION: %s" % ("YES" if all_ready else "NO"))
     return 0 if all_ready else 1
+
+
+# ---- sound effects and ambience -------------------------------------------
+def _sfx_registry(reg):
+    return sfxmod.SfxRegistry(config=reg.config)
+
+
+def _chapter_cues(n, reg, sreg):
+    files = mf.chapter_files()
+    m = mf.build(n, files[n], reg, sfx_registry=sreg)
+    doc = sfxmod.load_cues(n)
+    resolved, problems = sfxmod.resolve_chapter_cues(m["segments"], doc, sreg)
+    return m, resolved, problems
+
+
+def _review_timestamps(manifest):
+    """Approximate start time of each segment, for HUMAN REVIEW ONLY.
+
+    Measured from the clips that exist plus the manifest's pauses. Regenerating one
+    voice clip moves every number after it, which is exactly why cues anchor to clip
+    identity instead. Never use these to synchronise anything.
+    """
+    at, t = {}, 0.0
+    for seg in manifest["segments"]:
+        t += (seg.get("pauseBeforeMs") or 0) / 1000.0
+        at[seg["order"]] = t
+        t += cache.mp3_duration_seconds(os.path.join(ROOT, seg["audio"]))
+    return at
+
+
+def _clock(seconds):
+    return "%d:%05.2f" % (int(seconds // 60), seconds % 60)
+
+
+def cmd_cues(args, reg):
+    sreg = _sfx_registry(reg)
+    files = mf.chapter_files()
+    ok = True
+    for n in parse_range(args.chapters, files):
+        m, resolved, problems = _chapter_cues(n, reg, sreg)
+        s = sfxmod.summarize_chapter(resolved, problems, sreg)
+        by_order = {seg["order"]: seg for seg in m["segments"]}
+        stamps = _review_timestamps(m) if args.timestamps else {}
+        print("\nChapter %d — %s" % (n, m["title"]))
+        print("Playback events: %d   Unique assets: %d" % (s["events"], s["uniqueAssets"]))
+        if s["byCategory"]:
+            print("  " + "   ".join("%s %d" % (k, v)
+                                    for k, v in sorted(s["byCategory"].items())))
+        print("")
+        for c in resolved:
+            seg = by_order.get(c["order"], {})
+            when = ("  ~%s" % _clock(stamps[c["order"]])) if args.timestamps else ""
+            sustain = ""
+            if c.get("stopOrder") is not None:
+                sustain = "  sustain->order %d" % c["stopOrder"]
+            offset = "+%dms" % c["offsetMs"] if c.get("offsetMs") else ""
+            print("  %-26s %-30s %-9s %-6s gain %.2f%s%s"
+                  % (c["cueId"], c["asset"], c["timing"] + offset, c["category"],
+                     c["gain"], sustain, when))
+            print("        order %-4d %-14s \"%s\""
+                  % (c["order"], seg.get("speakerName", ""), (seg.get("displayText") or "")[:58]))
+        # A `during` offset past the end of its clip would silently never fire. Clip
+        # lengths change when a voice is recast, so this is checked, not assumed.
+        late = []
+        for c in resolved:
+            if not c.get("offsetMs"):
+                continue
+            seg = by_order.get(c["order"])
+            if not seg:
+                continue
+            room = cache.mp3_duration_seconds(os.path.join(ROOT, seg["audio"])) * 1000 \
+                - c["offsetMs"]
+            if 0 < room < 250:
+                late.append((c["cueId"], room))
+            elif room <= 0:
+                late.append((c["cueId"], room))
+        if late:
+            print("\n  OFFSETS AT OR PAST THE END OF THEIR CLIP (they would not be heard):")
+            for cue_id, room in late:
+                print("    %-26s %.0fms of room left" % (cue_id, room))
+        if s["reusedAssets"]:
+            print("\n  reused assets (one generation, several events):")
+            for aid, count in s["reusedAssets"].items():
+                print("    %-32s x%d" % (aid, count))
+        if problems:
+            ok = False
+            print("\n  PROBLEMS:")
+            for p in problems:
+                for line in p["problems"]:
+                    print("    %s: %s" % (p["cueId"], line))
+        if args.timestamps:
+            print("\n  Timestamps are APPROXIMATE and for review only. Cues anchor to clip"
+                  "\n  identity, so regenerating a voice clip moves these numbers and moves"
+                  "\n  nothing about the cue sheet.")
+    return 0 if ok else 1
+
+
+def cmd_sfx(args, reg):
+    """What the cue sheets ask for, and what would have to be generated."""
+    sreg = _sfx_registry(reg)
+    files = mf.chapter_files()
+    numbers = parse_range(args.chapters, files)
+    wanted, problems = {}, []
+    for n in numbers:
+        _, resolved, probs = _chapter_cues(n, reg, sreg)
+        problems.extend(probs)
+        for c in resolved:
+            wanted.setdefault(c["asset"], []).append(n)
+    lo, hi = sreg.duration_limits()
+    print("%-32s %-10s %-6s %-7s %-6s %s"
+          % ("asset", "category", "loop", "secs", "godot", "state"))
+    to_generate = []
+    for aid in sorted(wanted):
+        plan = sfxmod.plan_asset(sreg, aid)
+        state = "cached" if plan["cached"] else (
+            "MISSING FILE" if plan["source"] != "generated" else "to generate")
+        if not plan["cached"] and plan["source"] == "generated":
+            to_generate.append(aid)
+        dur = plan["durationSeconds"]
+        flag = ""
+        if plan["source"] == "generated" and dur is not None and not lo <= float(dur) <= hi:
+            flag = "  << duration outside %.1f-%.1fs" % (lo, hi)
+            problems.append({"cueId": aid, "problems": ["requested duration %s is outside the "
+                                                        "provider's %.1f-%.1fs range" % (dur, lo, hi)]})
+        print("%-32s %-10s %-6s %-7s %-6s %s%s"
+              % (aid, plan["category"], "yes" if plan["loop"] else "no",
+                 dur if dur is not None else "-",
+                 "yes" if plan["godotReuse"] else "no", state, flag))
+    unused = sorted(set(sreg.assets) - set(wanted))
+    if unused:
+        print("\nRegistered but not cued in chapter(s) %s: %s"
+              % (", ".join(map(str, numbers)), ", ".join(unused)))
+    print("\nUnique assets cued: %d   Already generated: %d   To generate: %d"
+          % (len(wanted), len(wanted) - len(to_generate), len(to_generate)))
+    if problems:
+        print("\nPROBLEMS:")
+        for p in problems:
+            for line in p["problems"]:
+                print("  %s: %s" % (p["cueId"], line))
+    print("\nSFX READY FOR GENERATION: %s" % ("YES" if not problems else "NO"))
+    return 0 if not problems else 1
+
+
+def cmd_generate_sfx(args, reg):
+    from tmbaudio import elevenlabs
+    sreg = _sfx_registry(reg)
+    files = mf.chapter_files()
+    numbers = parse_range(args.chapters, files)
+    wanted = set()
+    blocked = False
+    for n in numbers:
+        _, resolved, probs = _chapter_cues(n, reg, sreg)
+        if probs:
+            blocked = True
+            print("chapter %d has %d unresolved cue(s); fix those first." % (n, len(probs)))
+        wanted.update(c["asset"] for c in resolved)
+    if args.all:
+        wanted = set(sreg.assets)
+    if blocked:
+        print("\nNothing was generated and no credit was spent.")
+        return 1
+    plans = []
+    for aid in sorted(wanted):
+        plan = sfxmod.plan_asset(sreg, aid)
+        if plan["source"] != "generated":
+            continue
+        if plan["cached"] and args.force_asset != aid:
+            continue
+        plans.append(plan)
+    if not plans:
+        print("Nothing to generate. Every cued sound asset is cached and current.")
+        return 0
+    print("\n%d sound asset(s) to generate." % len(plans))
+    for plan in plans:
+        print("  %-32s %-10s %ss  \"%s\""
+              % (plan["asset"], plan["category"], plan["durationSeconds"],
+                 (plan["prompt"] or "")[:64]))
+    if args.dry_run:
+        print("\nDry run. No ElevenLabs request was made and no credit was used.")
+        return 0
+    ok, failed = elevenlabs.generate_all_sfx(plans, sreg)
+    for n in numbers:
+        mf.write(mf.build(n, files[n], reg, sfx_registry=sreg))
+    print("\nGenerated %d, failed %d." % (ok, failed))
+    return 1 if failed else 0
 
 
 def cmd_voices(args, reg):
@@ -195,11 +383,25 @@ def cmd_export_game(args, reg):
         fh.write("\n")
     print("wrote %s  (%d line(s), narration excluded)" % (cache.rel(out), data["lineCount"]))
 
+    # The same command refreshes the sound-asset export, so the two never drift.
+    try:
+        sreg = _sfx_registry(reg)
+    except (OSError, ValueError):
+        return
+    sfx_data = sfxmod.game_export(sorted(mf.chapter_files()), sreg)
+    sfx_out = os.path.join(ROOT, "audio", "game", "sfx.json")
+    with open(sfx_out, "w", encoding="utf-8") as fh:
+        json.dump(sfx_data, fh, indent=2, ensure_ascii=False)
+        fh.write("\n")
+    print("wrote %s  (%d sound asset(s) the game may reuse)"
+          % (cache.rel(sfx_out), sfx_data["assetCount"]))
+
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description="TMB audio pipeline")
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("parse", "validate", "generate", "combine", "export-game"):
+    for name in ("parse", "validate", "generate", "combine", "export-game",
+                 "cues", "sfx", "generate-sfx"):
         p = sub.add_parser(name)
         p.add_argument("--chapters", help="e.g. 1, 1-3, 1,3")
         if name == "validate":
@@ -215,12 +417,23 @@ def main(argv=None):
                            help="show what would be generated; makes no request")
             p.add_argument("--scene", action="store_true",
                            help="only the audition scene in audio/test-scene.json")
+        if name == "cues":
+            p.add_argument("--timestamps", action="store_true",
+                           help="approximate clock times, for human review only")
+        if name == "generate-sfx":
+            p.add_argument("--all", action="store_true",
+                           help="every registered asset, not only the cued ones")
+            p.add_argument("--force-asset", metavar="ASSET_ID", default=None,
+                           help="regenerate one asset even though it is cached")
+            p.add_argument("--dry-run", action="store_true",
+                           help="show what would be generated; makes no request")
     sub.add_parser("voices")
     args = ap.parse_args(argv)
     reg = Registry()
     handlers = {
         "parse": cmd_parse, "validate": cmd_validate, "generate": cmd_generate,
         "combine": cmd_combine, "export-game": cmd_export_game, "voices": cmd_voices,
+        "cues": cmd_cues, "sfx": cmd_sfx, "generate-sfx": cmd_generate_sfx,
     }
     return handlers[args.cmd](args, reg) or 0
 

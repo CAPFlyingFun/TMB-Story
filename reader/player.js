@@ -23,6 +23,12 @@
     missing: 0
   };
 
+  /* Optional layers. If reader/sfx.js did not load, every call below is a no-op and
+     the audiobook plays exactly as it did before ambience existed. */
+  function layers() {
+    return window.TMBLayers || null;
+  }
+
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -36,6 +42,12 @@
       a.addEventListener("ended", onEnded);
       a.addEventListener("timeupdate", renderProgress);
       a.addEventListener("error", onError);
+      a.addEventListener("playing", function () {
+        var l = layers(); if (l) l.setSpeaking(true);
+      });
+      a.addEventListener("pause", function () {
+        var l = layers(); if (l) l.setSpeaking(false);
+      });
       state.audio = a;
     }
     return state.audio;
@@ -62,6 +74,7 @@
       })
       .then(function (m) {
         state.manifest = m;
+        var l = layers(); if (l) l.load(m);
         return checkAvailability(m);
       })
       .then(render)
@@ -108,6 +121,7 @@
     }
     a.playbackRate = state.rate;
     state.playing = true;
+    var l = layers(); if (l) l.enterSegment(seg.order);
     a.play().catch(function () { state.playing = false; render(); });
     preloadAhead();
     render();
@@ -117,15 +131,20 @@
     state.playing = false;
     if (state.pauseTimer) { clearTimeout(state.pauseTimer); state.pauseTimer = null; }
     if (state.audio) state.audio.pause();
+    var l = layers(); if (l) l.setSpeaking(false);
     render();
   }
 
   function stop() {
     pause();
+    var l = layers(); if (l) l.stopAll();
     if (state.audio) { state.audio.removeAttribute("data-src"); state.audio.src = ""; }
   }
 
   function onEnded() {
+    var done = current();
+    var l = layers();
+    if (l) { l.setSpeaking(false); if (done) l.leaveSegment(done.order); }
     var next = segments()[state.index + 1];
     if (!next) { state.playing = false; render(); return; }
     /* The gap between clips comes from the manifest, not from silence baked into the
@@ -179,6 +198,40 @@
     render();
   }
 
+
+  /* ---- layer controls ------------------------------------------------------
+     Voices is deliberately present but fixed on: it is the reference layer and the
+     thing the page exists for, so it reads as the anchor rather than as a switch that
+     could silence the audiobook. Ambience and Sound Effects are real toggles, and the
+     whole block is absent when a chapter has no cue sheet -- there is nothing to
+     switch, and an empty control panel is a worse answer than no panel. */
+  function layerControlsHtml() {
+    var l = layers();
+    if (!l || !l.has()) return "";
+    var c = l.count();
+    var ungenerated = c.ungenerated
+      ? '<span class="listen-layer-note">' + c.ungenerated +
+        ' of ' + c.assets + ' sound assets not generated yet; those cues are skipped.</span>'
+      : '<span class="listen-layer-note">' + c.events + ' cues · ' + c.assets + ' assets</span>';
+    return '<div class="listen-layers" role="group" aria-label="Audio layers">' +
+      '<span class="listen-layer listen-layer-fixed">' +
+        '<input type="checkbox" checked disabled aria-label="Voices (always on)"> Voices</span>' +
+      '<label class="listen-layer"><input id="listen-layer-ambience" type="checkbox"' +
+        (l.isEnabled("ambience") ? " checked" : "") + '> Ambience</label>' +
+      '<label class="listen-layer"><input id="listen-layer-sfx" type="checkbox"' +
+        (l.isEnabled("sfx") ? " checked" : "") + '> Sound effects</label>' +
+      ungenerated + '</div>';
+  }
+
+  function bindLayerControls() {
+    var l = layers();
+    if (!l || !l.has()) return;
+    [["listen-layer-ambience", "ambience"], ["listen-layer-sfx", "sfx"]].forEach(function (pair) {
+      var el = document.getElementById(pair[0]);
+      if (el) el.onchange = function (e) { l.setEnabled(pair[1], e.target.checked); };
+    });
+  }
+
   // ---- rendering -----------------------------------------------------------
   function renderProgress() {
     var a = state.audio, seg = current();
@@ -222,6 +275,7 @@
       [0.75, 0.9, 1, 1.1, 1.25, 1.5].map(function (r) {
         return '<option value="' + r + '"' + (r === state.rate ? " selected" : "") + '>' + r + '×</option>';
       }).join("") + '</select></label></div>' +
+      layerControlsHtml() +
       '<input id="listen-seg-bar" class="listen-bar" type="range" min="0" max="100" value="0" ' +
         'aria-label="Position in this segment">' +
       '<p class="listen-meta"><span id="listen-position">Segment ' + (state.index + 1) +
@@ -239,6 +293,7 @@
       var a = state.audio;
       if (a && a.duration) a.currentTime = (parseFloat(e.target.value) / 100) * a.duration;
     };
+    bindLayerControls();
     renderProgress();
   }
 

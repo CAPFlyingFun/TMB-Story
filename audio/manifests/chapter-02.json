@@ -1010,7 +1010,7 @@
       "voiceVersion": 1,
       "fingerprint": "2a7f1a9ac5e4776ec4c644647e58a96e06bc2e0d7f9b76b06a0f19d2bcdd0054",
       "audio": "audio/clips/narrator/narrator-19f698a32342.mp3",
-      "cached": false,
+      "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator"
     },
@@ -1154,7 +1154,7 @@
       "voiceVersion": 1,
       "fingerprint": "2a7f1a9ac5e4776ec4c644647e58a96e06bc2e0d7f9b76b06a0f19d2bcdd0054",
       "audio": "audio/clips/narrator/narrator-19f698a32342.mp3",
-      "cached": false,
+      "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator"
     },
@@ -2576,7 +2576,7 @@
       "voiceVersion": 1,
       "fingerprint": "dc8830e919a0ee9f5d6320ac77e95e143717c8dcb7137017bc33f1655bea6e03",
       "audio": "audio/clips/narrator/narrator-b5f5252f998d.mp3",
-      "cached": false,
+      "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator"
     },
@@ -2882,7 +2882,7 @@
       "voiceVersion": 1,
       "fingerprint": "600a7662e70cef38e02fafdbb625f9a940503c788b937b866770f742cdc5a68e",
       "audio": "audio/clips/narrator/narrator-fb38695cee9c.mp3",
-      "cached": false,
+      "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator"
     },
@@ -3282,5 +3282,32 @@
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett"
     }
-  ]
+  ],
+  "cues": [],
+  "cueProblems": [],
+  "mix": {
+    "layers": {
+      "voice": true,
+      "ambience": true,
+      "sfx": true
+    },
+    "categoryGain": {
+      "ambience": 0.1,
+      "foley": 0.45,
+      "interface": 0.4,
+      "alarm": 0.5,
+      "system": 0.45
+    },
+    "duckUnderSpeechTo": {
+      "ambience": 0.55,
+      "alarm": 0.4,
+      "system": 0.5,
+      "interface": 1.0,
+      "foley": 1.0
+    },
+    "defaultFadeMs": {
+      "in": 800,
+      "out": 1200
+    }
+  }
 }

@@ -27,8 +27,12 @@
       "style": 0.0,
       "_note": "Flat, controlled machine delivery. Provisional."
     },
-    "jack-bennett": { "_note": "Natural conversational delivery; defaults for now." },
-    "sarah-bennett": { "_note": "Natural conversational delivery; defaults for now." }
+    "jack-bennett": {
+      "_note": "Natural conversational delivery; defaults for now."
+    },
+    "sarah-bennett": {
+      "_note": "Natural conversational delivery; defaults for now."
+    }
   },
   "pausesMs": {
     "_comment": "Applied by the player between segments, and by the combined export. Kept out of the clips themselves so timing stays tunable without regenerating audio.",
@@ -70,5 +74,65 @@
       "Scale factor locked.",
       "Boundary event complete."
     ]
+  },
+  "sfx": {
+    "_comment": [
+      "ElevenLabs Sound Effects settings. Like the voice block, everything here is part",
+      "of the SFX cache fingerprint, so changing a value regenerates the assets it",
+      "affects and nothing else. No secret belongs in this file.",
+      "",
+      "`model` is deliberately null: an unset model means the provider's own default,",
+      "which is better than inventing a model id. The fingerprint records null as a",
+      "value, so naming a model later invalidates the assets and nothing before that."
+    ],
+    "provider": "elevenlabs-sfx",
+    "model": null,
+    "outputFormat": "mp3_44100_128",
+    "defaultPromptInfluence": 0.3,
+    "durationLimitsSeconds": {
+      "min": 0.5,
+      "max": 22
+    },
+    "generation": {
+      "concurrency": 2,
+      "maxRetries": 4,
+      "baseBackoffSeconds": 2,
+      "requestTimeoutSeconds": 180
+    }
+  },
+  "mix": {
+    "_comment": [
+      "Starting philosophy, not final artistic levels. Voice is the reference and is",
+      "never attenuated; everything else is set relative to it and is meant to be",
+      "retuned by ear without regenerating a single asset.",
+      "",
+      "A cue's own `gain` wins over `categoryGain`. `duckUnderSpeechTo` is a MULTIPLIER",
+      "applied to a sustained bed while a voice clip is playing, so an alarm can be",
+      "loud in the gaps and still sit under the dialogue. One-shot foley is not ducked;",
+      "it is short enough to read through speech and ducking it would make it mush."
+    ],
+    "layers": {
+      "voice": true,
+      "ambience": true,
+      "sfx": true
+    },
+    "categoryGain": {
+      "ambience": 0.1,
+      "foley": 0.45,
+      "interface": 0.4,
+      "alarm": 0.5,
+      "system": 0.45
+    },
+    "duckUnderSpeechTo": {
+      "ambience": 0.55,
+      "alarm": 0.4,
+      "system": 0.5,
+      "interface": 1.0,
+      "foley": 1.0
+    },
+    "defaultFadeMs": {
+      "in": 800,
+      "out": 1200
+    }
   }
 }

@@ -97,3 +97,43 @@ def plan_segment(registry, seg):
     out["audio"] = rel(audio_path)
     out["cached"] = is_cached(audio_path, sidecar_path, fp)
     return out
+
+
+# ---- durations -------------------------------------------------------------
+_BITRATES = [0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 0]
+_RATES = [44100, 48000, 32000, 0]
+
+
+def mp3_duration_seconds(path):
+    """Length of an MPEG-1 Layer III file, by summing its frames. Stdlib only.
+
+    Used for the cue sheet's approximate review timestamps and for reporting. It is
+    NOT a synchronisation mechanism: cues anchor to clip identity, not to time.
+    Returns 0.0 for a missing or unreadable file rather than raising, because a
+    duration is a convenience and must never break a build.
+    """
+    try:
+        with open(path, "rb") as fh:
+            data = fh.read()
+    except OSError:
+        return 0.0
+    i = 0
+    if data[:3] == b"ID3" and len(data) > 10:
+        i = 10 + (((data[6] & 0x7F) << 21) | ((data[7] & 0x7F) << 14)
+                  | ((data[8] & 0x7F) << 7) | (data[9] & 0x7F))
+    total = 0.0
+    while i + 4 <= len(data):
+        if data[i] != 0xFF or (data[i + 1] & 0xE0) != 0xE0:
+            i += 1
+            continue
+        if ((data[i + 1] >> 3) & 3) != 3 or ((data[i + 1] >> 1) & 3) != 1:
+            i += 1
+            continue
+        bitrate = _BITRATES[(data[i + 2] >> 4) & 0xF]
+        rate = _RATES[(data[i + 2] >> 2) & 3]
+        if bitrate == 0 or rate == 0:
+            i += 1
+            continue
+        i += 144 * bitrate * 1000 // rate + ((data[i + 2] >> 1) & 1)
+        total += 1152.0 / rate
+    return total

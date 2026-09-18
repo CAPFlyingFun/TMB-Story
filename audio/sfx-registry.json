@@ -1,0 +1,292 @@
+{
+  "_comment": [
+    "The canonical sound asset registry. An asset is identified by its NAME and nothing",
+    "else: sfx_chair_roll_fast is the same asset in Chapter 1, in Chapter 27 and in the",
+    "Godot game. Assets never belong to playback positions; audio/cues/chapter-NN.json",
+    "says where they play. Same philosophy as the voice clip cache.",
+    "",
+    "NOTHING HERE HAS BEEN GENERATED. Every asset is a PROPOSAL awaiting Joshua's",
+    "approval; `approved: false` and no audio file exists. Generation is manual and",
+    "intentional (scripts/audio.py generate-sfx) and is never wired to a push.",
+    "",
+    "`source`: \"generated\" means ElevenLabs makes it from `prompt`. \"supplied\" means a",
+    "human put the file there; it has no prompt, it is fingerprinted by its own bytes,",
+    "and generation never runs for it.",
+    "",
+    "`assetVersion` is the deliberate-retake lever. Bumping it invalidates that ONE",
+    "asset, which is how an approved sound gets replaced without touching any other.",
+    "",
+    "Prompt discipline, from Joshua's brief: ambience carries no voices, no music, no",
+    "prominent alarms, no footsteps and no cinematic gestures. Those are event sounds and",
+    "live as their own assets so they can be moved, retuned or switched off separately."
+  ],
+  "sfxVersion": 1,
+
+  "characters": {
+    "_comment": [
+      "Footwear comes from the chapter's visual canon, so footsteps can eventually be",
+      "chosen from character/outfit metadata rather than picked by hand at each cue.",
+      "Kept to one field per character on purpose: there is no outfit system yet and",
+      "building one before a chapter needs it would be inventing a problem.",
+      "",
+      "Jack has a profile but NO asset. He is seated for the whole of Chapter 1 and never",
+      "walks, so generating his footsteps now would be paying for silence."
+    ],
+    "jack-bennett": {
+      "footwear": "gray sneakers",
+      "footstepProfile": "adult-sneakers-heavier",
+      "footstepAsset": null,
+      "notes": "Seated throughout Chapter 1. Assign an asset when a chapter actually walks him."
+    },
+    "sarah-bennett": {
+      "footwear": "gray sneakers",
+      "footstepProfile": "adult-sneakers-lighter",
+      "footstepAsset": "sfx_footsteps_sarah_sneakers",
+      "notes": "Gray sneakers, not heels. She enters the laboratory and crosses to Jack."
+    }
+  },
+
+  "assets": {
+    "amb_tombs_lab_night": {
+      "category": "ambience",
+      "source": "generated",
+      "prompt": "Quiet interior room tone of an advanced, clean research laboratory late at night. Steady soft ventilation air movement, a low continuous electrical hum from racked equipment, a faint distant whir of cooling fans, and a barely perceptible high electronic shimmer from instruments on standby. Spacious but enclosed. No voices, no speech, no music, no alarms, no beeping, no footsteps, no door sounds, no dramatic swells. Even and unchanging throughout so it can loop seamlessly.",
+      "durationSeconds": 22,
+      "loop": true,
+      "promptInfluence": 0.3,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed."
+    },
+    "amb_console_alarm_bed": {
+      "category": "alarm",
+      "source": "generated",
+      "prompt": "A repeating electronic security alarm inside a laboratory, heard as a continuous background state rather than a single event. Insistent two-note warning tone cycling steadily with an even gap between repeats, slightly hard-edged and synthetic, with a faint room reflection. Consistent volume, no build, no crescendo, no siren sweep, no voices, no music. Even throughout so it can loop.",
+      "durationSeconds": 12,
+      "loop": true,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Categorised `alarm`, not `ambience`, so switching ambience off does not silence the chapter's alarm. Loops under the opening sequence and is ducked hard beneath speech."
+    },
+    "amb_intercom_channel_open": {
+      "category": "interface",
+      "source": "generated",
+      "prompt": "The quiet open-channel hiss of an intercom speaker with the line live and nobody talking. Soft narrow-band electrical noise, a slight carrier hum, thin and boxy as if coming from a small wall-mounted speaker grille. Very low level and unchanging. No voices, no speech, no music, no clicks, no tones. Even throughout so it can loop.",
+      "durationSeconds": 10,
+      "loop": true,
+      "promptInfluence": 0.3,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "The cheapest honest way to tell the listener Sarah is on a speaker and not in the room. It sits under her intercom lines without touching her approved voice clips, which are never filtered or regenerated for this."
+    },
+    "amb_tombs_array_power_rise": {
+      "category": "system",
+      "source": "generated",
+      "prompt": "A very large machine beginning to draw power somewhere below and far away. Deep sub-bass hum rising slowly in pitch and intensity, layered with a distant electrical charging whine and a faint sense of enormous mass energising. Restrained and ominous, felt more than heard, no impact, no explosion, no siren, no voices, no music, no cinematic riser or trailer hit.",
+      "durationSeconds": 20,
+      "loop": true,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "The tension spine of the last third, and the beginning of the TOMBS Array's own sound identity. It enters when the remote initialization request appears and does not leave."
+    },
+
+    "sfx_console_tone_soft": {
+      "category": "interface",
+      "source": "generated",
+      "prompt": "A single soft electronic warning chirp from a laboratory console. One short polite two-tone blip, clean and synthetic, low urgency, with a small amount of room reflection. No alarm, no siren, no voices, no music.",
+      "durationSeconds": 1.5,
+      "loop": false,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "The polite tone that fails to wake Jack. Used twice in Chapter 1 -- the second, louder tone is this same asset at a higher gain, which is what the manuscript describes."
+    },
+    "sfx_console_alarm_erupt": {
+      "category": "alarm",
+      "source": "generated",
+      "prompt": "A laboratory console suddenly erupting into full alarm. Several electronic alert tones firing at once and overlapping into an urgent layered warning, sharp onset, hard and synthetic, with a short tail of room reflection. No siren sweep, no voices, no music, no explosion.",
+      "durationSeconds": 3,
+      "loop": false,
+      "promptInfluence": 0.4,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "The single biggest sound event in the chapter. The escalation from one chirp to this is the whole opening beat."
+    },
+    "sfx_alert_warning_hit": {
+      "category": "alarm",
+      "source": "generated",
+      "prompt": "One sharp electronic warning tone announcing a new alert on a laboratory display. Single hard synthetic alert stab, urgent and attention-grabbing, short decay, slight room reflection. One hit only, no repeats, no siren, no voices, no music.",
+      "durationSeconds": 1.5,
+      "loop": false,
+      "promptInfluence": 0.4,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "A single interruption, distinct from the polite chirp and from the full eruption. Used twice: the second alarm during the trace, and the tone that interrupts the couple much later."
+    },
+    "sfx_system_notify_soft": {
+      "category": "interface",
+      "source": "generated",
+      "prompt": "A quiet single electronic notification from a computer doing something on its own. One soft neutral blip followed by a faint digital interface movement, understated and unhurried, close-mic with a little room around it. Not an alarm, not urgent, no voices, no music.",
+      "durationSeconds": 1.5,
+      "loop": false,
+      "promptInfluence": 0.3,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Deliberately calm. The unsettling thing about TOMBS opening its own directory is how unbothered it sounds. Used twice: the directory opening itself, and the file opening itself."
+    },
+    "sfx_terminal_lock_engage": {
+      "category": "interface",
+      "source": "generated",
+      "prompt": "A computer terminal locking. A firm confirming electronic click-clunk with a short descending two-tone confirmation, then the display going dark with a faint electrical fade. Decisive and final, close-mic. No alarm, no voices, no music.",
+      "durationSeconds": 2,
+      "loop": false,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Jack taking control back. It has to sound like it worked, so that the terminal coming back on by itself lands as a violation."
+    },
+    "sfx_equipment_power_up_soft": {
+      "category": "system",
+      "source": "generated",
+      "prompt": "A screen and its equipment quietly powering back on. Soft electrical energising swell, a faint rising high-frequency whine settling into a steady hum, and a subtle capacitive tick as the display wakes. Gentle and unhurried, close-mic. No alarm, no beeping, no voices, no music.",
+      "durationSeconds": 2.5,
+      "loop": false,
+      "promptInfluence": 0.3,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "The terminal undoing Jack's lock without being asked. Soft on purpose: a bang would make it an attack, and the point is that it is calm."
+    },
+    "sfx_intercom_open": {
+      "category": "interface",
+      "source": "generated",
+      "prompt": "An intercom being keyed on. A firm mechanical button press followed immediately by a small electrical pop and the channel opening into a thin live speaker hiss. Close-mic, tactile. No voices, no speech, no music, no tones.",
+      "durationSeconds": 1.5,
+      "loop": false,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Marks the acoustic frame Sarah's remote voice arrives in. Used twice: reaching for the intercom, and tapping the button again."
+    },
+    "sfx_intercom_static": {
+      "category": "interface",
+      "source": "generated",
+      "prompt": "A burst of static from an intercom speaker with no answer. Uneven narrow-band crackle and hiss through a small speaker grille, rising briefly and falling away to nothing. Thin and boxy. No voices, no speech, no music, no tones.",
+      "durationSeconds": 2.5,
+      "loop": false,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "The manuscript makes static the ANSWER to Jack's question, so this is dialogue's turn in the scene, not decoration."
+    },
+    "sfx_intercom_close": {
+      "category": "interface",
+      "source": "generated",
+      "prompt": "An intercom channel closing. A light mechanical release click and the live speaker hiss cutting away to room silence. Close-mic, small and final. No voices, no speech, no music, no tones.",
+      "durationSeconds": 1,
+      "loop": false,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Closes the frame the intercom opened. Without it the listener has no cue that the channel is gone, and the room's silence afterward is part of the scene."
+    },
+    "sfx_lab_door_slide": {
+      "category": "foley",
+      "source": "generated",
+      "prompt": "An automatic laboratory door sliding open. A soft pneumatic release, a smooth mechanical glide along a track, and a light settling clunk as it reaches the end of its travel. Clean modern facility, close but with room reflection behind it. No voices, no music, no alarm.",
+      "durationSeconds": 2.5,
+      "loop": false,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Someone entering behind Jack while he is looking the other way. Pure spatial information, and the manuscript puts it mid-sentence on purpose."
+    },
+    "sfx_footsteps_sarah_sneakers": {
+      "category": "foley",
+      "source": "generated",
+      "prompt": "A few unhurried footsteps of an adult in soft rubber-soled sneakers on a hard smooth laboratory floor. Light, quiet, slightly rubbery contact with almost no heel click, four or five steps with a natural gait, modest room reflection. No voices, no music, no heels, no hard shoes, no boots.",
+      "durationSeconds": 3,
+      "loop": false,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Sarah's gray sneakers, per Chapter 1 visual canon -- explicitly not heels. Used twice and only for spatial transitions: entering the laboratory, and crossing the room to Jack. The listener never hears her walk otherwise."
+    },
+    "sfx_chair_roll_fast": {
+      "category": "foley",
+      "source": "generated",
+      "prompt": "An office chair on castors shoved suddenly backward across a hard floor. A quick startled scuff, castors rumbling fast over a smooth surface, and an abrupt stop. Sharp, physical, slightly alarming, with room reflection. No voices, no music, no crash, no breaking.",
+      "durationSeconds": 2,
+      "loop": false,
+      "promptInfluence": 0.35,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Jack waking so hard the chair moves. It gives the alarm a physical consequence in a body rather than only on a screen."
+    },
+    "sfx_chair_roll_slow": {
+      "category": "foley",
+      "source": "generated",
+      "prompt": "An office chair on castors moved deliberately across a hard floor. Slow controlled castor rumble over a short distance with a soft settle at the end, unhurried and domestic, with room reflection. No voices, no music, no impact.",
+      "durationSeconds": 2.5,
+      "loop": false,
+      "promptInfluence": 0.3,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Two people arranging themselves around one workstation. Used twice: Sarah pulling a second chair over, and Jack rolling sideways to make room. Consciously different from the fast roll -- that one is a startle, this one is a marriage."
+    },
+    "sfx_keyboard_typing_short": {
+      "category": "foley",
+      "source": "generated",
+      "prompt": "A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.",
+      "durationSeconds": 3,
+      "loop": false,
+      "promptInfluence": 0.3,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Used three times, only where the manuscript actually starts or resumes typing. It marks who has the keyboard, which is how the scene's authority shifts from Jack to Sarah."
+    },
+    "sfx_access_denied_tone": {
+      "category": "system",
+      "source": "generated",
+      "prompt": "A system refusing a command. One short blunt descending two-note electronic rejection tone, flat and unsympathetic, close-mic with slight room. Final but not an alarm. No voices, no music, no siren.",
+      "durationSeconds": 1.5,
+      "loop": false,
+      "promptInfluence": 0.4,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Used twice, before each Request denied. Hearing the same refusal twice is the information: Jack tried again and got nowhere."
+    },
+    "sfx_access_revoked_tone": {
+      "category": "system",
+      "source": "generated",
+      "prompt": "A system locking a user out for good. A heavier descending electronic tone with a low weighted thud underneath it and a short cold decay, more serious and more final than an ordinary rejection. Close-mic with slight room. No voices, no music, no siren, no alarm.",
+      "durationSeconds": 2,
+      "loop": false,
+      "promptInfluence": 0.4,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Distinct from the denial tone on purpose. The story distinguishes being refused from being locked out, and that difference is the chapter's ending; it should not sound the same."
+    }
+  }
+}

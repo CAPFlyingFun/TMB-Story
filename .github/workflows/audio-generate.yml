@@ -22,6 +22,11 @@ on:
         description: 'Optional: regenerate one speaker only, e.g. sarah-bennett'
         required: false
         default: ''
+      generate_sfx:
+        description: 'ALSO generate missing sound effects and ambience (costs credits)'
+        required: true
+        default: false
+        type: boolean
       commit:
         description: 'Commit the generated audio back to main'
         required: true
@@ -78,6 +83,22 @@ jobs:
             ARGS+=(--force-speaker "${{ inputs.force_speaker }}")
           fi
           python3 scripts/audio.py "${ARGS[@]}"
+
+      - name: Validate the sound cue sheets
+        if: inputs.mode != 'dry-run'
+        # Free. Runs on every audio run so a broken cue sheet is visible even when no
+        # sound is being generated, and never blocks the voice track.
+        continue-on-error: true
+        run: python3 scripts/audio.py sfx --chapters "${{ inputs.chapters }}"
+
+      - name: Generate sound effects and ambience
+        # OFF BY DEFAULT and never reachable from a push: this workflow is
+        # workflow_dispatch only, and this step additionally needs generate_sfx ticked
+        # by hand. Sound generation is a deliberate act, like voice generation.
+        if: inputs.generate_sfx && inputs.mode != 'dry-run'
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/audio.py generate-sfx --chapters "${{ inputs.chapters }}"
 
       - name: Install ffmpeg
         if: inputs.mode != 'dry-run'
