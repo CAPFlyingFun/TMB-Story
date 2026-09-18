@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_building_shake",
+  "category": "foley",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "A building structure shuddering. Low-frequency rumble through a concrete floor with light fittings and loose equipment rattling above it, building and then easing. Interior perspective, recorded at a strong present level with real low end. No voices, no music, no collapse, no debris.",
+  "durationSeconds": 4,
+  "promptInfluence": 0.35,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "635bcd399e00573d27366de1a20f4d796666852c558a2230b14e5250530496a2",
+  "bytes": 65245,
+  "generated": "2026-09-18T11:58:40Z"
+}

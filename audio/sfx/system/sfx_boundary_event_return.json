@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_boundary_event_return",
+  "category": "system",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "Sound rushing back into a room all at once after total silence. A sharp pressure return with room ambience and machinery slamming back to full in a single instant, then settling. Close and enveloping, recorded at a strong present level. No voices, no music.",
+  "durationSeconds": 3,
+  "promptInfluence": 0.45,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "5b3716a6d4bbc9a1a9b9f96194eb1025ca02f7f47762ecf1f352eddf0c4ee64a",
+  "bytes": 48945,
+  "generated": "2026-09-18T11:58:40Z"
+}

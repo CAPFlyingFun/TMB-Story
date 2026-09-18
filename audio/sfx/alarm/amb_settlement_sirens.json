@@ -1,0 +1,16 @@
+{
+  "asset": "amb_settlement_sirens",
+  "category": "alarm",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "Civil emergency sirens across a small town, heard from indoors through walls and glass. Several units at different distances, rising and falling out of step with each other, with the building muffling the high end. Even and continuous, recorded at a strong present level. No voices, no music, no interior alarm.",
+  "durationSeconds": 12,
+  "promptInfluence": 0.35,
+  "loop": true,
+  "assetVersion": 1,
+  "fingerprint": "b324dd0e3ea6b51f6d6d00f436ec3ec30f661728e8c8568c7a73d63209b56b38",
+  "bytes": 193141,
+  "generated": "2026-09-18T11:58:37Z"
+}

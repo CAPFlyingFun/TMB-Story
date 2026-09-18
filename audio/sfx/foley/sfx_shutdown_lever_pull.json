@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_shutdown_lever_pull",
+  "category": "foley",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "A heavy industrial disconnect lever thrown by hand, followed by electrical power dropping out of a room. A solid mechanical clack with weight behind it, then the collapse of every hum and fan into silence. Close and physical, recorded at a strong present level. No voices, no music.",
+  "durationSeconds": 3,
+  "promptInfluence": 0.35,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "8169d11d81a61a358f1be88523ebfeb1bffb491fad2cbc792b913bcc03a97167",
+  "bytes": 48945,
+  "generated": "2026-09-18T11:58:42Z"
+}

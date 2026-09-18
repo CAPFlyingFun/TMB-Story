@@ -3329,7 +3329,7 @@
       "gain": 0.14,
       "loop": true,
       "audio": "audio/sfx/alarm/amb_settlement_sirens.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW asset, carried over from chapter 2: the sirens Jack started are still going, and they stop where the manuscript says the alarms stop.",
       "fadeInMs": 1500,
       "fadeOutMs": 2500,
@@ -3374,7 +3374,7 @@
       "gain": 0.5,
       "loop": false,
       "audio": "audio/sfx/foley/sfx_building_shake.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW. The shake arrives before the narration names it, so the listener feels it with Sarah rather than being told about it."
     },
     {
@@ -3387,7 +3387,7 @@
       "gain": 0.38,
       "loop": false,
       "audio": "audio/sfx/foley/sfx_building_shake.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW asset, second use, quieter. The manuscript calls it another vibration, so it should be the same sound diminished rather than a new one."
     },
     {
@@ -3413,7 +3413,7 @@
       "gain": 0.62,
       "loop": false,
       "audio": "audio/sfx/system/sfx_boundary_event_collapse.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW. The event. It ends in real silence rather than a tail, because the manuscript is explicit that the sound does not fade or become muffled, it ceases to exist.",
       "offsetMs": 1200
     },
@@ -3427,7 +3427,7 @@
       "gain": 0.6,
       "loop": false,
       "audio": "audio/sfx/system/sfx_boundary_event_return.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW. The other half. The silence between the two is carried by the manifest's own pauses across the four narration segments in between, so the quiet is real rather than printed into a file."
     },
     {
@@ -3487,7 +3487,7 @@
       "gain": 0.44,
       "loop": false,
       "audio": "audio/sfx/interface/sfx_wrist_terminal_chirp.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW asset, reused from chapter 2. Lena getting through is the first contact with anyone outside the room since the event."
     },
     {
@@ -3545,7 +3545,7 @@
       "gain": 0.44,
       "loop": false,
       "audio": "audio/sfx/system/sfx_distant_vibration_deep.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW, and the most important new asset in either chapter. The first sound of the giant world, arriving from outside with no seismic cause. It plays before the narration so the listener hears it exactly as Jack and Sarah do: an event first, an explanation never."
     },
     {
@@ -3558,7 +3558,7 @@
       "gain": 0.4,
       "loop": false,
       "audio": "audio/sfx/system/sfx_distant_vibration_deep.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW asset, second use. The manuscript brings it back and then lets it go, and Jack decides he is not certain he wants to know what it was. The same sound twice is the whole point."
     },
     {

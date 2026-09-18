@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_distant_vibration_deep",
+  "category": "system",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "A deep vibration arriving from somewhere far outside a building and passing through it. Sub-bass swell with a slow approach and a slower departure, felt through the structure rather than heard as an event, like distant thunder with no crack. Recorded at a strong present level with real low end. No voices, no music, no impact.",
+  "durationSeconds": 6,
+  "promptInfluence": 0.4,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "4f43f18b6723bf02463080dd7115fed42395450c70d084ac076adb0a0fa9790e",
+  "bytes": 97010,
+  "generated": "2026-09-18T11:58:42Z"
+}

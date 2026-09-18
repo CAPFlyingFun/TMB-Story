@@ -3399,7 +3399,7 @@
       "gain": 0.42,
       "loop": false,
       "audio": "audio/sfx/interface/sfx_wrist_terminal_chirp.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW. The wrist terminal is how Lena exists in this story, and it needs to read as a different device from the laboratory console."
     },
     {
@@ -3429,7 +3429,7 @@
       "gain": 0.4,
       "loop": false,
       "audio": "audio/sfx/interface/sfx_wrist_terminal_chirp.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW asset, second use. The manuscript says chirped again, so the listener should recognise it."
     },
     {
@@ -3442,7 +3442,7 @@
       "gain": 0.3,
       "loop": true,
       "audio": "audio/sfx/system/sfx_array_rings_move.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW. The signature machine sound of the chapter. It starts when the manuscript reveals the rings and stops on the sentence that stops them.",
       "fadeInMs": 800,
       "fadeOutMs": 1500,
@@ -3473,7 +3473,7 @@
       "gain": 0.52,
       "loop": false,
       "audio": "audio/sfx/foley/sfx_shutdown_lever_pull.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW. The chapter's biggest physical act, and it has to sound conclusive so that the rings restarting lands as a violation.",
       "offsetMs": 1400
     },
@@ -3487,7 +3487,7 @@
       "gain": 0.34,
       "loop": true,
       "audio": "audio/sfx/system/sfx_array_rings_move.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW asset, second use. They do not stop again, so this one runs to the end of the chapter.",
       "fadeInMs": 600,
       "fadeOutMs": 2000,
@@ -3573,7 +3573,7 @@
       "gain": 0.16,
       "loop": true,
       "audio": "audio/sfx/alarm/amb_settlement_sirens.mp3",
-      "cached": false,
+      "cached": true,
       "why": "NEW. Once the emergency is called the sirens do not stop, and they are the only sound in either chapter that comes from outside the building. Heard through walls, which is where the chapters stay.",
       "fadeInMs": 3000,
       "stopOrder": 181,

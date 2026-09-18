@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_wrist_terminal_chirp",
+  "category": "interface",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "An incoming call alert on a small wrist-worn device. Two rising electronic notes with a short clean decay, close to the microphone, recorded at a strong present level with plenty of body. Distinct from a desk console: smaller, tighter, worn on a person. No voices, no music, no alarm.",
+  "durationSeconds": 1.5,
+  "promptInfluence": 0.35,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "a2ae802db601689ffc0628b6ae42769684cfa3f97ec19d419ff498c24e9d5edd",
+  "bytes": 24703,
+  "generated": "2026-09-18T11:58:44Z"
+}

@@ -1,6 +1,6 @@
 {
   "_comment": "Canonical sound assets the game may reuse. `audio` points at the same file the audiobook plays: one generated effect, used in both places, never a second copy for Godot. Playback timing is NOT exported -- the audiobook's cue sheet times these against narration, and the game times them against gameplay. `generated` false means the asset is approved but not yet made.",
-  "assetCount": 20,
+  "assetCount": 28,
   "assets": [
     {
       "assetId": "amb_console_alarm_bed",
@@ -13,7 +13,9 @@
       "suggestedGain": 0.5,
       "description": "Categorised `alarm`, not `ambience`, so switching ambience off does not silence the chapter's alarm. Loops under the opening sequence and is ducked hard beneath speech.",
       "chapters": [
-        1
+        1,
+        2,
+        3
       ]
     },
     {
@@ -27,7 +29,24 @@
       "suggestedGain": 0.4,
       "description": "The cheapest honest way to tell the listener Sarah is on a speaker and not in the room. It sits under her intercom lines without touching her approved voice clips, which are never filtered or regenerated for this.",
       "chapters": [
-        1
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assetId": "amb_settlement_sirens",
+      "category": "alarm",
+      "loop": true,
+      "audio": "audio/sfx/alarm/amb_settlement_sirens.mp3",
+      "durationSeconds": 12,
+      "source": "generated",
+      "generated": true,
+      "suggestedGain": 0.5,
+      "description": "Once Jack orders the settlement-wide emergency the sirens do not stop. Heard from inside, which is where both chapters stay.",
+      "chapters": [
+        2,
+        3
       ]
     },
     {
@@ -41,7 +60,9 @@
       "suggestedGain": 0.45,
       "description": "The tension spine of the last third, and the beginning of the TOMBS Array's own sound identity. It enters when the remote initialization request appears and does not leave.",
       "chapters": [
-        1
+        1,
+        2,
+        3
       ]
     },
     {
@@ -55,7 +76,9 @@
       "suggestedGain": 0.1,
       "description": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed. Its prompt is deliberately terse: the first version was 476 characters and was rejected twice with HTTP 400, at 22 seconds and again at 20, while every other asset -- including a 20-second looping bed -- generated fine at 385 characters or fewer. The cause was prompt LENGTH, not duration. Nothing substantive was dropped, only words.",
       "chapters": [
-        1
+        1,
+        2,
+        3
       ]
     },
     {
@@ -97,7 +120,65 @@
       "suggestedGain": 0.5,
       "description": "A single interruption, distinct from the polite chirp and from the full eruption. Used twice: the second alarm during the trace, and the tone that interrupts the couple much later.",
       "chapters": [
-        1
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assetId": "sfx_array_rings_move",
+      "category": "system",
+      "loop": true,
+      "audio": "audio/sfx/system/sfx_array_rings_move.mp3",
+      "durationSeconds": 6,
+      "source": "generated",
+      "generated": true,
+      "suggestedGain": 0.45,
+      "description": "The TOMBS Array's rings, the signature machine sound of chapter 2. Loops because the manuscript has them moving, stopping and starting again across the whole scene.",
+      "chapters": [
+        2
+      ]
+    },
+    {
+      "assetId": "sfx_boundary_event_collapse",
+      "category": "system",
+      "loop": false,
+      "audio": "audio/sfx/system/sfx_boundary_event_collapse.mp3",
+      "durationSeconds": 4,
+      "source": "generated",
+      "generated": true,
+      "suggestedGain": 0.45,
+      "description": "The event itself. The manuscript is explicit that the sound does not fade or muffle, it ceases, so the asset has to end in real silence rather than a tail.",
+      "chapters": [
+        3
+      ]
+    },
+    {
+      "assetId": "sfx_boundary_event_return",
+      "category": "system",
+      "loop": false,
+      "audio": "audio/sfx/system/sfx_boundary_event_return.mp3",
+      "durationSeconds": 3,
+      "source": "generated",
+      "generated": true,
+      "suggestedGain": 0.45,
+      "description": "The other half of the event. These two are always used as a pair, with the silence between them carried by the manifest's own pause rather than by either file.",
+      "chapters": [
+        3
+      ]
+    },
+    {
+      "assetId": "sfx_building_shake",
+      "category": "foley",
+      "loop": false,
+      "audio": "audio/sfx/foley/sfx_building_shake.mp3",
+      "durationSeconds": 4,
+      "source": "generated",
+      "generated": true,
+      "suggestedGain": 0.45,
+      "description": "The shake that makes Sarah catch herself against the console. Used where the manuscript shakes the building, not as general tension.",
+      "chapters": [
+        3
       ]
     },
     {
@@ -111,7 +192,8 @@
       "suggestedGain": 0.45,
       "description": "Jack waking so hard the chair moves. It gives the alarm a physical consequence in a body rather than only on a screen.",
       "chapters": [
-        1
+        1,
+        2
       ]
     },
     {
@@ -157,6 +239,20 @@
       ]
     },
     {
+      "assetId": "sfx_distant_vibration_deep",
+      "category": "system",
+      "loop": false,
+      "audio": "audio/sfx/system/sfx_distant_vibration_deep.mp3",
+      "durationSeconds": 6,
+      "source": "generated",
+      "generated": true,
+      "suggestedGain": 0.45,
+      "description": "The unexplained vibration that arrives twice at the end of chapter 3 and that Jack decides he does not want to explain. The single most important new asset: it is the first sound of the giant world and it will recur for a long time.",
+      "chapters": [
+        3
+      ]
+    },
+    {
       "assetId": "sfx_equipment_power_up_soft",
       "category": "system",
       "loop": false,
@@ -167,7 +263,8 @@
       "suggestedGain": 0.45,
       "description": "The terminal undoing Jack's lock without being asked. Soft on purpose: a bang would make it an attack, and the point is that it is calm.",
       "chapters": [
-        1
+        1,
+        2
       ]
     },
     {
@@ -181,7 +278,8 @@
       "suggestedGain": 0.45,
       "description": "Sarah's gray sneakers, per Chapter 1 visual canon -- explicitly not heels. Used twice and only for spatial transitions: entering the laboratory, and crossing the room to Jack. The listener never hears her walk otherwise.",
       "chapters": [
-        1
+        1,
+        2
       ]
     },
     {
@@ -209,7 +307,8 @@
       "suggestedGain": 0.4,
       "description": "Marks the acoustic frame Sarah's remote voice arrives in. Used twice: reaching for the intercom, and tapping the button again.",
       "chapters": [
-        1
+        1,
+        2
       ]
     },
     {
@@ -237,7 +336,9 @@
       "suggestedGain": 0.45,
       "description": "Used three times, only where the manuscript actually starts or resumes typing. It marks who has the keyboard, which is how the scene's authority shifts from Jack to Sarah.",
       "chapters": [
-        1
+        1,
+        2,
+        3
       ]
     },
     {
@@ -251,7 +352,22 @@
       "suggestedGain": 0.45,
       "description": "Someone entering behind Jack while he is looking the other way. Pure spatial information, and the manuscript puts it mid-sentence on purpose.",
       "chapters": [
-        1
+        1,
+        2
+      ]
+    },
+    {
+      "assetId": "sfx_shutdown_lever_pull",
+      "category": "foley",
+      "loop": false,
+      "audio": "audio/sfx/foley/sfx_shutdown_lever_pull.mp3",
+      "durationSeconds": 3,
+      "source": "generated",
+      "generated": true,
+      "suggestedGain": 0.45,
+      "description": "Jack's physical shutdown. It has to sound conclusive, because the room coming back on afterwards is the moment TOMBS stops being a malfunction.",
+      "chapters": [
+        2
       ]
     },
     {
@@ -265,7 +381,9 @@
       "suggestedGain": 0.4,
       "description": "Deliberately calm. The unsettling thing about TOMBS opening its own directory is how unbothered it sounds. Used twice: the directory opening itself, and the file opening itself.",
       "chapters": [
-        1
+        1,
+        2,
+        3
       ]
     },
     {
@@ -280,6 +398,21 @@
       "description": "Jack taking control back. It has to sound like it worked, so that the terminal coming back on by itself lands as a violation.",
       "chapters": [
         1
+      ]
+    },
+    {
+      "assetId": "sfx_wrist_terminal_chirp",
+      "category": "interface",
+      "loop": false,
+      "audio": "audio/sfx/interface/sfx_wrist_terminal_chirp.mp3",
+      "durationSeconds": 1.5,
+      "source": "generated",
+      "generated": true,
+      "suggestedGain": 0.4,
+      "description": "Jack's wrist terminal, which carries every call with Lena across chapters 2 and 3. It needs to read as a different device from the laboratory console.",
+      "chapters": [
+        2,
+        3
       ]
     }
   ]
