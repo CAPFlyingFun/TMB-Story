@@ -1,6 +1,6 @@
 {
   "_comment": "Canonical sound assets the game may reuse. `audio` points at the same file the audiobook plays: one generated effect, used in both places, never a second copy for Godot. Playback timing is NOT exported -- the audiobook's cue sheet times these against narration, and the game times them against gameplay. `generated` false means the asset is approved but not yet made.",
-  "assetCount": 31,
+  "assetCount": 32,
   "assets": [
     {
       "assetId": "amb_computer_lab",
@@ -87,7 +87,7 @@
       "source": "procedural",
       "generated": true,
       "suggestedGain": 0.5,
-      "description": "The same town, sirens switched to a second pattern. Chapter 3 says the sirens outside CHANGED PITCH and the audio went on playing the first one; this is what changes. Higher centres and a sweep twice as fast, so it reads as an escalation rather than as a different recording.",
+      "description": "The same town, sirens switched to a second pattern. Chapter 3 says the sirens outside CHANGED PITCH and the audio went on playing the first one; this is what changes. Higher centres and a sweep twice as fast, so it reads as an escalation rather than as a different recording. LOWPASS TIGHTENED so it reads as outside rather than beside them: a wall eats the high end, and the high end is what makes a sound feel close.",
       "chapters": [
         3
       ]
@@ -101,7 +101,7 @@
       "source": "procedural",
       "generated": true,
       "suggestedGain": 0.5,
-      "description": "Civil sirens across the settlement, heard indoors through a wall. Three units on different sweeps so they drift out of step with each other, which is what a town full of sirens sounds like -- and all three close their phase at 12 seconds, so the loop is silent by construction rather than by somebody matching the ends by ear.",
+      "description": "Civil sirens across the settlement, heard indoors through a wall. Three units on different sweeps so they drift out of step with each other, which is what a town full of sirens sounds like -- and all three close their phase at 12 seconds, so the loop is silent by construction rather than by somebody matching the ends by ear. LOWPASS TIGHTENED so it reads as outside rather than beside them: a wall eats the high end, and the high end is what makes a sound feel close.",
       "chapters": [
         2,
         3
@@ -408,6 +408,20 @@
       "description": "Jack's physical shutdown. It has to sound conclusive, because the room coming back on afterwards is the moment TOMBS stops being a malfunction.",
       "chapters": [
         2
+      ]
+    },
+    {
+      "assetId": "sfx_siren_winddown",
+      "category": "alarm",
+      "loop": false,
+      "audio": "audio/sfx/alarm/sfx_siren_winddown.mp3",
+      "durationSeconds": 12,
+      "source": "procedural",
+      "generated": true,
+      "suggestedGain": 0.5,
+      "description": "A siren losing power: it holds, then its pitch falls away to nothing. Played once at the window, deliberately louder than the distant beds for a few seconds, then gone -- so the silence and the forest can take over. A one-shot, so it is allowed the fades a loop must never have.",
+      "chapters": [
+        3
       ]
     },
     {

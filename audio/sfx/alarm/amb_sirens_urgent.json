@@ -8,7 +8,7 @@
     "seconds": 12,
     "sampleRate": 44100,
     "kbps": 64,
-    "lowpassHz": 1400,
+    "lowpassHz": 520,
     "units": [
       {
         "centreHz": 760,
@@ -30,8 +30,8 @@
       }
     ]
   },
-  "recipeFingerprint": "26ef90347a89de4740f3aaa6ff06a93de47e4466b98b4185a228c7d0a992d479",
-  "fingerprint": "supplied:d2e46f185cfa5b2518a7a5c792e6bdbc71acec22c05b3b619c89cbdfe35cf065",
+  "recipeFingerprint": "cb4275eddcdbcce996dcd74300107c9704abf118106b8a79ffaa4f2cbb824313",
+  "fingerprint": "supplied:05ad85a91fc8c947a94786d3f2d4d0d66911766c3a784311375d9776222b1eda",
   "bytes": 96592,
   "seconds": 12.07,
   "expression": "0.5*sin(2*PI*760*t-600*cos(2*PI*t/3))+0.28*sin(2*PI*620*t-560*cos(2*PI*t/4))+0.16*sin(2*PI*880*t-180*cos(2*PI*t/2))",
@@ -39,7 +39,7 @@
     "measuredAt": "2026-09-18",
     "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
     "seconds": 12.0,
-    "peakDbfs": -1.2,
-    "rmsDbfs": -8.3
+    "peakDbfs": -5.0,
+    "rmsDbfs": -14.2
   }
 }
