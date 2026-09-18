@@ -12,5 +12,17 @@
   "assetVersion": 1,
   "fingerprint": "cf99f2378aaa8fbe8aea4bc408055ada64a5a46739c9c41e8d5b463e5ce4859a",
   "bytes": 17180,
-  "generated": "2026-09-18T04:16:57Z"
+  "generated": "2026-09-18T04:16:57Z",
+  "normalize": {
+    "appliedDb": 1.5,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -1.0,
+    "limitedBy": "rms target",
+    "sourceRmsDbfs": -21.5,
+    "sourcePeakDbfs": -7.9,
+    "resultRmsDbfs": -17.4,
+    "resultPeakDbfs": -3.9,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/interface/sfx_intercom_close.source.mp3",
+    "at": "2026-09-18T12:33:50Z"
+  }
 }

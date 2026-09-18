@@ -12,5 +12,17 @@
   "assetVersion": 1,
   "fingerprint": "635bcd399e00573d27366de1a20f4d796666852c558a2230b14e5250530496a2",
   "bytes": 65245,
-  "generated": "2026-09-18T11:58:40Z"
+  "generated": "2026-09-18T11:58:40Z",
+  "normalize": {
+    "appliedDb": 7.9,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -1.0,
+    "limitedBy": "peak ceiling",
+    "sourceRmsDbfs": -28.1,
+    "sourcePeakDbfs": -8.9,
+    "resultRmsDbfs": -17.7,
+    "resultPeakDbfs": 0.0,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/foley/sfx_building_shake.source.mp3",
+    "at": "2026-09-18T12:33:49Z"
+  }
 }

@@ -12,5 +12,17 @@
   "assetVersion": 2,
   "fingerprint": "8db1162a119931276e5b6d4e95dac5fd144200b7e0dccd5006b794518319ac18",
   "bytes": 160958,
-  "generated": "2026-09-18T12:20:56Z"
+  "generated": "2026-09-18T12:20:56Z",
+  "normalize": {
+    "appliedDb": 27.5,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -1.0,
+    "limitedBy": "rms target",
+    "sourceRmsDbfs": -47.5,
+    "sourcePeakDbfs": -34.0,
+    "resultRmsDbfs": -17.4,
+    "resultPeakDbfs": -4.2,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/interface/amb_intercom_channel_open.source.mp3",
+    "at": "2026-09-18T12:33:48Z"
+  }
 }

@@ -12,5 +12,17 @@
   "assetVersion": 1,
   "fingerprint": "f9577c7e2a28b193aca1e74b5528fca03ea40230e4318e74edc22587f50f2ed4",
   "bytes": 33062,
-  "generated": "2026-09-18T04:17:03Z"
+  "generated": "2026-09-18T04:17:03Z",
+  "normalize": {
+    "appliedDb": 14.2,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -1.0,
+    "limitedBy": "peak ceiling",
+    "sourceRmsDbfs": -36.3,
+    "sourcePeakDbfs": -15.2,
+    "resultRmsDbfs": -19.6,
+    "resultPeakDbfs": 0.0,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/interface/sfx_terminal_lock_engage.source.mp3",
+    "at": "2026-09-18T12:33:50Z"
+  }
 }

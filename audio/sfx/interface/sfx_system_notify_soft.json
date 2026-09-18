@@ -12,5 +12,17 @@
   "assetVersion": 2,
   "fingerprint": "b4985d3d77d99b2aefc52d2d7c21945405477db5b4e8e876adc7f0fbac616e59",
   "bytes": 24703,
-  "generated": "2026-09-18T12:21:05Z"
+  "generated": "2026-09-18T12:21:05Z",
+  "normalize": {
+    "appliedDb": 1.2,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -1.0,
+    "limitedBy": "peak ceiling",
+    "sourceRmsDbfs": -24.0,
+    "sourcePeakDbfs": -2.2,
+    "resultRmsDbfs": -20.2,
+    "resultPeakDbfs": 0.0,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/interface/sfx_system_notify_soft.source.mp3",
+    "at": "2026-09-18T12:33:50Z"
+  }
 }

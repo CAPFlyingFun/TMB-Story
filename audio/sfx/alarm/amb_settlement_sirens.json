@@ -12,5 +12,17 @@
   "assetVersion": 1,
   "fingerprint": "b324dd0e3ea6b51f6d6d00f436ec3ec30f661728e8c8568c7a73d63209b56b38",
   "bytes": 193141,
-  "generated": "2026-09-18T11:58:37Z"
+  "generated": "2026-09-18T11:58:37Z",
+  "normalize": {
+    "appliedDb": 14.3,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -1.0,
+    "limitedBy": "rms target",
+    "sourceRmsDbfs": -34.3,
+    "sourcePeakDbfs": -16.6,
+    "resultRmsDbfs": -17.5,
+    "resultPeakDbfs": 0.0,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/alarm/amb_settlement_sirens.source.mp3",
+    "at": "2026-09-18T12:33:48Z"
+  }
 }

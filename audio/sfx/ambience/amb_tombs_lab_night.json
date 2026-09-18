@@ -12,5 +12,17 @@
   "assetVersion": 2,
   "fingerprint": "d9072af9695912f96a0ad7f6c66047b92d56c55ed8fbf4ef9c69ba2c96717c94",
   "bytes": 321036,
-  "generated": "2026-09-18T12:20:57Z"
+  "generated": "2026-09-18T12:20:57Z",
+  "normalize": {
+    "appliedDb": 22.5,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -1.0,
+    "limitedBy": "rms target",
+    "sourceRmsDbfs": -42.5,
+    "sourcePeakDbfs": -24.4,
+    "resultRmsDbfs": -17.4,
+    "resultPeakDbfs": 0.0,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/ambience/amb_tombs_lab_night.source.mp3",
+    "at": "2026-09-18T12:33:48Z"
+  }
 }

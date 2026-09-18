@@ -12,5 +12,17 @@
   "assetVersion": 2,
   "fingerprint": "9587bae3c0a87a7ac1632b123409154cf7c3b70b3cacf29334cd01c519388c74",
   "bytes": 40586,
-  "generated": "2026-09-18T12:21:00Z"
+  "generated": "2026-09-18T12:21:00Z",
+  "normalize": {
+    "appliedDb": 26.7,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -1.0,
+    "limitedBy": "rms target",
+    "sourceRmsDbfs": -46.7,
+    "sourcePeakDbfs": -32.6,
+    "resultRmsDbfs": -17.4,
+    "resultPeakDbfs": -3.4,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/foley/sfx_chair_roll_slow.source.mp3",
+    "at": "2026-09-18T12:33:49Z"
+  }
 }

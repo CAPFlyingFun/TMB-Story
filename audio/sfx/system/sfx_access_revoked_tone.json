@@ -12,5 +12,17 @@
   "assetVersion": 1,
   "fingerprint": "de9c16fbed3356ba764dd93f856887996602c4e3a1fb3bc6af94475691b72dec",
   "bytes": 33062,
-  "generated": "2026-09-18T04:16:48Z"
+  "generated": "2026-09-18T04:16:48Z",
+  "normalize": {
+    "appliedDb": 6.1,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -1.0,
+    "limitedBy": "rms target",
+    "sourceRmsDbfs": -26.1,
+    "sourcePeakDbfs": -11.9,
+    "resultRmsDbfs": -17.5,
+    "resultPeakDbfs": -3.3,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/system/sfx_access_revoked_tone.source.mp3",
+    "at": "2026-09-18T12:33:49Z"
+  }
 }

@@ -12,5 +12,17 @@
   "assetVersion": 1,
   "fingerprint": "4f43f18b6723bf02463080dd7115fed42395450c70d084ac076adb0a0fa9790e",
   "bytes": 97010,
-  "generated": "2026-09-18T11:58:42Z"
+  "generated": "2026-09-18T11:58:42Z",
+  "normalize": {
+    "appliedDb": 18.9,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -1.0,
+    "limitedBy": "rms target",
+    "sourceRmsDbfs": -38.9,
+    "sourcePeakDbfs": -26.5,
+    "resultRmsDbfs": -17.4,
+    "resultPeakDbfs": -5.1,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/system/sfx_distant_vibration_deep.source.mp3",
+    "at": "2026-09-18T12:33:49Z"
+  }
 }

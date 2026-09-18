@@ -12,5 +12,17 @@
   "assetVersion": 2,
   "fingerprint": "ae3aa2ce5e83ea81355e7690b03bda4edd3a746934b692638c0fcba782189fb3",
   "bytes": 48945,
-  "generated": "2026-09-18T12:21:04Z"
+  "generated": "2026-09-18T12:21:04Z",
+  "normalize": {
+    "appliedDb": 10.7,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -1.0,
+    "limitedBy": "peak ceiling",
+    "sourceRmsDbfs": -38.2,
+    "sourcePeakDbfs": -11.7,
+    "resultRmsDbfs": -24.9,
+    "resultPeakDbfs": -0.0,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/foley/sfx_footsteps_sarah_sneakers.source.mp3",
+    "at": "2026-09-18T12:33:50Z"
+  }
 }
