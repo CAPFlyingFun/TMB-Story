@@ -5,12 +5,12 @@
   "provider": "elevenlabs-sfx",
   "model": null,
   "outputFormat": "mp3_44100_128",
-  "prompt": "A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.",
+  "prompt": "Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.",
   "durationSeconds": 3,
   "promptInfluence": 0.3,
   "loop": false,
-  "assetVersion": 1,
-  "fingerprint": "72ce1c747420e7cf22638a0ba86d30c905e949e957d55cd85ec9e8e15816d63c",
+  "assetVersion": 2,
+  "fingerprint": "407ddfd76fe721116b620ec198ab390dfcd1df10c9c63f02842ff4d056d99045",
   "bytes": 48945,
-  "generated": "2026-09-18T04:17:00Z"
+  "generated": "2026-09-18T12:21:04Z"
 }

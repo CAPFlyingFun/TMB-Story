@@ -5,12 +5,12 @@
   "provider": "elevenlabs-sfx",
   "model": null,
   "outputFormat": "mp3_44100_128",
-  "prompt": "The quiet open-channel hiss of an intercom speaker with the line live and nobody talking. Soft narrow-band electrical noise, a slight carrier hum, thin and boxy as if coming from a small wall-mounted speaker grille. Very low level and unchanging. No voices, no speech, no music, no clicks, no tones. Even throughout so it can loop.",
+  "prompt": "An intercom speaker with the line open and nobody talking, microphone right at the grille. Narrow-band electrical hiss with a steady carrier hum under it, band-limited and boxy the way a small wall-mounted speaker colours everything. Filling the frame, recorded at a strong present level. Even throughout so it loops. No voices, no speech, no music, no clicks, no tones.",
   "durationSeconds": 10,
   "promptInfluence": 0.3,
   "loop": true,
-  "assetVersion": 1,
-  "fingerprint": "7b34c9ecf2785dfce6a1381f6d4d03b0118f35f3a87ded43991749462db571cf",
+  "assetVersion": 2,
+  "fingerprint": "8db1162a119931276e5b6d4e95dac5fd144200b7e0dccd5006b794518319ac18",
   "bytes": 160958,
-  "generated": "2026-09-18T04:16:43Z"
+  "generated": "2026-09-18T12:20:56Z"
 }
