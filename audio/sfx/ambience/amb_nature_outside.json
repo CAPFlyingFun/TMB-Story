@@ -3,9 +3,9 @@
   "source": "supplied",
   "category": "ambience",
   "loop": true,
-  "fingerprint": "supplied:fd1f121ac5176cc2af29d07b8c131b3307c519697a15351f0c71ff100683a42a",
-  "bytes": 18977018,
-  "measuredSeconds": 593.03,
+  "fingerprint": "supplied:b6780a3d2ebec40153ecaebda2d68e4207ac0c2515d6a047a9fba7c80d2a5ded",
+  "bytes": 4744716,
+  "measuredSeconds": 593.08,
   "credit": {
     "source": "Pixabay",
     "sourceUrl": "https://pixabay.com/sound-effects/",
@@ -17,12 +17,5 @@
     "author": "u_vr5icvkppa",
     "authorUrl": "https://pixabay.com/users/u_vr5icvkppa-52084143/"
   },
-  "adopted": "2026-09-18T14:06:45Z",
-  "measured": {
-    "measuredAt": "2026-09-18",
-    "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
-    "seconds": 593.03,
-    "peakDbfs": -0.1,
-    "rmsDbfs": -42.8
-  }
+  "adopted": "2026-09-18T14:12:18Z"
 }

@@ -3896,6 +3896,24 @@
       "interface": -45.1,
       "system": -45.1,
       "foley": -47.1
+    },
+    "exportEncode": {
+      "_comment": [
+        "The DRAMA exports. They were 192 kbps STEREO built from sources that are almost",
+        "entirely mono -- paying twice the bitrate for a second channel carrying the same",
+        "signal. 96 kbps mono is the same audio at half the size: 36.3 MB becomes about 18.",
+        "",
+        "THE VOICE-ONLY EXPORTS ARE DELIBERATELY NOT TOUCHED. combine joins the clips with",
+        "`-c copy`, which is lossless and fast, and re-encoding 500 seconds of narration to",
+        "save nine megabytes would spend quality on the one thing the whole project is for.",
+        "The silence between clips must also stay at the clips' own format or the copy-join",
+        "breaks, which is a good reason not to make that number configurable at all.",
+        "",
+        "Raise these if a stereo mix ever becomes real; nothing else needs to change."
+      ],
+      "dramaKbps": 96,
+      "channels": 1,
+      "sampleRate": 44100
     }
   }
 }
