@@ -17,5 +17,12 @@
     "addedBy": "Joshua",
     "addedOn": "2026-09-18"
   },
-  "adopted": "2026-09-18T13:53:31Z"
+  "adopted": "2026-09-18T13:58:46Z",
+  "measured": {
+    "measuredAt": "2026-09-18",
+    "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
+    "seconds": 45.1,
+    "peakDbfs": -31.6,
+    "rmsDbfs": -44.1
+  }
 }

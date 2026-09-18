@@ -3,6 +3,22 @@
   "assetCount": 28,
   "assets": [
     {
+      "assetId": "amb_computer_lab",
+      "category": "ambience",
+      "loop": true,
+      "audio": "audio/sfx/ambience/amb_computer_lab.mp3",
+      "durationSeconds": 45.1,
+      "source": "supplied",
+      "generated": true,
+      "suggestedGain": 0.1,
+      "description": "Real recorded computer-room tone, supplied by Joshua and confirmed by him to loop seamlessly. Replaces the generated amb_tombs_lab_night as the lab bed. A SEPARATE ASSET rather than a replacement file, because an asset is its name: the generated one keeps its prompt, its measurements and its history, and switching back is repointing three cues. 24 kHz MPEG-2, which is what exposed the duration reader's version bug.",
+      "chapters": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
       "assetId": "amb_console_alarm_bed",
       "category": "alarm",
       "loop": true,
@@ -25,7 +41,7 @@
       "audio": "audio/sfx/ambience/amb_intercom_channel_open.mp3",
       "durationSeconds": 10,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.1,
       "description": "Open intercom channel with the line live and nobody talking. AMBIENCE, not interface: it is room noise that sits under a scene, so it belongs with the backgrounds the listener can switch off. The intercom's clicks and static are separate assets on the sfx layer, because those are events.",
       "chapters": [
@@ -61,22 +77,6 @@
       "description": "The tension spine of the last third, and the beginning of the TOMBS Array's own sound identity. It enters when the remote initialization request appears and does not leave.",
       "chapters": [
         1
-      ]
-    },
-    {
-      "assetId": "amb_tombs_lab_night",
-      "category": "ambience",
-      "loop": true,
-      "audio": "audio/sfx/ambience/amb_tombs_lab_night.mp3",
-      "durationSeconds": 20,
-      "source": "generated",
-      "generated": true,
-      "suggestedGain": 0.1,
-      "description": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed. Its prompt is deliberately terse: the first version was 476 characters and was rejected twice with HTTP 400, at 22 seconds and again at 20, while every other asset -- including a 20-second looping bed -- generated fine at 385 characters or fewer. The cause was prompt LENGTH, not duration. Nothing substantive was dropped, only words.",
-      "chapters": [
-        1,
-        2,
-        3
       ]
     },
     {
