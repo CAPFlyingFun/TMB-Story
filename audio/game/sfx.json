@@ -1,6 +1,6 @@
 {
   "_comment": "Canonical sound assets the game may reuse. `audio` points at the same file the audiobook plays: one generated effect, used in both places, never a second copy for Godot. Playback timing is NOT exported -- the audiobook's cue sheet times these against narration, and the game times them against gameplay. `generated` false means the asset is approved but not yet made.",
-  "assetCount": 28,
+  "assetCount": 30,
   "assets": [
     {
       "assetId": "amb_computer_lab",
@@ -47,6 +47,34 @@
       "chapters": [
         1,
         2,
+        3
+      ]
+    },
+    {
+      "assetId": "amb_nature_outside",
+      "category": "ambience",
+      "loop": true,
+      "audio": "audio/sfx/ambience/amb_nature_outside.mp3",
+      "durationSeconds": 593.03,
+      "source": "supplied",
+      "generated": true,
+      "suggestedGain": 0.1,
+      "description": "Outdoor nature tone, for the miniature world once the characters are standing in it. Nearly ten minutes long, so under a chapter it is effectively continuous and never reaches a loop seam.",
+      "chapters": [
+        3
+      ]
+    },
+    {
+      "assetId": "amb_night_outside",
+      "category": "ambience",
+      "loop": true,
+      "audio": "audio/sfx/ambience/amb_night_outside.mp3",
+      "durationSeconds": 180.07,
+      "source": "supplied",
+      "generated": true,
+      "suggestedGain": 0.1,
+      "description": "Outdoor night tone for the settlement -- the world beyond the lab wall after dark. Three minutes, so it loops roughly three times under a chapter-length scene.",
+      "chapters": [
         3
       ]
     },

@@ -17,5 +17,12 @@
     "author": "freesound_community",
     "authorUrl": "https://pixabay.com/users/freesound_community-46691455/"
   },
-  "adopted": "2026-09-18T14:04:41Z"
+  "adopted": "2026-09-18T14:06:45Z",
+  "measured": {
+    "measuredAt": "2026-09-18",
+    "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
+    "seconds": 180.07,
+    "peakDbfs": -27.5,
+    "rmsDbfs": -47.8
+  }
 }

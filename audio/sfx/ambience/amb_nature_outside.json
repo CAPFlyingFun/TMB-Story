@@ -17,5 +17,12 @@
     "author": "u_vr5icvkppa",
     "authorUrl": "https://pixabay.com/users/u_vr5icvkppa-52084143/"
   },
-  "adopted": "2026-09-18T14:04:41Z"
+  "adopted": "2026-09-18T14:06:45Z",
+  "measured": {
+    "measuredAt": "2026-09-18",
+    "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
+    "seconds": 593.03,
+    "peakDbfs": -0.1,
+    "rmsDbfs": -42.8
+  }
 }
