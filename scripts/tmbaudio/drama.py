@@ -190,6 +190,19 @@ def build_graph(spec):
     return inputs, ";".join(parts), out
 
 
+DEFAULT_EXPORT_ENCODE = {"dramaKbps": 96, "voiceKbps": 80, "channels": 1,
+                         "sampleRate": 44100}
+
+
+def export_encode(sfx_registry):
+    """How the chapter file is written. Was 192 kbps STEREO from mono sources, which
+    paid twice the bitrate for a duplicate channel."""
+    out = dict(DEFAULT_EXPORT_ENCODE)
+    block = (getattr(sfx_registry, "mix", dict)() or {}).get("exportEncode") or {}
+    out.update({k: v for k, v in block.items() if not str(k).startswith("_")})
+    return out
+
+
 def export_chapter(number, registry, sfx_registry=None, log=print):
     """Write audio/exports/chapter-NN-drama.mp3. Returns the path, or None."""
     manifest = mf.load(number)
@@ -204,6 +217,7 @@ def export_chapter(number, registry, sfx_registry=None, log=print):
         return None
 
     sreg = sfx_registry or sfxmod.SfxRegistry(config=registry.config)
+    enc = export_encode(sreg)
     spec = plan(manifest, sreg)
     if spec["missing"]:
         log("  %d asset(s) are not generated yet and are left out of the mix:"
@@ -218,7 +232,8 @@ def export_chapter(number, registry, sfx_registry=None, log=print):
     for path in inputs:
         cmd += ["-i", path]
     cmd += ["-filter_complex", graph, "-map", out_label,
-            "-c:a", "libmp3lame", "-b:a", "192k", "-ar", "44100", "-ac", "2", out]
+            "-c:a", "libmp3lame", "-b:a", "%dk" % enc["dramaKbps"],
+            "-ar", str(enc["sampleRate"]), "-ac", str(enc["channels"]), out]
     subprocess.run(cmd, check=True)
     log("wrote %s  (%d voice clips, %d bed(s), %d effect(s), %.1f min)"
         % (cache.rel(out), len(spec["voices"]), len(spec["beds"]), len(spec["shots"]),

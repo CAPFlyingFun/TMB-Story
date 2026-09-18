@@ -1378,6 +1378,123 @@ class SuppliedAudioTests(unittest.TestCase):
         self.assertEqual(stray, [], "a file left behind by a category change")
 
 
+class WebEncodeTests(unittest.TestCase):
+    """Smaller files, and the original never lost.
+
+    Joshua: "Can we compress audio or convert to MP3 which is less large?" It is
+    already mp3, so the levers are bitrate and channels -- and the risk is that a
+    second pass re-encodes an already-compressed file and quality decays quietly.
+    """
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self.sreg = sfx_reg()
+        self._sfx_dir = sfxmod.SFX_DIR
+        sfxmod.SFX_DIR = os.path.join(self.dir, "sfx")
+        self.sreg.assets["amb_big"] = {
+            "category": "ambience", "source": "supplied", "loop": True,
+            "durationSeconds": 600, "approved": True, "godotReuse": True,
+            "credit": {"title": "Nature Ambience", "author": "u_vr5icvkppa",
+                       "source": "Pixabay", "license": "Pixabay Content License"},
+        }
+        self._measure, self._ffmpeg, self._run = (
+            normmod.measure, normmod.ffmpeg, normmod.subprocess.run)
+        normmod.measure = lambda p: (-20.0, -40.0, 600.0)
+        normmod.ffmpeg = lambda: "ffmpeg"
+        self.encodes = []
+
+        def fake_run(cmd, **kw):
+            src = cmd[cmd.index("-i") + 1]
+            kbps = cmd[cmd.index("-b:a") + 1]
+            chans = cmd[cmd.index("-ac") + 1]
+            self.encodes.append({"from": src, "kbps": kbps, "channels": chans})
+            with open(cmd[-1], "wb") as fh:
+                fh.write(b"x" * 4000)          # a much smaller file
+            return None
+        normmod.subprocess.run = fake_run
+
+    def tearDown(self):
+        normmod.measure, normmod.ffmpeg = self._measure, self._ffmpeg
+        normmod.subprocess.run = self._run
+        sfxmod.SFX_DIR = self._sfx_dir
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def _place(self, megabytes):
+        audio, sidecar = sfxmod.asset_paths(self.sreg, "amb_big")
+        os.makedirs(os.path.dirname(audio), exist_ok=True)
+        with open(audio, "wb") as fh:
+            fh.write(b"y" * int(megabytes * 1048576))
+        return audio, sidecar
+
+    def test_a_large_supplied_file_is_compressed_and_the_original_kept(self):
+        audio, sidecar = self._place(18)
+        done, failed = normmod.normalize_assets(self.sreg, ["amb_big"], log=lambda *a: None)
+        self.assertEqual((done, failed), (1, 0))
+        master = normmod.source_path(audio)
+        self.assertTrue(os.path.isfile(master), "the delivered file must be kept")
+        self.assertEqual(os.path.getsize(master), 18 * 1048576)
+        self.assertLess(os.path.getsize(audio), os.path.getsize(master))
+        block = cache.read_sidecar(sidecar)["webEncode"]
+        self.assertEqual(block["maxKbps"], 64)
+        self.assertEqual(block["channels"], 1)
+        self.assertAlmostEqual(block["originalMb"], 18.0, places=1)
+        self.assertEqual(self.encodes[0]["kbps"], "64k")
+        self.assertEqual(self.encodes[0]["channels"], "1")
+
+    def test_a_small_supplied_file_is_only_measured(self):
+        audio, sidecar = self._place(0.4)
+        normmod.normalize_assets(self.sreg, ["amb_big"], log=lambda *a: None)
+        self.assertEqual(self.encodes, [], "nothing to gain, so nothing is re-encoded")
+        self.assertFalse(os.path.isfile(normmod.source_path(audio)))
+        self.assertIn("measured", cache.read_sidecar(sidecar))
+
+    def test_compressing_twice_re_encodes_from_the_original(self):
+        audio, _ = self._place(18)
+        normmod.normalize_assets(self.sreg, ["amb_big"], log=lambda *a: None)
+        normmod.normalize_assets(self.sreg, ["amb_big"], force=True, log=lambda *a: None)
+        self.assertEqual(len(self.encodes), 2)
+        self.assertTrue(self.encodes[1]["from"].endswith(normmod.SOURCE_SUFFIX),
+                        "a second pass must not compress an already-compressed file")
+
+    def test_a_second_run_at_the_same_settings_does_nothing(self):
+        self._place(18)
+        normmod.normalize_assets(self.sreg, ["amb_big"], log=lambda *a: None)
+        done, _ = normmod.normalize_assets(self.sreg, ["amb_big"], log=lambda *a: None)
+        self.assertEqual((done, len(self.encodes)), (0, 1))
+
+    def test_changing_the_bitrate_re_encodes(self):
+        self._place(18)
+        normmod.normalize_assets(self.sreg, ["amb_big"], log=lambda *a: None)
+        self.sreg.config["sfx"]["webEncode"] = {"maxKbps": 48}
+        done, _ = normmod.normalize_assets(self.sreg, ["amb_big"], log=lambda *a: None)
+        self.assertEqual(done, 1)
+        self.assertEqual(self.encodes[-1]["kbps"], "48k")
+
+    def test_the_measurement_is_of_what_actually_plays(self):
+        _, sidecar = self._place(18)
+        normmod.normalize_assets(self.sreg, ["amb_big"], log=lambda *a: None)
+        m = cache.read_sidecar(sidecar)["measured"]
+        self.assertIn("after web encoding", m["source"],
+                      "the cue gain is derived from this, so it must be the served file")
+
+    def test_the_drama_export_encodes_from_config(self):
+        sreg = sfx_reg()
+        sreg.config["mix"]["exportEncode"] = {"dramaKbps": 96, "channels": 1,
+                                              "sampleRate": 44100}
+        self.assertEqual(drama.export_encode(sreg)["dramaKbps"], 96)
+        src = open(os.path.join(os.path.dirname(os.path.dirname(HERE)),
+                                "scripts", "tmbaudio", "drama.py"), encoding="utf-8").read()
+        self.assertNotIn('"-b:a", "192k"', src, "the hard-coded stereo bitrate is gone")
+        self.assertIn('enc["dramaKbps"]', src)
+
+    def test_the_voice_export_is_still_a_lossless_copy(self):
+        src = open(os.path.join(os.path.dirname(os.path.dirname(HERE)),
+                                "scripts", "tmbaudio", "combine.py"), encoding="utf-8").read()
+        self.assertIn('"-c", "copy"', src,
+                      "re-encoding the narration to save a few megabytes spends quality "
+                      "on the one thing the project is for")
+
+
 class LayerSwitchTests(unittest.TestCase):
     """A layer switched off must be off in BOTH renderers.
 

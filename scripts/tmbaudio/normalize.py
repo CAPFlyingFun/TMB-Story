@@ -65,6 +65,27 @@ DEFAULTS = {
     "maxCorrections": 2,
 }
 
+# Making a big asset smaller without making it worse. Joshua: "Can we compress audio
+# or convert to MP3 which is less large?" -- it is already mp3, so the levers are
+# bitrate and channels. A supplied bed arrived at 256 kbps joint stereo and 18 MB;
+# for a bed sitting 36 dB under the narration, 64 kbps mono is the same sound at a
+# quarter of the size. The ORIGINAL is kept, and every pass re-encodes from it, so
+# quality cannot decay run after run.
+WEB_DEFAULTS = {
+    "enabled": True,
+    "maxKbps": 64,
+    "channels": 1,
+    "sampleRate": 44100,
+    "minBytesToCompress": 1048576,
+}
+
+
+def web_settings(sreg):
+    out = dict(WEB_DEFAULTS)
+    out.update({k: v for k, v in (sreg.block().get("webEncode") or {}).items()
+                if not str(k).startswith("_")})
+    return out
+
 SOURCE_SUFFIX = ".source.mp3"
 
 
@@ -167,6 +188,27 @@ def plan_one(sreg, asset_id, conf, force=False, allow_attenuation=False):
         if not os.path.isfile(audio_abs):
             out["reason"] = "supplied, but no file is there yet"
             return out
+        web = web_settings(sreg)
+        src_abs = os.path.join(ROOT, source_path(audio_path))
+        master = src_abs if os.path.isfile(src_abs) else audio_abs
+        size = os.path.getsize(master)
+        if web.get("enabled") and size >= int(web["minBytesToCompress"]):
+            side = cache.read_sidecar(os.path.join(ROOT, sidecar_path)) or {}
+            done = side.get("webEncode") or {}
+            same = (done.get("maxKbps") == web["maxKbps"]
+                    and done.get("channels") == web["channels"])
+            if same and os.path.isfile(src_abs) and not force:
+                out["reason"] = ("already web-encoded to %s kbps mono (%.1f -> %.1f MB)"
+                                 % (web["maxKbps"], done.get("originalMb", 0),
+                                    done.get("webMb", 0)))
+                return out
+            out["action"] = "compress"
+            out["_web"] = web
+            out["_sizeMb"] = size / 1048576.0
+            out["reason"] = ("%.1f MB at the delivered quality; re-encoding a web copy "
+                             "at %s kbps, %s channel(s), original kept"
+                             % (out["_sizeMb"], web["maxKbps"], web["channels"]))
+            return out
         out["action"] = "measure"
         out["reason"] = "supplied by hand: measured, never re-encoded"
         return out
@@ -251,6 +293,52 @@ def measure_only(plan):
     return side["measured"]
 
 
+def compress_one(plan):
+    """Write a web-sized copy and KEEP the delivered file as the master.
+
+    The same discipline normalisation uses: the original is snapshotted once and every
+    pass encodes from that snapshot, never from an already-compressed file, so running
+    this twice cannot stack generation loss.
+    """
+    web = plan["_web"]
+    audio_abs = os.path.join(ROOT, plan["audio"])
+    src_abs = os.path.join(ROOT, source_path(plan["audio"]))
+    if not os.path.isfile(src_abs):
+        shutil.copy2(audio_abs, src_abs)
+    original_mb = os.path.getsize(src_abs) / 1048576.0
+
+    tmp = audio_abs + ".part"
+    subprocess.run([ffmpeg(), "-v", "error", "-y", "-i", src_abs,
+                    "-c:a", "libmp3lame", "-b:a", "%dk" % int(web["maxKbps"]),
+                    "-ar", str(int(web["sampleRate"])), "-ac", str(int(web["channels"])),
+                    "-f", "mp3", tmp], check=True)
+    os.replace(tmp, audio_abs)
+
+    peak, rms, seconds = measure(audio_abs)
+    sidecar_abs = os.path.join(ROOT, plan["sidecar"])
+    side = cache.read_sidecar(sidecar_abs) or {}
+    side["webEncode"] = {
+        "maxKbps": web["maxKbps"], "channels": web["channels"],
+        "sampleRate": web["sampleRate"],
+        "originalMb": round(original_mb, 2),
+        "webMb": round(os.path.getsize(audio_abs) / 1048576.0, 2),
+        "masterFile": source_path(plan["audio"]),
+        "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    }
+    side["measured"] = {
+        "measuredAt": time.strftime("%Y-%m-%d", time.gmtime()),
+        "source": "scripts/audio.py normalize-sfx, decoded PCM after web encoding",
+        "seconds": round(seconds, 2),
+        "peakDbfs": round(peak, 1) if peak != float("-inf") else None,
+        "rmsDbfs": round(rms, 1) if rms != float("-inf") else None,
+    }
+    side["bytes"] = os.path.getsize(audio_abs)
+    cache.write_sidecar(sidecar_abs, side)
+    out = dict(side["webEncode"])
+    out["rmsDbfs"] = side["measured"]["rmsDbfs"]
+    return out
+
+
 def restore_one(plan):
     """Put the generated master back and forget that this asset was ever normalised."""
     audio_abs = os.path.join(ROOT, plan["audio"])
@@ -320,9 +408,12 @@ def normalize_assets(sreg, asset_ids, force=False, allow_attenuation=False,
         % (conf["targetRmsDbfs"], conf["peakCeilingDbfs"],
            "raise or attenuate" if allow_attenuation else "raise only"))
     plans = [plan_one(sreg, a, conf, force, allow_attenuation) for a in sorted(asset_ids)]
-    todo = [p for p in plans if p["action"] in ("normalize", "restore", "measure")]
+    todo = [p for p in plans if p["action"] in ("normalize", "restore", "measure",
+                                               "compress")]
     for p in plans:
-        if p["action"] == "measure":
+        if p["action"] == "compress":
+            log("  %-30s  compress  %s" % (p["asset"], p["reason"]))
+        elif p["action"] == "measure":
             log("  %-30s  measure   %s" % (p["asset"], p["reason"]))
         elif p["action"] == "restore":
             log("  %-30s  restore   %s" % (p["asset"], p["reason"]))
@@ -338,6 +429,14 @@ def normalize_assets(sreg, asset_ids, force=False, allow_attenuation=False,
     done = failed = 0
     for p in todo:
         try:
+            if p["action"] == "compress":
+                result = compress_one(p)
+                done += 1
+                log("  compressed %-25s %.1f -> %.1f MB  (%.0f%% smaller), %s dBFS rms"
+                    % (p["asset"], result["originalMb"], result["webMb"],
+                       100 * (1 - result["webMb"] / max(result["originalMb"], 1e-9)),
+                       result["rmsDbfs"]))
+                continue
             if p["action"] == "measure":
                 result = measure_only(p)
                 done += 1

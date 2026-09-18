@@ -123,15 +123,6 @@ jobs:
           sudo apt-get install -y -qq ffmpeg
           ffmpeg -version | head -1
 
-      - name: Register any hand-supplied sound files
-        if: inputs.mode != 'dry-run'
-        # Free. A supplied file has no prompt, so its identity is its own bytes; this
-        # writes the sidecar that records them, and REFUSES a file with no credit
-        # block. Joshua supplies sound from Pixabay and asked to keep track of who
-        # made it, so "no attribution, no adoption" is enforced rather than remembered.
-        continue-on-error: true
-        run: python3 scripts/audio.py adopt-sfx
-
       - name: Normalise the generated sound assets
         if: inputs.mode != 'dry-run'
         # FREE, and deliberately not gated on generate_sfx: a level is a property of a
@@ -146,6 +137,18 @@ jobs:
         # immediately below, which is where a silent failure would show up.
         continue-on-error: true
         run: python3 scripts/audio.py normalize-sfx --all
+
+      - name: Register any hand-supplied sound files
+        # Runs AFTER normalising on purpose: a supplied file is fingerprinted by its own
+        # bytes, and web-encoding changes them. Adopting first would record the
+        # fingerprint of a file that no longer exists.
+        if: inputs.mode != 'dry-run'
+        # Free. A supplied file has no prompt, so its identity is its own bytes; this
+        # writes the sidecar that records them, and REFUSES a file with no credit
+        # block. Joshua supplies sound from Pixabay and asked to keep track of who
+        # made it, so "no attribution, no adoption" is enforced rather than remembered.
+        continue-on-error: true
+        run: python3 scripts/audio.py adopt-sfx
 
       - name: Re-derive every cue gain from the measured levels
         if: inputs.mode != 'dry-run'

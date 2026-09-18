@@ -148,6 +148,26 @@
       "maxGainDb": 40.0,
       "peakToleranceDb": 0.2,
       "maxCorrections": 2
+    },
+    "webEncode": {
+      "_comment": [
+        "Making the audio smaller without making it worse. Joshua: 'Can we compress audio",
+        "or convert to MP3 which is less large?' -- it is already mp3, so the levers are",
+        "BITRATE and CHANNELS.",
+        "",
+        "Applies to a sound asset over minBytesToCompress. The original is never lost: it",
+        "is kept as <asset>.source.mp3 exactly as normalisation keeps a generated master,",
+        "and every pass re-encodes from that rather than from an already-compressed file,",
+        "so quality cannot decay run after run.",
+        "",
+        "64 kbps mono for a bed that sits about 36 dB under the narration is inaudible",
+        "against the original. The nature bed goes from 18.1 MB to roughly 4.7."
+      ],
+      "enabled": true,
+      "maxKbps": 64,
+      "channels": 1,
+      "sampleRate": 44100,
+      "minBytesToCompress": 1048576
     }
   },
   "mix": {
@@ -232,6 +252,24 @@
       "interface": -45.1,
       "system": -45.1,
       "foley": -47.1
+    },
+    "exportEncode": {
+      "_comment": [
+        "The DRAMA exports. They were 192 kbps STEREO built from sources that are almost",
+        "entirely mono -- paying twice the bitrate for a second channel carrying the same",
+        "signal. 96 kbps mono is the same audio at half the size: 36.3 MB becomes about 18.",
+        "",
+        "THE VOICE-ONLY EXPORTS ARE DELIBERATELY NOT TOUCHED. combine joins the clips with",
+        "`-c copy`, which is lossless and fast, and re-encoding 500 seconds of narration to",
+        "save nine megabytes would spend quality on the one thing the whole project is for.",
+        "The silence between clips must also stay at the clips' own format or the copy-join",
+        "breaks, which is a good reason not to make that number configurable at all.",
+        "",
+        "Raise these if a stereo mix ever becomes real; nothing else needs to change."
+      ],
+      "dramaKbps": 96,
+      "channels": 1,
+      "sampleRate": 44100
     }
   }
 }
