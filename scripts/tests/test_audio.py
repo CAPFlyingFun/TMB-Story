@@ -1265,6 +1265,24 @@ class WorkflowTests(unittest.TestCase):
         self.assertIn("if: inputs.generate_sfx", step.split("run:")[0],
                       "the sound step must be gated on that input")
 
+    def test_the_measurement_step_accepts_the_same_chapter_range_as_everything_else(self):
+        """The workflow passes its `chapters` input straight through.
+
+        measure-mix.py took an int, so "2-3" made it exit 2 -- and because the step is
+        continue-on-error the measurement simply never ran and said nothing about it.
+        """
+        import importlib.util
+        path = os.path.join(os.path.dirname(HERE), "measure-mix.py")
+        spec = importlib.util.spec_from_file_location("measure_mix", path)
+        mm = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mm)
+        self.assertEqual(mm.parse_chapters("2-3"), [2, 3])
+        self.assertEqual(mm.parse_chapters("1"), [1])
+        self.assertEqual(mm.parse_chapters("1,3"), [1, 3])
+        step = self.text[self.text.index("measure-mix.py"):]
+        self.assertIn("inputs.chapters", step.split("\n")[0],
+                      "the step passes the workflow's range, so the script must take one")
+
     def test_paid_for_audio_is_committed_even_when_generation_partly_fails(self):
         """The failure that cost 19 already-generated assets.
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Measure what is actually in the audio, rather than what the manifest intends.
 
-    python3 scripts/measure-mix.py [--asset ASSET_ID] [--chapter N]
+    python3 scripts/measure-mix.py [--asset ASSET_ID] [--chapters 1-3]
 
 Written because a cue sheet can be perfectly correct and the sound still inaudible.
 Joshua could not hear the keyboard typing in the exported mix even though all nine
@@ -207,9 +207,27 @@ def measure_cues(number, reg, sreg, asset_filter=None):
         return rows
 
 
+def parse_chapters(spec):
+    out = set()
+    for part in str(spec).split(","):
+        part = part.strip()
+        if not part:
+            continue
+        if "-" in part:
+            a, b = part.split("-", 1)
+            out.update(range(int(a), int(b) + 1))
+        else:
+            out.add(int(part))
+    return sorted(out)
+
+
 def main(argv):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--chapter", type=int, default=1)
+    # A RANGE, not an int: the workflow passes its own `chapters` input straight
+    # through, so "2-3" has to work here exactly as it does for audio.py. It did not,
+    # and because the step is continue-on-error the measurement simply never ran.
+    ap.add_argument("--chapter", "--chapters", dest="chapters", default="1",
+                    help="e.g. 1, 2-3, 1,3")
     ap.add_argument("--asset", default=None, help="measure only this asset and its cues")
     ap.add_argument("--assets-only", action="store_true")
     args = ap.parse_args(argv)
@@ -217,8 +235,10 @@ def main(argv):
     reg = Registry()
     sreg = sfxmod.SfxRegistry(config=reg.config)
     measure_assets(sreg, only=args.asset)
-    if not args.assets_only:
-        measure_cues(args.chapter, reg, sreg, asset_filter=args.asset)
+    if args.assets_only:
+        return 0
+    for number in parse_chapters(args.chapters):
+        measure_cues(number, reg, sreg, asset_filter=args.asset)
     return 0
 
 
