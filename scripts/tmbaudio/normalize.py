@@ -188,6 +188,14 @@ def plan_one(sreg, asset_id, conf, force=False, allow_attenuation=False):
         if not os.path.isfile(audio_abs):
             out["reason"] = "supplied, but no file is there yet"
             return out
+        if sreg.source(asset_id) == "procedural":
+            # Never compress a procedural loop: re-encoding it to mp3 would put back
+            # the encoder padding that made it fail to loop in the first place. It is
+            # rebuilt from its recipe, so there is nothing to protect and nothing to
+            # shrink that the recipe cannot shrink itself.
+            out["action"] = "measure"
+            out["reason"] = "procedural: measured, and never re-encoded"
+            return out
         web = web_settings(sreg)
         src_abs = os.path.join(ROOT, source_path(audio_path))
         master = src_abs if os.path.isfile(src_abs) else audio_abs

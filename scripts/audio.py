@@ -211,8 +211,15 @@ def cmd_sfx(args, reg):
     to_generate = []
     for aid in sorted(wanted):
         plan = sfxmod.plan_asset(sreg, aid)
-        state = "cached" if plan["cached"] else (
-            "MISSING FILE" if plan["source"] != "generated" else "to generate")
+        if plan["cached"]:
+            state = "cached"
+        elif plan["source"] == "generated":
+            state = "to generate"
+        elif plan["source"] == "procedural":
+            # Not missing: built from its recipe by `build-procedural`, for free.
+            state = "to build"
+        else:
+            state = "MISSING FILE"
         if not plan["cached"] and plan["source"] == "generated":
             to_generate.append(aid)
         dur = plan["durationSeconds"]

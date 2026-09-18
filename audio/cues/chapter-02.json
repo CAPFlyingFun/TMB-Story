@@ -122,7 +122,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.01,
+      "gain": 0.009,
       "fadeInMs": 300,
       "fadeOutMs": 800,
       "sustain": {
@@ -268,7 +268,7 @@
         "timing": "after"
       },
       "why": "Sirens begin sounding outside. The procedural wail, for the same reason chapter 3 uses it: the recorded one announced its seam every 12 seconds. Same -4.4 dB cut.",
-      "emphasisDb": -10.0
+      "emphasisDb": -18.0
     },
     {
       "cueId": "ch02-140-intercom-again",

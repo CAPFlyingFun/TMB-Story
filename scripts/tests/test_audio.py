@@ -1455,6 +1455,45 @@ class ProceduralTests(unittest.TestCase):
             self.assertIsNone(asset.get("prompt"),
                               "a procedural asset has a recipe, not a prompt")
 
+    def test_a_procedural_loop_is_written_as_wav_not_mp3(self):
+        """The waveform closed and the file still looped late: the CONTAINER was wrong.
+
+        mp3 carries encoder delay in front and padding behind, and `<audio loop>` plays
+        both, so a perfect twelve seconds comes back a few dozen milliseconds late every
+        time round -- "not looping with a slight offset", as Joshua put it. WAV stores
+        an exact sample count.
+        """
+        root = os.path.dirname(os.path.dirname(HERE))
+        reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))
+        sreg = sfxmod.SfxRegistry(data=reg, config=json.loads(json.dumps(SFX_CFG)))
+        for aid, asset in reg["assets"].items():
+            if asset.get("source") != "procedural":
+                continue
+            audio, _ = sfxmod.asset_paths(sreg, aid)
+            if asset.get("loop"):
+                self.assertTrue(audio.endswith(".wav"),
+                                "%s loops, so it must not be an mp3" % aid)
+            else:
+                self.assertTrue(audio.endswith(".mp3"),
+                                "%s is played once; mp3 padding costs nothing" % aid)
+
+    def test_the_extension_reaches_the_cue_and_therefore_the_player(self):
+        root = os.path.dirname(os.path.dirname(HERE))
+        man = json.load(open(os.path.join(root, "audio", "manifests", "chapter-03.json"),
+                             encoding="utf-8"))
+        sirens = [c for c in man["cues"] if c["asset"].startswith("amb_sirens_")]
+        self.assertTrue(sirens)
+        for c in sirens:
+            self.assertTrue(c["audio"].endswith(".wav"),
+                            "the browser fetches whatever the manifest says")
+
+    def test_a_procedural_asset_is_never_web_compressed(self):
+        src = open(os.path.join(os.path.dirname(os.path.dirname(HERE)),
+                                "scripts", "tmbaudio", "normalize.py"), encoding="utf-8").read()
+        self.assertIn('sreg.source(asset_id) == "procedural"', src)
+        self.assertIn("encoder padding", src,
+                      "compressing a wav loop to mp3 would undo the fix")
+
     def test_a_one_shot_may_fade_and_a_loop_may_not(self):
         """A fade is a seam. On a one-shot it is shape; on a loop it is the bug."""
         winddown = {"kind": "winddown", "seconds": 10, "startHz": 600,
@@ -1491,7 +1530,9 @@ class ProceduralTests(unittest.TestCase):
         beds = [c for c in cues if c["asset"].startswith("amb_sirens_")]
         swell = [c for c in cues if c["asset"] == "sfx_siren_winddown"][0]
         for c in beds:
-            self.assertEqual(c["emphasisDb"], -10.0)
+            # Not a magic number: what matters is that a distant siren is well below
+            # the swell that is deliberately close, and Joshua has moved it twice.
+            self.assertLessEqual(c["emphasisDb"], -18.0)
             self.assertLess(c["emphasisDb"], swell.get("emphasisDb", 0.0),
                             "the swell is meant to be the loud one")
             lp = reg["assets"][c["asset"]]["recipe"]["lowpassHz"]

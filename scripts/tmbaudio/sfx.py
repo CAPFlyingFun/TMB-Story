@@ -177,12 +177,24 @@ def content_fingerprint(path):
     return "supplied:" + h.hexdigest()
 
 
+def asset_extension(registry, asset_id):
+    """mp3 unless the asset says otherwise, and a LOOP has a reason to say otherwise.
+
+    An mp3 carries encoder delay at the front and padding at the back. A browser's
+    `<audio loop>` plays those, so a file whose waveform closes perfectly still comes
+    back a few dozen milliseconds late every time round -- which is exactly what
+    Joshua heard: "not looping with a slight offset". The arithmetic was right and the
+    container was wrong. WAV stores an exact sample count and has neither.
+    """
+    return str((registry.get(asset_id) or {}).get("fileExtension") or "mp3").lstrip(".")
+
+
 def asset_paths(registry, asset_id):
     """Grouped by category, never by chapter -- the same reason clips group by speaker.
     A chapter folder would duplicate a reused sound and break the reuse it exists for."""
     directory = os.path.join(SFX_DIR, registry.category(asset_id))
     return (
-        os.path.join(directory, asset_id + ".mp3"),
+        os.path.join(directory, asset_id + "." + asset_extension(registry, asset_id)),
         os.path.join(directory, asset_id + ".json"),
     )
 

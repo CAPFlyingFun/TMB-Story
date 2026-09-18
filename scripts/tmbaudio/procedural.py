@@ -141,6 +141,7 @@ def build_one(registry, asset_id, log=print):
     os.makedirs(os.path.dirname(audio_abs), exist_ok=True)
     rate = int(recipe.get("sampleRate") or DEFAULT_SAMPLE_RATE)
     seconds = float(recipe["seconds"])
+    ext = sfxmod.asset_extension(registry, asset_id)
 
     # A comma separates FILTERS in a filtergraph, so any comma inside the expression --
     # min(), max(), exp() all take them -- has to be escaped or ffmpeg reads the rest of
@@ -171,8 +172,21 @@ def build_one(registry, asset_id, log=print):
     cmd = [ffmpeg(), "-v", "error", "-y", "-f", "lavfi", "-i", src]
     if chain:
         cmd += ["-af", ",".join(chain)]
-    cmd += ["-c:a", "libmp3lame", "-b:a", "%dk" % int(recipe.get("kbps") or DEFAULT_KBPS),
-            "-ar", str(rate), "-ac", "1", "-f", "mp3", tmp]
+    # A LOOP IS WRITTEN AS WAV, and this is the whole reason the first procedural siren
+    # still did not loop. The waveform closed exactly; the CONTAINER did not. An mp3
+    # carries encoder delay in front and padding behind, a browser's `<audio loop>`
+    # plays both, and the file comes back late every single time round.
+    #
+    # WAV stores an exact sample count, so the last sample is followed by the first.
+    # It costs almost nothing here because these sirens are band-limited by design:
+    # filtered to a few hundred hertz, 8 kHz is a lossless rate for them, and twelve
+    # seconds of 8 kHz mono is under 200 KB.
+    if ext == "wav":
+        cmd += ["-c:a", "pcm_s16le", "-ar", str(rate), "-ac", "1", "-f", "wav", tmp]
+    else:
+        cmd += ["-c:a", "libmp3lame",
+                "-b:a", "%dk" % int(recipe.get("kbps") or DEFAULT_KBPS),
+                "-ar", str(rate), "-ac", "1", "-f", "mp3", tmp]
     subprocess.run(cmd, check=True)
     os.replace(tmp, audio_abs)
 
@@ -185,7 +199,8 @@ def build_one(registry, asset_id, log=print):
         "recipeFingerprint": recipe_fingerprint(recipe),
         "fingerprint": sfxmod.content_fingerprint(audio_abs),
         "bytes": os.path.getsize(audio_abs),
-        "seconds": round(cache.mp3_duration_seconds(audio_abs), 2),
+        "seconds": seconds,
+        "format": ext,
         "expression": expression(recipe),
     })
     log("  %-30s %6.2f s  %s" % (asset_id, seconds, expression(recipe)[:60] + "..."))

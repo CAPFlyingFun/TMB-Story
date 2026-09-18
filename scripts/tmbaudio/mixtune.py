@@ -38,7 +38,11 @@ DEFAULT_TARGETS = {
     "foley": -40.0,
 }
 
-GAIN_FLOOR, GAIN_CEILING = 0.01, 1.0
+# The floor is 0.002, not 0.01, because 0.01 turned out to BIND. A procedural siren
+# asked to sit 18 dB below its category needs about 0.007, and clamping that to 0.01
+# quietly delivered a sound 3 dB louder than the cue sheet says. A floor should catch
+# an absurd number, not a deliberate one.
+GAIN_FLOOR, GAIN_CEILING = 0.002, 1.0
 
 
 def targets(sreg):
