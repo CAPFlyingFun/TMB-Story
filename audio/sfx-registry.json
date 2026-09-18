@@ -21,7 +21,6 @@
     "live as their own assets so they can be moved, retuned or switched off separately."
   ],
   "sfxVersion": 1,
-
   "characters": {
     "_comment": [
       "Footwear comes from the chapter's visual canon, so footsteps can eventually be",
@@ -45,19 +44,18 @@
       "notes": "Gray sneakers, not heels. She enters the laboratory and crosses to Jack."
     }
   },
-
   "assets": {
     "amb_tombs_lab_night": {
       "category": "ambience",
       "source": "generated",
       "prompt": "Quiet interior room tone of an advanced, clean research laboratory late at night. Steady soft ventilation air movement, a low continuous electrical hum from racked equipment, a faint distant whir of cooling fans, and a barely perceptible high electronic shimmer from instruments on standby. Spacious but enclosed. No voices, no speech, no music, no alarms, no beeping, no footsteps, no door sounds, no dramatic swells. Even and unchanging throughout so it can loop seamlessly.",
-      "durationSeconds": 22,
+      "durationSeconds": 20,
       "loop": true,
       "promptInfluence": 0.3,
       "assetVersion": 1,
       "godotReuse": true,
       "approved": false,
-      "notes": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed."
+      "notes": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed. Requested at 20s rather than 22: ElevenLabs rejected 22 with HTTP 400 while 20 generated fine, so 20 is the proven ceiling."
     },
     "amb_console_alarm_bed": {
       "category": "alarm",
@@ -95,7 +93,6 @@
       "approved": false,
       "notes": "The tension spine of the last third, and the beginning of the TOMBS Array's own sound identity. It enters when the remote initialization request appears and does not leave."
     },
-
     "sfx_console_tone_soft": {
       "category": "interface",
       "source": "generated",

@@ -83,7 +83,9 @@
       "",
       "`model` is deliberately null: an unset model means the provider's own default,",
       "which is better than inventing a model id. The fingerprint records null as a",
-      "value, so naming a model later invalidates the assets and nothing before that."
+      "value, so naming a model later invalidates the assets and nothing before that.",
+      "",
+      "durationLimitsSeconds.max is 20, not 22: a 22-second request was rejected with HTTP 400 on 2026-09-18 while 20 seconds generated fine. Validation now catches an over-long request before it costs a failed call."
     ],
     "provider": "elevenlabs-sfx",
     "model": null,
@@ -91,7 +93,7 @@
     "defaultPromptInfluence": 0.3,
     "durationLimitsSeconds": {
       "min": 0.5,
-      "max": 22
+      "max": 20
     },
     "generation": {
       "concurrency": 2,

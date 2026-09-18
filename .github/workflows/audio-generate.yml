@@ -67,6 +67,10 @@ jobs:
           exit 1
 
       - name: Generate
+        # Same reasoning as the sound step below: a partial voice run must still commit
+        # the clips it paid for. The report step at the end fails the run.
+        id: voice
+        continue-on-error: true
         env:
           # The only place the secret is used. It is passed to the process environment
           # and is never written to a file, a manifest or a log.
@@ -95,6 +99,14 @@ jobs:
         # OFF BY DEFAULT and never reachable from a push: this workflow is
         # workflow_dispatch only, and this step additionally needs generate_sfx ticked
         # by hand. Sound generation is a deliberate act, like voice generation.
+        #
+        # continue-on-error IS THE POINT, not laziness. One asset failing used to abort
+        # the job, which skipped the commit and threw away 19 assets that had already
+        # been paid for. Paid-for audio must reach the repository even when a sibling
+        # fails; the run is still marked failed by the report step at the end, after
+        # the commit, so nothing is hidden and nothing is lost.
+        id: sfx
+        continue-on-error: true
         if: inputs.generate_sfx && inputs.mode != 'dry-run'
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
@@ -155,3 +167,15 @@ jobs:
             git commit -m "Generate TMB audio (chapters ${{ inputs.chapters }}, ${{ inputs.mode }})"
             git push
           fi
+
+      - name: Report any generation failures
+        # Runs AFTER the commit on purpose. Everything generated is safely in the
+        # repository by now, so failing here loses nothing and hides nothing. A rerun
+        # picks up only what is missing, because the cache has the rest.
+        if: always() && (steps.voice.outcome == 'failure' || steps.sfx.outcome == 'failure')
+        run: |
+          echo "::error::Generation did not complete. Everything that succeeded has been"
+          echo "::error::committed; re-run this workflow to retry only what is missing."
+          echo "voice step: ${{ steps.voice.outcome }}"
+          echo "sfx step:   ${{ steps.sfx.outcome }}"
+          exit 1

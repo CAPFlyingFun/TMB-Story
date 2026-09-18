@@ -233,9 +233,16 @@ def generate_one_sfx(plan, sfx_registry, log=print):
                 raise RuntimeError(
                     "ElevenLabs rejected the credentials (HTTP %d). Check the "
                     "%s secret. The key itself is not printed." % (exc.code, KEY_ENV))
-            if exc.code == 422:
-                raise RuntimeError("ElevenLabs rejected the request for %s (HTTP 422); "
-                                   "check the prompt and duration" % asset_id)
+            if exc.code in (400, 422):
+                # Not retryable and deliberately not retried: the request itself is
+                # wrong, so a second identical attempt only wastes a call. A 22-second
+                # duration is what produced this in practice.
+                raise RuntimeError(
+                    "ElevenLabs rejected the request for %s (HTTP %d). The request is "
+                    "malformed rather than unlucky, so it was not retried: check the "
+                    "requested duration against sfx.durationLimitsSeconds, and the "
+                    "prompt. Every other asset in this run is unaffected."
+                    % (asset_id, exc.code))
             if exc.code not in RETRYABLE or attempt == attempts:
                 raise RuntimeError("HTTP %d after %d attempt(s) for %s"
                                    % (exc.code, attempt, asset_id))

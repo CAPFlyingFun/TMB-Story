@@ -1207,6 +1207,28 @@ class WorkflowTests(unittest.TestCase):
         self.assertIn("if: inputs.generate_sfx", step.split("run:")[0],
                       "the sound step must be gated on that input")
 
+    def test_paid_for_audio_is_committed_even_when_generation_partly_fails(self):
+        """The failure that cost 19 already-generated assets.
+
+        One HTTP 400 aborted the job, which skipped the commit, and the runner took
+        19 paid-for sounds with it. Generation steps now continue on error so the
+        commit still runs, and a report step AFTER the commit fails the run. The
+        ORDER is the fix -- a report before the commit is the original bug.
+        """
+        text = self.text
+        for step in ("Generate sound effects and ambience", "Generate\n"):
+            idx = text.find("- name: " + step.rstrip("\n"))
+            self.assertNotEqual(idx, -1, "expected a %r step" % step)
+            block = text[idx:idx + 900]
+            self.assertIn("continue-on-error: true", block,
+                          "%s must not abort the job and strand paid-for audio" % step)
+        commit = text.index("- name: Commit the generated audio")
+        report = text.index("- name: Report any generation failures")
+        self.assertLess(commit, report,
+                        "the failure report must come AFTER the commit, or a partial "
+                        "run loses the assets it already paid for")
+        self.assertIn("exit 1", text[report:], "a partial run must still fail visibly")
+
     def test_the_secret_is_never_interpolated_into_a_shell_line(self):
         self.assertIn("secrets.ELEVENLABS_API_KEY", self.text,
                       "the workflow has to read the secret from somewhere")
