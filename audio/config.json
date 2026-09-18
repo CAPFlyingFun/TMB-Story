@@ -132,14 +132,22 @@
         "the applied gain is the smaller of what the target asks and what the peak allows,",
         "so a transient-heavy one-shot never clips. Raising is the default and attenuation",
         "is opt-in, so nothing already approved gets quieter by accident.",
-        "",
         "maxGainDb is a refusal, not a clamp: a file needing more than 40 dB is broken",
-        "rather than quiet, and amplifying it 40 dB would deliver 40 dB of hiss."
+        "rather than quiet, and amplifying it 40 dB would deliver 40 dB of hiss.",
+        "",
+        "peakCeilingDbfs IS -3, NOT -1, AND THE RESULT IS CHECKED AGAINST IT. mp3 is lossy:",
+        "a decode reconstructs more than the encoder was given. The first real pass aimed",
+        "eleven assets at -1.0 and delivered eleven files clamped at 0.0 dBFS, overshooting",
+        "by 1.0 to 2.8 dB. So -3 is the headroom the codec needs, and the pass no longer",
+        "trusts its own arithmetic: it measures the encoded file and backs the gain off",
+        "until the DELIVERED peak is under the ceiling, up to maxCorrections times."
       ],
       "targetRmsDbfs": -20.0,
-      "peakCeilingDbfs": -1.0,
+      "peakCeilingDbfs": -3.0,
       "minChangeDb": 0.5,
-      "maxGainDb": 40.0
+      "maxGainDb": 40.0,
+      "peakToleranceDb": 0.2,
+      "maxCorrections": 2
     }
   },
   "mix": {

@@ -20,9 +20,13 @@ Four rules hold it together:
    generator has just produced a new source.
 2. RAISE ONLY, by default. Nothing Joshua has already approved gets quieter without
    `--allow-attenuation`. The point is to lift the floor, not to re-mix the set.
-3. THE PEAK CEILING WINS. The applied gain is the smaller of what the RMS target
-   asks for and what the peak allows, so normalising never clips an asset whose
-   peak is already near full scale -- which several of the good ones are.
+3. THE PEAK CEILING WINS, AND IT IS CHECKED AGAINST THE ENCODED FILE. The applied
+   gain is the smaller of what the RMS target asks for and what the peak allows. It
+   is then VERIFIED: mp3 is lossy, so a decode overshoots what the encoder was given,
+   and the first pass here aimed eleven assets at -1.0 dBFS and delivered eleven files
+   clamped at 0.0. The gain is backed off and re-encoded until the delivered audio is
+   really under the ceiling, and the ceiling itself is -3, which is the headroom the
+   codec needs.
 4. THE GENERATION FINGERPRINT IS NOT TOUCHED. Normalising is not generating; the
    sidecar keeps the fingerprint it was written with, so the cache still reads
    "cached" and no run spends a credit because a level changed.
@@ -49,9 +53,16 @@ from .registry import ROOT
 DEFAULTS = {
     "targetRmsDbfs": -20.0,      # where a normalised asset lands, loud enough to sit
                                  # under speech at about -22 without disappearing
-    "peakCeilingDbfs": -1.0,     # never push a peak above this
+    "peakCeilingDbfs": -3.0,     # never push a peak above this. NOT -1: mp3 is lossy,
+                                 # and a decode overshoots what was encoded. The first
+                                 # pass aimed at -1.0 and eleven assets came back at
+                                 # 0.0 dBFS -- clamped at full scale -- overshooting by
+                                 # 1.0 to 2.8 dB. -3 is the headroom the codec needs.
     "minChangeDb": 0.5,          # below this, re-encoding buys nothing
     "maxGainDb": 40.0,           # a file needing more than this is broken, not quiet
+    "peakToleranceDb": 0.2,      # how far over the ceiling a result may land before
+                                 # the corrective pass re-encodes it
+    "maxCorrections": 2,
 }
 
 SOURCE_SUFFIX = ".source.mp3"
@@ -157,24 +168,46 @@ def plan_one(sreg, asset_id, conf, force=False, allow_attenuation=False):
     side = cache.read_sidecar(os.path.join(ROOT, sidecar_path)) or {}
     done = side.get("normalize") or {}
     src_abs = os.path.join(ROOT, source_path(audio_path))
-    if done and not force:
-        same = (abs(float(done.get("targetRmsDbfs", 0)) - conf["targetRmsDbfs"]) < 0.01
-                and abs(float(done.get("peakCeilingDbfs", 0)) - conf["peakCeilingDbfs"]) < 0.01)
-        if same and os.path.isfile(src_abs):
-            out["reason"] = ("already normalised %+.1f dB to %.1f dBFS"
-                             % (done.get("appliedDb", 0.0), done.get("resultRmsDbfs", 0.0)))
-            return out
+    normalised = bool(done) and os.path.isfile(src_abs)
 
-    # Always measure the MASTER. On the first pass the served file is the master;
-    # after that the snapshot is, and measuring the served file instead would read a
-    # level this pass already applied and then apply it again.
-    master = src_abs if os.path.isfile(src_abs) else audio_abs
+    # ALWAYS DERIVE FROM THE MASTER, then compare with what is recorded. The earlier
+    # shortcut -- skip when the target has not changed -- could not notice that the
+    # served file no longer matched the rule, which is exactly what happened when the
+    # ceiling moved: the right gain became 0, the shortcut said "already normalised",
+    # and a clipped file stayed on disk. Comparing gains instead makes the pass
+    # self-healing, and the decode it costs is free.
+    master = src_abs if normalised else audio_abs
     peak, rms, seconds = measure(master)
     applied, reason = gain_for(peak, rms, conf, allow_attenuation)
     out.update({"sourcePeakDbfs": round(peak, 1) if peak != float("-inf") else None,
                 "sourceRmsDbfs": round(rms, 1) if rms != float("-inf") else None,
                 "seconds": round(seconds, 2), "appliedDb": applied, "reason": reason,
-                "master": source_path(audio_path) if master == src_abs else audio_path})
+                "master": source_path(audio_path) if normalised else audio_path})
+
+    if normalised:
+        recorded = float(done.get("appliedDb", 0.0))
+        # Two ways a normalised asset can still be wrong, and the second is not implied
+        # by the first: the GAIN may no longer be what the rule asks for, or the file
+        # DELIVERED may sit above the ceiling that is in force now. A tightened ceiling
+        # can move the delivered peak 3 dB out of bounds while changing the gain by
+        # less than the re-encode threshold, so the peak is checked on its own.
+        was_peak = done.get("resultPeakDbfs")
+        peak_over = (was_peak is not None
+                     and float(was_peak) - conf["peakCeilingDbfs"] > conf["peakToleranceDb"])
+        if abs(applied - recorded) < conf["minChangeDb"] and not peak_over and not force:
+            out["reason"] = ("already normalised %+.1f dB to %s dBFS"
+                             % (recorded, done.get("resultRmsDbfs")))
+            return out
+        if peak_over:
+            out["reason"] = ("delivered peak %.1f is above the %.1f ceiling"
+                             % (float(was_peak), conf["peakCeilingDbfs"]))
+        if applied == 0.0:
+            # The rule now says leave this file alone, but a previous pass did not.
+            # Put the generated master back rather than leaving its gain in place.
+            out["action"] = "restore"
+            out["reason"] = "%s; restoring the generated master" % out["reason"]
+            return out
+
     if applied:
         out["action"] = "normalize"
         out["predictedRmsDbfs"] = round(rms + applied, 1)
@@ -182,29 +215,66 @@ def plan_one(sreg, asset_id, conf, force=False, allow_attenuation=False):
     return out
 
 
+def _encode(sreg, src_abs, audio_abs, gain_db):
+    """One re-encode from the master, then a measurement of what actually came out."""
+    tmp = audio_abs + ".part"
+    subprocess.run([ffmpeg(), "-v", "error", "-y", "-i", src_abs,
+                    "-af", "volume=%.1fdB" % gain_db]
+                   + encode_args(sreg.output_format()) + ["-f", "mp3", tmp], check=True)
+    os.replace(tmp, audio_abs)
+    return measure(audio_abs)
+
+
+def restore_one(plan):
+    """Put the generated master back and forget that this asset was ever normalised."""
+    audio_abs = os.path.join(ROOT, plan["audio"])
+    src_abs = os.path.join(ROOT, source_path(plan["audio"]))
+    shutil.copy2(src_abs, audio_abs)
+    os.remove(src_abs)
+    sidecar_abs = os.path.join(ROOT, plan["sidecar"])
+    side = cache.read_sidecar(sidecar_abs) or {}
+    side.pop("normalize", None)
+    side["bytes"] = os.path.getsize(audio_abs)
+    cache.write_sidecar(sidecar_abs, side)
+
+
 def apply_one(sreg, plan, conf):
-    """Snapshot the master if needed, re-encode with the gain, record what was done."""
+    """Snapshot the master, encode, then CHECK THE RESULT and correct it if needed.
+
+    The check is not belt-and-braces. mp3 is lossy, so what a decoder reconstructs
+    overshoots what the encoder was given -- by 1.0 to 2.8 dB across this set. A pass
+    that trusted its own arithmetic aimed eleven assets at -1.0 dBFS and delivered
+    eleven files clamped at 0.0. So the gain is verified against the encoded file and
+    backed off until the delivered audio really is under the ceiling.
+    """
     audio_abs = os.path.join(ROOT, plan["audio"])
     src_abs = os.path.join(ROOT, source_path(plan["audio"]))
     if not os.path.isfile(src_abs):
         shutil.copy2(audio_abs, src_abs)
 
-    tmp = audio_abs + ".part"
-    subprocess.run([ffmpeg(), "-v", "error", "-y", "-i", src_abs,
-                    "-af", "volume=%.1fdB" % plan["appliedDb"]]
-                   + encode_args(sreg.output_format()) + ["-f", "mp3", tmp], check=True)
-    os.replace(tmp, audio_abs)
+    applied = plan["appliedDb"]
+    limited_by = plan["reason"]
+    corrections = []
+    peak, rms, seconds = _encode(sreg, src_abs, audio_abs, applied)
+    for _ in range(int(conf["maxCorrections"])):
+        over = peak - conf["peakCeilingDbfs"]
+        if over <= conf["peakToleranceDb"]:
+            break
+        applied = round(applied - over - 0.1, 1)
+        corrections.append({"overBy": round(over, 1), "newGainDb": applied})
+        limited_by = "peak ceiling, measured after encoding"
+        peak, rms, seconds = _encode(sreg, src_abs, audio_abs, applied)
 
-    peak, rms, seconds = measure(audio_abs)
     sidecar_abs = os.path.join(ROOT, plan["sidecar"])
     side = cache.read_sidecar(sidecar_abs) or {}
     # The generation fingerprint is deliberately left exactly as it was: normalising
     # is not generating, and a changed fingerprint would buy a credit next run.
     side["normalize"] = {
-        "appliedDb": plan["appliedDb"],
+        "appliedDb": applied,
         "targetRmsDbfs": conf["targetRmsDbfs"],
         "peakCeilingDbfs": conf["peakCeilingDbfs"],
-        "limitedBy": plan["reason"],
+        "limitedBy": limited_by,
+        "corrections": corrections,
         "sourceRmsDbfs": plan["sourceRmsDbfs"],
         "sourcePeakDbfs": plan["sourcePeakDbfs"],
         "resultRmsDbfs": round(rms, 1) if rms != float("-inf") else None,
@@ -224,9 +294,11 @@ def normalize_assets(sreg, asset_ids, force=False, allow_attenuation=False,
         % (conf["targetRmsDbfs"], conf["peakCeilingDbfs"],
            "raise or attenuate" if allow_attenuation else "raise only"))
     plans = [plan_one(sreg, a, conf, force, allow_attenuation) for a in sorted(asset_ids)]
-    todo = [p for p in plans if p["action"] == "normalize"]
+    todo = [p for p in plans if p["action"] in ("normalize", "restore")]
     for p in plans:
-        if p["action"] == "normalize":
+        if p["action"] == "restore":
+            log("  %-30s  restore   %s" % (p["asset"], p["reason"]))
+        elif p["action"] == "normalize":
             log("  %-30s %+6.1f dB  %6.1f -> %6.1f dBFS rms   (%s)"
                 % (p["asset"], p["appliedDb"], p["sourceRmsDbfs"],
                    p["predictedRmsDbfs"], p["reason"]))
@@ -238,6 +310,11 @@ def normalize_assets(sreg, asset_ids, force=False, allow_attenuation=False,
     done = failed = 0
     for p in todo:
         try:
+            if p["action"] == "restore":
+                restore_one(p)
+                done += 1
+                log("  restored %-27s the generated master is served again" % p["asset"])
+                continue
             result = apply_one(sreg, p, conf)
             done += 1
             log("  wrote %-28s %+6.1f dB -> %.1f dBFS rms, peak %.1f"

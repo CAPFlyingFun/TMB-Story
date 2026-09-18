@@ -1346,11 +1346,11 @@ class NormalizeMathTests(unittest.TestCase):
     def test_peak_ceiling_wins_over_the_rms_target(self):
         # A transient-heavy one-shot: quiet on average, already loud at its peak.
         applied, why = normmod.gain_for(-6.0, -40.0, self.CONF)
-        self.assertEqual(applied, 5.0)           # -6 -> -1, not -40 -> -20
+        self.assertEqual(applied, 3.0)           # -6 -> -3, not -40 -> -20
         self.assertEqual(why, "peak ceiling")
 
     def test_raise_only_by_default(self):
-        applied, why = normmod.gain_for(-3.0, -11.0, self.CONF)
+        applied, why = normmod.gain_for(-1.0, -11.0, self.CONF)
         self.assertEqual(applied, 0.0)
         self.assertIn("raise-only", why)
 
@@ -1405,13 +1405,19 @@ class NormalizeFileTests(unittest.TestCase):
         normmod.ffmpeg = lambda: "ffmpeg"
         self.encodes = []
 
+        # The fake encoder OVERSHOOTS THE PEAK, because the real one does: mp3 is lossy
+        # and a decode reconstructs more than was encoded. A fake that reproduced the
+        # arithmetic perfectly would have passed every test while shipping clipped
+        # audio, which is exactly what happened on the first real run.
+        self.overshoot = 1.5
+
         def fake_run(cmd, **kw):
             gain = float([a for a in cmd if a.startswith("volume=")][0][7:-2])
             src = cmd[cmd.index("-i") + 1]
             peak, rms, _ = read_level(src)
             self.encodes.append((src, gain))
             with open(cmd[-1], "wb") as fh:
-                fh.write(fake_file(rms + gain, peak + gain))
+                fh.write(fake_file(rms + gain, peak + gain + self.overshoot))
             return None
         normmod.subprocess.run = fake_run
 
@@ -1444,6 +1450,7 @@ class NormalizeFileTests(unittest.TestCase):
         self.assertEqual(block["appliedDb"], 30.0)
         self.assertEqual(block["resultRmsDbfs"], -20.0)
         self.assertEqual(block["limitedBy"], "rms target")
+        self.assertEqual(block["corrections"], [])
 
     def test_the_gain_never_stacks(self):
         audio, _ = self._place("sfx_denied", rms=-50.0, peak=-40.0)
@@ -1508,6 +1515,66 @@ class NormalizeFileTests(unittest.TestCase):
         plan = normmod.plan_one(self.sreg, "sfx_denied", conf)
         self.assertEqual(plan["action"], "skip")
         self.assertIn("not generated yet", plan["reason"])
+
+
+class NormalizeOvershootTests(NormalizeFileTests):
+    """The codec is measured, not trusted. This is the bug the first real pass shipped."""
+
+    def test_a_peak_over_the_ceiling_is_backed_off_and_re_encoded(self):
+        # Peak-limited: the gain aims the peak exactly at the ceiling, and the encoder
+        # then puts it 1.5 dB over. The delivered file must still end up under.
+        audio, sidecar = self._place("sfx_denied", rms=-40.0, peak=-9.0)
+        normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        peak, _, _ = read_level(audio)
+        conf = normmod.settings(self.sreg)
+        self.assertLessEqual(peak, conf["peakCeilingDbfs"] + conf["peakToleranceDb"],
+                             "the DELIVERED peak is what the ceiling is about")
+        block = cache.read_sidecar(sidecar)["normalize"]
+        self.assertEqual(len(block["corrections"]), 1)
+        self.assertEqual(block["corrections"][0]["overBy"], 1.5)
+        self.assertIn("measured after encoding", block["limitedBy"])
+
+    def test_the_correction_re_encodes_from_the_master_not_the_last_attempt(self):
+        self._place("sfx_denied", rms=-40.0, peak=-9.0)
+        normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        sources = [src for src, _ in self.encodes]
+        self.assertEqual(len(sources), 2, "one encode, one correction")
+        self.assertTrue(all(s.endswith(normmod.SOURCE_SUFFIX) for s in sources[1:]),
+                        "a correction that encoded the corrected file would compound")
+
+    def test_corrections_are_bounded(self):
+        self.overshoot = 40.0            # a codec behaving absurdly
+        self._place("sfx_denied", rms=-40.0, peak=-9.0)
+        normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        conf = normmod.settings(self.sreg)
+        self.assertLessEqual(len(self.encodes), 1 + int(conf["maxCorrections"]),
+                             "it gives up rather than looping on a file it cannot fix")
+
+    def test_a_tightened_ceiling_restores_the_master_rather_than_leaving_it_hot(self):
+        # The exact shape of the real bug: normalised under a loose ceiling, then the
+        # ceiling moves and the right gain becomes zero. Skipping would serve the file
+        # the old rule produced -- and here the two gains differ by less than the
+        # re-encode threshold, so only checking the DELIVERED PEAK catches it.
+        audio, sidecar = self._place("sfx_denied", rms=-24.0, peak=-2.2)
+        self.sreg.config["sfx"]["normalize"] = {"peakCeilingDbfs": -1.0}
+        normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        self.assertIn("normalize", cache.read_sidecar(sidecar))
+        self.sreg.config["sfx"]["normalize"] = {"peakCeilingDbfs": -3.0}
+        done, failed = normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        self.assertEqual((done, failed), (1, 0))
+        self.assertEqual(read_level(audio), (-2.2, -24.0, 3.0),
+                         "the generated master is served again")
+        self.assertNotIn("normalize", cache.read_sidecar(sidecar))
+        self.assertFalse(os.path.isfile(normmod.source_path(audio)))
+
+    def test_an_unchanged_gain_is_still_a_no_op(self):
+        self._place("sfx_denied", rms=-50.0, peak=-40.0)
+        normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        before = len(self.encodes)
+        done, _ = normmod.normalize_assets(self.sreg, ["sfx_denied"], log=lambda *a: None)
+        self.assertEqual((done, len(self.encodes)), (0, before),
+                         "deriving from the master every time must not mean "
+                         "re-encoding every time")
 
 
 if __name__ == "__main__":
