@@ -1,7 +1,6 @@
 # Chapter 1: The Alarm — SFX and ambience cue sheet
 
-**Status: PROPOSED. 20 of 20 assets have not been generated and no ElevenLabs
-credits have been spent on them.** Each one below is a prompt awaiting approval.
+**Status: every cued asset is generated and cached.**
 
 Generated from `audio/cues/chapter-01.json` and `audio/sfx-registry.json`, so
 this document cannot drift from what the pipeline would actually play. Rebuild it
@@ -10,7 +9,7 @@ with `python3 scripts/render-cue-sheet.py 1`.
 | | |
 |---|---|
 | Playback events | **29** |
-| Unique assets | **20** (20 still to generate) |
+| Unique assets | **20** (0 still to generate) |
 | Chapter runtime as it plays today | 8:17 |
 | Voice clips regenerated for this | **none** |
 
@@ -41,7 +40,7 @@ anchor to its stop anchor and loops underneath.
 | Sustain | loops to segment order 184 |
 | Gain | 0.08 |
 | Fades | in 3000ms · out 4000ms |
-| Duration requested | 22s, looping |
+| Duration requested | 20s, looping |
 | Reusable in Godot | yes |
 | Approx. review time | ~0:28 |
 
@@ -49,7 +48,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** Enters on 'Deep inside one of those laboratories' -- the sentence that puts us in the room -- and never leaves, because the chapter never leaves. Establishes an occupied but near-empty building at night so that every later silence reads as a room and not as dead air.
 
-**Prompt:** `Quiet interior room tone of an advanced, clean research laboratory late at night. Steady soft ventilation air movement, a low continuous electrical hum from racked equipment, a faint distant whir of cooling fans, and a barely perceptible high electronic shimmer from instruments on standby. Spacious but enclosed. No voices, no speech, no music, no alarms, no beeping, no footsteps, no door sounds, no dramatic swells. Even and unchanging throughout so it can loop seamlessly.`
+**Prompt:** `Quiet room tone of an advanced, clean research laboratory late at night. Soft steady ventilation, a low continuous electrical hum from racked equipment, faint distant cooling fans, and a barely perceptible high shimmer from instruments on standby. Spacious but enclosed. No voices, no music, no alarms, no beeping, no footsteps. Even throughout so it loops.`
 
 ### `ch01-010-first-chirp`
 
@@ -593,26 +592,26 @@ anchor to its stop anchor and loops underneath.
 
 | Asset | Category | Loop | Secs | Events | Godot | State |
 |---|---|---|---|---|---|---|
-| `amb_console_alarm_bed` | alarm | yes | 12 | 1 | yes | to generate |
-| `amb_intercom_channel_open` | interface | yes | 10 | 1 | yes | to generate |
-| `amb_tombs_array_power_rise` | system | yes | 20 | 1 | yes | to generate |
-| `amb_tombs_lab_night` | ambience | yes | 22 | 1 | yes | to generate |
-| `sfx_access_denied_tone` | system | no | 1.5 | 2 | yes | to generate |
-| `sfx_access_revoked_tone` | system | no | 2 | 1 | yes | to generate |
-| `sfx_alert_warning_hit` | alarm | no | 1.5 | 2 | yes | to generate |
-| `sfx_chair_roll_fast` | foley | no | 2 | 1 | yes | to generate |
-| `sfx_chair_roll_slow` | foley | no | 2.5 | 2 | yes | to generate |
-| `sfx_console_alarm_erupt` | alarm | no | 3 | 1 | yes | to generate |
-| `sfx_console_tone_soft` | interface | no | 1.5 | 2 | yes | to generate |
-| `sfx_equipment_power_up_soft` | system | no | 2.5 | 1 | yes | to generate |
-| `sfx_footsteps_sarah_sneakers` | foley | no | 3 | 2 | yes | to generate |
-| `sfx_intercom_close` | interface | no | 1 | 1 | yes | to generate |
-| `sfx_intercom_open` | interface | no | 1.5 | 2 | yes | to generate |
-| `sfx_intercom_static` | interface | no | 2.5 | 1 | yes | to generate |
-| `sfx_keyboard_typing_short` | foley | no | 3 | 3 | yes | to generate |
-| `sfx_lab_door_slide` | foley | no | 2.5 | 1 | yes | to generate |
-| `sfx_system_notify_soft` | interface | no | 1.5 | 2 | yes | to generate |
-| `sfx_terminal_lock_engage` | interface | no | 2 | 1 | yes | to generate |
+| `amb_console_alarm_bed` | alarm | yes | 12 | 1 | yes | cached |
+| `amb_intercom_channel_open` | interface | yes | 10 | 1 | yes | cached |
+| `amb_tombs_array_power_rise` | system | yes | 20 | 1 | yes | cached |
+| `amb_tombs_lab_night` | ambience | yes | 20 | 1 | yes | cached |
+| `sfx_access_denied_tone` | system | no | 1.5 | 2 | yes | cached |
+| `sfx_access_revoked_tone` | system | no | 2 | 1 | yes | cached |
+| `sfx_alert_warning_hit` | alarm | no | 1.5 | 2 | yes | cached |
+| `sfx_chair_roll_fast` | foley | no | 2 | 1 | yes | cached |
+| `sfx_chair_roll_slow` | foley | no | 2.5 | 2 | yes | cached |
+| `sfx_console_alarm_erupt` | alarm | no | 3 | 1 | yes | cached |
+| `sfx_console_tone_soft` | interface | no | 1.5 | 2 | yes | cached |
+| `sfx_equipment_power_up_soft` | system | no | 2.5 | 1 | yes | cached |
+| `sfx_footsteps_sarah_sneakers` | foley | no | 3 | 2 | yes | cached |
+| `sfx_intercom_close` | interface | no | 1 | 1 | yes | cached |
+| `sfx_intercom_open` | interface | no | 1.5 | 2 | yes | cached |
+| `sfx_intercom_static` | interface | no | 2.5 | 1 | yes | cached |
+| `sfx_keyboard_typing_short` | foley | no | 3 | 3 | yes | cached |
+| `sfx_lab_door_slide` | foley | no | 2.5 | 1 | yes | cached |
+| `sfx_system_notify_soft` | interface | no | 1.5 | 2 | yes | cached |
+| `sfx_terminal_lock_engage` | interface | no | 2 | 1 | yes | cached |
 
 20 of 20 are reusable in Godot. The game decides when each one plays; this cue
 sheet only decides when the audiobook plays it.

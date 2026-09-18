@@ -67,10 +67,14 @@
 
   function makeEl(cue, loop) {
     var el = new Audio();
-    el.src = "./" + cue.audio;
+    /* Listener FIRST, then src. A browser loads asynchronously so the old order
+       happened to work, but it left a window in which a synchronous failure had
+       nobody listening -- and the whole point of the listener is that a missing
+       asset is noticed and dropped rather than retried on every segment. */
+    el.addEventListener("error", function () { markUnavailable(cue.asset); });
     el.loop = !!loop;
     el.preload = "auto";
-    el.addEventListener("error", function () { markUnavailable(cue.asset); });
+    el.src = "./" + cue.audio;
     return el;
   }
 
