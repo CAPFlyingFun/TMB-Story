@@ -287,9 +287,20 @@ def validate_cue(cue, registry, resolved_order, stop_order):
             problems.append("sustain.until does not resolve to a segment in this chapter")
         elif resolved_order is not None and stop_order < resolved_order:
             problems.append("sustain.until resolves before the cue starts")
-    elif registry.loops(asset_id) and registry.get(asset_id):
-        problems.append("%s loops, so its cue needs a sustain block saying where it "
-                        "stops" % asset_id)
+        elif registry.get(asset_id) and not registry.loops(asset_id):
+            # THE CHECK RUNS THIS WAY ROUND, and it used to run the other way: it used
+            # to insist that a loopable asset be given a sustain, which is what walked
+            # me into the bug. amb_tombs_array_power_rise is a 20-second RISE marked
+            # loop; the rule required it to be a bed; a bed loops; so it climbed,
+            # snapped back and climbed again every 20 seconds under two whole chapters.
+            #
+            # `loop` on an ASSET means the file is built to be looped. Whether a CUE
+            # uses it as a bed is the cue's decision, and using a loopable file once is
+            # always safe. Sustaining a file that was NOT built to loop is the thing
+            # that actually sounds wrong, so that is what is flagged.
+            problems.append("%s is not built to loop, so sustaining it will repeat a "
+                            "file with an audible seam; either drop the sustain or give "
+                            "the cue an asset made to loop" % asset_id)
     return problems
 
 

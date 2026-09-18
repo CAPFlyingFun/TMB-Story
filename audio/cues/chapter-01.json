@@ -42,7 +42,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.09,
+      "gain": 0.063,
       "fadeInMs": 3000,
       "fadeOutMs": 4000,
       "sustain": {
@@ -59,7 +59,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.243,
+      "gain": 0.17,
       "why": "The listener hears the chirp, then the narrator says a warning tone chirped. Putting it first makes the sound the event and the narration the confirmation, which is how the scene actually happens to Jack."
     },
     {
@@ -71,7 +71,7 @@
       },
       "timing": "during",
       "offsetMs": 2600,
-      "gain": 0.243,
+      "gain": 0.17,
       "why": "The same asset, louder, because the manuscript says the second tone was louder than the first. One generated sound covers both, and the escalation is done with gain rather than with a second file."
     },
     {
@@ -82,7 +82,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.12,
+      "gain": 0.084,
       "why": "The console erupting is the chapter's inciting sound. It lands in the gap between that narration and the TOMBS warning, so the machine voice arrives out of an alarm that is already going.",
       "emphasisDb": 6.0
     },
@@ -94,7 +94,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.15,
+      "gain": 0.105,
       "fadeInMs": 400,
       "fadeOutMs": 2500,
       "sustain": {
@@ -116,7 +116,7 @@
       },
       "timing": "during",
       "offsetMs": 1100,
-      "gain": 0.211,
+      "gain": 0.148,
       "why": "Gives the alarm a physical consequence in a body rather than only on a screen. It is the one sound in the chapter that tells the listener how hard Jack was asleep."
     },
     {
@@ -128,7 +128,7 @@
       },
       "timing": "during",
       "offsetMs": 4200,
-      "gain": 0.716,
+      "gain": 0.501,
       "why": "Lands on 'Jack grabbed the keyboard'. Establishes that he is working the problem with his hands, which is what makes the later moment when the cursor moves by itself frightening."
     },
     {
@@ -140,7 +140,7 @@
       },
       "timing": "during",
       "offsetMs": 1200,
-      "gain": 0.716,
+      "gain": 0.501,
       "why": "Jack entering a command and running a second search. The manuscript has him working the logs by hand here, and it was silent."
     },
     {
@@ -152,7 +152,7 @@
       },
       "timing": "during",
       "offsetMs": 2300,
-      "gain": 0.143,
+      "gain": 0.1,
       "why": "One sharp hit on 'Another alarm sounded'. Distinct from the opening eruption: this is the system finding something new, not the system panicking."
     },
     {
@@ -163,7 +163,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.251,
+      "gain": 0.176,
       "why": "The manuscript says the system beeped and a directory opened by itself. A calm, polite notification is more unsettling here than an alarm would be -- the machine is not warning him, it is working."
     },
     {
@@ -175,7 +175,7 @@
       },
       "timing": "during",
       "offsetMs": 800,
-      "gain": 0.257,
+      "gain": 0.18,
       "why": "It has to sound like the lock worked, or the terminal coming back on by itself is not a violation."
     },
     {
@@ -186,7 +186,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.174,
+      "gain": 0.122,
       "why": "Three seconds of black screen and then the machine wakes itself. Placed after the narration so the listener hears the thing happen having just been told it would not."
     },
     {
@@ -197,7 +197,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.351,
+      "gain": 0.245,
       "why": "Jack's 'Sarah?' has to arrive into an open channel, or the listener does not know he is talking to a wall. This is the cue that changes the acoustic space for the next twenty segments."
     },
     {
@@ -208,7 +208,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.117,
+      "gain": 0.082,
       "fadeInMs": 200,
       "fadeOutMs": 600,
       "sustain": {
@@ -228,7 +228,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.095,
+      "gain": 0.067,
       "why": "The manuscript makes static the answer to his question. It is the scene's reply, so it plays before the line that names it."
     },
     {
@@ -240,7 +240,7 @@
       },
       "timing": "during",
       "offsetMs": 500,
-      "gain": 0.351,
+      "gain": 0.245,
       "why": "'Jack tapped the button again' -- the same asset, slightly quieter. The repeat is the information: he is not getting an answer."
     },
     {
@@ -252,7 +252,7 @@
       },
       "timing": "during",
       "offsetMs": 700,
-      "gain": 0.117,
+      "gain": 0.082,
       "why": "Closes the frame cue ch01-070 opened. Without it the listener has no signal that Sarah's channel is gone, and the room he is left alone in is the point of the next four segments."
     },
     {
@@ -263,7 +263,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.251,
+      "gain": 0.176,
       "why": "'Jack froze as a file opened', then TOMBS says Boundary control. Reusing the same calm notification ties this to the directory opening earlier: it is the same intruder, doing the same unhurried thing."
     },
     {
@@ -275,7 +275,7 @@
       },
       "timing": "during",
       "offsetMs": 1500,
-      "gain": 0.086,
+      "gain": 0.06,
       "why": "The manuscript puts the door mid-sentence and behind him. The listener should know someone is in the room a beat before Jack does."
     },
     {
@@ -287,7 +287,7 @@
       },
       "timing": "during",
       "offsetMs": 300,
-      "gain": 0.38,
+      "gain": 0.266,
       "why": "Someone entering is one of the few things footsteps are for. Soft rubber soles on a hard floor, because Chapter 1 canon puts her in gray sneakers."
     },
     {
@@ -299,7 +299,7 @@
       },
       "timing": "during",
       "offsetMs": 900,
-      "gain": 0.38,
+      "gain": 0.266,
       "why": "'as she walked over' -- the second and last time the chapter hears her walk. It moves her from the doorway to Jack's shoulder, which is where she stays."
     },
     {
@@ -311,7 +311,7 @@
       },
       "timing": "during",
       "offsetMs": 400,
-      "gain": 0.093,
+      "gain": 0.065,
       "why": "Two people arranging themselves around one workstation. The chairs are how the chapter shows them working as a pair, and it is worth hearing once."
     },
     {
@@ -323,7 +323,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.093,
+      "gain": 0.065,
       "why": "The same asset closing the small joke that started with 'Move.' Jack gives up the keyboard, physically."
     },
     {
@@ -335,7 +335,7 @@
       },
       "timing": "during",
       "offsetMs": 300,
-      "gain": 0.716,
+      "gain": 0.501,
       "why": "'Sarah immediately started typing' -- the moment the competent one takes over. Marking who has the keyboard is the scene's quiet shift of authority."
     },
     {
@@ -347,7 +347,7 @@
       },
       "timing": "during",
       "offsetMs": 250,
-      "gain": 0.716,
+      "gain": 0.501,
       "why": "Sarah opening the connection history. She has the keyboard now and the scene should keep saying so."
     },
     {
@@ -359,7 +359,7 @@
       },
       "timing": "during",
       "offsetMs": 1600,
-      "gain": 0.716,
+      "gain": 0.501,
       "why": "“began digging through the security logs” is the longest stretch of work in the chapter and had no sound under it at all."
     },
     {
@@ -371,7 +371,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.716,
+      "gain": 0.501,
       "why": "The narration says plainly that she kept typing. Quiet, because it is under a line of banter rather than under the investigation."
     },
     {
@@ -383,7 +383,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.716,
+      "gain": 0.501,
       "why": "“Sarah continued typing.” Re-anchored on 2026-09-18 when Joshua's approved manuscript correction changed that line: the text changed, so the clip's identity changed, and this is the one case where an anchor is SUPPOSED to be edited. Validation caught it rather than letting the cue land somewhere plausible."
     },
     {
@@ -394,7 +394,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.143,
+      "gain": 0.1,
       "why": "The manuscript says a new warning tone interrupted them, so the tone must arrive before the narration, into the middle of the warmest moment in the chapter. Same asset as the earlier alert -- the same machine is calling again."
     },
     {
@@ -405,7 +405,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.036,
+      "gain": 0.025,
       "fadeInMs": 6000,
       "sustain": {
         "until": "chapterEnd",
@@ -421,7 +421,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.285,
+      "gain": 0.2,
       "why": "The refusal tone before TOMBS says Request denied, so the system rejects him and then explains itself."
     },
     {
@@ -432,7 +432,7 @@
         "occurrence": 2
       },
       "timing": "before",
-      "gain": 0.285,
+      "gain": 0.2,
       "why": "The second occurrence of the same clip, and the same asset again. Hearing the identical refusal twice is the information: he tried again and got exactly nowhere. This cue is why anchors carry an occurrence number."
     },
     {
@@ -443,7 +443,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.119,
+      "gain": 0.083,
       "why": "The chapter's turn. Being locked out is not the same event as being refused, and it should not sound like it -- heavier, lower, final. After this the sound design gets out of the way and leaves the last nine segments to two voices and the rising array."
     },
     {
@@ -455,7 +455,7 @@
       },
       "timing": "during",
       "offsetMs": 500,
-      "gain": 0.716,
+      "gain": 0.501,
       "why": "Jack entering his administrator credentials. Slightly louder than the rest: this is the keystroke the chapter turns on, and the refusal answers it."
     },
     {
@@ -467,7 +467,7 @@
       },
       "timing": "during",
       "offsetMs": 250,
-      "gain": 0.716,
+      "gain": 0.501,
       "why": "“Jack tried his credentials again.” The same sound a second time is the information, exactly as the two denial tones are."
     }
   ]

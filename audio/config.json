@@ -203,13 +203,17 @@
         "that were rescuing them are left in place.",
         "",
         "A cue may carry `emphasisDb` in its cue sheet to sit above its category, and the",
-        "cue sheet is where such a decision belongs: it is about that moment in the story."
+        "cue sheet is where such a decision belongs: it is about that moment in the story.",
+        "",
+        "LOWERED 3.1 dB (30% in amplitude) on 2026-09-18: Joshua, on the retuned build, still",
+        "found the sound too loud against the voices. Applied to every category so the layer",
+        "moves as one and the relationships between cues stay as they were."
       ],
-      "ambience": -42.0,
-      "alarm": -36.0,
-      "interface": -36.0,
-      "system": -36.0,
-      "foley": -38.0
+      "ambience": -45.1,
+      "alarm": -39.1,
+      "interface": -39.1,
+      "system": -39.1,
+      "foley": -41.1
     }
   }
 }

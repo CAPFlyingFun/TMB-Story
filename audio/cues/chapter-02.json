@@ -23,13 +23,9 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.036,
+      "gain": 0.025,
       "fadeInMs": 2000,
-      "sustain": {
-        "until": "chapterEnd",
-        "timing": "after"
-      },
-      "why": "The chapter opens on a hum passing through the floor and the array never stops drawing power. Reusing chapter 1's rise asset ties the two chapters together with one sound: the thing that started at the end of chapter 1 is what chapter 2 is standing inside."
+      "why": "The array coming up, ONCE, at the chapter's opening. Deliberately not a bed: this asset is a 20-second RISE, and a bed loops, so as a bed it climbs, snaps back and climbs again every 20 seconds for the whole chapter. A sustained hum needs a seamless loop asset, which does not exist yet; until it does the room tone carries the chapter and the rise does what a rise is for."
     },
     {
       "cueId": "ch02-006-lab-bed",
@@ -39,7 +35,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.09,
+      "gain": 0.063,
       "fadeInMs": 1500,
       "fadeOutMs": 2500,
       "sustain": {
@@ -60,7 +56,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.211,
+      "gain": 0.148,
       "why": "The same startled chair as chapter 1, and the chapter's first physical beat."
     },
     {
@@ -72,7 +68,7 @@
       },
       "timing": "during",
       "offsetMs": 900,
-      "gain": 0.086,
+      "gain": 0.06,
       "why": "They leave the laboratory. The door marks the move to the corridor, which is the chapter's first location change."
     },
     {
@@ -84,7 +80,7 @@
       },
       "timing": "during",
       "offsetMs": 300,
-      "gain": 0.38,
+      "gain": 0.266,
       "why": "Two people moving fast through a corridor. Sarah's sneakers, per chapter 1 canon."
     },
     {
@@ -95,7 +91,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.143,
+      "gain": 0.1,
       "why": "The manuscript sounds the alarm as they move, so the hit lands before the narration names it."
     },
     {
@@ -106,7 +102,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.15,
+      "gain": 0.105,
       "fadeInMs": 500,
       "fadeOutMs": 3000,
       "sustain": {
@@ -127,7 +123,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.117,
+      "gain": 0.082,
       "why": "NEW. The wrist terminal is how Lena exists in this story, and it needs to read as a different device from the laboratory console."
     },
     {
@@ -138,7 +134,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.117,
+      "gain": 0.082,
       "fadeInMs": 300,
       "fadeOutMs": 800,
       "sustain": {
@@ -158,7 +154,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.117,
+      "gain": 0.082,
       "why": "NEW asset, second use. The manuscript says chirped again, so the listener should recognise it."
     },
     {
@@ -169,7 +165,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.108,
+      "gain": 0.076,
       "fadeInMs": 800,
       "fadeOutMs": 1500,
       "sustain": {
@@ -190,7 +186,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.716,
+      "gain": 0.501,
       "why": "Sarah at the emitter controls. Reuses the keyboard asset."
     },
     {
@@ -202,7 +198,7 @@
       },
       "timing": "during",
       "offsetMs": 1400,
-      "gain": 0.335,
+      "gain": 0.234,
       "why": "NEW. The chapter's biggest physical act, and it has to sound conclusive so that the rings restarting lands as a violation."
     },
     {
@@ -213,7 +209,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.108,
+      "gain": 0.076,
       "fadeInMs": 600,
       "fadeOutMs": 2000,
       "sustain": {
@@ -230,7 +226,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.174,
+      "gain": 0.122,
       "why": "Power returning to a room that should have been dead. Reuses chapter 1's equipment transition."
     },
     {
@@ -242,7 +238,7 @@
       },
       "timing": "during",
       "offsetMs": 1800,
-      "gain": 0.251,
+      "gain": 0.176,
       "why": "The same calm notification as chapter 1's directory opening by itself: the machine is not warning anyone, it is working."
     },
     {
@@ -254,7 +250,7 @@
       },
       "timing": "during",
       "offsetMs": 300,
-      "gain": 0.716,
+      "gain": 0.501,
       "why": "Pulling up the island map, the moment before the red line appears."
     },
     {
@@ -266,7 +262,7 @@
       },
       "timing": "during",
       "offsetMs": 500,
-      "gain": 0.351,
+      "gain": 0.245,
       "why": "Reuses chapter 1's intercom. Jack declaring a settlement-wide emergency is the chapter's turn outward from two people to five hundred."
     },
     {
@@ -277,7 +273,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.174,
+      "gain": 0.122,
       "fadeInMs": 3000,
       "sustain": {
         "until": "chapterEnd",
@@ -294,7 +290,7 @@
       },
       "timing": "during",
       "offsetMs": 400,
-      "gain": 0.351,
+      "gain": 0.245,
       "why": "Changing the evacuation order. Same asset, quieter: the second use is a correction rather than a declaration."
     },
     {
@@ -306,7 +302,7 @@
       },
       "timing": "during",
       "offsetMs": 400,
-      "gain": 0.716,
+      "gain": 0.501,
       "why": "Jack working the overrides while the boundary acquires. The last stretch of ordinary work before the readouts take over."
     },
     {
@@ -317,7 +313,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.143,
+      "gain": 0.1,
       "why": "A hit into the gap before TOMBS says Boundary acquired, so the machine's announcement arrives out of an alert."
     },
     {
@@ -328,7 +324,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.251,
+      "gain": 0.176,
       "why": "Scale factor calculating arrives quietly, which is worse. The chapter ends on the calm voice of something that has already decided."
     }
   ]

@@ -11,24 +11,24 @@
 (function () {
   "use strict";
 
-  var VOICE_STORE = "tmb.voiceVolume";
+  /* A clip that fails to load used to cost the whole chapter. onError skipped
+     STRAIGHT to the next segment and called play() again, so one bad stretch of
+     network raced through clip after clip -- the voice sounding like it had sped up --
+     and then a rejected play() set playing=false and everything stopped, while the
+     looping beds carried on underneath. That is the lock-up Joshua described: the
+     voice sprints, dies, and the room tone keeps going.
 
-  /* The voice level is the player's, not the layer module's: it multiplies the one
-     <audio> element the chapter plays through. Remembered per browser and wrapped,
-     like the layer volumes, and it deliberately has no OFF -- the audiobook is the
-     thing this page is for. */
-  function loadVoiceVolume() {
-    try {
-      var v = parseFloat(window.localStorage.getItem(VOICE_STORE));
-      if (isFinite(v)) return Math.max(0.1, Math.min(1, v));
-    } catch (e) {}
-    return 1;
-  }
+     Three numbers make that a recoverable blip instead. */
+  var LOAD_RETRIES = 1;          // a blip deserves one retry; a pattern does not
+  var RETRY_DELAY_MS = 500;
+  var MAX_CONSECUTIVE_SKIPS = 3; // then STOP and say so, rather than sprint to the end
 
   var state = {
     chapter: null,
-    voiceVolume: loadVoiceVolume(),
-    exporting: false,
+    retries: 0,
+    consecutiveFailures: 0,
+    playToken: 0,
+    stalled: null,
     manifest: null,
     index: 0,
     playing: false,
@@ -58,8 +58,9 @@
       a.addEventListener("ended", onEnded);
       a.addEventListener("timeupdate", renderProgress);
       a.addEventListener("error", onError);
-      a.volume = state.voiceVolume;
       a.addEventListener("playing", function () {
+        state.consecutiveFailures = 0;
+        state.retries = 0;
         var l = layers(); if (l) l.setSpeaking(true);
       });
       a.addEventListener("pause", function () {
@@ -83,6 +84,9 @@
     stop();
     state.chapter = n;
     state.index = 0;
+    state.retries = 0;
+    state.consecutiveFailures = 0;
+    state.stalled = null;
     return fetch("./audio/manifests/chapter-" + String(n).padStart(2, "0") + ".json",
                  { cache: "no-cache" })
       .then(function (r) {
@@ -138,8 +142,30 @@
     }
     a.playbackRate = state.rate;
     state.playing = true;
+    state.stalled = null;
+    var token = ++state.playToken;
     var l = layers(); if (l) l.enterSegment(seg.order);
-    a.play().catch(function () { state.playing = false; render(); });
+    /* Deliberately NO success handler. A resolved play() means the request was
+       accepted, not that audio is sounding -- an element can resolve it and then fire
+       `error` moments later, which is exactly how a failing clip looked like a
+       succeeding one. The `playing` event is the only honest proof, and that is where
+       the failure counters are cleared. */
+    a.play().catch(function (err) {
+      /* Two rejections that are NOT failures and must not stop the audiobook:
+         a play() superseded by the next segment's load (the browser reports
+         AbortError, "interrupted by a new load request"), and any rejection for a
+         token we have already moved past. Treating those as failures is what turned
+         a busy moment into a dead player. */
+      if (token !== state.playToken) return;
+      if (err && err.name === "AbortError") return;
+      if (err && err.name === "NotAllowedError") {
+        state.playing = false;
+        state.stalled = "The browser wants a tap before it will play audio.";
+        render();
+        return;
+      }
+      failCurrent("could not start playback");
+    });
     preloadAhead();
     render();
   }
@@ -178,12 +204,48 @@
   }
 
   function onError() {
-    var seg = current();
-    if (seg) seg._have = false;
-    skipForward();
+    var a = state.audio, seg = current();
+    if (!a || !seg) return;
+    /* An error for a clip we have already moved past is noise: the element fires it
+       while its src is being replaced. Acting on it skipped a segment that was fine. */
+    if (a.getAttribute("data-src") !== "./" + seg.audio) return;
+    failCurrent("could not load");
   }
 
-  function skipForward() {
+  /* One retry, then give up on THIS clip -- and count it, because the count is what
+     separates a blip from a chapter that is not going to play. */
+  function failCurrent(reason) {
+    var seg = current();
+    if (state.retries < LOAD_RETRIES) {
+      state.retries += 1;
+      if (state.audio) state.audio.removeAttribute("data-src");
+      state.pauseTimer = setTimeout(function () {
+        state.pauseTimer = null;
+        if (state.playing) play(); else render();
+      }, RETRY_DELAY_MS);
+      return;
+    }
+    state.retries = 0;
+    if (seg) seg._have = false;
+    skipForward(reason);
+  }
+
+  function skipForward(reason) {
+    if (reason) {
+      state.consecutiveFailures += 1;
+      if (state.consecutiveFailures > MAX_CONSECUTIVE_SKIPS) {
+        /* STOP, rather than sprint. Racing through the rest of the chapter is what
+           made this sound like the voice speeding up, and it left nothing on screen
+           to say why the audiobook had gone quiet. */
+        state.playing = false;
+        state.stalled = state.consecutiveFailures + " clips in a row would not play (" +
+          reason + "). Playback stopped here rather than skipping the rest of the " +
+          "chapter. Check the connection and press Play.";
+        var l = layers(); if (l) l.stopAll();
+        render();
+        return;
+      }
+    }
     if (state.index + 1 < segments().length) {
       state.index += 1;
       if (state.playing) play(); else render();
@@ -212,14 +274,6 @@
     });
   }
 
-  function setVoiceVolume(v) {
-    state.voiceVolume = Math.max(0.1, Math.min(1, v));
-    if (state.audio) state.audio.volume = state.voiceVolume;
-    try { window.localStorage.setItem(VOICE_STORE, String(state.voiceVolume)); } catch (e) {}
-    var out = document.getElementById("listen-vol-voice-out");
-    if (out) out.textContent = Math.round(state.voiceVolume * 100) + "%";
-  }
-
   function setRate(r) {
     state.rate = r;
     if (state.audio) state.audio.playbackRate = r;
@@ -233,34 +287,15 @@
      could silence the audiobook. Ambience and Sound Effects are real toggles, and the
      whole block is absent when a chapter has no cue sheet -- there is nothing to
      switch, and an empty control panel is a worse answer than no panel. */
-  function sliderHtml(id, label, value, min) {
-    return '<div class="listen-vol">' +
-      '<label for="' + id + '">' + label + '</label>' +
-      '<input id="' + id + '" type="range" min="' + min + '" max="100" step="1" value="' +
-        Math.round(value * 100) + '" aria-label="' + label + ' volume">' +
-      '<output id="' + id + '-out">' + Math.round(value * 100) + '%</output></div>';
-  }
-
-  /* Voices is present but has no OFF switch and its slider floors at 10%: it is the
-     reference layer and the thing the page exists for, so it reads as the anchor
-     rather than as a control that could silence the audiobook. Ambience and Sound
-     effects get both a switch and a slider, and the whole block is absent when a
-     chapter has no cue sheet -- an empty control panel is a worse answer than none. */
   function layerControlsHtml() {
     var l = layers();
-    var voice = '<div class="listen-vols">' +
-      sliderHtml("listen-vol-voice", "Voices", state.voiceVolume, 10);
-    if (!l || !l.has()) return voice + '</div>';
+    if (!l || !l.has()) return "";
     var c = l.count();
     var ungenerated = c.ungenerated
       ? '<span class="listen-layer-note">' + c.ungenerated +
         ' of ' + c.assets + ' sound assets not generated yet; those cues are skipped.</span>'
       : '<span class="listen-layer-note">' + c.events + ' cues · ' + c.assets + ' assets</span>';
-    return voice +
-      sliderHtml("listen-vol-ambience", "Ambience", l.volume("ambience"), 0) +
-      sliderHtml("listen-vol-sfx", "Sound effects", l.volume("sfx"), 0) +
-      '</div>' +
-      '<div class="listen-layers" role="group" aria-label="Audio layers">' +
+    return '<div class="listen-layers" role="group" aria-label="Audio layers">' +
       '<span class="listen-layer listen-layer-fixed">' +
         '<input type="checkbox" checked disabled aria-label="Voices (always on)"> Voices</span>' +
       '<label class="listen-layer"><input id="listen-layer-ambience" type="checkbox"' +
@@ -272,78 +307,11 @@
 
   function bindLayerControls() {
     var l = layers();
-    var voice = document.getElementById("listen-vol-voice");
-    if (voice) voice.oninput = function (e) { setVoiceVolume(parseInt(e.target.value, 10) / 100); };
     if (!l || !l.has()) return;
     [["listen-layer-ambience", "ambience"], ["listen-layer-sfx", "sfx"]].forEach(function (pair) {
       var el = document.getElementById(pair[0]);
       if (el) el.onchange = function (e) { l.setEnabled(pair[1], e.target.checked); };
     });
-    ["ambience", "sfx"].forEach(function (layer) {
-      var el = document.getElementById("listen-vol-" + layer);
-      if (!el) return;
-      el.oninput = function (e) {
-        var v = parseInt(e.target.value, 10) / 100;
-        l.setVolume(layer, v);
-        var out = document.getElementById("listen-vol-" + layer + "-out");
-        if (out) out.textContent = Math.round(v * 100) + "%";
-      };
-    });
-  }
-
-  /* ---- download ------------------------------------------------------------
-     Rebuilt in the browser rather than served from audio/exports/, because the point
-     is the listener's own levels. reader/export.js mirrors drama.py's timeline and
-     mixing so the file is the same mix the page just played. */
-  function downloadHtml() {
-    if (!window.TMBExport || !window.TMBExport.available()) return "";
-    var m = state.manifest;
-    var mins = m ? Math.round((m.segments.length * 2.7) / 60) : 0;
-    return '<div class="listen-save">' +
-      '<button id="listen-save" type="button"' + (state.exporting ? " disabled" : "") + '>' +
-        (state.exporting ? "Building…" : "Download this chapter (WAV)") + '</button>' +
-      '<span id="listen-save-note" class="listen-layer-note">' +
-        'Mixed here with the volumes above, so the file matches what you are hearing. ' +
-        'Roughly ' + Math.max(1, mins * 5) + ' MB; best on a computer.</span></div>';
-  }
-
-  function bindDownload() {
-    var btn = document.getElementById("listen-save");
-    if (!btn) return;
-    btn.onclick = function () {
-      var m = state.manifest, l = layers();
-      if (!m || state.exporting) return;
-      state.exporting = true;
-      btn.disabled = true;
-      var note = document.getElementById("listen-save-note");
-      function say(text) { if (note) note.textContent = text; }
-      window.TMBExport.render(m, {
-        volumes: {
-          voice: state.voiceVolume,
-          ambience: l ? l.volume("ambience") : 0,
-          sfx: l ? l.volume("sfx") : 0
-        },
-        enabled: {
-          ambience: l ? l.isEnabled("ambience") : false,
-          sfx: l ? l.isEnabled("sfx") : false
-        }
-      }, function (phase, done, total) {
-        if (phase === "loading") say("Loading audio… " + done + " of " + total);
-        else if (phase === "rendering") say("Mixing the chapter…");
-        else say("Writing the file…");
-      }).then(function (result) {
-        window.TMBExport.save(result.blob,
-          "TMB-chapter-" + String(m.chapter).padStart(2, "0") + "-mix.wav");
-        say("Saved. " + Math.round(result.seconds / 60) + " min, " +
-            window.TMBExport.estimateMb(result.seconds) + " MB.");
-      }).catch(function (err) {
-        say("Could not build the file: " + err.message);
-      }).then(function () {
-        state.exporting = false;
-        btn.disabled = false;
-        btn.textContent = "Download this chapter (WAV)";
-      });
-    };
   }
 
   // ---- rendering -----------------------------------------------------------
@@ -367,6 +335,9 @@
     var seg = current() || {};
     var total = segments().length;
     var pct = total ? Math.round(((state.index) / total) * 100) : 0;
+    var stalled = state.stalled
+      ? '<p class="listen-warn">' + esc(state.stalled) + '</p>'
+      : "";
     var warn = state.missing
       ? '<p class="listen-warn">' + state.missing + ' of ' +
         Object.keys(segments().reduce(function (acc, s) { acc[s.audio] = 1; return acc; }, {})).length +
@@ -376,7 +347,7 @@
     body.innerHTML =
       '<div class="listen-head"><h2>' + esc(m.title || ("Chapter " + m.chapter)) + '</h2>' +
       '<p class="listen-sub">' + total + ' segments · ' + esc(m.outputFormat || "") + '</p></div>' +
-      warn +
+      stalled + warn +
       '<div class="listen-now"><p class="listen-speaker">' + esc(seg.speakerName || "") +
         (seg._have === false ? ' <span class="listen-missing">(no audio yet)</span>' : '') + '</p>' +
       '<p class="listen-text">' + esc(seg.displayText || "") + '</p></div>' +
@@ -390,7 +361,6 @@
         return '<option value="' + r + '"' + (r === state.rate ? " selected" : "") + '>' + r + '×</option>';
       }).join("") + '</select></label></div>' +
       layerControlsHtml() +
-      downloadHtml() +
       '<input id="listen-seg-bar" class="listen-bar" type="range" min="0" max="100" value="0" ' +
         'aria-label="Position in this segment">' +
       '<p class="listen-meta"><span id="listen-position">Segment ' + (state.index + 1) +
@@ -409,7 +379,6 @@
       if (a && a.duration) a.currentTime = (parseFloat(e.target.value) / 100) * a.duration;
     };
     bindLayerControls();
-    bindDownload();
     renderProgress();
   }
 

@@ -50,8 +50,18 @@ class FakeAudio {
   load() {}
   addEventListener(name, fn) { (this._handlers[name] ||= []).push(fn); }
   play() {
-    this.paused = false;
     this._playCount += 1;
+    if (this._rejectWith) {
+      const err = new Error(this._rejectWith);
+      err.name = this._rejectWith;
+      return Promise.reject(err);
+    }
+    if (this._failLoad) {
+      // A real element fires `error` and never starts.
+      (this._handlers.error || []).forEach((f) => f());
+      return Promise.resolve();
+    }
+    this.paused = false;
     (this._handlers.playing || []).forEach((f) => f());
     return Promise.resolve();
   }
@@ -110,7 +120,6 @@ sandbox.window.localStorage = {
 };
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync(path.join(ROOT, "reader/sfx.js"), "utf8"), sandbox);
-vm.runInContext(fs.readFileSync(path.join(ROOT, "reader/export.js"), "utf8"), sandbox);
 vm.runInContext(fs.readFileSync(path.join(ROOT, "reader/player.js"), "utf8"), sandbox);
 
 /* The layer module is exercised by verify-layers.js; here it must not interfere, and
@@ -219,17 +228,68 @@ async function main() {
         observed.slice(0, 6).join(", ") + " ms vs manifest " + expected.slice(0, 6).join(", "));
   console.log("");
 
-  console.log("2. The voice volume is a volume, not a speed");
-  const before = created.find((e) => e._playCount > 0);
-  const slider = nodes.get("listen-vol-voice");
-  check("the voice slider exists", !!slider);
-  if (slider) {
-    slider.oninput({ target: { value: "40" } });
-    check("it sets volume", Math.abs(before.volume - 0.4) < 0.001, "volume " + before.volume);
-    check("it does NOT touch playbackRate", before.playbackRate === 1,
-          "playbackRate " + before.playbackRate);
-    slider.oninput({ target: { value: "100" } });
+  console.log("2. Nothing changes the speed");
+  const el = created.find((e) => e._playCount > 0);
+  check("the one voice element ends at rate 1", el && el.playbackRate === 1,
+        "playbackRate " + (el && el.playbackRate));
+  check("the rate control offers nothing above 1.5x",
+        !/value="(2|2\.5|3)"/.test(body.innerHTML),
+        "a speed the listener did not choose has to come from somewhere");
+  console.log("");
+
+  console.log("3. A clip that will not load");
+  /* The reported symptom, reproduced: the voice races through clip after clip and
+     then dies while the beds keep looping. A real element fires `error` on itself
+     with its src still set, so that is what the harness does -- an earlier version
+     cleared data-src first, which the player rightly ignores as a stale error, and
+     the check passed for the wrong reason. */
+  const a = created.find((e) => e._playCount > 0);
+  function browserError() { (a._handlers.error || []).forEach((f) => f()); }
+  function bedsSounding() {
+    return created.filter((e) => /\/sfx\//.test(e._src) && e.loop && !e.paused).length;
   }
+
+  // (a) one blip is retried, not skipped
+  const attemptsBefore = a._playCount;
+  browserError();
+  await flush();
+  await advance();                            // the retry timer fires
+  check("a single load failure is RETRIED, not skipped",
+        a._playCount > attemptsBefore && !a.paused,
+        "play attempts went " + attemptsBefore + " -> " + a._playCount);
+
+  // (b) a play() the next load supersedes is normal, not a fault
+  a._rejectWith = "AbortError";
+  a.play().catch(() => {});
+  await flush();
+  a._rejectWith = null;
+  check("an AbortError does not stop the audiobook",
+        !/Playback stopped here/.test(body.innerHTML),
+        "a play() interrupted by the next load is the browser being busy");
+
+  // (c) a RUN of failures stops and says so, instead of sprinting to the end
+  // The failure has to PERSIST. An earlier version fired one error per turn and let
+  // the next play() succeed, which cleared the counter every time and made the run
+  // look endless -- the harness testing its own recovery rather than the player's.
+  a._failLoad = true;
+  let attempts = 0;
+  browserError();
+  await flush();
+  for (let i = 0; i < 40; i++) {
+    if (/Playback stopped here/.test(body.innerHTML)) break;
+    if ((await advance()) < 0) break;
+    attempts += 1;
+  }
+  const stopped = /Playback stopped here/.test(body.innerHTML);
+  check("a run of failures stops playback instead of racing the chapter", stopped,
+        stopped ? "gave up after " + attempts + " error(s), and the page says why"
+                : "still skipping after " + attempts + " error(s)");
+  check("it gives up EARLY, not at the end of the chapter",
+        attempts < 20, attempts + " error(s) before stopping");
+  // stopBed fades first and pauses on a timer, so the clock has to reach it.
+  for (let i = 0; i < 8; i++) { if ((await advance()) < 0) break; }
+  check("the beds are stopped too, so nothing loops over a dead voice",
+        bedsSounding() === 0, bedsSounding() + " bed(s) still sounding");
   console.log("");
 
   console.log(failures === 0 ? "ALL CHECKS PASSED" : failures + " CHECK(S) FAILED");
