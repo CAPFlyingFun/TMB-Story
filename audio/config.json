@@ -187,6 +187,29 @@
     "defaultFadeMs": {
       "in": 800,
       "out": 1200
+    },
+    "categoryTargetDbfs": {
+      "_comment": [
+        "Where each kind of sound sits in the finished mix, in dBFS RMS, with the narration",
+        "running about -22. scripts/audio.py retune-cues derives every cue gain from these",
+        "and the asset's MEASURED level, so a gain survives its asset being regenerated or",
+        "renormalised instead of silently becoming wrong.",
+        "",
+        "Set after Joshua listened to the first normalised build and said the sound was",
+        "super loud. He was right and the numbers said so: nine cues sat at or above the",
+        "narrator's own level, including amb_tombs_array_power_rise -- a bed running under",
+        "whole chapters at -21 to -23 dBFS -- and two deep vibrations at -18.8, louder than",
+        "the voice. That is what happens when assets are lifted 20 to 27 dB and the gains",
+        "that were rescuing them are left in place.",
+        "",
+        "A cue may carry `emphasisDb` in its cue sheet to sit above its category, and the",
+        "cue sheet is where such a decision belongs: it is about that moment in the story."
+      ],
+      "ambience": -42.0,
+      "alarm": -36.0,
+      "interface": -36.0,
+      "system": -36.0,
+      "foley": -38.0
     }
   }
 }

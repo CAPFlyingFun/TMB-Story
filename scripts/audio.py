@@ -292,6 +292,15 @@ def cmd_generate_sfx(args, reg):
     return 1 if failed else 0
 
 
+def cmd_retune_cues(args, reg):
+    """Derive every cue gain from the level its asset actually has. Free."""
+    from tmbaudio import mixtune
+    sreg = _sfx_registry(reg)
+    numbers = parse_range(args.chapters, mf.chapter_files())
+    mixtune.retune(numbers, sreg, dry_run=args.dry_run)
+    return 0
+
+
 def cmd_normalize_sfx(args, reg):
     """Bake a level into the generated assets. Free: decodes and re-encodes locally,
     and never touches a generation fingerprint, so no run spends a credit for it."""
@@ -449,7 +458,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description="TMB audio pipeline")
     sub = ap.add_subparsers(dest="cmd", required=True)
     for name in ("parse", "validate", "generate", "combine", "export-game",
-                 "cues", "sfx", "generate-sfx", "normalize-sfx"):
+                 "cues", "sfx", "generate-sfx", "normalize-sfx", "retune-cues"):
         p = sub.add_parser(name)
         p.add_argument("--chapters", help="e.g. 1, 1-3, 1,3")
         if name == "validate":
@@ -471,6 +480,9 @@ def main(argv=None):
         if name == "cues":
             p.add_argument("--timestamps", action="store_true",
                            help="approximate clock times, for human review only")
+        if name == "retune-cues":
+            p.add_argument("--dry-run", action="store_true",
+                           help="show the gains that would change; writes nothing")
         if name == "normalize-sfx":
             p.add_argument("--all", action="store_true",
                            help="every registered asset, not only the cued ones")
@@ -497,7 +509,7 @@ def main(argv=None):
         "parse": cmd_parse, "validate": cmd_validate, "generate": cmd_generate,
         "combine": cmd_combine, "export-game": cmd_export_game, "voices": cmd_voices,
         "cues": cmd_cues, "sfx": cmd_sfx, "generate-sfx": cmd_generate_sfx,
-        "normalize-sfx": cmd_normalize_sfx,
+        "normalize-sfx": cmd_normalize_sfx, "retune-cues": cmd_retune_cues,
     }
     return handlers[args.cmd](args, reg) or 0
 

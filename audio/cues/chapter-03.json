@@ -23,7 +23,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.2,
+      "gain": 0.036,
       "fadeInMs": 1000,
       "fadeOutMs": 3000,
       "sustain": {
@@ -43,7 +43,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.85,
+      "gain": 0.174,
       "fadeInMs": 1500,
       "fadeOutMs": 2500,
       "sustain": {
@@ -64,7 +64,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.55,
+      "gain": 0.716,
       "why": "The manuscript opens on his hands. Loudest of the typing cues because it is the first sound of the chapter."
     },
     {
@@ -76,7 +76,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.5,
+      "gain": 0.716,
       "why": "Sarah at the secondary console, working the interrupt."
     },
     {
@@ -87,7 +87,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.5,
+      "gain": 0.166,
       "why": "NEW. The shake arrives before the narration names it, so the listener feels it with Sarah rather than being told about it."
     },
     {
@@ -98,7 +98,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.38,
+      "gain": 0.166,
       "why": "NEW asset, second use, quieter. The manuscript calls it another vibration, so it should be the same sound diminished rather than a new one."
     },
     {
@@ -109,7 +109,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.48,
+      "gain": 0.143,
       "why": "Into the gap before Scale factor locked. Reused."
     },
     {
@@ -121,8 +121,9 @@
       },
       "timing": "during",
       "offsetMs": 1200,
-      "gain": 0.62,
-      "why": "NEW. The event. It ends in real silence rather than a tail, because the manuscript is explicit that the sound does not fade or become muffled, it ceases to exist."
+      "gain": 0.331,
+      "why": "NEW. The event. It ends in real silence rather than a tail, because the manuscript is explicit that the sound does not fade or become muffled, it ceases to exist.",
+      "emphasisDb": 6.0
     },
     {
       "cueId": "ch03-070-event-return",
@@ -132,8 +133,9 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.6,
-      "why": "NEW. The other half. The silence between the two is carried by the manifest's own pauses across the four narration segments in between, so the quiet is real rather than printed into a file."
+      "gain": 0.385,
+      "why": "NEW. The other half. The silence between the two is carried by the manifest's own pauses across the four narration segments in between, so the quiet is real rather than printed into a file.",
+      "emphasisDb": 6.0
     },
     {
       "cueId": "ch03-075-alarms-screaming",
@@ -143,7 +145,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.2,
+      "gain": 0.15,
       "fadeInMs": 200,
       "fadeOutMs": 2000,
       "sustain": {
@@ -153,7 +155,8 @@
         },
         "timing": "after"
       },
-      "why": "Reused. The alarms run from the landing to the sentence that stops them, and their stopping is what leaves the silence the scene needs."
+      "why": "Reused. The alarms run from the landing to the sentence that stops them, and their stopping is what leaves the silence the scene needs.",
+      "emphasisDb": 8.3
     },
     {
       "cueId": "ch03-080-lab-after",
@@ -163,7 +166,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.22,
+      "gain": 0.09,
       "fadeInMs": 4000,
       "sustain": {
         "until": "chapterEnd",
@@ -180,7 +183,7 @@
       },
       "timing": "during",
       "offsetMs": 900,
-      "gain": 0.48,
+      "gain": 0.716,
       "why": "Jack checking whether TOMBS is off. Quiet work in a quiet room."
     },
     {
@@ -191,7 +194,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.44,
+      "gain": 0.117,
       "why": "NEW asset, reused from chapter 2. Lena getting through is the first contact with anyone outside the room since the event."
     },
     {
@@ -202,7 +205,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.14,
+      "gain": 0.117,
       "fadeInMs": 300,
       "fadeOutMs": 800,
       "sustain": {
@@ -223,7 +226,7 @@
       },
       "timing": "during",
       "offsetMs": 1200,
-      "gain": 0.42,
+      "gain": 0.251,
       "why": "Reused. The cameras answering is the mechanism by which the chapter shows the scale of what happened."
     },
     {
@@ -235,7 +238,7 @@
       },
       "timing": "during",
       "offsetMs": 300,
-      "gain": 0.36,
+      "gain": 0.251,
       "why": "Reused, quieter. One more feed, and the drop of water."
     },
     {
@@ -246,8 +249,9 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.85,
-      "why": "NEW, and the most important new asset in either chapter. The first sound of the giant world, arriving from outside with no seismic cause. It plays before the narration so the listener hears it exactly as Jack and Sarah do: an event first, an explanation never."
+      "gain": 0.186,
+      "why": "NEW, and the most important new asset in either chapter. The first sound of the giant world, arriving from outside with no seismic cause. It plays before the narration so the listener hears it exactly as Jack and Sarah do: an event first, an explanation never.",
+      "emphasisDb": 4.0
     },
     {
       "cueId": "ch03-140-vibration-two",
@@ -257,8 +261,9 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.85,
-      "why": "NEW asset, second use. The manuscript brings it back and then lets it go, and Jack decides he is not certain he wants to know what it was. The same sound twice is the whole point."
+      "gain": 0.186,
+      "why": "NEW asset, second use. The manuscript brings it back and then lets it go, and Jack decides he is not certain he wants to know what it was. The same sound twice is the whole point.",
+      "emphasisDb": 4.0
     },
     {
       "cueId": "ch03-150-event-log",
@@ -269,7 +274,7 @@
       },
       "timing": "during",
       "offsetMs": 1000,
-      "gain": 0.38,
+      "gain": 0.251,
       "why": "Reused. One final record remains, and the machine reports the scale factor as calmly as it reported everything else."
     }
   ]

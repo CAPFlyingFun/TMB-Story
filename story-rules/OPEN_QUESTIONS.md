@@ -9,7 +9,7 @@ ladder, which is archived. Ids are stable; add, never renumber.
 | Q02 | How were Jack's administrator credentials revoked, when he is the only person who can revoke them? | Ch 1 | open |
 | Q03 | Where did TOMBS get its power after the island grid was disconnected and the physical connection was cut? The capacitors are not enough and the reactor was offline. | Ch 2 | open |
 | Q04 | Who chose the boundary coordinates, and why the developed settlement? | Ch 2 | open |
-| Q05 | What is the scale factor? It was calculated, locked and recorded, and its value has never been spoken. No number has been assigned. | Ch 2, Ch 3 | open |
+| Q05 | What is the scale factor? It was calculated, locked and recorded, and its value has never been spoken IN THE STORY. The world is built on 1:180 (a 10 mm human standing in for 6 ft) — see reference/README.md — but no character has said a number, and the question of whether one ever does is still open. | Ch 2, Ch 3 | open |
 | Q06 | What was the faint deep vibration after the activation, softer than the array and more like distant thunder, with no seismic event on the monitor? It came twice and faded. | Ch 3 | open |
 | Q07 | Why is all external communication gone, when internal systems work? Satellite and radio both return nothing. | Ch 3 | open |
 | Q08 | What happened to the rest of the settlement's nearly five hundred people during the event? | Ch 3 | open |
