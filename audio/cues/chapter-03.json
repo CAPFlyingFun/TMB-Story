@@ -53,7 +53,8 @@
         },
         "timing": "after"
       },
-      "why": "Civil sirens across the settlement, heard indoors. Procedural rather than recorded because the recorded one did not loop cleanly -- it was even for 5.5 of its 12 seconds and announced its own seam every time it wrapped. This one closes its phase exactly at 12 s. EMPHASIS -4.4 dB: Joshua asked for the sirens 40% quieter, and only the sirens, so it is a per-cue nudge rather than a move of the whole alarm category, which would have taken the console alarm bed he tuned by ear down with it."
+      "why": "Civil sirens across the settlement, heard indoors. Procedural rather than recorded because the recorded one did not loop cleanly -- it was even for 5.5 of its 12 seconds and announced its own seam every time it wrapped. This one closes its phase exactly at 12 s. EMPHASIS -4.4 dB: Joshua asked for the sirens 40% quieter, and only the sirens, so it is a per-cue nudge rather than a move of the whole alarm category, which would have taken the console alarm bed he tuned by ear down with it.",
+      "gain": 0.01
     },
     {
       "cueId": "ch03-010-jack-typing",
@@ -98,7 +99,8 @@
         },
         "timing": "after"
       },
-      "why": "\"...the emergency sirens outside changed pitch.\" They did not: the same siren kept playing under the line that said it had changed, which Joshua caught. The first pattern stops on the previous line and this one comes in 1.2 s into the sentence, under the words themselves. Higher and faster, so it reads as the town escalating rather than as a different recording."
+      "why": "\"...the emergency sirens outside changed pitch.\" They did not: the same siren kept playing under the line that said it had changed, which Joshua caught. The first pattern stops on the previous line and this one comes in 1.2 s into the sentence, under the words themselves. Higher and faster, so it reads as the town escalating rather than as a different recording.",
+      "gain": 0.01
     },
     {
       "cueId": "ch03-030-building-shake",

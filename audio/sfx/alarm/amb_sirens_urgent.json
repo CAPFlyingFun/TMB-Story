@@ -1,0 +1,45 @@
+{
+  "asset": "amb_sirens_urgent",
+  "source": "procedural",
+  "category": "alarm",
+  "loop": true,
+  "recipe": {
+    "kind": "siren",
+    "seconds": 12,
+    "sampleRate": 44100,
+    "kbps": 64,
+    "lowpassHz": 1400,
+    "units": [
+      {
+        "centreHz": 760,
+        "sweepHz": 200,
+        "periodSeconds": 3,
+        "level": 0.5
+      },
+      {
+        "centreHz": 620,
+        "sweepHz": 140,
+        "periodSeconds": 4,
+        "level": 0.28
+      },
+      {
+        "centreHz": 880,
+        "sweepHz": 90,
+        "periodSeconds": 2,
+        "level": 0.16
+      }
+    ]
+  },
+  "recipeFingerprint": "26ef90347a89de4740f3aaa6ff06a93de47e4466b98b4185a228c7d0a992d479",
+  "fingerprint": "supplied:d2e46f185cfa5b2518a7a5c792e6bdbc71acec22c05b3b619c89cbdfe35cf065",
+  "bytes": 96592,
+  "seconds": 12.07,
+  "expression": "0.5*sin(2*PI*760*t-600*cos(2*PI*t/3))+0.28*sin(2*PI*620*t-560*cos(2*PI*t/4))+0.16*sin(2*PI*880*t-180*cos(2*PI*t/2))",
+  "measured": {
+    "measuredAt": "2026-09-18",
+    "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
+    "seconds": 12.0,
+    "peakDbfs": -1.2,
+    "rmsDbfs": -8.3
+  }
+}
