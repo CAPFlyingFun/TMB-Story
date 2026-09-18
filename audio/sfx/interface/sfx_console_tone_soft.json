@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_console_tone_soft",
+  "category": "interface",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "A single soft electronic warning chirp from a laboratory console. One short polite two-tone blip, clean and synthetic, low urgency, with a small amount of room reflection. No alarm, no siren, no voices, no music.",
+  "durationSeconds": 1.5,
+  "promptInfluence": 0.35,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "b88a3cab34890b5643a1f996379fae09e6b987654563f1687e94bbee2dd1811d",
+  "bytes": 24703,
+  "generated": "2026-09-18T04:16:54Z"
+}

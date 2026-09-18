@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_access_denied_tone",
+  "category": "system",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "A system refusing a command. One short blunt descending two-note electronic rejection tone, flat and unsympathetic, close-mic with slight room. Final but not an alarm. No voices, no music, no siren.",
+  "durationSeconds": 1.5,
+  "promptInfluence": 0.4,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "59c55b171602cbd95c0e7c388335ca9aba9c52931730439906e8e4acbe98c4e3",
+  "bytes": 24703,
+  "generated": "2026-09-18T04:16:46Z"
+}

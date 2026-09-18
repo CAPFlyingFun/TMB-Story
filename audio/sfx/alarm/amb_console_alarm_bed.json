@@ -1,0 +1,16 @@
+{
+  "asset": "amb_console_alarm_bed",
+  "category": "alarm",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "A repeating electronic security alarm inside a laboratory, heard as a continuous background state rather than a single event. Insistent two-note warning tone cycling steadily with an even gap between repeats, slightly hard-edged and synthetic, with a faint room reflection. Consistent volume, no build, no crescendo, no siren sweep, no voices, no music. Even throughout so it can loop.",
+  "durationSeconds": 12,
+  "promptInfluence": 0.35,
+  "loop": true,
+  "assetVersion": 1,
+  "fingerprint": "adb7c5d179bdaeaf7136ccf10e87275a7ca61f08f5063f3b6f3ed0f42d883af2",
+  "bytes": 193141,
+  "generated": "2026-09-18T04:16:44Z"
+}

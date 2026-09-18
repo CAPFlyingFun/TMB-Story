@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_system_notify_soft",
+  "category": "interface",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "A quiet single electronic notification from a computer doing something on its own. One soft neutral blip followed by a faint digital interface movement, understated and unhurried, close-mic with a little room around it. Not an alarm, not urgent, no voices, no music.",
+  "durationSeconds": 1.5,
+  "promptInfluence": 0.3,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "82a8ade864d90dfb28ca9abf11e629941a413d225f6abcfe0540cf555dbac424",
+  "bytes": 24703,
+  "generated": "2026-09-18T04:17:02Z"
+}

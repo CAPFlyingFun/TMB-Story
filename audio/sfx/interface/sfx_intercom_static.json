@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_intercom_static",
+  "category": "interface",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "A burst of static from an intercom speaker with no answer. Uneven narrow-band crackle and hiss through a small speaker grille, rising briefly and falling away to nothing. Thin and boxy. No voices, no speech, no music, no tones.",
+  "durationSeconds": 2.5,
+  "promptInfluence": 0.35,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "105b894a5958c77a3c0539433935ba53ad2b611d5ffdaee17bbe4bafba1b04a0",
+  "bytes": 40586,
+  "generated": "2026-09-18T04:16:59Z"
+}

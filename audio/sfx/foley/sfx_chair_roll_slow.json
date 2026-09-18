@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_chair_roll_slow",
+  "category": "foley",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "An office chair on castors moved deliberately across a hard floor. Slow controlled castor rumble over a short distance with a soft settle at the end, unhurried and domestic, with room reflection. No voices, no music, no impact.",
+  "durationSeconds": 2.5,
+  "promptInfluence": 0.3,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "b2f6e5d045a4daa098aa0445f2a130c289bc0f6bfffb4901dd29a6bc93a472ec",
+  "bytes": 40586,
+  "generated": "2026-09-18T04:16:52Z"
+}

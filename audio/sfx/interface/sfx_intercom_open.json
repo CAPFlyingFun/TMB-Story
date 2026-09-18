@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_intercom_open",
+  "category": "interface",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "An intercom being keyed on. A firm mechanical button press followed immediately by a small electrical pop and the channel opening into a thin live speaker hiss. Close-mic, tactile. No voices, no speech, no music, no tones.",
+  "durationSeconds": 1.5,
+  "promptInfluence": 0.35,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "b92899d5a1aa9d200a0595cfa8ec5627d9b600ae171ac7275e143fb41834a3e8",
+  "bytes": 24703,
+  "generated": "2026-09-18T04:16:58Z"
+}

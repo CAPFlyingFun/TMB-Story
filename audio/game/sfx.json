@@ -9,7 +9,7 @@
       "audio": "audio/sfx/alarm/amb_console_alarm_bed.mp3",
       "durationSeconds": 12,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.5,
       "description": "Categorised `alarm`, not `ambience`, so switching ambience off does not silence the chapter's alarm. Loops under the opening sequence and is ducked hard beneath speech.",
       "chapters": [
@@ -23,7 +23,7 @@
       "audio": "audio/sfx/interface/amb_intercom_channel_open.mp3",
       "durationSeconds": 10,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.4,
       "description": "The cheapest honest way to tell the listener Sarah is on a speaker and not in the room. It sits under her intercom lines without touching her approved voice clips, which are never filtered or regenerated for this.",
       "chapters": [
@@ -37,7 +37,7 @@
       "audio": "audio/sfx/system/amb_tombs_array_power_rise.mp3",
       "durationSeconds": 20,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.45,
       "description": "The tension spine of the last third, and the beginning of the TOMBS Array's own sound identity. It enters when the remote initialization request appears and does not leave.",
       "chapters": [
@@ -49,11 +49,11 @@
       "category": "ambience",
       "loop": true,
       "audio": "audio/sfx/ambience/amb_tombs_lab_night.mp3",
-      "durationSeconds": 22,
+      "durationSeconds": 20,
       "source": "generated",
       "generated": false,
       "suggestedGain": 0.1,
-      "description": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed.",
+      "description": "The one environmental bed for Chapter 1. The whole chapter is Jack's laboratory; there is no location change in the manuscript, so there is no second bed. Requested at 20s rather than 22: ElevenLabs rejected 22 with HTTP 400 while 20 generated fine, so 20 is the proven ceiling.",
       "chapters": [
         1
       ]
@@ -65,7 +65,7 @@
       "audio": "audio/sfx/system/sfx_access_denied_tone.mp3",
       "durationSeconds": 1.5,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.45,
       "description": "Used twice, before each Request denied. Hearing the same refusal twice is the information: Jack tried again and got nowhere.",
       "chapters": [
@@ -79,7 +79,7 @@
       "audio": "audio/sfx/system/sfx_access_revoked_tone.mp3",
       "durationSeconds": 2,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.45,
       "description": "Distinct from the denial tone on purpose. The story distinguishes being refused from being locked out, and that difference is the chapter's ending; it should not sound the same.",
       "chapters": [
@@ -93,7 +93,7 @@
       "audio": "audio/sfx/alarm/sfx_alert_warning_hit.mp3",
       "durationSeconds": 1.5,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.5,
       "description": "A single interruption, distinct from the polite chirp and from the full eruption. Used twice: the second alarm during the trace, and the tone that interrupts the couple much later.",
       "chapters": [
@@ -107,7 +107,7 @@
       "audio": "audio/sfx/foley/sfx_chair_roll_fast.mp3",
       "durationSeconds": 2,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.45,
       "description": "Jack waking so hard the chair moves. It gives the alarm a physical consequence in a body rather than only on a screen.",
       "chapters": [
@@ -121,7 +121,7 @@
       "audio": "audio/sfx/foley/sfx_chair_roll_slow.mp3",
       "durationSeconds": 2.5,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.45,
       "description": "Two people arranging themselves around one workstation. Used twice: Sarah pulling a second chair over, and Jack rolling sideways to make room. Consciously different from the fast roll -- that one is a startle, this one is a marriage.",
       "chapters": [
@@ -135,7 +135,7 @@
       "audio": "audio/sfx/alarm/sfx_console_alarm_erupt.mp3",
       "durationSeconds": 3,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.5,
       "description": "The single biggest sound event in the chapter. The escalation from one chirp to this is the whole opening beat.",
       "chapters": [
@@ -149,7 +149,7 @@
       "audio": "audio/sfx/interface/sfx_console_tone_soft.mp3",
       "durationSeconds": 1.5,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.4,
       "description": "The polite tone that fails to wake Jack. Used twice in Chapter 1 -- the second, louder tone is this same asset at a higher gain, which is what the manuscript describes.",
       "chapters": [
@@ -163,7 +163,7 @@
       "audio": "audio/sfx/system/sfx_equipment_power_up_soft.mp3",
       "durationSeconds": 2.5,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.45,
       "description": "The terminal undoing Jack's lock without being asked. Soft on purpose: a bang would make it an attack, and the point is that it is calm.",
       "chapters": [
@@ -177,7 +177,7 @@
       "audio": "audio/sfx/foley/sfx_footsteps_sarah_sneakers.mp3",
       "durationSeconds": 3,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.45,
       "description": "Sarah's gray sneakers, per Chapter 1 visual canon -- explicitly not heels. Used twice and only for spatial transitions: entering the laboratory, and crossing the room to Jack. The listener never hears her walk otherwise.",
       "chapters": [
@@ -191,7 +191,7 @@
       "audio": "audio/sfx/interface/sfx_intercom_close.mp3",
       "durationSeconds": 1,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.4,
       "description": "Closes the frame the intercom opened. Without it the listener has no cue that the channel is gone, and the room's silence afterward is part of the scene.",
       "chapters": [
@@ -205,7 +205,7 @@
       "audio": "audio/sfx/interface/sfx_intercom_open.mp3",
       "durationSeconds": 1.5,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.4,
       "description": "Marks the acoustic frame Sarah's remote voice arrives in. Used twice: reaching for the intercom, and tapping the button again.",
       "chapters": [
@@ -219,7 +219,7 @@
       "audio": "audio/sfx/interface/sfx_intercom_static.mp3",
       "durationSeconds": 2.5,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.4,
       "description": "The manuscript makes static the ANSWER to Jack's question, so this is dialogue's turn in the scene, not decoration.",
       "chapters": [
@@ -233,7 +233,7 @@
       "audio": "audio/sfx/foley/sfx_keyboard_typing_short.mp3",
       "durationSeconds": 3,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.45,
       "description": "Used three times, only where the manuscript actually starts or resumes typing. It marks who has the keyboard, which is how the scene's authority shifts from Jack to Sarah.",
       "chapters": [
@@ -247,7 +247,7 @@
       "audio": "audio/sfx/foley/sfx_lab_door_slide.mp3",
       "durationSeconds": 2.5,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.45,
       "description": "Someone entering behind Jack while he is looking the other way. Pure spatial information, and the manuscript puts it mid-sentence on purpose.",
       "chapters": [
@@ -261,7 +261,7 @@
       "audio": "audio/sfx/interface/sfx_system_notify_soft.mp3",
       "durationSeconds": 1.5,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.4,
       "description": "Deliberately calm. The unsettling thing about TOMBS opening its own directory is how unbothered it sounds. Used twice: the directory opening itself, and the file opening itself.",
       "chapters": [
@@ -275,7 +275,7 @@
       "audio": "audio/sfx/interface/sfx_terminal_lock_engage.mp3",
       "durationSeconds": 2,
       "source": "generated",
-      "generated": false,
+      "generated": true,
       "suggestedGain": 0.4,
       "description": "Jack taking control back. It has to sound like it worked, so that the terminal coming back on by itself lands as a violation.",
       "chapters": [

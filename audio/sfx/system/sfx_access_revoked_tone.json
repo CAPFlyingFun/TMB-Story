@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_access_revoked_tone",
+  "category": "system",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "A system locking a user out for good. A heavier descending electronic tone with a low weighted thud underneath it and a short cold decay, more serious and more final than an ordinary rejection. Close-mic with slight room. No voices, no music, no siren, no alarm.",
+  "durationSeconds": 2,
+  "promptInfluence": 0.4,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "de9c16fbed3356ba764dd93f856887996602c4e3a1fb3bc6af94475691b72dec",
+  "bytes": 33062,
+  "generated": "2026-09-18T04:16:48Z"
+}

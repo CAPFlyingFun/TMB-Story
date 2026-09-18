@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_intercom_close",
+  "category": "interface",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "An intercom channel closing. A light mechanical release click and the live speaker hiss cutting away to room silence. Close-mic, small and final. No voices, no speech, no music, no tones.",
+  "durationSeconds": 1,
+  "promptInfluence": 0.35,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "cf99f2378aaa8fbe8aea4bc408055ada64a5a46739c9c41e8d5b463e5ce4859a",
+  "bytes": 17180,
+  "generated": "2026-09-18T04:16:57Z"
+}

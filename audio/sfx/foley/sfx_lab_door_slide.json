@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_lab_door_slide",
+  "category": "foley",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "An automatic laboratory door sliding open. A soft pneumatic release, a smooth mechanical glide along a track, and a light settling clunk as it reaches the end of its travel. Clean modern facility, close but with room reflection behind it. No voices, no music, no alarm.",
+  "durationSeconds": 2.5,
+  "promptInfluence": 0.35,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "6cb95350ecc4487a9a4926c9909cea522ef69b96425087cf083a0fa6bb2052c9",
+  "bytes": 40586,
+  "generated": "2026-09-18T04:17:01Z"
+}

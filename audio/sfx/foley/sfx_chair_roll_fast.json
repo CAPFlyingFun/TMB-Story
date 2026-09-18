@@ -1,0 +1,16 @@
+{
+  "asset": "sfx_chair_roll_fast",
+  "category": "foley",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": null,
+  "outputFormat": "mp3_44100_128",
+  "prompt": "An office chair on castors shoved suddenly backward across a hard floor. A quick startled scuff, castors rumbling fast over a smooth surface, and an abrupt stop. Sharp, physical, slightly alarming, with room reflection. No voices, no music, no crash, no breaking.",
+  "durationSeconds": 2,
+  "promptInfluence": 0.35,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "503e8d3ab503c8d61d3d75934a9dbd38516a608f08300dd0a6722efab7267eb3",
+  "bytes": 33062,
+  "generated": "2026-09-18T04:16:51Z"
+}
