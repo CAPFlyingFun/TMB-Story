@@ -1,0 +1,45 @@
+{
+  "asset": "amb_sirens_wail",
+  "source": "procedural",
+  "category": "alarm",
+  "loop": true,
+  "recipe": {
+    "kind": "siren",
+    "seconds": 12,
+    "sampleRate": 8000,
+    "lowpassHz": 420,
+    "units": [
+      {
+        "centreHz": 500,
+        "sweepHz": 120,
+        "periodSeconds": 6,
+        "level": 0.5
+      },
+      {
+        "centreHz": 430,
+        "sweepHz": 90,
+        "periodSeconds": 4,
+        "level": 0.28
+      },
+      {
+        "centreHz": 610,
+        "sweepHz": 70,
+        "periodSeconds": 12,
+        "level": 0.16
+      }
+    ]
+  },
+  "recipeFingerprint": "d089fa052a295e29aca76e53876e1909fe1b915d776f562cb1f51857a6d3442b",
+  "fingerprint": "supplied:2b4d6985b9dab724a35d55093e7a5be8dd219f1084403871632bc62e8c9933aa",
+  "bytes": 192078,
+  "seconds": 12.0,
+  "format": "wav",
+  "expression": "0.5*sin(2*PI*500*t-720*cos(2*PI*t/6))+0.28*sin(2*PI*430*t-360*cos(2*PI*t/4))+0.16*sin(2*PI*610*t-840*cos(2*PI*t/12))",
+  "measured": {
+    "measuredAt": "2026-09-18",
+    "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
+    "seconds": 12.0,
+    "peakDbfs": -3.2,
+    "rmsDbfs": -11.8
+  }
+}

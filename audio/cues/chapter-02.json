@@ -261,7 +261,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.01,
+      "gain": 0.003,
       "fadeInMs": 3000,
       "sustain": {
         "until": "chapterEnd",
