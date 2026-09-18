@@ -23,6 +23,7 @@ from tmbaudio import cache, elevenlabs, manifest as mf, parse          # noqa: E
 from tmbaudio import sfx as sfxmod                                     # noqa: E402
 from tmbaudio import combine as combinemod, drama                      # noqa: E402
 from tmbaudio import normalize as normmod                              # noqa: E402
+from tmbaudio import procedural as procmod                             # noqa: E402
 from tmbaudio.parse import clip_id, split_paragraph                    # noqa: E402
 from tmbaudio.registry import NARRATOR, REVIEW, SYSTEM, Registry       # noqa: E402
 
@@ -1376,6 +1377,96 @@ class SuppliedAudioTests(unittest.TestCase):
                 if other != a["category"] and os.path.isfile(wrong):
                     stray.append(wrong)
         self.assertEqual(stray, [], "a file left behind by a category change")
+
+
+class ProceduralTests(unittest.TestCase):
+    """A synthesised loop can be PROVEN seamless; a recorded one can only be listened to.
+
+    Joshua, on chapter 3: "The siren doesn't loop cleanly, so maybe do a procedural
+    sound until I find one that works and loops." A sweeping tone's phase is the
+    INTEGRAL of its frequency, and it returns to where it started only when the file
+    is a whole number of sweeps AND a whole number of carrier cycles. Both are checked
+    before anything is rendered.
+    """
+
+    GOOD = {"seconds": 12, "units": [
+        {"centreHz": 500, "sweepHz": 120, "periodSeconds": 6, "level": 0.5}]}
+
+    def test_a_closing_recipe_passes(self):
+        self.assertEqual(procmod.seam_problems(self.GOOD), [])
+
+    def test_a_sweep_that_does_not_divide_the_file_is_refused(self):
+        bad = {"seconds": 12, "units": [
+            {"centreHz": 500, "sweepHz": 120, "periodSeconds": 5, "level": 0.5}]}
+        problems = procmod.seam_problems(bad)
+        self.assertTrue(problems)
+        self.assertIn("mid-stroke", problems[0])
+
+    def test_a_carrier_that_does_not_close_is_refused(self):
+        bad = {"seconds": 12, "units": [
+            {"centreHz": 500.37, "sweepHz": 120, "periodSeconds": 6, "level": 0.5}]}
+        problems = procmod.seam_problems(bad)
+        self.assertTrue(problems)
+        self.assertIn("whole number of", problems[0])
+
+    def test_the_expression_is_the_phase_integral_not_the_naive_form(self):
+        expr = procmod.expression(self.GOOD)
+        self.assertIn("cos(2*PI*t/6)", expr,
+                      "the cosine term IS the integral; without it this is not a sweep")
+        self.assertIn("2*PI*500*t", expr)
+        self.assertNotIn("sin(2*PI*(", expr, "sin(2*pi*f(t)*t) is the wrong thing")
+
+    def test_the_sweep_amplitude_is_scaled_by_the_period(self):
+        """sweep * period is what the integral produces; dropping the period would
+        make a 3-second sweep and a 12-second sweep move the same distance."""
+        a = procmod.expression({"seconds": 12, "units": [
+            {"centreHz": 500, "sweepHz": 100, "periodSeconds": 6, "level": 1}]})
+        b = procmod.expression({"seconds": 12, "units": [
+            {"centreHz": 500, "sweepHz": 100, "periodSeconds": 3, "level": 1}]})
+        self.assertIn("600*cos", a)
+        self.assertIn("300*cos", b)
+
+    def test_a_recipe_change_is_what_triggers_a_rebuild(self):
+        one = procmod.recipe_fingerprint(self.GOOD)
+        self.assertEqual(one, procmod.recipe_fingerprint(dict(self.GOOD)))
+        other = dict(self.GOOD)
+        other["seconds"] = 24
+        self.assertNotEqual(one, procmod.recipe_fingerprint(other))
+
+    def test_the_shipped_sirens_close_exactly(self):
+        root = os.path.dirname(os.path.dirname(HERE))
+        reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))
+        procedural = {a: v for a, v in reg["assets"].items() if v.get("source") == "procedural"}
+        self.assertTrue(procedural, "the sirens are procedural now")
+        for aid, asset in procedural.items():
+            self.assertEqual(procmod.seam_problems(asset.get("recipe") or {}), [],
+                             "%s would not loop cleanly" % aid)
+
+    def test_procedural_audio_is_never_sent_to_the_provider(self):
+        root = os.path.dirname(os.path.dirname(HERE))
+        reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))
+        sreg = sfxmod.SfxRegistry(data=reg, config=json.loads(json.dumps(SFX_CFG)))
+        for aid, asset in reg["assets"].items():
+            if asset.get("source") != "procedural":
+                continue
+            plan = sfxmod.plan_asset(sreg, aid)
+            self.assertNotEqual(plan["source"], "generated",
+                                "%s must never reach generate-sfx" % aid)
+            self.assertIsNone(asset.get("prompt"),
+                              "a procedural asset has a recipe, not a prompt")
+
+    def test_the_manuscript_pitch_change_has_a_cue(self):
+        """Chapter 3 says the sirens changed pitch; for a while the audio did not."""
+        root = os.path.dirname(os.path.dirname(HERE))
+        cues = json.load(open(os.path.join(root, "audio", "cues", "chapter-03.json"),
+                              encoding="utf-8"))["cues"]
+        sirens = [c for c in cues if "siren" in c["cueId"]]
+        self.assertEqual(len(sirens), 2, "one before the line, a different one after")
+        assets = {c["asset"] for c in sirens}
+        self.assertEqual(len(assets), 2, "the same asset twice would change nothing")
+        for c in sirens:
+            self.assertEqual(c.get("emphasisDb"), -4.4,
+                             "Joshua asked for the sirens 40% quieter")
 
 
 class WebEncodeTests(unittest.TestCase):

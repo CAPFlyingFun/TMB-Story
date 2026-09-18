@@ -123,6 +123,16 @@ jobs:
           sudo apt-get install -y -qq ffmpeg
           ffmpeg -version | head -1
 
+      - name: Build the procedural sounds
+        if: inputs.mode != 'dry-run'
+        # Arithmetic and ffmpeg, so it costs nothing and can be retuned as often as it
+        # takes. It runs before normalising because what it writes then gets measured
+        # like anything else, and it REFUSES a recipe whose loop would not close --
+        # which is the whole reason these exist: the recorded siren announced its seam
+        # every twelve seconds.
+        continue-on-error: true
+        run: python3 scripts/audio.py build-procedural
+
       - name: Normalise the generated sound assets
         if: inputs.mode != 'dry-run'
         # FREE, and deliberately not gated on generate_sfx: a level is a property of a

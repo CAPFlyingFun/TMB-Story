@@ -255,7 +255,7 @@
     },
     {
       "cueId": "ch02-130-sirens",
-      "asset": "amb_settlement_sirens",
+      "asset": "amb_sirens_wail",
       "anchor": {
         "clipId": "narrator-9e05ce60e7b8",
         "occurrence": 1
@@ -267,7 +267,8 @@
         "until": "chapterEnd",
         "timing": "after"
       },
-      "why": "NEW. Once the emergency is called the sirens do not stop, and they are the only sound in either chapter that comes from outside the building. Heard through walls, which is where the chapters stay."
+      "why": "Sirens begin sounding outside. The procedural wail, for the same reason chapter 3 uses it: the recorded one announced its seam every 12 seconds. Same -4.4 dB cut.",
+      "emphasisDb": -4.4
     },
     {
       "cueId": "ch02-140-intercom-again",

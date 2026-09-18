@@ -36,24 +36,24 @@
       "gain": 0.309
     },
     {
-      "cueId": "ch03-006-sirens",
-      "asset": "amb_settlement_sirens",
+      "cueId": "ch03-006-sirens-wail",
+      "asset": "amb_sirens_wail",
       "anchor": {
         "clipId": "narrator-59502f926e4e",
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.061,
-      "fadeInMs": 1500,
-      "fadeOutMs": 2500,
+      "emphasisDb": -4.4,
+      "fadeInMs": 2500,
+      "fadeOutMs": 1500,
       "sustain": {
         "until": {
-          "clipId": "narrator-22150c29c9a0",
+          "clipId": "sarah-bennett-629f5e5193c0",
           "occurrence": 1
         },
         "timing": "after"
       },
-      "why": "NEW asset, carried over from chapter 2: the sirens Jack started are still going, and they stop where the manuscript says the alarms stop."
+      "why": "Civil sirens across the settlement, heard indoors. Procedural rather than recorded because the recorded one did not loop cleanly -- it was even for 5.5 of its 12 seconds and announced its own seam every time it wrapped. This one closes its phase exactly at 12 s. EMPHASIS -4.4 dB: Joshua asked for the sirens 40% quieter, and only the sirens, so it is a per-cue nudge rather than a move of the whole alarm category, which would have taken the console alarm bed he tuned by ear down with it."
     },
     {
       "cueId": "ch03-010-jack-typing",
@@ -78,6 +78,27 @@
       "offsetMs": 200,
       "gain": 0.251,
       "why": "Sarah at the secondary console, working the interrupt."
+    },
+    {
+      "cueId": "ch03-024-sirens-changed-pitch",
+      "asset": "amb_sirens_urgent",
+      "anchor": {
+        "clipId": "narrator-f252c126c3eb",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1200,
+      "emphasisDb": -4.4,
+      "fadeInMs": 1200,
+      "fadeOutMs": 2000,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-22150c29c9a0",
+          "occurrence": 1
+        },
+        "timing": "after"
+      },
+      "why": "\"...the emergency sirens outside changed pitch.\" They did not: the same siren kept playing under the line that said it had changed, which Joshua caught. The first pattern stops on the previous line and this one comes in 1.2 s into the sentence, under the words themselves. Higher and faster, so it reads as the town escalating rather than as a different recording."
     },
     {
       "cueId": "ch03-030-building-shake",

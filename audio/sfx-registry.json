@@ -900,6 +900,80 @@
         "author": "u_vr5icvkppa",
         "authorUrl": "https://pixabay.com/users/u_vr5icvkppa-52084143/"
       }
+    },
+    "amb_sirens_wail": {
+      "category": "alarm",
+      "source": "procedural",
+      "loop": true,
+      "durationSeconds": 12,
+      "approved": true,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "notes": "Civil sirens across the settlement, heard indoors through a wall. Three units on different sweeps so they drift out of step with each other, which is what a town full of sirens sounds like -- and all three close their phase at 12 seconds, so the loop is silent by construction rather than by somebody matching the ends by ear.",
+      "recipe": {
+        "kind": "siren",
+        "seconds": 12,
+        "sampleRate": 44100,
+        "kbps": 64,
+        "lowpassHz": 1100,
+        "units": [
+          {
+            "centreHz": 500,
+            "sweepHz": 120,
+            "periodSeconds": 6,
+            "level": 0.5
+          },
+          {
+            "centreHz": 430,
+            "sweepHz": 90,
+            "periodSeconds": 4,
+            "level": 0.28
+          },
+          {
+            "centreHz": 610,
+            "sweepHz": 70,
+            "periodSeconds": 12,
+            "level": 0.16
+          }
+        ]
+      }
+    },
+    "amb_sirens_urgent": {
+      "category": "alarm",
+      "source": "procedural",
+      "loop": true,
+      "durationSeconds": 12,
+      "approved": true,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "notes": "The same town, sirens switched to a second pattern. Chapter 3 says the sirens outside CHANGED PITCH and the audio went on playing the first one; this is what changes. Higher centres and a sweep twice as fast, so it reads as an escalation rather than as a different recording.",
+      "recipe": {
+        "kind": "siren",
+        "seconds": 12,
+        "sampleRate": 44100,
+        "kbps": 64,
+        "lowpassHz": 1400,
+        "units": [
+          {
+            "centreHz": 760,
+            "sweepHz": 200,
+            "periodSeconds": 3,
+            "level": 0.5
+          },
+          {
+            "centreHz": 620,
+            "sweepHz": 140,
+            "periodSeconds": 4,
+            "level": 0.28
+          },
+          {
+            "centreHz": 880,
+            "sweepHz": 90,
+            "periodSeconds": 2,
+            "level": 0.16
+          }
+        ]
+      }
     }
   }
 }

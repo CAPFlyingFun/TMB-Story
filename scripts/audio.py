@@ -292,6 +292,18 @@ def cmd_generate_sfx(args, reg):
     return 1 if failed else 0
 
 
+def cmd_build_procedural(args, reg):
+    """Render every procedural asset. ffmpeg and arithmetic; no provider, no credits."""
+    from tmbaudio import procedural as proc
+    sreg = _sfx_registry(reg)
+    try:
+        built, failed = proc.build_all(sreg, force=args.force)
+    except RuntimeError as exc:
+        print(exc)
+        return 1
+    return 1 if failed else 0
+
+
 def cmd_adopt_sfx(args, reg):
     """Register hand-supplied sound files: write each one's sidecar from its own bytes.
 
@@ -583,7 +595,7 @@ def main(argv=None):
     sub = ap.add_subparsers(dest="cmd", required=True)
     for name in ("parse", "validate", "generate", "combine", "export-game",
                  "cues", "sfx", "generate-sfx", "normalize-sfx", "retune-cues",
-                 "adopt-sfx", "credits"):
+                 "adopt-sfx", "credits", "build-procedural"):
         p = sub.add_parser(name)
         p.add_argument("--chapters", help="e.g. 1, 1-3, 1,3")
         if name == "validate":
@@ -605,6 +617,9 @@ def main(argv=None):
         if name == "cues":
             p.add_argument("--timestamps", action="store_true",
                            help="approximate clock times, for human review only")
+        if name == "build-procedural":
+            p.add_argument("--force", action="store_true",
+                           help="rebuild even when the recipe has not changed")
         if name == "retune-cues":
             p.add_argument("--dry-run", action="store_true",
                            help="show the gains that would change; writes nothing")
@@ -636,6 +651,7 @@ def main(argv=None):
         "cues": cmd_cues, "sfx": cmd_sfx, "generate-sfx": cmd_generate_sfx,
         "normalize-sfx": cmd_normalize_sfx, "retune-cues": cmd_retune_cues,
         "adopt-sfx": cmd_adopt_sfx, "credits": cmd_credits,
+        "build-procedural": cmd_build_procedural,
     }
     return handlers[args.cmd](args, reg) or 0
 
