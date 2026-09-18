@@ -29,6 +29,7 @@ file is updated.
 - 0018 — THE REBOOT: the catastrophe happens in Chapters 1 to 3; the fifty-chapter plan is archived and non-canon — **Accepted (Joshua, 2026-09-17)**
 - 0019 — "Story bible" renamed "TMB Story Rules"; `bible/` becomes `story-rules/` — **Accepted (Joshua, 2026-09-17)**
 - 0020 — Length band 1,200-1,400 (1,000 floor, 1,800 ceiling) and the three-chapter movement; supersedes 0001 and 0010 — **Accepted (Joshua, 2026-09-17)**
+- 0021 — The voice cast is a registry: one entry per speaker, a recast replaces it, a clip is identified by speaker and text but invalidated by voice — **Accepted (Joshua, 2026-09-18)**
 
 ---
 
@@ -160,3 +161,14 @@ file is updated.
 **The two-turn anchor guideline:** after roughly two unanchored dialogue turns, identify a speaker again with an action beat, a reaction, a name or a natural tag. This relaxes decision 0017's stricter reading into a practical rule, and 0017's principle still governs judgment: the speaker should be identifiable as the line is heard, not afterward.
 **Consequences:** `scripts/style-check.py` retargeted to the manuscript's actual profile and to the two-turn rule; `docs/STYLE_GUIDE.md` marked superseded on word counts. Decisions 0001 and 0010 are history.
 **Status:** Accepted, 2026-09-17.
+
+### 0021 — The voice cast is a registry, and a voice is replaced, never duplicated
+**Context:** Joshua built the audiobook pipeline on 2026-09-17 under the rule "write once, voice once, cache once, use in audiobook and game," approved five voices that day, and on 2026-09-18 replaced two of them after listening: "The previous Narrator and Lena voice IDs are no longer canonical. Replace their assignments in the voice registry rather than creating duplicate character entries."
+**Decision:** `story-rules/voice-registry.json` is the one canonical record of who speaks and in which voice. A speaker has exactly one entry; a recast overwrites that entry's `elevenLabsVoiceId` and re-stamps `voiceApproved`. Never add a second entry for the same character, and never invent a voice ID — an unassigned voice is `null` and blocks generation with a named error rather than being filled in with a guess.
+
+The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `QpRibeuwXoGrlpLFDwqY`, Jack Bennett `mkT7KpSQR9btjx2rHpQY`, Sarah Bennett `MClEFoImJXBTgLwdLI5n`, Lena Ortiz `4O1sYUnmtThcBoSBrri7`. Voice IDs are not secrets and live in the repository. The `ELEVENLABS_API_KEY` is, lives only in the GitHub secret and a developer's shell, and reaches no file, manifest, log or page.
+
+**A clip is identified by its speaker and its text; it is invalidated by its voice.** `clipId` is `<speaker>-<sha1(speaker + normalized text)[:12]>`, so inserting a paragraph renames nothing and a line repeated later is the same clip already paid for. The separate fingerprint covers text, voice, voice version, model, format and settings, which is what makes a recast cost one speaker instead of a chapter.
+
+**Consequences:** Replacing the narrator invalidated 92 of chapter 1's 180 clips and left Jack's 47, Sarah's 34 and TOMBS' 7 as verified cache hits — 4,893 characters rather than 6,789 — and Lena's replacement cost nothing in chapter 1, where she does not speak. The new narrator audio landed at the same 92 paths, so nothing was orphaned. Generation runs only in the manual `Generate TMB audio` workflow, which validates before spending anything and refuses to commit if the key appears in the working tree. The browser plays static files and has no path to ElevenLabs, so listening and replaying are free.
+**Status:** Accepted, 2026-09-18.
