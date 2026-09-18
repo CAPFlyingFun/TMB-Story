@@ -1,0 +1,31 @@
+{
+  "asset": "amb_alarm_pulse_fast",
+  "source": "procedural",
+  "category": "alarm",
+  "loop": true,
+  "recipe": {
+    "kind": "pulse",
+    "seconds": 18.0,
+    "sampleRate": 22050,
+    "toneHz": 1040,
+    "onSeconds": 0.4,
+    "offSeconds": 0.2,
+    "pulsesPerGroup": 4,
+    "gapSeconds": 1.2,
+    "level": 0.5,
+    "lowpassHz": 1250
+  },
+  "recipeFingerprint": "c5ea10d0061a291650d5fee2268bad837dc75dfbc1169a9040a6057b2b0b1f9e",
+  "fingerprint": "supplied:cdb794f5310d890362dc89624334b1942a12af13faa20f82ed1dcbbdc4be2efc",
+  "bytes": 793878,
+  "seconds": 18.0,
+  "format": "wav",
+  "expression": "0.5*lt(mod(t,3.6),2.4)*lt(mod(mod(t,3.6),0.6),0.4)*sin(PI*mod(mod(t,3.6),0.6)/0.4)*sin(2*PI*1040*t)",
+  "measured": {
+    "measuredAt": "2026-09-18",
+    "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
+    "seconds": 18.0,
+    "peakDbfs": -7.7,
+    "rmsDbfs": -17.2
+  }
+}

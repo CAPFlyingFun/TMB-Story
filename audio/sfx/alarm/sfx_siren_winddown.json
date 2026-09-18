@@ -8,25 +8,26 @@
     "seconds": 12,
     "sampleRate": 44100,
     "kbps": 64,
-    "startHz": 560,
+    "startHz": 760,
     "holdSeconds": 3.5,
     "tauSeconds": 2.8,
     "level": 0.6,
-    "lowpassHz": 900,
+    "lowpassHz": 3000,
     "fadeInMs": 1500,
     "fadeOutMs": 5000,
     "loop": false
   },
-  "recipeFingerprint": "ab92a79dfa6f0d01e0c134208102632d7d87c8e5fa02906f4b9cb15bf62dd5e2",
-  "fingerprint": "supplied:4b849cc16c55b3e0d8c7867d046bdd11136a7a9b79d966492716fe692ee8721b",
+  "recipeFingerprint": "ceac153535060fffd524eee6747e39030be9a49ce43d6382a80011b92377c590",
+  "fingerprint": "supplied:078c473e1df71a5206d4a541973f04670fb1ccddb8a407447017d0a1bf547c8c",
   "bytes": 96592,
-  "seconds": 12.07,
-  "expression": "0.6*sin(2*PI*(560*min(t,3.5)+1568*(1-exp(-max(0,t-3.5)/2.8))))",
+  "seconds": 12.0,
+  "format": "mp3",
+  "expression": "0.6*sin(2*PI*(760*min(t,3.5)+2128*(1-exp(-max(0,t-3.5)/2.8))))",
   "measured": {
     "measuredAt": "2026-09-18",
     "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
     "seconds": 12.0,
     "peakDbfs": -4.9,
-    "rmsDbfs": -10.1
+    "rmsDbfs": -9.8
   }
 }
