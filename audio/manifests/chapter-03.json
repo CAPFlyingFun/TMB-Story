@@ -3303,6 +3303,23 @@
   ],
   "cues": [
     {
+      "cueId": "ch03-002-night-outside",
+      "asset": "amb_night_outside",
+      "category": "ambience",
+      "layer": "ambience",
+      "timing": "before",
+      "order": 0,
+      "gain": 0.1,
+      "loop": true,
+      "audio": "audio/sfx/ambience/amb_night_outside.mp3",
+      "cached": true,
+      "why": "The ordinary night outside the settlement, from the chapter's first line until the moment Jack looks out of the window. It exists to be UNREMARKABLE: a normal night behind the glass while the alarms and the vibrations happen indoors, so that what replaces it lands.",
+      "fadeInMs": 4000,
+      "fadeOutMs": 2500,
+      "stopOrder": 118,
+      "stopTiming": "after"
+    },
+    {
       "cueId": "ch03-006-sirens",
       "asset": "amb_settlement_sirens",
       "category": "alarm",
@@ -3437,7 +3454,7 @@
       "layer": "ambience",
       "timing": "after",
       "order": 61,
-      "gain": 0.014,
+      "gain": 0.202,
       "loop": true,
       "audio": "audio/sfx/ambience/amb_computer_lab.mp3",
       "cached": true,
@@ -3488,6 +3505,23 @@
       "fadeInMs": 300,
       "fadeOutMs": 800,
       "stopOrder": 115,
+      "stopTiming": "after"
+    },
+    {
+      "cueId": "ch03-119-forest-outside",
+      "asset": "amb_nature_outside",
+      "category": "ambience",
+      "layer": "ambience",
+      "timing": "before",
+      "order": 119,
+      "gain": 0.1,
+      "loop": true,
+      "audio": "audio/sfx/ambience/amb_nature_outside.mp3",
+      "cached": true,
+      "why": "THE SOUND OF THE WORLD CHANGING, on 'He looked outside.' The night bed stops and this takes its place and holds to the last line of the chapter. The settlement has not moved and nothing outside has actually started making a new noise -- but the hills are grass now, and the listener is told that by the air rather than by a line of dialogue. Nine and a half minutes long, so it never reaches a loop seam inside the scene it covers.",
+      "fadeInMs": 5000,
+      "fadeOutMs": 6000,
+      "stopOrder": 182,
       "stopTiming": "after"
     },
     {

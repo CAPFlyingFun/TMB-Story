@@ -16,6 +16,25 @@
   "chapter": 3,
   "cues": [
     {
+      "cueId": "ch03-002-night-outside",
+      "asset": "amb_night_outside",
+      "anchor": {
+        "clipId": "narrator-59502f926e4e",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "fadeInMs": 4000,
+      "fadeOutMs": 2500,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-f1f2c92be2cc",
+          "occurrence": 1
+        },
+        "timing": "after"
+      },
+      "why": "The ordinary night outside the settlement, from the chapter's first line until the moment Jack looks out of the window. It exists to be UNREMARKABLE: a normal night behind the glass while the alarms and the vibrations happen indoors, so that what replaces it lands."
+    },
+    {
       "cueId": "ch03-006-sirens",
       "asset": "amb_settlement_sirens",
       "anchor": {
@@ -208,6 +227,25 @@
       "offsetMs": 1200,
       "gain": 0.088,
       "why": "Reused. The cameras answering is the mechanism by which the chapter shows the scale of what happened."
+    },
+    {
+      "cueId": "ch03-119-forest-outside",
+      "asset": "amb_nature_outside",
+      "anchor": {
+        "clipId": "narrator-223aa91e6a75",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "fadeInMs": 5000,
+      "fadeOutMs": 6000,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-b7b08a6201b3",
+          "occurrence": 1
+        },
+        "timing": "after"
+      },
+      "why": "THE SOUND OF THE WORLD CHANGING, on 'He looked outside.' The night bed stops and this takes its place and holds to the last line of the chapter. The settlement has not moved and nothing outside has actually started making a new noise -- but the hills are grass now, and the listener is told that by the air rather than by a line of dialogue. Nine and a half minutes long, so it never reaches a loop seam inside the scene it covers."
     },
     {
       "cueId": "ch03-120-camera-switch",

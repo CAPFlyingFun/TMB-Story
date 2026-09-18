@@ -13,6 +13,8 @@ credit: they have no author but this project.
 | sound | used as | by | from | licence |
 |---|---|---|---|---|
 | Computer Lab | `amb_computer_lab` | [freesound_community](https://pixabay.com/users/freesound_community-46691455/) | [Pixabay](https://pixabay.com/sound-effects/) | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
+| Nature Ambience | `amb_nature_outside` | [u_vr5icvkppa](https://pixabay.com/users/u_vr5icvkppa-52084143/) | [Pixabay](https://pixabay.com/sound-effects/) | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
+| Night Ambience | `amb_night_outside` | [freesound_community](https://pixabay.com/users/freesound_community-46691455/) | [Pixabay](https://pixabay.com/sound-effects/) | [Pixabay Content License](https://pixabay.com/service/license-summary/) |
 
 ## Attribution, as shown at the bottom of the page
 
@@ -21,7 +23,11 @@ fields above, so an author corrected in one place cannot leave a
 hand-written sentence saying something else.
 
 - **Computer Lab** (`amb_computer_lab`): Sound Effect by freesound_community from Pixabay
+- **Nature Ambience** (`amb_nature_outside`): Sound Effect by u_vr5icvkppa from Pixabay
+- **Night Ambience** (`amb_night_outside`): Sound Effect by freesound_community from Pixabay
 
 ## Added
 
 - `amb_computer_lab` — Computer Lab, added by Joshua on 2026-09-18.
+- `amb_nature_outside` — Nature Ambience, added by Joshua on 2026-09-18.
+- `amb_night_outside` — Night Ambience, added by Joshua on 2026-09-18.

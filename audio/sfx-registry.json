@@ -858,6 +858,48 @@
         "addedBy": "Joshua",
         "addedOn": "2026-09-18"
       }
+    },
+    "amb_night_outside": {
+      "category": "ambience",
+      "source": "supplied",
+      "loop": true,
+      "durationSeconds": 180.07,
+      "approved": true,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "notes": "Outdoor night tone for the settlement -- the world beyond the lab wall after dark. Three minutes, so it loops roughly three times under a chapter-length scene.",
+      "credit": {
+        "source": "Pixabay",
+        "sourceUrl": "https://pixabay.com/sound-effects/",
+        "license": "Pixabay Content License",
+        "licenseUrl": "https://pixabay.com/service/license-summary/",
+        "addedBy": "Joshua",
+        "addedOn": "2026-09-18",
+        "title": "Night Ambience",
+        "author": "freesound_community",
+        "authorUrl": "https://pixabay.com/users/freesound_community-46691455/"
+      }
+    },
+    "amb_nature_outside": {
+      "category": "ambience",
+      "source": "supplied",
+      "loop": true,
+      "durationSeconds": 593.03,
+      "approved": true,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "notes": "Outdoor nature tone, for the miniature world once the characters are standing in it. Nearly ten minutes long, so under a chapter it is effectively continuous and never reaches a loop seam.",
+      "credit": {
+        "source": "Pixabay",
+        "sourceUrl": "https://pixabay.com/sound-effects/",
+        "license": "Pixabay Content License",
+        "licenseUrl": "https://pixabay.com/service/license-summary/",
+        "addedBy": "Joshua",
+        "addedOn": "2026-09-18",
+        "title": "Nature Ambience",
+        "author": "u_vr5icvkppa",
+        "authorUrl": "https://pixabay.com/users/u_vr5icvkppa-52084143/"
+      }
     }
   }
 }
