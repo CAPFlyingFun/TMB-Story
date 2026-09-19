@@ -55,6 +55,97 @@ def _pause_for(prev, seg, pauses):
     return pauses.get("dialogue-differentSpeaker", pauses.get("default", 300))
 
 
+EXPORT_DIR = os.path.join(ROOT, "audio", "exports")
+
+
+def timeline(segments):
+    """Where every segment starts and ends, in seconds: pause first, then the clip.
+
+    ONE PIECE OF ARITHMETIC, THREE CONSUMERS. The player uses it to know which line is
+    being spoken, the mixed export uses it to place a cue, and the voice-only export
+    uses it to size the silence it splices in. They agreed by accident before, because
+    each did the same sum separately; they agree by construction now.
+
+    A clip that has not been generated contributes nothing, which is why the caller
+    asks whether the timeline is COMPLETE before trusting it to address a file.
+    """
+    starts, ends = {}, {}
+    t = 0.0
+    for seg in segments:
+        t += (seg.get("pauseBeforeMs") or 0) / 1000.0
+        starts[seg["order"]] = t
+        t += cache.mp3_duration_seconds(os.path.join(ROOT, seg["audio"]))
+        ends[seg["order"]] = t
+    return starts, ends, t
+
+
+def _export(number, suffix):
+    rel = os.path.join("audio", "exports", "chapter-%02d%s.mp3" % (number, suffix))
+    full = os.path.join(ROOT, rel)
+    if not os.path.isfile(full):
+        return None
+    return {"audio": rel.replace(os.sep, "/"),
+            "bytes": os.path.getsize(full),
+            "seconds": round(cache.mp3_duration_seconds(full), 2)}
+
+
+def attach_timeline(manifest):
+    """Stamp each segment with its place in the chapter, and list the whole-chapter
+    files that exist.
+
+    This is what lets the page play ONE file per chapter instead of a hundred and
+    eighty-five. A single element has no clip-to-clip handover to get wrong, no gap to
+    time, and the mix is already in the samples -- so a chapter sounds the same on the
+    page as it does in the file, which is the thing that kept not being true.
+
+    `complete` is the honest part: the offsets only address a real position in an
+    export if every clip they are summed from exists. When one is missing the player
+    is told so and falls back to playing the clips.
+    """
+    segments = manifest["segments"]
+    missing = [s["audio"] for s in segments
+               if not os.path.isfile(os.path.join(ROOT, s["audio"]))]
+    starts, ends, total = timeline(segments)
+    for seg in segments:
+        seg["startMs"] = int(round(starts[seg["order"]] * 1000))
+        seg["endMs"] = int(round(ends[seg["order"]] * 1000))
+    manifest["timeline"] = {
+        "totalMs": int(round(total * 1000)),
+        "complete": not missing,
+        "missingClips": len(missing),
+        "source": "each segment's pause then its clip; the same sum the exports are built with",
+    }
+    # EACH EXPORT CARRIES ITS OWN INDEX, because the two files are built differently
+    # and only one of them matches the arithmetic. The mixed file places every clip
+    # with `adelay` at exactly these offsets, so it is exact by construction. The
+    # voice-only file is an mp3 `-c copy` join, which keeps each clip's encoder
+    # padding and so runs progressively late; `combine` measures what it actually
+    # produced and that measurement is what goes here. An export with no usable index
+    # is still listed and still plays -- the page just does not claim to know which
+    # line is sounding.
+    canonical = [seg["startMs"] for seg in segments]
+    exports = {}
+    mixed = _export(manifest["chapter"], "-drama")
+    voice = _export(manifest["chapter"], "")
+    if mixed:
+        mixed["layers"] = ["voice", "ambience", "sfx"]
+        mixed["startMs"] = canonical if manifest["timeline"]["complete"] else None
+        mixed["indexSource"] = "the manifest timeline, which the mix is built from"
+        exports["mixed"] = mixed
+    if voice:
+        voice["layers"] = ["voice"]
+        voice["startMs"] = None
+        voice["indexSource"] = (
+            "none: an mp3 -c copy join cannot be addressed by the arithmetic, and "
+            "summing the parts overstates it because the demuxer applies each clip's "
+            "gapless padding. Measured, chapter one runs 3.2 s longer than the sum "
+            "says while a part-by-part index drifts 12 s -- so this file is offered "
+            "for download and listening, never as something the page indexes into.")
+        exports["voice"] = voice
+    manifest["exports"] = exports
+    return manifest
+
+
 def build(number, path, registry, overrides=None, sfx_registry=None):
     parsed = parse_chapter(path, registry, overrides or load_overrides())
     pauses = registry.pauses()
@@ -76,6 +167,7 @@ def build(number, path, registry, overrides=None, sfx_registry=None):
         "segments": segments,
     }
     attach_cues(manifest, registry, sfx_registry)
+    attach_timeline(manifest)
     return manifest
 
 

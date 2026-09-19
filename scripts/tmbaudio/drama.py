@@ -33,15 +33,13 @@ def have_ffmpeg():
 
 
 def timeline(manifest):
-    """(starts, ends, total) in seconds, keyed by segment order."""
-    starts, ends = {}, {}
-    t = 0.0
-    for seg in manifest["segments"]:
-        t += (seg.get("pauseBeforeMs") or 0) / 1000.0
-        starts[seg["order"]] = t
-        t += cache.mp3_duration_seconds(os.path.join(ROOT, seg["audio"]))
-        ends[seg["order"]] = t
-    return starts, ends, t
+    """(starts, ends, total) in seconds, keyed by segment order.
+
+    Delegated to the manifest, which is whose arithmetic it is: the page reads the
+    same offsets to know which line is sounding, and a mix placed by a second copy of
+    this sum would drift from the page the moment one of them was edited.
+    """
+    return mf.timeline(manifest["segments"])
 
 
 def cue_start(cue, manifest, starts, ends):

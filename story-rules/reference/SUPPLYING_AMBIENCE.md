@@ -7,7 +7,11 @@ Ambience was switched off for a few hours while he had no bed he liked, and back
 the same day when he supplied one. It is **on** now, with `amb_computer_lab` — a real
 recorded computer room — as the lab bed. `mix.layers.ambience` in `audio/config.json`
 is the switch, and both the browser and the exported mp3 read it, so the page and the
-file always agree. This is how to put more of your own files in.
+file always agree — and since 2026-09-19 the page usually IS the file: a combined
+chapter plays as one mixed mp3 rather than being assembled live, so the switch reaches
+it by having built it. Picking "Separate clips, live layers" in the player goes back to
+the assembled reading, where Ambience and Sound effects can be toggled while listening.
+This is how to put more of your own files in.
 
 ## The short version
 

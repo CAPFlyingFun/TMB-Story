@@ -2116,6 +2116,87 @@ class NormalizeMathTests(unittest.TestCase):
         self.assertNotIn("_comment", conf)
 
 
+class ChapterTimelineTests(unittest.TestCase):
+    """One sum, three consumers: the page, the mix and the join all read the same one."""
+
+    SEGMENTS = [
+        {"order": 0, "audio": "audio/clips/n/a.mp3", "pauseBeforeMs": 0},
+        {"order": 1, "audio": "audio/clips/n/b.mp3", "pauseBeforeMs": 260},
+        {"order": 2, "audio": "audio/clips/n/c.mp3", "pauseBeforeMs": 380},
+    ]
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self._root, self._dur = mf.ROOT, mf.cache.mp3_duration_seconds
+        mf.ROOT = self.dir
+        mf.cache.mp3_duration_seconds = lambda p: 2.0
+        os.makedirs(os.path.join(self.dir, "audio", "clips", "n"))
+        os.makedirs(os.path.join(self.dir, "audio", "exports"))
+
+    def tearDown(self):
+        mf.ROOT, mf.cache.mp3_duration_seconds = self._root, self._dur
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def _clips(self, which="abc"):
+        for name in which:
+            with open(os.path.join(self.dir, "audio", "clips", "n", name + ".mp3"), "wb") as fh:
+                fh.write(b"x")
+
+    def _export(self, suffix):
+        path = os.path.join(self.dir, "audio", "exports", "chapter-01%s.mp3" % suffix)
+        with open(path, "wb") as fh:
+            fh.write(b"x" * 1024)
+
+    def _manifest(self):
+        return {"chapter": 1, "segments": json.loads(json.dumps(self.SEGMENTS))}
+
+    def test_a_segment_starts_after_its_own_pause_not_before_it(self):
+        self._clips()
+        m = mf.attach_timeline(self._manifest())
+        starts = [s["startMs"] for s in m["segments"]]
+        self.assertEqual(starts, [0, 2260, 4640])
+        self.assertEqual(m["segments"][0]["endMs"], 2000)
+        self.assertEqual(m["timeline"]["totalMs"], 6640)
+        self.assertTrue(m["timeline"]["complete"])
+
+    def test_the_index_is_the_same_arithmetic_the_mix_is_built_with(self):
+        """If these ever diverge, the page highlights one line while another is read."""
+        self._clips()
+        m = mf.attach_timeline(self._manifest())
+        starts, _ends, _total = drama.timeline(m)
+        self.assertEqual([int(round(starts[s["order"]] * 1000)) for s in m["segments"]],
+                         [s["startMs"] for s in m["segments"]])
+
+    def test_a_missing_clip_withdraws_the_index_rather_than_shifting_it(self):
+        """A timeline summed over a clip that does not exist addresses nothing. The
+        page is told so and plays the clips instead of seeking into a file."""
+        self._clips("ac")
+        self._export("-drama")
+        m = mf.attach_timeline(self._manifest())
+        self.assertFalse(m["timeline"]["complete"])
+        self.assertEqual(m["timeline"]["missingClips"], 1)
+        self.assertIsNone(m["exports"]["mixed"]["startMs"])
+
+    def test_only_the_exports_that_exist_are_offered(self):
+        self._clips()
+        m = mf.attach_timeline(self._manifest())
+        self.assertEqual(m["exports"], {})
+        self._export("-drama")
+        m = mf.attach_timeline(self._manifest())
+        self.assertIn("mixed", m["exports"])
+        self.assertNotIn("voice", m["exports"])
+        self.assertEqual(m["exports"]["mixed"]["startMs"], [0, 2260, 4640])
+
+    def test_the_voice_only_join_is_offered_without_an_index(self):
+        """It is an mp3 -c copy join, so it runs longer than the arithmetic and cannot
+        be seeked into by it. Offered to listen to, never to address."""
+        self._clips()
+        self._export("")
+        m = mf.attach_timeline(self._manifest())
+        self.assertIsNone(m["exports"]["voice"]["startMs"])
+        self.assertIn("gapless", m["exports"]["voice"]["indexSource"])
+
+
 class LoudnessTests(unittest.TestCase):
     """RMS says how big the samples are. Loudness says how loud it sounds."""
 

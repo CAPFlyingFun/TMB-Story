@@ -20,6 +20,9 @@ const path = require("path");
 const vm = require("vm");
 
 const ROOT = process.argv[2] || path.join(__dirname, "..");
+/* Whether the one-file-per-chapter export is present. The player picks its mode from
+   this, so both readings are driven from one harness. */
+let MIXED_OK = true;
 const manifest = JSON.parse(
   fs.readFileSync(path.join(ROOT, "audio/manifests/chapter-01.json"), "utf8"));
 
@@ -37,6 +40,7 @@ class FakeAudio {
     this.paused = true;
     this.currentTime = 0;
     this.duration = 2.5;
+    this._timeupdates = 0;
     this._attrs = {};
     this._handlers = {};
     this._playCount = 0;
@@ -47,7 +51,7 @@ class FakeAudio {
   setAttribute(k, v) { this._attrs[k] = v; }
   getAttribute(k) { return Object.prototype.hasOwnProperty.call(this._attrs, k) ? this._attrs[k] : null; }
   removeAttribute(k) { delete this._attrs[k]; }
-  load() {}
+  load() { (this._handlers.loadedmetadata || []).forEach((f) => f()); }
   addEventListener(name, fn) { (this._handlers[name] ||= []).push(fn); }
   play() {
     this._playCount += 1;
@@ -70,6 +74,13 @@ class FakeAudio {
     (this._handlers.pause || []).forEach((f) => f());
   }
   end() { (this._handlers.ended || []).forEach((f) => f()); }
+  /* Move the playhead the way a real element does, firing the event the player
+     follows. In mixed mode this is the ONLY thing that advances the chapter. */
+  seekTo(seconds) {
+    this.currentTime = seconds;
+    this._timeupdates += 1;
+    (this._handlers.timeupdate || []).forEach((f) => f());
+  }
 }
 
 /* A DOM just rich enough for innerHTML plus getElementById. The player writes a
@@ -104,7 +115,14 @@ const sandbox = {
   window: {},
   document,
   Audio: FakeAudio,
-  fetch: () => Promise.resolve({ ok: true, json: () => Promise.resolve(manifest) }),
+  /* The manifest always resolves; whether the MIXED EXPORT exists is the switch the
+     player reads, so the harness owns it and can drive both readings of a chapter. */
+  fetch: (url, opts) => {
+    if (/exports\//.test(String(url))) {
+      return Promise.resolve({ ok: MIXED_OK });
+    }
+    return Promise.resolve({ ok: true, json: () => Promise.resolve(manifest) });
+  },
   setTimeout: (fn, ms) => { timers.push({ fn, at: now + (ms || 0), done: false }); return timers.length - 1; },
   clearTimeout: (id) => { if (timers[id]) timers[id].done = true; },
   setInterval: () => 0,
@@ -181,6 +199,86 @@ async function main() {
   });
   sandbox.window.TMBPlayer.mount(view, { chapters: [{ number: 1, title: "One" }] });
   await flush();
+
+  // ---- 0. one mixed file per chapter ---------------------------------------
+  /* The reading that removes the assembly entirely: one element, one file, and the
+     page follows the playhead instead of counting segments as it starts them. */
+  console.log("0. One mixed file per chapter");
+  {
+    const mixed = manifest.exports && manifest.exports.mixed;
+    check("the manifest offers a mixed export with an index",
+          !!(mixed && mixed.audio && mixed.startMs &&
+             mixed.startMs.length === manifest.segments.length),
+          mixed ? mixed.audio : "none");
+    const play0 = nodes.get("listen-toggle");
+    check("the player mounted in mixed mode", !!play0);
+    play0.onclick();
+    await flush();
+    const exportEls = created.filter((e) => /\/exports\//.test(e._src));
+    check("exactly one element, pointed at the chapter file", exportEls.length === 1,
+          exportEls.map((e) => e._src).join(", "));
+    /* A chapter export keeps its path while its contents change, so the URL has to
+       carry something that moves when the mix does, or a phone plays the copy it
+       already had. */
+    check("the chapter file is requested with a cache key that tracks the file",
+          exportEls.length === 1 &&
+          exportEls[0]._src === "./" + mixed.audio + "?v=" + mixed.bytes,
+          exportEls.length ? exportEls[0]._src : "");
+    check("no voice clip is fetched at all", voiceElements().length === 0,
+          voiceElements().length + " clip element(s)");
+    const el = exportEls[0];
+    el.duration = mixed.seconds;
+
+    /* The page must read the line the FILE is on, not the one it last started. */
+    const probe = Math.floor(manifest.segments.length / 2);
+    el.seekTo(mixed.startMs[probe] / 1000 + 0.05);
+    await flush();
+    check("the displayed line follows the playhead",
+          nodes.get("listen-text").textContent ===
+            manifest.segments[probe].displayText,
+          "segment " + probe);
+
+    /* And a jump has to land on the file, not on a different element. */
+    nodes.get("listen-next").onclick();
+    await flush();
+    check("Next seeks the same element rather than loading another",
+          created.filter((e) => /\/exports\//.test(e._src)).length === 1 &&
+          Math.abs(el.currentTime * 1000 - mixed.startMs[probe + 1]) < 2,
+          "at " + Math.round(el.currentTime * 1000) + " ms, wanted " +
+            mixed.startMs[probe + 1]);
+
+    nodes.get("listen-prev").onclick();
+    await flush();
+    check("Previous seeks back to the segment before it",
+          Math.abs(el.currentTime * 1000 - mixed.startMs[probe]) < 2);
+
+    /* The effects are IN the file, so nothing in the layer module may sound too. */
+    const cueEls = created.filter((e) => /\/sfx\//.test(e._src) && !e.paused);
+    check("no cue is fired on top of a file that already contains it",
+          cueEls.length === 0, cueEls.length + " live cue element(s)");
+
+    check("the layer switches are absent, because there are no live layers",
+          !nodes.get("listen-layer-ambience") && !nodes.get("listen-layer-sfx"));
+    check("the choice of reading is offered", !!nodes.get("listen-source-mixed") &&
+          !!nodes.get("listen-source-clips"));
+
+    /* Pausing is one call on one element: the thing that kept going wrong when the
+       voice and the beds were separate. */
+    nodes.get("listen-toggle").onclick();
+    await flush();
+    check("Pause stops everything, because everything is one element",
+          created.every((e) => e.paused));
+  }
+  console.log("");
+
+  // Back to the clip reading for the rest of the file: the original path still has to
+  // work, because it is what plays a chapter that has not been combined yet.
+  MIXED_OK = false;
+  sandbox.window.TMBPlayer.mount(view, { chapters: [{ number: 1, title: "One" }] });
+  await flush();
+  /* `created` is deliberately NOT cleared: the player keeps ONE element for the
+     whole session and reuses it, so emptying the list here would hide the very
+     element the next section is about. */
 
   console.log("1. One clip at a time, in order, at rate 1");
   const toggle = nodes.get("listen-toggle");

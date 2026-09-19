@@ -23,8 +23,28 @@
   var RETRY_DELAY_MS = 500;
   var MAX_CONSECUTIVE_SKIPS = 3; // then STOP and say so, rather than sprint to the end
 
+  /* TWO WAYS TO PLAY A CHAPTER, and the first one is now the default.
+
+     MIXED: one file, `audio/exports/chapter-NN-drama.mp3`, with the voices, ambience
+     and effects already mixed into the samples. There is no clip-to-clip handover to
+     get wrong, no gap to time, no second element to keep in step and no gain to
+     apply in the browser -- so what Joshua hears is by construction the file the
+     pipeline measured. Every bug this player has had came from doing that assembly
+     live: the voice racing then dying, the beds carrying on over a dead voice, a cue
+     firing twice on a retry.
+
+     CLIPS: the original path -- 185 elements in order, with reader/sfx.js firing the
+     cues alongside. It is what plays when the mixed export is missing (a chapter not
+     combined yet), and it is where the Ambience and Sound effects switches live,
+     because those can only mean something while the layers are still separate.
+
+     The manifest says which are available; the page does not guess. */
+  var MODE_MIXED = "mixed", MODE_CLIPS = "clips";
+
   var state = {
     chapter: null,
+    mode: MODE_CLIPS,
+    mixed: null,       // the export entry from the manifest, when there is one
     retries: 0,
     consecutiveFailures: 0,
     playToken: 0,
@@ -79,6 +99,36 @@
     return segments()[state.index] || null;
   }
 
+  function mixedMode() {
+    return state.mode === MODE_MIXED && !!state.mixed;
+  }
+
+  /* THE URL CARRIES THE FILE'S SIZE, and that is a cache key rather than decoration.
+     A chapter export keeps its path forever while its contents change every time the
+     mix is retuned, and a phone that has played it once will happily go on playing
+     the copy it already has. The manifest is fetched with no-cache, so `bytes` is
+     always the size of the file on the server right now: when the mix changes, the
+     URL changes, and the old copy is simply never asked for again. */
+  function mixedSrc() {
+    return "./" + state.mixed.audio + "?v=" + (state.mixed.bytes || 0);
+  }
+
+  /* The index the mixed file was built with. A mixed export is placed clip by clip at
+     exactly these offsets, so this is not an estimate -- it is the same arithmetic,
+     read back. */
+  function starts() {
+    return (state.mixed && state.mixed.startMs) || [];
+  }
+
+  /* Which segment is sounding at a given moment. A linear scan over 185 numbers runs
+     on every timeupdate, which is four times a second: cheap, and a binary search
+     here would be harder to read than it is fast. */
+  function indexAt(ms) {
+    var at = starts(), i = 0;
+    while (i + 1 < at.length && at[i + 1] <= ms) i += 1;
+    return i;
+  }
+
   // ---- loading -------------------------------------------------------------
   function loadChapter(n) {
     stop();
@@ -96,7 +146,7 @@
       .then(function (m) {
         state.manifest = m;
         var l = layers(); if (l) l.load(m);
-        return checkAvailability(m);
+        return chooseMode(m);
       })
       .then(render)
       .catch(function (err) {
@@ -106,6 +156,33 @@
           view.innerHTML = '<div class="empty"><h2>No audio manifest</h2><p>' + esc(err.message) +
             '</p><p>Run <code>python3 scripts/audio.py parse</code> to build the manifests.</p></div>';
         }
+      });
+  }
+
+  /* A mixed export is only usable if the file is really there AND the manifest gave
+     it an index, because without the index the page cannot say which line is being
+     read. Either missing and we fall back to the clips, which still work. */
+  function chooseMode(m) {
+    var mixed = ((m.exports || {}).mixed) || null;
+    state.mixed = null;
+    state.mode = MODE_CLIPS;
+    if (!mixed || !mixed.audio || !mixed.startMs ||
+        mixed.startMs.length !== m.segments.length) {
+      return checkAvailability(m);
+    }
+    return fetch("./" + mixed.audio + "?v=" + (mixed.bytes || 0), { method: "HEAD" })
+      .then(function (r) { return r.ok; })
+      .catch(function () { return false; })
+      .then(function (ok) {
+        if (!ok) return checkAvailability(m);
+        state.mixed = mixed;
+        state.mode = MODE_MIXED;
+        state.missing = 0;
+        /* Nothing in reader/sfx.js may sound in this mode: the effects are already in
+           the file, and a live cue on top would be the same sound twice. */
+        var l = layers(); if (l) l.stopAll();
+        m.segments.forEach(function (seg) { seg._have = true; });
+        return m;
       });
   }
 
@@ -130,6 +207,7 @@
 
   // ---- playback ------------------------------------------------------------
   function play() {
+    if (mixedMode()) return playMixed();
     var seg = current();
     if (!seg) return;
     if (!seg._have) { skipForward(); return; }
@@ -171,6 +249,59 @@
     render();
   }
 
+  /* ONE ELEMENT, ONE FILE, AND THE POSITION IS THE ONLY STATE. Where the clip player
+     has to decide when a segment ends, what the gap is, which cue belongs in it and
+     what to do when a load fails, this asks the element where it is and reads the
+     answer off the index. */
+  function playMixed() {
+    var a = audioEl();
+    var src = mixedSrc();
+    var seeking = a.getAttribute("data-src") !== src;
+    if (seeking) {
+      a.src = src;
+      a.setAttribute("data-src", src);
+      a.load();
+      var at = starts()[state.index] || 0;
+      if (at) {
+        /* The metadata has to be in before a seek will hold, so it is deferred once
+           rather than issued into a src that has not loaded. */
+        a.addEventListener("loadedmetadata", function once() {
+          a.removeEventListener("loadedmetadata", once);
+          try { a.currentTime = at / 1000; } catch (e) {}
+        });
+      }
+    }
+    a.playbackRate = state.rate;
+    state.playing = true;
+    state.stalled = null;
+    var token = ++state.playToken;
+    a.play().catch(function (err) {
+      if (token !== state.playToken) return;
+      if (err && err.name === "AbortError") return;
+      state.playing = false;
+      state.stalled = err && err.name === "NotAllowedError"
+        ? "The browser wants a tap before it will play audio."
+        : "The chapter's audio would not start. Check the connection and press Play.";
+      render();
+    });
+    render();
+  }
+
+  function seekToSegment(i) {
+    var a = state.audio;
+    state.index = Math.max(0, Math.min(segments().length - 1, i));
+    var at = (starts()[state.index] || 0) / 1000;
+    if (a && a.getAttribute("data-src") === mixedSrc()) {
+      try { a.currentTime = at; } catch (e) {}
+      render();
+      if (state.playing) { var p = a.play(); if (p && p.catch) p.catch(function () {}); }
+    } else if (state.playing) {
+      play();
+    } else {
+      render();
+    }
+  }
+
   function pause() {
     state.playing = false;
     if (state.pauseTimer) { clearTimeout(state.pauseTimer); state.pauseTimer = null; }
@@ -186,6 +317,7 @@
   }
 
   function onEnded() {
+    if (mixedMode()) { state.playing = false; render(); return; }
     var done = current();
     var l = layers();
     if (l) { l.setSpeaking(false); if (done) l.leaveSegment(done.order); }
@@ -205,6 +337,13 @@
   }
 
   function onError() {
+    if (mixedMode()) {
+      state.playing = false;
+      state.stalled = "The chapter's audio file would not load. Check the connection " +
+        "and press Play.";
+      render();
+      return;
+    }
     var a = state.audio, seg = current();
     if (!a || !seg) return;
     /* An error for a clip we have already moved past is noise: the element fires it
@@ -257,6 +396,7 @@
   }
 
   function go(delta) {
+    if (mixedMode()) return seekToSegment(state.index + delta);
     var n = state.index + delta;
     if (n < 0) n = 0;
     if (n >= segments().length) n = segments().length - 1;
@@ -266,6 +406,7 @@
   }
 
   function preloadAhead() {
+    if (mixedMode()) { state.preloaders = []; return; }
     var next = segments().slice(state.index + 1, state.index + 3);
     state.preloaders = next.filter(function (s) { return s._have; }).map(function (s) {
       var p = new Audio();
@@ -290,7 +431,7 @@
      switch, and an empty control panel is a worse answer than no panel. */
   function layerControlsHtml() {
     var l = layers();
-    if (!l || !l.has()) return "";
+    if (!l || !l.has() || mixedMode()) return "";
     var c = l.count();
     var ungenerated = c.ungenerated
       ? '<span class="listen-layer-note">' + c.ungenerated +
@@ -306,9 +447,63 @@
       ungenerated + '</div>';
   }
 
+  /* ---- how the chapter is played ------------------------------------------
+     A switch only where there is a real choice. When a chapter has been combined
+     both readings exist and the listener picks; when it has not, there is nothing to
+     offer and the line simply says what is playing. */
+  function sourceLine(m, total) {
+    if (mixedMode()) {
+      var mb = (state.mixed.bytes / 1048576).toFixed(1);
+      return total + " segments · one mixed file, " + mb + " MB · " +
+             clock(state.mixed.seconds);
+    }
+    return total + " segments · played clip by clip · " + (m.outputFormat || "");
+  }
+
+  function sourceControlHtml() {
+    var mixed = ((state.manifest || {}).exports || {}).mixed;
+    if (!mixed || !mixed.startMs) return "";
+    return '<div class="listen-source" role="group" aria-label="How to play">' +
+      '<label class="listen-layer"><input type="radio" name="listen-source" ' +
+        'id="listen-source-mixed"' + (mixedMode() ? " checked" : "") +
+        '> One mixed file</label>' +
+      '<label class="listen-layer"><input type="radio" name="listen-source" ' +
+        'id="listen-source-clips"' + (mixedMode() ? "" : " checked") +
+        '> Separate clips, live layers</label>' +
+      '<span class="listen-layer-note">The mixed file carries the ambience and effects ' +
+      'at the levels the pipeline measured. Separate clips let you switch those layers ' +
+      'off, and assemble the chapter in the browser.</span></div>';
+  }
+
+  function bindSourceControl() {
+    var mixedBtn = document.getElementById("listen-source-mixed");
+    var clipsBtn = document.getElementById("listen-source-clips");
+    if (!mixedBtn || !clipsBtn) return;
+    function switchTo(mode) {
+      if (state.mode === mode) return;
+      var wasPlaying = state.playing;
+      var at = state.index;
+      pause();
+      var l = layers(); if (l) l.stopAll();
+      if (state.audio) { state.audio.removeAttribute("data-src"); state.audio.src = ""; }
+      state.mode = mode;
+      state.index = at;
+      state.retries = 0;
+      state.consecutiveFailures = 0;
+      state.stalled = null;
+      if (mode === MODE_CLIPS) {
+        checkAvailability(state.manifest).then(function () {
+          if (wasPlaying) play(); else render();
+        });
+      } else if (wasPlaying) { play(); } else { render(); }
+    }
+    mixedBtn.onchange = function () { switchTo(MODE_MIXED); };
+    clipsBtn.onchange = function () { switchTo(MODE_CLIPS); };
+  }
+
   function bindLayerControls() {
     var l = layers();
-    if (!l || !l.has()) return;
+    if (!l || !l.has() || mixedMode()) return;
     [["listen-layer-ambience", "ambience"], ["listen-layer-sfx", "sfx"]].forEach(function (pair) {
       var el = document.getElementById(pair[0]);
       if (el) el.onchange = function (e) { l.setEnabled(pair[1], e.target.checked); };
@@ -316,16 +511,40 @@
   }
 
   // ---- rendering -----------------------------------------------------------
+  function clock(seconds) {
+    var t = Math.max(0, Math.round(seconds || 0));
+    return Math.floor(t / 60) + ":" + ("0" + (t % 60)).slice(-2);
+  }
+
   function renderProgress() {
-    var a = state.audio, seg = current();
+    var a = state.audio;
     var bar = document.getElementById("listen-seg-bar");
     if (bar && a && a.duration) {
       bar.value = String((a.currentTime / a.duration) * 100);
     }
-    var pos = document.getElementById("listen-position");
-    if (pos && seg) {
-      pos.textContent = "Segment " + (state.index + 1) + " of " + segments().length;
+    if (mixedMode() && a) {
+      /* THE FILE IS IN CHARGE. The page does not count segments as it plays them; it
+         asks the element where it is and looks the answer up. That is what makes
+         scrubbing, a speed change and a seek all land on the right line for free. */
+      var i = indexAt(a.currentTime * 1000);
+      if (i !== state.index) { state.index = i; renderNow(); }
     }
+    var pos = document.getElementById("listen-position");
+    if (pos) {
+      pos.textContent = "Segment " + (state.index + 1) + " of " + segments().length +
+        (a && a.duration ? " · " + clock(a.currentTime) + " of " + clock(a.duration) : "");
+    }
+  }
+
+  /* Just the line being read. render() rebuilds the whole panel, and rebuilding it
+     four times a second would fight every control on it -- which is exactly how the
+     volume sliders were destroyed between one segment and the next. */
+  function renderNow() {
+    var seg = current() || {};
+    var who = document.getElementById("listen-speaker");
+    var text = document.getElementById("listen-text");
+    if (who) who.textContent = seg.speakerName || "";
+    if (text) text.textContent = seg.displayText || "";
   }
 
   function render() {
@@ -347,11 +566,12 @@
       : "";
     body.innerHTML =
       '<div class="listen-head"><h2>' + esc(m.title || ("Chapter " + m.chapter)) + '</h2>' +
-      '<p class="listen-sub">' + total + ' segments · ' + esc(m.outputFormat || "") + '</p></div>' +
+      '<p class="listen-sub">' + esc(sourceLine(m, total)) + '</p></div>' +
       stalled + warn +
-      '<div class="listen-now"><p class="listen-speaker">' + esc(seg.speakerName || "") +
-        (seg._have === false ? ' <span class="listen-missing">(no audio yet)</span>' : '') + '</p>' +
-      '<p class="listen-text">' + esc(seg.displayText || "") + '</p></div>' +
+      '<div class="listen-now"><p class="listen-speaker" id="listen-speaker">' +
+        esc(seg.speakerName || "") + '</p>' +
+      (seg._have === false ? '<p class="listen-missing">(no audio yet)</p>' : '') +
+      '<p class="listen-text" id="listen-text">' + esc(seg.displayText || "") + '</p></div>' +
       '<div class="listen-controls">' +
       '<button id="listen-prev" type="button" aria-label="Previous segment">&#9664;&#9664;</button>' +
       '<button id="listen-toggle" type="button">' + (state.playing ? "Pause" : "Play") + '</button>' +
@@ -361,9 +581,10 @@
       [0.75, 0.9, 1, 1.1, 1.25, 1.5].map(function (r) {
         return '<option value="' + r + '"' + (r === state.rate ? " selected" : "") + '>' + r + '×</option>';
       }).join("") + '</select></label></div>' +
+      sourceControlHtml() +
       layerControlsHtml() +
       '<input id="listen-seg-bar" class="listen-bar" type="range" min="0" max="100" value="0" ' +
-        'aria-label="Position in this segment">' +
+        'aria-label="Position in the chapter">' +
       '<p class="listen-meta"><span id="listen-position">Segment ' + (state.index + 1) +
         ' of ' + total + '</span> · chapter ' + pct + '% through</p>';
 
@@ -379,6 +600,7 @@
       var a = state.audio;
       if (a && a.duration) a.currentTime = (parseFloat(e.target.value) / 100) * a.duration;
     };
+    bindSourceControl();
     bindLayerControls();
     renderProgress();
   }
@@ -390,8 +612,10 @@
         .slice().sort(function (a, b) { return a.number - b.number; });
       view.innerHTML =
         '<section class="listen"><h1>Listen</h1>' +
-        '<p class="listen-intro">The audiobook, assembled from the cached voice clips in ' +
-        'story order. This page plays existing audio only and contains no ElevenLabs key.</p>' +
+        '<p class="listen-intro">The audiobook. A combined chapter plays as one mixed ' +
+        'file, with the ambience and effects already in it at the levels the pipeline ' +
+        'measured; anything not combined yet plays clip by clip with the layers live. ' +
+        'This page plays existing audio only and contains no ElevenLabs key.</p>' +
         '<label class="listen-pick">Chapter <select id="listen-chapter">' +
         chapters.map(function (c) {
           return '<option value="' + c.number + '">' + c.number + ' · ' + esc(c.title) + '</option>';

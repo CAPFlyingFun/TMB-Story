@@ -579,7 +579,8 @@ def cmd_generate(args, reg):
 def cmd_combine(args, reg):
     from tmbaudio import combine, drama
     files = mf.chapter_files()
-    for n in parse_range(args.chapters, files):
+    numbers = parse_range(args.chapters, files)
+    for n in numbers:
         combine.combine_chapter(n, reg)
         if not getattr(args, "no_drama", False):
             try:
@@ -593,6 +594,16 @@ def cmd_combine(args, reg):
             except Exception as exc:                  # noqa: BLE001
                 print("  drama export for chapter %d failed: %s" % (n, exc))
                 print("  the voice clips, ambience and effects are all unaffected.")
+    # The manifest LISTS the whole-chapter files, and they have just been written, so
+    # it is rebuilt here rather than left describing the set that existed before this
+    # command ran. Same lesson as retune-cues: a document that names an artefact has
+    # to be refreshed by whatever produces the artefact.
+    for n in numbers:
+        try:
+            sreg = _sfx_registry(reg)
+        except (OSError, ValueError):
+            sreg = None
+        mf.write(mf.build(n, files[n], reg, sfx_registry=sreg))
 
 
 def cmd_export_game(args, reg):
