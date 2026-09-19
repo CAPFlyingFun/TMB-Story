@@ -141,6 +141,60 @@ def measure(path):
             len(pcm) / 2.0 / rate)
 
 
+LUFS_UNAVAILABLE = object()
+
+
+def loudness_lufs(path):
+    """Integrated loudness in LUFS (ITU-R BS.1770), or None if the file is silent.
+
+    RMS AND LOUDNESS ARE NOT THE SAME NUMBER, and the gap between them is the size of
+    a mixing mistake. Across this asset set RMS reads a sound anywhere from 5.6 dB
+    QUIETER than the ear hears it (a deep vibration) to 13.1 dB LOUDER (an alert
+    sting) -- an 18.7 dB spread. For SPEECH the two agree within a decibel, which is
+    exactly why placing effects by RMS against a speech reference looked like it was
+    working: the reference was the one signal RMS measures correctly.
+
+    BS.1770 measures what the ear does instead: a K-weighting that follows the head
+    and the outer ear, and a gate that ignores the silence between hits rather than
+    averaging a sound down for having gaps in it.
+
+    Parsed from ffmpeg's `ebur128` summary. The per-frame log lines also contain an
+    `I:` field, so the summary line is identified by starting with `I:` once stripped
+    -- a frame line starts with `[Parsed_ebur128`.
+    """
+    out = subprocess.run(
+        [ffmpeg(), "-hide_banner", "-nostats", "-i", path,
+         "-af", "ebur128=framelog=quiet", "-f", "null", "-"],
+        capture_output=True, text=True).stderr
+    for line in out.splitlines():
+        token = line.strip()
+        if token.startswith("I:") and "LUFS" in token:
+            try:
+                value = float(token.split()[1])
+            except (IndexError, ValueError):
+                continue
+            return None if value <= -70.0 or value != value else round(value, 1)
+    return None
+
+
+def level_block(path, source, seconds, peak, rms):
+    """The one shape every sidecar records a level in, so nothing reads a stale half.
+
+    `lufs` is what the mix is placed by; `rmsDbfs` and `peakDbfs` stay because
+    normalisation is about a file using its bit depth, which is an RMS-and-peak
+    question, not a loudness one. Two different jobs, two different measures, both
+    written down.
+    """
+    return {
+        "measuredAt": time.strftime("%Y-%m-%d", time.gmtime()),
+        "source": source,
+        "seconds": round(seconds, 2),
+        "peakDbfs": round(peak, 1) if peak != float("-inf") else None,
+        "rmsDbfs": round(rms, 1) if rms != float("-inf") else None,
+        "lufs": loudness_lufs(path),
+    }
+
+
 def gain_for(peak_db, rms_db, conf, allow_attenuation=False):
     """The applied gain in dB, and why it is that and not something else.
 
@@ -290,13 +344,9 @@ def measure_only(plan):
     peak, rms, seconds = measure(audio_abs)
     sidecar_abs = os.path.join(ROOT, plan["sidecar"])
     side = cache.read_sidecar(sidecar_abs) or {}
-    side["measured"] = {
-        "measuredAt": time.strftime("%Y-%m-%d", time.gmtime()),
-        "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
-        "seconds": round(seconds, 2),
-        "peakDbfs": round(peak, 1) if peak != float("-inf") else None,
-        "rmsDbfs": round(rms, 1) if rms != float("-inf") else None,
-    }
+    side["measured"] = level_block(
+        audio_abs, "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
+        seconds, peak, rms)
     cache.write_sidecar(sidecar_abs, side)
     return side["measured"]
 
@@ -333,13 +383,9 @@ def compress_one(plan):
         "masterFile": source_path(plan["audio"]),
         "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
     }
-    side["measured"] = {
-        "measuredAt": time.strftime("%Y-%m-%d", time.gmtime()),
-        "source": "scripts/audio.py normalize-sfx, decoded PCM after web encoding",
-        "seconds": round(seconds, 2),
-        "peakDbfs": round(peak, 1) if peak != float("-inf") else None,
-        "rmsDbfs": round(rms, 1) if rms != float("-inf") else None,
-    }
+    side["measured"] = level_block(
+        audio_abs, "scripts/audio.py normalize-sfx, decoded PCM after web encoding",
+        seconds, peak, rms)
     side["bytes"] = os.path.getsize(audio_abs)
     cache.write_sidecar(sidecar_abs, side)
     out = dict(side["webEncode"])
@@ -401,12 +447,57 @@ def apply_one(sreg, plan, conf):
         "sourcePeakDbfs": plan["sourcePeakDbfs"],
         "resultRmsDbfs": round(rms, 1) if rms != float("-inf") else None,
         "resultPeakDbfs": round(peak, 1) if peak != float("-inf") else None,
+        "resultLufs": loudness_lufs(audio_abs),
         "sourceFile": source_path(plan["audio"]),
         "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
     }
     side["bytes"] = os.path.getsize(audio_abs)
     cache.write_sidecar(sidecar_abs, side)
     return side["normalize"]
+
+
+def measure_loudness(sreg, asset_ids, force=False, log=print):
+    """Fill in the loudness of assets that were measured before loudness was recorded.
+
+    WITHOUT THIS, MOVING THE MIX TO LUFS WOULD MEAN RE-ENCODING THIRTY-FOUR ASSETS to
+    learn a number that can be read off the files as they stand. Loudness is a
+    measurement, not a treatment: nothing here opens a file for writing except the
+    sidecar, and an asset that already has the reading is skipped, so the pass is
+    idempotent and safe to leave in the workflow forever.
+
+    It writes into whichever block the mix will actually read -- `normalize.resultLufs`
+    for a normalised asset, `measured.lufs` otherwise -- because a loudness recorded
+    next to a stale RMS would be a reading of a file nobody plays.
+    """
+    filled = skipped = failed = 0
+    for asset_id in sorted(asset_ids):
+        audio_rel, sidecar_rel = sfxmod.asset_paths(sreg, asset_id)
+        audio_abs = os.path.join(ROOT, audio_rel)
+        sidecar_abs = os.path.join(ROOT, sidecar_rel)
+        if not os.path.isfile(audio_abs):
+            continue
+        side = cache.read_sidecar(sidecar_abs) or {}
+        norm = side.get("normalize")
+        block, key = ((norm, "resultLufs") if norm is not None
+                      else (side.setdefault("measured", {}), "lufs"))
+        if block.get(key) is not None and not force:
+            skipped += 1
+            continue
+        try:
+            value = loudness_lufs(audio_abs)
+        except Exception as exc:                     # noqa: BLE001 - reported, not raised
+            failed += 1
+            log("  FAILED %s: %s" % (asset_id, exc))
+            continue
+        block[key] = value
+        block.setdefault("loudnessSource", "scripts/audio.py measure-loudness, "
+                                           "ffmpeg ebur128 on the served file")
+        cache.write_sidecar(sidecar_abs, side)
+        filled += 1
+        log("  %-30s %s LUFS" % (asset_id, value))
+    log("\nLoudness: %d measured, %d already known, %d failed."
+        % (filled, skipped, failed))
+    return filled, failed
 
 
 def normalize_assets(sreg, asset_ids, force=False, allow_attenuation=False,

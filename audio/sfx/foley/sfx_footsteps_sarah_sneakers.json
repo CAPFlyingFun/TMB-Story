@@ -29,6 +29,8 @@
     "resultRmsDbfs": -29.6,
     "resultPeakDbfs": -3.1,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/foley/sfx_footsteps_sarah_sneakers.source.mp3",
-    "at": "2026-09-18T15:27:13Z"
+    "at": "2026-09-18T15:27:13Z",
+    "resultLufs": -30.4,
+    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
   }
 }

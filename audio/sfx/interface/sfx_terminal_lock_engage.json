@@ -29,6 +29,8 @@
     "resultRmsDbfs": -24.2,
     "resultPeakDbfs": -3.1,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/interface/sfx_terminal_lock_engage.source.mp3",
-    "at": "2026-09-18T15:27:14Z"
+    "at": "2026-09-18T15:27:14Z",
+    "resultLufs": -22.6,
+    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
   }
 }

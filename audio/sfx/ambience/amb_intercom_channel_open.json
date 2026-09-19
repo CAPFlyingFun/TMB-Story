@@ -23,6 +23,8 @@
     "resultRmsDbfs": -17.4,
     "resultPeakDbfs": -4.2,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/interface/amb_intercom_channel_open.source.mp3",
-    "at": "2026-09-18T12:33:48Z"
+    "at": "2026-09-18T12:33:48Z",
+    "resultLufs": -15.1,
+    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
   }
 }

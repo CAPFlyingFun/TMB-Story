@@ -160,12 +160,25 @@ jobs:
         continue-on-error: true
         run: python3 scripts/audio.py adopt-sfx
 
+      - name: Measure how loud each asset actually sounds
+        if: inputs.mode != 'dry-run'
+        # Free, and it changes no audio: it reads BS.1770 integrated loudness off the
+        # files as they stand and records it in the sidecars. It has to run after
+        # normalising and adopting, because it must measure the file that will be
+        # served, and BEFORE the retune, because the retune places every cue by this
+        # number. An asset that already has the reading is skipped, so this costs
+        # nothing on a run where nothing changed.
+        continue-on-error: true
+        run: python3 scripts/audio.py measure-loudness
+
       - name: Re-derive every cue gain from the measured levels
         if: inputs.mode != 'dry-run'
-        # Free, and it has to run AFTER normalising: a gain is computed from the level
-        # the asset actually has, so generating or normalising anything makes the old
-        # gains stale. Running it here is what stops a rescued asset keeping the
-        # rescue gain -- the mistake that made the first normalised build far too loud.
+        # Free, and it has to run AFTER normalising and measuring: a gain is computed
+        # from the LOUDNESS the asset actually has, so generating or normalising
+        # anything makes the old gains stale. Running it here is what stops a rescued
+        # asset keeping the rescue gain -- the mistake that made the first normalised
+        # build far too loud -- and what keeps every cue placed by what it sounds like
+        # rather than by its RMS, which reads the alerts in this set up to 13 dB hot.
         continue-on-error: true
         run: python3 scripts/audio.py retune-cues --chapters "${{ inputs.chapters }}"
 

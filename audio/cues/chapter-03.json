@@ -33,7 +33,7 @@
         "timing": "after"
       },
       "why": "The ordinary night outside the settlement, from the chapter's first line until the moment Jack looks out of the window. It exists to be UNREMARKABLE: a normal night behind the glass while the alarms and the vibrations happen indoors, so that what replaces it lands.",
-      "gain": 0.309
+      "gain": 0.16
     },
     {
       "cueId": "ch03-006-sirens-wail",
@@ -54,7 +54,7 @@
         "timing": "after"
       },
       "why": "Civil sirens across the settlement, heard indoors. Procedural rather than recorded because the recorded one did not loop cleanly -- it was even for 5.5 of its 12 seconds and announced its own seam every time it wrapped. This one closes its phase exactly at 12 s. EMPHASIS -4.4 dB: Joshua asked for the sirens 40% quieter, and only the sirens, so it is a per-cue nudge rather than a move of the whole alarm category, which would have taken the console alarm bed he tuned by ear down with it. LEVEL -10 dB and the high end filtered away: Joshua heard it as beside them rather than outside. Distance is both, not either. LEVEL -18 dB total: still too loud at -10, so another 60% off. LEVEL: -4.4 read as too loud, -10 still too loud, -18 vanished entirely. -14 bisects the last two. A siren is a TONE, and a tone carries far further than broadband noise at the same RMS, which is why the category target alone kept missing it.",
-      "gain": 0.004
+      "gain": 0.003
     },
     {
       "cueId": "ch03-010-jack-typing",
@@ -65,7 +65,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.251,
+      "gain": 0.234,
       "why": "The manuscript opens on his hands. Loudest of the typing cues because it is the first sound of the chapter."
     },
     {
@@ -77,7 +77,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.251,
+      "gain": 0.234,
       "why": "Sarah at the secondary console, working the interrupt."
     },
     {
@@ -100,7 +100,7 @@
         "timing": "after"
       },
       "why": "\"...the emergency sirens outside changed pitch.\" They did not: the same siren kept playing under the line that said it had changed, which Joshua caught. The first pattern stops on the previous line and this one comes in 1.2 s into the sentence, under the words themselves. Higher and faster, so it reads as the town escalating rather than as a different recording. LEVEL -10 dB and the high end filtered away: Joshua heard it as beside them rather than outside. Distance is both, not either. LEVEL -18 dB total: still too loud at -10, so another 60% off. LEVEL: -4.4 read as too loud, -10 still too loud, -18 vanished entirely. -14 bisects the last two. A siren is a TONE, and a tone carries far further than broadband noise at the same RMS, which is why the category target alone kept missing it.",
-      "gain": 0.004
+      "gain": 0.003
     },
     {
       "cueId": "ch03-030-building-shake",
@@ -110,7 +110,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.058,
+      "gain": 0.08,
       "why": "NEW. The shake arrives before the narration names it, so the listener feels it with Sarah rather than being told about it."
     },
     {
@@ -121,7 +121,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.058,
+      "gain": 0.08,
       "why": "NEW asset, second use, quieter. The manuscript calls it another vibration, so it should be the same sound diminished rather than a new one."
     },
     {
@@ -132,7 +132,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.05,
+      "gain": 0.016,
       "why": "Into the gap before Scale factor locked. Reused."
     },
     {
@@ -144,7 +144,7 @@
       },
       "timing": "during",
       "offsetMs": 1200,
-      "gain": 0.116,
+      "gain": 0.046,
       "why": "NEW. The event. It ends in real silence rather than a tail, because the manuscript is explicit that the sound does not fade or become muffled, it ceases to exist.",
       "emphasisDb": 6.0
     },
@@ -156,7 +156,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.135,
+      "gain": 0.03,
       "why": "NEW. The other half. The silence between the two is carried by the manifest's own pauses across the four narration segments in between, so the quiet is real rather than printed into a file.",
       "emphasisDb": 6.0
     },
@@ -168,7 +168,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.052,
+      "gain": 0.013,
       "fadeInMs": 200,
       "fadeOutMs": 2000,
       "sustain": {
@@ -178,8 +178,8 @@
         },
         "timing": "after"
       },
-      "why": "Reused. The alarms run from the landing to the sentence that stops them, and their stopping is what leaves the silence the scene needs.",
-      "emphasisDb": 8.3
+      "why": "Reused. The alarms run from the landing to the sentence that stops them, and their stopping is what leaves the silence the scene needs. EMPHASIS DROPPED TO 0 on 2026-09-19. The +6.0/+8.3 here were raising the one sound Joshua said he could not hear the narrator past, and they were chosen when the mix was placed by RMS -- which reads this asset 3 to 6 dB quieter than the ear does. With loudness measured properly the category target is already where this moment should sit.",
+      "emphasisDb": 0.0
     },
     {
       "cueId": "ch03-080-lab-after",
@@ -189,7 +189,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.202,
+      "gain": 0.117,
       "fadeInMs": 4000,
       "sustain": {
         "until": "chapterEnd",
@@ -206,7 +206,7 @@
       },
       "timing": "during",
       "offsetMs": 900,
-      "gain": 0.251,
+      "gain": 0.234,
       "why": "Jack checking whether TOMBS is off. Quiet work in a quiet room."
     },
     {
@@ -217,7 +217,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.041,
+      "gain": 0.039,
       "why": "NEW asset, reused from chapter 2. Lena getting through is the first contact with anyone outside the room since the event."
     },
     {
@@ -228,7 +228,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.009,
+      "gain": 0.007,
       "fadeInMs": 300,
       "fadeOutMs": 800,
       "sustain": {
@@ -249,7 +249,7 @@
       },
       "timing": "during",
       "offsetMs": 1200,
-      "gain": 0.088,
+      "gain": 0.029,
       "why": "Reused. The cameras answering is the mechanism by which the chapter shows the scale of what happened."
     },
     {
@@ -270,7 +270,7 @@
         "timing": "after"
       },
       "why": "THE SOUND OF THE WORLD CHANGING, on 'He looked outside.' The night bed stops and this takes its place and holds to the last line of the chapter. The settlement has not moved and nothing outside has actually started making a new noise -- but the hills are grass now, and the listener is told that by the air rather than by a line of dialogue. Nine and a half minutes long, so it never reaches a loop seam inside the scene it covers.",
-      "gain": 0.174
+      "gain": 0.14
     },
     {
       "cueId": "ch03-119-sirens-winddown",
@@ -293,7 +293,7 @@
       },
       "timing": "during",
       "offsetMs": 300,
-      "gain": 0.088,
+      "gain": 0.029,
       "why": "Reused, quieter. One more feed, and the drop of water."
     },
     {
@@ -304,7 +304,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.065,
+      "gain": 0.107,
       "why": "NEW, and the most important new asset in either chapter. The first sound of the giant world, arriving from outside with no seismic cause. It plays before the narration so the listener hears it exactly as Jack and Sarah do: an event first, an explanation never.",
       "emphasisDb": 4.0
     },
@@ -316,7 +316,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.065,
+      "gain": 0.107,
       "why": "NEW asset, second use. The manuscript brings it back and then lets it go, and Jack decides he is not certain he wants to know what it was. The same sound twice is the whole point.",
       "emphasisDb": 4.0
     },
@@ -329,7 +329,7 @@
       },
       "timing": "during",
       "offsetMs": 1000,
-      "gain": 0.088,
+      "gain": 0.029,
       "why": "Reused. One final record remains, and the machine reports the scale factor as calmly as it reported everything else."
     }
   ]

@@ -446,6 +446,70 @@ for (const n of [2, 3]) {
   console.log("");
 }
 
+// ---- 9. a segment played twice does not play its cues twice ---------------
+/* The retry added to player.js on 2026-09-18 calls play() again for the SAME segment,
+   and Play after Pause does the same. Each of those re-enters the segment, and a cue
+   that fired again would sound ON TOP of the copy already playing -- two identical
+   alarms summing 6 dB above the level the cue sheet placed. */
+console.log("9. A segment entered twice fires its cues once");
+{
+  const during = manifest.cues.find((c) => c.timing === "during" &&
+                                           (c.stopOrder === undefined || c.stopOrder === null));
+  const before = manifest.cues.find((c) => c.timing === "before" &&
+                                           (c.stopOrder === undefined || c.stopOrder === null));
+  reset();
+  L.enterSegment(during.order);
+  await flush();
+  const once = oneShotsFired().filter((s) => s === "./" + during.audio).length;
+  L.enterSegment(during.order);              // the retry
+  await flush();
+  const twice = oneShotsFired().filter((s) => s === "./" + during.audio).length;
+  check("re-entering a segment does not fire its `during` cue again",
+        once === 1 && twice === 1, once + " then " + twice);
+
+  reset();
+  L.prefireBefore(before.order);             // the gap plays it
+  L.enterSegment(before.order);              // then the segment begins
+  await flush();
+  L.enterSegment(before.order);              // then the clip is retried
+  await flush();
+  check("a `before` cue played in the gap is not replayed by the segment or a retry",
+        oneShotsFired().filter((s) => s === "./" + before.audio).length === 1);
+
+  reset();
+  await walk(0, 40);
+  const doubled = manifest.cues.filter((c) => c.stopOrder === undefined || c.stopOrder === null)
+    .filter((c) => live.filter((e) => e._src === "./" + c.audio && !e.loop).length >
+                   manifest.cues.filter((x) => x.asset === c.asset &&
+                                               (x.stopOrder === undefined || x.stopOrder === null) &&
+                                               x.order <= 40).length);
+  check("a normal walk still plays every one-shot exactly once", doubled.length === 0,
+        doubled.length ? doubled.map((c) => c.cueId).join(", ") : "");
+
+  reset();
+  L.enterSegment(4);
+  await flush();
+  L.enterSegment(6);
+  await flush();
+  L.enterSegment(4);                         // going back is a new visit, not a repeat
+  await flush();
+  /* Leaving and coming back is a NEW visit, not a repeat: the guard must not turn
+     into "this cue may only ever sound once in a chapter". */
+  const elsewhere = manifest.segments.map((s) => s.order)
+    .find((o) => o !== during.order && !manifest.cues.some((c) => c.order === o));
+  reset();
+  L.enterSegment(during.order);
+  await flush();
+  L.enterSegment(elsewhere);
+  await flush();
+  L.enterSegment(during.order);
+  await flush();
+  const played = live.filter((e) => e._src === "./" + during.audio && !e.loop).length;
+  check("moving to another segment and back lets the cue play again", played === 2,
+        played + " elements for " + during.cueId);
+  console.log("");
+}
+
 console.log(failures === 0
   ? "ALL CHECKS PASSED"
   : failures + " CHECK(S) FAILED");

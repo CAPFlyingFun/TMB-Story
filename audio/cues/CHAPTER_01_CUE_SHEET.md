@@ -33,14 +33,14 @@ anchor to its stop anchor and loops underneath.
 
 | | |
 |---|---|
-| Asset | `amb_tombs_lab_night` |
+| Asset | `amb_computer_lab` |
 | Category | ambience (ambience layer) |
 | Anchor | segment order 2 · clip `narrator-0b2f58c70a4c` · occurrence 1 |
 | Timing | before |
 | Sustain | loops to segment order 184 |
-| Gain | 0.20 |
+| Gain | 0.12 |
 | Fades | in 3000ms · out 4000ms |
-| Duration requested | 20s, looping |
+| Duration requested | 45.1s, looping |
 | Reusable in Godot | yes |
 | Approx. review time | ~0:28 |
 
@@ -48,7 +48,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** Enters on 'Deep inside one of those laboratories' -- the sentence that puts us in the room -- and never leaves, because the chapter never leaves. Establishes an occupied but near-empty building at night so that every later silence reads as a room and not as dead air. GAIN 0.08 -> 0.2: Joshua could not hear the room tone at all. 0.08 against a voice reference of 1.0 is roughly -22 dB, which is below the floor of a phone speaker in a room.
 
-**Prompt:** `Quiet room tone of an advanced, clean research laboratory late at night. Soft steady ventilation, a low continuous electrical hum from racked equipment, faint distant cooling fans, and a barely perceptible high shimmer from instruments on standby. Spacious but enclosed. No voices, no music, no alarms, no beeping, no footsteps. Even throughout so it loops.`
+**Prompt:** `(hand-supplied asset; no prompt)`
 
 ### `ch01-010-first-chirp`
 
@@ -58,7 +58,7 @@ anchor to its stop anchor and loops underneath.
 | Category | interface (sfx layer) |
 | Anchor | segment order 4 · clip `narrator-7942982ea850` · occurrence 1 |
 | Timing | before |
-| Gain | 0.34 |
+| Gain | 0.07 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~0:47 |
@@ -67,7 +67,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** The listener hears the chirp, then the narrator says a warning tone chirped. Putting it first makes the sound the event and the narration the confirmation, which is how the scene actually happens to Jack.
 
-**Prompt:** `A single soft electronic warning chirp from a laboratory console. One short polite two-tone blip, clean and synthetic, low urgency, with a small amount of room reflection. No alarm, no siren, no voices, no music.`
+**Prompt:** `A two-tone electronic blip from a laboratory console, microphone close to the speaker. Two rounded mid-range notes with a clean decay, synthetic and warm rather than piercing, sounding once and not repeating. Filling the frame, recorded at a strong present level, with a little room reflection. No alarm, no siren, no voices, no music.`
 
 ### `ch01-011-second-chirp`
 
@@ -77,7 +77,7 @@ anchor to its stop anchor and loops underneath.
 | Category | interface (sfx layer) |
 | Anchor | segment order 4 · clip `narrator-7942982ea850` · occurrence 1 |
 | Timing | during +2600ms |
-| Gain | 0.50 |
+| Gain | 0.07 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~0:47 |
@@ -86,7 +86,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** The same asset, louder, because the manuscript says the second tone was louder than the first. One generated sound covers both, and the escalation is done with gain rather than with a second file.
 
-**Prompt:** `A single soft electronic warning chirp from a laboratory console. One short polite two-tone blip, clean and synthetic, low urgency, with a small amount of room reflection. No alarm, no siren, no voices, no music.`
+**Prompt:** `A two-tone electronic blip from a laboratory console, microphone close to the speaker. Two rounded mid-range notes with a clean decay, synthetic and warm rather than piercing, sounding once and not repeating. Filling the frame, recorded at a strong present level, with a little room reflection. No alarm, no siren, no voices, no music.`
 
 ### `ch01-012-console-erupts`
 
@@ -96,14 +96,14 @@ anchor to its stop anchor and loops underneath.
 | Category | alarm (sfx layer) |
 | Anchor | segment order 4 · clip `narrator-7942982ea850` · occurrence 1 |
 | Timing | after |
-| Gain | 0.52 |
+| Gain | 0.01 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~0:47 |
 
 **Manuscript:** Narrator — “A warning tone chirped. Jack shifted but did not wake. A second tone followed, louder than the first, and then the entire console erupted with alarms.”
 
-**Why:** The console erupting is the chapter's inciting sound. It lands in the gap between that narration and the TOMBS warning, so the machine voice arrives out of an alarm that is already going.
+**Why:** The console erupting is the chapter's inciting sound. It lands in the gap between that narration and the TOMBS warning, so the machine voice arrives out of an alarm that is already going. EMPHASIS DROPPED TO 0 on 2026-09-19. The +6.0/+8.3 here were raising the one sound Joshua said he could not hear the narrator past, and they were chosen when the mix was placed by RMS -- which reads this asset 3 to 6 dB quieter than the ear does. With loudness measured properly the category target is already where this moment should sit.
 
 **Prompt:** `A laboratory console suddenly erupting into full alarm. Several electronic alert tones firing at once and overlapping into an urgent layered warning, sharp onset, hard and synthetic, with a short tail of room reflection. No siren sweep, no voices, no music, no explosion.`
 
@@ -116,7 +116,7 @@ anchor to its stop anchor and loops underneath.
 | Anchor | segment order 4 · clip `narrator-7942982ea850` · occurrence 1 |
 | Timing | after |
 | Sustain | loops to segment order 19 |
-| Gain | 0.15 |
+| Gain | 0.01 |
 | Fades | in 400ms · out 2500ms |
 | Duration requested | 12s, looping |
 | Reusable in Godot | yes |
@@ -124,7 +124,7 @@ anchor to its stop anchor and loops underneath.
 
 **Manuscript:** Narrator — “A warning tone chirped. Jack shifted but did not wake. A second tone followed, louder than the first, and then the entire console erupted with alarms.”
 
-**Why:** The alarm does not stop when the sentence does -- the manuscript has the warning repeating and a second alarm sounding later. A low looping bed under the opening carries that, ducks hard beneath speech, and fades out after 'That's impossible', which is where the scene stops shouting and starts being strange. GAIN 0.2 -> 0.15: Joshua's instruction: turn the alarm bed down.
+**Why:** The alarm does not stop when the sentence does -- the manuscript has the warning repeating and a second alarm sounding later. A low looping bed under the opening carries that, ducks hard beneath speech, and fades out after 'That's impossible', which is where the scene stops shouting and starts being strange. GAIN 0.2 -> 0.15: Joshua's instruction: turn the alarm bed down. EMPHASIS DROPPED TO 0 on 2026-09-19. The +6.0/+8.3 here were raising the one sound Joshua said he could not hear the narrator past, and they were chosen when the mix was placed by RMS -- which reads this asset 3 to 6 dB quieter than the ear does. With loudness measured properly the category target is already where this moment should sit.
 
 **Prompt:** `A repeating electronic security alarm inside a laboratory, heard as a continuous background state rather than a single event. Insistent two-note warning tone cycling steadily with an even gap between repeats, slightly hard-edged and synthetic, with a faint room reflection. Consistent volume, no build, no crescendo, no siren sweep, no voices, no music. Even throughout so it can loop.`
 
@@ -136,7 +136,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 6 · clip `narrator-32bdc09c24ff` · occurrence 1 |
 | Timing | during +1100ms |
-| Gain | 0.42 |
+| Gain | 0.05 |
 | Duration requested | 2s |
 | Reusable in Godot | yes |
 | Approx. review time | ~0:59 |
@@ -145,7 +145,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** Gives the alarm a physical consequence in a body rather than only on a screen. It is the one sound in the chapter that tells the listener how hard Jack was asleep.
 
-**Prompt:** `An office chair on castors shoved suddenly backward across a hard floor. A quick startled scuff, castors rumbling fast over a smooth surface, and an abrupt stop. Sharp, physical, slightly alarming, with room reflection. No voices, no music, no crash, no breaking.`
+**Prompt:** `An office chair on castors shoved hard backward across a hard floor, microphone right at the castors. A fast scuff, castors rumbling over a smooth surface with the frame rattling above them, and an abrupt stop. Physical and close, filling the frame, recorded at a strong present level, with room reflection. No voices, no music, no crash, no breaking.`
 
 ### `ch01-030-jack-types`
 
@@ -155,7 +155,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 10 · clip `narrator-93519474e9ea` · occurrence 1 |
 | Timing | during +4200ms |
-| Gain | 0.55 |
+| Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~1:13 |
@@ -164,7 +164,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** Lands on 'Jack grabbed the keyboard'. Establishes that he is working the problem with his hands, which is what makes the later moment when the cursor moves by itself frightening.
 
-**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+**Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
 ### `ch01-040-second-alarm`
 
@@ -174,7 +174,7 @@ anchor to its stop anchor and loops underneath.
 | Category | alarm (sfx layer) |
 | Anchor | segment order 15 · clip `narrator-06cb6e60aafc` · occurrence 1 |
 | Timing | during +2300ms |
-| Gain | 0.45 |
+| Gain | 0.02 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~1:35 |
@@ -193,7 +193,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 18 · clip `narrator-36d912fb5b4f` · occurrence 1 |
 | Timing | during +1200ms |
-| Gain | 0.55 |
+| Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~1:47 |
@@ -202,7 +202,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** Jack entering a command and running a second search. The manuscript has him working the logs by hand here, and it was silent.
 
-**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+**Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
 ### `ch01-050-directory-opens`
 
@@ -212,7 +212,7 @@ anchor to its stop anchor and loops underneath.
 | Category | interface (sfx layer) |
 | Anchor | segment order 20 · clip `narrator-1008b9e9b430` · occurrence 1 |
 | Timing | before |
-| Gain | 0.36 |
+| Gain | 0.03 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~1:57 |
@@ -221,7 +221,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** The manuscript says the system beeped and a directory opened by itself. A calm, polite notification is more unsettling here than an alarm would be -- the machine is not warning him, it is working.
 
-**Prompt:** `A quiet single electronic notification from a computer doing something on its own. One soft neutral blip followed by a faint digital interface movement, understated and unhurried, close-mic with a little room around it. Not an alarm, not urgent, no voices, no music.`
+**Prompt:** `A single electronic notification from a computer acting on its own, microphone close to the speaker. One rounded mid-range blip with a short clean tail, followed by a brief digital interface flourish, sounding once and not repeating. Filling the frame, recorded at a strong present level, with a little room around it. Not an alarm, no voices, no music.`
 
 ### `ch01-060-terminal-lock`
 
@@ -231,7 +231,7 @@ anchor to its stop anchor and loops underneath.
 | Category | interface (sfx layer) |
 | Anchor | segment order 23 · clip `narrator-c2bcc3f581cf` · occurrence 1 |
 | Timing | during +800ms |
-| Gain | 0.40 |
+| Gain | 0.07 |
 | Duration requested | 2s |
 | Reusable in Godot | yes |
 | Approx. review time | ~2:07 |
@@ -250,7 +250,7 @@ anchor to its stop anchor and loops underneath.
 | Category | system (sfx layer) |
 | Anchor | segment order 23 · clip `narrator-c2bcc3f581cf` · occurrence 1 |
 | Timing | after |
-| Gain | 0.34 |
+| Gain | 0.04 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~2:07 |
@@ -259,7 +259,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** Three seconds of black screen and then the machine wakes itself. Placed after the narration so the listener hears the thing happen having just been told it would not.
 
-**Prompt:** `A screen and its equipment quietly powering back on. Soft electrical energising swell, a faint rising high-frequency whine settling into a steady hum, and a subtle capacitive tick as the display wakes. Gentle and unhurried, close-mic. No alarm, no beeping, no voices, no music.`
+**Prompt:** `A display and the equipment behind it coming back on, microphone at the machine. An energising swell with a rising high-frequency whine settling into a steady hum, and a capacitive tick as the panel wakes. One unhurried movement, close-mic, filling the frame, recorded at a strong present level. No alarm, no beeping, no voices, no music.`
 
 ### `ch01-070-intercom-open`
 
@@ -269,7 +269,7 @@ anchor to its stop anchor and loops underneath.
 | Category | interface (sfx layer) |
 | Anchor | segment order 27 · clip `jack-bennett-a8a6aa7ae3b3` · occurrence 1 |
 | Timing | before |
-| Gain | 0.38 |
+| Gain | 0.05 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~2:20 |
@@ -285,11 +285,11 @@ anchor to its stop anchor and loops underneath.
 | | |
 |---|---|
 | Asset | `amb_intercom_channel_open` |
-| Category | interface (sfx layer) |
+| Category | ambience (ambience layer) |
 | Anchor | segment order 27 · clip `jack-bennett-a8a6aa7ae3b3` · occurrence 1 |
 | Timing | before |
 | Sustain | loops to segment order 49 |
-| Gain | 0.14 |
+| Gain | 0.01 |
 | Fades | in 200ms · out 600ms |
 | Duration requested | 10s, looping |
 | Reusable in Godot | yes |
@@ -299,7 +299,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** A faint live-channel hiss under the whole intercom exchange is the only way to make Sarah read as remote without filtering her approved voice clips. One asset covers twenty segments and nothing of hers is regenerated. GAIN 0.06 -> 0.14: Quieter than the bed he could not hear, so it cannot have been audible either -- and an inaudible intercom bed cannot be judged, which is what he approved it to test.
 
-**Prompt:** `The quiet open-channel hiss of an intercom speaker with the line live and nobody talking. Soft narrow-band electrical noise, a slight carrier hum, thin and boxy as if coming from a small wall-mounted speaker grille. Very low level and unchanging. No voices, no speech, no music, no clicks, no tones. Even throughout so it can loop.`
+**Prompt:** `An intercom speaker with the line open and nobody talking, microphone right at the grille. Narrow-band electrical hiss with a steady carrier hum under it, band-limited and boxy the way a small wall-mounted speaker colours everything. Filling the frame, recorded at a strong present level. Even throughout so it loops. No voices, no speech, no music, no clicks, no tones.`
 
 ### `ch01-072-static-answers`
 
@@ -309,7 +309,7 @@ anchor to its stop anchor and loops underneath.
 | Category | interface (sfx layer) |
 | Anchor | segment order 28 · clip `narrator-d3ceae9f0f0b` · occurrence 1 |
 | Timing | before |
-| Gain | 0.42 |
+| Gain | 0.01 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~2:21 |
@@ -328,7 +328,7 @@ anchor to its stop anchor and loops underneath.
 | Category | interface (sfx layer) |
 | Anchor | segment order 29 · clip `narrator-ed5637682370` · occurrence 1 |
 | Timing | during +500ms |
-| Gain | 0.34 |
+| Gain | 0.05 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~2:23 |
@@ -347,7 +347,7 @@ anchor to its stop anchor and loops underneath.
 | Category | interface (sfx layer) |
 | Anchor | segment order 49 · clip `narrator-91b25dbe2d24` · occurrence 1 |
 | Timing | during +700ms |
-| Gain | 0.34 |
+| Gain | 0.03 |
 | Duration requested | 1s |
 | Reusable in Godot | yes |
 | Approx. review time | ~3:06 |
@@ -366,7 +366,7 @@ anchor to its stop anchor and loops underneath.
 | Category | interface (sfx layer) |
 | Anchor | segment order 53 · clip `system-49a4bf38c005` · occurrence 1 |
 | Timing | before |
-| Gain | 0.36 |
+| Gain | 0.03 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~3:19 |
@@ -375,7 +375,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** 'Jack froze as a file opened', then TOMBS says Boundary control. Reusing the same calm notification ties this to the directory opening earlier: it is the same intruder, doing the same unhurried thing.
 
-**Prompt:** `A quiet single electronic notification from a computer doing something on its own. One soft neutral blip followed by a faint digital interface movement, understated and unhurried, close-mic with a little room around it. Not an alarm, not urgent, no voices, no music.`
+**Prompt:** `A single electronic notification from a computer acting on its own, microphone close to the speaker. One rounded mid-range blip with a short clean tail, followed by a brief digital interface flourish, sounding once and not repeating. Filling the frame, recorded at a strong present level, with a little room around it. Not an alarm, no voices, no music.`
 
 ### `ch01-100-door-slides`
 
@@ -385,7 +385,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 55 · clip `narrator-e2bfa452045f` · occurrence 1 |
 | Timing | during +1500ms |
-| Gain | 0.40 |
+| Gain | 0.02 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~3:22 |
@@ -404,7 +404,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 56 · clip `narrator-1fe67963523b` · occurrence 1 |
 | Timing | during +300ms |
-| Gain | 0.30 |
+| Gain | 0.15 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~3:26 |
@@ -413,7 +413,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** Someone entering is one of the few things footsteps are for. Soft rubber soles on a hard floor, because Chapter 1 canon puts her in gray sneakers.
 
-**Prompt:** `A few unhurried footsteps of an adult in soft rubber-soled sneakers on a hard smooth laboratory floor. Light, quiet, slightly rubbery contact with almost no heel click, four or five steps with a natural gait, modest room reflection. No voices, no music, no heels, no hard shoes, no boots.`
+**Prompt:** `Four or five footsteps of an adult in rubber-soled sneakers on a hard smooth laboratory floor, microphone at floor level beside them. Rubbery contact with a broad low thud under it and no heel click, an even walking gait. Close and filling the frame, recorded at a strong present level, with modest room reflection. No voices, no music, no heels, no hard shoes, no boots.`
 
 ### `ch01-110-sarah-crosses`
 
@@ -423,7 +423,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 67 · clip `narrator-98744cc92aa4` · occurrence 1 |
 | Timing | during +900ms |
-| Gain | 0.22 |
+| Gain | 0.15 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~3:53 |
@@ -432,7 +432,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** 'as she walked over' -- the second and last time the chapter hears her walk. It moves her from the doorway to Jack's shoulder, which is where she stays.
 
-**Prompt:** `A few unhurried footsteps of an adult in soft rubber-soled sneakers on a hard smooth laboratory floor. Light, quiet, slightly rubbery contact with almost no heel click, four or five steps with a natural gait, modest room reflection. No voices, no music, no heels, no hard shoes, no boots.`
+**Prompt:** `Four or five footsteps of an adult in rubber-soled sneakers on a hard smooth laboratory floor, microphone at floor level beside them. Rubbery contact with a broad low thud under it and no heel click, an even walking gait. Close and filling the frame, recorded at a strong present level, with modest room reflection. No voices, no music, no heels, no hard shoes, no boots.`
 
 ### `ch01-120-second-chair`
 
@@ -442,7 +442,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 99 · clip `narrator-a1d352c4ee9f` · occurrence 1 |
 | Timing | during +400ms |
-| Gain | 0.34 |
+| Gain | 0.04 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~5:07 |
@@ -451,7 +451,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** Two people arranging themselves around one workstation. The chairs are how the chapter shows them working as a pair, and it is worth hearing once.
 
-**Prompt:** `An office chair on castors moved deliberately across a hard floor. Slow controlled castor rumble over a short distance with a soft settle at the end, unhurried and domestic, with room reflection. No voices, no music, no impact.`
+**Prompt:** `An office chair on castors rolled a short distance across a hard floor, microphone right at the castors. An even castor rumble at walking pace over a smooth surface, ending in a settle as the chair takes weight. Close and physical, filling the frame, recorded at a strong present level, with room reflection. No voices, no music, no impact.`
 
 ### `ch01-121-jack-makes-room`
 
@@ -461,7 +461,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 106 · clip `narrator-0444653f442f` · occurrence 1 |
 | Timing | during +200ms |
-| Gain | 0.30 |
+| Gain | 0.04 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~5:21 |
@@ -470,7 +470,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** The same asset closing the small joke that started with 'Move.' Jack gives up the keyboard, physically.
 
-**Prompt:** `An office chair on castors moved deliberately across a hard floor. Slow controlled castor rumble over a short distance with a soft settle at the end, unhurried and domestic, with room reflection. No voices, no music, no impact.`
+**Prompt:** `An office chair on castors rolled a short distance across a hard floor, microphone right at the castors. An even castor rumble at walking pace over a smooth surface, ending in a settle as the chair takes weight. Close and physical, filling the frame, recorded at a strong present level, with room reflection. No voices, no music, no impact.`
 
 ### `ch01-130-sarah-types`
 
@@ -480,7 +480,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 107 · clip `narrator-2fd1747b8b44` · occurrence 1 |
 | Timing | during +300ms |
-| Gain | 0.55 |
+| Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~5:24 |
@@ -489,7 +489,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** 'Sarah immediately started typing' -- the moment the competent one takes over. Marking who has the keyboard is the scene's quiet shift of authority.
 
-**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+**Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
 ### `ch01-131-sarah-history`
 
@@ -499,7 +499,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 111 · clip `narrator-94fb639def2d` · occurrence 1 |
 | Timing | during +250ms |
-| Gain | 0.45 |
+| Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~5:32 |
@@ -508,7 +508,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** Sarah opening the connection history. She has the keyboard now and the scene should keep saying so.
 
-**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+**Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
 ### `ch01-132-sarah-digs`
 
@@ -518,7 +518,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 118 · clip `narrator-d4aef8b58a3e` · occurrence 1 |
 | Timing | during +1600ms |
-| Gain | 0.55 |
+| Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~5:45 |
@@ -527,7 +527,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** “began digging through the security logs” is the longest stretch of work in the chapter and had no sound under it at all.
 
-**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+**Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
 ### `ch01-133-sarah-keeps-typing`
 
@@ -537,7 +537,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 132 · clip `narrator-a1ae4cf23cd8` · occurrence 1 |
 | Timing | during +200ms |
-| Gain | 0.42 |
+| Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~6:21 |
@@ -546,7 +546,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** The narration says plainly that she kept typing. Quiet, because it is under a line of banter rather than under the investigation.
 
-**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+**Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
 ### `ch01-140-sarah-resumes`
 
@@ -556,7 +556,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 151 · clip `narrator-668b2dc69db1` · occurrence 1 |
 | Timing | during +200ms |
-| Gain | 0.42 |
+| Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~7:05 |
@@ -565,7 +565,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** “Sarah continued typing.” Re-anchored on 2026-09-18 when Joshua's approved manuscript correction changed that line: the text changed, so the clip's identity changed, and this is the one case where an anchor is SUPPOSED to be edited. Validation caught it rather than letting the cue land somewhere plausible.
 
-**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+**Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
 ### `ch01-150-interrupting-tone`
 
@@ -575,7 +575,7 @@ anchor to its stop anchor and loops underneath.
 | Category | alarm (sfx layer) |
 | Anchor | segment order 153 · clip `narrator-2525fa15c09f` · occurrence 1 |
 | Timing | before |
-| Gain | 0.48 |
+| Gain | 0.02 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~7:09 |
@@ -594,16 +594,15 @@ anchor to its stop anchor and loops underneath.
 | Category | system (sfx layer) |
 | Anchor | segment order 154 · clip `system-f6a28699a3b1` · occurrence 1 |
 | Timing | after |
-| Sustain | loops to segment order 184 |
-| Gain | 0.16 |
-| Fades | in 6000ms · out -ms |
+| Gain | 0.02 |
+| Fades | in 4000ms · out -ms |
 | Duration requested | 20s, looping |
 | Reusable in Godot | yes |
 | Approx. review time | ~7:16 |
 
 **Manuscript:** TOMBS / settlement systems — “Tombs array remote initialization request.”
 
-**Why:** From the remote initialization request onward something enormous is waking up, and it never stops. A slow low rise under the last thirty segments carries the chapter's dread without a single extra beep, and it is where the TOMBS Array's sound identity begins. GAIN 0.09 -> 0.16: Same reasoning. Meant to be felt more than heard, but at 0.09 it was neither.
+**Why:** The array waking up, ONCE, from the remote initialization request. It used to sustain to the end of the chapter, and that was the same mistake chapters 2 and 3 carried: this asset is a 20-second RISE, a bed loops, so it climbed, snapped back and climbed again under the last thirty segments. A rise played once is what the moment actually is -- something enormous starting -- and the chapter ends before it would have needed to repeat.
 
 **Prompt:** `A very large machine beginning to draw power somewhere below and far away. Deep sub-bass hum rising slowly in pitch and intensity, layered with a distant electrical charging whine and a faint sense of enormous mass energising. Restrained and ominous, felt more than heard, no impact, no explosion, no siren, no voices, no music, no cinematic riser or trailer hit.`
 
@@ -615,7 +614,7 @@ anchor to its stop anchor and loops underneath.
 | Category | system (sfx layer) |
 | Anchor | segment order 162 · clip `system-0fe0cf2a5742` · occurrence 1 |
 | Timing | before |
-| Gain | 0.42 |
+| Gain | 0.08 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~7:32 |
@@ -634,7 +633,7 @@ anchor to its stop anchor and loops underneath.
 | Category | system (sfx layer) |
 | Anchor | segment order 164 · clip `system-0fe0cf2a5742` · occurrence 2 |
 | Timing | before |
-| Gain | 0.42 |
+| Gain | 0.08 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~7:35 |
@@ -653,7 +652,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 167 · clip `narrator-cddc94b869d1` · occurrence 1 |
 | Timing | during +500ms |
-| Gain | 0.55 |
+| Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~7:41 |
@@ -662,7 +661,7 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** Jack entering his administrator credentials. Slightly louder than the rest: this is the keystroke the chapter turns on, and the refusal answers it.
 
-**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+**Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
 ### `ch01-170-revoked`
 
@@ -672,7 +671,7 @@ anchor to its stop anchor and loops underneath.
 | Category | system (sfx layer) |
 | Anchor | segment order 168 · clip `system-28a18477a67e` · occurrence 1 |
 | Timing | before |
-| Gain | 0.46 |
+| Gain | 0.08 |
 | Duration requested | 2s |
 | Reusable in Godot | yes |
 | Approx. review time | ~7:47 |
@@ -691,7 +690,7 @@ anchor to its stop anchor and loops underneath.
 | Category | foley (sfx layer) |
 | Anchor | segment order 175 · clip `narrator-7fd987f61325` · occurrence 1 |
 | Timing | during +250ms |
-| Gain | 0.50 |
+| Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
 | Approx. review time | ~8:00 |
@@ -700,16 +699,16 @@ anchor to its stop anchor and loops underneath.
 
 **Why:** “Jack tried his credentials again.” The same sound a second time is the information, exactly as the two denial tones are.
 
-**Prompt:** `A short burst of purposeful typing on a low-profile computer keyboard. Quick quiet key presses with a soft plastic action, a few seconds of steady work rhythm, close-mic with a little room. No voices, no music, no beeping, no mouse clicks.`
+**Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
 ## Unique assets
 
 | Asset | Category | Loop | Secs | Events | Godot | State |
 |---|---|---|---|---|---|---|
+| `amb_computer_lab` | ambience | yes | 45.1 | 1 | yes | cached |
 | `amb_console_alarm_bed` | alarm | yes | 12 | 1 | yes | cached |
-| `amb_intercom_channel_open` | interface | yes | 10 | 1 | yes | cached |
+| `amb_intercom_channel_open` | ambience | yes | 10 | 1 | yes | cached |
 | `amb_tombs_array_power_rise` | system | yes | 20 | 1 | yes | cached |
-| `amb_tombs_lab_night` | ambience | yes | 20 | 1 | yes | cached |
 | `sfx_access_denied_tone` | system | no | 1.5 | 2 | yes | cached |
 | `sfx_access_revoked_tone` | system | no | 2 | 1 | yes | cached |
 | `sfx_alert_warning_hit` | alarm | no | 1.5 | 2 | yes | cached |

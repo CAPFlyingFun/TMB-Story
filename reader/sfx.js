@@ -35,6 +35,14 @@
     unavailable: {},     // asset -> true once a fetch has failed
     order: null,
     prefired: null,      // order whose `before` cues already fired during the gap
+    /* Cues that have already sounded for the segment being played, cleared when a
+       DIFFERENT segment begins. A visit, not a call: enterSegment runs again whenever
+       the same clip is started again -- a retry after a failed load, or Play after
+       Pause -- and without this each of those fired the segment's cues a second time,
+       so two copies of the same alarm sounded together and summed 6 dB louder than
+       the one the cue sheet placed. */
+    fired: {},
+    visiting: null,      // the segment those `fired` ids belong to
     paused: false,       // the listener pressed pause; nothing sounds until resume
     held: []             // elements pauseAll() stopped, to be started again on resume
   };
@@ -150,6 +158,8 @@
   // ---- one-shots -----------------------------------------------------------
   function fire(cue) {
     if (!enabledFor(cue) || state.unavailable[cue.asset] || state.paused) return;
+    if (state.fired[cue.cueId]) return;
+    state.fired[cue.cueId] = true;
     var el = makeEl(cue, false);
     try { el.volume = clamp01(cue.gain); } catch (e) {}
     if (cue.fadeInMs) { try { el.volume = 0; } catch (e) {} ramp(el, cue.gain, cue.fadeInMs); }
@@ -160,6 +170,16 @@
     el.play().catch(function () {
       state.oneShots = state.oneShots.filter(function (x) { return x !== el; });
     });
+  }
+
+  /* A VISIT, NOT A CALL. The gap ahead of a segment fires its `before` cues and then
+     the segment itself begins, so one segment is reached through two entry points and
+     the record has to survive the handover -- otherwise the retry it exists to stop
+     would simply refire what the gap already played. */
+  function beginVisit(order) {
+    if (state.visiting === order) return;
+    state.visiting = order;
+    state.fired = {};
   }
 
   function clearTimers() {
@@ -231,6 +251,7 @@
        instant, which is what keeps the browser and the file agreeing. */
     prefireBefore: function (order) {
       if (order === null || order === undefined) return;
+      beginVisit(order);
       state.prefired = order;
       cuesAt(order, "before").forEach(fire);
     },
@@ -239,6 +260,7 @@
        right beds in or out, and fires its `before` cues only if the gap did not. */
     enterSegment: function (order) {
       clearTimers();
+      beginVisit(order);
       state.order = order;
       syncBeds(order);
       if (state.prefired !== order) cuesAt(order, "before").forEach(fire);
@@ -306,6 +328,8 @@
       state.speaking = false;
       state.order = null;
       state.prefired = null;
+      state.fired = {};
+      state.visiting = null;
       state.paused = false;
       state.held = [];
     }

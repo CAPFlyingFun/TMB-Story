@@ -8,12 +8,14 @@ a local fake, and one test asserts that no API key can reach any output file.
 """
 
 import json
+import math
 import os
 import re
 import subprocess
 import shutil
 import sys
 import tempfile
+import types
 import unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -1671,7 +1673,11 @@ class WebEncodeTests(unittest.TestCase):
         normmod.ffmpeg = lambda: "ffmpeg"
         self.encodes = []
 
+        self.loudness = FakeLoudness()
+
         def fake_run(cmd, **kw):
+            if self.loudness.handles(cmd):
+                return self.loudness.answer(cmd, lambda p: (-20.0, -40.0, 600.0))
             src = cmd[cmd.index("-i") + 1]
             kbps = cmd[cmd.index("-b:a") + 1]
             chans = cmd[cmd.index("-ac") + 1]
@@ -2017,6 +2023,34 @@ def fake_file(rms, peak):
     return ("LEVEL rms=%.2f peak=%.2f" % (rms, peak)).encode()
 
 
+class FakeLoudness(object):
+    """Answers an `ebur128` call the way ffmpeg does, and DELIBERATELY NOT AT THE RMS.
+
+    A fake that returned the RMS back would reproduce exactly the mistake this whole
+    change is about -- treating two different measurements as one number -- and every
+    test would pass while the code went on reading the wrong one. The offset is
+    settable so a test can say which number it expects to come out the other end.
+    """
+
+    def __init__(self, offset=-6.0):
+        self.offset = offset
+        self.calls = []
+
+    def handles(self, cmd):
+        return any("ebur128" in str(a) for a in cmd)
+
+    def answer(self, cmd, level_of):
+        path = cmd[cmd.index("-i") + 1]
+        self.calls.append(path)
+        try:
+            _peak, rms, _sec = level_of(path)
+        except Exception:                      # a file the level fake cannot read
+            rms = -20.0
+        text = ("  Integrated loudness:\n    I:  %.1f LUFS\n    Threshold: -30.0 LUFS\n"
+                % (rms + self.offset))
+        return types.SimpleNamespace(returncode=0, stdout="", stderr=text)
+
+
 def read_level(path):
     text = open(path, "rb").read().decode()
     rms = float(text.split("rms=")[1].split()[0])
@@ -2082,6 +2116,173 @@ class NormalizeMathTests(unittest.TestCase):
         self.assertNotIn("_comment", conf)
 
 
+class LoudnessTests(unittest.TestCase):
+    """RMS says how big the samples are. Loudness says how loud it sounds."""
+
+    def setUp(self):
+        self._run, self._ffmpeg = normmod.subprocess.run, normmod.ffmpeg
+        normmod.ffmpeg = lambda: "ffmpeg"
+
+    def tearDown(self):
+        normmod.subprocess.run, normmod.ffmpeg = self._run, self._ffmpeg
+
+    def _answer(self, stderr):
+        normmod.subprocess.run = lambda *a, **k: types.SimpleNamespace(
+            returncode=0, stdout="", stderr=stderr)
+
+    def test_reads_the_summary_and_not_a_per_frame_line(self):
+        """ebur128 prints a running `I:` on EVERY frame. Taking the first one read a
+        value from a quarter of a second in, which for a one-shot is its attack."""
+        self._answer(
+            "[Parsed_ebur128_0 @ 0x1] t: 0.4  M: -9.0 S: -9.1  I: -9.2 LUFS  LRA: 0.0 LU\n"
+            "[Parsed_ebur128_0 @ 0x1] t: 0.8  M: -30.0 S: -29.0  I: -25.0 LUFS  LRA: 1.0 LU\n"
+            "[Parsed_ebur128_0 @ 0x1] Summary:\n"
+            "\n"
+            "  Integrated loudness:\n"
+            "    I:         -21.4 LUFS\n"
+            "    Threshold: -31.6 LUFS\n")
+        self.assertEqual(normmod.loudness_lufs("x.mp3"), -21.4)
+
+    def test_silence_reads_as_no_measurement_rather_than_a_huge_negative(self):
+        self._answer("  Integrated loudness:\n    I:      -inf LUFS\n")
+        self.assertIsNone(normmod.loudness_lufs("x.mp3"))
+
+    def test_no_summary_at_all_is_no_measurement(self):
+        self._answer("some other ffmpeg output\n")
+        self.assertIsNone(normmod.loudness_lufs("x.mp3"))
+
+
+class LoudnessBackfillTests(unittest.TestCase):
+    """Loudness is a reading, so learning it must never re-encode anything."""
+
+    def setUp(self):
+        self.dir = tempfile.mkdtemp()
+        self.sreg = sfx_reg()
+        self._sfx_dir = sfxmod.SFX_DIR
+        sfxmod.SFX_DIR = os.path.join(self.dir, "sfx")
+        self._run, self._ffmpeg = normmod.subprocess.run, normmod.ffmpeg
+        normmod.ffmpeg = lambda: "ffmpeg"
+        self.loudness = FakeLoudness(offset=-6.0)
+        self.other_calls = []
+
+        def fake_run(cmd, **kw):
+            if self.loudness.handles(cmd):
+                return self.loudness.answer(cmd, lambda p: (-3.0, -20.0, 3.0))
+            self.other_calls.append(cmd)
+            raise AssertionError("measure-loudness must not encode anything")
+        normmod.subprocess.run = fake_run
+
+    def tearDown(self):
+        normmod.subprocess.run, normmod.ffmpeg = self._run, self._ffmpeg
+        sfxmod.SFX_DIR = self._sfx_dir
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def _place(self, asset_id, sidecar_body):
+        audio, sidecar = sfxmod.asset_paths(self.sreg, asset_id)
+        os.makedirs(os.path.dirname(audio), exist_ok=True)
+        with open(audio, "wb") as fh:
+            fh.write(b"audio")
+        cache.write_sidecar(sidecar, dict(sidecar_body, asset=asset_id))
+        return sidecar
+
+    def test_a_measured_asset_gains_a_loudness_and_keeps_its_rms(self):
+        sidecar = self._place("sfx_chair_roll_fast",
+                              {"measured": {"rmsDbfs": -20.0, "peakDbfs": -3.0}})
+        filled, failed = normmod.measure_loudness(
+            self.sreg, ["sfx_chair_roll_fast"], log=lambda *a: None)
+        side = cache.read_sidecar(sidecar)
+        self.assertEqual((filled, failed), (1, 0))
+        self.assertEqual(side["measured"]["lufs"], -26.0)
+        self.assertEqual(side["measured"]["rmsDbfs"], -20.0)
+        self.assertEqual(self.other_calls, [])
+
+    def test_a_normalised_asset_is_written_where_the_mix_reads(self):
+        """The mix reads `normalize.resultLufs` for a normalised asset. A loudness put
+        anywhere else would be a reading of a file the player does not play."""
+        sidecar = self._place("sfx_chair_roll_fast",
+                              {"normalize": {"resultRmsDbfs": -20.0, "appliedDb": 6.0},
+                               "measured": {"rmsDbfs": -26.0}})
+        normmod.measure_loudness(self.sreg, ["sfx_chair_roll_fast"], log=lambda *a: None)
+        side = cache.read_sidecar(sidecar)
+        self.assertEqual(side["normalize"]["resultLufs"], -26.0)
+        self.assertNotIn("lufs", side["measured"])
+
+    def test_running_it_twice_measures_nothing_the_second_time(self):
+        self._place("sfx_chair_roll_fast", {"measured": {"rmsDbfs": -20.0}})
+        normmod.measure_loudness(self.sreg, ["sfx_chair_roll_fast"], log=lambda *a: None)
+        before = len(self.loudness.calls)
+        filled, _ = normmod.measure_loudness(
+            self.sreg, ["sfx_chair_roll_fast"], log=lambda *a: None)
+        self.assertEqual(filled, 0)
+        self.assertEqual(len(self.loudness.calls), before)
+
+    def test_force_re_reads_a_file_that_has_changed(self):
+        self._place("sfx_chair_roll_fast", {"measured": {"rmsDbfs": -20.0}})
+        normmod.measure_loudness(self.sreg, ["sfx_chair_roll_fast"], log=lambda *a: None)
+        filled, _ = normmod.measure_loudness(
+            self.sreg, ["sfx_chair_roll_fast"], force=True, log=lambda *a: None)
+        self.assertEqual(filled, 1)
+
+
+class MixPlacementTests(unittest.TestCase):
+    """Where a cue lands is decided by LOUDNESS, and the report says when it is not."""
+
+    def setUp(self):
+        from tmbaudio import mixtune
+        self.mixtune = mixtune
+        self.dir = tempfile.mkdtemp()
+        self.sreg = sfx_reg()
+        self._sfx_dir = sfxmod.SFX_DIR
+        sfxmod.SFX_DIR = os.path.join(self.dir, "sfx")
+
+    def tearDown(self):
+        sfxmod.SFX_DIR = self._sfx_dir
+        shutil.rmtree(self.dir, ignore_errors=True)
+
+    def _place(self, body):
+        audio, sidecar = sfxmod.asset_paths(self.sreg, "sfx_chair_roll_fast")
+        os.makedirs(os.path.dirname(audio), exist_ok=True)
+        with open(audio, "wb") as fh:
+            fh.write(b"audio")
+        cache.write_sidecar(sidecar, dict(body, asset="sfx_chair_roll_fast"))
+
+    def test_loudness_wins_over_rms_in_the_same_block(self):
+        self._place({"measured": {"rmsDbfs": -20.0, "lufs": -14.0}})
+        level, origin = self.mixtune.asset_level(self.sreg, "sfx_chair_roll_fast")
+        self.assertEqual(level, -14.0)
+        self.assertEqual(origin, "measured")
+
+    def test_the_normalised_reading_still_outranks_an_older_one(self):
+        self._place({"normalize": {"resultRmsDbfs": -20.0, "resultLufs": -15.0},
+                     "measured": {"rmsDbfs": -40.0, "lufs": -38.0}})
+        level, origin = self.mixtune.asset_level(self.sreg, "sfx_chair_roll_fast")
+        self.assertEqual((level, origin), (-15.0, "normalised"))
+
+    def test_an_asset_with_no_loudness_falls_back_and_the_report_says_so(self):
+        """A gain derived from RMS is the thing that has been getting this wrong, so it
+        is visible in the retune output instead of blending in."""
+        self._place({"measured": {"rmsDbfs": -20.0}})
+        level, origin = self.mixtune.asset_level(self.sreg, "sfx_chair_roll_fast")
+        self.assertEqual(level, -20.0)
+        self.assertIn("rms fallback", origin)
+
+    def test_the_hot_asset_joshua_heard_is_placed_quieter_than_rms_would(self):
+        """sfx_console_alarm_erupt reads -11.5 dBFS RMS and -5.6 LUFS. Placed by RMS at
+        a -45.1 target it gets gain 0.042; placed by what it actually sounds like it
+        gets 0.011 -- the 11.9 dB that was burying the narrator."""
+        was = self.mixtune.gain_for(-11.5, -45.1, emphasis_db=6.0)   # RMS, plus a nudge
+        now = self.mixtune.gain_for(-5.6, -45.1)                     # what it sounds like
+        self.assertAlmostEqual(was, 0.042, places=3)
+        self.assertAlmostEqual(now, 0.011, places=3)
+        self.assertAlmostEqual(20 * math.log10(was / now), 11.6, delta=0.5)
+
+    def test_an_asset_rms_calls_loud_and_the_ear_does_not_gets_raised(self):
+        """The correction runs both ways: a deep vibration reads 5 dB QUIETER than its
+        RMS, and under RMS placement it was being pushed down for no reason."""
+        self.assertGreater(self.mixtune.gain_for(-21.7, -45.1),
+                           self.mixtune.gain_for(-17.4, -45.1))
+
+
 class NormalizeFileTests(unittest.TestCase):
     """The master is kept, the gain never stacks, and no credit is ever implied."""
 
@@ -2102,7 +2303,11 @@ class NormalizeFileTests(unittest.TestCase):
         # audio, which is exactly what happened on the first real run.
         self.overshoot = 1.5
 
+        self.loudness = FakeLoudness()
+
         def fake_run(cmd, **kw):
+            if self.loudness.handles(cmd):
+                return self.loudness.answer(cmd, read_level)
             gain = float([a for a in cmd if a.startswith("volume=")][0][7:-2])
             src = cmd[cmd.index("-i") + 1]
             peak, rms, _ = read_level(src)

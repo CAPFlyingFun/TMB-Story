@@ -23,6 +23,8 @@
     "resultRmsDbfs": -17.4,
     "resultPeakDbfs": -5.1,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/system/sfx_distant_vibration_deep.source.mp3",
-    "at": "2026-09-18T12:33:49Z"
+    "at": "2026-09-18T12:33:49Z",
+    "resultLufs": -21.7,
+    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
   }
 }

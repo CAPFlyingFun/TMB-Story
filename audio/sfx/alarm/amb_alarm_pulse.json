@@ -26,6 +26,8 @@
     "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
     "seconds": 18.6,
     "peakDbfs": -7.5,
-    "rmsDbfs": -17.3
+    "rmsDbfs": -17.3,
+    "lufs": -14.8,
+    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
   }
 }

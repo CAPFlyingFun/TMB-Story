@@ -436,12 +436,38 @@ def cmd_credits(args, reg):
 
 
 def cmd_retune_cues(args, reg):
-    """Derive every cue gain from the level its asset actually has. Free."""
+    """Derive every cue gain from the loudness its asset actually has. Free."""
     from tmbaudio import mixtune
     sreg = _sfx_registry(reg)
-    numbers = parse_range(args.chapters, mf.chapter_files())
+    files = mf.chapter_files()
+    numbers = parse_range(args.chapters, files)
     mixtune.retune(numbers, sreg, dry_run=args.dry_run)
+    if not args.dry_run:
+        # THE MANIFEST IS WHAT THE BROWSER READS, and it carries a COPY of each gain.
+        # Rewriting the cue sheets without rebuilding it leaves the repository saying
+        # two different things about how loud a sound is, and the page believing the
+        # older one. Every other caller happened to rebuild afterwards; this one now
+        # does it itself rather than depending on the order of a workflow.
+        for n in numbers:
+            mf.write(mf.build(n, files[n], reg, sfx_registry=sreg))
+        print("Rebuilt %d manifest(s) so the page reads the new gains." % len(numbers))
     return 0
+
+
+def cmd_measure_loudness(args, reg):
+    """Record each asset's BS.1770 loudness. Free, and changes no audio."""
+    from tmbaudio import normalize as norm
+    sreg = _sfx_registry(reg)
+    wanted = {args.asset} if args.asset else set(sreg.assets)
+    if args.asset and args.asset not in sreg.assets:
+        print("no such asset: %s" % args.asset)
+        return 1
+    try:
+        _, failed = norm.measure_loudness(sreg, wanted, force=args.force)
+    except RuntimeError as exc:
+        print(exc)
+        return 1
+    return 1 if failed else 0
 
 
 def cmd_normalize_sfx(args, reg):
@@ -601,8 +627,8 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description="TMB audio pipeline")
     sub = ap.add_subparsers(dest="cmd", required=True)
     for name in ("parse", "validate", "generate", "combine", "export-game",
-                 "cues", "sfx", "generate-sfx", "normalize-sfx", "retune-cues",
-                 "adopt-sfx", "credits", "build-procedural"):
+                 "cues", "sfx", "generate-sfx", "normalize-sfx", "measure-loudness",
+                 "retune-cues", "adopt-sfx", "credits", "build-procedural"):
         p = sub.add_parser(name)
         p.add_argument("--chapters", help="e.g. 1, 1-3, 1,3")
         if name == "validate":
@@ -627,6 +653,11 @@ def main(argv=None):
         if name == "build-procedural":
             p.add_argument("--force", action="store_true",
                            help="rebuild even when the recipe has not changed")
+        if name == "measure-loudness":
+            p.add_argument("--asset", metavar="ASSET_ID", default=None,
+                           help="one asset only")
+            p.add_argument("--force", action="store_true",
+                           help="re-measure assets whose loudness is already recorded")
         if name == "retune-cues":
             p.add_argument("--dry-run", action="store_true",
                            help="show the gains that would change; writes nothing")
@@ -657,6 +688,7 @@ def main(argv=None):
         "combine": cmd_combine, "export-game": cmd_export_game, "voices": cmd_voices,
         "cues": cmd_cues, "sfx": cmd_sfx, "generate-sfx": cmd_generate_sfx,
         "normalize-sfx": cmd_normalize_sfx, "retune-cues": cmd_retune_cues,
+        "measure-loudness": cmd_measure_loudness,
         "adopt-sfx": cmd_adopt_sfx, "credits": cmd_credits,
         "build-procedural": cmd_build_procedural,
     }

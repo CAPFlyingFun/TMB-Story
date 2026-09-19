@@ -23,6 +23,8 @@
     "resultRmsDbfs": -17.5,
     "resultPeakDbfs": -3.3,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/system/sfx_access_revoked_tone.source.mp3",
-    "at": "2026-09-18T12:33:49Z"
+    "at": "2026-09-18T12:33:49Z",
+    "resultLufs": -23.1,
+    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
   }
 }

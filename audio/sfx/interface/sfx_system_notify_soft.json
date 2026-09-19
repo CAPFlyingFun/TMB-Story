@@ -12,5 +12,9 @@
   "assetVersion": 2,
   "fingerprint": "b4985d3d77d99b2aefc52d2d7c21945405477db5b4e8e876adc7f0fbac616e59",
   "bytes": 24703,
-  "generated": "2026-09-18T12:21:05Z"
+  "generated": "2026-09-18T12:21:05Z",
+  "measured": {
+    "lufs": -14.4,
+    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+  }
 }

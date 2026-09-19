@@ -17,5 +17,9 @@
     "author": "u_vr5icvkppa",
     "authorUrl": "https://pixabay.com/users/u_vr5icvkppa-52084143/"
   },
-  "adopted": "2026-09-18T15:27:14Z"
+  "adopted": "2026-09-18T15:27:14Z",
+  "measured": {
+    "lufs": -40.9,
+    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+  }
 }

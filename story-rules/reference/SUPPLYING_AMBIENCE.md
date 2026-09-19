@@ -95,10 +95,19 @@ bed that "sounds for" 20 seconds is even, and one that sounds for 5 is not.
 **No voices, no music, no alarms, no footsteps.** Those are events and they belong in
 the SFX layer, where they can be moved or switched off separately.
 
-**Don't worry about the level.** `normalize-sfx` measures the file and bakes a gain in,
-and every cue gain is then derived from `mix.categoryTargetDbfs`. Give us clean audio
-at any sane level and the pipeline places it. Ambience currently targets −58 dBFS in
-the mix, which is about 36 dB under the narration.
+**Don't worry about the level.** `normalize-sfx` measures the file, `measure-loudness`
+records how loud it actually sounds, and every cue gain is then derived from
+`mix.categoryTargetLufs`. Give us clean audio at any sane level and the pipeline
+places it. Ambience currently targets −58 LUFS in the mix, which is about 38 dB under
+the narration.
+
+The placement moved from RMS to **LUFS** on 2026-09-19, and it is worth knowing why if
+you are ever surprised by where a bed lands. RMS measures how big the samples are;
+BS.1770 loudness measures what the ear does with them, and across this asset set the
+two disagree by as much as 13 dB — a bright alert tone reads far louder than its RMS,
+a deep rumble far quieter. Speech is the one signal where they agree, which is exactly
+why placing effects by RMS against a voice reference seemed to work for as long as it
+did. Your file is measured both ways and placed by the second.
 
 ## Checking your file before you commit it
 

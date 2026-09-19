@@ -199,13 +199,6 @@
         "must carry a credit block -- validation refuses one without it."
       ]
     },
-    "categoryGain": {
-      "ambience": 0.1,
-      "foley": 0.45,
-      "interface": 0.4,
-      "alarm": 0.5,
-      "system": 0.45
-    },
     "duckUnderSpeechTo": {
       "ambience": 0.7,
       "alarm": 0.4,
@@ -251,7 +244,11 @@
         "at -50 dBFS is plainly audible where a broadband bed at -50 is not, so the sirens",
         "needed roughly 14 dB more attenuation than the table gives -- not because the table",
         "is wrong for beds, but because RMS is a poor predictor for anything tonal. When a",
-        "future asset is a tone, expect its emphasisDb to be large and negative."
+        "future asset is a tone, expect its emphasisDb to be large and negative.",
+        "",
+        "SUPERSEDED on 2026-09-19 by categoryTargetLufs. Kept as the fallback for an",
+        "asset measured before loudness was recorded; the retune report names any cue",
+        "still landing on it as 'rms fallback'. When no asset reads that way, delete it."
       ],
       "ambience": -58.0,
       "alarm": -45.1,
@@ -276,6 +273,39 @@
       "dramaKbps": 96,
       "channels": 1,
       "sampleRate": 44100
+    },
+    "categoryTargetLufs": {
+      "_comment": [
+        "Where each kind of sound sits in the finished mix, in LUFS -- BS.1770",
+        "integrated loudness -- with the narration at about -20. scripts/audio.py",
+        "retune-cues derives every cue gain from these and the asset's MEASURED",
+        "loudness, so a gain survives its asset being regenerated or renormalised.",
+        "",
+        "THIS TABLE REPLACES categoryTargetDbfs, AND ONLY THE MEASURE CHANGED. The",
+        "numbers are carried across unaltered on purpose: an asset whose RMS and",
+        "loudness agree does not move at all, and the ones that do move are exactly",
+        "the ones the old measure was placing wrongly.",
+        "",
+        "Joshua, 2026-09-19: 'The first alarm sound in the first chapter is louder",
+        "than the narrator's voice... can't hear him talking.' The cue sheet had it",
+        "17 dB under the narration and the file disagreed: sfx_console_alarm_erupt",
+        "reads -11.5 dBFS RMS and -5.6 LUFS, so it arrived 5.9 dB louder than the",
+        "mix believed. Across the whole set RMS minus LUFS runs from +5.6 to -13.1,",
+        "an 18.7 dB spread -- while for speech the two agree within a decibel, which",
+        "is why measuring effects against a speech reference by RMS looked right for",
+        "as long as it did.",
+        "",
+        "The old note here told a future asset that is a tone to expect a large",
+        "negative emphasisDb. That advice stands for the SIRENS, whose RMS and",
+        "loudness agree to within 0.1 dB and which are intrusive for reasons",
+        "loudness does not measure -- but it was the wrong explanation for the",
+        "alerts and notify tones, and those no longer need an emphasis at all."
+      ],
+      "ambience": -58.0,
+      "alarm": -45.1,
+      "interface": -45.1,
+      "system": -45.1,
+      "foley": -47.1
     }
   }
 }

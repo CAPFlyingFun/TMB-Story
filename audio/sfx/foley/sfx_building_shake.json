@@ -29,6 +29,8 @@
     "resultRmsDbfs": -22.4,
     "resultPeakDbfs": -3.2,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/foley/sfx_building_shake.source.mp3",
-    "at": "2026-09-18T15:27:12Z"
+    "at": "2026-09-18T15:27:12Z",
+    "resultLufs": -25.2,
+    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
   }
 }
