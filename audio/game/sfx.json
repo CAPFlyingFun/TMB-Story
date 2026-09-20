@@ -10,7 +10,7 @@
       "durationSeconds": 18.6,
       "source": "procedural",
       "generated": true,
-      "suggestedGain": 0.5,
+      "suggestedGain": 0.4,
       "description": "The settlement's alert, exactly as Joshua specified it: a 0.65-second ping, one second from ping to ping, three pings, then two seconds of silence. ONE tone -- the wailing version stacked three detuned sweeps and he heard them crossing each other, which read as several machines rather than one alarm. And because the pattern begins and ends in SILENCE, the loop point has nothing sounding at it: the slight pause he kept hearing cannot occur, whatever the container does. Filtered just above its own tone, so the note survives and the edge does not -- which is what a wall does to a sound. The swell at the window is deliberately left open by comparison.",
       "chapters": [
         2,
@@ -25,7 +25,7 @@
       "durationSeconds": 18.0,
       "source": "procedural",
       "generated": true,
-      "suggestedGain": 0.5,
+      "suggestedGain": 0.4,
       "description": "The same alert after the manuscript says the sirens changed pitch: higher, four pings instead of three, and quicker between them. The same machine escalating, not a different recording. Filtered just above its own tone, so the note survives and the edge does not -- which is what a wall does to a sound. The swell at the window is deliberately left open by comparison.",
       "chapters": [
         3
@@ -39,7 +39,7 @@
       "durationSeconds": 45.1,
       "source": "supplied",
       "generated": true,
-      "suggestedGain": 0.1,
+      "suggestedGain": 0.4,
       "description": "Real recorded computer-room tone, supplied by Joshua and confirmed by him to loop seamlessly. Replaces the generated amb_tombs_lab_night as the lab bed. A SEPARATE ASSET rather than a replacement file, because an asset is its name: the generated one keeps its prompt, its measurements and its history, and switching back is repointing three cues. 24 kHz MPEG-2, which is what exposed the duration reader's version bug.",
       "chapters": [
         1,
@@ -55,7 +55,7 @@
       "durationSeconds": 12,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.5,
+      "suggestedGain": 0.4,
       "description": "Categorised `alarm`, not `ambience`, so switching ambience off does not silence the chapter's alarm. Loops under the opening sequence and is ducked hard beneath speech.",
       "chapters": [
         1,
@@ -71,7 +71,7 @@
       "durationSeconds": 10,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.1,
+      "suggestedGain": 0.4,
       "description": "Open intercom channel with the line live and nobody talking. AMBIENCE, not interface: it is room noise that sits under a scene, so it belongs with the backgrounds the listener can switch off. The intercom's clicks and static are separate assets on the sfx layer, because those are events.",
       "chapters": [
         1,
@@ -87,7 +87,7 @@
       "durationSeconds": 593.03,
       "source": "supplied",
       "generated": true,
-      "suggestedGain": 0.1,
+      "suggestedGain": 0.4,
       "description": "Outdoor nature tone, for the miniature world once the characters are standing in it. Nearly ten minutes long, so under a chapter it is effectively continuous and never reaches a loop seam.",
       "chapters": [
         3
@@ -101,7 +101,7 @@
       "durationSeconds": 180.07,
       "source": "supplied",
       "generated": true,
-      "suggestedGain": 0.1,
+      "suggestedGain": 0.4,
       "description": "Outdoor night tone for the settlement -- the world beyond the lab wall after dark. Three minutes, so it loops roughly three times under a chapter-length scene.",
       "chapters": [
         3
@@ -115,7 +115,7 @@
       "durationSeconds": 20,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "The tension spine of the last third, and the beginning of the TOMBS Array's own sound identity. It enters when the remote initialization request appears and does not leave.",
       "chapters": [
         1
@@ -129,7 +129,7 @@
       "durationSeconds": 1.5,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "Used twice, before each Request denied. Hearing the same refusal twice is the information: Jack tried again and got nowhere.",
       "chapters": [
         1
@@ -143,7 +143,7 @@
       "durationSeconds": 2,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "Distinct from the denial tone on purpose. The story distinguishes being refused from being locked out, and that difference is the chapter's ending; it should not sound the same.",
       "chapters": [
         1
@@ -157,7 +157,7 @@
       "durationSeconds": 1.5,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.5,
+      "suggestedGain": 0.4,
       "description": "A single interruption, distinct from the polite chirp and from the full eruption. Used twice: the second alarm during the trace, and the tone that interrupts the couple much later.",
       "chapters": [
         1,
@@ -173,7 +173,7 @@
       "durationSeconds": 6,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "The TOMBS Array's rings, the signature machine sound of chapter 2. Loops because the manuscript has them moving, stopping and starting again across the whole scene.",
       "chapters": [
         2
@@ -187,7 +187,7 @@
       "durationSeconds": 4,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "The event itself. The manuscript is explicit that the sound does not fade or muffle, it ceases, so the asset has to end in real silence rather than a tail.",
       "chapters": [
         3
@@ -201,7 +201,7 @@
       "durationSeconds": 3,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "The other half of the event. These two are always used as a pair, with the silence between them carried by the manifest's own pause rather than by either file.",
       "chapters": [
         3
@@ -215,7 +215,7 @@
       "durationSeconds": 4,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "The shake that makes Sarah catch herself against the console. Used where the manuscript shakes the building, not as general tension.",
       "chapters": [
         3
@@ -229,7 +229,7 @@
       "durationSeconds": 2,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "Jack waking so hard the chair moves. It gives the alarm a physical consequence in a body rather than only on a screen.",
       "chapters": [
         1,
@@ -244,7 +244,7 @@
       "durationSeconds": 2.5,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "Two people arranging themselves around one workstation. Used twice: Sarah pulling a second chair over, and Jack rolling sideways to make room. Consciously different from the fast roll -- that one is a startle, this one is a marriage.",
       "chapters": [
         1
@@ -258,7 +258,7 @@
       "durationSeconds": 3,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.5,
+      "suggestedGain": 0.4,
       "description": "The single biggest sound event in the chapter. The escalation from one chirp to this is the whole opening beat.",
       "chapters": [
         1
@@ -286,7 +286,7 @@
       "durationSeconds": 6,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "The unexplained vibration that arrives twice at the end of chapter 3 and that Jack decides he does not want to explain. The single most important new asset: it is the first sound of the giant world and it will recur for a long time.",
       "chapters": [
         3
@@ -300,7 +300,7 @@
       "durationSeconds": 2.5,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "The terminal undoing Jack's lock without being asked. Soft on purpose: a bang would make it an attack, and the point is that it is calm.",
       "chapters": [
         1,
@@ -315,7 +315,7 @@
       "durationSeconds": 3,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "Sarah's gray sneakers, per Chapter 1 visual canon -- explicitly not heels. Used twice and only for spatial transitions: entering the laboratory, and crossing the room to Jack. The listener never hears her walk otherwise.",
       "chapters": [
         1,
@@ -373,7 +373,7 @@
       "durationSeconds": 3,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "Used three times, only where the manuscript actually starts or resumes typing. It marks who has the keyboard, which is how the scene's authority shifts from Jack to Sarah.",
       "chapters": [
         1,
@@ -389,7 +389,7 @@
       "durationSeconds": 2.5,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "Someone entering behind Jack while he is looking the other way. Pure spatial information, and the manuscript puts it mid-sentence on purpose.",
       "chapters": [
         1,
@@ -404,7 +404,7 @@
       "durationSeconds": 3,
       "source": "generated",
       "generated": true,
-      "suggestedGain": 0.45,
+      "suggestedGain": 0.4,
       "description": "Jack's physical shutdown. It has to sound conclusive, because the room coming back on afterwards is the moment TOMBS stops being a malfunction.",
       "chapters": [
         2
@@ -418,7 +418,7 @@
       "durationSeconds": 12,
       "source": "procedural",
       "generated": true,
-      "suggestedGain": 0.5,
+      "suggestedGain": 0.4,
       "description": "A siren losing power: it holds, then its pitch falls away to nothing. Played once at the window, deliberately louder than the distant beds for a few seconds, then gone -- so the silence and the forest can take over. A one-shot, so it is allowed the fades a loop must never have. Its tone is now 760 Hz, the pulse alarm's own note, so the swell at the window is that machine running down rather than a fourth sound.",
       "chapters": [
         3

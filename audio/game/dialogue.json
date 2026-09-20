@@ -1,6 +1,6 @@
 {
   "_comment": "Canonical character and system voice lines for the game. Narration is excluded because it is audiobook-only. `audio` points at the same clip the audiobook plays: one generated line, used in both places.",
-  "lineCount": 237,
+  "lineCount": 236,
   "lines": [
     {
       "lineId": "system-2e8d8d3e2911",
@@ -1208,12 +1208,12 @@
       ]
     },
     {
-      "lineId": "jack-bennett-90d6c9b3d753",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
+      "lineId": "lena-ortiz-31cba1ebed18",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
       "kind": "character",
       "text": "Jack? We disconnected you.",
-      "audio": "audio/clips/jack/jack-bennett-90d6c9b3d753.mp3",
+      "audio": "audio/clips/lena/lena-ortiz-31cba1ebed18.mp3",
       "chapters": [
         2
       ]
@@ -2232,12 +2232,12 @@
       ]
     },
     {
-      "lineId": "jack-bennett-2a675d4ecfca",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
+      "lineId": "lena-ortiz-9a776af23cf7",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
       "kind": "character",
       "text": "Jack! Jack, answer me!",
-      "audio": "audio/clips/jack/jack-bennett-2a675d4ecfca.mp3",
+      "audio": "audio/clips/lena/lena-ortiz-9a776af23cf7.mp3",
       "chapters": [
         3
       ]
@@ -2337,17 +2337,6 @@
       "kind": "character",
       "text": "Radio?",
       "audio": "audio/clips/jack/jack-bennett-d093f1782c12.mp3",
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "lineId": "jack-bennett-bd45d3e4f5ac",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "Jack.",
-      "audio": "audio/clips/jack/jack-bennett-bd45d3e4f5ac.mp3",
       "chapters": [
         3
       ]

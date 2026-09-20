@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-9a776af23cf7",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "66601fe2402eb5fb5b395fe21c02137783989d1b5e30723c119ddef740d99694",
+  "text": "Jack! Jack, answer me!",
+  "bytes": 30137,
+  "generated": "2026-09-20T04:20:40Z"
+}

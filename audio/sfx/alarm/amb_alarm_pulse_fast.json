@@ -22,12 +22,11 @@
   "format": "wav",
   "expression": "0.5*lt(mod(t,3.6),2.4)*lt(mod(mod(t,3.6),0.6),0.4)*sin(PI*mod(mod(t,3.6),0.6)/0.4)*sin(2*PI*1040*t)",
   "measured": {
-    "measuredAt": "2026-09-18",
+    "measuredAt": "2026-09-20",
     "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
     "seconds": 18.0,
     "peakDbfs": -7.7,
     "rmsDbfs": -17.2,
-    "lufs": -15.5,
-    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+    "lufs": -15.5
   }
 }
