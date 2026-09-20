@@ -2116,6 +2116,62 @@ class NormalizeMathTests(unittest.TestCase):
         self.assertNotIn("_comment", conf)
 
 
+class SpeakerCorrectionTests(unittest.TestCase):
+    """The pinned speakers, checked against the real manuscript and the real registry.
+
+    A wrong voice is the one audio fault no amount of measuring finds: the file is
+    perfect, the level is right, and the wrong person is talking. It survived three
+    chapters of listening before Joshua caught it, so the corrections are pinned by a
+    test rather than left to a comment in a JSON file.
+    """
+
+    PINS = [
+        (2, "Jack? We disconnected you.", "lena-ortiz"),
+        (3, "Jack! Jack, answer me!", "lena-ortiz"),
+    ]
+
+    def setUp(self):
+        self.reg = Registry()
+        self.overrides = mf.load_overrides()
+        self.files = mf.chapter_files()
+
+    def _segments(self, number):
+        return parse.parse_chapter(self.files[number], self.reg, self.overrides)["segments"]
+
+    def test_a_voice_arriving_through_jacks_terminal_is_not_jack(self):
+        for number, text, speaker in self.PINS:
+            found = [s for s in self._segments(number) if s["displayText"] == text]
+            self.assertEqual(len(found), 1, "%r in chapter %d" % (text, number))
+            self.assertEqual(found[0]["speaker"], speaker,
+                             "%r must be spoken by %s" % (text, speaker))
+
+    def test_sarah_calls_jacks_name_in_her_own_voice_both_times(self):
+        """Two identical one-word lines four segments apart. The parser got the second
+        right and the first wrong, which is what made the mistake audible at all."""
+        calls = [s for s in self._segments(3) if s["displayText"] == "Jack."]
+        self.assertEqual(len(calls), 2)
+        self.assertEqual([s["speaker"] for s in calls],
+                         ["sarah-bennett", "sarah-bennett"])
+
+    def test_no_pin_has_been_orphaned_by_a_manuscript_edit(self):
+        """An override is keyed by the clip id the PARSER produced. Edit the line and
+        the key stops matching -- silently, and the wrong voice comes back. So every
+        pin has to still land on a segment."""
+        provisional = set()
+        for number in sorted(self.files):
+            for seg in parse.parse_chapter(self.files[number], self.reg)["segments"]:
+                provisional.add(parse.clip_id(seg["speaker"], seg["ttsText"]))
+        for key in self.overrides:
+            # assertTrue, not assertIn: a failing assertIn prints all 520 clip ids,
+            # which buries the one line that says what is wrong.
+            self.assertTrue(key in provisional,
+                            "override %s no longer matches anything the parser "
+                            "produces, so its correction is not being applied" % key)
+        pinned = sum(1 for n in sorted(self.files)
+                     for seg in self._segments(n) if seg.get("method") == "override")
+        self.assertEqual(pinned, len(self.overrides))
+
+
 class ChapterTimelineTests(unittest.TestCase):
     """One sum, three consumers: the page, the mix and the join all read the same one."""
 

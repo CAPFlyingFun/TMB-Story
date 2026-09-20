@@ -14,12 +14,33 @@
     "  ttsText  - a pronunciation-only rewrite; displayText stays canonical",
     "  note     - why",
     "",
-    "Run `python3 scripts/audio.py validate` to see what still needs pinning."
+    "Run `python3 scripts/audio.py validate` to see what still needs pinning.",
+    "",
+    "ONE FAILURE KEEPS RECURRING, AND IT IS WORTH NAMING. Every correction below after",
+    "the first is the same sentence shape: an action beat that names Jack as the OWNER",
+    "or the ANSWERER of a device, immediately before a line spoken by whoever is on the",
+    "other end of it. 'Jack's wrist terminal chirped again.' 'Jack answered, and Lena's",
+    "voice burst through it.' 'Behind him, Sarah had walked toward a window.' The",
+    "nearest name is not the speaker in any of them -- it is the listener, or the thing",
+    "the speaker is arriving through. The parser reads the nearest named person as the",
+    "speaker, which is right most of the time and exactly wrong here."
   ],
   "clips": {
     "REVIEW_REQUIRED-28f9c13a10b8": {
       "speaker": "jack-bennett",
       "note": "Chapter 1, paragraph 26: 'Jack released the intercom and looked back at the monitor. The TOMBS directory was still open. \"Who are you?\"' Jack is the actor of the paragraph; the parser could not see it because the sentence immediately before the quote is about the directory rather than about a person. Reviewed against the manuscript 2026-09-17."
+    },
+    "jack-bennett-90d6c9b3d753": {
+      "speaker": "lena-ortiz",
+      "note": "Chapter 2: 'Jack's wrist terminal chirped again. \"Jack? We disconnected you.\"' The terminal is Jack's; the voice coming out of it is Lena's, answering the disconnect she was asked for two lines earlier and which she confirmed with 'Doing it now.' Jack cannot be asking himself whether he is Jack. Caught by Joshua on the audio, 2026-09-20."
+    },
+    "jack-bennett-2a675d4ecfca": {
+      "speaker": "lena-ortiz",
+      "note": "Chapter 3: 'His wrist terminal chirped with an incoming call from island utility control. Jack answered, and Lena's voice burst through it. \"Jack! Jack, answer me!\"' The manuscript names the speaker in the same sentence -- Lena's voice -- and the parser still took Jack, because Jack is the one who ANSWERED. Found auditing chapters 2 and 3 after Joshua caught the chapter 2 one, 2026-09-20."
+    },
+    "jack-bennett-bd45d3e4f5ac": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 3: 'Behind him, Sarah had walked toward a window. \"Jack.\"' She is calling him; he is the name being said, not the one saying it. The line four segments later -- 'Sarah called again from the window. \"Jack.\"' -- was attributed to Sarah correctly, which is what made this one visible: the same word from the same woman twice, once in the wrong voice. Found auditing chapters 2 and 3, 2026-09-20."
     }
   }
 }
