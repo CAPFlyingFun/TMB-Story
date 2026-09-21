@@ -204,9 +204,19 @@ def export_encode(sfx_registry):
 def export_chapter(number, registry, sfx_registry=None, log=print):
     """Write audio/exports/chapter-NN-drama.mp3. Returns the path, or None."""
     manifest = mf.load(number)
-    if not manifest.get("cues"):
-        log("chapter %d has no cues; the plain combined export already is the mix."
-            % number)
+    # A CHAPTER WITH NO CUES STILL NEEDS THIS FILE, and the comment that used to sit
+    # here -- "the plain combined export already is the mix" -- was right about the
+    # SOUND and wrong about everything the page needs. The plain export is an mp3
+    # `-c copy` join, which keeps each clip's gapless padding and so cannot be seeked
+    # into: chapter one drifts twelve seconds by its end. This export places every clip
+    # with `adelay` at exactly the manifest's offsets, so it is indexable by
+    # construction, and that index is what lets a chapter play as ONE file instead of
+    # as two hundred elements assembled live in the browser.
+    #
+    # So chapters 4 to 6, which have no sound design yet, get the same treatment as the
+    # ones that do. The mix is simply voices; that is what those chapters are.
+    if not manifest.get("segments"):
+        log("chapter %d has no segments to mix." % number)
         return None
     if not have_ffmpeg():
         log("chapter %d: ffmpeg is not on the path, so the layers cannot be overlaid. "

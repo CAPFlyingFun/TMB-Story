@@ -1618,6 +1618,40 @@ class ApiRefusalTests(unittest.TestCase):
         self.assertIn("<the key>", said)
 
 
+class SingleFileExportTests(unittest.TestCase):
+    """Every chapter gets an indexable one-file export, sound design or not.
+
+    The export used to refuse a chapter with no cue sheet, on the grounds that the
+    plain combined file "already is the mix". True about the sound and false about the
+    page: the plain file is an mp3 `-c copy` join, which cannot be seeked into, so
+    chapters 4 to 6 would have played as 195, 266 and 304 separate elements assembled
+    live -- the arrangement every playback bug this project has had came from.
+    """
+
+    def test_a_chapter_with_no_cues_still_gets_a_mixed_export(self):
+        for n in (4, 5, 6):
+            m = json.load(open("audio/manifests/chapter-%02d.json" % n, encoding="utf-8"))
+            self.assertFalse(m.get("cues"), "chapter %d has cues now; update this test" % n)
+            mixed = (m.get("exports") or {}).get("mixed")
+            self.assertTrue(mixed, "chapter %d has no mixed export" % n)
+            self.assertEqual(len(mixed["startMs"]), len(m["segments"]),
+                             "chapter %d's index does not cover its segments" % n)
+
+    def test_every_chapter_is_playable_as_one_file(self):
+        for n in sorted(mf.chapter_files()):
+            m = json.load(open("audio/manifests/chapter-%02d.json" % n, encoding="utf-8"))
+            self.assertTrue(m["timeline"]["complete"], "chapter %d has missing clips" % n)
+            self.assertTrue(((m.get("exports") or {}).get("mixed") or {}).get("startMs"),
+                            "chapter %d cannot be played as one file" % n)
+
+    def test_the_index_is_the_arithmetic_the_mix_was_built_from(self):
+        """If these drift apart the page highlights one line while another is read."""
+        for n in (4, 6):
+            m = json.load(open("audio/manifests/chapter-%02d.json" % n, encoding="utf-8"))
+            self.assertEqual(m["exports"]["mixed"]["startMs"],
+                             [s["startMs"] for s in m["segments"]])
+
+
 class QuietEventTests(unittest.TestCase):
     """The catastrophe is quiet, and that is a thing the audio can contradict.
 
