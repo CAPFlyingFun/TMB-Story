@@ -121,9 +121,9 @@
         4
       ],
       "orders": [
-        94
+        58
       ],
-      "note": "ch4 order 94: 'A man's voice answered.' -- the Unit Twelve officer."
+      "note": "ch4 order 58 (updated 2026-09-21): 'Doctor, I wasn't planning on crossing it.' -- the Unit Twelve officer."
     },
     "sarah-bennett-b7ec31474105": {
       "speaker": "jack-bennett",
@@ -141,9 +141,9 @@
         4
       ],
       "orders": [
-        96
+        60
       ],
-      "note": "ch4 order 96: His answer."
+      "note": "ch4 order 60 (updated 2026-09-21): 'Dirt. Grass. A lot of both.' -- the Unit Twelve officer's answer."
     },
     "REVIEW_REQUIRED-c759387ee325": {
       "speaker": "security-officer",
@@ -151,9 +151,9 @@
         4
       ],
       "orders": [
-        98
+        62
       ],
-      "note": "ch4 order 98: 'The officer hesitated' -- the same man, same paragraph."
+      "note": "ch4 order 62 (updated 2026-09-21): 'And I think the dirt is higher than my vehicle.' -- the officer's continuation."
     },
     "jack-bennett-1b69a4d9c64f": {
       "speaker": "security-officer",
@@ -201,9 +201,9 @@
         5
       ],
       "orders": [
-        11
+        12
       ],
-      "note": "ch5 order 11: Sarah says 'Don't.'; Jack denies saying anything."
+      "note": "ch5 order 12 (updated 2026-09-21): 'I didn't say anything.' -- Jack responding to Sarah's 'Don't.'"
     },
     "REVIEW_REQUIRED-6b7b8b9f7357": {
       "speaker": "sarah-bennett",
@@ -211,9 +211,9 @@
         5
       ],
       "orders": [
-        12
+        13
       ],
-      "note": "ch5 order 12: 'You were about to.' -- her reply."
+      "note": "ch5 order 13 (updated 2026-09-21): 'You were about to.' -- Sarah's reply."
     },
     "sarah-bennett-dc4595902777": {
       "speaker": "jack-bennett",
@@ -341,9 +341,9 @@
         5
       ],
       "orders": [
-        232
+        221
       ],
-      "note": "ch5 order 232: 'One of the officers stared at it.'"
+      "note": "ch5 order 221 (updated 2026-09-21): 'Is that plastic?' -- one of the security officers looking at the fingernail."
     },
     "sarah-bennett-937447a849cb": {
       "speaker": "jack-bennett",
@@ -608,6 +608,56 @@
         293
       ],
       "note": "ch6 order 293, pronunciation only -- displayText is unchanged. The label on the boundary file, and the last three words of the movement. It has to land as a quiet statement, not a shout."
+    },
+    "REVIEW_REQUIRED-8e5a0463a6e0": {
+      "speaker": "security-officer",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        166
+      ],
+      "note": "ch5 order 166: Security officer asking if Jack is Doctor Bennett."
+    },
+    "REVIEW_REQUIRED-9b35f01a5592": {
+      "speaker": "doctor-mercer",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        139
+      ],
+      "note": "ch6 order 139: Doctor Mercer introduces herself in the call."
+    },
+    "REVIEW_REQUIRED-c35b896342f9": {
+      "speaker": "doctor-mercer",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        141
+      ],
+      "note": "ch6 order 141: Doctor Mercer asking about the vibration."
+    },
+    "REVIEW_REQUIRED-7247272972de": {
+      "speaker": "doctor-mercer",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        172
+      ],
+      "note": "ch6 order 172: Doctor Mercer acknowledging Jack's instructions."
+    },
+    "REVIEW_REQUIRED-245f5e985f38": {
+      "speaker": "doctor-mercer",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        174
+      ],
+      "note": "ch6 order 174: Doctor Mercer asking about timeline for informing the settlement."
     }
   }
 }
