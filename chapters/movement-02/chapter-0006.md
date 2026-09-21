@@ -28,7 +28,7 @@ new_canon:
 playable_beat_flow: ["connect the environmental sensor", "replay the wrist-camera footage frame by frame", "calculate the scale from the TOMBS event log", "open the original calibration records", "compare the unauthorized command with the internal calculation", "overlay the boundary on the island development survey", "open the maintenance partition", "read the file metadata", "open the ownership field", "open the label"]
 ending_type: revelation
 review_status: approved
-audio_status: not-started
+audio_status: recorded
 approved_on: "2026-09-21"
 source: "Joshua's revised Word manuscript, 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. This file is the manuscript and is not edited without his instruction."
 ---

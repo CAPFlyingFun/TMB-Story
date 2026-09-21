@@ -22,7 +22,7 @@ new_canon:
 playable_beat_flow: ["attempt manual control", "interrupt the scale calculation", "brace through the activation", "check on Sarah and the baby", "read the sensor grid", "take the call from island utility control", "look out the window", "cycle the perimeter cameras", "open the TOMBS event log", "overlay the boundary on the settlement map"]
 ending_type: revelation
 review_status: approved
-audio_status: not-started
+audio_status: recorded
 approved_on: "2026-09-21"
 source: "Joshua's revised Word manuscripts, 01-03 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. These replace the pre-revision opening: the catastrophe is now quiet, there is no settlement-wide siren before activation, and most residents sleep through the event."
 ---

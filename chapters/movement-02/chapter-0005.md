@@ -27,7 +27,7 @@ new_canon:
 playable_beat_flow: ["open the settlement broadcast controls", "make the announcement", "read the water estimate", "map the vibration reports", "search the event sequence for a source address", "ride to the southern perimeter", "take readings at the boundary", "examine the pale object in the soil", "get back in the vehicle"]
 ending_type: cliffhanger
 review_status: approved
-audio_status: not-started
+audio_status: recorded
 approved_on: "2026-09-21"
 source: "Joshua's revised Word manuscript, 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. This file is the manuscript and is not edited without his instruction."
 ---

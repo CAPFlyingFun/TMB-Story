@@ -8,8 +8,8 @@ with `python3 scripts/render-cue-sheet.py 3`.
 
 | | |
 |---|---|
-| Playback events | **18** |
-| Unique assets | **12** (0 still to generate) |
+| Playback events | **19** |
+| Unique assets | **13** (0 still to generate) |
 | Chapter runtime as it plays today | 10:02 |
 | Voice clips regenerated for this | **none** |
 
@@ -29,26 +29,28 @@ anchor to its stop anchor and loops underneath.
 
 ## Cues
 
-### `ch03-002-night-outside`
+### `ch03-001-tombs-array`
 
 | | |
 |---|---|
-| Asset | `amb_night_outside` |
-| Category | ambience (ambience layer) |
+| Asset | `sfx_array_rings_move` |
+| Category | system (sfx layer) |
 | Anchor | segment order 0 · clip `narrator-59502f926e4e` · occurrence 1 |
 | Timing | before |
-| Sustain | loops to segment order 118 |
-| Gain | 0.16 |
-| Fades | in 4000ms · out 2500ms |
-| Duration requested | 180.07s, looping |
+| Sustain | loops to segment order 38 |
+| Gain | 0.02 |
+| Fades | in 1200ms · out 250ms |
+| Duration requested | 6s, looping |
 | Reusable in Godot | yes |
 | Approx. review time | ~0:00 |
 
 **Manuscript:** Narrator — “Jack's fingers raced over the keyboard.”
 
-**Why:** The ordinary night outside the settlement, from the chapter's first line until the moment Jack looks out of the window. It exists to be UNREMARKABLE: a normal night behind the glass while the alarms and the vibrations happen indoors, so that what replaces it lands.
+**Why:** THE ARRAY, RUNNING, UNDER THE WHOLE OPENING. Chapter 2 ends with the rings accelerating and the boundary acquired, and Chapter 3 begins in that room seconds later, so the machine is the sound of the scene -- it is what Jack is fighting and what Sarah is trying to interrupt.
 
-**Prompt:** `(hand-supplied asset; no prompt)`
+IT STOPS ON 'The sound vanished. It didn't fade or become muffled. It simply ceased to exist.' A 250 ms fade rather than a cut, because a hard cut on an mp3 boundary clicks, and 250 ms is short enough to read as instant. Everything the listener has been hearing for four minutes goes away on the line that says so, and nothing replaces it until the room tone returns at 'The laboratory settled into an unsettling silence.'
+
+**Prompt:** `Large articulated machinery rotating. Heavy rings turning on precision bearings with a deep servo drive under them, metal sliding against metal, a sense of considerable mass moving under control. Full-bodied and close, recorded at a strong present level. No voices, no music, no alarm, no impact.`
 
 ### `ch03-010-jack-typing`
 
@@ -144,6 +146,25 @@ anchor to its stop anchor and loops underneath.
 **Why:** Into the gap before Scale factor locked. Reused.
 
 **Prompt:** `One sharp electronic warning tone announcing a new alert on a laboratory display. Single hard synthetic alert stab, urgent and attention-grabbing, short decay, slight room reflection. One hit only, no repeats, no siren, no voices, no music.`
+
+### `ch03-035-power-rise`
+
+| | |
+|---|---|
+| Asset | `amb_tombs_array_power_rise` |
+| Category | system (sfx layer) |
+| Anchor | segment order 25 · clip `system-e71707fdf287` · occurrence 1 |
+| Timing | after |
+| Gain | 0.02 |
+| Duration requested | 20s, looping |
+| Reusable in Godot | yes |
+| Approx. review time | ~0:59 |
+
+**Manuscript:** TOMBS / settlement systems — “Scale factor locked.”
+
+**Why:** The array drawing its power for the event, from 'Scale factor locked' into the white light about twenty seconds later -- which is the length of this asset and what it was generated for. A ONE-SHOT, never a bed: it is a RISE, and looping a rise is what made Chapter 1 sound like it was speeding up. BEYOND JOSHUA'S NOTE and easy to drop: his note was the rings, this is the build underneath them.
+
+**Prompt:** `A very large machine beginning to draw power somewhere below and far away. Deep sub-bass hum rising slowly in pitch and intensity, layered with a distant electrical charging whine and a faint sense of enormous mass energising. Restrained and ominous, felt more than heard, no impact, no explosion, no siren, no voices, no music, no cinematic riser or trailer hit.`
 
 ### `ch03-060-event-collapse`
 
@@ -386,8 +407,9 @@ anchor to its stop anchor and loops underneath.
 | `amb_computer_lab` | ambience | yes | 45.1 | 1 | yes | cached |
 | `amb_intercom_channel_open` | ambience | yes | 10 | 1 | yes | cached |
 | `amb_nature_outside` | ambience | yes | 593.03 | 1 | yes | cached |
-| `amb_night_outside` | ambience | yes | 180.07 | 1 | yes | cached |
+| `amb_tombs_array_power_rise` | system | yes | 20 | 1 | yes | cached |
 | `sfx_alert_warning_hit` | alarm | no | 1.5 | 1 | yes | cached |
+| `sfx_array_rings_move` | system | yes | 6 | 1 | yes | cached |
 | `sfx_boundary_event_collapse` | system | no | 4 | 1 | yes | cached |
 | `sfx_boundary_event_return` | system | no | 3 | 1 | yes | cached |
 | `sfx_building_shake` | foley | no | 4 | 2 | yes | cached |
@@ -396,5 +418,5 @@ anchor to its stop anchor and loops underneath.
 | `sfx_system_notify_soft` | interface | no | 1.5 | 3 | yes | cached |
 | `sfx_wrist_terminal_chirp` | interface | no | 1.5 | 1 | yes | cached |
 
-12 of 12 are reusable in Godot. The game decides when each one plays; this cue
+13 of 13 are reusable in Godot. The game decides when each one plays; this cue
 sheet only decides when the audiobook plays it.

@@ -16,24 +16,24 @@
   "chapter": 3,
   "cues": [
     {
-      "cueId": "ch03-002-night-outside",
-      "asset": "amb_night_outside",
+      "cueId": "ch03-001-tombs-array",
+      "asset": "sfx_array_rings_move",
       "anchor": {
         "clipId": "narrator-59502f926e4e",
         "occurrence": 1
       },
       "timing": "before",
-      "fadeInMs": 4000,
-      "fadeOutMs": 2500,
+      "fadeInMs": 1200,
+      "fadeOutMs": 250,
       "sustain": {
         "until": {
-          "clipId": "narrator-f1f2c92be2cc",
+          "clipId": "narrator-df7a7a52e272",
           "occurrence": 1
         },
-        "timing": "after"
+        "timing": "before"
       },
-      "why": "The ordinary night outside the settlement, from the chapter's first line until the moment Jack looks out of the window. It exists to be UNREMARKABLE: a normal night behind the glass while the alarms and the vibrations happen indoors, so that what replaces it lands.",
-      "gain": 0.16
+      "why": "THE ARRAY, RUNNING, UNDER THE WHOLE OPENING. Chapter 2 ends with the rings accelerating and the boundary acquired, and Chapter 3 begins in that room seconds later, so the machine is the sound of the scene -- it is what Jack is fighting and what Sarah is trying to interrupt.\n\nIT STOPS ON 'The sound vanished. It didn't fade or become muffled. It simply ceased to exist.' A 250 ms fade rather than a cut, because a hard cut on an mp3 boundary clicks, and 250 ms is short enough to read as instant. Everything the listener has been hearing for four minutes goes away on the line that says so, and nothing replaces it until the room tone returns at 'The laboratory settled into an unsettling silence.'",
+      "gain": 0.022
     },
     {
       "cueId": "ch03-010-jack-typing",
@@ -69,6 +69,18 @@
       "timing": "before",
       "gain": 0.08,
       "why": "NEW. The shake arrives before the narration names it, so the listener feels it with Sarah rather than being told about it."
+    },
+    {
+      "cueId": "ch03-035-power-rise",
+      "asset": "amb_tombs_array_power_rise",
+      "anchor": {
+        "clipId": "system-e71707fdf287",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "emphasisDb": -2.0,
+      "why": "The array drawing its power for the event, from 'Scale factor locked' into the white light about twenty seconds later -- which is the length of this asset and what it was generated for. A ONE-SHOT, never a bed: it is a RISE, and looping a rise is what made Chapter 1 sound like it was speeding up. BEYOND JOSHUA'S NOTE and easy to drop: his note was the rings, this is the build underneath them.",
+      "gain": 0.018
     },
     {
       "cueId": "ch03-040-second-vibration",
@@ -277,6 +289,11 @@
       "cueId": "ch03-075-alarms-screaming",
       "asset": "amb_console_alarm_bed",
       "why": "'Alarms screamed as Jack hit the floor' is now 'Sound returned all at once as Jack hit the floor... Somewhere inside the array chamber, metal rang once and went still.' The alarm bed under the landing was carrying a sentence the revision deleted, and it is the texture that made the aftermath read as an emergency rather than as a silence."
+    },
+    {
+      "cueId": "ch03-002-night-outside",
+      "asset": "amb_night_outside",
+      "why": "Removed 2026-09-21 on Joshua's note: 'at the start of chapter 3, keep the sounds of the TOMBS, and only switch that until they go outside.' He is right. The chapter opens inside a room where a machine is running out of control, and the bed under it was crickets. The idea it was serving -- an ordinary night behind the glass -- is a good one and it belongs to the WINDOW, not to the room; amb_nature_outside already does that job at 'He looked outside', which is where the switch should happen."
     }
   ]
 }

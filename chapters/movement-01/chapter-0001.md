@@ -21,7 +21,7 @@ new_canon:
 playable_beat_flow: ["review diagnostic data", "read the access warning", "open the network monitor", "trace the unknown connection", "lock the terminal", "call Sarah on the intercom", "search the access logs", "attempt to cancel the initialization request", "re-enter administrator credentials"]
 ending_type: unanswered question
 review_status: approved
-audio_status: not-started
+audio_status: recorded
 approved_on: "2026-09-21"
 source: "Joshua's revised Word manuscripts, 01-03 and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx. Chapters 1 to 3 re-imported 2026-09-21 from his corrected copy of the 01-03 document, which fixes the keyboard repetition at source. This file is the manuscript and is not edited without his instruction."
 revision_notes:

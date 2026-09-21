@@ -25,7 +25,7 @@ new_canon:
 playable_beat_flow: ["answer the utility call", "bring up the utility station cameras", "take the medical center call", "answer the security channel", "open the settlement infrastructure schematic", "trace the freshwater intake to the boundary", "inspect the cut pipe on the maintenance camera", "step through the frozen camera frames"]
 ending_type: revelation
 review_status: approved
-audio_status: not-started
+audio_status: recorded
 approved_on: "2026-09-21"
 source: "Joshua's revised Word manuscript, 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. This file is the manuscript and is not edited without his instruction."
 ---

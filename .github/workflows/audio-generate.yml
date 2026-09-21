@@ -209,6 +209,17 @@ jobs:
         continue-on-error: true
         run: python3 scripts/measure-mix.py --chapter "${{ inputs.chapters }}"
 
+      - name: Rebuild the reader's own manifest
+        if: inputs.mode != 'dry-run'
+        # THE PAGE'S CHAPTER LIST IS A FILE, and it went stale for a day: chapters 4 to
+        # 6 were written, generated, designed and mixed, and did not appear in the
+        # reader, because reader/manifest.json was last built on 2026-09-17 and nothing
+        # rebuilt it. Same shape as two other faults this week -- a document that names
+        # an artefact has to be refreshed by whatever produces the artefact -- and this
+        # one was invisible, because every check passed while the page showed three
+        # chapters.
+        run: python3 scripts/build-manifest.py
+
       - name: Rebuild the game dialogue export
         if: inputs.mode != 'dry-run'
         # Deliberately NOT scoped to inputs.chapters. The export is the index of every
@@ -234,7 +245,10 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add audio/
+          # reader/ as well as audio/: the page's chapter list is generated, and a
+          # commit that left it out is why the reader could show three chapters while
+          # six were on disk.
+          git add audio/ reader/manifest.json
           if git diff --cached --quiet; then
             echo "Nothing new to commit; every clip was already cached."
           else

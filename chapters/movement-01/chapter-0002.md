@@ -22,7 +22,7 @@ new_canon:
 playable_beat_flow: ["move through the corridor to the control room", "call the island utility station", "cut external access and disconnect TOMBS from the grid", "check backup capacitors and the internal reactor", "observe the array rings through the window", "attempt to kill the boundary emitters", "pull the physical shutdown lever", "watch the target dimensions be hidden", "try the mapping controls and be denied", "order quiet containment and no settlement alarm"]
 ending_type: revelation
 review_status: approved
-audio_status: not-started
+audio_status: recorded
 approved_on: "2026-09-21"
 source: "Joshua's revised Word manuscripts, 01-03 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. These replace the pre-revision opening: the catastrophe is now quiet, there is no settlement-wide siren before activation, and most residents sleep through the event."
 ---

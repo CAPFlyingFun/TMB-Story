@@ -1,10 +1,16 @@
 {
-  "generated": "2026-09-17",
+  "generated": "2026-09-21",
   "movements": [
     {
       "number": 1,
       "dir": "outline/movement-01",
       "overview": "outline/movement-01/overview.md",
+      "miniArcs": []
+    },
+    {
+      "number": 2,
+      "dir": "outline/movement-02",
+      "overview": "outline/movement-02/overview.md",
       "miniArcs": []
     }
   ],
@@ -15,9 +21,9 @@
       "movement": 1,
       "title": "The Alarm",
       "pov": "Jack",
-      "word_count": 1160,
+      "word_count": 1163,
       "review_status": "approved",
-      "audio_status": "not-started",
+      "audio_status": "recorded",
       "ending_type": "unanswered question"
     },
     {
@@ -26,9 +32,9 @@
       "movement": 1,
       "title": "The Boundary",
       "pov": "Jack",
-      "word_count": 1083,
+      "word_count": 1008,
       "review_status": "approved",
-      "audio_status": "not-started",
+      "audio_status": "recorded",
       "ending_type": "revelation"
     },
     {
@@ -37,9 +43,42 @@
       "movement": 1,
       "title": "The Activation",
       "pov": "Jack",
-      "word_count": 1384,
+      "word_count": 1395,
       "review_status": "approved",
-      "audio_status": "not-started",
+      "audio_status": "recorded",
+      "ending_type": "revelation"
+    },
+    {
+      "number": 4,
+      "path": "chapters/movement-02/chapter-0004.md",
+      "movement": 2,
+      "title": "The First Calls",
+      "pov": "Jack",
+      "word_count": 1504,
+      "review_status": "approved",
+      "audio_status": "recorded",
+      "ending_type": "revelation"
+    },
+    {
+      "number": 5,
+      "path": "chapters/movement-02/chapter-0005.md",
+      "movement": 2,
+      "title": "The Edge",
+      "pov": "Jack",
+      "word_count": 1872,
+      "review_status": "approved",
+      "audio_status": "recorded",
+      "ending_type": "cliffhanger"
+    },
+    {
+      "number": 6,
+      "path": "chapters/movement-02/chapter-0006.md",
+      "movement": 2,
+      "title": "Someone Knew",
+      "pov": "Jack",
+      "word_count": 1716,
+      "review_status": "approved",
+      "audio_status": "recorded",
       "ending_type": "revelation"
     }
   ],

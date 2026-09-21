@@ -3669,21 +3669,21 @@
   ],
   "cues": [
     {
-      "cueId": "ch03-002-night-outside",
-      "asset": "amb_night_outside",
-      "category": "ambience",
-      "layer": "ambience",
+      "cueId": "ch03-001-tombs-array",
+      "asset": "sfx_array_rings_move",
+      "category": "system",
+      "layer": "sfx",
       "timing": "before",
       "order": 0,
-      "gain": 0.16,
+      "gain": 0.022,
       "loop": true,
-      "audio": "audio/sfx/ambience/amb_night_outside.mp3",
+      "audio": "audio/sfx/system/sfx_array_rings_move.mp3",
       "cached": true,
-      "why": "The ordinary night outside the settlement, from the chapter's first line until the moment Jack looks out of the window. It exists to be UNREMARKABLE: a normal night behind the glass while the alarms and the vibrations happen indoors, so that what replaces it lands.",
-      "fadeInMs": 4000,
-      "fadeOutMs": 2500,
-      "stopOrder": 118,
-      "stopTiming": "after"
+      "why": "THE ARRAY, RUNNING, UNDER THE WHOLE OPENING. Chapter 2 ends with the rings accelerating and the boundary acquired, and Chapter 3 begins in that room seconds later, so the machine is the sound of the scene -- it is what Jack is fighting and what Sarah is trying to interrupt.\n\nIT STOPS ON 'The sound vanished. It didn't fade or become muffled. It simply ceased to exist.' A 250 ms fade rather than a cut, because a hard cut on an mp3 boundary clicks, and 250 ms is short enough to read as instant. Everything the listener has been hearing for four minutes goes away on the line that says so, and nothing replaces it until the room tone returns at 'The laboratory settled into an unsettling silence.'",
+      "fadeInMs": 1200,
+      "fadeOutMs": 250,
+      "stopOrder": 38,
+      "stopTiming": "before"
     },
     {
       "cueId": "ch03-010-jack-typing",
@@ -3751,6 +3751,19 @@
       "audio": "audio/sfx/alarm/sfx_alert_warning_hit.mp3",
       "cached": true,
       "why": "Into the gap before Scale factor locked. Reused."
+    },
+    {
+      "cueId": "ch03-035-power-rise",
+      "asset": "amb_tombs_array_power_rise",
+      "category": "system",
+      "layer": "sfx",
+      "timing": "after",
+      "order": 25,
+      "gain": 0.018,
+      "loop": true,
+      "audio": "audio/sfx/system/amb_tombs_array_power_rise.mp3",
+      "cached": true,
+      "why": "The array drawing its power for the event, from 'Scale factor locked' into the white light about twenty seconds later -- which is the length of this asset and what it was generated for. A ONE-SHOT, never a bed: it is a RISE, and looping a rise is what made Chapter 1 sound like it was speeding up. BEYOND JOSHUA'S NOTE and easy to drop: his note was the rings, this is the build underneath them."
     },
     {
       "cueId": "ch03-060-event-collapse",
@@ -4059,7 +4072,7 @@
   "exports": {
     "mixed": {
       "audio": "audio/exports/chapter-03-drama.mp3",
-      "bytes": 7231470,
+      "bytes": 7231469,
       "seconds": 602.62,
       "layers": [
         "voice",
@@ -4255,7 +4268,7 @@
     },
     "voice": {
       "audio": "audio/exports/chapter-03.mp3",
-      "bytes": 9687758,
+      "bytes": 9687757,
       "seconds": 605.49,
       "layers": [
         "voice"
