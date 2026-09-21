@@ -103,14 +103,24 @@
     return state.mode === MODE_MIXED && !!state.mixed;
   }
 
-  /* THE URL CARRIES THE FILE'S SIZE, and that is a cache key rather than decoration.
-     A chapter export keeps its path forever while its contents change every time the
-     mix is retuned, and a phone that has played it once will happily go on playing
-     the copy it already has. The manifest is fetched with no-cache, so `bytes` is
-     always the size of the file on the server right now: when the mix changes, the
-     URL changes, and the old copy is simply never asked for again. */
+  /* THE URL CARRIES A HASH OF THE FILE, and that is a cache key rather than
+     decoration. A chapter export keeps its path forever while its contents change
+     every time the mix is retuned, and a phone that has played it once will happily
+     go on playing the copy it already has. The manifest is fetched with no-cache, so
+     this is always the file on the server right now: when the mix changes the URL
+     changes, and the old copy is never asked for again.
+
+     IT USED TO BE THE FILE'S SIZE, which nearly failed silently. Chapter 3's opening
+     bed changed from a night ambience to the TOMBS array -- four completely different
+     minutes of sound -- and the file moved by ONE BYTE. At a fixed bitrate an mp3's
+     size is set by its duration, so two mixes of one chapter are nearly always within
+     a few bytes and can easily be identical; an identical size is an identical URL,
+     and then the phone plays the old mix forever with nothing anywhere to say so.
+     `bytes` stays in the manifest because the page prints it as megabytes, but it is
+     no longer what identifies the file. */
   function mixedSrc() {
-    return "./" + state.mixed.audio + "?v=" + (state.mixed.bytes || 0);
+    var m = state.mixed;
+    return "./" + m.audio + "?v=" + (m.hash || m.bytes || 0);
   }
 
   /* The index the mixed file was built with. A mixed export is placed clip by clip at
@@ -170,7 +180,8 @@
         mixed.startMs.length !== m.segments.length) {
       return checkAvailability(m);
     }
-    return fetch("./" + mixed.audio + "?v=" + (mixed.bytes || 0), { method: "HEAD" })
+    return fetch("./" + mixed.audio + "?v=" + (mixed.hash || mixed.bytes || 0),
+                 { method: "HEAD" })
       .then(function (r) { return r.ok; })
       .catch(function () { return false; })
       .then(function (ok) {

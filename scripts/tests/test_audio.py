@@ -1726,6 +1726,68 @@ class SmartQuoteTests(unittest.TestCase):
                                  parse.clip_id(seg["speaker"], seg["ttsText"]))
 
 
+class CacheKeyTests(unittest.TestCase):
+    """The page's cache key has to move when the mix does.
+
+    It was the file's SIZE, and that came within one byte of failing silently. Chapter
+    3's opening bed changed from a night ambience to the TOMBS array -- four completely
+    different minutes of sound -- and the export went from 7,231,470 bytes to
+    7,231,469. Had they matched, the URL would have matched, and a phone that had
+    played the chapter once would have gone on playing the old mix forever with nothing
+    anywhere to say so.
+    """
+
+    def test_two_different_files_of_the_same_size_get_different_keys(self):
+        """The near-miss, made into a certainty. At a fixed bitrate an mp3's size is
+        set by its duration, so this is not a contrived case -- it is the normal one."""
+        d = tempfile.mkdtemp()
+        try:
+            a, b = os.path.join(d, "a.mp3"), os.path.join(d, "b.mp3")
+            open(a, "wb").write(b"\x00" * 4096 + b"crickets")
+            open(b, "wb").write(b"\x00" * 4096 + b"thearray")
+            self.assertEqual(os.path.getsize(a), os.path.getsize(b),
+                             "the fixture has to be the collision it is testing")
+            self.assertNotEqual(mf._content_hash(a), mf._content_hash(b))
+        finally:
+            shutil.rmtree(d, ignore_errors=True)
+
+    def test_the_key_is_stable_for_a_file_that_has_not_changed(self):
+        """A key that moved on its own would re-download every chapter on every load."""
+        path = os.path.join(ROOT, "audio", "exports", "chapter-01-drama.mp3")
+        self.assertEqual(mf._content_hash(path), mf._content_hash(path))
+
+    def test_every_chapter_export_carries_one(self):
+        for n in sorted(mf.chapter_files()):
+            with open(os.path.join(ROOT, "audio", "manifests", "chapter-%02d.json" % n),
+                      encoding="utf-8") as fh:
+                mixed = (json.load(fh).get("exports") or {}).get("mixed")
+            if not mixed:
+                continue
+            self.assertRegex(mixed.get("hash", ""), r"^[0-9a-f]{12}$",
+                             "chapter %d's export has no content hash" % n)
+
+    def test_the_hash_matches_the_file_on_disk(self):
+        """A stale key is the same fault in a different place: the manifest would be
+        pointing a phone at a URL for a mix that is no longer there."""
+        for n in sorted(mf.chapter_files()):
+            with open(os.path.join(ROOT, "audio", "manifests", "chapter-%02d.json" % n),
+                      encoding="utf-8") as fh:
+                mixed = (json.load(fh).get("exports") or {}).get("mixed")
+            if not mixed:
+                continue
+            self.assertEqual(mixed["hash"],
+                             mf._content_hash(os.path.join(ROOT, mixed["audio"])),
+                             "chapter %d's manifest hash does not match its export -- "
+                             "the manifest was not rebuilt after the mix" % n)
+
+    def test_the_player_uses_the_hash_and_not_the_size(self):
+        with open(os.path.join(ROOT, "reader", "player.js"), encoding="utf-8") as fh:
+            js = fh.read()
+        src = js[js.index("function mixedSrc()"):][:220]
+        self.assertIn("m.hash", src)
+        self.assertNotIn('"?v=" + (m.bytes', src)
+
+
 class ReaderManifestTests(unittest.TestCase):
     """The page's chapter list is a generated file, and it went stale in silence.
 

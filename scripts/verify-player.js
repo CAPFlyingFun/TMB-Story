@@ -219,11 +219,17 @@ async function main() {
           exportEls.map((e) => e._src).join(", "));
     /* A chapter export keeps its path while its contents change, so the URL has to
        carry something that moves when the mix does, or a phone plays the copy it
-       already had. */
+       already had. It carries a CONTENT HASH rather than the file's size, because the
+       size very nearly failed to move: Chapter 3's opening bed changed from a night
+       ambience to the TOMBS array and the file shifted by one byte. */
     check("the chapter file is requested with a cache key that tracks the file",
           exportEls.length === 1 &&
-          exportEls[0]._src === "./" + mixed.audio + "?v=" + mixed.bytes,
+          exportEls[0]._src === "./" + mixed.audio + "?v=" + mixed.hash,
           exportEls.length ? exportEls[0]._src : "");
+    check("that key is a content hash, not the file size",
+          !!mixed.hash && /^[0-9a-f]{12}$/.test(mixed.hash) &&
+          String(mixed.hash) !== String(mixed.bytes),
+          "hash " + mixed.hash + ", bytes " + mixed.bytes);
     check("no voice clip is fetched at all", voiceElements().length === 0,
           voiceElements().length + " clip element(s)");
     const el = exportEls[0];

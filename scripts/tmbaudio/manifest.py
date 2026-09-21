@@ -1,5 +1,6 @@
 """Chapter manifest building, validation and the Godot dialogue export."""
 
+import hashlib
 import json
 import os
 import re
@@ -79,6 +80,28 @@ def timeline(segments):
     return starts, ends, t
 
 
+def _content_hash(path):
+    """Twelve hex characters of the file's sha256. The page's cache key.
+
+    IT USED TO BE THE FILE'S SIZE, and that was very nearly a silent disaster. When
+    Chapter 3's opening bed changed from a night ambience to the TOMBS array -- a
+    completely different four minutes of sound -- the file went from 7,231,470 bytes to
+    7,231,469. ONE BYTE. It happened to be enough, and it happened to be luck: at a
+    fixed bitrate an mp3's size is set by its duration, so two mixes of the same
+    chapter are nearly always within a few bytes and can trivially be identical.
+
+    An identical size means an identical URL, which means a phone that has played the
+    chapter once goes on playing the old mix forever, with nothing anywhere to say so.
+    The listener hears a change that was never made and the repository looks correct.
+    A hash cannot do that.
+    """
+    digest = hashlib.sha256()
+    with open(path, "rb") as fh:
+        for block in iter(lambda: fh.read(1 << 20), b""):
+            digest.update(block)
+    return digest.hexdigest()[:12]
+
+
 def _export(number, suffix):
     rel = os.path.join("audio", "exports", "chapter-%02d%s.mp3" % (number, suffix))
     full = os.path.join(ROOT, rel)
@@ -86,6 +109,7 @@ def _export(number, suffix):
         return None
     return {"audio": rel.replace(os.sep, "/"),
             "bytes": os.path.getsize(full),
+            "hash": _content_hash(full),
             "seconds": round(cache.mp3_duration_seconds(full), 2)}
 
 
