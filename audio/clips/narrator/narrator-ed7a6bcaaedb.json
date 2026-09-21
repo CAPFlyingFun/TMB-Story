@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-ed7a6bcaaedb",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b7ee9a66756e334f21c651cdd4e670b7492d5f8425dd2575c42342022d3e2c3d",
+  "text": "Sarah temporarily paused on the keyboard.",
+  "bytes": 43511,
+  "generated": "2026-09-21T15:33:39Z"
+}
