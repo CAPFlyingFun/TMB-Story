@@ -60,6 +60,7 @@ def cmd_validate(args, reg):
     numbers = parse_range(args.chapters, files)
     all_ready = True
     all_missing = set()
+    all_waiting = 0
     for n in numbers:
         m = mf.build(n, files[n], reg)
         mf.write(m)
@@ -87,15 +88,34 @@ def cmd_validate(args, reg):
                 print("    %s  order %d  para %d" % (seg["clipId"], seg["order"], seg["paragraph"]))
                 print('      text: "%s"' % seg["displayText"][:88])
                 print("      why : %s" % seg["note"])
-        print("READY FOR GENERATION: %s" % ("YES" if s["ready"] else "NO"))
-        all_ready = all_ready and s["ready"]
+        # TWO DIFFERENT ANSWERS, AND THEY USED TO BE ONE. An AMBIGUOUS speaker is a
+        # question nobody has answered -- the parser does not know who is talking, so
+        # generating would put a line in a voice chosen by a coin toss, and the run
+        # should stop. A MISSING VOICE is a question already answered: the speaker is
+        # known and the voice is not assigned yet. That holds up its own lines and
+        # nothing else. Joshua, 2026-09-21, introducing Doctor Mercer: "Do not block
+        # the entire audio update because one new character needs a voice."
+        blocked = bool(s["reviewRequired"])
+        waiting = len([x for x in m["segments"] if x["speaker"] in set(s["missingVoices"])])
+        if blocked:
+            print("READY FOR GENERATION: NO -- %d ambiguous speaker(s) to pin"
+                  % len(s["reviewRequired"]))
+        elif waiting:
+            print("READY FOR GENERATION: YES for %d of %d segments. %d waiting for a "
+                  "voice." % (s["segments"] - waiting, s["segments"], waiting))
+        else:
+            print("READY FOR GENERATION: YES")
+        all_ready = all_ready and not blocked
         all_missing.update(s["missingVoices"])
+        all_waiting += waiting
     print("\n" + "=" * 62)
     if all_missing:
-        print("BLOCKED. Assign an ElevenLabs voice for: %s"
-              % ", ".join(reg.name(x) for x in sorted(all_missing)))
+        print("WAITING ON A VOICE ASSIGNMENT for %s -- %d segment(s) across the book."
+              % (", ".join(reg.name(x) for x in sorted(all_missing)), all_waiting))
         print("Add the voice id to story-rules/voice-registry.json. Never invent one.")
-    print("OVERALL READY FOR GENERATION: %s" % ("YES" if all_ready else "NO"))
+        print("Everything else still generates; those segments are skipped and reported.")
+    print("OVERALL READY FOR GENERATION: %s"
+          % ("YES" if all_ready else "NO -- ambiguous speakers must be pinned first"))
     return 0 if all_ready else 1
 
 

@@ -234,7 +234,14 @@ def summarize(manifest, registry):
         "reviewRequired": review,
         "inferred": inferred,
         "missingVoices": missing,
+        # `ready` is the strict reading: everything resolved AND every voice assigned.
+        # `blocked` is the one that stops a run, and it is narrower on purpose. An
+        # ambiguous speaker is a question nobody has answered, so generating would pick
+        # a voice by coin toss; an unassigned voice is a question already answered, and
+        # holds up its own lines and nothing else.
         "ready": not review and not missing,
+        "blocked": bool(review),
+        "waitingOnVoice": [s for s in manifest["segments"] if s["speaker"] in set(missing)],
     }
 
 

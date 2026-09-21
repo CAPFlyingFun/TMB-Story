@@ -1621,6 +1621,57 @@ class QuietEventTests(unittest.TestCase):
             self.assertTrue(entry.get("why"), "%s was removed with no reason" % entry)
 
 
+class VoiceAssignmentTests(unittest.TestCase):
+    """An unassigned voice holds up its own lines. An ambiguous speaker stops the run.
+
+    These were the same condition until 2026-09-21, and collapsing them meant Doctor
+    Mercer's nine lines could hold up the other 186 segments of chapter 4. Joshua: "Do
+    not block the entire audio update because one new character needs a voice."
+    """
+
+    def _summary(self, number):
+        reg = Registry()
+        m = mf.build(number, mf.chapter_files()[number], reg)
+        return mf.summarize(m, reg), reg
+
+    def test_a_character_with_no_voice_does_not_block_the_chapter(self):
+        s, reg = self._summary(4)
+        self.assertIn("doctor-mercer", s["missingVoices"])
+        self.assertFalse(s["blocked"],
+                         "chapter 4 is blocked, and the only thing missing is a voice")
+        self.assertTrue(s["waitingOnVoice"], "the waiting segments should be named")
+
+    def test_the_waiting_segments_are_exactly_that_speaker_s_lines(self):
+        s, reg = self._summary(4)
+        unvoiced = set(s["missingVoices"])
+        self.assertTrue(all(x["speaker"] in unvoiced for x in s["waitingOnVoice"]))
+        others = [x for x in mf.build(4, mf.chapter_files()[4], reg)["segments"]
+                  if x["speaker"] not in unvoiced]
+        self.assertGreater(len(others), 150,
+                           "the rest of the chapter has to remain generatable")
+
+    def test_an_ambiguous_speaker_still_stops_everything(self):
+        """The narrower rule must not have widened into 'nothing ever blocks'."""
+        reg = Registry()
+        m = mf.build(1, mf.chapter_files()[1], reg)
+        m["segments"][0] = dict(m["segments"][0], speaker=REVIEW, method="unresolved")
+        self.assertTrue(mf.summarize(m, reg)["blocked"])
+
+    def test_every_voice_in_use_is_the_one_the_repository_configured(self):
+        """Joshua listed four ids and told us to take Lena's from the repository. This
+        pins all five so a regeneration cannot quietly recast anybody."""
+        reg = Registry()
+        expect = {
+            "jack-bennett": "mkT7KpSQR9btjx2rHpQY",
+            "sarah-bennett": "MClEFoImJXBTgLwdLI5n",
+            "system": "QpRibeuwXoGrlpLFDwqY",
+            "narrator": "XjLkpWUlnhS8i7gGz3lZ",
+            "lena-ortiz": "4O1sYUnmtThcBoSBrri7",
+        }
+        for speaker, voice in expect.items():
+            self.assertEqual(reg.voice_id(speaker), voice, speaker)
+
+
 class WebEncodeTests(unittest.TestCase):
     """Smaller files, and the original never lost.
 
