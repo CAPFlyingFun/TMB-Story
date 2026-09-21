@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-33bfcafaf74b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fc5b779f32e4eb3b7f7639867bf4ecb74960f499d00b6f898bc0a0e6fbc48904",
+  "text": "Jack glanced at Sarah.",
+  "bytes": 29301,
+  "generated": "2026-09-21T14:15:35Z"
+}

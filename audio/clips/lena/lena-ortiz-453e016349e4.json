@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-453e016349e4",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "63a89145768ed650449308d579cc2464581b3ea1d02d412bdc9fa09d3586c5df",
+  "text": "Already locking the exterior doors.",
+  "bytes": 35988,
+  "generated": "2026-09-21T14:15:33Z"
+}

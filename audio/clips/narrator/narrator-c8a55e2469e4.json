@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c8a55e2469e4",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f984763cd9b374debcc7b1e19af255583dfc2315b3a9baecc25d0a5967eac2d1",
+  "text": "His wrist terminal vibrated once against his skin. Not an emergency cascade. Not a settlement alarm. One incoming call from island utility control.",
+  "bytes": 175586,
+  "generated": "2026-09-21T14:15:17Z"
+}

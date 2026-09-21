@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-c882b2b43a0e",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "be257ab8c3534e0b8384ec958325701b0dacabb3c8b31f863fd657dcff7af057",
+  "text": "Keep the night crew inside too. No general alarm yet. I don't want people pouring into the streets before we know what's out there.",
+  "bytes": 108713,
+  "generated": "2026-09-21T14:15:33Z"
+}

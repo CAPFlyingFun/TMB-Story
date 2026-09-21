@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7e9177605128",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "03bd50e282168567b6d245fc975322bc13016c18afe88b68f508388cde321714",
+  "text": "Medical center.",
+  "bytes": 23449,
+  "generated": "2026-09-21T14:15:34Z"
+}

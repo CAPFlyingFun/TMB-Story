@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-c2e8d594f5da",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cda5ed8692b42b9359df9339da08593ebbb35ce4f836db904da1c7f5c67a18a3",
+  "text": "I'm uncomfortable with how suspicious you are of reasonable.",
+  "bytes": 56050,
+  "generated": "2026-09-21T14:16:01Z"
+}

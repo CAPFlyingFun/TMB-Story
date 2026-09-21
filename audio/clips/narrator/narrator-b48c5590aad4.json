@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b48c5590aad4",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0a6f73d4f2597c389ef74a80bcaf45fed1fcff4fbed1b81c49250b4397d87ce5",
+  "text": "Sarah's voice came through his wrist.",
+  "bytes": 35988,
+  "generated": "2026-09-21T14:16:10Z"
+}

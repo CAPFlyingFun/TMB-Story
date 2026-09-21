@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-ae14f437fc87",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0408b40bb527d76da335fb016233d7c8f1de651e69383fd7c0646bdf64f46e33",
+  "text": "Air is normal. Temperature difference is negligible. Pressure is normal.",
+  "bytes": 71097,
+  "generated": "2026-09-21T14:16:11Z"
+}

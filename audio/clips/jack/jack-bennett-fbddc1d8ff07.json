@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-fbddc1d8ff07",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3cadb5e5d924a6703e9d6eb52e4cf72fdc87a03bec220aa9aa4166faea34db29",
+  "text": "You're thirty-two weeks pregnant, it's the middle of the night, and something outside town may be causing ground vibrations.",
+  "bytes": 106623,
+  "generated": "2026-09-21T14:15:58Z"
+}

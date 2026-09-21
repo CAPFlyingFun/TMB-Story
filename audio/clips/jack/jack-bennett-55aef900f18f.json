@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-55aef900f18f",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5e6287b4cfbadf939c62d57b336857d78508d4e0317ba7c7801b08e9496ce375",
+  "text": "We go with them,",
+  "bytes": 21777,
+  "generated": "2026-09-21T14:15:52Z"
+}

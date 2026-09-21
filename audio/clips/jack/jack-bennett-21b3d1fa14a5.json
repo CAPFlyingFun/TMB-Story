@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-21b3d1fa14a5",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e1074b5d5da5e1b19172e3c99eeab359c27d4f96ad6702a4004049b3042e65fc",
+  "text": "I was going to ask two of those.",
+  "bytes": 27629,
+  "generated": "2026-09-21T14:15:49Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a9dc2b966a3d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "36e3939c2636426a53c5929b3f75acf3f0a818cbe856b2393707c17cbc96a693",
+  "text": "Jack looked back at the screen.",
+  "bytes": 31391,
+  "generated": "2026-09-21T14:15:11Z"
+}

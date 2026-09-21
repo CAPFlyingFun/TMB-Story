@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-6e14dc409ce5",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e153fc3a359fa2d94f159abb61d878ee09e5d73c070536db0c35daedfa6595b9",
+  "text": "I wasn't going to ask.",
+  "bytes": 23449,
+  "generated": "2026-09-21T14:15:48Z"
+}

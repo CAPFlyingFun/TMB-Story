@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-c17b4caa6d0c",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ff475be2825627bb8000376fd2ae32fb49c924e26e5bd8a7c896971059248a8a",
+  "text": "Or somebody hid them.",
+  "bytes": 22613,
+  "generated": "2026-09-21T14:15:04Z"
+}

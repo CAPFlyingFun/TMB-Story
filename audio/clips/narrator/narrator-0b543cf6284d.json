@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0b543cf6284d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "87d5db6016808d2980db8e202d71dd53077328ac486ae16cfcb67e9290a681d3",
+  "text": "He narrowed his eyes.",
+  "bytes": 24285,
+  "generated": "2026-09-21T14:16:00Z"
+}

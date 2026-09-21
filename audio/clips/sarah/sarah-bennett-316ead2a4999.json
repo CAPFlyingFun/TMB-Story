@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-316ead2a4999",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8272a97feb7cf81cbf067f06b551e2744a1384b2c8185967ce998028e2975e96",
+  "text": "It wasn't easy. It was reasonable.",
+  "bytes": 31391,
+  "generated": "2026-09-21T14:16:01Z"
+}

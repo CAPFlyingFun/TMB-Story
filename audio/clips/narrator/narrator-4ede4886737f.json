@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4ede4886737f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "583793aa05ab9914b478f8dc9bee881a9aa15b9140ba8a5a67b44248405152d6",
+  "text": "The laboratory settled into an unsettling silence. Jack slowly stood and looked around. Nothing appeared different. The consoles were intact, the TOMBS Array had stopped, and even the emergency lighting had returned to normal.",
+  "bytes": 238280,
+  "generated": "2026-09-21T14:15:17Z"
+}

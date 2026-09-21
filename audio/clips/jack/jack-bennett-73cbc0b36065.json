@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-73cbc0b36065",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "759a1c09554a68d16e6a0dbb646e7a2126cc89feb9b77a54e11a649598cf2db0",
+  "text": "I wasn't planning to.",
+  "bytes": 20524,
+  "generated": "2026-09-21T14:16:03Z"
+}

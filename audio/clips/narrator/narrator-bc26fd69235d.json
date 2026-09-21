@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-bc26fd69235d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cbc224759ccedaba348f8058da8885efa96f2b78837d8b7e6a7545e6da396607",
+  "text": "Jack enlarged the feed.",
+  "bytes": 26375,
+  "generated": "2026-09-21T14:15:31Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b9e96e0d3d52",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "076e1ef4f019b209ff2c89851ef8aaa2ae5a29e9fcfb4d0d2a055a7529dffa75",
+  "text": "Jack pointed at her.",
+  "bytes": 30137,
+  "generated": "2026-09-21T14:15:48Z"
+}

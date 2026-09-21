@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-19b9b04df359",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c62fc4e5e505abe32567097b18de920cdd353f222822671f53926fbc75d319e4",
+  "text": "For several seconds, the impossible forest beyond the settlement remained perfectly indifferent.",
+  "bytes": 82799,
+  "generated": "2026-09-21T14:15:18Z"
+}

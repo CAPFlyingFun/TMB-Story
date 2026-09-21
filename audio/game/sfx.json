@@ -1,36 +1,7 @@
 {
   "_comment": "Canonical sound assets the game may reuse. `audio` points at the same file the audiobook plays: one generated effect, used in both places, never a second copy for Godot. Playback timing is NOT exported -- the audiobook's cue sheet times these against narration, and the game times them against gameplay. `generated` false means the asset is approved but not yet made.",
-  "assetCount": 32,
+  "assetCount": 28,
   "assets": [
-    {
-      "assetId": "amb_alarm_pulse",
-      "category": "alarm",
-      "loop": true,
-      "audio": "audio/sfx/alarm/amb_alarm_pulse.wav",
-      "durationSeconds": 18.6,
-      "source": "procedural",
-      "generated": true,
-      "suggestedGain": 0.4,
-      "description": "The settlement's alert, exactly as Joshua specified it: a 0.65-second ping, one second from ping to ping, three pings, then two seconds of silence. ONE tone -- the wailing version stacked three detuned sweeps and he heard them crossing each other, which read as several machines rather than one alarm. And because the pattern begins and ends in SILENCE, the loop point has nothing sounding at it: the slight pause he kept hearing cannot occur, whatever the container does. Filtered just above its own tone, so the note survives and the edge does not -- which is what a wall does to a sound. The swell at the window is deliberately left open by comparison.",
-      "chapters": [
-        2,
-        3
-      ]
-    },
-    {
-      "assetId": "amb_alarm_pulse_fast",
-      "category": "alarm",
-      "loop": true,
-      "audio": "audio/sfx/alarm/amb_alarm_pulse_fast.wav",
-      "durationSeconds": 18.0,
-      "source": "procedural",
-      "generated": true,
-      "suggestedGain": 0.4,
-      "description": "The same alert after the manuscript says the sirens changed pitch: higher, four pings instead of three, and quicker between them. The same machine escalating, not a different recording. Filtered just above its own tone, so the note survives and the edge does not -- which is what a wall does to a sound. The swell at the window is deliberately left open by comparison.",
-      "chapters": [
-        3
-      ]
-    },
     {
       "assetId": "amb_computer_lab",
       "category": "ambience",
@@ -59,8 +30,7 @@
       "description": "Categorised `alarm`, not `ambience`, so switching ambience off does not silence the chapter's alarm. Loops under the opening sequence and is ducked hard beneath speech.",
       "chapters": [
         1,
-        2,
-        3
+        2
       ]
     },
     {
@@ -251,20 +221,6 @@
       ]
     },
     {
-      "assetId": "sfx_console_alarm_erupt",
-      "category": "alarm",
-      "loop": false,
-      "audio": "audio/sfx/alarm/sfx_console_alarm_erupt.mp3",
-      "durationSeconds": 3,
-      "source": "generated",
-      "generated": true,
-      "suggestedGain": 0.4,
-      "description": "The single biggest sound event in the chapter. The escalation from one chirp to this is the whole opening beat.",
-      "chapters": [
-        1
-      ]
-    },
-    {
       "assetId": "sfx_console_tone_soft",
       "category": "interface",
       "loop": false,
@@ -408,20 +364,6 @@
       "description": "Jack's physical shutdown. It has to sound conclusive, because the room coming back on afterwards is the moment TOMBS stops being a malfunction.",
       "chapters": [
         2
-      ]
-    },
-    {
-      "assetId": "sfx_siren_winddown",
-      "category": "alarm",
-      "loop": false,
-      "audio": "audio/sfx/alarm/sfx_siren_winddown.mp3",
-      "durationSeconds": 12,
-      "source": "procedural",
-      "generated": true,
-      "suggestedGain": 0.4,
-      "description": "A siren losing power: it holds, then its pitch falls away to nothing. Played once at the window, deliberately louder than the distant beds for a few seconds, then gone -- so the silence and the forest can take over. A one-shot, so it is allowed the fades a loop must never have. Its tone is now 760 Hz, the pulse alarm's own note, so the swell at the window is that machine running down rather than a fourth sound.",
-      "chapters": [
-        3
       ]
     },
     {

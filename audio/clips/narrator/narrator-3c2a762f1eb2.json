@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-3c2a762f1eb2",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4c2afda73e1390676e5e2daef14a345676210fb8fe1d42c0c4d68cb91e70b735",
+  "text": "The pavement ended in a perfectly straight line.",
+  "bytes": 47273,
+  "generated": "2026-09-21T14:16:07Z"
+}

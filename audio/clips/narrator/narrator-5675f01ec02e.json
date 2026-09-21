@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5675f01ec02e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7e701efaa4f2094617f230e82134665ca9e2d643d6e5ccacbcec0c1ada6fe0fb",
+  "text": "Lena answered immediately.",
+  "bytes": 32226,
+  "generated": "2026-09-21T14:15:09Z"
+}

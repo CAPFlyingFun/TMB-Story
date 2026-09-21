@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0a40343f090c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b87a8d714c8b923ccd21d79a339627c5fda240e0a4fea1aafa18d3fd41666f83",
+  "text": "Sarah leaned toward Jack's screen as he selected the camera. The utility station appeared intact beneath its exterior lights. Transformers, service vehicles, and the perimeter fence all looked exactly as they had before the activation.",
+  "bytes": 229921,
+  "generated": "2026-09-21T14:15:30Z"
+}

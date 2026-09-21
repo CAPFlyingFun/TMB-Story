@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-24383147107f",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "daa3c30410220aeb2ff660bc8755d5bd84842b51252529cfc7d646c35bd58e3d",
+  "text": "TOMBS activated,",
+  "bytes": 25539,
+  "generated": "2026-09-21T14:15:21Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-c1664737af1d",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5e76c23715f188328b444fdcf191d232a0a7808741559191cbcde1d22d6d29d0",
+  "text": "We are absolutely doing this again.",
+  "bytes": 30973,
+  "generated": "2026-09-21T14:15:55Z"
+}

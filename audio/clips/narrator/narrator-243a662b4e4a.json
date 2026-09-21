@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-243a662b4e4a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "555d031acb1ff90a291736c1b231ed5c2ae22a0baaee043a73beb0cbbf0814ed",
+  "text": "He still didn't like it.",
+  "bytes": 25539,
+  "generated": "2026-09-21T14:15:53Z"
+}

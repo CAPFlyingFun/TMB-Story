@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-2773230a5fd6",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ea47f523aed41870cc8ed23d3357b9ac66a8806003dc11fc057b254304ffb27c",
+  "text": "Radiation?",
+  "bytes": 18016,
+  "generated": "2026-09-21T14:16:11Z"
+}

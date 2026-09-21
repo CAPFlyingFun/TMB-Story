@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-6dd1fc20351d",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a983e0a8829e828d65e8dc630d41ea6d9fba4f59253364d6597877b11835f9d5",
+  "text": "Lena, keep the laboratory isolated. Don't sound a settlement alarm yet.",
+  "bytes": 74022,
+  "generated": "2026-09-21T14:15:09Z"
+}

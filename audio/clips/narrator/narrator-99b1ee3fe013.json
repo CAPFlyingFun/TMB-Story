@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-99b1ee3fe013",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8bafb69edd9d23561758b0b6245c95e8cff0ee18eee4ab8a79b0a9affab4b0d1",
+  "text": "Sarah leaned closer. The values flickered, vanished, and returned as unreadable placeholders.",
+  "bytes": 102026,
+  "generated": "2026-09-21T14:15:03Z"
+}

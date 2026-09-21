@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-1548c044541e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "dbf1c256c7ae63c25a84af08b2868d0032b98a6a7765c32d4e3495838292dd4b",
+  "text": "Lena walked to the console and stared through the reinforced window at the dormant TOMBS Array.",
+  "bytes": 89487,
+  "generated": "2026-09-21T14:15:49Z"
+}

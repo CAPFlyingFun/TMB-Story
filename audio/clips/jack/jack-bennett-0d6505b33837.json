@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-0d6505b33837",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f7cad2d221e9a43647135f8ed18b8e4777ab5c77af476738bb4fecafa8c18095",
+  "text": "It's not the one I wanted to give.",
+  "bytes": 30973,
+  "generated": "2026-09-21T14:15:35Z"
+}

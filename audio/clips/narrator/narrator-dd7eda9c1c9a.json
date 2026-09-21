@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-dd7eda9c1c9a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "be844fee577b6069d392f830f190dee5c13600219d73ce24c6bb5a1380e62b65",
+  "text": "Then Lena stopped moving.",
+  "bytes": 30137,
+  "generated": "2026-09-21T14:15:26Z"
+}

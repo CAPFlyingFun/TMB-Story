@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-b88d8456b3d6",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2c17de924867a778bb69d1d194adbdd796b1f46511482d6378502dd8d3b3e673",
+  "text": "It looks disappointingly normal for a machine that just ruined everyone's night.",
+  "bytes": 84889,
+  "generated": "2026-09-21T14:15:50Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-99bbdeeeddf2",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "202671ff46739f08690f42e4371c2d9a4c81da6f8a8ab99e7e3e0e90c0d974cc",
+  "text": "I'm joking.",
+  "bytes": 15090,
+  "generated": "2026-09-21T14:16:04Z"
+}

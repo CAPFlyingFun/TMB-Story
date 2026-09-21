@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-ad1f3214e30c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "70c4d5dfe560204c58c48e887c4082e897898e2d8fbee33ce966af69ab429595",
+  "text": "Then she picked up her tablet.",
+  "bytes": 30137,
+  "generated": "2026-09-21T14:15:58Z"
+}

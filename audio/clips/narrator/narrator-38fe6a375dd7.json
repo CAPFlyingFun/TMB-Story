@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-38fe6a375dd7",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "09689d78b8c9e1cec84b3330d1f73154627a57813cf05d7c83eaf544e4df1fe2",
+  "text": "Lena's voice came through quietly.",
+  "bytes": 38914,
+  "generated": "2026-09-21T14:15:20Z"
+}

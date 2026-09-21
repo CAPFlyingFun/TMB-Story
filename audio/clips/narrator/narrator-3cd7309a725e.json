@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-3cd7309a725e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5f82498a1fe54d4fd54d2a3c3fe9a4153387a8ec83c3a7a1abd72b1d8925a4e6",
+  "text": "Jack pulled up the medical center status.",
+  "bytes": 40586,
+  "generated": "2026-09-21T14:15:36Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-c21503b61bfc",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e85864719d88111df3a122e4cdfc8962aa45b9fab5d893291798726b164b269d",
+  "text": "You sure?",
+  "bytes": 14254,
+  "generated": "2026-09-21T14:15:09Z"
+}

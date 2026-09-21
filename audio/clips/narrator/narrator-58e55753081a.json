@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-58e55753081a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "73928ea47f7f4e522e4f8ec1ee697a365446ff6581cb1e4c74b3ee9fc81fd465",
+  "text": "The laboratory remained quiet beyond the muted warning tones at their consoles. Somewhere outside, nearly five hundred people slept through an emergency they did not know existed.",
+  "bytes": 171407,
+  "generated": "2026-09-21T14:15:13Z"
+}

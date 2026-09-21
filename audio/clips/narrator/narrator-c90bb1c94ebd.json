@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c90bb1c94ebd",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7625b90a3e0e0d89f533ac3009e074b7f45a303169c4cf67b2a308ac385e13b3",
+  "text": "Sarah pointed to it.",
+  "bytes": 24703,
+  "generated": "2026-09-21T14:15:14Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f0aff3eff5ac",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "efc7c7bf78fcad15baae69b1202c74e57ff177eef2d03b4f4f22f6242061ed55",
+  "text": "One of the security officers remained near the door.",
+  "bytes": 48527,
+  "generated": "2026-09-21T14:15:51Z"
+}

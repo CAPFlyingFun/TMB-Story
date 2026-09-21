@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-351e6d8ab70e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "14cd4f392a93487efdeb2ce6361617ab7b75157099ba79d9688070e22f66a0af",
+  "text": "Sarah lowered her feet from the equipment case.",
+  "bytes": 44347,
+  "generated": "2026-09-21T14:15:54Z"
+}

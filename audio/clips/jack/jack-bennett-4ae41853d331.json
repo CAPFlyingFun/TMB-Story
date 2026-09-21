@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-4ae41853d331",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "80a998452b6f013d4a10ff30b5454c83af7d8fd2d6f2cfed5f2a615e4233111a",
+  "text": "That was too easy.",
+  "bytes": 19688,
+  "generated": "2026-09-21T14:16:00Z"
+}

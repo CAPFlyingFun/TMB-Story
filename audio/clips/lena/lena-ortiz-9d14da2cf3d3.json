@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-9d14da2cf3d3",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b86b631bd08449bdee510f7b4fbce198803a40e526e57a6da2ecc8f26e5af90e",
+  "text": "There's a wall behind the east fence.",
+  "bytes": 33898,
+  "generated": "2026-09-21T14:15:29Z"
+}

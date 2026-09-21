@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-73f917312f71",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6ef4738d749c0d48c3ae84e5600d35e3341b9fda9fee6f1cd43de8475ad522f1",
+  "text": "Quiet containment until we know the boundary.",
+  "bytes": 35988,
+  "generated": "2026-09-21T14:15:11Z"
+}

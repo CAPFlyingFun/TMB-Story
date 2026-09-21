@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-72c77865f9d0",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8c2ef5738389e2be6b58a0226262202de52ae210bd10cfbd6d79bebff29f487e",
+  "text": "Sarah's expression tightened.",
+  "bytes": 30973,
+  "generated": "2026-09-21T14:15:52Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6b31f74600bf",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "61b6ba9054fa059a3932f30b64da3c28ea99a19b6a1fec7ae6ad400e55ff0ea4",
+  "text": "Jack pulled the scale factor back onto the console. The answer still sounded absurd.",
+  "bytes": 85725,
+  "generated": "2026-09-21T14:15:25Z"
+}

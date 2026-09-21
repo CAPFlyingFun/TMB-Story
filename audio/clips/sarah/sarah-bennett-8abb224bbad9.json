@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-8abb224bbad9",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7cd1137c9c450636f7cd786d24a2fcc14350011715139c808f6ac890c4f349c5",
+  "text": "And don't cross the line.",
+  "bytes": 22613,
+  "generated": "2026-09-21T14:16:03Z"
+}

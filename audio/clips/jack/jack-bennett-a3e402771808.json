@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-a3e402771808",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6b0887f18881be09a963d24ddb66d79f89f4b5ca54304b63e1cfdbcb2bd70816",
+  "text": "It changed our scale.",
+  "bytes": 21777,
+  "generated": "2026-09-21T14:15:24Z"
+}

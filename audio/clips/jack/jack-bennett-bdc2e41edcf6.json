@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-bdc2e41edcf6",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a501c0f06d4da734daa7aee57996a520a51112081f4e86ce974d36a8df186554",
+  "text": "Stay inside,",
+  "bytes": 19688,
+  "generated": "2026-09-21T14:15:32Z"
+}

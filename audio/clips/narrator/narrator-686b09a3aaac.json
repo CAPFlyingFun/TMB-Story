@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-686b09a3aaac",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6e50b6278e4f71993176e6f1d7b7ca61f7bbe145d497477c011666df686c78c0",
+  "text": "Sarah stepped beside him.",
+  "bytes": 29301,
+  "generated": "2026-09-21T14:15:25Z"
+}
