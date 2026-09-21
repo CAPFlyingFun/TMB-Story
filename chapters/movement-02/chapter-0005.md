@@ -3,7 +3,7 @@ chapter: 5
 title: "The Edge"
 movement: 2
 pov: Jack
-word_count: 1872
+word_count: 1856
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -27,22 +27,23 @@ new_canon:
 playable_beat_flow: ["open the settlement broadcast controls", "make the announcement", "read the water estimate", "map the vibration reports", "search the event sequence for a source address", "ride to the southern perimeter", "take readings at the boundary", "examine the pale object in the soil", "get back in the vehicle"]
 ending_type: cliffhanger
 review_status: approved
-audio_status: recorded
+audio_status: pending
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. This file is the manuscript and is not edited without his instruction."
+source: "Joshua's revised Word manuscript, 983de326-04-06_Chapters - TRADDOMIUM Micro Battle - Updated 4-6.docx, imported 2026-09-21"
 ---
-
 # Chapter 5: The Edge
 
-By two in the morning, the settlement was no longer sleeping through what had happened.
+Around midnight, most of the settlement was still asleep.
 
-It had not awakened all at once. Porch lights had spread block by block. Night-shift workers had called their families. Security vehicles had moved through the streets without sirens. Rumors had outrun every official explanation Jack could give.
+Less than an hour had passed since the TOMBS event. In the laboratory, that hour had felt endless. Outside, it had barely registered.
 
-Now enough people were awake that silence had become its own kind of announcement.
+Jack stood at the main console with a cup of coffee he had forgotten to drink. A handful of porch lights had come on since the last vibration, scattered across the residential blocks like the town was blinking awake one eye at a time. Everything else stayed dark: streets empty, windows black, the settlement behaving as though nothing at all had happened while it slept through the strangest hour of its existence.
 
-Jack stood over the main control console with a cup of coffee he had forgotten to drink. The incident map was crowded with reports, but there had been no mass panic and, so far, no serious injuries.
+Only a few people knew otherwise. Utility. Security. A handful of night-shift workers who had felt the floor move and gone to a window instead of back to bed.
 
-Medical remained stable. Utility crews had isolated the few damaged lines they could reach safely. Security teams were keeping curious residents away from the boundary. The settlement still had power, breathable air, and stored water.
+For now, that was small enough to manage.
+
+Medical remained stable. Utility crews had isolated the few damaged lines they could reach safely. The settlement still had power, breathable air, and stored water.
 
 It was an impressive list of things that had not gone wrong.
 
@@ -64,61 +65,11 @@ Jack returned to his screen. "I was thinking internally."
 
 "Advanced technique."
 
-Sarah smiled faintly, then looked toward the residential status map. More windows were lighting up by the minute.
+Sarah's mouth twitched, but she didn't look up from her tablet.
 
-"It's time," she said.
+A call came through on the console. Lena's name.
 
-Jack knew what she meant.
-
-He opened the settlement broadcast controls.
-
-"What are you going to tell them?" Sarah asked.
-
-"The truth."
-
-"Which part?"
-
-Jack looked at the boundary map. "The part we can prove."
-
-Sarah nodded. "And don't promise them a reversal."
-
-"I built TOMBS."
-
-"I know."
-
-"I should be able to reverse what it did."
-
-Her voice stayed gentle. "That still isn't the same as knowing you can."
-
-Jack looked through the reinforced window toward the silent array. Then he pressed transmit.
-
-"This is Doctor Jack Bennett from the TOMBS laboratory. Earlier tonight, the settlement experienced a TOMBS boundary event. Power, atmosphere, medical services, and most internal infrastructure remain operational."
-
-He paused.
-
-"We have confirmed that the developed settlement changed in scale relative to the surrounding island. If you are inside a residence or other secure building, remain there for now. Do not approach the outer edge of town and do not enter undeveloped terrain. Medical, utility, and security teams are operating normally."
-
-Sarah rested a hand lightly against his arm.
-
-"We are investigating the cause and whether the event can be reversed. We will provide another update when we have verified information. If you have an emergency, use the normal emergency channels."
-
-Jack ended the broadcast.
-
-For several seconds, neither of them spoke.
-
-Then Sarah nodded. "Good."
-
-"I hated every word of that."
-
-"I know."
-
-"Especially the part where I didn't say we'd fix it."
-
-Sarah picked up her tablet. "Then let's earn the right to say it later."
-
-A call indicator appeared on Jack's console. Lena had left the utility station after another technician relieved her and joined the emergency coordination channel from a secure room closer to the center of town.
-
-"We have a water estimate," she said.
+"We have a water estimate," she said, before Jack could even greet her.
 
 Jack straightened. "How bad?"
 
@@ -130,23 +81,19 @@ Sarah lowered her tablet. "How long?"
 
 Jack nodded. "Do it."
 
-Lena answered, "Already started."
+"Already started."
 
-Sarah glanced toward him. "I like her."
+Sarah glanced at him. "I like her."
 
-"I told you."
+"So do I."
 
-"No, you said you liked Doctor Mercer."
-
-"I can like two competent people in one night."
-
-Lena cleared her throat through the speaker. "I can hear you."
+Lena's voice came through dryly. "I can hear you."
 
 Jack muted the channel.
 
-Sarah laughed.
+Sarah laughed quietly.
 
-For several seconds, it almost sounded like an ordinary late shift.
+For a moment, it almost sounded like an ordinary late shift.
 
 Then the building vibrated again.
 
@@ -168,9 +115,9 @@ Jack overlaid the reports on the settlement map. The first vibrations had been s
 
 Sarah's eyes followed the pattern.
 
-Lena spoke from the console. "Please tell me we're not using the phrase whatever is causing them in the next public announcement."
+Lena spoke from the console. "Please tell me we're not using the phrase whatever is causing them in any public announcement."
 
-"We are absolutely not."
+"Nobody's making a public announcement yet," Jack said.
 
 "Good."
 
@@ -208,13 +155,15 @@ Sarah studied the screen. "Then whoever did this had more than remote access."
 
 Jack opened the permissions table. "They had control."
 
+He closed the window before either of them had to sit with that for too long.
+
 A knock sounded at the control-room door.
 
 Both turned.
 
-Two settlement security officers stood outside with a woman in an orange utility jacket. Jack recognized the jacket before the face.
+One of the settlement security officers stood outside with Lena, still in her orange utility jacket. She held up both hands before either of them could ask.
 
-Lena stepped through when the door opened and held up both hands. "Before either of you asks, yes, the station is staffed, yes, the grid is stable, and yes, I locked the door."
+"Before you start, yes, the station is staffed, yes, the grid is stable, and yes, I locked the door."
 
 Jack pointed at her. "I wasn't going to ask."
 
@@ -222,75 +171,59 @@ Sarah looked at him.
 
 "I was going to ask two of those."
 
-Lena walked to the console and stared through the reinforced window at the dormant TOMBS Array. "It looks disappointingly normal for a machine that just ruined everyone's night."
+Lena walked to the console and stared through the reinforced window at the dormant TOMBS Array. "It looks disappointingly normal for a machine that ruined everyone's night."
 
 "Give it time," Jack said.
 
-One of the security officers remained near the door. "Doctor Bennett, we have a perimeter team ready."
+The security officer stayed near the door. "Doctor Bennett, we have a perimeter team headed to the southern boundary. Visual inspection only, inside the developed zone. They want to see where the road ends."
 
-Jack turned. "Ready for what?"
+Jack looked at the camera feeds again. The same still grass. The same dark, unreadable line where the settlement stopped.
 
-"Visual inspection of the southern boundary."
+He would learn more standing at that line for thirty seconds than he would staring at this screen for another hour.
 
-Sarah's expression tightened. "Outside?"
+"I need to go outside," he said.
 
-"Inside the developed zone only. They want to see where the road ends."
+"No."
 
-Jack looked at the camera feeds. The southern boundary had better lighting than the east and no recent vibration reports.
+The answer came so fast that Jack looked up.
 
-He still didn't like it.
+"You didn't even think about it."
 
-"We go with them," he said.
+"I didn't need to. It's dangerous."
 
-Sarah lowered her feet from the equipment case.
+"I know," Jack said, keeping his voice even. "But the cameras aren't enough. I've watched that boundary all night and it hasn't told me anything the sensors couldn't already give me as a number."
 
-Jack immediately looked at her. "No."
+"So now you want to go stand next to it."
 
-She stared back.
+"Not into the wilderness. Just the edge, on our side. I'll walk the line, take real environmental readings, and see what's actually there instead of what a camera decides to show me. We need firsthand information, not another feed."
 
-Lena quietly moved one step away from them.
+Sarah didn't answer right away.
 
-Sarah stood. "We're not doing this again."
+She looked past him at the boundary map, then at the frozen shape on the security feed that still hadn't resolved into anything.
 
-"We are absolutely doing this again."
+"Okay," she said. "You can go."
 
-"Jack."
+Jack blinked. "Really?"
 
-He pointed toward the perimeter feed. "We don't know what's out there."
+"Don't make me reconsider."
 
-"Which is why a scientist should be there."
+A smile started to show on Jack’s face.
 
-"A scientist will be there."
+Sarah stood and picked up her tablet. "I'll stay here and monitor TOMBS, the perimeter cameras, and your sensor feed the whole time. You won't be out there alone."
 
-Sarah folded her arms. "Convenient."
+Lena raised a hand. "I'll help her yell at you if you do something stupid."
 
-Jack lowered his voice. "You're thirty-two weeks pregnant, it's the middle of the night, and something outside town may be causing ground vibrations."
+"Noted," Jack said.
 
-Sarah held his gaze for a moment.
-
-Then she picked up her tablet. "Fine."
-
-Jack blinked. "Fine?"
-
-"I'm staying here."
-
-He narrowed his eyes. "That was too easy."
-
-"It wasn't easy. It was reasonable."
-
-Lena looked between them. "I'm uncomfortable with how suspicious you are of reasonable."
-
-Sarah handed Jack a small environmental sensor from the console drawer. "Take readings at the boundary. Air composition, temperature, pressure, particulates, radiation, anything the unit can measure."
-
-Jack accepted it.
+Sarah crossed to him and handed him a small environmental sensor from the console drawer. "Air composition, temperature, pressure, particulates, radiation. Anything the unit can measure."
 
 "And don't cross the line."
 
 "I wasn't planning to."
 
-Sarah raised an eyebrow.
+She raised an eyebrow.
 
-Jack added, "Intentionally."
+"Intentionally," he added.
 
 "Jack."
 
@@ -298,11 +231,51 @@ Jack added, "Intentionally."
 
 "Try harder."
 
-The southern perimeter was less than five minutes away by utility vehicle. Jack rode with the two security officers while Sarah and Lena remained connected through his wrist terminal.
+He tucked the sensor into his jacket and stopped at the door.
 
-Streetlights illuminated quiet houses along the route. Curtains moved in windows. People stood behind glass watching the vehicle pass.
+"Keep safe," he said.
 
-By then, very few lights along the route were still dark.
+Sarah looked up. "Safe? You're the one leaving and going outside."
+
+"I know. I still want you safe."
+
+Something in her expression softened. "That's sweet of you. But I need you to be safe. I'll be fine in here."
+
+Jack glanced at her stomach. "Both of you."
+
+Sarah rested a hand against it. "Both of us."
+
+"Love you," Jack said.
+
+"Love you too. Now go, before I change my mind."
+
+"Stay on our side," she added, already turning back to the console.
+
+"I'll stay on our side," Jack said. "I promise not to make friends with the grass."
+
+"Jack."
+
+"Going."
+
+The southern perimeter was less than five minutes away by utility vehicle. Jack rode with the two security officers while Sarah and Lena stayed connected through his wrist terminal.
+
+Most of the houses along the route were still dark. Here and there a porch light burned, or a curtain shifted as someone looked out and did not come outside. A single dog barked somewhere behind a fence and went quiet again.
+
+It felt, for a few blocks, almost like an ordinary night.
+
+Sarah's voice came through his wrist. "You still there?"
+
+"Still here. Still boring."
+
+"Good. Keep it boring."
+
+One of the officers glanced over. "Is that Doctor Bennett?"
+
+"The other one," Jack said.
+
+"I heard that," Sarah said.
+
+The officer smiled and said nothing else.
 
 As they approached the edge of the developed zone, the road seemed normal until it suddenly wasn't.
 
@@ -340,7 +313,7 @@ Sarah's voice sharpened immediately. "Jack."
 
 "You are genetically incapable of saying that reassuringly."
 
-Jack smiled despite himself and moved the sensor closer.
+Jack let out a chuckle and moved the sensor closer.
 
 The instrument remained normal.
 

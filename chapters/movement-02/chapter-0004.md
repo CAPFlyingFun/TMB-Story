@@ -3,7 +3,7 @@ chapter: 4
 title: "The First Calls"
 movement: 2
 pov: Jack
-word_count: 1504
+word_count: 1214
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -25,11 +25,10 @@ new_canon:
 playable_beat_flow: ["answer the utility call", "bring up the utility station cameras", "take the medical center call", "answer the security channel", "open the settlement infrastructure schematic", "trace the freshwater intake to the boundary", "inspect the cut pipe on the maintenance camera", "step through the frozen camera frames"]
 ending_type: revelation
 review_status: approved
-audio_status: recorded
+audio_status: pending
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. This file is the manuscript and is not edited without his instruction."
+source: "Joshua's revised Word manuscript, 983de326-04-06_Chapters - TRADDOMIUM Micro Battle - Updated 4-6.docx, imported 2026-09-21"
 ---
-
 # Chapter 4: The First Calls
 
 The first call arrived before Jack could let go of Sarah's hand.
@@ -90,69 +89,11 @@ Lena let out a quiet breath. "I was hoping you wouldn't say that."
 
 "Already locking the exterior doors."
 
-A second call appeared on Jack's terminal.
+Lena continued, steadier now. "Most of the developed zone still has power. Three localized faults, nothing catastrophic."
 
-MEDICAL CENTER.
+"That's good," Jack said.
 
-Sarah saw the name. "Take it. I'll stay with Lena."
-
-Jack transferred Lena to Sarah's tablet and answered. The medical center sounded strangely normal in the background: ventilation, distant footsteps, a cart rolling over tile.
-
-"Doctor Bennett, this is Doctor Mercer. Did your lab just cause that vibration?"
-
-Jack glanced at Sarah. "Probably."
-
-"That is not the answer I wanted."
-
-"It's not the one I wanted to give." Jack pulled up the medical center status. "Any damage?"
-
-"Nothing serious. One patient woke up frightened, two nurses felt the floor move, and half my overnight staff are arguing about whether we had an earthquake."
-
-Jack checked the structural grid. "Local sensors show no seismic event."
-
-Doctor Mercer was quiet for a beat. "Then why am I looking at grass taller than the medical center?"
-
-Jack closed his eyes briefly.
-
-"You looked outside."
-
-"Jack, I work nights. Looking outside occasionally is one of the perks."
-
-Sarah covered the microphone for a moment. "I like her."
-
-Jack gave Sarah a look and returned to the call. "We had a TOMBS boundary event. The developed settlement appears to have been reduced in scale relative to the surrounding island."
-
-Doctor Mercer said nothing.
-
-Jack waited.
-
-"Say that again."
-
-"The town got smaller."
-
-Another pause.
-
-"That was not better."
-
-"I know."
-
-Doctor Mercer's voice shifted from disbelief to work. "What do you need from medical?"
-
-"For now, keep your overnight staff inside. Check backup power, medical gases, water pressure, and anything that crosses the edge of the developed zone. Don't wake patients unless you need to."
-
-"And when they wake on their own?"
-
-Jack looked through the window at the sleeping settlement.
-
-"We're working on that."
-
-The call ended.
-
-Sarah lowered her tablet. "Lena says most of the developed zone still has power. Three localized faults, nothing catastrophic."
-
-"That's good."
-
-"It is."
+"It is," Lena said.
 
 Jack stared at the dark residential blocks on the map. "It doesn't feel good."
 

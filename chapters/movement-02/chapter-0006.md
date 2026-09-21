@@ -3,7 +3,7 @@ chapter: 6
 title: "Someone Knew"
 movement: 2
 pov: Jack
-word_count: 1716
+word_count: 2106
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -28,11 +28,10 @@ new_canon:
 playable_beat_flow: ["connect the environmental sensor", "replay the wrist-camera footage frame by frame", "calculate the scale from the TOMBS event log", "open the original calibration records", "compare the unauthorized command with the internal calculation", "overlay the boundary on the island development survey", "open the maintenance partition", "read the file metadata", "open the ownership field", "open the label"]
 ending_type: revelation
 review_status: approved
-audio_status: recorded
+audio_status: pending
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. This file is the manuscript and is not edited without his instruction."
+source: "Joshua's revised Word manuscript, 983de326-04-06_Chapters - TRADDOMIUM Micro Battle - Updated 4-6.docx, imported 2026-09-21"
 ---
-
 # Chapter 6: Someone Knew
 
 Jack watched the southern camera feed all the way back to the laboratory.
@@ -248,6 +247,82 @@ The grass made sense.
 So did the thing moving outside.
 
 Jack wished fewer things made sense.
+
+Jack's wrist terminal chirped with an incoming call.
+
+MEDICAL CENTER.
+
+Jack glanced at Sarah before answering. "Bennett."
+
+"Doctor Bennett, this is Doctor Mercer." A woman's voice, brisk and fully awake. "Did your lab cause that vibration a little while ago?"
+
+"Probably."
+
+"That is not the answer I wanted."
+
+"It's not the one I wanted to give." Jack pulled up the medical center's status panel. "Any damage?"
+
+"Nothing serious. One patient woke up frightened, two nurses felt the floor move, and half my overnight staff are arguing about whether we had an earthquake."
+
+Jack checked the structural grid. "Local sensors show no seismic event."
+
+Doctor Mercer was quiet for a beat. "Then why am I looking at grass taller than the medical center?"
+
+Jack closed his eyes briefly.
+
+"You looked outside."
+
+"Jack, I work nights. Looking outside occasionally is one of the perks."
+
+Sarah leaned toward the microphone. "I like her."
+
+Jack gave Sarah a look and returned to the call. "We had a TOMBS boundary event. The developed settlement's been reduced in scale relative to the surrounding island. We're still working out by how much."
+
+Doctor Mercer said nothing.
+
+Jack waited.
+
+"Say that again."
+
+"The town got smaller."
+
+Another pause.
+
+"That was not better."
+
+"I know."
+
+Doctor Mercer's voice shifted from disbelief into something steadier, more procedural. "What do you need from medical?"
+
+"For now, keep your overnight staff inside. Check backup power, medical gases, water pressure, and anything that crosses the edge of the developed zone. Don't wake patients unless you need to."
+
+"And when they wake on their own?"
+
+Jack looked toward the dark residential map. "We're working on that."
+
+"Understood." A pause. "Jack. How long before the rest of the settlement knows?"
+
+"Not long," he admitted.
+
+"Then don't wait too long to tell me what to do about it."
+
+The call ended.
+
+Nobody spoke for a moment.
+
+Sarah broke the silence. "Morning's coming."
+
+"I know."
+
+"We can't keep this to Lena, security, and one very unimpressed doctor forever."
+
+Jack rubbed his eyes. "We just need a little more before we lose the choice."
+
+Lena, still watching the frozen frame of the shape in the grass, didn't look up. "For what it's worth, I'd rather know what that is before we wake everyone up to look at it."
+
+"Same," Jack said.
+
+He turned back to the console.
 
 Lena stared at the scale factor. "Could the system have picked that number randomly?"
 
@@ -525,7 +600,7 @@ The control-room window trembled.
 
 Nobody looked away from the screen.
 
-Jack had spent the last several hours trying to understand what had gone wrong with TOMBS.
+Jack had spent the last couple of hours trying to understand what had gone wrong with TOMBS.
 
 Now, for the first time, he understood something worse.
 
