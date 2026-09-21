@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b61310ae21db",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "15dd5f0bf76c1f0a106427ec349f1e3a76f26e5a460bf898573078a3c3658994",
+  "text": "Sarah read it aloud.",
+  "bytes": 27211,
+  "generated": "2026-09-21T15:14:01Z"
+}

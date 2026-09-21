@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-ee8506a55270",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4f55f444d10913b892ced5ac6c432540f01c5c2e68eb0898cffe56bb251005e0",
+  "text": "Doctor Bennett, we have a perimeter team ready.",
+  "bytes": 44347,
+  "generated": "2026-09-21T15:12:27Z"
+}

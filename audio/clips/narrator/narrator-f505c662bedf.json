@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f505c662bedf",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f14a0ee8b34980baf8112555559800cd9c65da00f0717035f8a8097732930ee2",
+  "text": "Two settlement security officers stood outside with a woman in an orange utility jacket. Jack recognized the jacket before the face.",
+  "bytes": 131701,
+  "generated": "2026-09-21T15:12:27Z"
+}

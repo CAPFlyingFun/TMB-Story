@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-f19ba4dce802",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3a51b6fe9f88c21d3d2e45ae57f0f05bf020fcfb8bb1a756c34379bd20f01b1d",
+  "text": "Please tell me that was something in your building.",
+  "bytes": 46437,
+  "generated": "2026-09-21T15:11:40Z"
+}

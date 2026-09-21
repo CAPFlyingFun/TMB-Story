@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-9f7df5ece35e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ca4baa353a094064c95c76ca9fcf9a24709d767cd65a4361d17e6185fbc747df",
+  "text": "Jack stared at the dark residential blocks on the map.",
+  "bytes": 53960,
+  "generated": "2026-09-21T15:11:12Z"
+}

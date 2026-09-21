@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-eb95a55e1f22",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9991c69d68972bc0f2fade5ddab8823e7ec20a3f5acc1de63fe1363a9b887ab8",
+  "text": "Jack opened the unauthorized command sequence.",
+  "bytes": 50199,
+  "generated": "2026-09-21T15:13:18Z"
+}

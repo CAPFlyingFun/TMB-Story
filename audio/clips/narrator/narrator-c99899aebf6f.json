@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c99899aebf6f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "dd23d7618fdb016d21aaa07ae93b44bd8db13cd5ef6bebbc0dd4b19d1e4e293f",
+  "text": "Lena stared at the scale factor.",
+  "bytes": 39750,
+  "generated": "2026-09-21T15:13:32Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-5e29ad832c6f",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "edf58cceebd6c32bfaf3934b92485b402733f692f412c7008015bb47c688a663",
+  "text": "You found the intake, didn't you?",
+  "bytes": 29301,
+  "generated": "2026-09-21T15:11:31Z"
+}

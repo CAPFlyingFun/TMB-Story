@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-9b91afe46598",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fadc250402d69cdf7d8349d81c02748a21db0d0be55eab0846a35f7291967a5f",
+  "text": "Several days before we have to start making uncomfortable decisions. Longer if we shut down nonessential industrial use and recycle aggressively.",
+  "bytes": 179348,
+  "generated": "2026-09-21T15:12:09Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-2a4a9f0e8dce",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2c40fea8fb92c08a3626c7a534538165d8a371fbfeb175eebea1b735eb059655",
+  "text": "He narrowed the results to the earliest occurrence.",
+  "bytes": 47691,
+  "generated": "2026-09-21T15:13:57Z"
+}

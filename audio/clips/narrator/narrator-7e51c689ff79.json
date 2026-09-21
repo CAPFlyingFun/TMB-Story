@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7e51c689ff79",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2cd672082b284e3e30c1a903f2d4639bb678b28653b1a06a0b1730990ccf2565",
+  "text": "Sarah saw it in his face.",
+  "bytes": 30973,
+  "generated": "2026-09-21T15:14:14Z"
+}

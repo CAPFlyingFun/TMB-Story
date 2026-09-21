@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-24d322e6bbc9",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ddc93ce3e39bf69752968d63ce491acdb71f2568515a1a3fa17011ce724b5394",
+  "text": "I was thinking internally.",
+  "bytes": 23449,
+  "generated": "2026-09-21T15:11:54Z"
+}

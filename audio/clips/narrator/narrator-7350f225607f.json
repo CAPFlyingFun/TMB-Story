@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7350f225607f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d623d82414db8680d28a9efcb2f1ab158e05f2cb0aa04c86afe334edf5e78355",
+  "text": "Lena spoke from the console.",
+  "bytes": 33898,
+  "generated": "2026-09-21T15:12:17Z"
+}

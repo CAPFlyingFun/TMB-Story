@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-84ee250ee72a",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c20bb64498eff2f24dcfcc909565a598d63918d9073f95fe1d1aa929ea59b212",
+  "text": "Could it have been an accident?",
+  "bytes": 27629,
+  "generated": "2026-09-21T15:13:33Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c1df4e9581fc",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "051b17ceb48628c2c41991de5ce84d01de64994539fd3f0c0aec050f45b72141",
+  "text": "She waited, then gave him a small nod.",
+  "bytes": 40586,
+  "generated": "2026-09-21T15:11:39Z"
+}

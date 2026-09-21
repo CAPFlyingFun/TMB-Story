@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a26ce6b67b81",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "740f44bbcf94c3f974a0c4a43d7db41d309c28f76f04081705df3617b86c6dda",
+  "text": "Sarah smiled faintly, then looked toward the residential status map. More windows were lighting up by the minute.",
+  "bytes": 117072,
+  "generated": "2026-09-21T15:11:56Z"
+}

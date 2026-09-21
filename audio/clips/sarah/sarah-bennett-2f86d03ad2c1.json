@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-2f86d03ad2c1",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "58e14d9e0f4b2d7c31eecb2174e4232d547b38d6128ccd9dd04ca6e51e45bf4c",
+  "text": "You already have it.",
+  "bytes": 22613,
+  "generated": "2026-09-21T15:13:17Z"
+}

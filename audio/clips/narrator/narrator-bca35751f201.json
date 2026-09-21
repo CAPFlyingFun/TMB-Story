@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-bca35751f201",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2dd8d5a46e0a4e5e0776c7d9e99b0ee87d9aea51f47c2cc1774e78efbc0297c9",
+  "text": "The security officers raised their lights.",
+  "bytes": 41004,
+  "generated": "2026-09-21T15:12:46Z"
+}

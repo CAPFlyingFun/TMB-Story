@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5d0ae1fbf93a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "533e8a5b9c53ecc4e2525b197c92677673dde01a04785d6fecb0f5b2b6146278",
+  "text": "Lena leaned over the back of Jack's chair.",
+  "bytes": 46437,
+  "generated": "2026-09-21T15:14:00Z"
+}

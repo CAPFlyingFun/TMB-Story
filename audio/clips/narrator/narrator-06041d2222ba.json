@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-06041d2222ba",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c1c7c1fc4d27567bd03090c4561bd8965f72777278296eb9832a5eaee9ed6ec3",
+  "text": "He opened the access history from that day.",
+  "bytes": 44347,
+  "generated": "2026-09-21T15:14:18Z"
+}

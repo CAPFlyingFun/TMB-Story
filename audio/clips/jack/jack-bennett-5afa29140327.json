@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-5afa29140327",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4f6d9a062aa9aeae347dba5400ff6b436789097592931a196448b516d4793570",
+  "text": "This is Doctor Jack Bennett from the TOMBS laboratory. Earlier tonight, the settlement experienced a TOMBS boundary event. Power, atmosphere, medical services, and most internal infrastructure remain operational.",
+  "bytes": 210695,
+  "generated": "2026-09-21T15:12:02Z"
+}

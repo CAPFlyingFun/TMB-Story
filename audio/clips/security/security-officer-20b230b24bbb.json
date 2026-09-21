@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-20b230b24bbb",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "034f2e2db3a099528a02ae4636d436c5c718bb8cbccb0d5cc247df8bc536552a",
+  "text": "And I think the dirt is higher than my vehicle.",
+  "bytes": 43511,
+  "generated": "2026-09-21T15:11:15Z"
+}

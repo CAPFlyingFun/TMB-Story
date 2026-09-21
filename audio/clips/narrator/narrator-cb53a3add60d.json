@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-cb53a3add60d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "aa64c874bfcce61c9d66b1834318b5cadb75885315600e88d67b17d257587cbf",
+  "text": "The grass stems moved one after another in the darkness, not with the wind but in a line approaching the settlement.",
+  "bytes": 107459,
+  "generated": "2026-09-21T15:12:48Z"
+}

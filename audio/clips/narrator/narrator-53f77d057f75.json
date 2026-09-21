@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-53f77d057f75",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ee484c5b309b44241ca2a118684cf3b2c0d97544dc153bc80f35781d343fb5c6",
+  "text": "Lena's voice came through the tablet.",
+  "bytes": 36824,
+  "generated": "2026-09-21T15:11:40Z"
+}

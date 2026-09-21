@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-2b548f3e754e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f903670a47078d31a8fcff300e3da69a43f68e01b1ded1ffb8603691e9f9fc4c",
+  "text": "Lena stepped through when the door opened and held up both hands.",
+  "bytes": 63573,
+  "generated": "2026-09-21T15:12:27Z"
+}

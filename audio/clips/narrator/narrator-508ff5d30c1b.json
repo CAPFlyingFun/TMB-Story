@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-508ff5d30c1b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0db059db7ff24b66b12bcf05d467058419d2b91b16a3ff9fed7d9f4439827d83",
+  "text": "Jack closed the recording.",
+  "bytes": 30973,
+  "generated": "2026-09-21T15:13:13Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-562e9b9a8f6c",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7a9ffbe493dc2a2340a5b151b0abdecc38132f115b34caf999c0bcd6913b8bed",
+  "text": "Where were you?",
+  "bytes": 17598,
+  "generated": "2026-09-21T15:14:12Z"
+}

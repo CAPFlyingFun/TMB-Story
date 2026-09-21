@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-d5dae9120136",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4ad2a8b38040a760913283ad6bd84a51bbce800babd15de94f134514b7fa9430",
+  "text": "Nobody goes outside the developed zone,",
+  "bytes": 32226,
+  "generated": "2026-09-21T15:11:46Z"
+}

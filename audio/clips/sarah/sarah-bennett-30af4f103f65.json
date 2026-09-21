@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-30af4f103f65",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b208c2aeac723fb84dce988c73cce2befcac49720726127ddb8ff6f5ccb145f7",
+  "text": "You are genetically incapable of saying that reassuringly.",
+  "bytes": 49363,
+  "generated": "2026-09-21T15:12:32Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-82c9695c459c",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "889b7806f0b520f8da2594ecd339d1ae705380ae128a55d402f42bd010ee9c35",
+  "text": "Local sensors show no seismic event.",
+  "bytes": 35988,
+  "generated": "2026-09-21T15:11:03Z"
+}

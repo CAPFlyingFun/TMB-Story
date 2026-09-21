@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-3893f3c0510d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9af408f3c6ce127ff4d90600e981c111fe356136982a3195165d9830279811db",
+  "text": "Jack hesitated.",
+  "bytes": 23449,
+  "generated": "2026-09-21T15:13:33Z"
+}

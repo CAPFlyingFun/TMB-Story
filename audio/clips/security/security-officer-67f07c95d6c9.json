@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-67f07c95d6c9",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "af968266880e5430b7e4dd329e5b8b65d0e763ebb11fdf00093a019a08339493",
+  "text": "We ran.",
+  "bytes": 15926,
+  "generated": "2026-09-21T15:12:59Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-decb485cac0f",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c93671ef6666fedf90282a76ff8a8ca5be75bca7d6ad71e357385401f300a18f",
+  "text": "I like him.",
+  "bytes": 16762,
+  "generated": "2026-09-21T15:13:00Z"
+}

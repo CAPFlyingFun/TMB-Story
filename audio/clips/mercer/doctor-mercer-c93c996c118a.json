@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-c93c996c118a",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b6bb17b469f931bba5896974d0698e1c888048a64f09ad9e4437a03c97b35fa6",
+  "text": "What do you need from medical?",
+  "bytes": 22613,
+  "generated": "2026-09-21T15:11:08Z"
+}

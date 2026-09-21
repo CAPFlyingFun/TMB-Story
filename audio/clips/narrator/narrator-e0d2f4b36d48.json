@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e0d2f4b36d48",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2048cfa9170a2b050e1a72234629f246e4e1b3ea0e4b212b27cebfcdbec4020b",
+  "text": "Jack increased the magnification.",
+  "bytes": 37660,
+  "generated": "2026-09-21T15:12:41Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-37d5d6a639c0",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "16754a4903242596735ec1450c93bd10984434fae0750c0c8b774c1a0260bef1",
+  "text": "I can hear you.",
+  "bytes": 17598,
+  "generated": "2026-09-21T15:12:11Z"
+}

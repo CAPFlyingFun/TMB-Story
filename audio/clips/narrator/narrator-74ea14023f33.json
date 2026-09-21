@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-74ea14023f33",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "22e63389157a4c24ed234d35485c91f888d5bcda451d7c83e3c8506a4f100d73",
+  "text": "For several seconds, neither of them spoke.",
+  "bytes": 38078,
+  "generated": "2026-09-21T15:12:04Z"
+}

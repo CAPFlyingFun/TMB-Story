@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-6c44f4a5faec",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "07c119bdc609d70e6ac6b358ea6723a8b52dd958029c5dadc035d22b84f405cd",
+  "text": "Jack, I work nights. Looking outside occasionally is one of the perks.",
+  "bytes": 67335,
+  "generated": "2026-09-21T15:11:04Z"
+}

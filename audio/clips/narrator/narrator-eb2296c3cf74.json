@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-eb2296c3cf74",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e1b85afd2cffec7b7db270271eba26f7f6e34f4e96a5e45167ad5ab3a507bd86",
+  "text": "Lena tilted her head.",
+  "bytes": 27211,
+  "generated": "2026-09-21T15:13:07Z"
+}

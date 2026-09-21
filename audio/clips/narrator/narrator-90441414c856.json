@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-90441414c856",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "48ceaa44d57a8d2ca097284c8c314a5cf2f36c5c188e38e9e6922fe7e169dc14",
+  "text": "It was larger than his head.",
+  "bytes": 28465,
+  "generated": "2026-09-21T15:12:34Z"
+}

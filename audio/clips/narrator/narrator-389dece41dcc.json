@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-389dece41dcc",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d98c9ff4752d2558e4a839ac0ad7c13519d7bf36c20d4a78bb70f4d4415735b6",
+  "text": "The settlement's main freshwater intake ran toward a reservoir outside the developed zone. On the schematic, the line remained visible until the red boundary. Beyond it, the monitoring system showed nothing.",
+  "bytes": 207769,
+  "generated": "2026-09-21T15:11:27Z"
+}

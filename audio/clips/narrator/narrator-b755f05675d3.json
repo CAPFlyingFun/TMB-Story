@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b755f05675d3",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a1a87511912c4fbdf19557c905a4dcc42e1fb328e2998e1a536400f45bf5ea95",
+  "text": "So did the thing moving outside.",
+  "bytes": 41004,
+  "generated": "2026-09-21T15:13:31Z"
+}

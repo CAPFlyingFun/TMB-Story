@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-a574b1dbad9c",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "be0ae3fdd2a69254ef3f6320502cb9008d3ff325ff724aea90cccd0ecd6f0afe",
+  "text": "It wasn't a radius.",
+  "bytes": 18852,
+  "generated": "2026-09-21T15:13:38Z"
+}

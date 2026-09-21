@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e6ebd0e35c73",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d155d37486c02a39c249320ac7328914702e3918f3a09b018ce79b2917f00feb",
+  "text": "No sirens. No crowds. No screaming in the streets. Porch lights appeared one at a time as light sleepers investigated the vibration. A bedroom window opened in one housing block and closed again. Somewhere farther away, a dog began barking.",
+  "bytes": 260432,
+  "generated": "2026-09-21T15:11:20Z"
+}

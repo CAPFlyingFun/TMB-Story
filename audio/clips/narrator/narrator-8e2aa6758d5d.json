@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-8e2aa6758d5d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e2d2128050b321e66b1c3bed007b552fbc72bab52dba41b72949e6029185c5ce",
+  "text": "He paused.",
+  "bytes": 18852,
+  "generated": "2026-09-21T15:12:01Z"
+}

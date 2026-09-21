@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-dc003b40a78c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "343807dcc9be4a48154b5d52f08a5e6d3016590936459e25b404742b8e7829cf",
+  "text": "Jack muted the channel.",
+  "bytes": 27211,
+  "generated": "2026-09-21T15:12:11Z"
+}

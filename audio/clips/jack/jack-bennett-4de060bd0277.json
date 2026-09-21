@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-4de060bd0277",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0d49064472a5ee66096c887e551d1e0d24c8354f56277e1606d85d68722cecae",
+  "text": "I said I saw something that looked like thin legs.",
+  "bytes": 41839,
+  "generated": "2026-09-21T15:12:55Z"
+}

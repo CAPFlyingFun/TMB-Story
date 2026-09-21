@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-488c5c2a20fe",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "37bdbcbe877dccde59c7001a40491be46bf9746fd0b00aa11800f31a8a8db910",
+  "text": "Jack knew what she meant.",
+  "bytes": 27629,
+  "generated": "2026-09-21T15:11:56Z"
+}

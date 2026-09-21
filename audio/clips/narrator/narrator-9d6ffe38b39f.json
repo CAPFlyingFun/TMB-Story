@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-9d6ffe38b39f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cecca6af11ba211f4f3c785022d46a3d67aeb78659e5109e4a1ee7af7e68a5b1",
+  "text": "Jack checked the timestamp against the island clock, then against the TOMBS backup server.",
+  "bytes": 82799,
+  "generated": "2026-09-21T15:14:02Z"
+}

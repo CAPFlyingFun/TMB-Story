@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-0216d2157e90",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d55070dc581399042cab9a80d86670d00340804f1ee16a70795c072a9976b965",
+  "text": "Advanced technique.",
+  "bytes": 19688,
+  "generated": "2026-09-21T15:11:55Z"
+}

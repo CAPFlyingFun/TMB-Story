@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-13e3d52c8985",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "50a7e93cc2efa2cd9e6bfb8514df550f5fc3fb74eba01769ac70d5d3a740b718",
+  "text": "I told you.",
+  "bytes": 15090,
+  "generated": "2026-09-21T15:12:10Z"
+}

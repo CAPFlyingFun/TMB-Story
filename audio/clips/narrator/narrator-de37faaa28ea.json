@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-de37faaa28ea",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "414e68805b759682a0c944b34856e32f9d2cea6c20bd74473671766b9b222191",
+  "text": "Lena pointed to another narrow extension.",
+  "bytes": 44765,
+  "generated": "2026-09-21T15:13:42Z"
+}

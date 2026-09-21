@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f1ff3c8d172a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0119b0712b7daf484e0447f971a1b1f2adbb6b788b66115b795caa906449daed",
+  "text": "Sarah asked,",
+  "bytes": 22613,
+  "generated": "2026-09-21T15:12:38Z"
+}

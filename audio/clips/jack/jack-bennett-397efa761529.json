@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-397efa761529",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e730d744fc37fc134916959aac458f3ab17ae9697963832755de203bbfdd6f03",
+  "text": "Normal atmosphere. Same composition, same pressure, same temperature within the sensor's tolerance.",
+  "bytes": 96174,
+  "generated": "2026-09-21T15:13:01Z"
+}

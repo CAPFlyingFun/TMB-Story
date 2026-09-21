@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e427e80d25fd",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b93c7fafb49c0fc4b457c63e1991c2790b8c1710a5fd531f1e6478052940ef90",
+  "text": "Lena's call returned through Sarah's tablet.",
+  "bytes": 45601,
+  "generated": "2026-09-21T15:11:30Z"
+}

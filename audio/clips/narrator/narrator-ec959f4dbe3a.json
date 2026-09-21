@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-ec959f4dbe3a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "930fc03ab7de1894e46cf8e4cf9d08c79b8be804d43db9e0d7c078325ede0ce8",
+  "text": "Jack opened the channel.",
+  "bytes": 26375,
+  "generated": "2026-09-21T15:11:13Z"
+}

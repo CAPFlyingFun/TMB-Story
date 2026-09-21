@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-d399856036bd",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f04d566ea68066fe10c81e2c307d287e21f27c20b6bb827a2abaa0eba21a50ba",
+  "text": "That's grass.",
+  "bytes": 17598,
+  "generated": "2026-09-21T15:12:28Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7e556b30e53b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1a8504516b5046e13ccddfb81c31e77b3d63f95747753c7504b2d771d7a31e7b",
+  "text": "This time, something moved outside the camera light.",
+  "bytes": 48527,
+  "generated": "2026-09-21T15:11:42Z"
+}

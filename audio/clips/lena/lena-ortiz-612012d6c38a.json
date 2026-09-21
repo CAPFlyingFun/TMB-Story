@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-612012d6c38a",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7f689ec111542ccac38f6fa79ab76ed4d880458004c3611bbd0a2ab49ceee3b9",
+  "text": "It follows the town.",
+  "bytes": 22613,
+  "generated": "2026-09-21T15:13:39Z"
+}

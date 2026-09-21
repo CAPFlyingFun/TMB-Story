@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-be5816ba6413",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "35a495e7c938c52a28ed004acbb58f17a240c8b81055f0ca7d72ed400623c83f",
+  "text": "The scale target.",
+  "bytes": 19688,
+  "generated": "2026-09-21T15:13:17Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-b72a3c05be22",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "740a25281fd0dd530113479e06de9641aee6c0909ea703a24dfa2d9d0d09bda1",
+  "text": "Moving?",
+  "bytes": 11328,
+  "generated": "2026-09-21T15:12:16Z"
+}

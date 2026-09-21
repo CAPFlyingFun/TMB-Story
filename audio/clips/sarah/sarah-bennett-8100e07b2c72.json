@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-8100e07b2c72",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7e817f880c75f9e7dc4870220990508379feb805ba15c19bdb5c9be32788ac86",
+  "text": "Three weeks ago.",
+  "bytes": 21777,
+  "generated": "2026-09-21T15:14:01Z"
+}

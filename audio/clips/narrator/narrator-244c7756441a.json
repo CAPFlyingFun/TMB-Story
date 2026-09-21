@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-244c7756441a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8ae0e5d86b14fffefd819f5a83feda2227e17441539036fa3b518f2ffaf4cb4b",
+  "text": "The system found several matches.",
+  "bytes": 35988,
+  "generated": "2026-09-21T15:13:57Z"
+}

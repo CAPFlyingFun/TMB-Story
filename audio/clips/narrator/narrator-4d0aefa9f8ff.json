@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4d0aefa9f8ff",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2ab470722732081c2c33f5dbfa2f5c3d8c7d02a90c6b81aa82a04cfc64fb8844",
+  "text": "The pipe emerged from beneath a utility building and crossed several meters of developed ground. It should have continued through the boundary toward the reservoir.",
+  "bytes": 140896,
+  "generated": "2026-09-21T15:11:28Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-74cdaa9a99c1",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4704558ce9457ce8a40d5ea18992b55c5f4cabd774af12714e15e86e8ddbb706",
+  "text": "Return to town. Quietly. Security personnel only at the perimeter until we know more.",
+  "bytes": 77784,
+  "generated": "2026-09-21T15:11:16Z"
+}

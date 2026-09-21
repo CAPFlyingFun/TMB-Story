@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-c644be685a54",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a97c727f13ed079a63a7e9372288279275c50ca876ed2df74e40351fd2aa7ab5",
+  "text": "I'm asking why the computer thinks he did.",
+  "bytes": 38914,
+  "generated": "2026-09-21T15:14:10Z"
+}

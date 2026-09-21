@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-8b6a7782d5d1",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "518a09892261214dec6f309de3efcae8afb7e9be003dfef0cb5176f4f2b0c2ed",
+  "text": "I checked three boundary crossings,",
+  "bytes": 34316,
+  "generated": "2026-09-21T15:11:32Z"
+}

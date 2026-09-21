@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-978f272f44f4",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4520a94eeea5fed9836d62b196421ecdb5039a53140cffc195684ba6e0ce48a0",
+  "text": "He stared at the screen.",
+  "bytes": 26375,
+  "generated": "2026-09-21T15:14:08Z"
+}

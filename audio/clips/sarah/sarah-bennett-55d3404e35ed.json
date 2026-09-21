@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-55d3404e35ed",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a36c57c64f8dd7bd09953fc1b0163908ad79a1ad50fecd19ad7883c119c640ed",
+  "text": "He didn't.",
+  "bytes": 15090,
+  "generated": "2026-09-21T15:14:09Z"
+}

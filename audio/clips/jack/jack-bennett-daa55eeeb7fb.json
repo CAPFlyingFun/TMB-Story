@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-daa55eeeb7fb",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c7a75f2230ba32bbef57be0eeedb84e1fc9e01b9f9e00cf63f56def820c5149e",
+  "text": "Everyone hates that.",
+  "bytes": 20524,
+  "generated": "2026-09-21T15:13:04Z"
+}

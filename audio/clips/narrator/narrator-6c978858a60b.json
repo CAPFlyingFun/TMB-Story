@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6c978858a60b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b3e0e421b05cb612692181ae5a0c8ee02c5e773d06cb8b04994d6597cfe6cdf6",
+  "text": "Doctor Mercer's voice shifted from disbelief to work.",
+  "bytes": 53124,
+  "generated": "2026-09-21T15:11:07Z"
+}

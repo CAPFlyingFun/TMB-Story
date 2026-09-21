@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-84bd68c2a60d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3a433a4fe6d0cae4ffc640fe8b805610599cf5233a2be2cad248cf4dbf82a503",
+  "text": "The image was blurred, but several narrow forms crossed the gap. One touched the ground before the rest vanished behind the ridge.",
+  "bytes": 130447,
+  "generated": "2026-09-21T15:13:07Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-9ac323fb2ebe",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fbf3cfb8e34864bc0ec50386fa483fcca5b4eb4727c4e0afd9463860b7346eb5",
+  "text": "That's good.",
+  "bytes": 13000,
+  "generated": "2026-09-21T15:11:10Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6d37e43f62b9",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e2a0034efccfc7def7cc88cf0bb3182a8845b37ec08e3e66fe8299ba60d0a70b",
+  "text": "A call indicator appeared on Jack's console. Lena had left the utility station after another technician relieved her and joined the emergency coordination channel from a secure room closer to the center of town.",
+  "bytes": 195648,
+  "generated": "2026-09-21T15:12:07Z"
+}

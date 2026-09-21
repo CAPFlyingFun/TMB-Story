@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7db70204d3c7",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "99fefd29a7823fb5916a961dd17866dfcaeb4ee8316826d13f8ca68760fc9d19",
+  "text": "Jack adjusted his flashlight.",
+  "bytes": 32226,
+  "generated": "2026-09-21T15:12:33Z"
+}

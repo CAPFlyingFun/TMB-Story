@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c6135992ec76",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5f3e7c07752f35b6eac2dfe1f523ed5d045063e6a39a52e182d053714c7953af",
+  "text": "Lena blinked.",
+  "bytes": 22613,
+  "generated": "2026-09-21T15:13:28Z"
+}

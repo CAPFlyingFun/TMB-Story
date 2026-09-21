@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-703046a62d12",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8687730b64652f036e22c6ad17311bbb745109d8def0d248ea2a7541d54f6c5a",
+  "text": "Any more shadows?",
+  "bytes": 16762,
+  "generated": "2026-09-21T15:12:13Z"
+}

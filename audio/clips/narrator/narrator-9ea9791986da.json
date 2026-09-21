@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-9ea9791986da",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a74981427170e9ff4051530cec7ac7b5ed6dad6ea25bcaa724c3c0f9b7f9f100",
+  "text": "Jack closed his eyes briefly.",
+  "bytes": 35988,
+  "generated": "2026-09-21T15:11:03Z"
+}

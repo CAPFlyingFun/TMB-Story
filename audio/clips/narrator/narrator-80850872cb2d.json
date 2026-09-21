@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-80850872cb2d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "147d3bd9b68a1b2946ccd2ff2adffd57b8a7723eb01a3fbee113ba4b91dd80be",
+  "text": "The control-room window trembled.",
+  "bytes": 35988,
+  "generated": "2026-09-21T15:14:24Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-ecedb483a4db",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6ebee66f5ade3143a58b7c38cbb3eafd373a617a45e57227f65869fbd9d93a70",
+  "text": "Jack stood over the main control console with a cup of coffee he had forgotten to drink. The incident map was crowded with reports, but there had been no mass panic and, so far, no serious injuries.",
+  "bytes": 204008,
+  "generated": "2026-09-21T15:11:50Z"
+}

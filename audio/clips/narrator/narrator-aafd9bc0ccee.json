@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-aafd9bc0ccee",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fbec80ef4793def3dd9efb220ad818d4b671801c5f1252b2c9c7acee76fef1bd",
+  "text": "Jack opened the authentication signature.",
+  "bytes": 41004,
+  "generated": "2026-09-21T15:14:10Z"
+}

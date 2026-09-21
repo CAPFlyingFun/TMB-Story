@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-742b066fccf3",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4fdbd2a4734bcb2f41fdc234900ece59e4dd68bfde34a7882c07c2c4828fa00e",
+  "text": "It was how a person drew a selection.",
+  "bytes": 39750,
+  "generated": "2026-09-21T15:13:40Z"
+}

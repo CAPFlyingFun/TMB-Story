@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-064051526f9b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ee0b368289bdb96f6acb3fc0ecfce359f08e0794774d0edc2f73c4a370ec42bd",
+  "text": "Jack held out both hands.",
+  "bytes": 32226,
+  "generated": "2026-09-21T15:12:54Z"
+}

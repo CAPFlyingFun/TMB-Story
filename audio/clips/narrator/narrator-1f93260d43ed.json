@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-1f93260d43ed",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "967eaff865d9453d53942ba1b6678cc32e77ba852031c37d7eedde3735ab6d3e",
+  "text": "Several lines ended precisely at the TOMBS boundary.",
+  "bytes": 52288,
+  "generated": "2026-09-21T15:11:23Z"
+}

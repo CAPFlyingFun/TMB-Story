@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-93476ddd821b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5eea760cc0d465b280ac21ad77cc76adb26c56b8bb545f7dac9e101ff0544cbe",
+  "text": "Jack almost smiled at the inadequacy of the word.",
+  "bytes": 53960,
+  "generated": "2026-09-21T15:11:16Z"
+}

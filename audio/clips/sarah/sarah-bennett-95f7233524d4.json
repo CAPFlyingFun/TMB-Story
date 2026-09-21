@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-95f7233524d4",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5c34ead2dbf4da36d4ae09c8e03a3a047fe0ecfe7ac9ea17c0015a0ffd58b3c6",
+  "text": "Then whoever did this had more than remote access.",
+  "bytes": 49363,
+  "generated": "2026-09-21T15:12:25Z"
+}

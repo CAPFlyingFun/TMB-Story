@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-6197a6aab0f0",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "82df1556220f9c536b9e25c13348d73acb85eff70a553ec895465f3ce30b54f7",
+  "text": "So someone prepared this three weeks ago?",
+  "bytes": 34316,
+  "generated": "2026-09-21T15:14:04Z"
+}

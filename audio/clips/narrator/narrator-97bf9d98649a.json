@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-97bf9d98649a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "81b0fc3500476cabbd90d642bd19af39cdbfc8343b9c328808e06217358dc27b",
+  "text": "The officer hesitated.",
+  "bytes": 27629,
+  "generated": "2026-09-21T15:11:15Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-39815158583c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "25cb59c22444d55688557d72453b70120ff70f3537a8a031fec96284ddeafb1b",
+  "text": "He moved several steps down the pavement, staying well inside the developed zone.",
+  "bytes": 79874,
+  "generated": "2026-09-21T15:12:38Z"
+}

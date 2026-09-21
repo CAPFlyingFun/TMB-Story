@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-d9d75538251c",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fa5598e025521e77397ebf8793ed6f65bfc855259e471c64b4bfe7135e977ddb",
+  "text": "It could delete logs if an administrator ordered it.",
+  "bytes": 48527,
+  "generated": "2026-09-21T15:12:24Z"
+}

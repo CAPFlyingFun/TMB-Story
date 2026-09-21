@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-c09af78133b3",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "02c159662e6b4a2a5dba14abf663c50b72e0c05435bee6a17ff7369b038a0b30",
+  "text": "How much water is stored inside the settlement?",
+  "bytes": 39750,
+  "generated": "2026-09-21T15:11:33Z"
+}

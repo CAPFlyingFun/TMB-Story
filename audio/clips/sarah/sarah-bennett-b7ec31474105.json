@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-b7ec31474105",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "93da5e6019ecceff2a3e0ebca23817ff8eb57e91fbc5231b0a55acf84dc0c7ee",
+  "text": "What do you see?",
+  "bytes": 13836,
+  "generated": "2026-09-21T15:12:39Z"
+}

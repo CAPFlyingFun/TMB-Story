@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7f7cd963d11e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7024a64e7fda644cd6da165b896c21a01b097b9aaf8520d232d2b563c392f45d",
+  "text": "The boundary definition had not been created during the attack.",
+  "bytes": 59812,
+  "generated": "2026-09-21T15:13:59Z"
+}

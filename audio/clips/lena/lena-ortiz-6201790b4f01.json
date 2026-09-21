@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-6201790b4f01",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bc022e3f89c29aa2687207087cf92889e83d319aed5b8ca8bb9d073fad9fa913",
+  "text": "At current normal consumption, bad. With emergency restrictions, considerably less bad.",
+  "bytes": 91577,
+  "generated": "2026-09-21T15:12:08Z"
+}

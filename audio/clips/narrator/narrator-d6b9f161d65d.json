@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d6b9f161d65d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ac57c92b29007910f7f73d7f45f7b3c963ca88dfb7ca5f06c76ad1b7c59cd4cf",
+  "text": "Jack unmuted the channel and opened the perimeter cameras.",
+  "bytes": 55214,
+  "generated": "2026-09-21T15:12:13Z"
+}

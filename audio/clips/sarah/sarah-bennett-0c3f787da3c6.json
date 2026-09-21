@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-0c3f787da3c6",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9acfd207943e6c980542c1edea064ce744f9d895511fc641de14c819dd8a3cb6",
+  "text": "Jack, that's a fingernail.",
+  "bytes": 18852,
+  "generated": "2026-09-21T15:12:42Z"
+}

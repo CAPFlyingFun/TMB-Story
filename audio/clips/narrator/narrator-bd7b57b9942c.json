@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-bd7b57b9942c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ad95e1588a12cc3ba96fb43bdfab9f0109719f34ead0c251fa3b9bde701b9919",
+  "text": "They turned back to the consoles.",
+  "bytes": 33062,
+  "generated": "2026-09-21T15:11:22Z"
+}

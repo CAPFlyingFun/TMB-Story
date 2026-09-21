@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-8111f6a9e071",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "83703011d0b29c26b08e5e130183c56eb46df44ac19da64d75867df384dd4b29",
+  "text": "That doesn't make it less unpleasant.",
+  "bytes": 35988,
+  "generated": "2026-09-21T15:12:35Z"
+}

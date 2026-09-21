@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-4e7393fe01ad",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e208c35cd5f3d6607b8be77959b4a1578835079b5b04c7e9e2dccfbc5c969c93",
+  "text": "Or whatever is causing them is.",
+  "bytes": 28465,
+  "generated": "2026-09-21T15:12:16Z"
+}

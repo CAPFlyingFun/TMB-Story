@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-93a5ab1e3eb1",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e6eaa89e3e33bb7ec14cfc99ac1939963299cb92d29e78b2163fb47b32fb0b7a",
+  "text": "Sarah rested a hand lightly against his arm.",
+  "bytes": 46437,
+  "generated": "2026-09-21T15:12:02Z"
+}

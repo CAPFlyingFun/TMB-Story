@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-fb5ad8d65ad4",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c4d9d3393254a6189699a870ed285f8b46931a568b6c5f0d67dc7bc613f6e458",
+  "text": "I didn't say anything.",
+  "bytes": 22613,
+  "generated": "2026-09-21T15:11:54Z"
+}

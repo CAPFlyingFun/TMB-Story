@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-161fa74494c8",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5f635c683e5b88595e3be42956ca70733c6f19e4a8f1072ce1d2495792c9a878",
+  "text": "Sarah watched the answer appear.",
+  "bytes": 35988,
+  "generated": "2026-09-21T15:13:27Z"
+}

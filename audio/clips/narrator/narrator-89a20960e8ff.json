@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-89a20960e8ff",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c67a5f65cfe3a0aefd4335601d5477970f4e03b53ab89de4a547975da9e4e88b",
+  "text": "Lena paused as keys clicked faintly through the call.",
+  "bytes": 53960,
+  "generated": "2026-09-21T15:11:33Z"
+}

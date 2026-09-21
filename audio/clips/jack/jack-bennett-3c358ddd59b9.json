@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-3c358ddd59b9",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "79d6adcdc3776138817890530ad5337f97a604e3c3f4ba2b51e86877254370e4",
+  "text": "The town got smaller.",
+  "bytes": 22613,
+  "generated": "2026-09-21T15:11:06Z"
+}

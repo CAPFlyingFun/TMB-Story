@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-23268b608f6c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "29cb8142004c576aa287cc475e926eb62037ba9fcc23fbb2399458a7ddaa379e",
+  "text": "There was no glowing wall, no distortion, no lingering TOMBS field. Asphalt simply stopped and soil began.",
+  "bytes": 143822,
+  "generated": "2026-09-21T15:12:30Z"
+}

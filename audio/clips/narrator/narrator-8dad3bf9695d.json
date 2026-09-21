@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-8dad3bf9695d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0179077bd0dfc004efa3dc7fd5dc3ac22f8a350755a6b69bf868a700c81f9c44",
+  "text": "Now it was longer than Jack's arm.",
+  "bytes": 37660,
+  "generated": "2026-09-21T15:12:44Z"
+}

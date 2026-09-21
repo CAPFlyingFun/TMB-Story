@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-039d9169b7e6",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7bc783119434c4aa08e77677c3c1927cbefadb61724ba0ccd571f1eac7cda4bb",
+  "text": "I can like two competent people in one night.",
+  "bytes": 35988,
+  "generated": "2026-09-21T15:12:10Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5e2e3ca82260",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0dc9c06c148c8de2d60e17d1daf1e733ebea1b48713ba697c215e39a2c0c3d84",
+  "text": "He reached toward the edge.",
+  "bytes": 28465,
+  "generated": "2026-09-21T15:12:30Z"
+}

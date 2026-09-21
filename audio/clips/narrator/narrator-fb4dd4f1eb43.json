@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-fb4dd4f1eb43",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "dfbf58e7ca57e499e1537bada22fe0bd1f04670e422a0e07484cf74380049cc3",
+  "text": "Sarah pointed to the upper portion of the frame.",
+  "bytes": 44765,
+  "generated": "2026-09-21T15:13:08Z"
+}

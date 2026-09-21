@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-9a8f0e88a1db",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f83f9de60f55ec1c0355c3a0e175f2994279c41f8d157b55c6881e54228a56d8",
+  "text": "He returned to the access records from before the activation. The unidentified connection had appeared and disappeared. Security history had been cleaned. His credentials had been revoked.",
+  "bytes": 189797,
+  "generated": "2026-09-21T15:13:50Z"
+}

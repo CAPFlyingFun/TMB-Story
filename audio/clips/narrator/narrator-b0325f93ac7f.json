@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b0325f93ac7f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "74dddbb2b93124d71684c660d06f6937c72c816df6f9202ec36963cdeae68142",
+  "text": "Jack overlaid the reports on the settlement map. The first vibrations had been strongest near the eastern boundary. Later reports came from the north.",
+  "bytes": 166809,
+  "generated": "2026-09-21T15:12:17Z"
+}

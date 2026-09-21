@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-2a9743eaa2ff",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "87f82f7f2716e75d7aed882a41c29cee923b07217eb31ecd9a25a2f8fec4560d",
+  "text": "Hearing Sarah say it made the room colder.",
+  "bytes": 41839,
+  "generated": "2026-09-21T15:13:12Z"
+}

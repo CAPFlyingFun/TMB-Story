@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7d410bfbbd6a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ef704c341914b429c43cc05c0e95b924fed98f2d90d451508d9ac9838208a7e9",
+  "text": "The exposed end was smooth.",
+  "bytes": 33898,
+  "generated": "2026-09-21T15:11:28Z"
+}

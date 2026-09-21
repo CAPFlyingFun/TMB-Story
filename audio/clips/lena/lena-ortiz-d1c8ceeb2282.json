@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-d1c8ceeb2282",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1f516ef508f7672c714c862adbd9d57b193d50c22e6c4b204cf004fc9f24a4c5",
+  "text": "For the record, I support running away from unidentified giant things.",
+  "bytes": 79874,
+  "generated": "2026-09-21T15:12:58Z"
+}

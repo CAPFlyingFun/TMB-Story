@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0c9fcdee6c6d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "526c2e02b3086e52beae89a60eb5ea4bf04aa2ec15239a158049c7ba386a0b7c",
+  "text": "Sarah touched his chest anyway.",
+  "bytes": 34316,
+  "generated": "2026-09-21T15:12:55Z"
+}

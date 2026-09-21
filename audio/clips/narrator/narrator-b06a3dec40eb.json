@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b06a3dec40eb",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fa724f544e8e614eb1de16df2298dba144cefd9b704001a3752387130fef355f",
+  "text": "Research buildings.",
+  "bytes": 24285,
+  "generated": "2026-09-21T15:13:35Z"
+}

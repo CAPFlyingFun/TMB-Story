@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-012374bc3eba",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "06d27baf96ac0f5ea9f4d705cad4bf4c78ce665380ffbf2c3a92b3358961d0b3",
+  "text": "Jack opened it.",
+  "bytes": 20942,
+  "generated": "2026-09-21T15:14:06Z"
+}

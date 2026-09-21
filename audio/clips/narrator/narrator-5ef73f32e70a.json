@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5ef73f32e70a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "66ba5ee2f6d13140fb211e727aef68feb778c9664055db9ce289b36b4aeb2e3e",
+  "text": "The fingernail clipping made sense.",
+  "bytes": 34316,
+  "generated": "2026-09-21T15:13:30Z"
+}

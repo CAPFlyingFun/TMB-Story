@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-1f8f509a6195",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7b563bb68a115ce19e78e4d1fefce396110539c42ca3de59e72f78c7bf161b43",
+  "text": "The vibration faded, then returned several seconds later, deeper than before. A loose pen rolled across the console and tapped against Jack's hand.",
+  "bytes": 154271,
+  "generated": "2026-09-21T15:11:38Z"
+}

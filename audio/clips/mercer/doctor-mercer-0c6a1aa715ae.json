@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-0c6a1aa715ae",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "828e3ff012243e90913d600aadf99a8a4a6440629977016461fcb73459fe108d",
+  "text": "And when they wake on their own?",
+  "bytes": 28465,
+  "generated": "2026-09-21T15:11:08Z"
+}

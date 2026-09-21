@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-df49fe74a326",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1ca751a04bcf89019260457b034582aceac7845e2f4742ab5d80170d3be5d164",
+  "text": "Negative. Just... big.",
+  "bytes": 35152,
+  "generated": "2026-09-21T15:11:16Z"
+}

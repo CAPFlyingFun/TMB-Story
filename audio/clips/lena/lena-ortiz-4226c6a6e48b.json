@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-4226c6a6e48b",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0f66837caa73c838ed4b48bd63997835afa9e997f128dd56e368def5c4531237",
+  "text": "You were both at the community center.",
+  "bytes": 35152,
+  "generated": "2026-09-21T15:14:17Z"
+}

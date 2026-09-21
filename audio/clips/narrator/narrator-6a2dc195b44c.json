@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6a2dc195b44c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1153cb97be5d2d9834c7f5cb88214cc4b6135cd97c68df9f707372a97bf84bab",
+  "text": "Jack gave Sarah a look and returned to the call.",
+  "bytes": 49363,
+  "generated": "2026-09-21T15:11:05Z"
+}

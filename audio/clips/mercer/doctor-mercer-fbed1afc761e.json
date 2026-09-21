@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-fbed1afc761e",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "653ba9eeccf33eb0c8b6e9311b36a61d43aaf91294b0cfc28687ce73621b9a66",
+  "text": "Nothing serious. One patient woke up frightened, two nurses felt the floor move, and half my overnight staff are arguing about whether we had an earthquake.",
+  "bytes": 154271,
+  "generated": "2026-09-21T15:11:02Z"
+}

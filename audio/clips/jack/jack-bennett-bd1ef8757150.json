@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-bd1ef8757150",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "45d4d28eb78cc4795767a1fb6dc6c58945cbe146dd873f8e50282a32ddab3635",
+  "text": "Something's coming.",
+  "bytes": 15926,
+  "generated": "2026-09-21T15:12:48Z"
+}

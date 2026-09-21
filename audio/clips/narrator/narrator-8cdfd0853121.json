@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-8cdfd0853121",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3eabf8440dbc5234cd804cc215ccb089697dd00813160514a2d858ae08224553",
+  "text": "The same way tonight's records had been clean.",
+  "bytes": 43511,
+  "generated": "2026-09-21T15:14:19Z"
+}

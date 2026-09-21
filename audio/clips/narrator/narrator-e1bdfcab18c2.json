@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e1bdfcab18c2",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f31e0507a12671397b4125d3e76ccf650a908a5bb8b83453175c06f3a53585c5",
+  "text": "Jack had been across the island at a settlement planning meeting.",
+  "bytes": 56886,
+  "generated": "2026-09-21T15:14:16Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-ab9b77b83ac7",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c424fdb4a0cff6c161713e9521697ae7cd2ea3ff05c85fb07936bdeaba2ddcea",
+  "text": "The water droplet made sense.",
+  "bytes": 35988,
+  "generated": "2026-09-21T15:13:30Z"
+}

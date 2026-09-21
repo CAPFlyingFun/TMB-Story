@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-ce5624d987e3",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "95f1d20201f65c192c43d00b410b3723d5c9191cf29e16c5d0f088100bd6c2e5",
+  "text": "Search for the boundary coordinates.",
+  "bytes": 31391,
+  "generated": "2026-09-21T15:13:56Z"
+}

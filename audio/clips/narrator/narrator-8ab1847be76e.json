@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-8ab1847be76e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7d9a769d337c91414308624c088a5c3341ac085b8d83c1ea1ab268f6748a3179",
+  "text": "Sarah stared at the message.",
+  "bytes": 30973,
+  "generated": "2026-09-21T15:14:23Z"
+}

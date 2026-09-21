@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5eaae1ecf76d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d6f4292f8dfc6a3cdb05445b423e13bcd0c73e90a47b3978faf27d89a19bbd77",
+  "text": "For the next several minutes, the settlement remained mostly asleep.",
+  "bytes": 56886,
+  "generated": "2026-09-21T15:11:18Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-78184efa1ff6",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7e3874bda8f5d6ca64b2d0a1dce54b3c099b6f983bdf6b4e1cd35d1fcea7f2c7",
+  "text": "Three words appeared on the screen.",
+  "bytes": 33898,
+  "generated": "2026-09-21T15:14:22Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0ec52872098c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0d497e1e4fbbadf52c1c9f533a5445e10c1aa63864c8c78eafea53989aa231d9",
+  "text": "Another pause.",
+  "bytes": 20942,
+  "generated": "2026-09-21T15:11:07Z"
+}

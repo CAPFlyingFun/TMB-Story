@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-8e6296b8c900",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f702a769518668208189e4dc65accfd7a28ad33c04892b070043eb12522b9353",
+  "text": "Jack let out the breath he had started holding.",
+  "bytes": 44347,
+  "generated": "2026-09-21T15:11:40Z"
+}

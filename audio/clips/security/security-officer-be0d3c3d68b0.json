@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-be0d3c3d68b0",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "586b3d437f9fe865c18e3701ffad4ab7e4f7d321b46e3a47bd2895fbd098ab27",
+  "text": "Dirt. Grass. A lot of both.",
+  "bytes": 51035,
+  "generated": "2026-09-21T15:11:14Z"
+}

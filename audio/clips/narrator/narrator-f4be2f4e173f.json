@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f4be2f4e173f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2ee6ec87b754cabb52158e74ad9e146961b7362fa3f8f45387552f2f584fd1c5",
+  "text": "Not part of TOMBS's normal configuration.",
+  "bytes": 45601,
+  "generated": "2026-09-21T15:14:21Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5ebde945b4b0",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bddd8b3e0bf4a51ad5a4c96c0d60ca804898b503bd751c41f09cfcf8ee8a108c",
+  "text": "Then Sarah nodded.",
+  "bytes": 23449,
+  "generated": "2026-09-21T15:12:04Z"
+}

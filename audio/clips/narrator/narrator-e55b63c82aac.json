@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e55b63c82aac",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "65930f50ad117249e7caee0dfbb6df5950cc9cf0b1bfc92ae4635f65aa5f137a",
+  "text": "Sarah had been there too.",
+  "bytes": 30137,
+  "generated": "2026-09-21T15:14:15Z"
+}

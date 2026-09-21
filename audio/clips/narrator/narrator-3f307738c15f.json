@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-3f307738c15f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "44bc12e5f7d8d37f619e4150990dbd3ea1ca09fc52aa29402ea2d4be2609efeb",
+  "text": "A low vibration passed through the floor.",
+  "bytes": 43511,
+  "generated": "2026-09-21T15:11:36Z"
+}

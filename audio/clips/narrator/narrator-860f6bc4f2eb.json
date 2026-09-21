@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-860f6bc4f2eb",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "91cd90a8091906c3ebbd870e4ec4f12f3cf8197b55be9e0bbb2795eaaa6b454c",
+  "text": "He turned back to the calculation.",
+  "bytes": 34316,
+  "generated": "2026-09-21T15:13:30Z"
+}

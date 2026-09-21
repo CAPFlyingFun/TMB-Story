@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-cc468eb1ae31",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f016ef8a424b225f2fb088d2016388fc04422189c3787e9690493d228b17c02c",
+  "text": "He stared at the object.",
+  "bytes": 22613,
+  "generated": "2026-09-21T15:12:42Z"
+}

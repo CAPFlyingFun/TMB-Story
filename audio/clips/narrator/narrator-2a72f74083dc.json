@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-2a72f74083dc",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9f36becb2ee11e4aac021e348547e5c86610e8e91a77b09df9321c13d4d94acd",
+  "text": "Nobody moved.",
+  "bytes": 20524,
+  "generated": "2026-09-21T15:14:02Z"
+}

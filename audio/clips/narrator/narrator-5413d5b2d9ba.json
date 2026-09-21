@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5413d5b2d9ba",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c00cd49f7685eef41f0bdff6a6d67426956fb17aa4df5be1ac335036ca116ac5",
+  "text": "Jack smiled despite himself and moved the sensor closer.",
+  "bytes": 57722,
+  "generated": "2026-09-21T15:12:32Z"
+}

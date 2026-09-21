@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-4d97524a001e",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7bd07fd9c653ea53cf666d53f2ec08e318f58a87aa4b88268908a0e0e72000ca",
+  "text": "My hand is still on our side.",
+  "bytes": 27629,
+  "generated": "2026-09-21T15:12:31Z"
+}

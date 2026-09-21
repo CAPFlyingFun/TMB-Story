@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-3bb583d53210",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "89ec77827372cdc8f1ca84c169040fadfee9c40d54d03f6190acc18ca8cc9e10",
+  "text": "Doctor Mercer was quiet for a beat.",
+  "bytes": 38078,
+  "generated": "2026-09-21T15:11:03Z"
+}

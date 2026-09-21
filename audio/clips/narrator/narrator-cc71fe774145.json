@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-cc71fe774145",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9c390e53b26d4f853eedb90c8e8816d302b54d868367d75282ceb88ef7734e27",
+  "text": "Jack had known that possibility from the moment he saw the legs.",
+  "bytes": 60648,
+  "generated": "2026-09-21T15:13:12Z"
+}

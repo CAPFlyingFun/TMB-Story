@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-01ae05558352",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f1dcb1f58072637010adf3ac6d5fe7afd142dea25e5e7940ef7245dd7250b414",
+  "text": "Jack noticed immediately, but she shook her head before he could ask.",
+  "bytes": 59812,
+  "generated": "2026-09-21T15:13:29Z"
+}

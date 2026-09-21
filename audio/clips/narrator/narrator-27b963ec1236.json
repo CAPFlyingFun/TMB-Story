@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-27b963ec1236",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "22855c9e80ff3b609ec4aba69eebad16e35e174b0ff8f055be86a4c6a643a384",
+  "text": "Sarah rested one palm against her stomach.",
+  "bytes": 44765,
+  "generated": "2026-09-21T15:11:38Z"
+}

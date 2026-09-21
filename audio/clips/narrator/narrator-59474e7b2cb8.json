@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-59474e7b2cb8",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "14ebdf62cb61e7432822f457eb5dadaebb44e4b7e71759e1291148b0b7cfa75b",
+  "text": "Power lines crossed the developed zone in a web of glowing paths. Water, drainage, communications, and service conduits followed.",
+  "bytes": 139224,
+  "generated": "2026-09-21T15:11:24Z"
+}

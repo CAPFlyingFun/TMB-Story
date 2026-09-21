@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-8d899659661e",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3d2e5aa2423a273266c2eb80c9f8992558211483a4697e01084b4783f9938941",
+  "text": "The tanks were designed as buffers, not as our only supply.",
+  "bytes": 66499,
+  "generated": "2026-09-21T15:11:34Z"
+}

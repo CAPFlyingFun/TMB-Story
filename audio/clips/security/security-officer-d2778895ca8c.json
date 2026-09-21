@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-d2778895ca8c",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d66006bbd3f392fe09feb9d35814b2ee6b6075ac1ceef3cab955a98a56d38603",
+  "text": "Inside the developed zone only. They want to see where the road ends.",
+  "bytes": 65663,
+  "generated": "2026-09-21T15:12:29Z"
+}

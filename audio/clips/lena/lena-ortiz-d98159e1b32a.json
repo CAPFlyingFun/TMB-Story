@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-d98159e1b32a",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "86af062b75ce1c696c8baf16035e5b247cc2b39b66efc0b745d254f009033895",
+  "text": "Please tell me we're not using the phrase whatever is causing them in the next public announcement.",
+  "bytes": 110385,
+  "generated": "2026-09-21T15:12:19Z"
+}

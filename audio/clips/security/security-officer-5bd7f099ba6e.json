@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-5bd7f099ba6e",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4c0d0cace91a3b4df90449ea0a557c508f5cc99d34db9d2514201a25327a98fd",
+  "text": "Doctor, I wasn't planning on crossing it.",
+  "bytes": 41004,
+  "generated": "2026-09-21T15:11:14Z"
+}

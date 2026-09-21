@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-1326feb70343",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3b1b6525bd1623197744757fcbb4cedd68442a2f0bd6b4fd3252db0b2315c5b6",
+  "text": "Backup substation.",
+  "bytes": 20942,
+  "generated": "2026-09-21T15:13:42Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-9e05ca467fa1",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2e830646a7e2a462cfe5db15a1652f7e1083d5fcf7e2c731c686e569d6bf2ca6",
+  "text": "But not everything it would need forever.",
+  "bytes": 36824,
+  "generated": "2026-09-21T15:13:44Z"
+}

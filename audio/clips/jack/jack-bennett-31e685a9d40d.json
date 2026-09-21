@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-31e685a9d40d",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6130d3ee90f6de2d3df26353bbf9c2727f82336e83cbf82d5cdebae1a8afb052",
+  "text": "We are investigating the cause and whether the event can be reversed. We will provide another update when we have verified information. If you have an emergency, use the normal emergency channels.",
+  "bytes": 159286,
+  "generated": "2026-09-21T15:12:03Z"
+}

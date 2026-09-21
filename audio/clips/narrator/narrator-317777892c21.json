@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-317777892c21",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0ed6dfdddbf4c6ecf4e8cb6372a2fbe9110db6afa29bf5e41f7f6661b7dbb8b1",
+  "text": "Jack stood and swept his light farther along the boundary.",
+  "bytes": 56886,
+  "generated": "2026-09-21T15:12:37Z"
+}

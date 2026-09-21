@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4473d3ff9271",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b8b87adfb5bb5d88b0eb78496911b377ed4704c1e935734271ae0838615089d2",
+  "text": "Now enough people were awake that silence had become its own kind of announcement.",
+  "bytes": 73186,
+  "generated": "2026-09-21T15:11:49Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-9d5172ce480c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6c3b4eaaa2c36bac9e5c91c6aa0fd60a738957d24d9e21d5ddcf3bcb1d415c35",
+  "text": "He remembered before the entry loaded.",
+  "bytes": 36824,
+  "generated": "2026-09-21T15:14:14Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d5638298d628",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7303e32780c7af1f91e07259c78d600ef59e3eaf7f8e589cf09ff1e78970db79",
+  "text": "Jack enlarged it until the pixels began breaking apart.",
+  "bytes": 57722,
+  "generated": "2026-09-21T15:13:10Z"
+}

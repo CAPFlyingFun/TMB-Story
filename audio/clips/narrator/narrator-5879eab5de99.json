@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5879eab5de99",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7012483ff8c9a3773ed2f6033ae3fc551f983fe15e0e9834c06a167cd0a23599",
+  "text": "Lena looked toward the window.",
+  "bytes": 33062,
+  "generated": "2026-09-21T15:13:12Z"
+}

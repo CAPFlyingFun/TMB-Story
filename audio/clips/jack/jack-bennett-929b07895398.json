@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-929b07895398",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d200111a57474ea8d02196a75dd15075527664bdea0fa3a5bcabab1409f8a507",
+  "text": "The part we can prove.",
+  "bytes": 21777,
+  "generated": "2026-09-21T15:11:58Z"
+}

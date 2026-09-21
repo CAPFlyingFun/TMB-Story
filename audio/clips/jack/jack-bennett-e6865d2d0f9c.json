@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-e6865d2d0f9c",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9b3ba642f66e78cf61eed3fca163bbbf6a4d195a799eebeb2e6283efafca209f",
+  "text": "I built TOMBS.",
+  "bytes": 18852,
+  "generated": "2026-09-21T15:11:59Z"
+}

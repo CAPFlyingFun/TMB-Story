@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-2fda9d511d9c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cf2ab9408d2bcf6cef440d2670dd2d39ce57b1103b96f4d220cabb0d9a20ffe2",
+  "text": "It was gone in less than a second.",
+  "bytes": 31391,
+  "generated": "2026-09-21T15:11:43Z"
+}

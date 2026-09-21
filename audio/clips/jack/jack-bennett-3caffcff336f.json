@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-3caffcff336f",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "67de800bc917ac95c11d1d7f1dfd5d18768a213df2102d4e9d5a2be832fda765",
+  "text": "They had control.",
+  "bytes": 20524,
+  "generated": "2026-09-21T15:12:25Z"
+}

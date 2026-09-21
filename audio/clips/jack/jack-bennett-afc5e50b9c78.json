@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-afc5e50b9c78",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6ef741500ec1adebce2f81a6d9009f16dbae2d4033a53c00d056e1c41c6b465e",
+  "text": "The activation sequence.",
+  "bytes": 22613,
+  "generated": "2026-09-21T15:13:52Z"
+}

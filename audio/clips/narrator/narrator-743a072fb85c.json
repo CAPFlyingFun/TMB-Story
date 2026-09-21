@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-743a072fb85c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cad473705c62b412507f01b9fb73d54e4c8b369cd1d70568c52dab3fc40c1578",
+  "text": "Sarah moved her chair closer to him.",
+  "bytes": 35988,
+  "generated": "2026-09-21T15:14:12Z"
+}

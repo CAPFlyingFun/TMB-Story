@@ -17,7 +17,7 @@
     "addedBy": "Joshua",
     "addedOn": "2026-09-18"
   },
-  "adopted": "2026-09-21T14:33:32Z",
+  "adopted": "2026-09-21T15:15:07Z",
   "measured": {
     "lufs": -39.4,
     "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"

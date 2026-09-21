@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-5e74087ef1dd",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fe5af887f13ac9b81c2854397a8515d0c6a06d91729d3620e33d34620ad616d6",
+  "text": "Visual inspection of the southern boundary.",
+  "bytes": 41839,
+  "generated": "2026-09-21T15:12:28Z"
+}

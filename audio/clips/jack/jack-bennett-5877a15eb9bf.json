@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-5877a15eb9bf",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e1b7c9a1882a52c00e9fd664136d83873f990bbcb482605e00da58d3bb2b1423",
+  "text": "We're done. Everybody in.",
+  "bytes": 23449,
+  "generated": "2026-09-21T15:12:47Z"
+}

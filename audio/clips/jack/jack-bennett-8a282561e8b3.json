@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-8a282561e8b3",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "83890aeafd54a7ecc67d6f7bc755464098325e140dbcfa2e2d774169a0610674",
+  "text": "Then we tell the people who need to know first. Medical. Utility. Security. Anyone already awake.",
+  "bytes": 108713,
+  "generated": "2026-09-21T15:11:21Z"
+}

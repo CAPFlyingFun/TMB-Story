@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-69625b8efd44",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4164428f4b668ade82986e81eac38cbd0b21d9a99cde484978f6df507fa06f10",
+  "text": "The external connections.",
+  "bytes": 24703,
+  "generated": "2026-09-21T15:11:25Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6c3b9091d4f4",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7f13ac3db7de862440ee7218e0fb81a375bce77228649b547d49ccd384e3c168",
+  "text": "The scale factor had bothered him since the activation, but not only because of what it represented.",
+  "bytes": 94084,
+  "generated": "2026-09-21T15:13:15Z"
+}

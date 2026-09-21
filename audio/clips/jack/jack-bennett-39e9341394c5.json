@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-39e9341394c5",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ef1d24bd029e7ea43fb9d3c5819d1eed654fe1be865fe4d2ec7ab032385d423b",
+  "text": "We had a TOMBS boundary event. The developed settlement appears to have been reduced in scale relative to the surrounding island.",
+  "bytes": 88651,
+  "generated": "2026-09-21T15:11:05Z"
+}

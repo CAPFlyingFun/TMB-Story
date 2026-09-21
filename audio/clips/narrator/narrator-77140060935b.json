@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-77140060935b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e417021bc6bf8a8b5038b541ddc4f51f67298b497fe7b5b30ff168f868aba4b0",
+  "text": "It had not awakened all at once. Porch lights had spread block by block. Night-shift workers had called their families. Security vehicles had moved through the streets without sirens. Rumors had outrun every official explanation Jack could give.",
+  "bytes": 249983,
+  "generated": "2026-09-21T15:11:50Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7864f00452ee",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a970314df4261af0deb9284450aeda2e6ec12aaaf85b2f54b1fc4ecf7e7f395c",
+  "text": "Sarah sat at the neighboring console with her feet propped on a small equipment case. She had objected when Jack brought it over, then used it without another word.",
+  "bytes": 146747,
+  "generated": "2026-09-21T15:11:53Z"
+}

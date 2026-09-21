@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-1f9cdc31c77b",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d2a2aa01d42e5924538fc93dfeb4cda3084ef9971d187efa8c7ef4ebae05e972",
+  "text": "The logs are too clean.",
+  "bytes": 20942,
+  "generated": "2026-09-21T15:12:21Z"
+}

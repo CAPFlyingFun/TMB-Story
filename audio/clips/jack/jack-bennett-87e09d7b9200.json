@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-87e09d7b9200",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8459c1cacdca8d65b6355d002fb49d214ac0fd4fa11055f8366978a6eef5af1c",
+  "text": "That's what I'm trying to confirm.",
+  "bytes": 26375,
+  "generated": "2026-09-21T15:13:23Z"
+}

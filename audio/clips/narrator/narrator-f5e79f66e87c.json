@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f5e79f66e87c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c1b6b21020d04fe22ca710ea7d3e9ebd1d5f64b170a4b50d2bc8db6b82a6f86d",
+  "text": "He overlaid the island development survey beneath it.",
+  "bytes": 51035,
+  "generated": "2026-09-21T15:13:37Z"
+}

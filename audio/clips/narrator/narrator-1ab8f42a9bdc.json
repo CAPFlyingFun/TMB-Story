@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-1ab8f42a9bdc",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9c87c203c972865fa7cd68e0f38f25e55ad6cec9d6cc7635d1ab0748269a0f61",
+  "text": "The wilderness had not.",
+  "bytes": 27211,
+  "generated": "2026-09-21T15:13:46Z"
+}

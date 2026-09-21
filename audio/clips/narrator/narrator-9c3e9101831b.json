@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-9c3e9101831b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "42447beb83069b149e69060db5b0c87a55003244a689562a5033eb0a35ce167a",
+  "text": "For several seconds, it almost sounded like an ordinary late shift.",
+  "bytes": 61066,
+  "generated": "2026-09-21T15:12:12Z"
+}

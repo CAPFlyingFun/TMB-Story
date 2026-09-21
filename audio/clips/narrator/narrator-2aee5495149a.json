@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-2aee5495149a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c428d84935b1b1a86e05cd3f23c6c7def7f05df1597bfe26066707388dedfe40",
+  "text": "Jack looked at the number again.",
+  "bytes": 31391,
+  "generated": "2026-09-21T15:13:14Z"
+}

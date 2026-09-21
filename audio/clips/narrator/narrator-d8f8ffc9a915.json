@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d8f8ffc9a915",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4178f5b80f93ace121a1a05c3bf74aad8c6210ec0a21908b839d9a73a656ce2c",
+  "text": "Sarah looked toward the impossible forest beyond the window.",
+  "bytes": 55214,
+  "generated": "2026-09-21T15:11:47Z"
+}

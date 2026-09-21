@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-9603afa4022e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "877c34bd82a47628f3382f4a91137537a5a18b6e88b815b35299e31fd5da3a63",
+  "text": "Someone had chosen a scale.",
+  "bytes": 32226,
+  "generated": "2026-09-21T15:13:50Z"
+}

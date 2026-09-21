@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0f1f6b5d08c2",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1fef45b858007015ed662288a8da593028101767c8193078f5b2c8a26cbf0350",
+  "text": "Jack didn't answer yet.",
+  "bytes": 24285,
+  "generated": "2026-09-21T15:14:04Z"
+}

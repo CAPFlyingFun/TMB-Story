@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-718771084fd8",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cde558e6e0de02ed26cf3d33ca54a9723a4735afa62cb07d3233a9d5182e895e",
+  "text": "We give ourselves enough time to learn what we're waking them up to.",
+  "bytes": 53124,
+  "generated": "2026-09-21T15:11:21Z"
+}

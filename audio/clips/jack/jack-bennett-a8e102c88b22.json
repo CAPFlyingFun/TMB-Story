@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-a8e102c88b22",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "28b31863e8d04547acf5f2571dd92e1413c1a0670ed6627a90c5a20d489c74d3",
+  "text": "We are absolutely not.",
+  "bytes": 20942,
+  "generated": "2026-09-21T15:12:18Z"
+}

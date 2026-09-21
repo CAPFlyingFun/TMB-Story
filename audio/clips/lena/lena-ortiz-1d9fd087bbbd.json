@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-1d9fd087bbbd",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3010260a00bf1ffb8fd172e6bce760485b7c0f3c8e6179a10f556febd2004850",
+  "text": "Nothing clear,",
+  "bytes": 18852,
+  "generated": "2026-09-21T15:12:14Z"
+}

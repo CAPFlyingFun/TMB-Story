@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-08530819409f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f3ccc28807fac978eadce52866ee7fcb0cc02e9c03d54fd16e3b5454db994937",
+  "text": "Sarah watched the scattered lights appear.",
+  "bytes": 41004,
+  "generated": "2026-09-21T15:11:19Z"
+}
