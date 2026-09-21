@@ -23,12 +23,12 @@ ending_type: unanswered question
 review_status: approved
 audio_status: not-started
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscripts, 01-03 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. These replace the pre-revision opening: the catastrophe is now quiet, there is no settlement-wide siren before activation, and most residents sleep through the event."
+source: "Joshua's revised Word manuscripts, 01-03 and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx. Chapters 1 to 3 re-imported 2026-09-21 from his corrected copy of the 01-03 document, which fixes the keyboard repetition at source. This file is the manuscript and is not edited without his instruction."
 revision_notes:
   - date: "2026-09-21"
-    what: "The revised document restores 'Sarah returned to the keyboard.' at the line Joshua had corrected to 'Sarah continued typing.' on 2026-09-18."
-    why_it_matters: "He made that correction by ear: the paragraph two above already ends 'before returning to the keyboard', so the narration said the same thing twice within a few seconds. The revised document still has that earlier paragraph, so the repetition is back."
-    decision: "The document is followed verbatim, because it is the newer and canonical source and rewriting it is not mine to do. Flagged for Joshua. Reverting costs nothing: the clip for the document's wording is still cached from before the correction."
+    what: "The 'returning to the keyboard' / 'returned to the keyboard' repetition is fixed in the document itself."
+    history: "The first revised document restored the wording Joshua had corrected by ear on 2026-09-18. It was followed verbatim and flagged rather than patched downstream, and he then fixed it at source and re-sent the document. That is the right end of the loop: the manuscript is his."
+    now: "'...before returning to typing.' and 'Sarah temporarily paused on the keyboard.' Two narrator clips. Sarah's own lines in both paragraphs are unchanged and were not regenerated."
 ---
 
 # Chapter 1: The Alarm
@@ -185,11 +185,11 @@ Sarah gave him a look that answered the question for him.
 
 Jack surrendered with a small nod. "Fair."
 
-"Lately the baby seems to think eleven at night is morning." Sarah rested a hand briefly against her stomach before returning to the keyboard.
+"Lately the baby seems to think eleven at night is morning." Sarah rested a hand briefly against her stomach before returning to typing.
 
 Jack smiled at the movement beneath her hand. "Already takes after me."
 
-Sarah returned to the keyboard. "That's what I'm afraid of."
+Sarah temporarily paused on the keyboard. "That's what I'm afraid of."
 
 A new warning tone interrupted them. Both turned toward the main console as another message appeared.
 

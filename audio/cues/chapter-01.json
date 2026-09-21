@@ -366,13 +366,13 @@
       "cueId": "ch01-140-sarah-resumes",
       "asset": "sfx_keyboard_typing_short",
       "anchor": {
-        "clipId": "narrator-75a8844f5b06",
+        "clipId": "narrator-80717953bd92",
         "occurrence": 1
       },
       "timing": "during",
       "offsetMs": 200,
       "gain": 0.234,
-      "why": "“Sarah continued typing.” Re-anchored on 2026-09-18 when Joshua's approved manuscript correction changed that line: the text changed, so the clip's identity changed, and this is the one case where an anchor is SUPPOSED to be edited. Validation caught it rather than letting the cue land somewhere plausible."
+      "why": "Sarah going back to work after the exchange about the baby. RE-ANCHORED 2026-09-21 to '...before returning to typing', which is now where she actually resumes. The line it used to sit on reads 'Sarah temporarily paused on the keyboard' in Joshua's corrected manuscript, and keyboard clatter on the word paused would contradict the sentence carrying it."
     },
     {
       "cueId": "ch01-150-interrupting-tone",
