@@ -10,7 +10,7 @@ with `python3 scripts/render-cue-sheet.py 2`.
 |---|---|
 | Playback events | **20** |
 | Unique assets | **14** (0 still to generate) |
-| Chapter runtime as it plays today | 6:06 |
+| Chapter runtime as it plays today | 7:32 |
 | Voice clips regenerated for this | **none** |
 
 Events outnumber assets because sounds are reused: `sfx_alert_warning_hit` x2, `sfx_array_rings_move` x2, `sfx_keyboard_typing_short` x3, `sfx_system_notify_soft` x2, `sfx_wrist_terminal_chirp` x2.
@@ -335,7 +335,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:01 |
+| Approx. review time | ~5:14 |
 
 **Manuscript:** Narrator — “Sarah pulled up the mapping controls. A red outline appeared for less than a second, too fast to resolve, then the map cleared itself.”
 
@@ -354,7 +354,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.05 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:07 |
+| Approx. review time | ~5:47 |
 
 **Manuscript:** Narrator — “Jack keyed his wrist terminal.”
 
@@ -373,7 +373,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:14 |
+| Approx. review time | ~6:33 |
 
 **Manuscript:** Narrator — “Jack searched through the manual overrides.”
 
@@ -392,7 +392,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.02 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:40 |
+| Approx. review time | ~7:04 |
 
 **Manuscript:** Narrator — “The display changed.”
 
@@ -411,7 +411,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.03 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:46 |
+| Approx. review time | ~7:10 |
 
 **Manuscript:** Narrator — “A second line appeared.”
 

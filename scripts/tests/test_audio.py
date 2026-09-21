@@ -1628,16 +1628,36 @@ class SingleFileExportTests(unittest.TestCase):
     live -- the arrangement every playback bug this project has had came from.
     """
 
-    def test_a_chapter_with_no_cues_still_gets_a_mixed_export(self):
-        for n in (4, 5, 6):
-            m = json.load(open("audio/manifests/chapter-%02d.json" % n, encoding="utf-8"))
-            self.assertFalse(m.get("cues"), "chapter %d has cues now; update this test" % n)
-            if not m["timeline"]["complete"]:
-                continue                       # mid-edit; nothing to export yet
-            mixed = (m.get("exports") or {}).get("mixed")
-            self.assertTrue(mixed, "chapter %d has no mixed export" % n)
-            self.assertEqual(len(mixed["startMs"]), len(m["segments"]),
-                             "chapter %d's index does not cover its segments" % n)
+    def test_the_mix_does_not_depend_on_a_chapter_having_cues(self):
+        """Tested on the BEHAVIOUR, not on a chapter that happens to lack a cue sheet.
+
+        This used to assert that chapters 4 to 6 had no cues -- true when they were
+        voices only, false an hour later when they were designed, and it failed saying
+        so. The circumstance was never the point: the point is that a chapter with
+        nothing but voices still produces a mixable, indexable timeline, because that
+        is what lets it play as one file."""
+        manifest = {
+            "chapter": 99, "cues": [],
+            "segments": [
+                {"order": 0, "audio": "audio/clips/n/a.mp3", "pauseBeforeMs": 0},
+                {"order": 1, "audio": "audio/clips/n/b.mp3", "pauseBeforeMs": 300},
+            ],
+        }
+        real = drama.cache.mp3_duration_seconds
+        drama.cache.mp3_duration_seconds = lambda p: 2.0
+        real_isfile, drama.os.path.isfile = drama.os.path.isfile, lambda p: True
+        try:
+            spec = drama.plan(manifest, sfx_reg())
+        finally:
+            drama.cache.mp3_duration_seconds = real
+            drama.os.path.isfile = real_isfile
+        self.assertEqual(len(spec["voices"]), 2)
+        self.assertEqual(spec["beds"], [])
+        self.assertEqual(spec["shots"], [])
+        self.assertAlmostEqual(spec["voices"][1]["at"], 2.3, places=3)
+        inputs, graph, out = drama.build_graph(spec)
+        self.assertEqual(len(inputs), 2)
+        self.assertIn("adelay=2300", graph)
 
     def test_a_finished_chapter_is_never_left_playing_clip_by_clip(self):
         """The invariant, not the release state.

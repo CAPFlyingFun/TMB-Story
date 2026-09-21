@@ -10,7 +10,7 @@ with `python3 scripts/render-cue-sheet.py 3`.
 |---|---|
 | Playback events | **18** |
 | Unique assets | **12** (0 still to generate) |
-| Chapter runtime as it plays today | 9:28 |
+| Chapter runtime as it plays today | 10:02 |
 | Voice clips regenerated for this | **none** |
 
 Events outnumber assets because sounds are reused: `sfx_building_shake` x2, `sfx_distant_vibration_deep` x2, `sfx_keyboard_typing_short` x3, `sfx_system_notify_soft` x3.
@@ -156,7 +156,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.05 |
 | Duration requested | 4s |
 | Reusable in Godot | yes |
-| Approx. review time | ~1:08 |
+| Approx. review time | ~1:17 |
 
 **Manuscript:** Narrator — “Before he could respond, every light in the laboratory turned white.”
 
@@ -175,7 +175,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.03 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~1:43 |
+| Approx. review time | ~1:52 |
 
 **Manuscript:** Narrator — “Sound returned all at once as Jack hit the floor and Sarah landed beside him. Somewhere inside the array chamber, metal rang once and went still.”
 
@@ -196,7 +196,7 @@ anchor to its stop anchor and loops underneath.
 | Fades | in 4000ms · out -ms |
 | Duration requested | 45.1s, looping |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:14 |
+| Approx. review time | ~2:33 |
 
 **Manuscript:** Narrator — “The laboratory settled into an unsettling silence. Jack slowly stood and looked around. Nothing appeared different. The consoles were intact, the TOMBS Array had stopped, and even the emergency lighting had returned to normal.”
 
@@ -215,7 +215,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:19 |
+| Approx. review time | ~2:53 |
 
 **Manuscript:** Narrator — “Jack glanced back at the main console. The display had gone dark except for a single status light. He crossed the room and touched the controls.”
 
@@ -234,7 +234,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.04 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:24 |
+| Approx. review time | ~3:58 |
 
 **Manuscript:** Narrator — “His wrist terminal chirped with an incoming call from island utility control. Jack answered, and Lena's voice burst through it.”
 
@@ -255,7 +255,7 @@ anchor to its stop anchor and loops underneath.
 | Fades | in 300ms · out 800ms |
 | Duration requested | 10s, looping |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:24 |
+| Approx. review time | ~3:58 |
 
 **Manuscript:** Narrator — “His wrist terminal chirped with an incoming call from island utility control. Jack answered, and Lena's voice burst through it.”
 
@@ -276,7 +276,7 @@ anchor to its stop anchor and loops underneath.
 | Fades | in 5000ms · out 6000ms |
 | Duration requested | 593.03s, looping |
 | Reusable in Godot | yes |
-| Approx. review time | ~4:48 |
+| Approx. review time | ~5:22 |
 
 **Manuscript:** Narrator — “He looked outside.”
 
@@ -295,7 +295,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.03 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:48 |
+| Approx. review time | ~6:22 |
 
 **Manuscript:** Narrator — “He rushed to the console and opened the camera controls.”
 
@@ -314,7 +314,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.03 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~6:39 |
+| Approx. review time | ~7:13 |
 
 **Manuscript:** Narrator — “Jack changed cameras again. A security light near the southern boundary illuminated what looked like a curved glass wall. For a moment he could not place it. Then a bead of water slid down the surface, trembling in the light.”
 
@@ -333,7 +333,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.11 |
 | Duration requested | 6s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:02 |
+| Approx. review time | ~7:36 |
 
 **Manuscript:** Narrator — “A faint vibration passed through the building. It was softer than the TOMBS Array had been, but deeper, almost like distant thunder. Both of them froze.”
 
@@ -352,7 +352,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.11 |
 | Duration requested | 6s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:20 |
+| Approx. review time | ~7:53 |
 
 **Manuscript:** Narrator — “The vibration came again, then faded into the night.”
 
@@ -371,7 +371,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.03 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:36 |
+| Approx. review time | ~8:10 |
 
 **Manuscript:** Narrator — “Jack opened the TOMBS event log. One final record remained.”
 

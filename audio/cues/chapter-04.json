@@ -1,4 +1,255 @@
 {
   "chapter": 4,
-  "cues": []
+  "_comment": [
+    "Sound design for the revised chapter 4. Built from assets that already",
+    "exist, so it cost no ElevenLabs credits.",
+    "",
+    "THE QUIET EVENT STILL GOVERNS: local machinery and the world outside, never",
+    "a settlement alarm. Nobody sounds a siren in these chapters.",
+    "",
+    "Levels are DERIVED from audio/config.json's categoryTargetLufs and each",
+    "asset's measured loudness. `emphasisDb` is the only hand-set number, and in",
+    "this movement it is mostly one sound: the deep distant vibration, which",
+    "gets louder every time it returns."
+  ],
+  "cues": [
+    {
+      "cueId": "ch04-005-control-room",
+      "asset": "amb_computer_lab",
+      "anchor": {
+        "clipId": "narrator-16633fc3a0e5",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.117,
+      "fadeInMs": 2000,
+      "fadeOutMs": 4000,
+      "sustain": {
+        "until": "chapterEnd",
+        "timing": "after"
+      },
+      "why": "The same room Chapter 3 ended in, and the chapter never leaves it. It carries straight through three calls and four vibrations, which is what makes the vibrations read as something arriving from outside a room rather than as the room changing."
+    },
+    {
+      "cueId": "ch04-010-answer-first-call",
+      "asset": "sfx_wrist_terminal_chirp",
+      "anchor": {
+        "clipId": "narrator-966cd55a8eb9",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.039,
+      "why": "The connect tone as Jack answers. DELIBERATELY NOT ON THE LINE ABOVE IT: the manuscript says the terminal VIBRATED against his skin, and a chirp there would contradict the sentence and the whole point of the scene, which is that this catastrophe does not announce itself."
+    },
+    {
+      "cueId": "ch04-015-lena-channel",
+      "asset": "amb_intercom_channel_open",
+      "anchor": {
+        "clipId": "narrator-38fe6a375dd7",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.007,
+      "fadeInMs": 300,
+      "fadeOutMs": 900,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-1a17f7f63618",
+          "occurrence": 1
+        },
+        "timing": "before"
+      },
+      "why": "An open channel under Lena's call, as in Chapters 1 and 3. It ends when the second call arrives, because the line is handed to Sarah's tablet there."
+    },
+    {
+      "cueId": "ch04-020-utility-cameras",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-9994bf580737",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.029,
+      "why": "Bringing up the utility station's exterior cameras. The same notify tone the first three chapters use for a screen answering a request."
+    },
+    {
+      "cueId": "ch04-030-second-call",
+      "asset": "sfx_wrist_terminal_chirp",
+      "anchor": {
+        "clipId": "narrator-1a17f7f63618",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.039,
+      "why": "The medical centre calling in. This one IS an arriving call, so the chirp is what the sentence says."
+    },
+    {
+      "cueId": "ch04-035-medical-channel",
+      "asset": "amb_intercom_channel_open",
+      "anchor": {
+        "clipId": "narrator-a0a1327af7a1",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.007,
+      "fadeInMs": 400,
+      "fadeOutMs": 1200,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-e3336da71c28",
+          "occurrence": 1
+        },
+        "timing": "before"
+      },
+      "why": "Doctor Mercer's line, open from the moment Jack answers until 'The call ended'. The manuscript describes the medical centre sounding strangely normal behind her, and a bare open channel is that: a room that has not heard yet."
+    },
+    {
+      "cueId": "ch04-036-medical-call-ends",
+      "asset": "sfx_intercom_close",
+      "anchor": {
+        "clipId": "narrator-e3336da71c28",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.031,
+      "why": "'The call ended.' A close on the sentence that says so."
+    },
+    {
+      "cueId": "ch04-040-security-channel-open",
+      "asset": "sfx_intercom_open",
+      "anchor": {
+        "clipId": "narrator-ec959f4dbe3a",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.052,
+      "why": "'Jack opened the channel.' Security, on the settlement net rather than his wrist, so it gets the intercom rather than the terminal chirp."
+    },
+    {
+      "cueId": "ch04-041-security-channel",
+      "asset": "amb_intercom_channel_open",
+      "anchor": {
+        "clipId": "narrator-ec959f4dbe3a",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.007,
+      "fadeInMs": 250,
+      "fadeOutMs": 700,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-2fb1e7b6491e",
+          "occurrence": 1
+        },
+        "timing": "before"
+      },
+      "why": "Held open across the exchange with Unit Twelve, closing on 'The channel closed.'"
+    },
+    {
+      "cueId": "ch04-042-security-channel-close",
+      "asset": "sfx_intercom_close",
+      "anchor": {
+        "clipId": "narrator-2fb1e7b6491e",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.031,
+      "why": "The channel closing, and with it the last voice from outside the building before the settlement's first porch lights come on."
+    },
+    {
+      "cueId": "ch04-050-divide-the-screens",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-aea5703667cd",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 900,
+      "gain": 0.234,
+      "why": "Two people settling into work. It is the only ordinary sound in the chapter and it is there so the vibration that follows has something to interrupt."
+    },
+    {
+      "cueId": "ch04-055-maintenance-camera",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-1bdfc9b381e6",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.029,
+      "why": "Selecting the maintenance camera that shows the cut intake pipe."
+    },
+    {
+      "cueId": "ch04-060-lena-returns",
+      "asset": "sfx_wrist_terminal_chirp",
+      "anchor": {
+        "clipId": "narrator-e427e80d25fd",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.039,
+      "why": "Lena calling back through Sarah's tablet, having checked three boundary crossings."
+    },
+    {
+      "cueId": "ch04-070-vibration-one",
+      "asset": "sfx_distant_vibration_deep",
+      "anchor": {
+        "clipId": "narrator-3f307738c15f",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.068,
+      "why": "'A low vibration passed through the floor.' The first of four, and the quietest. Placed BEFORE its line so the room feels it and the narration then names it, which is the order the people in the room experience."
+    },
+    {
+      "cueId": "ch04-071-vibration-two",
+      "asset": "sfx_distant_vibration_deep",
+      "anchor": {
+        "clipId": "narrator-1f8f509a6195",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1800,
+      "emphasisDb": 2.0,
+      "why": "'...returned several seconds later, deeper than before.' Same asset, +2 dB. The manuscript says deeper, and the escalation across this chapter is done with level on one sound rather than with four different ones -- which is also how it stays recognisable as the same thing getting closer.",
+      "gain": 0.085
+    },
+    {
+      "cueId": "ch04-080-vibration-three",
+      "asset": "sfx_distant_vibration_deep",
+      "anchor": {
+        "clipId": "narrator-68d24043e521",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "emphasisDb": 4.0,
+      "why": "'Another vibration rolled through the settlement.' +4 dB. This is the one the shadow crosses the camera on.",
+      "gain": 0.107
+    },
+    {
+      "cueId": "ch04-085-ground-trembles",
+      "asset": "sfx_distant_vibration_deep",
+      "anchor": {
+        "clipId": "narrator-c11d964ea699",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "emphasisDb": 5.0,
+      "why": "'The ground trembled again.' +5 dB, the loudest in the chapter, and the last thing before Jack says nobody goes outside.",
+      "gain": 0.12
+    },
+    {
+      "cueId": "ch04-086-pebble-falls",
+      "asset": "sfx_building_shake",
+      "anchor": {
+        "clipId": "narrator-0fc21b63ffa7",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 2400,
+      "emphasisDb": 2.0,
+      "why": "A pebble rolling down the dirt wall and striking the earth hard enough to throw dust across a road. It is a pebble; at this scale it is a boulder, and the sound has to be the boulder rather than the word.",
+      "gain": 0.101
+    }
+  ]
 }

@@ -10,7 +10,7 @@ with `python3 scripts/render-cue-sheet.py 1`.
 |---|---|
 | Playback events | **34** |
 | Unique assets | **19** (0 still to generate) |
-| Chapter runtime as it plays today | 7:57 |
+| Chapter runtime as it plays today | 8:19 |
 | Voice clips regenerated for this | **none** |
 
 Events outnumber assets because sounds are reused: `sfx_access_denied_tone` x2, `sfx_alert_warning_hit` x2, `sfx_chair_roll_slow` x2, `sfx_console_tone_soft` x2, `sfx_footsteps_sarah_sneakers` x2, `sfx_intercom_open` x2, `sfx_keyboard_typing_short` x9, `sfx_system_notify_soft` x2.
@@ -120,7 +120,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.05 |
 | Duration requested | 2s |
 | Reusable in Godot | yes |
-| Approx. review time | ~0:48 |
+| Approx. review time | ~1:01 |
 
 **Manuscript:** Narrator — “Jack jerked awake so quickly that his chair rolled backward and nearly struck another workstation.”
 
@@ -139,7 +139,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~1:01 |
+| Approx. review time | ~1:14 |
 
 **Manuscript:** Narrator — “Several windows were opening and closing on their own. Lines of commands streamed across one side of the display faster than he could read them. Jack grabbed the keyboard and opened the network monitor.”
 
@@ -158,7 +158,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.02 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~1:23 |
+| Approx. review time | ~1:36 |
 
 **Manuscript:** Narrator — “He refreshed the display, but the connection was gone. Another warning tone sounded from the console and a red message filled the center of his screen.”
 
@@ -177,7 +177,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~1:27 |
+| Approx. review time | ~1:49 |
 
 **Manuscript:** Narrator — “Jack entered a command and pulled up the laboratory access logs. Nothing looked unusual. He tried another search and got the same result.”
 
@@ -196,7 +196,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.03 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~1:38 |
+| Approx. review time | ~2:00 |
 
 **Manuscript:** Narrator — “The system beeped, and a directory opened by itself. Jack stopped typing when he recognized the folder.”
 
@@ -215,7 +215,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.07 |
 | Duration requested | 2s |
 | Reusable in Godot | yes |
-| Approx. review time | ~1:48 |
+| Approx. review time | ~2:10 |
 
 **Manuscript:** Narrator — “He immediately locked the terminal. The screen went black for three seconds, then came back on and reopened the same directory.”
 
@@ -234,7 +234,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.04 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~1:48 |
+| Approx. review time | ~2:10 |
 
 **Manuscript:** Narrator — “He immediately locked the terminal. The screen went black for three seconds, then came back on and reopened the same directory.”
 
@@ -253,7 +253,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.05 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:01 |
+| Approx. review time | ~2:23 |
 
 **Manuscript:** Jack Bennett — “Sarah?”
 
@@ -274,7 +274,7 @@ anchor to its stop anchor and loops underneath.
 | Fades | in 200ms · out 600ms |
 | Duration requested | 10s, looping |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:01 |
+| Approx. review time | ~2:23 |
 
 **Manuscript:** Jack Bennett — “Sarah?”
 
@@ -293,7 +293,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.01 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:02 |
+| Approx. review time | ~2:24 |
 
 **Manuscript:** Narrator — “Static answered him.”
 
@@ -312,7 +312,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.05 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:04 |
+| Approx. review time | ~2:26 |
 
 **Manuscript:** Narrator — “Jack tapped the button again.”
 
@@ -331,7 +331,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.03 |
 | Duration requested | 1s |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:46 |
+| Approx. review time | ~3:08 |
 
 **Manuscript:** Narrator — “Jack released the intercom and looked back at the monitor. The TOMBS directory was still open.”
 
@@ -350,7 +350,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.03 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:00 |
+| Approx. review time | ~3:21 |
 
 **Manuscript:** TOMBS / settlement systems — “Boundary control.”
 
@@ -369,7 +369,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.02 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:02 |
+| Approx. review time | ~3:24 |
 
 **Manuscript:** Narrator — “He reached for the keyboard just as the laboratory door slid open behind him.”
 
@@ -388,7 +388,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.15 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:07 |
+| Approx. review time | ~3:29 |
 
 **Manuscript:** Narrator — “Sarah Bennett stepped inside with a tablet tucked beneath one arm. She glanced from Jack to the computer.”
 
@@ -407,7 +407,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.15 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:34 |
+| Approx. review time | ~3:55 |
 
 **Manuscript:** Narrator — “Jack pointed toward the monitor as she walked over.”
 
@@ -426,7 +426,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.04 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~4:47 |
+| Approx. review time | ~5:09 |
 
 **Manuscript:** Narrator — “She pulled another chair beside him and nudged his out of the way.”
 
@@ -445,7 +445,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.04 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:02 |
+| Approx. review time | ~5:23 |
 
 **Manuscript:** Narrator — “Jack rolled sideways to give her room.”
 
@@ -464,7 +464,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:04 |
+| Approx. review time | ~5:26 |
 
 **Manuscript:** Narrator — “Sarah immediately started typing.”
 
@@ -483,7 +483,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:13 |
+| Approx. review time | ~5:35 |
 
 **Manuscript:** Narrator — “Sarah opened the connection history.”
 
@@ -502,7 +502,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:26 |
+| Approx. review time | ~5:47 |
 
 **Manuscript:** Narrator — “Jack watched as Sarah opened another window and began digging through the security logs.”
 
@@ -521,7 +521,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~6:02 |
+| Approx. review time | ~6:23 |
 
 **Manuscript:** Narrator — “Sarah kept typing.”
 
@@ -535,16 +535,16 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_keyboard_typing_short` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 151 · clip `narrator-75a8844f5b06` · occurrence 1 |
+| Anchor | segment order 148 · clip `narrator-4ae27aba679f` · occurrence 1 |
 | Timing | during +200ms |
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~6:46 |
+| Approx. review time | ~6:58 |
 
-**Manuscript:** Narrator — “Sarah returned to the keyboard.”
+**Manuscript:** Narrator — “Sarah rested a hand briefly against her stomach, then returned to typing.”
 
-**Why:** “Sarah continued typing.” Re-anchored on 2026-09-18 when Joshua's approved manuscript correction changed that line: the text changed, so the clip's identity changed, and this is the one case where an anchor is SUPPOSED to be edited. Validation caught it rather than letting the cue land somewhere plausible.
+**Why:** Sarah going back to work after the exchange about the baby. Anchored to '...then returned to typing', which is where she resumes. It moved here on 2026-09-21 from 'Sarah returned to the keyboard', whose replacement reads 'Sarah's hands went still' -- keyboard clatter on that line would contradict the sentence carrying it, and the stillness is the beat before her reply.
 
 **Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
@@ -559,7 +559,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.02 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~6:50 |
+| Approx. review time | ~7:12 |
 
 **Manuscript:** Narrator — “A new warning tone interrupted them. Both turned toward the main console as another message appeared.”
 
@@ -579,7 +579,7 @@ anchor to its stop anchor and loops underneath.
 | Fades | in 4000ms · out -ms |
 | Duration requested | 20s, looping |
 | Reusable in Godot | yes |
-| Approx. review time | ~6:56 |
+| Approx. review time | ~7:18 |
 
 **Manuscript:** TOMBS / settlement systems — “Tombs array remote initialization request.”
 
@@ -598,7 +598,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.08 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:13 |
+| Approx. review time | ~7:35 |
 
 **Manuscript:** TOMBS / settlement systems — “Request denied.”
 
@@ -617,7 +617,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.08 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:16 |
+| Approx. review time | ~7:38 |
 
 **Manuscript:** TOMBS / settlement systems — “Request denied.”
 
@@ -636,7 +636,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:22 |
+| Approx. review time | ~7:44 |
 
 **Manuscript:** Narrator — “He entered his administrator credentials, but a new message appeared before he could issue another command.”
 
@@ -655,7 +655,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.08 |
 | Duration requested | 2s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:28 |
+| Approx. review time | ~7:50 |
 
 **Manuscript:** TOMBS / settlement systems — “Access revoked.”
 
@@ -674,7 +674,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:41 |
+| Approx. review time | ~8:03 |
 
 **Manuscript:** Narrator — “Jack tried his credentials again.”
 

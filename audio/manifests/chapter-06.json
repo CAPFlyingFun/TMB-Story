@@ -6087,7 +6087,158 @@
       "endMs": 777685
     }
   ],
-  "cues": [],
+  "cues": [
+    {
+      "cueId": "ch06-005-control-room",
+      "asset": "amb_computer_lab",
+      "category": "ambience",
+      "layer": "ambience",
+      "timing": "before",
+      "order": 0,
+      "gain": 0.117,
+      "loop": true,
+      "audio": "audio/sfx/ambience/amb_computer_lab.mp3",
+      "cached": true,
+      "why": "Back in the laboratory for the whole chapter. The bed returns as the vehicle arrives, which closes the round trip Chapter 5 opened.",
+      "fadeInMs": 2500,
+      "fadeOutMs": 5000,
+      "stopOrder": 303,
+      "stopTiming": "after"
+    },
+    {
+      "cueId": "ch06-010-sensor-connected",
+      "asset": "sfx_system_notify_soft",
+      "category": "interface",
+      "layer": "sfx",
+      "timing": "after",
+      "order": 29,
+      "gain": 0.029,
+      "loop": false,
+      "audio": "audio/sfx/interface/sfx_system_notify_soft.mp3",
+      "cached": true,
+      "why": "The environmental sensor reading out into the console."
+    },
+    {
+      "cueId": "ch06-020-recording-uploads",
+      "asset": "sfx_system_notify_soft",
+      "category": "interface",
+      "layer": "sfx",
+      "timing": "during",
+      "order": 42,
+      "gain": 0.029,
+      "loop": false,
+      "audio": "audio/sfx/interface/sfx_system_notify_soft.mp3",
+      "cached": true,
+      "why": "The wrist-camera recording arriving on the main screen, with the fingernail clipping on it.",
+      "offsetMs": 1500
+    },
+    {
+      "cueId": "ch06-030-frame-by-frame",
+      "asset": "sfx_keyboard_typing_short",
+      "category": "foley",
+      "layer": "sfx",
+      "timing": "during",
+      "order": 47,
+      "gain": 0.166,
+      "loop": false,
+      "audio": "audio/sfx/foley/sfx_keyboard_typing_short.mp3",
+      "cached": true,
+      "why": "Advancing the footage a frame at a time. Three dB under the chapter's other typing: this is one finger, not two hands working.",
+      "offsetMs": 600
+    },
+    {
+      "cueId": "ch06-040-calibration-records",
+      "asset": "sfx_keyboard_typing_short",
+      "category": "foley",
+      "layer": "sfx",
+      "timing": "after",
+      "order": 83,
+      "gain": 0.234,
+      "loop": false,
+      "audio": "audio/sfx/foley/sfx_keyboard_typing_short.mp3",
+      "cached": true,
+      "why": "Jack searching the original TOMBS calibration records for the scale target."
+    },
+    {
+      "cueId": "ch06-050-parameter-block",
+      "asset": "sfx_system_notify_soft",
+      "category": "interface",
+      "layer": "sfx",
+      "timing": "after",
+      "order": 95,
+      "gain": 0.029,
+      "loop": false,
+      "audio": "audio/sfx/interface/sfx_system_notify_soft.mp3",
+      "cached": true,
+      "why": "The surviving parameter block coming up: 'Target height normalization', the line that proves somebody chose how small."
+    },
+    {
+      "cueId": "ch06-060-machine-data",
+      "asset": "sfx_keyboard_typing_short",
+      "category": "foley",
+      "layer": "sfx",
+      "timing": "before",
+      "order": 203,
+      "gain": 0.166,
+      "loop": false,
+      "audio": "audio/sfx/foley/sfx_keyboard_typing_short.mp3",
+      "cached": true,
+      "why": "The maintenance partition opening, filling the screen with machine data the intruder did not erase."
+    },
+    {
+      "cueId": "ch06-070-timestamp",
+      "asset": "sfx_access_denied_tone",
+      "category": "system",
+      "layer": "sfx",
+      "timing": "before",
+      "order": 232,
+      "gain": 0.052,
+      "loop": false,
+      "audio": "audio/sfx/system/sfx_access_denied_tone.mp3",
+      "cached": true,
+      "why": "A single flat system tone as the creation time is checked against the island clock and the backup server. Not an alarm -- four dB down, and the same tone Chapter 1 uses when TOMBS refuses him -- because what it marks is a machine calmly confirming something nobody wants confirmed."
+    },
+    {
+      "cueId": "ch06-080-three-words",
+      "asset": "sfx_system_notify_soft",
+      "category": "interface",
+      "layer": "sfx",
+      "timing": "before",
+      "order": 292,
+      "gain": 0.023,
+      "loop": false,
+      "audio": "audio/sfx/interface/sfx_system_notify_soft.mp3",
+      "cached": true,
+      "why": "'Three words appeared on the screen.' The notify tone lands just before the narration, so the listener hears the screen answer and is then told what it said: PHASE ONE READY."
+    },
+    {
+      "cueId": "ch06-090-something-struck",
+      "asset": "sfx_distant_vibration_deep",
+      "category": "system",
+      "layer": "sfx",
+      "timing": "before",
+      "order": 298,
+      "gain": 0.17,
+      "loop": false,
+      "audio": "audio/sfx/system/sfx_distant_vibration_deep.mp3",
+      "cached": true,
+      "why": "'Outside, something struck the distant ground.' The last sound of the movement and the loudest, +8 dB -- one step beyond the boundary vibration in Chapter 5, because the point of the ending is that it is still coming."
+    },
+    {
+      "cueId": "ch06-091-window-trembles",
+      "asset": "sfx_building_shake",
+      "category": "foley",
+      "layer": "sfx",
+      "timing": "during",
+      "order": 299,
+      "gain": 0.08,
+      "loop": false,
+      "audio": "audio/sfx/foley/sfx_building_shake.mp3",
+      "cached": true,
+      "why": "'The control-room window trembled.' The building's answer to it, under the line. Nothing sounds after this: the chapter ends on 'It had gone exactly the way someone planned', and that belongs to the narrator alone.",
+      "offsetMs": 300
+    }
+  ],
   "cueProblems": [],
   "mix": {
     "layers": {
@@ -6222,7 +6373,7 @@
   "exports": {
     "mixed": {
       "audio": "audio/exports/chapter-06-drama.mp3",
-      "bytes": 9332342,
+      "bytes": 9332341,
       "seconds": 777.69,
       "layers": [
         "voice",
@@ -6539,7 +6690,7 @@
     },
     "voice": {
       "audio": "audio/exports/chapter-06.mp3",
-      "bytes": 12498414,
+      "bytes": 12498413,
       "seconds": 781.17,
       "layers": [
         "voice"

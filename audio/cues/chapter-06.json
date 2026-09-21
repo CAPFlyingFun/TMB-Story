@@ -1,4 +1,153 @@
 {
   "chapter": 6,
-  "cues": []
+  "_comment": [
+    "Sound design for the revised chapter 6. Built from assets that already",
+    "exist, so it cost no ElevenLabs credits.",
+    "",
+    "THE QUIET EVENT STILL GOVERNS: local machinery and the world outside, never",
+    "a settlement alarm. Nobody sounds a siren in these chapters.",
+    "",
+    "Levels are DERIVED from audio/config.json's categoryTargetLufs and each",
+    "asset's measured loudness. `emphasisDb` is the only hand-set number, and in",
+    "this movement it is mostly one sound: the deep distant vibration, which",
+    "gets louder every time it returns."
+  ],
+  "cues": [
+    {
+      "cueId": "ch06-005-control-room",
+      "asset": "amb_computer_lab",
+      "anchor": {
+        "clipId": "narrator-a2dfc5c78254",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.117,
+      "fadeInMs": 2500,
+      "fadeOutMs": 5000,
+      "sustain": {
+        "until": "chapterEnd",
+        "timing": "after"
+      },
+      "why": "Back in the laboratory for the whole chapter. The bed returns as the vehicle arrives, which closes the round trip Chapter 5 opened."
+    },
+    {
+      "cueId": "ch06-010-sensor-connected",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-7c3a78817f70",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.029,
+      "why": "The environmental sensor reading out into the console."
+    },
+    {
+      "cueId": "ch06-020-recording-uploads",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-0857837994e5",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1500,
+      "gain": 0.029,
+      "why": "The wrist-camera recording arriving on the main screen, with the fingernail clipping on it."
+    },
+    {
+      "cueId": "ch06-030-frame-by-frame",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-e5d219e3eb1c",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 600,
+      "gain": 0.166,
+      "emphasisDb": -3.0,
+      "why": "Advancing the footage a frame at a time. Three dB under the chapter's other typing: this is one finger, not two hands working."
+    },
+    {
+      "cueId": "ch06-040-calibration-records",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-cd12a3d3327b",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.234,
+      "why": "Jack searching the original TOMBS calibration records for the scale target."
+    },
+    {
+      "cueId": "ch06-050-parameter-block",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-a3ac616be3fd",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.029,
+      "why": "The surviving parameter block coming up: 'Target height normalization', the line that proves somebody chose how small."
+    },
+    {
+      "cueId": "ch06-060-machine-data",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-b4f6f627bc1d",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.166,
+      "emphasisDb": -3.0,
+      "why": "The maintenance partition opening, filling the screen with machine data the intruder did not erase."
+    },
+    {
+      "cueId": "ch06-070-timestamp",
+      "asset": "sfx_access_denied_tone",
+      "anchor": {
+        "clipId": "narrator-8bb6c152c79e",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.052,
+      "emphasisDb": -4.0,
+      "why": "A single flat system tone as the creation time is checked against the island clock and the backup server. Not an alarm -- four dB down, and the same tone Chapter 1 uses when TOMBS refuses him -- because what it marks is a machine calmly confirming something nobody wants confirmed."
+    },
+    {
+      "cueId": "ch06-080-three-words",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-78184efa1ff6",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.023,
+      "emphasisDb": -2.0,
+      "why": "'Three words appeared on the screen.' The notify tone lands just before the narration, so the listener hears the screen answer and is then told what it said: PHASE ONE READY."
+    },
+    {
+      "cueId": "ch06-090-something-struck",
+      "asset": "sfx_distant_vibration_deep",
+      "anchor": {
+        "clipId": "narrator-f5344ff6ac69",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "emphasisDb": 8.0,
+      "why": "'Outside, something struck the distant ground.' The last sound of the movement and the loudest, +8 dB -- one step beyond the boundary vibration in Chapter 5, because the point of the ending is that it is still coming.",
+      "gain": 0.17
+    },
+    {
+      "cueId": "ch06-091-window-trembles",
+      "asset": "sfx_building_shake",
+      "anchor": {
+        "clipId": "narrator-80850872cb2d",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 300,
+      "emphasisDb": 0.0,
+      "why": "'The control-room window trembled.' The building's answer to it, under the line. Nothing sounds after this: the chapter ends on 'It had gone exactly the way someone planned', and that belongs to the narrator alone.",
+      "gain": 0.08
+    }
+  ]
 }

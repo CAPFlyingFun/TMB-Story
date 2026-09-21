@@ -1,4 +1,202 @@
 {
   "chapter": 5,
-  "cues": []
+  "_comment": [
+    "Sound design for the revised chapter 5. Built from assets that already",
+    "exist, so it cost no ElevenLabs credits.",
+    "",
+    "THE QUIET EVENT STILL GOVERNS: local machinery and the world outside, never",
+    "a settlement alarm. Nobody sounds a siren in these chapters.",
+    "",
+    "Levels are DERIVED from audio/config.json's categoryTargetLufs and each",
+    "asset's measured loudness. `emphasisDb` is the only hand-set number, and in",
+    "this movement it is mostly one sound: the deep distant vibration, which",
+    "gets louder every time it returns."
+  ],
+  "cues": [
+    {
+      "cueId": "ch05-005-control-room",
+      "asset": "amb_computer_lab",
+      "anchor": {
+        "clipId": "narrator-ecedb483a4db",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.117,
+      "fadeInMs": 2500,
+      "fadeOutMs": 3000,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-0dd40c74284b",
+          "occurrence": 1
+        },
+        "timing": "before"
+      },
+      "why": "The control room again, and it STOPS when Jack gets into the vehicle. A bed that followed him outdoors would say the room came with him, which is exactly the thing this chapter is about not being true any more."
+    },
+    {
+      "cueId": "ch05-020-broadcast-open",
+      "asset": "sfx_intercom_open",
+      "anchor": {
+        "clipId": "narrator-6ba4c994a0eb",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.052,
+      "why": "'He opened the settlement broadcast controls.' The same intercom the lab uses, because it is the settlement's own system -- and it is the first time in the story anyone addresses the whole town."
+    },
+    {
+      "cueId": "ch05-021-transmit",
+      "asset": "sfx_console_tone_soft",
+      "anchor": {
+        "clipId": "narrator-a48183c13a91",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 2200,
+      "gain": 0.067,
+      "why": "'Then he pressed transmit.' One small tone under the last word of the beat, so the announcement begins on a machine rather than on a breath."
+    },
+    {
+      "cueId": "ch05-022-broadcast-close",
+      "asset": "sfx_intercom_close",
+      "anchor": {
+        "clipId": "narrator-07b6f90af556",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.031,
+      "why": "'Jack ended the broadcast.' The silence after it is doing the work, so nothing else sounds here."
+    },
+    {
+      "cueId": "ch05-030-lena-call",
+      "asset": "sfx_wrist_terminal_chirp",
+      "anchor": {
+        "clipId": "narrator-6d37e43f62b9",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.039,
+      "why": "'A call indicator appeared on Jack's console.' Lena, from the emergency coordination channel."
+    },
+    {
+      "cueId": "ch05-031-coordination-channel",
+      "asset": "amb_intercom_channel_open",
+      "anchor": {
+        "clipId": "narrator-6d37e43f62b9",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.007,
+      "fadeInMs": 400,
+      "fadeOutMs": 1500,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-80329697921c",
+          "occurrence": 1
+        },
+        "timing": "before"
+      },
+      "why": "Held open through the water estimate and the vibration map, closing on the knock at the door -- which is where Lena stops being a voice and walks in."
+    },
+    {
+      "cueId": "ch05-040-building-vibrates",
+      "asset": "sfx_distant_vibration_deep",
+      "anchor": {
+        "clipId": "narrator-b83ab5a146d3",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "emphasisDb": 4.0,
+      "why": "'Then the building vibrated again.' It arrives on the one light moment in the movement, mid-laugh, and takes it away. Carried over at Chapter 4's loudest level because it is the same thing, no nearer yet.",
+      "gain": 0.107
+    },
+    {
+      "cueId": "ch05-050-knock",
+      "asset": "sfx_lab_door_slide",
+      "anchor": {
+        "clipId": "narrator-2b548f3e754e",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.018,
+      "why": "The control-room door opening for Lena and the two officers. The knock itself has no asset and is left to the prose; what is heard is the door, which is the part that changes the room."
+    },
+    {
+      "cueId": "ch05-060-camera-feeds",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-fe59c3c50ed5",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.029,
+      "why": "Jack checking the southern boundary feeds before agreeing to go."
+    },
+    {
+      "cueId": "ch05-100-night-outside",
+      "asset": "amb_night_outside",
+      "anchor": {
+        "clipId": "narrator-0dd40c74284b",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.16,
+      "fadeInMs": 3500,
+      "fadeOutMs": 2500,
+      "sustain": {
+        "until": "chapterEnd",
+        "timing": "after"
+      },
+      "why": "THE FIRST TIME THE STORY GOES OUTSIDE AT THE NEW SCALE, and it uses the night ambience Joshua supplied. It has to be quiet and ordinary -- crickets, air, a night like any other -- because the horror of the scene is that it SOUNDS normal while a blade of grass stands over a man. Runs to the end of the chapter, through the drive back."
+    },
+    {
+      "cueId": "ch05-110-sensor-readings",
+      "asset": "sfx_wrist_terminal_chirp",
+      "anchor": {
+        "clipId": "narrator-7e7f414a1666",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.019,
+      "emphasisDb": -6.0,
+      "why": "The environmental sensor taking its first reading at the boundary. Six dB under the other terminal chirps: outdoors, in the open, a small instrument in one hand."
+    },
+    {
+      "cueId": "ch05-120-flashlight-finds-it",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-a9df6306c7cd",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "gain": 0.018,
+      "emphasisDb": -4.0,
+      "why": "Jack zooming the wrist camera onto the pale object. Quiet, because the next sound in the scene should be nothing at all -- 'Nobody spoke for several seconds' is four beats away."
+    },
+    {
+      "cueId": "ch05-130-vibration-close",
+      "asset": "sfx_distant_vibration_deep",
+      "anchor": {
+        "clipId": "narrator-57ba1779f3a7",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "emphasisDb": 7.0,
+      "why": "'A vibration rolled through the ground.' The loudest in the movement so far, +7 dB, and the first one heard from OUTSIDE a building rather than through a floor. This is the moment the thing stops being a report.",
+      "gain": 0.151
+    },
+    {
+      "cueId": "ch05-140-vehicle-away",
+      "asset": "sfx_building_shake",
+      "anchor": {
+        "clipId": "narrator-a09ea1792947",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 200,
+      "gain": 0.032,
+      "emphasisDb": -8.0,
+      "why": "'The vehicle accelerated away from the boundary.' A low body of sound under the line rather than an engine, which the library does not have. Eight dB down: it is a departure, not an event, and the chapter's last line belongs to the grass still moving behind them."
+    }
+  ]
 }
