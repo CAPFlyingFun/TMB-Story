@@ -28,7 +28,7 @@ from tmbaudio import combine as combinemod, drama                      # noqa: E
 from tmbaudio import normalize as normmod                              # noqa: E402
 from tmbaudio import procedural as procmod                             # noqa: E402
 from tmbaudio.parse import clip_id, split_paragraph                    # noqa: E402
-from tmbaudio.registry import NARRATOR, REVIEW, SYSTEM, Registry       # noqa: E402
+from tmbaudio.registry import NARRATOR, REVIEW, ROOT, SYSTEM, Registry  # noqa: E402
 
 FAKE_AUDIO = b"ID3fake-mp3-bytes-for-testing"
 
@@ -1724,6 +1724,70 @@ class SmartQuoteTests(unittest.TestCase):
             for seg in parse.parse_chapter(path, reg, mf.load_overrides())["segments"]:
                 self.assertEqual(seg["clipId"],
                                  parse.clip_id(seg["speaker"], seg["ttsText"]))
+
+
+class ReaderManifestTests(unittest.TestCase):
+    """The page's chapter list is a generated file, and it went stale in silence.
+
+    Chapters 4 to 6 were written, voiced, designed, mixed and pushed, and did not
+    appear in the reader for a day. reader/manifest.json was last built before they
+    existed and the generation workflow committed only audio/, so nothing could
+    refresh it. Every other check passed the whole time -- 208 tests, 88 layer checks,
+    30 player checks -- because none of them looked at the list.
+
+    These are cheap and they close that gap. The last one tests the CAUSE rather than
+    the symptom: a stale list is a thing to notice, but a workflow that cannot refresh
+    it is the reason there was one.
+    """
+
+    def setUp(self):
+        with open(os.path.join(ROOT, "reader", "manifest.json"), encoding="utf-8") as fh:
+            self.reader = json.load(fh)
+
+    def test_the_reader_lists_every_chapter_in_the_repository(self):
+        listed = {c["number"] for c in self.reader["chapters"]}
+        self.assertEqual(listed, set(mf.chapter_files()),
+                         "the reader's chapter list does not match chapters/ -- run "
+                         "python3 scripts/build-manifest.py")
+
+    def test_the_reader_lists_every_movement_that_has_chapters(self):
+        """Without this the Outline tab silently drops a part, which it did for
+        movement 2: the chapters existed and outline/movement-02/ did not."""
+        have = {c["movement"] for c in self.reader["chapters"]}
+        listed = {m["number"] for m in self.reader["movements"]}
+        self.assertTrue(have <= listed,
+                        "movement(s) %s have chapters and no outline record"
+                        % sorted(have - listed))
+
+    def test_a_chapter_with_all_its_audio_does_not_claim_otherwise(self):
+        """`audio_status` is printed on a badge on the page, so a stale one is a lie
+        the reader tells in public."""
+        reg = Registry()
+        for entry in self.reader["chapters"]:
+            n = entry["number"]
+            segs = parse.parse_chapter(mf.chapter_files()[n], reg,
+                                       mf.load_overrides())["segments"]
+            complete = all(
+                os.path.isfile(os.path.join(ROOT, cache.clip_paths(
+                    reg, seg["speaker"], seg["clipId"])[0])) for seg in segs)
+            if complete:
+                self.assertNotEqual(
+                    entry["audio_status"], "not-started",
+                    "chapter %d is fully generated and the page says its audio has "
+                    "not started" % n)
+
+    def test_the_workflow_rebuilds_the_list_and_commits_it(self):
+        """The cause. A list that cannot refresh itself will go stale again, and the
+        three checks above would then fail on a repository nobody had touched."""
+        with open(os.path.join(ROOT, ".github", "workflows", "audio-generate.yml"),
+                  encoding="utf-8") as fh:
+            workflow = fh.read()
+        self.assertIn("scripts/build-manifest.py", workflow,
+                      "the generation workflow never rebuilds the reader's list")
+        added = workflow.split("git add", 1)[1][:160]
+        self.assertIn("reader/manifest.json", added,
+                      "the workflow rebuilds the reader's list and then does not "
+                      "commit it, which is how it went stale the first time")
 
 
 class QuietEventTests(unittest.TestCase):
