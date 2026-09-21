@@ -1928,7 +1928,8 @@ class VoiceAssignmentTests(unittest.TestCase):
         the rule after Joshua assigned one -- the whole point is the state the book was
         in for the hours between Chapter 4 arriving and its voices being chosen."""
         reg = Registry()
-        m = mf.build(4, mf.chapter_files()[4], reg)
+        # Chapter 6 since the 2026-09-21 revision moved the medical-center call there.
+        m = mf.build(6, mf.chapter_files()[6], reg)
         speakers = {seg["speaker"] for seg in m["segments"]}
         self.assertIn("doctor-mercer", speakers)
         unvoiced = {"doctor-mercer"}
