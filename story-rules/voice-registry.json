@@ -100,7 +100,7 @@
       "name": "Doctor Mercer",
       "audioKey": "mercer",
       "kind": "character",
-      "elevenLabsVoiceId": null,
+      "elevenLabsVoiceId": "EXAVITQu4vr4xnSDxMaL",
       "voiceVersion": 1,
       "gameExport": true,
       "aliases": [
@@ -108,20 +108,20 @@
         "Mercer",
         "Dr. Mercer"
       ],
-      "notes": "Introduced in Chapter 4 of the revised manuscript. Runs the medical center overnight; heard only through Jack's wrist terminal. Sarah's 'I like her' makes the character she/her. NO APPROVED VOICE YET -- Joshua assigns it; nothing here guesses one.",
+      "notes": "Introduced in Chapter 4 of the revised manuscript. Runs the medical center overnight; heard only through Jack's wrist terminal. Sarah's 'I like her' makes the character she/her. Voice assigned by Joshua on 2026-09-21.",
       "pronouns": [
         "she",
         "her",
         "hers"
       ],
-      "voiceApproved": null
+      "voiceApproved": "2026-09-21"
     },
     "security-officer": {
       "id": "security-officer",
       "name": "Settlement security",
       "audioKey": "security",
       "kind": "character",
-      "elevenLabsVoiceId": null,
+      "elevenLabsVoiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
       "gameExport": true,
       "aliases": [
@@ -131,13 +131,13 @@
         "One security officer",
         "The security officer"
       ],
-      "notes": "ONE VOICE FOR THE SETTLEMENT'S SECURITY OFFICERS, which is a decision worth seeing rather than a shortcut: the revised Chapters 4 to 6 give unnamed officers about six short lines between them, in three scenes, and none of them is identified as a returning individual. The manuscript does name a man's voice on the Chapter 4 channel. If Joshua wants them distinct, split this into numbered speakers before a voice is assigned -- after generation it costs clips. NO APPROVED VOICE YET.",
+      "notes": "ONE VOICE FOR THE SETTLEMENT'S SECURITY OFFICERS, which is a decision worth seeing rather than a shortcut: the revised Chapters 4 to 6 give unnamed officers thirteen short lines between them, in three scenes, and none is identified as a returning individual. Chapter 4 names a man's voice on the channel, and the assigned voice is male. Voice assigned by Joshua on 2026-09-21. If they should ever be distinct people, split this into numbered speakers -- after generation that costs clips.",
       "pronouns": [
         "they",
         "them",
         "theirs"
       ],
-      "voiceApproved": null
+      "voiceApproved": "2026-09-21"
     }
   }
 }
