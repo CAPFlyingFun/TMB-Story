@@ -27,9 +27,30 @@ FRONTMATTER_RE = re.compile(r"^---\n.*?\n---\n", re.S)
 HEADING_RE = re.compile(r"^#{1,6}\s")
 
 
+# Word turns a typed apostrophe into a curly one. The two are pronounced identically
+# and hash differently, so a manuscript round-tripped through Word would re-identify --
+# and therefore REGENERATE -- every line it touched, for a change no listener can hear.
+# Folded here, in the function used for IDENTITY only: what is sent to the voice is the
+# manuscript's own text, untouched, so the curl still reaches the page if it is there.
+#
+# Quotes and apostrophes only. A dash or an ellipsis changes how a line is READ -- an
+# em dash is a pause -- so those stay as written and are a real difference.
+SMART_PUNCTUATION = {
+    "\u2018": "'", "\u2019": "'",      # single quotes and the apostrophe
+    "\u201a": "'", "\u201b": "'",
+    "\u201c": '"', "\u201d": '"',      # double quotes
+    "\u201e": '"', "\u201f": '"',
+    "\u2032": "'", "\u2033": '"',      # prime and double prime
+}
+
+
 def normalize(text):
-    """Collapse whitespace. Used for hashing so formatting never changes an id."""
-    return re.sub(r"\s+", " ", (text or "")).strip()
+    """Collapse whitespace and straighten quotes. Used for hashing, so neither
+    reflowing a paragraph nor Word's autocorrect can change a clip's identity."""
+    out = (text or "")
+    for curly, straight in SMART_PUNCTUATION.items():
+        out = out.replace(curly, straight)
+    return re.sub(r"\s+", " ", out).strip()
 
 
 def _canonical_line(text):

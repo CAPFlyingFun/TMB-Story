@@ -1671,6 +1671,41 @@ class SingleFileExportTests(unittest.TestCase):
                              [s["startMs"] for s in m["segments"]])
 
 
+class SmartQuoteTests(unittest.TestCase):
+    """Word's autocorrect must not be able to re-identify a line.
+
+    Joshua edits the manuscript in Word and re-sends it. Word turns a typed apostrophe
+    into a curly one, and a curly apostrophe used to hash differently from a straight
+    one -- so a round trip through Word would have regenerated every line it touched
+    for a difference nobody can hear. Caught on 2026-09-21 when exactly that happened
+    to one line of chapter 1.
+    """
+
+    STRAIGHT = "Sarah's hands went still."
+    CURLY = "Sarah\u2019s hands went still."
+
+    def test_a_curly_apostrophe_is_the_same_clip_as_a_straight_one(self):
+        self.assertEqual(parse.clip_id("narrator", self.STRAIGHT),
+                         parse.clip_id("narrator", self.CURLY))
+
+    def test_curly_double_quotes_fold_too(self):
+        self.assertEqual(parse.normalize("\u201cWarning.\u201d"), '"Warning."')
+
+    def test_a_dash_or_an_ellipsis_is_left_alone(self):
+        """Those change how a line is READ, so they are a real difference."""
+        for mark in ("\u2014", "\u2013", "\u2026"):
+            self.assertIn(mark, parse.normalize("stopped %s then went on" % mark))
+
+    def test_no_existing_clip_changed_identity(self):
+        """The fold was free: nothing in the book used curly punctuation, so every id
+        this pins is the one already generated."""
+        reg = Registry()
+        for n, path in sorted(mf.chapter_files().items()):
+            for seg in parse.parse_chapter(path, reg, mf.load_overrides())["segments"]:
+                self.assertEqual(seg["clipId"],
+                                 parse.clip_id(seg["speaker"], seg["ttsText"]))
+
+
 class QuietEventTests(unittest.TestCase):
     """The catastrophe is quiet, and that is a thing the audio can contradict.
 
