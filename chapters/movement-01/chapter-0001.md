@@ -3,7 +3,7 @@ chapter: 1
 title: "The Alarm"
 movement: 1
 pov: Jack
-word_count: 1165
+word_count: 1163
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -28,7 +28,8 @@ revision_notes:
   - date: "2026-09-21"
     what: "The 'returning to the keyboard' / 'returned to the keyboard' repetition is fixed in the document itself."
     history: "The first revised document restored the wording Joshua had corrected by ear on 2026-09-18. It was followed verbatim and flagged rather than patched downstream, and he then fixed it at source and re-sent the document. That is the right end of the loop: the manuscript is his."
-    now: "'...before returning to typing.' and 'Sarah temporarily paused on the keyboard.' Two narrator clips. Sarah's own lines in both paragraphs are unchanged and were not regenerated."
+    now: "'...rested a hand briefly against her stomach, then returned to typing.' and 'Sarah's hands went still.'"
+    second_pass: "'Sarah temporarily paused on the keyboard' became 'Sarah's hands went still' on Joshua's instruction, after he and ChatGPT weighed three options. A pause is already temporary, and one pauses AT a keyboard rather than on it -- but the reason this is the better line is that stillness is a REACTION to what Jack just said, so the beat earns its place instead of filling the gap before her reply. It also anchors Sarah plainly before the punchline, which matters when one narrator reads everyone. Joshua then asked for 'returned to typing', which 'before' cannot take -- it wants a gerund -- so the clause was restructured rather than the word forced: 'rested a hand briefly against her stomach, then returned to typing.' Same beat, his word, and it reads as two actions in order instead of one action defined against the other."
 ---
 
 # Chapter 1: The Alarm
@@ -185,11 +186,11 @@ Sarah gave him a look that answered the question for him.
 
 Jack surrendered with a small nod. "Fair."
 
-"Lately the baby seems to think eleven at night is morning." Sarah rested a hand briefly against her stomach before returning to typing.
+"Lately the baby seems to think eleven at night is morning." Sarah rested a hand briefly against her stomach, then returned to typing.
 
 Jack smiled at the movement beneath her hand. "Already takes after me."
 
-Sarah temporarily paused on the keyboard. "That's what I'm afraid of."
+Sarah's hands went still. "That's what I'm afraid of."
 
 A new warning tone interrupted them. Both turned toward the main console as another message appeared.
 

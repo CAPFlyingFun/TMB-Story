@@ -366,13 +366,13 @@
       "cueId": "ch01-140-sarah-resumes",
       "asset": "sfx_keyboard_typing_short",
       "anchor": {
-        "clipId": "narrator-80717953bd92",
+        "clipId": "narrator-4ae27aba679f",
         "occurrence": 1
       },
       "timing": "during",
       "offsetMs": 200,
       "gain": 0.234,
-      "why": "Sarah going back to work after the exchange about the baby. RE-ANCHORED 2026-09-21 to '...before returning to typing', which is now where she actually resumes. The line it used to sit on reads 'Sarah temporarily paused on the keyboard' in Joshua's corrected manuscript, and keyboard clatter on the word paused would contradict the sentence carrying it."
+      "why": "Sarah going back to work after the exchange about the baby. Anchored to '...then returned to typing', which is where she resumes. It moved here on 2026-09-21 from 'Sarah returned to the keyboard', whose replacement reads 'Sarah's hands went still' -- keyboard clatter on that line would contradict the sentence carrying it, and the stillness is the beat before her reply."
     },
     {
       "cueId": "ch01-150-interrupting-tone",
