@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-20150e76792b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a34e7792665e95ca0dcf470e1225a283d3a611d46847b2a781767f2bc1d7fbb6",
+  "text": "Sarah's hands went still.",
+  "bytes": 31391,
+  "generated": "2026-09-21T16:42:31Z"
+}

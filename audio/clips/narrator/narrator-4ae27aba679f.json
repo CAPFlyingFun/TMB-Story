@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4ae27aba679f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d78feaf1111a8646a6002d6289cf5e91189498c44b890f27c6255cc6e587556d",
+  "text": "Sarah rested a hand briefly against her stomach, then returned to typing.",
+  "bytes": 78202,
+  "generated": "2026-09-21T16:42:31Z"
+}
