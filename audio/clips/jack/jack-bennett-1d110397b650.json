@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-1d110397b650",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "946cd5f329c52d89a0f771d47deb546e617ae0d60e98ca590b8905bbb6c4f4fc",
+  "text": "I'll stay on our side,",
+  "bytes": 27211,
+  "generated": "2026-09-21T23:10:34Z"
+}

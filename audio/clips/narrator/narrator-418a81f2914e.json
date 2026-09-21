@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-418a81f2914e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "caf4617d27a73f2335e53aa81bb9b9f128f6ee5f8114affa09a308f52ae796f1",
+  "text": "A call came through on the console. Lena's name.",
+  "bytes": 56050,
+  "generated": "2026-09-21T23:10:11Z"
+}

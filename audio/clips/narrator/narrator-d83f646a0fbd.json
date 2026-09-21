@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d83f646a0fbd",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "209a39b3106d79810fdcf000aba09678fd92d4ec8c8ee307e340ed779bbbb92b",
+  "text": "Medical remained stable. Utility crews had isolated the few damaged lines they could reach safely. The settlement still had power, breathable air, and stored water.",
+  "bytes": 183946,
+  "generated": "2026-09-21T23:10:11Z"
+}

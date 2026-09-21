@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-8cf907d0366a",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5057192e1cb81ef8a9f21a2916e0bd8c57efa0baec0e2906826ec74a3d652f8e",
+  "text": "Then don't wait too long to tell me what to do about it.",
+  "bytes": 44765,
+  "generated": "2026-09-21T23:10:45Z"
+}

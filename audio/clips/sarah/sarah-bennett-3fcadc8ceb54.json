@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-3fcadc8ceb54",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "17f88cb8d2d04142b3afb1c73273ed67089d2d2f4de2d94c27ec19422c0d6788",
+  "text": "You can go.",
+  "bytes": 13836,
+  "generated": "2026-09-21T23:10:24Z"
+}

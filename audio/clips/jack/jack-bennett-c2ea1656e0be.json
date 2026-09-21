@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-c2ea1656e0be",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "32e4d3fb3b7eac8cc344399c55fcadf89d5c5b308a306ff96b88f1d46d3c21cb",
+  "text": "I promise not to make friends with the grass.",
+  "bytes": 35988,
+  "generated": "2026-09-21T23:10:34Z"
+}

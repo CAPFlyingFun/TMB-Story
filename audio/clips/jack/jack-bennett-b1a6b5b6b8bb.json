@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-b1a6b5b6b8bb",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4042e4f98cccc9efae291a0dfea3ab679182f8783b6c3d402f04b607cbedd02a",
+  "text": "I know. I still want you safe.",
+  "bytes": 27211,
+  "generated": "2026-09-21T23:10:30Z"
+}

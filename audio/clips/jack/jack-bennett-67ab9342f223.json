@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-67ab9342f223",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8d2e8ac1e199b4dd81e3aa4101a35c83eebc9347a0cda78a9dfc9af8cb708fa8",
+  "text": "Still here. Still boring.",
+  "bytes": 24703,
+  "generated": "2026-09-21T23:10:37Z"
+}

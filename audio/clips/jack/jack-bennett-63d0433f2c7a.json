@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-63d0433f2c7a",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "449eb0d2e0d74d7d26a9af113726d2365bd50fc786bda5670d5d0e3d56ff09f9",
+  "text": "We just need a little more before we lose the choice.",
+  "bytes": 39750,
+  "generated": "2026-09-21T23:10:47Z"
+}

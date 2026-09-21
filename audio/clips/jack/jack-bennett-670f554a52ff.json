@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-670f554a52ff",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b43943af6cc43e278ed4ede179552565c5cf5d5cd40199c7bfe4ddc8bb4d67ec",
+  "text": "The other one,",
+  "bytes": 20942,
+  "generated": "2026-09-21T23:10:38Z"
+}

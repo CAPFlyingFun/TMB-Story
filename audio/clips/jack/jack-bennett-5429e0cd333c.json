@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-5429e0cd333c",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d415c647d8bfcff459784eefb74c84003b2e4af65ad786a48a32fc5844844399",
+  "text": "So do I.",
+  "bytes": 11328,
+  "generated": "2026-09-21T23:10:12Z"
+}

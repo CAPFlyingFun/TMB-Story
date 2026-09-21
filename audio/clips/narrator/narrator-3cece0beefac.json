@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-3cece0beefac",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f8ba02c93a44748bcbf5ef4ae13b092660859e8458c6ca4cbe9a0c93acccb8af",
+  "text": "For now, that was small enough to manage.",
+  "bytes": 42675,
+  "generated": "2026-09-21T23:10:09Z"
+}

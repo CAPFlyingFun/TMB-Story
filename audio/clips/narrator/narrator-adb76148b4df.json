@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-adb76148b4df",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "644d75debdb317154c8fe0516717df574cd810e3678c6e832255ae0fff2f76ee",
+  "text": "Sarah rested a hand against it.",
+  "bytes": 35988,
+  "generated": "2026-09-21T23:10:32Z"
+}

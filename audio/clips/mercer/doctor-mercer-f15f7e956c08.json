@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-f15f7e956c08",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e35cbd937b690fc54f929d44fc61e0553d3830f740ce2c22755dbc1becb7be50",
+  "text": "Doctor Bennett, this is Doctor Mercer.",
+  "bytes": 38078,
+  "generated": "2026-09-21T23:10:40Z"
+}

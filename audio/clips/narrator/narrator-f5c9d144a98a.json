@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f5c9d144a98a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "81ea1c852d035a9a98ea87d3e9c2fcfe3b8efe1b39d1b744529f3f297793499c",
+  "text": "Jack rubbed his eyes.",
+  "bytes": 24703,
+  "generated": "2026-09-21T23:10:47Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-3bae8c210258",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fc222e550696a30aab0d1f75f24518731b81b5c8b452523b500974861bf10d81",
+  "text": "Stay on our side,",
+  "bytes": 20942,
+  "generated": "2026-09-21T23:10:33Z"
+}

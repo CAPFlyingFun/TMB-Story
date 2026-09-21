@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-119678569c2d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3b4ba6e97d8c966bf97803bc7acf1ad13a040f0852161e26d3f18879cb0af2bb",
+  "text": "Jack let out a chuckle and moved the sensor closer.",
+  "bytes": 48527,
+  "generated": "2026-09-21T23:10:39Z"
+}

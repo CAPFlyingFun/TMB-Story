@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c9d50841e42f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "73f8bdeac69933a8b23bc82b8528e04afa9085c4e8d12f3812de375a9c703106",
+  "text": "Jack pulled up the medical center's status panel.",
+  "bytes": 47691,
+  "generated": "2026-09-21T23:10:41Z"
+}

@@ -15,7 +15,10 @@
       "chapters": [
         1,
         2,
-        3
+        3,
+        4,
+        5,
+        6
       ]
     },
     {
@@ -46,7 +49,9 @@
       "chapters": [
         1,
         2,
-        3
+        3,
+        4,
+        5
       ]
     },
     {
@@ -74,7 +79,7 @@
       "suggestedGain": 0.4,
       "description": "Outdoor night tone for the settlement -- the world beyond the lab wall after dark. Three minutes, so it loops roughly three times under a chapter-length scene.",
       "chapters": [
-        3
+        5
       ]
     },
     {
@@ -88,7 +93,8 @@
       "suggestedGain": 0.4,
       "description": "The tension spine of the last third, and the beginning of the TOMBS Array's own sound identity. It enters when the remote initialization request appears and does not leave.",
       "chapters": [
-        1
+        1,
+        3
       ]
     },
     {
@@ -102,7 +108,8 @@
       "suggestedGain": 0.4,
       "description": "Used twice, before each Request denied. Hearing the same refusal twice is the information: Jack tried again and got nowhere.",
       "chapters": [
-        1
+        1,
+        6
       ]
     },
     {
@@ -146,7 +153,8 @@
       "suggestedGain": 0.4,
       "description": "The TOMBS Array's rings, the signature machine sound of chapter 2. Loops because the manuscript has them moving, stopping and starting again across the whole scene.",
       "chapters": [
-        2
+        2,
+        3
       ]
     },
     {
@@ -188,7 +196,10 @@
       "suggestedGain": 0.4,
       "description": "The shake that makes Sarah catch herself against the console. Used where the manuscript shakes the building, not as general tension.",
       "chapters": [
-        3
+        3,
+        4,
+        5,
+        6
       ]
     },
     {
@@ -231,7 +242,8 @@
       "suggestedGain": 0.4,
       "description": "The polite tone that fails to wake Jack. Used twice in Chapter 1 -- the second, louder tone is this same asset at a higher gain, which is what the manuscript describes.",
       "chapters": [
-        1
+        1,
+        5
       ]
     },
     {
@@ -245,7 +257,10 @@
       "suggestedGain": 0.4,
       "description": "The unexplained vibration that arrives twice at the end of chapter 3 and that Jack decides he does not want to explain. The single most important new asset: it is the first sound of the giant world and it will recur for a long time.",
       "chapters": [
-        3
+        3,
+        4,
+        5,
+        6
       ]
     },
     {
@@ -289,7 +304,9 @@
       "suggestedGain": 0.4,
       "description": "Closes the frame the intercom opened. Without it the listener has no cue that the channel is gone, and the room's silence afterward is part of the scene.",
       "chapters": [
-        1
+        1,
+        4,
+        5
       ]
     },
     {
@@ -304,7 +321,9 @@
       "description": "Marks the acoustic frame Sarah's remote voice arrives in. Used twice: reaching for the intercom, and tapping the button again.",
       "chapters": [
         1,
-        2
+        2,
+        4,
+        5
       ]
     },
     {
@@ -334,7 +353,9 @@
       "chapters": [
         1,
         2,
-        3
+        3,
+        4,
+        6
       ]
     },
     {
@@ -349,7 +370,8 @@
       "description": "Someone entering behind Jack while he is looking the other way. Pure spatial information, and the manuscript puts it mid-sentence on purpose.",
       "chapters": [
         1,
-        2
+        2,
+        5
       ]
     },
     {
@@ -379,7 +401,10 @@
       "chapters": [
         1,
         2,
-        3
+        3,
+        4,
+        5,
+        6
       ]
     },
     {
@@ -408,7 +433,9 @@
       "description": "Jack's wrist terminal, which carries every call with Lena across chapters 2 and 3. It needs to read as a different device from the laboratory console.",
       "chapters": [
         2,
-        3
+        3,
+        4,
+        5
       ]
     }
   ]

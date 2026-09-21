@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-89e3f5747c9e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ccb7f2e2560881f2bb9e3d9a652382cd003ef0545e4f8ba26d9aa58d20d96d1a",
+  "text": "Nobody spoke for a moment.",
+  "bytes": 29301,
+  "generated": "2026-09-21T23:10:46Z"
+}

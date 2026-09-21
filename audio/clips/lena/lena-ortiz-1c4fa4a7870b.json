@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-1c4fa4a7870b",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "32ddb0f1156aa0f68f963ae87d68df2e608d1bd811c3eab66e976c9b82f1e980",
+  "text": "Before you start, yes, the station is staffed, yes, the grid is stable, and yes, I locked the door.",
+  "bytes": 112475,
+  "generated": "2026-09-21T23:10:16Z"
+}

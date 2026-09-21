@@ -1,6 +1,6 @@
 {
   "_comment": "Canonical character and system voice lines for the game. Narration is excluded because it is audiobook-only. `audio` points at the same clip the audiobook plays: one generated line, used in both places.",
-  "lineCount": 493,
+  "lineCount": 498,
   "lines": [
     {
       "lineId": "system-884c6f5a459a",
@@ -1037,7 +1037,6 @@
       "audio": "audio/clips/sarah/sarah-bennett-13fd659750f3.mp3",
       "chapters": [
         2,
-        5,
         6
       ]
     },
@@ -2466,7 +2465,8 @@
       "text": "No.",
       "audio": "audio/clips/sarah/sarah-bennett-937447a849cb.mp3",
       "chapters": [
-        3
+        3,
+        5
       ]
     },
     {
@@ -2565,7 +2565,8 @@
       "text": "Bennett.",
       "audio": "audio/clips/jack/jack-bennett-d212382125e9.mp3",
       "chapters": [
-        4
+        4,
+        6
       ]
     },
     {
@@ -2767,256 +2768,34 @@
       ]
     },
     {
-      "lineId": "sarah-bennett-b80d08f4e965",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
+      "lineId": "lena-ortiz-aa9eb9b2f28b",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
       "kind": "character",
-      "text": "Take it. I'll stay with Lena.",
-      "audio": "audio/clips/sarah/sarah-bennett-b80d08f4e965.mp3",
+      "text": "Most of the developed zone still has power. Three localized faults, nothing catastrophic.",
+      "audio": "audio/clips/lena/lena-ortiz-aa9eb9b2f28b.mp3",
       "chapters": [
         4
       ]
     },
     {
-      "lineId": "doctor-mercer-7a17d3b58c37",
-      "character": "doctor-mercer",
-      "characterName": "Doctor Mercer",
-      "kind": "character",
-      "text": "Doctor Bennett, this is Doctor Mercer. Did your lab just cause that vibration?",
-      "audio": "audio/clips/mercer/doctor-mercer-7a17d3b58c37.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "jack-bennett-db912e4e72c7",
+      "lineId": "jack-bennett-dc453121c958",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "Probably.",
-      "audio": "audio/clips/jack/jack-bennett-db912e4e72c7.mp3",
-      "chapters": [
-        4,
-        6
-      ]
-    },
-    {
-      "lineId": "doctor-mercer-32ac3a694af6",
-      "character": "doctor-mercer",
-      "characterName": "Doctor Mercer",
-      "kind": "character",
-      "text": "That is not the answer I wanted.",
-      "audio": "audio/clips/mercer/doctor-mercer-32ac3a694af6.mp3",
+      "text": "That's good,",
+      "audio": "audio/clips/jack/jack-bennett-dc453121c958.mp3",
       "chapters": [
         4
       ]
     },
     {
-      "lineId": "jack-bennett-0d6505b33837",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
+      "lineId": "lena-ortiz-7f5f6b1bc047",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
       "kind": "character",
-      "text": "It's not the one I wanted to give.",
-      "audio": "audio/clips/jack/jack-bennett-0d6505b33837.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "jack-bennett-e1c87217dbf2",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "Any damage?",
-      "audio": "audio/clips/jack/jack-bennett-e1c87217dbf2.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "doctor-mercer-fbed1afc761e",
-      "character": "doctor-mercer",
-      "characterName": "Doctor Mercer",
-      "kind": "character",
-      "text": "Nothing serious. One patient woke up frightened, two nurses felt the floor move, and half my overnight staff are arguing about whether we had an earthquake.",
-      "audio": "audio/clips/mercer/doctor-mercer-fbed1afc761e.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "jack-bennett-82c9695c459c",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "Local sensors show no seismic event.",
-      "audio": "audio/clips/jack/jack-bennett-82c9695c459c.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "doctor-mercer-40bc75c25a46",
-      "character": "doctor-mercer",
-      "characterName": "Doctor Mercer",
-      "kind": "character",
-      "text": "Then why am I looking at grass taller than the medical center?",
-      "audio": "audio/clips/mercer/doctor-mercer-40bc75c25a46.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "jack-bennett-29b791f5ae20",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "You looked outside.",
-      "audio": "audio/clips/jack/jack-bennett-29b791f5ae20.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "doctor-mercer-6c44f4a5faec",
-      "character": "doctor-mercer",
-      "characterName": "Doctor Mercer",
-      "kind": "character",
-      "text": "Jack, I work nights. Looking outside occasionally is one of the perks.",
-      "audio": "audio/clips/mercer/doctor-mercer-6c44f4a5faec.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-f3e3ab701f53",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
-      "kind": "character",
-      "text": "I like her.",
-      "audio": "audio/clips/sarah/sarah-bennett-f3e3ab701f53.mp3",
-      "chapters": [
-        4,
-        5
-      ]
-    },
-    {
-      "lineId": "jack-bennett-39e9341394c5",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "We had a TOMBS boundary event. The developed settlement appears to have been reduced in scale relative to the surrounding island.",
-      "audio": "audio/clips/jack/jack-bennett-39e9341394c5.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "doctor-mercer-57eefff57839",
-      "character": "doctor-mercer",
-      "characterName": "Doctor Mercer",
-      "kind": "character",
-      "text": "Say that again.",
-      "audio": "audio/clips/mercer/doctor-mercer-57eefff57839.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "jack-bennett-3c358ddd59b9",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "The town got smaller.",
-      "audio": "audio/clips/jack/jack-bennett-3c358ddd59b9.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "doctor-mercer-6fc94577ac37",
-      "character": "doctor-mercer",
-      "characterName": "Doctor Mercer",
-      "kind": "character",
-      "text": "That was not better.",
-      "audio": "audio/clips/mercer/doctor-mercer-6fc94577ac37.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "doctor-mercer-c93c996c118a",
-      "character": "doctor-mercer",
-      "characterName": "Doctor Mercer",
-      "kind": "character",
-      "text": "What do you need from medical?",
-      "audio": "audio/clips/mercer/doctor-mercer-c93c996c118a.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "jack-bennett-bf7fab55e740",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "For now, keep your overnight staff inside. Check backup power, medical gases, water pressure, and anything that crosses the edge of the developed zone. Don't wake patients unless you need to.",
-      "audio": "audio/clips/jack/jack-bennett-bf7fab55e740.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "doctor-mercer-0c6a1aa715ae",
-      "character": "doctor-mercer",
-      "characterName": "Doctor Mercer",
-      "kind": "character",
-      "text": "And when they wake on their own?",
-      "audio": "audio/clips/mercer/doctor-mercer-0c6a1aa715ae.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "jack-bennett-0f0ba5c12209",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "We're working on that.",
-      "audio": "audio/clips/jack/jack-bennett-0f0ba5c12209.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-503b475e8d0c",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
-      "kind": "character",
-      "text": "Lena says most of the developed zone still has power. Three localized faults, nothing catastrophic.",
-      "audio": "audio/clips/sarah/sarah-bennett-503b475e8d0c.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "jack-bennett-9ac323fb2ebe",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "That's good.",
-      "audio": "audio/clips/jack/jack-bennett-9ac323fb2ebe.mp3",
-      "chapters": [
-        4
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-fbad64f5edd6",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
-      "kind": "character",
-      "text": "It is.",
-      "audio": "audio/clips/sarah/sarah-bennett-fbad64f5edd6.mp3",
+      "text": "It is,",
+      "audio": "audio/clips/lena/lena-ortiz-7f5f6b1bc047.mp3",
       "chapters": [
         4
       ]
@@ -3463,182 +3242,6 @@
       ]
     },
     {
-      "lineId": "sarah-bennett-c08076b0ed8a",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
-      "kind": "character",
-      "text": "It's time,",
-      "audio": "audio/clips/sarah/sarah-bennett-c08076b0ed8a.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-7f260dd37fa7",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
-      "kind": "character",
-      "text": "What are you going to tell them?",
-      "audio": "audio/clips/sarah/sarah-bennett-7f260dd37fa7.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "jack-bennett-5494ff404004",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "The truth.",
-      "audio": "audio/clips/jack/jack-bennett-5494ff404004.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-316b301ade0f",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
-      "kind": "character",
-      "text": "Which part?",
-      "audio": "audio/clips/sarah/sarah-bennett-316b301ade0f.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "jack-bennett-929b07895398",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "The part we can prove.",
-      "audio": "audio/clips/jack/jack-bennett-929b07895398.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-f464263af252",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
-      "kind": "character",
-      "text": "And don't promise them a reversal.",
-      "audio": "audio/clips/sarah/sarah-bennett-f464263af252.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "jack-bennett-e6865d2d0f9c",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "I built TOMBS.",
-      "audio": "audio/clips/jack/jack-bennett-e6865d2d0f9c.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-2707584e31b5",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
-      "kind": "character",
-      "text": "I know.",
-      "audio": "audio/clips/sarah/sarah-bennett-2707584e31b5.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "jack-bennett-e861503858b2",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "I should be able to reverse what it did.",
-      "audio": "audio/clips/jack/jack-bennett-e861503858b2.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-9c6d71b27315",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
-      "kind": "character",
-      "text": "That still isn't the same as knowing you can.",
-      "audio": "audio/clips/sarah/sarah-bennett-9c6d71b27315.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "jack-bennett-5afa29140327",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "This is Doctor Jack Bennett from the TOMBS laboratory. Earlier tonight, the settlement experienced a TOMBS boundary event. Power, atmosphere, medical services, and most internal infrastructure remain operational.",
-      "audio": "audio/clips/jack/jack-bennett-5afa29140327.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "jack-bennett-cd281c7d99ab",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "We have confirmed that the developed settlement changed in scale relative to the surrounding island. If you are inside a residence or other secure building, remain there for now. Do not approach the outer edge of town and do not enter undeveloped terrain. Medical, utility, and security teams are operating normally.",
-      "audio": "audio/clips/jack/jack-bennett-cd281c7d99ab.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "jack-bennett-31e685a9d40d",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "We are investigating the cause and whether the event can be reversed. We will provide another update when we have verified information. If you have an emergency, use the normal emergency channels.",
-      "audio": "audio/clips/jack/jack-bennett-31e685a9d40d.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "jack-bennett-5fef96e6f19e",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "I hated every word of that.",
-      "audio": "audio/clips/jack/jack-bennett-5fef96e6f19e.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "jack-bennett-d45de21efb9b",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "Especially the part where I didn't say we'd fix it.",
-      "audio": "audio/clips/jack/jack-bennett-d45de21efb9b.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-461bce2802b1",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
-      "kind": "character",
-      "text": "Then let's earn the right to say it later.",
-      "audio": "audio/clips/sarah/sarah-bennett-461bce2802b1.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
       "lineId": "lena-ortiz-38ea1e01c67d",
       "character": "lena-ortiz",
       "characterName": "Lena Ortiz",
@@ -3705,34 +3308,24 @@
       ]
     },
     {
-      "lineId": "jack-bennett-13e3d52c8985",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "I told you.",
-      "audio": "audio/clips/jack/jack-bennett-13e3d52c8985.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-c94d8d65370f",
+      "lineId": "sarah-bennett-f3e3ab701f53",
       "character": "sarah-bennett",
       "characterName": "Sarah Bennett",
       "kind": "character",
-      "text": "No, you said you liked Doctor Mercer.",
-      "audio": "audio/clips/sarah/sarah-bennett-c94d8d65370f.mp3",
+      "text": "I like her.",
+      "audio": "audio/clips/sarah/sarah-bennett-f3e3ab701f53.mp3",
       "chapters": [
-        5
+        5,
+        6
       ]
     },
     {
-      "lineId": "jack-bennett-039d9169b7e6",
+      "lineId": "jack-bennett-5429e0cd333c",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "I can like two competent people in one night.",
-      "audio": "audio/clips/jack/jack-bennett-039d9169b7e6.mp3",
+      "text": "So do I.",
+      "audio": "audio/clips/jack/jack-bennett-5429e0cd333c.mp3",
       "chapters": [
         5
       ]
@@ -3837,23 +3430,23 @@
       ]
     },
     {
-      "lineId": "lena-ortiz-d98159e1b32a",
+      "lineId": "lena-ortiz-1bb4c4e40ac7",
       "character": "lena-ortiz",
       "characterName": "Lena Ortiz",
       "kind": "character",
-      "text": "Please tell me we're not using the phrase whatever is causing them in the next public announcement.",
-      "audio": "audio/clips/lena/lena-ortiz-d98159e1b32a.mp3",
+      "text": "Please tell me we're not using the phrase whatever is causing them in any public announcement.",
+      "audio": "audio/clips/lena/lena-ortiz-1bb4c4e40ac7.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "jack-bennett-a8e102c88b22",
+      "lineId": "jack-bennett-dbf3157f6b8f",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "We are absolutely not.",
-      "audio": "audio/clips/jack/jack-bennett-a8e102c88b22.mp3",
+      "text": "Nobody's making a public announcement yet,",
+      "audio": "audio/clips/jack/jack-bennett-dbf3157f6b8f.mp3",
       "chapters": [
         5
       ]
@@ -3969,12 +3562,12 @@
       ]
     },
     {
-      "lineId": "lena-ortiz-c03ee165f849",
+      "lineId": "lena-ortiz-1c4fa4a7870b",
       "character": "lena-ortiz",
       "characterName": "Lena Ortiz",
       "kind": "character",
-      "text": "Before either of you asks, yes, the station is staffed, yes, the grid is stable, and yes, I locked the door.",
-      "audio": "audio/clips/lena/lena-ortiz-c03ee165f849.mp3",
+      "text": "Before you start, yes, the station is staffed, yes, the grid is stable, and yes, I locked the door.",
+      "audio": "audio/clips/lena/lena-ortiz-1c4fa4a7870b.mp3",
       "chapters": [
         5
       ]
@@ -4002,12 +3595,12 @@
       ]
     },
     {
-      "lineId": "lena-ortiz-b88d8456b3d6",
+      "lineId": "lena-ortiz-b4b3df86f6d4",
       "character": "lena-ortiz",
       "characterName": "Lena Ortiz",
       "kind": "character",
-      "text": "It looks disappointingly normal for a machine that just ruined everyone's night.",
-      "audio": "audio/clips/lena/lena-ortiz-b88d8456b3d6.mp3",
+      "text": "It looks disappointingly normal for a machine that ruined everyone's night.",
+      "audio": "audio/clips/lena/lena-ortiz-b4b3df86f6d4.mp3",
       "chapters": [
         5
       ]
@@ -4024,221 +3617,177 @@
       ]
     },
     {
-      "lineId": "security-officer-ee8506a55270",
+      "lineId": "security-officer-2229fa58f3c3",
       "character": "security-officer",
       "characterName": "Settlement security",
       "kind": "character",
-      "text": "Doctor Bennett, we have a perimeter team ready.",
-      "audio": "audio/clips/security/security-officer-ee8506a55270.mp3",
+      "text": "Doctor Bennett, we have a perimeter team headed to the southern boundary. Visual inspection only, inside the developed zone. They want to see where the road ends.",
+      "audio": "audio/clips/security/security-officer-2229fa58f3c3.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "jack-bennett-bb388a2b7af7",
+      "lineId": "jack-bennett-d863a5f89390",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "Ready for what?",
-      "audio": "audio/clips/jack/jack-bennett-bb388a2b7af7.mp3",
+      "text": "I need to go outside,",
+      "audio": "audio/clips/jack/jack-bennett-d863a5f89390.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "security-officer-5e74087ef1dd",
-      "character": "security-officer",
-      "characterName": "Settlement security",
+      "lineId": "jack-bennett-ed2c364065c1",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "Visual inspection of the southern boundary.",
-      "audio": "audio/clips/security/security-officer-5e74087ef1dd.mp3",
+      "text": "You didn't even think about it.",
+      "audio": "audio/clips/jack/jack-bennett-ed2c364065c1.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "sarah-bennett-696befa95c2b",
+      "lineId": "sarah-bennett-a5d9d59d781c",
       "character": "sarah-bennett",
       "characterName": "Sarah Bennett",
       "kind": "character",
-      "text": "Outside?",
-      "audio": "audio/clips/sarah/sarah-bennett-696befa95c2b.mp3",
+      "text": "I didn't need to. It's dangerous.",
+      "audio": "audio/clips/sarah/sarah-bennett-a5d9d59d781c.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "security-officer-d2778895ca8c",
-      "character": "security-officer",
-      "characterName": "Settlement security",
-      "kind": "character",
-      "text": "Inside the developed zone only. They want to see where the road ends.",
-      "audio": "audio/clips/security/security-officer-d2778895ca8c.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "jack-bennett-55aef900f18f",
+      "lineId": "jack-bennett-5a5267adb16b",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "We go with them,",
-      "audio": "audio/clips/jack/jack-bennett-55aef900f18f.mp3",
+      "text": "I know,",
+      "audio": "audio/clips/jack/jack-bennett-5a5267adb16b.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "sarah-bennett-9ba38a5649a9",
+      "lineId": "jack-bennett-55a6560804c8",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "But the cameras aren't enough. I've watched that boundary all night and it hasn't told me anything the sensors couldn't already give me as a number.",
+      "audio": "audio/clips/jack/jack-bennett-55a6560804c8.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-98f835a85541",
       "character": "sarah-bennett",
       "characterName": "Sarah Bennett",
       "kind": "character",
-      "text": "We're not doing this again.",
-      "audio": "audio/clips/sarah/sarah-bennett-9ba38a5649a9.mp3",
+      "text": "So now you want to go stand next to it.",
+      "audio": "audio/clips/sarah/sarah-bennett-98f835a85541.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "jack-bennett-c1664737af1d",
+      "lineId": "jack-bennett-465b977548da",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "We are absolutely doing this again.",
-      "audio": "audio/clips/jack/jack-bennett-c1664737af1d.mp3",
+      "text": "Not into the wilderness. Just the edge, on our side. I'll walk the line, take real environmental readings, and see what's actually there instead of what a camera decides to show me. We need firsthand information, not another feed.",
+      "audio": "audio/clips/jack/jack-bennett-465b977548da.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "jack-bennett-b5e0d5896ce4",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "We don't know what's out there.",
-      "audio": "audio/clips/jack/jack-bennett-b5e0d5896ce4.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-e493ee579137",
+      "lineId": "sarah-bennett-40668d783d81",
       "character": "sarah-bennett",
       "characterName": "Sarah Bennett",
       "kind": "character",
-      "text": "Which is why a scientist should be there.",
-      "audio": "audio/clips/sarah/sarah-bennett-e493ee579137.mp3",
+      "text": "Okay,",
+      "audio": "audio/clips/sarah/sarah-bennett-40668d783d81.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "jack-bennett-5580a37387dd",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "A scientist will be there.",
-      "audio": "audio/clips/jack/jack-bennett-5580a37387dd.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-14cf4eaef7b6",
+      "lineId": "sarah-bennett-3fcadc8ceb54",
       "character": "sarah-bennett",
       "characterName": "Sarah Bennett",
       "kind": "character",
-      "text": "Convenient.",
-      "audio": "audio/clips/sarah/sarah-bennett-14cf4eaef7b6.mp3",
+      "text": "You can go.",
+      "audio": "audio/clips/sarah/sarah-bennett-3fcadc8ceb54.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "jack-bennett-fbddc1d8ff07",
+      "lineId": "jack-bennett-70ef5fed85f7",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "You're thirty-two weeks pregnant, it's the middle of the night, and something outside town may be causing ground vibrations.",
-      "audio": "audio/clips/jack/jack-bennett-fbddc1d8ff07.mp3",
+      "text": "Really?",
+      "audio": "audio/clips/jack/jack-bennett-70ef5fed85f7.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "sarah-bennett-2abc842ab939",
+      "lineId": "sarah-bennett-071491a7d192",
       "character": "sarah-bennett",
       "characterName": "Sarah Bennett",
       "kind": "character",
-      "text": "Fine.",
-      "audio": "audio/clips/sarah/sarah-bennett-2abc842ab939.mp3",
+      "text": "Don't make me reconsider.",
+      "audio": "audio/clips/sarah/sarah-bennett-071491a7d192.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "jack-bennett-0be9f5f5071c",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "Fine?",
-      "audio": "audio/clips/jack/jack-bennett-0be9f5f5071c.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-ba39b46973ff",
+      "lineId": "sarah-bennett-e7553735e211",
       "character": "sarah-bennett",
       "characterName": "Sarah Bennett",
       "kind": "character",
-      "text": "I'm staying here.",
-      "audio": "audio/clips/sarah/sarah-bennett-ba39b46973ff.mp3",
+      "text": "I'll stay here and monitor TOMBS, the perimeter cameras, and your sensor feed the whole time. You won't be out there alone.",
+      "audio": "audio/clips/sarah/sarah-bennett-e7553735e211.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "jack-bennett-4ae41853d331",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "That was too easy.",
-      "audio": "audio/clips/jack/jack-bennett-4ae41853d331.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-316ead2a4999",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
-      "kind": "character",
-      "text": "It wasn't easy. It was reasonable.",
-      "audio": "audio/clips/sarah/sarah-bennett-316ead2a4999.mp3",
-      "chapters": [
-        5
-      ]
-    },
-    {
-      "lineId": "lena-ortiz-c2e8d594f5da",
+      "lineId": "lena-ortiz-91911ca62358",
       "character": "lena-ortiz",
       "characterName": "Lena Ortiz",
       "kind": "character",
-      "text": "I'm uncomfortable with how suspicious you are of reasonable.",
-      "audio": "audio/clips/lena/lena-ortiz-c2e8d594f5da.mp3",
+      "text": "I'll help her yell at you if you do something stupid.",
+      "audio": "audio/clips/lena/lena-ortiz-91911ca62358.mp3",
       "chapters": [
         5
       ]
     },
     {
-      "lineId": "sarah-bennett-879b353447e8",
+      "lineId": "jack-bennett-82a1d166f7cd",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Noted,",
+      "audio": "audio/clips/jack/jack-bennett-82a1d166f7cd.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-9e04aab855b9",
       "character": "sarah-bennett",
       "characterName": "Sarah Bennett",
       "kind": "character",
-      "text": "Take readings at the boundary. Air composition, temperature, pressure, particulates, radiation, anything the unit can measure.",
-      "audio": "audio/clips/sarah/sarah-bennett-879b353447e8.mp3",
+      "text": "Air composition, temperature, pressure, particulates, radiation. Anything the unit can measure.",
+      "audio": "audio/clips/sarah/sarah-bennett-9e04aab855b9.mp3",
       "chapters": [
         5
       ]
@@ -4266,12 +3815,12 @@
       ]
     },
     {
-      "lineId": "jack-bennett-64e03afa84f4",
+      "lineId": "jack-bennett-34a8fe97d24e",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "Intentionally.",
-      "audio": "audio/clips/jack/jack-bennett-64e03afa84f4.mp3",
+      "text": "Intentionally,",
+      "audio": "audio/clips/jack/jack-bennett-34a8fe97d24e.mp3",
       "chapters": [
         5
       ]
@@ -4294,6 +3843,204 @@
       "kind": "character",
       "text": "Try harder.",
       "audio": "audio/clips/sarah/sarah-bennett-70c2112449a2.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "jack-bennett-4123af5baa1c",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Keep safe,",
+      "audio": "audio/clips/jack/jack-bennett-4123af5baa1c.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-a2f1b1827870",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Safe? You're the one leaving and going outside.",
+      "audio": "audio/clips/sarah/sarah-bennett-a2f1b1827870.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "jack-bennett-b1a6b5b6b8bb",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "I know. I still want you safe.",
+      "audio": "audio/clips/jack/jack-bennett-b1a6b5b6b8bb.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-ba9f811ad2c1",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "That's sweet of you. But I need you to be safe. I'll be fine in here.",
+      "audio": "audio/clips/sarah/sarah-bennett-ba9f811ad2c1.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "jack-bennett-24c560b55a41",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Both of you.",
+      "audio": "audio/clips/jack/jack-bennett-24c560b55a41.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-c021970fb06e",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Both of us.",
+      "audio": "audio/clips/sarah/sarah-bennett-c021970fb06e.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "jack-bennett-c6de14733f8a",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Love you,",
+      "audio": "audio/clips/jack/jack-bennett-c6de14733f8a.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-217331758004",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Love you too. Now go, before I change my mind.",
+      "audio": "audio/clips/sarah/sarah-bennett-217331758004.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-3bae8c210258",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Stay on our side,",
+      "audio": "audio/clips/sarah/sarah-bennett-3bae8c210258.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "jack-bennett-1d110397b650",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "I'll stay on our side,",
+      "audio": "audio/clips/jack/jack-bennett-1d110397b650.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "jack-bennett-c2ea1656e0be",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "I promise not to make friends with the grass.",
+      "audio": "audio/clips/jack/jack-bennett-c2ea1656e0be.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "jack-bennett-dc0eff9b4f37",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Going.",
+      "audio": "audio/clips/jack/jack-bennett-dc0eff9b4f37.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-c789b72fb403",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "You still there?",
+      "audio": "audio/clips/sarah/sarah-bennett-c789b72fb403.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "jack-bennett-67ab9342f223",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Still here. Still boring.",
+      "audio": "audio/clips/jack/jack-bennett-67ab9342f223.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-91309cea2164",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Good. Keep it boring.",
+      "audio": "audio/clips/sarah/sarah-bennett-91309cea2164.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "security-officer-6a15d674b67d",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Is that Doctor Bennett?",
+      "audio": "audio/clips/security/security-officer-6a15d674b67d.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "jack-bennett-670f554a52ff",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "The other one,",
+      "audio": "audio/clips/jack/jack-bennett-670f554a52ff.mp3",
+      "chapters": [
+        5
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-3934c346c9b9",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "I heard that,",
+      "audio": "audio/clips/sarah/sarah-bennett-3934c346c9b9.mp3",
       "chapters": [
         5
       ]
@@ -4706,6 +4453,17 @@
       ]
     },
     {
+      "lineId": "jack-bennett-db912e4e72c7",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Probably.",
+      "audio": "audio/clips/jack/jack-bennett-db912e4e72c7.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
       "lineId": "sarah-bennett-bb33e977eb9c",
       "character": "sarah-bennett",
       "characterName": "Sarah Bennett",
@@ -5053,6 +4811,303 @@
       "kind": "character",
       "text": "I'm fine. Keep going.",
       "audio": "audio/clips/sarah/sarah-bennett-fca89680a3fb.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-f15f7e956c08",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Doctor Bennett, this is Doctor Mercer.",
+      "audio": "audio/clips/mercer/doctor-mercer-f15f7e956c08.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-865ac9e6893a",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Did your lab cause that vibration a little while ago?",
+      "audio": "audio/clips/mercer/doctor-mercer-865ac9e6893a.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-32ac3a694af6",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "That is not the answer I wanted.",
+      "audio": "audio/clips/mercer/doctor-mercer-32ac3a694af6.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "jack-bennett-0d6505b33837",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "It's not the one I wanted to give.",
+      "audio": "audio/clips/jack/jack-bennett-0d6505b33837.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "jack-bennett-e1c87217dbf2",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Any damage?",
+      "audio": "audio/clips/jack/jack-bennett-e1c87217dbf2.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-fbed1afc761e",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Nothing serious. One patient woke up frightened, two nurses felt the floor move, and half my overnight staff are arguing about whether we had an earthquake.",
+      "audio": "audio/clips/mercer/doctor-mercer-fbed1afc761e.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "jack-bennett-82c9695c459c",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Local sensors show no seismic event.",
+      "audio": "audio/clips/jack/jack-bennett-82c9695c459c.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-40bc75c25a46",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Then why am I looking at grass taller than the medical center?",
+      "audio": "audio/clips/mercer/doctor-mercer-40bc75c25a46.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "jack-bennett-29b791f5ae20",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "You looked outside.",
+      "audio": "audio/clips/jack/jack-bennett-29b791f5ae20.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-6c44f4a5faec",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Jack, I work nights. Looking outside occasionally is one of the perks.",
+      "audio": "audio/clips/mercer/doctor-mercer-6c44f4a5faec.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "jack-bennett-0a966d460b80",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "We had a TOMBS boundary event. The developed settlement's been reduced in scale relative to the surrounding island. We're still working out by how much.",
+      "audio": "audio/clips/jack/jack-bennett-0a966d460b80.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-57eefff57839",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Say that again.",
+      "audio": "audio/clips/mercer/doctor-mercer-57eefff57839.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "jack-bennett-3c358ddd59b9",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "The town got smaller.",
+      "audio": "audio/clips/jack/jack-bennett-3c358ddd59b9.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-6fc94577ac37",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "That was not better.",
+      "audio": "audio/clips/mercer/doctor-mercer-6fc94577ac37.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-c93c996c118a",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "What do you need from medical?",
+      "audio": "audio/clips/mercer/doctor-mercer-c93c996c118a.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "jack-bennett-bf7fab55e740",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "For now, keep your overnight staff inside. Check backup power, medical gases, water pressure, and anything that crosses the edge of the developed zone. Don't wake patients unless you need to.",
+      "audio": "audio/clips/jack/jack-bennett-bf7fab55e740.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-0c6a1aa715ae",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "And when they wake on their own?",
+      "audio": "audio/clips/mercer/doctor-mercer-0c6a1aa715ae.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "jack-bennett-0f0ba5c12209",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "We're working on that.",
+      "audio": "audio/clips/jack/jack-bennett-0f0ba5c12209.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-acb85fbd2496",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Understood.",
+      "audio": "audio/clips/mercer/doctor-mercer-acb85fbd2496.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-c34d4e2b0c0e",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Jack. How long before the rest of the settlement knows?",
+      "audio": "audio/clips/mercer/doctor-mercer-c34d4e2b0c0e.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "jack-bennett-b4f2f27b02e5",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Not long,",
+      "audio": "audio/clips/jack/jack-bennett-b4f2f27b02e5.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-8cf907d0366a",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Then don't wait too long to tell me what to do about it.",
+      "audio": "audio/clips/mercer/doctor-mercer-8cf907d0366a.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-ddf0de6bf13a",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Morning's coming.",
+      "audio": "audio/clips/sarah/sarah-bennett-ddf0de6bf13a.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-37b7abac56df",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "We can't keep this to Lena, security, and one very unimpressed doctor forever.",
+      "audio": "audio/clips/sarah/sarah-bennett-37b7abac56df.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "jack-bennett-63d0433f2c7a",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "We just need a little more before we lose the choice.",
+      "audio": "audio/clips/jack/jack-bennett-63d0433f2c7a.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-d056dd4480e3",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "For what it's worth, I'd rather know what that is before we wake everyone up to look at it.",
+      "audio": "audio/clips/lena/lena-ortiz-d056dd4480e3.mp3",
+      "chapters": [
+        6
+      ]
+    },
+    {
+      "lineId": "jack-bennett-a820affc5cd4",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Same,",
+      "audio": "audio/clips/jack/jack-bennett-a820affc5cd4.mp3",
       "chapters": [
         6
       ]

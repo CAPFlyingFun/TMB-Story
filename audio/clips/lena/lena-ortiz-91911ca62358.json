@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-91911ca62358",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1c1763cb1db68abd98ad092a0a48ead60c8e229feea1a535a28db236ec4208a1",
+  "text": "I'll help her yell at you if you do something stupid.",
+  "bytes": 46437,
+  "generated": "2026-09-21T23:10:26Z"
+}

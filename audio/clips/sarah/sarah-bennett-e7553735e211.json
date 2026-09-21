@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-e7553735e211",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bba6e883aaaae891f749d67202b173ed5e2eb0146fc9032296c62481f77f2a06",
+  "text": "I'll stay here and monitor TOMBS, the perimeter cameras, and your sensor feed the whole time. You won't be out there alone.",
+  "bytes": 111639,
+  "generated": "2026-09-21T23:10:26Z"
+}

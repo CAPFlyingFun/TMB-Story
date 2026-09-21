@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b1688fb4172f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "583858fbbb402e4e6e193098e0180698c7614895117be39b168bbb3840d295a5",
+  "text": "He closed the window before either of them had to sit with that for too long.",
+  "bytes": 65663,
+  "generated": "2026-09-21T23:10:15Z"
+}

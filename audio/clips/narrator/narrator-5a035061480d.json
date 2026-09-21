@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5a035061480d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1af1c445b10fa3f2d032a9d32dd3fd2f8d9632a258f4a510d912e314bd75b2de",
+  "text": "Lena's voice came through dryly.",
+  "bytes": 35988,
+  "generated": "2026-09-21T23:10:12Z"
+}

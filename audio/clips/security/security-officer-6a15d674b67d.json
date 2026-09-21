@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-6a15d674b67d",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7caf079e4f26789cf3b5ee235bff737a543ab68ea8c3e7b3954fdb7841da0a10",
+  "text": "Is that Doctor Bennett?",
+  "bytes": 23449,
+  "generated": "2026-09-21T23:10:38Z"
+}

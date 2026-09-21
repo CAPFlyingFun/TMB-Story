@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-d056dd4480e3",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "724774045bc8d47b709f64c33d4d0f868b8877c8681ef89fc0341094d73b9bc2",
+  "text": "For what it's worth, I'd rather know what that is before we wake everyone up to look at it.",
+  "bytes": 86561,
+  "generated": "2026-09-21T23:10:48Z"
+}

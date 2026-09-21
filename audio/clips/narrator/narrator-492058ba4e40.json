@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-492058ba4e40",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bc825dda98af3d87067e512974c089ea975170bc8d3171bcb5a264b5a24f7c59",
+  "text": "Sarah leaned toward the microphone.",
+  "bytes": 36824,
+  "generated": "2026-09-21T23:10:42Z"
+}

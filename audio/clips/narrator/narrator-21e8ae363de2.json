@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-21e8ae363de2",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4d6bd25294c56b37b05e41526c6af6269b082170329d4257e7f816d0530376f3",
+  "text": "One of the settlement security officers stood outside with Lena, still in her orange utility jacket. She held up both hands before either of them could ask.",
+  "bytes": 154271,
+  "generated": "2026-09-21T23:10:16Z"
+}

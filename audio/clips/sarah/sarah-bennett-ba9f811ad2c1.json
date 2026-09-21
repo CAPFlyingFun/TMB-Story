@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-ba9f811ad2c1",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "36af359f96c6474a7e9ed339b15bceff0493fb4f55a5b5f009d3c521597cc298",
+  "text": "That's sweet of you. But I need you to be safe. I'll be fine in here.",
+  "bytes": 54378,
+  "generated": "2026-09-21T23:10:31Z"
+}

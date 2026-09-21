@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-96635601fd9e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9f1c6d388ef46270e67746ad0db0a2d6e7828bb51c13e757cb62624b3447c36a",
+  "text": "He turned back to the console.",
+  "bytes": 29301,
+  "generated": "2026-09-21T23:10:49Z"
+}

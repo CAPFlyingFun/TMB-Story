@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-c6de14733f8a",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "452d8375e6f12fe13ebeae6c46ea6c1509fcab8c4cc236beeebf816b654c1a55",
+  "text": "Love you,",
+  "bytes": 16762,
+  "generated": "2026-09-21T23:10:32Z"
+}

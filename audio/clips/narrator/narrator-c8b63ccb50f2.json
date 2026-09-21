@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c8b63ccb50f2",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c2e1b282d67bfdc0d3c21078ba5cda8232fdeddf5735029e55ab35fc1f8223a2",
+  "text": "Less than an hour had passed since the TOMBS event. In the laboratory, that hour had felt endless. Outside, it had barely registered.",
+  "bytes": 134626,
+  "generated": "2026-09-21T23:10:07Z"
+}

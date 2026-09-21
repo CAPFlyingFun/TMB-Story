@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b624bcabe980",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "01c073a0ed6cbf874d4321596386d2c459aad0fac86b5bb1a91d171b59358e71",
+  "text": "She looked past him at the boundary map, then at the frozen shape on the security feed that still hadn't resolved into anything.",
+  "bytes": 117908,
+  "generated": "2026-09-21T23:10:23Z"
+}

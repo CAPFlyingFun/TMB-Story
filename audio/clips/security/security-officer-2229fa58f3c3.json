@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-2229fa58f3c3",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6aa728c8339b75b19f40969013b83219ae8358da322d04e4603b99ed77b0faa5",
+  "text": "Doctor Bennett, we have a perimeter team headed to the southern boundary. Visual inspection only, inside the developed zone. They want to see where the road ends.",
+  "bytes": 144657,
+  "generated": "2026-09-21T23:10:18Z"
+}

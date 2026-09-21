@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-ed2c364065c1",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d6dada7bacf18d9ecba8359fc135ecfba7df4a79556be122ebb2d33ed4540db8",
+  "text": "You didn't even think about it.",
+  "bytes": 24703,
+  "generated": "2026-09-21T23:10:19Z"
+}

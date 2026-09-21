@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-dbf3157f6b8f",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e3b6eafaeb64cccf083cfc172e8ad9be1aa12c0a1c83d6a87a7bd699fa6e666c",
+  "text": "Nobody's making a public announcement yet,",
+  "bytes": 39750,
+  "generated": "2026-09-21T23:10:14Z"
+}

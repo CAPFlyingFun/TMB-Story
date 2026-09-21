@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-21e607274e20",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e565d36a90234e5410537a731207c39edf00b6b6048787ef322b32d9aea21c60",
+  "text": "Something in her expression softened.",
+  "bytes": 36824,
+  "generated": "2026-09-21T23:10:31Z"
+}

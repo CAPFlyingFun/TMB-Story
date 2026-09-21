@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-a2f1b1827870",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d8f3e8ff2d695eea3f2fcfa85958a822cefb94bb132fd5536d8d53367c528c1f",
+  "text": "Safe? You're the one leaving and going outside.",
+  "bytes": 44347,
+  "generated": "2026-09-21T23:10:30Z"
+}

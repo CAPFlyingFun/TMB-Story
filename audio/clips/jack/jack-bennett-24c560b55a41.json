@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-24c560b55a41",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4a9de0e84430e98711f08d08592bf2b2cab5af8a801cab5c2ef0aa0ad42170bf",
+  "text": "Both of you.",
+  "bytes": 13000,
+  "generated": "2026-09-21T23:10:31Z"
+}
