@@ -8,9 +8,9 @@ with `python3 scripts/render-cue-sheet.py 1`.
 
 | | |
 |---|---|
-| Playback events | **35** |
-| Unique assets | **20** (0 still to generate) |
-| Chapter runtime as it plays today | 8:17 |
+| Playback events | **34** |
+| Unique assets | **19** (0 still to generate) |
+| Chapter runtime as it plays today | 7:57 |
 | Voice clips regenerated for this | **none** |
 
 Events outnumber assets because sounds are reused: `sfx_access_denied_tone` x2, `sfx_alert_warning_hit` x2, `sfx_chair_roll_slow` x2, `sfx_console_tone_soft` x2, `sfx_footsteps_sarah_sneakers` x2, `sfx_intercom_open` x2, `sfx_keyboard_typing_short` x9, `sfx_system_notify_soft` x2.
@@ -56,14 +56,14 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_console_tone_soft` |
 | Category | interface (sfx layer) |
-| Anchor | segment order 4 · clip `narrator-7942982ea850` · occurrence 1 |
+| Anchor | segment order 4 · clip `narrator-1de8e47c4e66` · occurrence 1 |
 | Timing | before |
 | Gain | 0.07 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~0:47 |
 
-**Manuscript:** Narrator — “A warning tone chirped. Jack shifted but did not wake. A second tone followed, louder than the first, and then the entire console erupted with alarms.”
+**Manuscript:** Narrator — “A warning tone chirped from Jack's console. He shifted but did not wake. A second tone followed, louder than the first, and the diagnostic display flashed amber.”
 
 **Why:** The listener hears the chirp, then the narrator says a warning tone chirped. Putting it first makes the sound the event and the narration the confirmation, which is how the scene actually happens to Jack.
 
@@ -75,37 +75,18 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_console_tone_soft` |
 | Category | interface (sfx layer) |
-| Anchor | segment order 4 · clip `narrator-7942982ea850` · occurrence 1 |
+| Anchor | segment order 4 · clip `narrator-1de8e47c4e66` · occurrence 1 |
 | Timing | during +2600ms |
 | Gain | 0.07 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
 | Approx. review time | ~0:47 |
 
-**Manuscript:** Narrator — “A warning tone chirped. Jack shifted but did not wake. A second tone followed, louder than the first, and then the entire console erupted with alarms.”
+**Manuscript:** Narrator — “A warning tone chirped from Jack's console. He shifted but did not wake. A second tone followed, louder than the first, and the diagnostic display flashed amber.”
 
 **Why:** The same asset, louder, because the manuscript says the second tone was louder than the first. One generated sound covers both, and the escalation is done with gain rather than with a second file.
 
 **Prompt:** `A two-tone electronic blip from a laboratory console, microphone close to the speaker. Two rounded mid-range notes with a clean decay, synthetic and warm rather than piercing, sounding once and not repeating. Filling the frame, recorded at a strong present level, with a little room reflection. No alarm, no siren, no voices, no music.`
-
-### `ch01-012-console-erupts`
-
-| | |
-|---|---|
-| Asset | `sfx_console_alarm_erupt` |
-| Category | alarm (sfx layer) |
-| Anchor | segment order 4 · clip `narrator-7942982ea850` · occurrence 1 |
-| Timing | after |
-| Gain | 0.01 |
-| Duration requested | 3s |
-| Reusable in Godot | yes |
-| Approx. review time | ~0:47 |
-
-**Manuscript:** Narrator — “A warning tone chirped. Jack shifted but did not wake. A second tone followed, louder than the first, and then the entire console erupted with alarms.”
-
-**Why:** The console erupting is the chapter's inciting sound. It lands in the gap between that narration and the TOMBS warning, so the machine voice arrives out of an alarm that is already going. EMPHASIS DROPPED TO 0 on 2026-09-19. The +6.0/+8.3 here were raising the one sound Joshua said he could not hear the narrator past, and they were chosen when the mix was placed by RMS -- which reads this asset 3 to 6 dB quieter than the ear does. With loudness measured properly the category target is already where this moment should sit.
-
-**Prompt:** `A laboratory console suddenly erupting into full alarm. Several electronic alert tones firing at once and overlapping into an urgent layered warning, sharp onset, hard and synthetic, with a short tail of room reflection. No siren sweep, no voices, no music, no explosion.`
 
 ### `ch01-013-alarm-bed`
 
@@ -113,7 +94,7 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `amb_console_alarm_bed` |
 | Category | alarm (sfx layer) |
-| Anchor | segment order 4 · clip `narrator-7942982ea850` · occurrence 1 |
+| Anchor | segment order 4 · clip `narrator-1de8e47c4e66` · occurrence 1 |
 | Timing | after |
 | Sustain | loops to segment order 19 |
 | Gain | 0.01 |
@@ -122,7 +103,7 @@ anchor to its stop anchor and loops underneath.
 | Reusable in Godot | yes |
 | Approx. review time | ~0:47 |
 
-**Manuscript:** Narrator — “A warning tone chirped. Jack shifted but did not wake. A second tone followed, louder than the first, and then the entire console erupted with alarms.”
+**Manuscript:** Narrator — “A warning tone chirped from Jack's console. He shifted but did not wake. A second tone followed, louder than the first, and the diagnostic display flashed amber.”
 
 **Why:** The alarm does not stop when the sentence does -- the manuscript has the warning repeating and a second alarm sounding later. A low looping bed under the opening carries that, ducks hard beneath speech, and fades out after 'That's impossible', which is where the scene stops shouting and starts being strange. GAIN 0.2 -> 0.15: Joshua's instruction: turn the alarm bed down. EMPHASIS DROPPED TO 0 on 2026-09-19. The +6.0/+8.3 here were raising the one sound Joshua said he could not hear the narrator past, and they were chosen when the mix was placed by RMS -- which reads this asset 3 to 6 dB quieter than the ear does. With loudness measured properly the category target is already where this moment should sit.
 
@@ -139,7 +120,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.05 |
 | Duration requested | 2s |
 | Reusable in Godot | yes |
-| Approx. review time | ~0:59 |
+| Approx. review time | ~0:48 |
 
 **Manuscript:** Narrator — “Jack jerked awake so quickly that his chair rolled backward and nearly struck another workstation.”
 
@@ -158,7 +139,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~1:13 |
+| Approx. review time | ~1:01 |
 
 **Manuscript:** Narrator — “Several windows were opening and closing on their own. Lines of commands streamed across one side of the display faster than he could read them. Jack grabbed the keyboard and opened the network monitor.”
 
@@ -172,14 +153,14 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_alert_warning_hit` |
 | Category | alarm (sfx layer) |
-| Anchor | segment order 15 · clip `narrator-06cb6e60aafc` · occurrence 1 |
+| Anchor | segment order 15 · clip `narrator-5290a9122d0f` · occurrence 1 |
 | Timing | during +2300ms |
 | Gain | 0.02 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~1:35 |
+| Approx. review time | ~1:23 |
 
-**Manuscript:** Narrator — “He refreshed the display, but the connection was gone. Another alarm sounded and a red warning filled the center of his screen.”
+**Manuscript:** Narrator — “He refreshed the display, but the connection was gone. Another warning tone sounded from the console and a red message filled the center of his screen.”
 
 **Why:** One sharp hit on 'Another alarm sounded'. Distinct from the opening eruption: this is the system finding something new, not the system panicking.
 
@@ -196,7 +177,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~1:47 |
+| Approx. review time | ~1:27 |
 
 **Manuscript:** Narrator — “Jack entered a command and pulled up the laboratory access logs. Nothing looked unusual. He tried another search and got the same result.”
 
@@ -215,7 +196,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.03 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~1:57 |
+| Approx. review time | ~1:38 |
 
 **Manuscript:** Narrator — “The system beeped, and a directory opened by itself. Jack stopped typing when he recognized the folder.”
 
@@ -234,7 +215,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.07 |
 | Duration requested | 2s |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:07 |
+| Approx. review time | ~1:48 |
 
 **Manuscript:** Narrator — “He immediately locked the terminal. The screen went black for three seconds, then came back on and reopened the same directory.”
 
@@ -253,7 +234,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.04 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:07 |
+| Approx. review time | ~1:48 |
 
 **Manuscript:** Narrator — “He immediately locked the terminal. The screen went black for three seconds, then came back on and reopened the same directory.”
 
@@ -272,7 +253,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.05 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:20 |
+| Approx. review time | ~2:01 |
 
 **Manuscript:** Jack Bennett — “Sarah?”
 
@@ -293,7 +274,7 @@ anchor to its stop anchor and loops underneath.
 | Fades | in 200ms · out 600ms |
 | Duration requested | 10s, looping |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:20 |
+| Approx. review time | ~2:01 |
 
 **Manuscript:** Jack Bennett — “Sarah?”
 
@@ -312,7 +293,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.01 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:21 |
+| Approx. review time | ~2:02 |
 
 **Manuscript:** Narrator — “Static answered him.”
 
@@ -331,7 +312,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.05 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~2:23 |
+| Approx. review time | ~2:04 |
 
 **Manuscript:** Narrator — “Jack tapped the button again.”
 
@@ -350,7 +331,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.03 |
 | Duration requested | 1s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:06 |
+| Approx. review time | ~2:46 |
 
 **Manuscript:** Narrator — “Jack released the intercom and looked back at the monitor. The TOMBS directory was still open.”
 
@@ -369,7 +350,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.03 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:19 |
+| Approx. review time | ~3:00 |
 
 **Manuscript:** TOMBS / settlement systems — “Boundary control.”
 
@@ -388,7 +369,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.02 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:22 |
+| Approx. review time | ~3:02 |
 
 **Manuscript:** Narrator — “He reached for the keyboard just as the laboratory door slid open behind him.”
 
@@ -407,7 +388,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.15 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:26 |
+| Approx. review time | ~3:07 |
 
 **Manuscript:** Narrator — “Sarah Bennett stepped inside with a tablet tucked beneath one arm. She glanced from Jack to the computer.”
 
@@ -426,7 +407,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.15 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:53 |
+| Approx. review time | ~3:34 |
 
 **Manuscript:** Narrator — “Jack pointed toward the monitor as she walked over.”
 
@@ -445,7 +426,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.04 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:07 |
+| Approx. review time | ~4:47 |
 
 **Manuscript:** Narrator — “She pulled another chair beside him and nudged his out of the way.”
 
@@ -464,7 +445,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.04 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:21 |
+| Approx. review time | ~5:02 |
 
 **Manuscript:** Narrator — “Jack rolled sideways to give her room.”
 
@@ -483,7 +464,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:24 |
+| Approx. review time | ~5:04 |
 
 **Manuscript:** Narrator — “Sarah immediately started typing.”
 
@@ -502,7 +483,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:32 |
+| Approx. review time | ~5:13 |
 
 **Manuscript:** Narrator — “Sarah opened the connection history.”
 
@@ -521,7 +502,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:45 |
+| Approx. review time | ~5:26 |
 
 **Manuscript:** Narrator — “Jack watched as Sarah opened another window and began digging through the security logs.”
 
@@ -540,7 +521,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~6:21 |
+| Approx. review time | ~6:02 |
 
 **Manuscript:** Narrator — “Sarah kept typing.”
 
@@ -554,14 +535,14 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_keyboard_typing_short` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 151 · clip `narrator-668b2dc69db1` · occurrence 1 |
+| Anchor | segment order 151 · clip `narrator-75a8844f5b06` · occurrence 1 |
 | Timing | during +200ms |
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:05 |
+| Approx. review time | ~6:46 |
 
-**Manuscript:** Narrator — “Sarah continued typing.”
+**Manuscript:** Narrator — “Sarah returned to the keyboard.”
 
 **Why:** “Sarah continued typing.” Re-anchored on 2026-09-18 when Joshua's approved manuscript correction changed that line: the text changed, so the clip's identity changed, and this is the one case where an anchor is SUPPOSED to be edited. Validation caught it rather than letting the cue land somewhere plausible.
 
@@ -578,7 +559,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.02 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:09 |
+| Approx. review time | ~6:50 |
 
 **Manuscript:** Narrator — “A new warning tone interrupted them. Both turned toward the main console as another message appeared.”
 
@@ -598,7 +579,7 @@ anchor to its stop anchor and loops underneath.
 | Fades | in 4000ms · out -ms |
 | Duration requested | 20s, looping |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:16 |
+| Approx. review time | ~6:56 |
 
 **Manuscript:** TOMBS / settlement systems — “Tombs array remote initialization request.”
 
@@ -617,7 +598,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.08 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:32 |
+| Approx. review time | ~7:13 |
 
 **Manuscript:** TOMBS / settlement systems — “Request denied.”
 
@@ -636,7 +617,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.08 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:35 |
+| Approx. review time | ~7:16 |
 
 **Manuscript:** TOMBS / settlement systems — “Request denied.”
 
@@ -655,7 +636,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:41 |
+| Approx. review time | ~7:22 |
 
 **Manuscript:** Narrator — “He entered his administrator credentials, but a new message appeared before he could issue another command.”
 
@@ -674,7 +655,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.08 |
 | Duration requested | 2s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:47 |
+| Approx. review time | ~7:28 |
 
 **Manuscript:** TOMBS / settlement systems — “Access revoked.”
 
@@ -693,7 +674,7 @@ anchor to its stop anchor and loops underneath.
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~8:00 |
+| Approx. review time | ~7:41 |
 
 **Manuscript:** Narrator — “Jack tried his credentials again.”
 
@@ -714,7 +695,6 @@ anchor to its stop anchor and loops underneath.
 | `sfx_alert_warning_hit` | alarm | no | 1.5 | 2 | yes | cached |
 | `sfx_chair_roll_fast` | foley | no | 2 | 1 | yes | cached |
 | `sfx_chair_roll_slow` | foley | no | 2.5 | 2 | yes | cached |
-| `sfx_console_alarm_erupt` | alarm | no | 3 | 1 | yes | cached |
 | `sfx_console_tone_soft` | interface | no | 1.5 | 2 | yes | cached |
 | `sfx_equipment_power_up_soft` | system | no | 2.5 | 1 | yes | cached |
 | `sfx_footsteps_sarah_sneakers` | foley | no | 3 | 2 | yes | cached |
@@ -726,5 +706,5 @@ anchor to its stop anchor and loops underneath.
 | `sfx_system_notify_soft` | interface | no | 1.5 | 2 | yes | cached |
 | `sfx_terminal_lock_engage` | interface | no | 2 | 1 | yes | cached |
 
-20 of 20 are reusable in Godot. The game decides when each one plays; this cue
+19 of 19 are reusable in Godot. The game decides when each one plays; this cue
 sheet only decides when the audiobook plays it.

@@ -36,27 +36,6 @@
       "gain": 0.16
     },
     {
-      "cueId": "ch03-006-sirens-wail",
-      "asset": "amb_alarm_pulse",
-      "anchor": {
-        "clipId": "narrator-59502f926e4e",
-        "occurrence": 1
-      },
-      "timing": "before",
-      "emphasisDb": -20.0,
-      "fadeInMs": 2500,
-      "fadeOutMs": 1500,
-      "sustain": {
-        "until": {
-          "clipId": "sarah-bennett-629f5e5193c0",
-          "occurrence": 1
-        },
-        "timing": "after"
-      },
-      "why": "Civil sirens across the settlement, heard indoors. Procedural rather than recorded because the recorded one did not loop cleanly -- it was even for 5.5 of its 12 seconds and announced its own seam every time it wrapped. This one closes its phase exactly at 12 s. EMPHASIS -4.4 dB: Joshua asked for the sirens 40% quieter, and only the sirens, so it is a per-cue nudge rather than a move of the whole alarm category, which would have taken the console alarm bed he tuned by ear down with it. LEVEL -10 dB and the high end filtered away: Joshua heard it as beside them rather than outside. Distance is both, not either. LEVEL -18 dB total: still too loud at -10, so another 60% off. LEVEL: -4.4 read as too loud, -10 still too loud, -18 vanished entirely. -14 bisects the last two. A siren is a TONE, and a tone carries far further than broadband noise at the same RMS, which is why the category target alone kept missing it.",
-      "gain": 0.003
-    },
-    {
       "cueId": "ch03-010-jack-typing",
       "asset": "sfx_keyboard_typing_short",
       "anchor": {
@@ -81,28 +60,6 @@
       "why": "Sarah at the secondary console, working the interrupt."
     },
     {
-      "cueId": "ch03-024-sirens-changed-pitch",
-      "asset": "amb_alarm_pulse_fast",
-      "anchor": {
-        "clipId": "narrator-f252c126c3eb",
-        "occurrence": 1
-      },
-      "timing": "during",
-      "offsetMs": 1200,
-      "emphasisDb": -20.0,
-      "fadeInMs": 1200,
-      "fadeOutMs": 2000,
-      "sustain": {
-        "until": {
-          "clipId": "narrator-22150c29c9a0",
-          "occurrence": 1
-        },
-        "timing": "after"
-      },
-      "why": "\"...the emergency sirens outside changed pitch.\" They did not: the same siren kept playing under the line that said it had changed, which Joshua caught. The first pattern stops on the previous line and this one comes in 1.2 s into the sentence, under the words themselves. Higher and faster, so it reads as the town escalating rather than as a different recording. LEVEL -10 dB and the high end filtered away: Joshua heard it as beside them rather than outside. Distance is both, not either. LEVEL -18 dB total: still too loud at -10, so another 60% off. LEVEL: -4.4 read as too loud, -10 still too loud, -18 vanished entirely. -14 bisects the last two. A siren is a TONE, and a tone carries far further than broadband noise at the same RMS, which is why the category target alone kept missing it.",
-      "gain": 0.003
-    },
-    {
       "cueId": "ch03-030-building-shake",
       "asset": "sfx_building_shake",
       "anchor": {
@@ -117,7 +74,7 @@
       "cueId": "ch03-040-second-vibration",
       "asset": "sfx_building_shake",
       "anchor": {
-        "clipId": "narrator-f252c126c3eb",
+        "clipId": "narrator-167649217e77",
         "occurrence": 1
       },
       "timing": "before",
@@ -128,7 +85,7 @@
       "cueId": "ch03-050-scale-locked",
       "asset": "sfx_alert_warning_hit",
       "anchor": {
-        "clipId": "narrator-f252c126c3eb",
+        "clipId": "narrator-167649217e77",
         "occurrence": 1
       },
       "timing": "after",
@@ -152,7 +109,7 @@
       "cueId": "ch03-070-event-return",
       "asset": "sfx_boundary_event_return",
       "anchor": {
-        "clipId": "narrator-3057d4470777",
+        "clipId": "narrator-9ac25b040210",
         "occurrence": 1
       },
       "timing": "before",
@@ -161,31 +118,10 @@
       "emphasisDb": 6.0
     },
     {
-      "cueId": "ch03-075-alarms-screaming",
-      "asset": "amb_console_alarm_bed",
-      "anchor": {
-        "clipId": "narrator-3057d4470777",
-        "occurrence": 1
-      },
-      "timing": "after",
-      "gain": 0.013,
-      "fadeInMs": 200,
-      "fadeOutMs": 2000,
-      "sustain": {
-        "until": {
-          "clipId": "narrator-22150c29c9a0",
-          "occurrence": 1
-        },
-        "timing": "after"
-      },
-      "why": "Reused. The alarms run from the landing to the sentence that stops them, and their stopping is what leaves the silence the scene needs. EMPHASIS DROPPED TO 0 on 2026-09-19. The +6.0/+8.3 here were raising the one sound Joshua said he could not hear the narrator past, and they were chosen when the mix was placed by RMS -- which reads this asset 3 to 6 dB quieter than the ear does. With loudness measured properly the category target is already where this moment should sit.",
-      "emphasisDb": 0.0
-    },
-    {
       "cueId": "ch03-080-lab-after",
       "asset": "amb_computer_lab",
       "anchor": {
-        "clipId": "narrator-22150c29c9a0",
+        "clipId": "narrator-4ede4886737f",
         "occurrence": 1
       },
       "timing": "after",
@@ -273,18 +209,6 @@
       "gain": 0.14
     },
     {
-      "cueId": "ch03-119-sirens-winddown",
-      "asset": "sfx_siren_winddown",
-      "anchor": {
-        "clipId": "narrator-223aa91e6a75",
-        "occurrence": 1
-      },
-      "timing": "before",
-      "emphasisDb": 6.0,
-      "why": "On 'He looked outside.' -- the same instant the forest bed comes in. The sirens have been distant all chapter; here the attention goes through the glass and they are briefly THERE, louder on purpose for a few seconds, and then they wind down and fade out completely. What is left is the world, which is the point of the scene: the last human sound gives way and the listener is alone with something enormous. Joshua asked for exactly this shape -- louder for a few seconds, then winding out to let silence and the background take over. EMPHASIS +6 dB: at 0 it sat 23 dB under the narration, which is not 'louder on purpose'. It is meant to be the one moment the sirens are close.",
-      "gain": 0.034
-    },
-    {
       "cueId": "ch03-120-camera-switch",
       "asset": "sfx_system_notify_soft",
       "anchor": {
@@ -331,6 +255,28 @@
       "offsetMs": 1000,
       "gain": 0.029,
       "why": "Reused. One final record remains, and the machine reports the scale factor as calmly as it reported everything else."
+    }
+  ],
+  "_removed": [
+    {
+      "cueId": "ch03-006-sirens-wail",
+      "asset": "amb_alarm_pulse",
+      "why": "Removed 2026-09-21. THE SETTLEMENT-WIDE SIREN IS NO LONGER CANON. In the revised manuscript Jack tells Lena to keep the laboratory isolated and not sound a settlement alarm, and nearly five hundred people sleep through the activation. A siren outside the window contradicts the line that follows it. Local console warning tones stay; they are the lab's own and the revised text keeps them."
+    },
+    {
+      "cueId": "ch03-024-sirens-changed-pitch",
+      "asset": "amb_alarm_pulse_fast",
+      "why": "Removed 2026-09-21. THE SETTLEMENT-WIDE SIREN IS NO LONGER CANON. In the revised manuscript Jack tells Lena to keep the laboratory isolated and not sound a settlement alarm, and nearly five hundred people sleep through the activation. A siren outside the window contradicts the line that follows it. Local console warning tones stay; they are the lab's own and the revised text keeps them."
+    },
+    {
+      "cueId": "ch03-119-sirens-winddown",
+      "asset": "sfx_siren_winddown",
+      "why": "Removed 2026-09-21. THE SETTLEMENT-WIDE SIREN IS NO LONGER CANON. In the revised manuscript Jack tells Lena to keep the laboratory isolated and not sound a settlement alarm, and nearly five hundred people sleep through the activation. A siren outside the window contradicts the line that follows it. Local console warning tones stay; they are the lab's own and the revised text keeps them."
+    },
+    {
+      "cueId": "ch03-075-alarms-screaming",
+      "asset": "amb_console_alarm_bed",
+      "why": "'Alarms screamed as Jack hit the floor' is now 'Sound returned all at once as Jack hit the floor... Somewhere inside the array chamber, metal rang once and went still.' The alarm bed under the landing was carrying a sentence the revision deleted, and it is the texture that made the aftermath read as an emergency rather than as a silence."
     }
   ]
 }

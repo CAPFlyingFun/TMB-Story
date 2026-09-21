@@ -490,21 +490,21 @@
       "speaker": "narrator",
       "method": "narration",
       "note": "",
-      "displayText": "Another vibration rolled through the floor while the emergency sirens outside changed pitch. Jack's screen flashed.",
-      "ttsText": "Another vibration rolled through the floor while the emergency sirens outside changed pitch. Jack's screen flashed.",
+      "displayText": "Another vibration rolled through the floor. The muted warning tones at the consoles cut off one by one. Jack's screen flashed.",
+      "ttsText": "Another vibration rolled through the floor. The muted warning tones at the consoles cut off one by one. Jack's screen flashed.",
       "paragraph": 11,
       "spanInParagraph": 0,
       "order": 24,
-      "clipId": "narrator-f252c126c3eb",
+      "clipId": "narrator-167649217e77",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
-      "fingerprint": "a8f55c11681c15f4a3db3c07161aa1dd60366306efb9fdb23ab4dc9cfd669ea1",
-      "audio": "audio/clips/narrator/narrator-f252c126c3eb.mp3",
-      "cached": true,
+      "fingerprint": "5908f8461bc378d31f50ad1eae94652096be55279fb10fa5cc4ca362067c2401",
+      "audio": "audio/clips/narrator/narrator-167649217e77.mp3",
+      "cached": false,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
       "startMs": 50056,
-      "endMs": 57840
+      "endMs": 50056
     },
     {
       "speaker": "system",
@@ -523,8 +523,8 @@
       "cached": true,
       "pauseBeforeMs": 380,
       "speakerName": "TOMBS / settlement systems",
-      "startMs": 58220,
-      "endMs": 59500
+      "startMs": 50436,
+      "endMs": 51716
     },
     {
       "speaker": "narrator",
@@ -543,8 +543,8 @@
       "cached": true,
       "pauseBeforeMs": 380,
       "speakerName": "Narrator",
-      "startMs": 59880,
-      "endMs": 61761
+      "startMs": 52096,
+      "endMs": 53976
     },
     {
       "speaker": "sarah-bennett",
@@ -563,8 +563,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 62081,
-      "endMs": 62969
+      "startMs": 54296,
+      "endMs": 55184
     },
     {
       "speaker": "narrator",
@@ -583,8 +583,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 63289,
-      "endMs": 65013
+      "startMs": 55504,
+      "endMs": 57229
     },
     {
       "speaker": "narrator",
@@ -603,8 +603,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 65273,
-      "endMs": 66814
+      "startMs": 57489,
+      "endMs": 59030
     },
     {
       "speaker": "sarah-bennett",
@@ -623,8 +623,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 67134,
-      "endMs": 67709
+      "startMs": 59350,
+      "endMs": 59924
     },
     {
       "speaker": "narrator",
@@ -643,8 +643,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 68029,
-      "endMs": 70406
+      "startMs": 60244,
+      "endMs": 62622
     },
     {
       "speaker": "jack-bennett",
@@ -663,8 +663,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 70726,
-      "endMs": 71954
+      "startMs": 62942,
+      "endMs": 64169
     },
     {
       "speaker": "narrator",
@@ -683,8 +683,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 72274,
-      "endMs": 74625
+      "startMs": 64489,
+      "endMs": 66840
     },
     {
       "speaker": "sarah-bennett",
@@ -703,8 +703,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 74945,
-      "endMs": 75990
+      "startMs": 67160,
+      "endMs": 68205
     },
     {
       "speaker": "narrator",
@@ -723,8 +723,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 76310,
-      "endMs": 80463
+      "startMs": 68525,
+      "endMs": 72679
     },
     {
       "speaker": "narrator",
@@ -743,8 +743,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 80723,
-      "endMs": 82369
+      "startMs": 72939,
+      "endMs": 74584
     },
     {
       "speaker": "sarah-bennett",
@@ -763,8 +763,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 82689,
-      "endMs": 83316
+      "startMs": 74904,
+      "endMs": 75531
     },
     {
       "speaker": "narrator",
@@ -783,8 +783,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 83636,
-      "endMs": 88704
+      "startMs": 75851,
+      "endMs": 80919
     },
     {
       "speaker": "narrator",
@@ -803,8 +803,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 88964,
-      "endMs": 103514
+      "startMs": 81179,
+      "endMs": 95729
     },
     {
       "speaker": "narrator",
@@ -823,8 +823,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 103774,
-      "endMs": 106125
+      "startMs": 95989,
+      "endMs": 98340
     },
     {
       "speaker": "narrator",
@@ -843,8 +843,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 106385,
-      "endMs": 109180
+      "startMs": 98600,
+      "endMs": 101396
     },
     {
       "speaker": "narrator",
@@ -863,28 +863,28 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 109440,
-      "endMs": 111399
+      "startMs": 101656,
+      "endMs": 103615
     },
     {
       "speaker": "narrator",
       "method": "narration",
       "note": "",
-      "displayText": "Sound returned all at once. Alarms screamed as Jack hit the floor and Sarah landed beside him.",
-      "ttsText": "Sound returned all at once. Alarms screamed as Jack hit the floor and Sarah landed beside him.",
+      "displayText": "Sound returned all at once as Jack hit the floor and Sarah landed beside him. Somewhere inside the array chamber, metal rang once and went still.",
+      "ttsText": "Sound returned all at once as Jack hit the floor and Sarah landed beside him. Somewhere inside the array chamber, metal rang once and went still.",
       "paragraph": 24,
       "spanInParagraph": 0,
       "order": 43,
-      "clipId": "narrator-3057d4470777",
+      "clipId": "narrator-9ac25b040210",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
-      "fingerprint": "b01b4c8c8e02d63d66c1d0bee6befc2363a4e8ecb7cdd991261abfef6dbb20c7",
-      "audio": "audio/clips/narrator/narrator-3057d4470777.mp3",
-      "cached": true,
+      "fingerprint": "b46f20a920405760539dbefc45531b9af1ea9acffc3c5d098b624f19c7b6ca1f",
+      "audio": "audio/clips/narrator/narrator-9ac25b040210.mp3",
+      "cached": false,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 111659,
-      "endMs": 117850
+      "startMs": 103875,
+      "endMs": 103875
     },
     {
       "speaker": "jack-bennett",
@@ -903,8 +903,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 118170,
-      "endMs": 118849
+      "startMs": 104195,
+      "endMs": 104874
     },
     {
       "speaker": "narrator",
@@ -923,8 +923,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 119169,
-      "endMs": 120998
+      "startMs": 105194,
+      "endMs": 107022
     },
     {
       "speaker": "jack-bennett",
@@ -943,8 +943,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 121318,
-      "endMs": 122311
+      "startMs": 107342,
+      "endMs": 108335
     },
     {
       "speaker": "narrator",
@@ -963,8 +963,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 122631,
-      "endMs": 124590
+      "startMs": 108655,
+      "endMs": 110614
     },
     {
       "speaker": "sarah-bennett",
@@ -983,8 +983,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 124910,
-      "endMs": 126451
+      "startMs": 110934,
+      "endMs": 112476
     },
     {
       "speaker": "narrator",
@@ -1003,8 +1003,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 126771,
-      "endMs": 128835
+      "startMs": 112796,
+      "endMs": 114859
     },
     {
       "speaker": "jack-bennett",
@@ -1023,8 +1023,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 129155,
-      "endMs": 130043
+      "startMs": 115179,
+      "endMs": 116067
     },
     {
       "speaker": "narrator",
@@ -1043,8 +1043,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 130363,
-      "endMs": 132844
+      "startMs": 116387,
+      "endMs": 118869
     },
     {
       "speaker": "sarah-bennett",
@@ -1063,8 +1063,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 133164,
-      "endMs": 134209
+      "startMs": 119189,
+      "endMs": 120234
     },
     {
       "speaker": "narrator",
@@ -1083,8 +1083,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 134529,
-      "endMs": 136227
+      "startMs": 120554,
+      "endMs": 122252
     },
     {
       "speaker": "jack-bennett",
@@ -1103,8 +1103,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 136547,
-      "endMs": 137305
+      "startMs": 122572,
+      "endMs": 123329
     },
     {
       "speaker": "narrator",
@@ -1123,8 +1123,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 137625,
-      "endMs": 140577
+      "startMs": 123649,
+      "endMs": 126601
     },
     {
       "speaker": "sarah-bennett",
@@ -1143,8 +1143,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 140897,
-      "endMs": 141602
+      "startMs": 126921,
+      "endMs": 127627
     },
     {
       "speaker": "narrator",
@@ -1163,8 +1163,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 141922,
-      "endMs": 144404
+      "startMs": 127947,
+      "endMs": 130428
     },
     {
       "speaker": "jack-bennett",
@@ -1183,8 +1183,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 144724,
-      "endMs": 145481
+      "startMs": 130748,
+      "endMs": 131506
     },
     {
       "speaker": "narrator",
@@ -1203,8 +1203,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 145801,
-      "endMs": 147499
+      "startMs": 131826,
+      "endMs": 133524
     },
     {
       "speaker": "sarah-bennett",
@@ -1223,28 +1223,28 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 147819,
-      "endMs": 148577
+      "startMs": 133844,
+      "endMs": 134601
     },
     {
       "speaker": "narrator",
       "method": "narration",
       "note": "",
-      "displayText": "The alarms stopped, leaving an unsettling silence in the laboratory. Jack slowly stood and looked around. Nothing appeared different. The consoles were intact, the TOMBS Array had stopped, and even the emergency lighting had returned to normal.",
-      "ttsText": "The alarms stopped, leaving an unsettling silence in the laboratory. Jack slowly stood and looked around. Nothing appeared different. The consoles were intact, the TOMBS Array had stopped, and even the emergency lighting had returned to normal.",
+      "displayText": "The laboratory settled into an unsettling silence. Jack slowly stood and looked around. Nothing appeared different. The consoles were intact, the TOMBS Array had stopped, and even the emergency lighting had returned to normal.",
+      "ttsText": "The laboratory settled into an unsettling silence. Jack slowly stood and looked around. Nothing appeared different. The consoles were intact, the TOMBS Array had stopped, and even the emergency lighting had returned to normal.",
       "paragraph": 33,
       "spanInParagraph": 0,
       "order": 61,
-      "clipId": "narrator-22150c29c9a0",
+      "clipId": "narrator-4ede4886737f",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
-      "fingerprint": "5a3e9462ee115cbb44b49e7ce7118a3ed0da2487057788b1f906cc51f4c93bad",
-      "audio": "audio/clips/narrator/narrator-22150c29c9a0.mp3",
-      "cached": true,
+      "fingerprint": "583793aa05ab9914b478f8dc9bee881a9aa15b9140ba8a5a67b44248405152d6",
+      "audio": "audio/clips/narrator/narrator-4ede4886737f.mp3",
+      "cached": false,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 148897,
-      "endMs": 165223
+      "startMs": 134921,
+      "endMs": 134921
     },
     {
       "speaker": "narrator",
@@ -1263,8 +1263,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 165483,
-      "endMs": 168383
+      "startMs": 135181,
+      "endMs": 138081
     },
     {
       "speaker": "sarah-bennett",
@@ -1283,8 +1283,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 168703,
-      "endMs": 169696
+      "startMs": 138401,
+      "endMs": 139393
     },
     {
       "speaker": "narrator",
@@ -1303,8 +1303,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 170016,
-      "endMs": 179080
+      "startMs": 139713,
+      "endMs": 148778
     },
     {
       "speaker": "jack-bennett",
@@ -1323,8 +1323,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 179400,
-      "endMs": 180706
+      "startMs": 149098,
+      "endMs": 150404
     },
     {
       "speaker": "narrator",
@@ -1343,8 +1343,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 181026,
-      "endMs": 185362
+      "startMs": 150724,
+      "endMs": 155060
     },
     {
       "speaker": "sarah-bennett",
@@ -1363,8 +1363,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 185682,
-      "endMs": 187407
+      "startMs": 155380,
+      "endMs": 157104
     },
     {
       "speaker": "narrator",
@@ -1383,8 +1383,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 187727,
-      "endMs": 189869
+      "startMs": 157424,
+      "endMs": 159567
     },
     {
       "speaker": "jack-bennett",
@@ -1403,8 +1403,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 190189,
-      "endMs": 190868
+      "startMs": 159887,
+      "endMs": 160566
     },
     {
       "speaker": "narrator",
@@ -1423,8 +1423,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 191188,
-      "endMs": 193539
+      "startMs": 160886,
+      "endMs": 163237
     },
     {
       "speaker": "jack-bennett",
@@ -1443,8 +1443,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 193859,
-      "endMs": 195322
+      "startMs": 163557,
+      "endMs": 165020
     },
     {
       "speaker": "narrator",
@@ -1463,8 +1463,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 195642,
-      "endMs": 198071
+      "startMs": 165340,
+      "endMs": 167769
     },
     {
       "speaker": "sarah-bennett",
@@ -1483,8 +1483,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 198391,
-      "endMs": 199488
+      "startMs": 168089,
+      "endMs": 169186
     },
     {
       "speaker": "narrator",
@@ -1503,8 +1503,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 199808,
-      "endMs": 216213
+      "startMs": 169506,
+      "endMs": 185911
     },
     {
       "speaker": "narrator",
@@ -1523,8 +1523,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 216473,
-      "endMs": 220627
+      "startMs": 186171,
+      "endMs": 190324
     },
     {
       "speaker": "narrator",
@@ -1543,8 +1543,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 220887,
-      "endMs": 223603
+      "startMs": 190584,
+      "endMs": 193301
     },
     {
       "speaker": "sarah-bennett",
@@ -1563,8 +1563,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 223923,
-      "endMs": 224602
+      "startMs": 193621,
+      "endMs": 194300
     },
     {
       "speaker": "jack-bennett",
@@ -1583,8 +1583,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 225022,
-      "endMs": 226616
+      "startMs": 194720,
+      "endMs": 196314
     },
     {
       "speaker": "narrator",
@@ -1603,8 +1603,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 226936,
-      "endMs": 228817
+      "startMs": 196634,
+      "endMs": 198515
     },
     {
       "speaker": "jack-bennett",
@@ -1623,8 +1623,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 229137,
-      "endMs": 231200
+      "startMs": 198835,
+      "endMs": 200898
     },
     {
       "speaker": "narrator",
@@ -1643,8 +1643,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 231520,
-      "endMs": 233767
+      "startMs": 201218,
+      "endMs": 203465
     },
     {
       "speaker": "jack-bennett",
@@ -1663,8 +1663,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 234087,
-      "endMs": 234949
+      "startMs": 203785,
+      "endMs": 204647
     },
     {
       "speaker": "narrator",
@@ -1683,8 +1683,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 235269,
-      "endMs": 242844
+      "startMs": 204967,
+      "endMs": 212542
     },
     {
       "speaker": "lena-ortiz",
@@ -1703,8 +1703,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 243164,
-      "endMs": 245045
+      "startMs": 212862,
+      "endMs": 214743
     },
     {
       "speaker": "narrator",
@@ -1723,8 +1723,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 245365,
-      "endMs": 247063
+      "startMs": 215063,
+      "endMs": 216761
     },
     {
       "speaker": "jack-bennett",
@@ -1743,8 +1743,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 247383,
-      "endMs": 248141
+      "startMs": 217081,
+      "endMs": 217839
     },
     {
       "speaker": "narrator",
@@ -1763,8 +1763,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 248461,
-      "endMs": 250237
+      "startMs": 218159,
+      "endMs": 219935
     },
     {
       "speaker": "lena-ortiz",
@@ -1783,8 +1783,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 250557,
-      "endMs": 251837
+      "startMs": 220255,
+      "endMs": 221535
     },
     {
       "speaker": "narrator",
@@ -1803,8 +1803,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 252157,
-      "endMs": 254508
+      "startMs": 221855,
+      "endMs": 224206
     },
     {
       "speaker": "jack-bennett",
@@ -1823,8 +1823,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 254828,
-      "endMs": 256239
+      "startMs": 224526,
+      "endMs": 225937
     },
     {
       "speaker": "narrator",
@@ -1843,8 +1843,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 256559,
-      "endMs": 259824
+      "startMs": 226257,
+      "endMs": 229522
     },
     {
       "speaker": "lena-ortiz",
@@ -1863,8 +1863,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 260144,
-      "endMs": 265316
+      "startMs": 229842,
+      "endMs": 235014
     },
     {
       "speaker": "narrator",
@@ -1883,8 +1883,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 265636,
-      "endMs": 268118
+      "startMs": 235334,
+      "endMs": 237816
     },
     {
       "speaker": "jack-bennett",
@@ -1903,8 +1903,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 268438,
-      "endMs": 269300
+      "startMs": 238136,
+      "endMs": 238998
     },
     {
       "speaker": "narrator",
@@ -1923,8 +1923,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 269620,
-      "endMs": 270978
+      "startMs": 239318,
+      "endMs": 240676
     },
     {
       "speaker": "lena-ortiz",
@@ -1943,8 +1943,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 271298,
-      "endMs": 274511
+      "startMs": 240996,
+      "endMs": 244209
     },
     {
       "speaker": "narrator",
@@ -1963,8 +1963,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 274831,
-      "endMs": 277026
+      "startMs": 244529,
+      "endMs": 246724
     },
     {
       "speaker": "jack-bennett",
@@ -1983,8 +1983,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 277346,
-      "endMs": 278443
+      "startMs": 247044,
+      "endMs": 248141
     },
     {
       "speaker": "narrator",
@@ -2003,8 +2003,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 278763,
-      "endMs": 280121
+      "startMs": 248461,
+      "endMs": 249819
     },
     {
       "speaker": "lena-ortiz",
@@ -2023,8 +2023,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 280441,
-      "endMs": 281303
+      "startMs": 250139,
+      "endMs": 251001
     },
     {
       "speaker": "narrator",
@@ -2043,8 +2043,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 281623,
-      "endMs": 283400
+      "startMs": 251321,
+      "endMs": 253098
     },
     {
       "speaker": "jack-bennett",
@@ -2063,8 +2063,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 283720,
-      "endMs": 284425
+      "startMs": 253418,
+      "endMs": 254123
     },
     {
       "speaker": "narrator",
@@ -2083,8 +2083,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 284745,
-      "endMs": 286521
+      "startMs": 254443,
+      "endMs": 256219
     },
     {
       "speaker": "lena-ortiz",
@@ -2103,8 +2103,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 286841,
-      "endMs": 287703
+      "startMs": 256539,
+      "endMs": 257401
     },
     {
       "speaker": "narrator",
@@ -2123,13 +2123,13 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 288023,
-      "endMs": 291236
+      "startMs": 257721,
+      "endMs": 260934
     },
     {
       "speaker": "sarah-bennett",
       "method": "override",
-      "note": "Chapter 3: 'Behind him, Sarah had walked toward a window. \"Jack.\"' She is calling him; he is the name being said, not the one saying it. The line four segments later -- 'Sarah called again from the window. \"Jack.\"' -- was attributed to Sarah correctly, which is what made this one visible: the same word from the same woman twice, once in the wrong voice. Found auditing chapters 2 and 3, 2026-09-20.",
+      "note": "Chapter 3: 'Behind him, Sarah had walked toward a window. \"Jack.\"' She is calling him; he is the name being said, not the one saying it. The line four segments later -- 'Sarah called again from the window. \"Jack.\"' -- was attributed to Sarah correctly, which is what made this one visible: the same word from the same woman twice, once in the wrong voice. Found auditing chapters 2 and 3, 2026-09-20. SCOPED TO CHAPTERS 3 AND 6 on 2026-09-21: the revised Chapter 6 has Sarah say 'Jack.' again in the same shape, and until the scoping existed this one pin was quietly firing in both places. It is right in both, but it was right by luck.",
       "displayText": "Jack.",
       "ttsText": "Jack.",
       "paragraph": 55,
@@ -2143,8 +2143,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 291556,
-      "endMs": 292131
+      "startMs": 261254,
+      "endMs": 261829
     },
     {
       "speaker": "narrator",
@@ -2163,8 +2163,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 292451,
-      "endMs": 294828
+      "startMs": 262149,
+      "endMs": 264526
     },
     {
       "speaker": "jack-bennett",
@@ -2183,8 +2183,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 295148,
-      "endMs": 296846
+      "startMs": 264846,
+      "endMs": 266544
     },
     {
       "speaker": "narrator",
@@ -2203,8 +2203,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 297166,
-      "endMs": 299360
+      "startMs": 266864,
+      "endMs": 269058
     },
     {
       "speaker": "sarah-bennett",
@@ -2223,8 +2223,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 299680,
-      "endMs": 300255
+      "startMs": 269378,
+      "endMs": 269953
     },
     {
       "speaker": "narrator",
@@ -2243,8 +2243,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 300575,
-      "endMs": 302717
+      "startMs": 270273,
+      "endMs": 272415
     },
     {
       "speaker": "jack-bennett",
@@ -2263,8 +2263,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 303037,
-      "endMs": 303847
+      "startMs": 272735,
+      "endMs": 273545
     },
     {
       "speaker": "narrator",
@@ -2283,8 +2283,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 304167,
-      "endMs": 305865
+      "startMs": 273865,
+      "endMs": 275563
     },
     {
       "speaker": "sarah-bennett",
@@ -2303,8 +2303,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 306185,
-      "endMs": 307230
+      "startMs": 275883,
+      "endMs": 276928
     },
     {
       "speaker": "narrator",
@@ -2323,8 +2323,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 307550,
-      "endMs": 313506
+      "startMs": 277248,
+      "endMs": 283204
     },
     {
       "speaker": "narrator",
@@ -2343,8 +2343,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 313766,
-      "endMs": 316143
+      "startMs": 283464,
+      "endMs": 285841
     },
     {
       "speaker": "jack-bennett",
@@ -2363,8 +2363,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 316463,
-      "endMs": 317168
+      "startMs": 286161,
+      "endMs": 286866
     },
     {
       "speaker": "narrator",
@@ -2383,8 +2383,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 317488,
-      "endMs": 319003
+      "startMs": 287186,
+      "endMs": 288701
     },
     {
       "speaker": "narrator",
@@ -2403,8 +2403,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 319263,
-      "endMs": 320778
+      "startMs": 288961,
+      "endMs": 290476
     },
     {
       "speaker": "narrator",
@@ -2423,8 +2423,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 321038,
-      "endMs": 335040
+      "startMs": 290736,
+      "endMs": 304738
     },
     {
       "speaker": "narrator",
@@ -2443,8 +2443,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 335300,
-      "endMs": 338252
+      "startMs": 304998,
+      "endMs": 307950
     },
     {
       "speaker": "narrator",
@@ -2463,8 +2463,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 338512,
-      "endMs": 340863
+      "startMs": 308210,
+      "endMs": 310561
     },
     {
       "speaker": "narrator",
@@ -2483,8 +2483,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 341123,
-      "endMs": 343317
+      "startMs": 310821,
+      "endMs": 313015
     },
     {
       "speaker": "jack-bennett",
@@ -2503,8 +2503,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 343637,
-      "endMs": 344212
+      "startMs": 313335,
+      "endMs": 313910
     },
     {
       "speaker": "narrator",
@@ -2523,8 +2523,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 344532,
-      "endMs": 351141
+      "startMs": 314230,
+      "endMs": 320839
     },
     {
       "speaker": "narrator",
@@ -2543,8 +2543,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 351401,
-      "endMs": 353961
+      "startMs": 321099,
+      "endMs": 323659
     },
     {
       "speaker": "sarah-bennett",
@@ -2563,8 +2563,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 354281,
-      "endMs": 355456
+      "startMs": 323979,
+      "endMs": 325154
     },
     {
       "speaker": "narrator",
@@ -2583,8 +2583,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 355776,
-      "endMs": 371763
+      "startMs": 325474,
+      "endMs": 341461
     },
     {
       "speaker": "narrator",
@@ -2603,8 +2603,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 372023,
-      "endMs": 374165
+      "startMs": 341721,
+      "endMs": 343863
     },
     {
       "speaker": "jack-bennett",
@@ -2623,8 +2623,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 374485,
-      "endMs": 375164
+      "startMs": 344183,
+      "endMs": 344862
     },
     {
       "speaker": "narrator",
@@ -2643,8 +2643,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 375484,
-      "endMs": 377182
+      "startMs": 345182,
+      "endMs": 346880
     },
     {
       "speaker": "sarah-bennett",
@@ -2663,8 +2663,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 377502,
-      "endMs": 378913
+      "startMs": 347200,
+      "endMs": 348611
     },
     {
       "speaker": "narrator",
@@ -2683,8 +2683,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 379233,
-      "endMs": 382420
+      "startMs": 348931,
+      "endMs": 352118
     },
     {
       "speaker": "jack-bennett",
@@ -2703,8 +2703,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 382740,
-      "endMs": 383968
+      "startMs": 352438,
+      "endMs": 353666
     },
     {
       "speaker": "narrator",
@@ -2723,8 +2723,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 384288,
-      "endMs": 401163
+      "startMs": 353986,
+      "endMs": 370861
     },
     {
       "speaker": "narrator",
@@ -2743,8 +2743,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 401423,
-      "endMs": 404610
+      "startMs": 371121,
+      "endMs": 374308
     },
     {
       "speaker": "narrator",
@@ -2763,8 +2763,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 404870,
-      "endMs": 421040
+      "startMs": 374568,
+      "endMs": 390738
     },
     {
       "speaker": "narrator",
@@ -2783,8 +2783,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 421300,
-      "endMs": 423598
+      "startMs": 390998,
+      "endMs": 393296
     },
     {
       "speaker": "sarah-bennett",
@@ -2803,8 +2803,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 423918,
-      "endMs": 425094
+      "startMs": 393616,
+      "endMs": 394792
     },
     {
       "speaker": "jack-bennett",
@@ -2823,8 +2823,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 425514,
-      "endMs": 426742
+      "startMs": 395212,
+      "endMs": 396440
     },
     {
       "speaker": "narrator",
@@ -2843,8 +2843,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 427062,
-      "endMs": 429491
+      "startMs": 396760,
+      "endMs": 399189
     },
     {
       "speaker": "narrator",
@@ -2863,8 +2863,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 429751,
-      "endMs": 444118
+      "startMs": 399449,
+      "endMs": 413816
     },
     {
       "speaker": "narrator",
@@ -2883,8 +2883,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 444378,
-      "endMs": 445737
+      "startMs": 414076,
+      "endMs": 415435
     },
     {
       "speaker": "sarah-bennett",
@@ -2903,8 +2903,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 446057,
-      "endMs": 447467
+      "startMs": 415755,
+      "endMs": 417165
     },
     {
       "speaker": "narrator",
@@ -2923,8 +2923,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 447787,
-      "endMs": 452646
+      "startMs": 417485,
+      "endMs": 422344
     },
     {
       "speaker": "narrator",
@@ -2943,8 +2943,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 452906,
-      "endMs": 463094
+      "startMs": 422604,
+      "endMs": 432792
     },
     {
       "speaker": "sarah-bennett",
@@ -2963,8 +2963,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 463414,
-      "endMs": 464224
+      "startMs": 433112,
+      "endMs": 433922
     },
     {
       "speaker": "narrator",
@@ -2983,8 +2983,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 464544,
-      "endMs": 465902
+      "startMs": 434242,
+      "endMs": 435600
     },
     {
       "speaker": "narrator",
@@ -3003,8 +3003,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 466162,
-      "endMs": 468513
+      "startMs": 435860,
+      "endMs": 438211
     },
     {
       "speaker": "jack-bennett",
@@ -3023,8 +3023,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 468833,
-      "endMs": 470139
+      "startMs": 438531,
+      "endMs": 439837
     },
     {
       "speaker": "narrator",
@@ -3043,8 +3043,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 470459,
-      "endMs": 473855
+      "startMs": 440157,
+      "endMs": 443553
     },
     {
       "speaker": "narrator",
@@ -3063,8 +3063,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 474115,
-      "endMs": 476257
+      "startMs": 443813,
+      "endMs": 445955
     },
     {
       "speaker": "sarah-bennett",
@@ -3083,8 +3083,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 476577,
-      "endMs": 477753
+      "startMs": 446275,
+      "endMs": 447451
     },
     {
       "speaker": "narrator",
@@ -3103,8 +3103,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 478073,
-      "endMs": 482304
+      "startMs": 447771,
+      "endMs": 452002
     },
     {
       "speaker": "narrator",
@@ -3123,8 +3123,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 482564,
-      "endMs": 485516
+      "startMs": 452262,
+      "endMs": 455214
     },
     {
       "speaker": "sarah-bennett",
@@ -3143,8 +3143,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 485836,
-      "endMs": 486724
+      "startMs": 455534,
+      "endMs": 456422
     },
     {
       "speaker": "narrator",
@@ -3163,8 +3163,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 487044,
-      "endMs": 491485
+      "startMs": 456742,
+      "endMs": 461183
     },
     {
       "speaker": "system",
@@ -3183,8 +3183,8 @@
       "cached": true,
       "pauseBeforeMs": 380,
       "speakerName": "TOMBS / settlement systems",
-      "startMs": 491865,
-      "endMs": 493093
+      "startMs": 461563,
+      "endMs": 462791
     },
     {
       "speaker": "narrator",
@@ -3203,8 +3203,8 @@
       "cached": true,
       "pauseBeforeMs": 380,
       "speakerName": "Narrator",
-      "startMs": 493473,
-      "endMs": 495902
+      "startMs": 463171,
+      "endMs": 465600
     },
     {
       "speaker": "narrator",
@@ -3223,8 +3223,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 496162,
-      "endMs": 497939
+      "startMs": 465860,
+      "endMs": 467637
     },
     {
       "speaker": "narrator",
@@ -3243,8 +3243,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 498199,
-      "endMs": 499792
+      "startMs": 467897,
+      "endMs": 469490
     },
     {
       "speaker": "sarah-bennett",
@@ -3263,8 +3263,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 500112,
-      "endMs": 500687
+      "startMs": 469810,
+      "endMs": 470385
     },
     {
       "speaker": "narrator",
@@ -3283,8 +3283,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 501007,
-      "endMs": 515244
+      "startMs": 470705,
+      "endMs": 484942
     },
     {
       "speaker": "narrator",
@@ -3303,8 +3303,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 515504,
-      "endMs": 517515
+      "startMs": 485202,
+      "endMs": 487213
     },
     {
       "speaker": "narrator",
@@ -3323,8 +3323,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 517775,
-      "endMs": 536218
+      "startMs": 487473,
+      "endMs": 505916
     },
     {
       "speaker": "narrator",
@@ -3343,8 +3343,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 536478,
-      "endMs": 538489
+      "startMs": 506176,
+      "endMs": 508187
     },
     {
       "speaker": "sarah-bennett",
@@ -3363,8 +3363,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 538809,
-      "endMs": 540115
+      "startMs": 508507,
+      "endMs": 509813
     },
     {
       "speaker": "narrator",
@@ -3383,8 +3383,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 540435,
-      "endMs": 541898
+      "startMs": 510133,
+      "endMs": 511596
     },
     {
       "speaker": "jack-bennett",
@@ -3403,8 +3403,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 542218,
-      "endMs": 543864
+      "startMs": 511916,
+      "endMs": 513562
     },
     {
       "speaker": "sarah-bennett",
@@ -3423,8 +3423,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 544284,
-      "endMs": 545041
+      "startMs": 513982,
+      "endMs": 514739
     },
     {
       "speaker": "jack-bennett",
@@ -3443,8 +3443,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 545461,
-      "endMs": 546167
+      "startMs": 515159,
+      "endMs": 515864
     },
     {
       "speaker": "sarah-bennett",
@@ -3463,8 +3463,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 546587,
-      "endMs": 547893
+      "startMs": 516284,
+      "endMs": 517591
     },
     {
       "speaker": "jack-bennett",
@@ -3483,8 +3483,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 548313,
-      "endMs": 549018
+      "startMs": 518011,
+      "endMs": 518716
     },
     {
       "speaker": "narrator",
@@ -3503,8 +3503,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 549338,
-      "endMs": 554040
+      "startMs": 519036,
+      "endMs": 523738
     },
     {
       "speaker": "sarah-bennett",
@@ -3523,8 +3523,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 554360,
-      "endMs": 555640
+      "startMs": 524058,
+      "endMs": 525338
     },
     {
       "speaker": "narrator",
@@ -3543,8 +3543,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 555960,
-      "endMs": 573253
+      "startMs": 525658,
+      "endMs": 542951
     },
     {
       "speaker": "narrator",
@@ -3563,8 +3563,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 573513,
-      "endMs": 586757
+      "startMs": 543211,
+      "endMs": 556455
     },
     {
       "speaker": "narrator",
@@ -3583,8 +3583,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 587017,
-      "endMs": 588898
+      "startMs": 556715,
+      "endMs": 558596
     },
     {
       "speaker": "sarah-bennett",
@@ -3603,8 +3603,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 589218,
-      "endMs": 589793
+      "startMs": 558916,
+      "endMs": 559491
     },
     {
       "speaker": "narrator",
@@ -3623,8 +3623,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 590113,
-      "endMs": 595389
+      "startMs": 559811,
+      "endMs": 565087
     },
     {
       "speaker": "narrator",
@@ -3643,8 +3643,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 595649,
-      "endMs": 597243
+      "startMs": 565347,
+      "endMs": 566941
     },
     {
       "speaker": "narrator",
@@ -3663,8 +3663,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 597503,
-      "endMs": 599201
+      "startMs": 567201,
+      "endMs": 568899
     }
   ],
   "cues": [
@@ -3683,23 +3683,6 @@
       "fadeInMs": 4000,
       "fadeOutMs": 2500,
       "stopOrder": 118,
-      "stopTiming": "after"
-    },
-    {
-      "cueId": "ch03-006-sirens-wail",
-      "asset": "amb_alarm_pulse",
-      "category": "alarm",
-      "layer": "sfx",
-      "timing": "before",
-      "order": 0,
-      "gain": 0.003,
-      "loop": true,
-      "audio": "audio/sfx/alarm/amb_alarm_pulse.wav",
-      "cached": true,
-      "why": "Civil sirens across the settlement, heard indoors. Procedural rather than recorded because the recorded one did not loop cleanly -- it was even for 5.5 of its 12 seconds and announced its own seam every time it wrapped. This one closes its phase exactly at 12 s. EMPHASIS -4.4 dB: Joshua asked for the sirens 40% quieter, and only the sirens, so it is a per-cue nudge rather than a move of the whole alarm category, which would have taken the console alarm bed he tuned by ear down with it. LEVEL -10 dB and the high end filtered away: Joshua heard it as beside them rather than outside. Distance is both, not either. LEVEL -18 dB total: still too loud at -10, so another 60% off. LEVEL: -4.4 read as too loud, -10 still too loud, -18 vanished entirely. -14 bisects the last two. A siren is a TONE, and a tone carries far further than broadband noise at the same RMS, which is why the category target alone kept missing it.",
-      "fadeInMs": 2500,
-      "fadeOutMs": 1500,
-      "stopOrder": 23,
       "stopTiming": "after"
     },
     {
@@ -3742,24 +3725,6 @@
       "audio": "audio/sfx/foley/sfx_building_shake.mp3",
       "cached": true,
       "why": "NEW. The shake arrives before the narration names it, so the listener feels it with Sarah rather than being told about it."
-    },
-    {
-      "cueId": "ch03-024-sirens-changed-pitch",
-      "asset": "amb_alarm_pulse_fast",
-      "category": "alarm",
-      "layer": "sfx",
-      "timing": "during",
-      "order": 24,
-      "gain": 0.003,
-      "loop": true,
-      "audio": "audio/sfx/alarm/amb_alarm_pulse_fast.wav",
-      "cached": true,
-      "why": "\"...the emergency sirens outside changed pitch.\" They did not: the same siren kept playing under the line that said it had changed, which Joshua caught. The first pattern stops on the previous line and this one comes in 1.2 s into the sentence, under the words themselves. Higher and faster, so it reads as the town escalating rather than as a different recording. LEVEL -10 dB and the high end filtered away: Joshua heard it as beside them rather than outside. Distance is both, not either. LEVEL -18 dB total: still too loud at -10, so another 60% off. LEVEL: -4.4 read as too loud, -10 still too loud, -18 vanished entirely. -14 bisects the last two. A siren is a TONE, and a tone carries far further than broadband noise at the same RMS, which is why the category target alone kept missing it.",
-      "offsetMs": 1200,
-      "fadeInMs": 1200,
-      "fadeOutMs": 2000,
-      "stopOrder": 61,
-      "stopTiming": "after"
     },
     {
       "cueId": "ch03-040-second-vibration",
@@ -3813,23 +3778,6 @@
       "audio": "audio/sfx/system/sfx_boundary_event_return.mp3",
       "cached": true,
       "why": "NEW. The other half. The silence between the two is carried by the manifest's own pauses across the four narration segments in between, so the quiet is real rather than printed into a file."
-    },
-    {
-      "cueId": "ch03-075-alarms-screaming",
-      "asset": "amb_console_alarm_bed",
-      "category": "alarm",
-      "layer": "sfx",
-      "timing": "after",
-      "order": 43,
-      "gain": 0.013,
-      "loop": true,
-      "audio": "audio/sfx/alarm/amb_console_alarm_bed.mp3",
-      "cached": true,
-      "why": "Reused. The alarms run from the landing to the sentence that stops them, and their stopping is what leaves the silence the scene needs. EMPHASIS DROPPED TO 0 on 2026-09-19. The +6.0/+8.3 here were raising the one sound Joshua said he could not hear the narrator past, and they were chosen when the mix was placed by RMS -- which reads this asset 3 to 6 dB quieter than the ear does. With loudness measured properly the category target is already where this moment should sit.",
-      "fadeInMs": 200,
-      "fadeOutMs": 2000,
-      "stopOrder": 61,
-      "stopTiming": "after"
     },
     {
       "cueId": "ch03-080-lab-after",
@@ -3907,19 +3855,6 @@
       "fadeOutMs": 6000,
       "stopOrder": 182,
       "stopTiming": "after"
-    },
-    {
-      "cueId": "ch03-119-sirens-winddown",
-      "asset": "sfx_siren_winddown",
-      "category": "alarm",
-      "layer": "sfx",
-      "timing": "before",
-      "order": 119,
-      "gain": 0.034,
-      "loop": false,
-      "audio": "audio/sfx/alarm/sfx_siren_winddown.mp3",
-      "cached": true,
-      "why": "On 'He looked outside.' -- the same instant the forest bed comes in. The sirens have been distant all chapter; here the attention goes through the glass and they are briefly THERE, louder on purpose for a few seconds, and then they wind down and fade out completely. What is left is the world, which is the point of the scene: the last human sound gives way and the listener is alone with something enormous. Joshua asked for exactly this shape -- louder for a few seconds, then winding out to let silence and the background take over. EMPHASIS +6 dB: at 0 it sat 23 dB under the narration, which is not 'louder on purpose'. It is meant to be the one moment the sirens are close."
     },
     {
       "cueId": "ch03-110-camera-feeds",
@@ -4116,9 +4051,9 @@
     }
   },
   "timeline": {
-    "totalMs": 599201,
-    "complete": true,
-    "missingClips": 0,
+    "totalMs": 568899,
+    "complete": false,
+    "missingClips": 3,
     "source": "each segment's pause then its clip; the same sum the exports are built with"
   },
   "exports": {
@@ -4131,191 +4066,7 @@
         "ambience",
         "sfx"
       ],
-      "startMs": [
-        0,
-        2749,
-        4540,
-        6017,
-        7983,
-        10374,
-        11851,
-        14705,
-        17089,
-        19551,
-        20393,
-        23691,
-        24691,
-        27492,
-        28439,
-        31189,
-        32083,
-        38281,
-        39358,
-        42473,
-        43551,
-        45752,
-        46829,
-        48508,
-        50056,
-        58220,
-        59880,
-        62081,
-        63289,
-        65273,
-        67134,
-        68029,
-        70726,
-        72274,
-        74945,
-        76310,
-        80723,
-        82689,
-        83636,
-        88964,
-        103774,
-        106385,
-        109440,
-        111659,
-        118170,
-        119169,
-        121318,
-        122631,
-        124910,
-        126771,
-        129155,
-        130363,
-        133164,
-        134529,
-        136547,
-        137625,
-        140897,
-        141922,
-        144724,
-        145801,
-        147819,
-        148897,
-        165483,
-        168703,
-        170016,
-        179400,
-        181026,
-        185682,
-        187727,
-        190189,
-        191188,
-        193859,
-        195642,
-        198391,
-        199808,
-        216473,
-        220887,
-        223923,
-        225022,
-        226936,
-        229137,
-        231520,
-        234087,
-        235269,
-        243164,
-        245365,
-        247383,
-        248461,
-        250557,
-        252157,
-        254828,
-        256559,
-        260144,
-        265636,
-        268438,
-        269620,
-        271298,
-        274831,
-        277346,
-        278763,
-        280441,
-        281623,
-        283720,
-        284745,
-        286841,
-        288023,
-        291556,
-        292451,
-        295148,
-        297166,
-        299680,
-        300575,
-        303037,
-        304167,
-        306185,
-        307550,
-        313766,
-        316463,
-        317488,
-        319263,
-        321038,
-        335300,
-        338512,
-        341123,
-        343637,
-        344532,
-        351401,
-        354281,
-        355776,
-        372023,
-        374485,
-        375484,
-        377502,
-        379233,
-        382740,
-        384288,
-        401423,
-        404870,
-        421300,
-        423918,
-        425514,
-        427062,
-        429751,
-        444378,
-        446057,
-        447787,
-        452906,
-        463414,
-        464544,
-        466162,
-        468833,
-        470459,
-        474115,
-        476577,
-        478073,
-        482564,
-        485836,
-        487044,
-        491865,
-        493473,
-        496162,
-        498199,
-        500112,
-        501007,
-        515504,
-        517775,
-        536478,
-        538809,
-        540435,
-        542218,
-        544284,
-        545461,
-        546587,
-        548313,
-        549338,
-        554360,
-        555960,
-        573513,
-        587017,
-        589218,
-        590113,
-        595649,
-        597503
-      ],
+      "startMs": null,
       "indexSource": "the manifest timeline, which the mix is built from"
     },
     "voice": {

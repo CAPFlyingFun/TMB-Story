@@ -28,19 +28,586 @@
   "clips": {
     "REVIEW_REQUIRED-28f9c13a10b8": {
       "speaker": "jack-bennett",
-      "note": "Chapter 1, paragraph 26: 'Jack released the intercom and looked back at the monitor. The TOMBS directory was still open. \"Who are you?\"' Jack is the actor of the paragraph; the parser could not see it because the sentence immediately before the quote is about the directory rather than about a person. Reviewed against the manuscript 2026-09-17."
+      "note": "Chapter 1, paragraph 26: 'Jack released the intercom and looked back at the monitor. The TOMBS directory was still open. \"Who are you?\"' Jack is the actor of the paragraph; the parser could not see it because the sentence immediately before the quote is about the directory rather than about a person. Reviewed against the manuscript 2026-09-17.",
+      "chapters": [
+        1
+      ]
     },
     "jack-bennett-90d6c9b3d753": {
       "speaker": "lena-ortiz",
-      "note": "Chapter 2: 'Jack's wrist terminal chirped again. \"Jack? We disconnected you.\"' The terminal is Jack's; the voice coming out of it is Lena's, answering the disconnect she was asked for two lines earlier and which she confirmed with 'Doing it now.' Jack cannot be asking himself whether he is Jack. Caught by Joshua on the audio, 2026-09-20."
+      "note": "Chapter 2: 'Jack's wrist terminal chirped again. \"Jack? We disconnected you.\"' The terminal is Jack's; the voice coming out of it is Lena's, answering the disconnect she was asked for two lines earlier and which she confirmed with 'Doing it now.' Jack cannot be asking himself whether he is Jack. Caught by Joshua on the audio, 2026-09-20.",
+      "chapters": [
+        2
+      ]
     },
     "jack-bennett-2a675d4ecfca": {
       "speaker": "lena-ortiz",
-      "note": "Chapter 3: 'His wrist terminal chirped with an incoming call from island utility control. Jack answered, and Lena's voice burst through it. \"Jack! Jack, answer me!\"' The manuscript names the speaker in the same sentence -- Lena's voice -- and the parser still took Jack, because Jack is the one who ANSWERED. Found auditing chapters 2 and 3 after Joshua caught the chapter 2 one, 2026-09-20."
+      "note": "Chapter 3: 'His wrist terminal chirped with an incoming call from island utility control. Jack answered, and Lena's voice burst through it. \"Jack! Jack, answer me!\"' The manuscript names the speaker in the same sentence -- Lena's voice -- and the parser still took Jack, because Jack is the one who ANSWERED. Found auditing chapters 2 and 3 after Joshua caught the chapter 2 one, 2026-09-20.",
+      "chapters": [
+        3
+      ]
     },
     "jack-bennett-bd45d3e4f5ac": {
       "speaker": "sarah-bennett",
-      "note": "Chapter 3: 'Behind him, Sarah had walked toward a window. \"Jack.\"' She is calling him; he is the name being said, not the one saying it. The line four segments later -- 'Sarah called again from the window. \"Jack.\"' -- was attributed to Sarah correctly, which is what made this one visible: the same word from the same woman twice, once in the wrong voice. Found auditing chapters 2 and 3, 2026-09-20."
+      "note": "Chapter 3: 'Behind him, Sarah had walked toward a window. \"Jack.\"' She is calling him; he is the name being said, not the one saying it. The line four segments later -- 'Sarah called again from the window. \"Jack.\"' -- was attributed to Sarah correctly, which is what made this one visible: the same word from the same woman twice, once in the wrong voice. Found auditing chapters 2 and 3, 2026-09-20. SCOPED TO CHAPTERS 3 AND 6 on 2026-09-21: the revised Chapter 6 has Sarah say 'Jack.' again in the same shape, and until the scoping existed this one pin was quietly firing in both places. It is right in both, but it was right by luck.",
+      "chapters": [
+        3,
+        6
+      ]
+    },
+    "jack-bennett-6d611e695fd8": {
+      "speaker": "lena-ortiz",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        28
+      ],
+      "note": "ch4 order 28: Lena has just stopped moving at her window; the 'Oh.' is hers."
+    },
+    "lena-ortiz-573feb1c7fff": {
+      "speaker": "doctor-mercer",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        50
+      ],
+      "note": "ch4 order 50: She introduces herself in this line. The call moved from Lena to the medical center one paragraph earlier."
+    },
+    "lena-ortiz-1dc54c778f77": {
+      "speaker": "doctor-mercer",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        53
+      ],
+      "note": "ch4 order 53: Her reply to Jack's 'Probably.'"
+    },
+    "lena-ortiz-e6d1baa25db4": {
+      "speaker": "doctor-mercer",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        57
+      ],
+      "note": "ch4 order 57: Her damage report: 'half my overnight staff'."
+    },
+    "sarah-bennett-411943f4cce1": {
+      "speaker": "doctor-mercer",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        71
+      ],
+      "note": "ch4 order 71: She asks Jack to repeat himself; Sarah is not on this call."
+    },
+    "sarah-bennett-adc9547dd1d9": {
+      "speaker": "doctor-mercer",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        74
+      ],
+      "note": "ch4 order 74: Her answer to 'The town got smaller.'"
+    },
+    "REVIEW_REQUIRED-549d330c9eb6": {
+      "speaker": "security-officer",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        94
+      ],
+      "note": "ch4 order 94: 'A man's voice answered.' -- the Unit Twelve officer."
+    },
+    "sarah-bennett-b7ec31474105": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        95
+      ],
+      "note": "ch4 order 95: Jack, who opened the channel, asking the officer what he sees."
+    },
+    "REVIEW_REQUIRED-ad7b569ebb31": {
+      "speaker": "security-officer",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        96
+      ],
+      "note": "ch4 order 96: His answer."
+    },
+    "REVIEW_REQUIRED-c759387ee325": {
+      "speaker": "security-officer",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        98
+      ],
+      "note": "ch4 order 98: 'The officer hesitated' -- the same man, same paragraph."
+    },
+    "jack-bennett-1b69a4d9c64f": {
+      "speaker": "security-officer",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        101
+      ],
+      "note": "ch4 order 101: His answer to Sarah's 'Any movement?'"
+    },
+    "sarah-bennett-54e8e4e47e2a": {
+      "speaker": "security-officer",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        104
+      ],
+      "note": "ch4 order 104: He acknowledges Jack's order to return to town."
+    },
+    "sarah-bennett-1a7f0986b212": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        175
+      ],
+      "note": "ch4 order 175: Jack has just checked the structural sensors; the answer is his."
+    },
+    "lena-ortiz-a6ca7921811e": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        184
+      ],
+      "note": "ch4 order 184: His answer to Sarah's 'Could that be a branch?'"
+    },
+    "REVIEW_REQUIRED-ef0fbf859613": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        11
+      ],
+      "note": "ch5 order 11: Sarah says 'Don't.'; Jack denies saying anything."
+    },
+    "REVIEW_REQUIRED-6b7b8b9f7357": {
+      "speaker": "sarah-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        12
+      ],
+      "note": "ch5 order 12: 'You were about to.' -- her reply."
+    },
+    "sarah-bennett-dc4595902777": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        38
+      ],
+      "note": "ch5 order 38: The middle paragraph of Jack's settlement broadcast, between 'He paused' and Sarah's hand on his arm."
+    },
+    "lena-ortiz-e28e746e6d58": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        65
+      ],
+      "note": "ch5 order 65: 'I told you' -- Jack, after Sarah says she likes Lena."
+    },
+    "lena-ortiz-59ee5c2c4cbe": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        67
+      ],
+      "note": "ch5 order 67: 'I can like two competent people in one night.'"
+    },
+    "lena-ortiz-e3400a0e5f1d": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        102
+      ],
+      "note": "ch5 order 102: Jack's answer to 'Still nothing?'"
+    },
+    "lena-ortiz-211d2b11d647": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        124
+      ],
+      "note": "ch5 order 124: Jack admitting he was going to ask two of Lena's three."
+    },
+    "REVIEW_REQUIRED-c2f89c86dc8c": {
+      "speaker": "security-officer",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        130
+      ],
+      "note": "ch5 order 130: 'One of the security officers remained near the door.'"
+    },
+    "lena-ortiz-57d9138ae7c9": {
+      "speaker": "security-officer",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        133
+      ],
+      "note": "ch5 order 133: His answer to Jack's 'Ready for what?'"
+    },
+    "lena-ortiz-5c2b1d77f5ec": {
+      "speaker": "security-officer",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        136
+      ],
+      "note": "ch5 order 136: 'Inside the developed zone only' -- still the officer."
+    },
+    "lena-ortiz-bcd43a9647cb": {
+      "speaker": "sarah-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        172
+      ],
+      "note": "ch5 order 172: Sarah has just handed Jack the sensor; 'And don't cross the line' is hers."
+    },
+    "sarah-bennett-2d5f8a129a07": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        173
+      ],
+      "note": "ch5 order 173: His reply."
+    },
+    "security-officer-f60afcca22a7": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        220
+      ],
+      "note": "ch5 order 220: Sarah tells Jack not to touch the droplet; the reply is his."
+    },
+    "lena-ortiz-dd56472efc45": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        228
+      ],
+      "note": "ch5 order 228: Jack at the boundary, answering Sarah over the wrist terminal."
+    },
+    "REVIEW_REQUIRED-70aa69a25c2e": {
+      "speaker": "security-officer",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        232
+      ],
+      "note": "ch5 order 232: 'One of the officers stared at it.'"
+    },
+    "sarah-bennett-937447a849cb": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        5,
+        6
+      ],
+      "orders": [
+        235,
+        137
+      ],
+      "note": "ch5 order 235: Jack, after increasing the magnification and seeing the ridges. | ch6 order 137: His answer to Lena's 'Could the system have picked that number randomly?'"
+    },
+    "lena-ortiz-be256a95140c": {
+      "speaker": "sarah-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        238
+      ],
+      "note": "ch5 order 238: 'Sarah recognized it from the video feed first.'"
+    },
+    "sarah-bennett-519e5223f2dd": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        5
+      ],
+      "orders": [
+        263
+      ],
+      "note": "ch5 order 263: Jack, in the vehicle, telling the driver to go."
+    },
+    "jack-bennett-00b80deccb57": {
+      "speaker": "security-officer",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        26
+      ],
+      "note": "ch6 order 26: 'One of the security officers entered behind him. \"We ran.\"'"
+    },
+    "lena-ortiz-26ada7d1e63c": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        32
+      ],
+      "note": "ch6 order 32: Jack has the sensor connected; the reading is his."
+    },
+    "jack-bennett-cd895a527018": {
+      "speaker": "sarah-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        60
+      ],
+      "note": "ch6 order 60: She said 'Go back'; 'Stop.' is hers."
+    },
+    "sarah-bennett-b141461d7fc8": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        74
+      ],
+      "note": "ch6 order 74: His answer to Lena's 'How big are we?'"
+    },
+    "sarah-bennett-d31b853a4a68": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        76
+      ],
+      "note": "ch6 order 76: 'It's the one I have right now.'"
+    },
+    "lena-ortiz-214c449c59b5": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        85
+      ],
+      "note": "ch6 order 85: His answer to Sarah's 'What are you looking for?'"
+    },
+    "lena-ortiz-f27e4478a489": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        87
+      ],
+      "note": "ch6 order 87: 'I have the result.'"
+    },
+    "sarah-bennett-03d98ab39a0e": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        93
+      ],
+      "note": "ch6 order 93: His answer to Lena's 'Can you tell what they entered?'"
+    },
+    "sarah-bennett-2707584e31b5": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        118
+      ],
+      "note": "ch6 order 118: 'I know.' -- his reply to Sarah saying his name."
+    },
+    "sarah-bennett-5d402806295f": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        122
+      ],
+      "note": "ch6 order 122: Jack, looking at his own hands, giving the scale."
+    },
+    "sarah-bennett-5250d83bad1c": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        125
+      ],
+      "note": "ch6 order 125: 'Roughly.'"
+    },
+    "lena-ortiz-f9f71fa89871": {
+      "speaker": "sarah-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        128
+      ],
+      "note": "ch6 order 128: Sarah shaking her head: 'I'm fine. Keep going.'"
+    },
+    "lena-ortiz-f3968db247fb": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        155,
+        157,
+        285
+      ],
+      "note": "ch6 order 155: His answer to Sarah's 'The boundary wasn't centered on TOMBS.' | ch6 order 157: His answer to 'It wasn't a radius.' | ch6 order 285: His answer to Sarah's 'This didn't start tonight.'"
+    },
+    "lena-ortiz-8dafdbb26a5a": {
+      "speaker": "sarah-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        188
+      ],
+      "note": "ch6 order 188: Sarah continuing her own thought after 'More than the layout.'"
+    },
+    "sarah-bennett-be5fdf30b024": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        195
+      ],
+      "note": "ch6 order 195: Jack has just opened the raw command archive."
+    },
+    "lena-ortiz-cef9102c655d": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        198
+      ],
+      "note": "ch6 order 198: His answer to Sarah's 'Of what?'"
+    },
+    "sarah-bennett-2e0c3c165772": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        206
+      ],
+      "note": "ch6 order 206: His answer to Lena's 'Can you read that?'"
+    },
+    "lena-ortiz-b91ec5a11043": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        231
+      ],
+      "note": "ch6 order 231: His answer to Sarah's 'Could that be wrong?'"
+    },
+    "lena-ortiz-e81f5f59e808": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        263
+      ],
+      "note": "ch6 order 263: His answer to Sarah's 'Where were you?'"
+    },
+    "lena-ortiz-f73b479162cc": {
+      "speaker": "jack-bennett",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        269
+      ],
+      "note": "ch6 order 269: 'I wasn't in the laboratory.'"
+    },
+    "narrator-8c36bd5c9580": {
+      "ttsText": "Medical center.",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        46
+      ],
+      "note": "ch4 order 46, pronunciation only -- displayText is unchanged. A caller ID on Jack's terminal. Capitals are the screen's, not a shout."
+    },
+    "narrator-fec1889a557c": {
+      "ttsText": "South patrol. Road ends at perimeter. Request instructions.",
+      "chapters": [
+        4
+      ],
+      "orders": [
+        90
+      ],
+      "note": "ch4 order 90, pronunciation only -- displayText is unchanged. A security message on screen. The colon is read as a full stop so the line does not run together, and the capitals are dropped so it is not read as emphasis."
+    },
+    "narrator-f514ab90530e": {
+      "ttsText": "Phase one ready.",
+      "chapters": [
+        6
+      ],
+      "orders": [
+        293
+      ],
+      "note": "ch6 order 293, pronunciation only -- displayText is unchanged. The label on the boundary file, and the last three words of the movement. It has to land as a quiet statement, not a shout."
     }
   }
 }

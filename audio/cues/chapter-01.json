@@ -55,7 +55,7 @@
       "cueId": "ch01-010-first-chirp",
       "asset": "sfx_console_tone_soft",
       "anchor": {
-        "clipId": "narrator-7942982ea850",
+        "clipId": "narrator-1de8e47c4e66",
         "occurrence": 1
       },
       "timing": "before",
@@ -66,7 +66,7 @@
       "cueId": "ch01-011-second-chirp",
       "asset": "sfx_console_tone_soft",
       "anchor": {
-        "clipId": "narrator-7942982ea850",
+        "clipId": "narrator-1de8e47c4e66",
         "occurrence": 1
       },
       "timing": "during",
@@ -75,22 +75,10 @@
       "why": "The same asset, louder, because the manuscript says the second tone was louder than the first. One generated sound covers both, and the escalation is done with gain rather than with a second file."
     },
     {
-      "cueId": "ch01-012-console-erupts",
-      "asset": "sfx_console_alarm_erupt",
-      "anchor": {
-        "clipId": "narrator-7942982ea850",
-        "occurrence": 1
-      },
-      "timing": "after",
-      "gain": 0.011,
-      "why": "The console erupting is the chapter's inciting sound. It lands in the gap between that narration and the TOMBS warning, so the machine voice arrives out of an alarm that is already going. EMPHASIS DROPPED TO 0 on 2026-09-19. The +6.0/+8.3 here were raising the one sound Joshua said he could not hear the narrator past, and they were chosen when the mix was placed by RMS -- which reads this asset 3 to 6 dB quieter than the ear does. With loudness measured properly the category target is already where this moment should sit.",
-      "emphasisDb": 0.0
-    },
-    {
       "cueId": "ch01-013-alarm-bed",
       "asset": "amb_console_alarm_bed",
       "anchor": {
-        "clipId": "narrator-7942982ea850",
+        "clipId": "narrator-1de8e47c4e66",
         "occurrence": 1
       },
       "timing": "after",
@@ -147,7 +135,7 @@
       "cueId": "ch01-040-second-alarm",
       "asset": "sfx_alert_warning_hit",
       "anchor": {
-        "clipId": "narrator-06cb6e60aafc",
+        "clipId": "narrator-5290a9122d0f",
         "occurrence": 1
       },
       "timing": "during",
@@ -378,7 +366,7 @@
       "cueId": "ch01-140-sarah-resumes",
       "asset": "sfx_keyboard_typing_short",
       "anchor": {
-        "clipId": "narrator-668b2dc69db1",
+        "clipId": "narrator-75a8844f5b06",
         "occurrence": 1
       },
       "timing": "during",
@@ -465,6 +453,13 @@
       "offsetMs": 250,
       "gain": 0.234,
       "why": "“Jack tried his credentials again.” The same sound a second time is the information, exactly as the two denial tones are."
+    }
+  ],
+  "_removed": [
+    {
+      "cueId": "ch01-012-console-erupts",
+      "asset": "sfx_console_alarm_erupt",
+      "why": "The sentence it sounded on is gone. The revised opening reads 'a second tone followed, louder than the first, and the diagnostic display flashed amber' where it used to read 'the entire console erupted with alarms'. A console erupting on an amber display is the loud version of the scene the revision removes. The two console tones and the low alert bed stay -- those are the local lab warning tones the revised text keeps."
     }
   ]
 }

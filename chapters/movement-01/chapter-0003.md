@@ -3,7 +3,7 @@ chapter: 3
 title: "The Activation"
 movement: 1
 pov: Jack
-word_count: 1384
+word_count: 1395
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -23,8 +23,8 @@ playable_beat_flow: ["attempt manual control", "interrupt the scale calculation"
 ending_type: revelation
 review_status: approved
 audio_status: not-started
-approved_on: "2026-09-17"
-source: "Joshua's approved Word manuscript, 01-03 Chapters - TRADDOMIUM Micro Battle.docx, imported verbatim 2026-09-17. This file is the manuscript and is not edited without his instruction."
+approved_on: "2026-09-21"
+source: "Joshua's revised Word manuscripts, 01-03 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. These replace the pre-revision opening: the catastrophe is now quiet, there is no settlement-wide siren before activation, and most residents sleep through the event."
 ---
 
 # Chapter 3: The Activation
@@ -51,7 +51,7 @@ Jack kept hold of her arm. "Sarah."
 
 She met his eyes. "I'm fine. Keep working."
 
-Another vibration rolled through the floor while the emergency sirens outside changed pitch. Jack's screen flashed.
+Another vibration rolled through the floor. The muted warning tones at the consoles cut off one by one. Jack's screen flashed.
 
 "Scale factor locked." Sarah stared at the value. "What does that mean?"
 
@@ -77,7 +77,7 @@ The floor seemed to disappear beneath his feet.
 
 Then everything snapped back.
 
-Sound returned all at once. Alarms screamed as Jack hit the floor and Sarah landed beside him.
+Sound returned all at once as Jack hit the floor and Sarah landed beside him. Somewhere inside the array chamber, metal rang once and went still.
 
 "Sarah!" Jack crawled toward her. "Are you hurt?"
 
@@ -95,7 +95,7 @@ Jack released the breath he had been holding. "Okay."
 
 Sarah squeezed his hand. "We're okay."
 
-The alarms stopped, leaving an unsettling silence in the laboratory. Jack slowly stood and looked around. Nothing appeared different. The consoles were intact, the TOMBS Array had stopped, and even the emergency lighting had returned to normal.
+The laboratory settled into an unsettling silence. Jack slowly stood and looked around. Nothing appeared different. The consoles were intact, the TOMBS Array had stopped, and even the emergency lighting had returned to normal.
 
 Sarah got to her feet beside him and looked around. "Did it fail?"
 

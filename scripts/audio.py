@@ -525,16 +525,25 @@ def cmd_generate(args, reg):
         m = mf.build(n, files[n], reg)
         mf.write(m)
         s = mf.summarize(m, reg)
-        if not s["ready"]:
+        if s["reviewRequired"]:
             blocked.add(n)
-            if s["missingVoices"]:
-                print("chapter %d blocked: no voice for %s"
-                      % (n, ", ".join(reg.name(x) for x in s["missingVoices"])))
-            if s["reviewRequired"]:
-                print("chapter %d blocked: %d segment(s) need review"
-                      % (n, len(s["reviewRequired"])))
+            print("chapter %d blocked: %d segment(s) need review"
+                  % (n, len(s["reviewRequired"])))
             continue
+        # A CHARACTER WITHOUT A VOICE HOLDS UP ITS OWN LINES AND NOTHING ELSE.
+        # Joshua, 2026-09-21, introducing Doctor Mercer: "Do not block the entire audio
+        # update because one new character needs a voice." Chapter 4 is 195 segments and
+        # nine of them are hers; refusing the other 186 because one voice is unassigned
+        # buys nothing, and the nine are reported by name rather than skipped quietly.
+        unvoiced = set(s["missingVoices"])
+        if unvoiced:
+            waiting = [x for x in m["segments"] if x["speaker"] in unvoiced]
+            print("chapter %d: %d segment(s) waiting for a voice for %s. The rest of the "
+                  "chapter still generates."
+                  % (n, len(waiting), ", ".join(sorted(reg.name(v) for v in unvoiced))))
         for seg in m["segments"]:
+            if seg["speaker"] in unvoiced:
+                continue
             if scene and not (scene["firstOrder"] <= seg["order"] <= scene["lastOrder"]):
                 continue
             if seg["clipId"] in seen:

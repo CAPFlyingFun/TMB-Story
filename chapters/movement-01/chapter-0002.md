@@ -3,28 +3,28 @@ chapter: 2
 title: "The Boundary"
 movement: 1
 pov: Jack
-word_count: 1083
+word_count: 1008
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
   opens: "Immediately after Chapter 1, in the laboratory corridor and the main control room"
   elapsed: "continuous with the chapters either side; the three cover one night"
-objective: "Stop the TOMBS Array before it activates, and find out what target the boundary has acquired."
+objective: "Stop the TOMBS Array before it activates, and find out what target the boundary has acquired. He gets neither: the array will not stop and TOMBS hides the answer."
 locations: ["The laboratory corridor", "The main control room and the TOMBS Array chamber", "The island utility station (remote, by call)"]
 characters: [Jack, Sarah, "Lena Ortiz (remote, by wrist terminal)", "TOMBS (system messages)"]
 status_changes:
   - "TOMBS is disconnected from the island grid and keeps running"
   - "The physical shutdown lever is pulled. The rings stop, then restart"
-  - "The boundary target is identified as the developed settlement"
-  - "Jack orders everyone indoors and away from exterior walls instead of a full evacuation"
+  - "Jack orders quiet containment: the laboratory stays isolated and no settlement alarm is sounded"
+  - "TOMBS hides the boundary target dimensions and denies mapping access, so Jack cannot say what the boundary encloses"
 new_canon:
   - "See story-rules/ for the canon this movement established. This file is the manuscript."
-playable_beat_flow: ["move through the corridor to the control room", "call the island utility station", "cut external access and disconnect TOMBS from the grid", "check backup capacitors and the internal reactor", "observe the array rings through the window", "attempt to kill the boundary emitters", "pull the physical shutdown lever", "read the target dimensions", "overlay the boundary on the island map", "issue the shelter order"]
+playable_beat_flow: ["move through the corridor to the control room", "call the island utility station", "cut external access and disconnect TOMBS from the grid", "check backup capacitors and the internal reactor", "observe the array rings through the window", "attempt to kill the boundary emitters", "pull the physical shutdown lever", "watch the target dimensions be hidden", "try the mapping controls and be denied", "order quiet containment and no settlement alarm"]
 ending_type: revelation
 review_status: approved
 audio_status: not-started
-approved_on: "2026-09-17"
-source: "Joshua's approved Word manuscript, 01-03 Chapters - TRADDOMIUM Micro Battle.docx, imported verbatim 2026-09-17. This file is the manuscript and is not edited without his instruction."
+approved_on: "2026-09-21"
+source: "Joshua's revised Word manuscripts, 01-03 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. These replace the pre-revision opening: the catastrophe is now quiet, there is no settlement-wide siren before activation, and most residents sleep through the event."
 ---
 
 # Chapter 2: The Boundary
@@ -145,53 +145,39 @@ Sarah moved beside him. "What?"
 
 Jack highlighted the figures. "The target dimensions."
 
-Sarah read the numbers twice. "That can't be right. That's kilometers."
+Sarah leaned closer. The values flickered, vanished, and returned as unreadable placeholders.
 
-Jack zoomed in on the values. "I know."
+"It just hid them," she said.
 
-Sarah scrolled through the specifications. "TOMBS has never created a field that large."
+Jack tried to reopen the raw parameters. "Or somebody hid them."
 
-Jack pulled up the previous test limits. "It's never created anything remotely that large."
+Sarah pulled up the mapping controls. A red outline appeared for less than a second, too fast to resolve, then the map cleared itself.
 
-Sarah scrolled through the parameters. "Jack, where is it getting these coordinates?"
+Jack stared at the empty display. "Do that again."
 
-Jack opened the mapping controls. "I don't know. Pull up the island map."
+"I didn't do it the first time." Sarah tried the command anyway. "Mapping access denied."
 
-Sarah did, and a red line appeared across the display. Jack stopped moving as the line expanded beyond the laboratory, crossed the research district, passed residential streets and workshops, curved around the community center, and continued around nearly every developed section of the settlement.
+Jack opened a second diagnostic path. The system returned only one line.
 
-Sarah traced the red outline with one finger. "That's us."
+"Boundary acquisition in progress."
 
-Jack enlarged the map. "No. The array can't do this."
+Sarah looked toward the array chamber. "Boundary around what?"
 
-Sarah followed the boundary around the settlement. "The boundary says otherwise."
+"That's what I want to know." Jack keyed his wrist terminal. "Lena, keep the laboratory isolated. Don't sound a settlement alarm yet."
 
-"It was designed for controlled objects. Laboratory-scale targets. We tested equipment, vehicles, biological samples. Not..." Jack stared at the red outline. "Not a town."
+Lena answered immediately. "You sure?"
 
-Sarah checked another display. "Target mass is still calculating."
+"No. But I don't know what we'd be telling people to do, and I don't want anyone running toward whatever this is."
 
-Jack grabbed the intercom. "Control, initiate a settlement-wide emergency."
+Sarah nodded. "Quiet containment until we know the boundary."
 
-"Jack, what's happening?" Lena asked through the call.
+"Exactly." Jack looked back at the screen. "If anything changes outside this building, call us."
 
-"Do it now."
+"Understood," Lena said.
 
-Lena asked, "What level?"
+The laboratory remained quiet beyond the muted warning tones at their consoles. Somewhere outside, nearly five hundred people slept through an emergency they did not know existed.
 
-Jack looked at the expanding boundary. "Full evacuation protocol."
-
-Sarah turned toward him. "Evacuate where?"
-
-Jack hesitated. If the boundary surrounded the settlement, he had no idea which side was safe.
-
-"Jack?" Lena pressed.
-
-Jack keyed the intercom again. "Change that order. Tell everyone to get indoors and away from exterior walls. Nobody leaves the developed zone until we understand what this thing is doing."
-
-"Understood."
-
-Sirens began sounding outside.
-
-Sarah returned to the console and opened the emitter controls. "Can we interrupt the boundary?"
+Sarah opened the emitter controls. "Can we interrupt the boundary?"
 
 Jack searched through the manual overrides. "I'm trying."
 
@@ -205,7 +191,7 @@ Sarah glanced at him. "Maybe good, or maybe everyone-inside-the-field-dies bad?"
 
 Sarah closed the overload control. "Then let's not."
 
-Jack opened a diagnostic window and searched for another route into the controls. "Come on. Give me something."
+Jack opened another diagnostic window and searched for a route into the controls. "Come on. Give me something."
 
 The display changed.
 
@@ -213,7 +199,7 @@ The display changed.
 
 A second line appeared.
 
-"Scale factor calculating." Sarah pointed to the new line. "Jack."
+"Scale factor calculating." Sarah pointed to it. "Jack."
 
 Jack kept typing. "I see it."
 

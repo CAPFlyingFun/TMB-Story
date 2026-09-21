@@ -94,6 +94,50 @@
         "hers"
       ],
       "voiceApproved": "2026-09-18"
+    },
+    "doctor-mercer": {
+      "id": "doctor-mercer",
+      "name": "Doctor Mercer",
+      "audioKey": "mercer",
+      "kind": "character",
+      "elevenLabsVoiceId": null,
+      "voiceVersion": 1,
+      "gameExport": true,
+      "aliases": [
+        "Doctor Mercer",
+        "Mercer",
+        "Dr. Mercer"
+      ],
+      "notes": "Introduced in Chapter 4 of the revised manuscript. Runs the medical center overnight; heard only through Jack's wrist terminal. Sarah's 'I like her' makes the character she/her. NO APPROVED VOICE YET -- Joshua assigns it; nothing here guesses one.",
+      "pronouns": [
+        "she",
+        "her",
+        "hers"
+      ],
+      "voiceApproved": null
+    },
+    "security-officer": {
+      "id": "security-officer",
+      "name": "Settlement security",
+      "audioKey": "security",
+      "kind": "character",
+      "elevenLabsVoiceId": null,
+      "voiceVersion": 1,
+      "gameExport": true,
+      "aliases": [
+        "Unit Twelve",
+        "the security officer",
+        "one of the officers",
+        "One security officer",
+        "The security officer"
+      ],
+      "notes": "ONE VOICE FOR THE SETTLEMENT'S SECURITY OFFICERS, which is a decision worth seeing rather than a shortcut: the revised Chapters 4 to 6 give unnamed officers about six short lines between them, in three scenes, and none of them is identified as a returning individual. The manuscript does name a man's voice on the Chapter 4 channel. If Joshua wants them distinct, split this into numbered speakers before a voice is assigned -- after generation it costs clips. NO APPROVED VOICE YET.",
+      "pronouns": [
+        "they",
+        "them",
+        "theirs"
+      ],
+      "voiceApproved": null
     }
   }
 }

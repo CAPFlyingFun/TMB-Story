@@ -3,13 +3,13 @@ chapter: 1
 title: "The Alarm"
 movement: 1
 pov: Jack
-word_count: 1158
+word_count: 1165
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
   opens: "Almost eleven at night, in a laboratory at the island research settlement"
   elapsed: "continuous with the chapters either side; the three cover one night"
-objective: "Wake to an unauthorized access alarm, work out what is inside the TOMBS system, and discover that his own administrator credentials have been revoked."
+objective: "Wake to an unauthorized access warning, work out what is inside the TOMBS system, and discover that his own administrator credentials have been revoked."
 locations: ["The island research settlement", "Jack's laboratory"]
 characters: [Jack, Sarah, "TOMBS (system messages)"]
 status_changes:
@@ -18,19 +18,17 @@ status_changes:
   - "Sarah joins Jack in the laboratory"
 new_canon:
   - "See story-rules/ for the canon this movement established. This file is the manuscript."
-playable_beat_flow: ["review diagnostic data", "read the access alarm", "open the network monitor", "trace the unknown connection", "lock the terminal", "call Sarah on the intercom", "search the access logs", "attempt to cancel the initialization request", "re-enter administrator credentials"]
+playable_beat_flow: ["review diagnostic data", "read the access warning", "open the network monitor", "trace the unknown connection", "lock the terminal", "call Sarah on the intercom", "search the access logs", "attempt to cancel the initialization request", "re-enter administrator credentials"]
 ending_type: unanswered question
 review_status: approved
 audio_status: not-started
-approved_on: "2026-09-17"
-source: "Joshua's approved Word manuscript, 01-03 Chapters - TRADDOMIUM Micro Battle.docx, imported verbatim 2026-09-17. NO LONGER byte-identical to that document: one line was changed on 2026-09-18 on Joshua's explicit written instruction (see approved_edits below and decision 0022). This file is the manuscript and is not edited without his instruction."
-approved_edits:
-  - date: "2026-09-18"
-    authorized_by: "Joshua, explicit written instruction naming this chapter and this line"
-    from: 'Sarah returned to the keyboard. "That''s what I''m afraid of."'
-    to: 'Sarah continued typing. "That''s what I''m afraid of."'
-    why: "He heard the repetition in the audiobook mix: the paragraph two above already ends 'before returning to the keyboard', so the narration said the same thing twice within a few seconds. 'Sarah kept typing.' was unavailable as a fix because it is already the narration at paragraph 68."
-    audio_effect: "One narrator clip re-identified, narrator-75a8844f5b06 to narrator-668b2dc69db1, and regenerated. Cue ch01-140-sarah-resumes re-anchored to the new clip. No other voice clip or sound asset affected."
+approved_on: "2026-09-21"
+source: "Joshua's revised Word manuscripts, 01-03 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. These replace the pre-revision opening: the catastrophe is now quiet, there is no settlement-wide siren before activation, and most residents sleep through the event."
+revision_notes:
+  - date: "2026-09-21"
+    what: "The revised document restores 'Sarah returned to the keyboard.' at the line Joshua had corrected to 'Sarah continued typing.' on 2026-09-18."
+    why_it_matters: "He made that correction by ear: the paragraph two above already ends 'before returning to the keyboard', so the narration said the same thing twice within a few seconds. The revised document still has that earlier paragraph, so the repetition is back."
+    decision: "The document is followed verbatim, because it is the newer and canonical source and rewriting it is not mine to do. Flagged for Joshua. Reverting costs nothing: the clip for the document's wording is still cached from before the correction."
 ---
 
 # Chapter 1: The Alarm
@@ -43,9 +41,9 @@ Deep inside one of those laboratories, Dr. Jack Bennett was hard at work. Techni
 
 Jack sat slumped in his chair with his arms folded across his chest, his head tilted toward one shoulder, and several pages of diagnostic data glowing on the monitor in front of him. His eyes were closed.
 
-A warning tone chirped. Jack shifted but did not wake. A second tone followed, louder than the first, and then the entire console erupted with alarms.
+A warning tone chirped from Jack's console. He shifted but did not wake. A second tone followed, louder than the first, and the diagnostic display flashed amber.
 
-"Warning. unauthorized system access." Jack jerked awake so quickly that his chair rolled backward and nearly struck another workstation. "What? Okay, I'm awake."
+"Warning. Unauthorized system access." Jack jerked awake so quickly that his chair rolled backward and nearly struck another workstation. "What? Okay, I'm awake."
 
 The warning repeated while Jack rubbed his eyes and leaned toward the monitor. "That's not good."
 
@@ -53,7 +51,7 @@ Several windows were opening and closing on their own. Lines of commands streame
 
 An unfamiliar connection appeared for half a second and vanished.
 
-Jack frowned. "No. Where'd you go?" He refreshed the display, but the connection was gone. Another alarm sounded and a red warning filled the center of his screen.
+Jack frowned. "No. Where'd you go?" He refreshed the display, but the connection was gone. Another warning tone sounded from the console and a red message filled the center of his screen.
 
 "Security protocol violation." "Okay. Definitely awake now." Jack entered a command and pulled up the laboratory access logs. Nothing looked unusual. He tried another search and got the same result. "That's impossible."
 
@@ -191,7 +189,7 @@ Jack surrendered with a small nod. "Fair."
 
 Jack smiled at the movement beneath her hand. "Already takes after me."
 
-Sarah continued typing. "That's what I'm afraid of."
+Sarah returned to the keyboard. "That's what I'm afraid of."
 
 A new warning tone interrupted them. Both turned toward the main console as another message appeared.
 

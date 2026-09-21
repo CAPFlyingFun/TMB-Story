@@ -239,9 +239,45 @@ class Attributor:
         return REVIEW, "unresolved", "no explicit speaker signal"
 
 
+def chapter_number(path):
+    """The chapter a manuscript file is, from its name. Used to SCOPE an override."""
+    m = re.search(r"chapter-(\d{4})\.md$", str(path))
+    return int(m.group(1)) if m else None
+
+
+def _pin_applies(pin, number, order):
+    """Whether a pinned correction is for THIS segment.
+
+    AN OVERRIDE IS KEYED BY SPEAKER PLUS TEXT, WHICH IS GLOBAL, and that is fine for a
+    sentence that occurs once and dangerous for one that does not. "No.", "Maybe.",
+    "Good." and "Stop." each occur many times across six chapters; a pin written for
+    one of them would silently rewrite every other, in the wrong voice, and the only
+    symptom would be somebody noticing months later that a line sounds like the wrong
+    person -- which is exactly the fault this project has already shipped once.
+
+    So a pin may name the chapters it is for (`chapters: [3, 6]`, or `chapter: 3`) and
+    the segment order within them. A pin that names neither still applies everywhere,
+    which is right for a line that genuinely occurs once -- and such a pin has to say
+    `scope: "everywhere"` so that "applies to every match" is a decision somebody made
+    rather than the default nobody checked. A test enforces it.
+    """
+    scope = pin.get("chapters")
+    if scope is None and pin.get("chapter") is not None:
+        scope = [pin["chapter"]]
+    if scope is not None and number not in [int(x) for x in scope]:
+        return False
+    at = pin.get("orders")
+    if at is None and pin.get("order") is not None:
+        at = [pin["order"]]
+    if at is not None and order not in [int(x) for x in at]:
+        return False
+    return True
+
+
 def parse_chapter(path, registry, overrides=None):
     """Parse one chapter file into an ordered segment list."""
     overrides = overrides or {}
+    number = chapter_number(path)
     title, paragraphs = read_manuscript(path)
     attributor = Attributor(registry)
     segments = []
@@ -289,6 +325,8 @@ def parse_chapter(path, registry, overrides=None):
         seg["order"] = i
         provisional = clip_id(seg["speaker"], seg["ttsText"])
         pinned = overrides.get(provisional)
+        if pinned and not _pin_applies(pinned, number, i):
+            pinned = None
         if pinned:
             seg["speaker"] = pinned.get("speaker", seg["speaker"])
             if pinned.get("ttsText"):

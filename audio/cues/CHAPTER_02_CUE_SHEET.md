@@ -8,12 +8,12 @@ with `python3 scripts/render-cue-sheet.py 2`.
 
 | | |
 |---|---|
-| Playback events | **22** |
-| Unique assets | **15** (0 still to generate) |
-| Chapter runtime as it plays today | 8:09 |
+| Playback events | **20** |
+| Unique assets | **14** (0 still to generate) |
+| Chapter runtime as it plays today | 6:06 |
 | Voice clips regenerated for this | **none** |
 
-Events outnumber assets because sounds are reused: `sfx_alert_warning_hit` x2, `sfx_array_rings_move` x2, `sfx_intercom_open` x2, `sfx_keyboard_typing_short` x3, `sfx_system_notify_soft` x2, `sfx_wrist_terminal_chirp` x2.
+Events outnumber assets because sounds are reused: `sfx_alert_warning_hit` x2, `sfx_array_rings_move` x2, `sfx_keyboard_typing_short` x3, `sfx_system_notify_soft` x2, `sfx_wrist_terminal_chirp` x2.
 
 ## How to read the anchor column
 
@@ -273,7 +273,7 @@ anchor to its stop anchor and loops underneath.
 | Category | system (sfx layer) |
 | Anchor | segment order 88 · clip `narrator-af235e0b4193` · occurrence 1 |
 | Timing | before |
-| Sustain | loops to segment order 181 |
+| Sustain | loops to segment order 168 |
 | Gain | 0.02 |
 | Fades | in 600ms · out 2000ms |
 | Duration requested | 6s, looping |
@@ -330,14 +330,14 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_keyboard_typing_short` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 119 · clip `narrator-d65b688f1891` · occurrence 1 |
+| Anchor | segment order 114 · clip `narrator-0543c5ab9301` · occurrence 1 |
 | Timing | during +300ms |
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:24 |
+| Approx. review time | ~5:01 |
 
-**Manuscript:** Narrator — “Jack opened the mapping controls.”
+**Manuscript:** Narrator — “Sarah pulled up the mapping controls. A red outline appeared for less than a second, too fast to resolve, then the map cleared itself.”
 
 **Why:** Pulling up the island map, the moment before the red line appears.
 
@@ -349,58 +349,18 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_intercom_open` |
 | Category | interface (sfx layer) |
-| Anchor | segment order 133 · clip `narrator-6e6f9e1dbe3f` · occurrence 1 |
+| Anchor | segment order 125 · clip `narrator-e3976fd92976` · occurrence 1 |
 | Timing | during +500ms |
 | Gain | 0.05 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~6:18 |
+| Approx. review time | ~5:07 |
 
-**Manuscript:** Narrator — “Jack grabbed the intercom.”
+**Manuscript:** Narrator — “Jack keyed his wrist terminal.”
 
 **Why:** Reuses chapter 1's intercom. Jack declaring a settlement-wide emergency is the chapter's turn outward from two people to five hundred.
 
 **Prompt:** `An intercom being keyed on. A firm mechanical button press followed immediately by a small electrical pop and the channel opening into a thin live speaker hiss. Close-mic, tactile. No voices, no speech, no music, no tones.`
-
-### `ch02-140-intercom-again`
-
-| | |
-|---|---|
-| Asset | `sfx_intercom_open` |
-| Category | interface (sfx layer) |
-| Anchor | segment order 147 · clip `narrator-50d3345e6192` · occurrence 1 |
-| Timing | during +400ms |
-| Gain | 0.05 |
-| Duration requested | 1.5s |
-| Reusable in Godot | yes |
-| Approx. review time | ~6:49 |
-
-**Manuscript:** Narrator — “Jack keyed the intercom again.”
-
-**Why:** Changing the evacuation order. Same asset, quieter: the second use is a correction rather than a declaration.
-
-**Prompt:** `An intercom being keyed on. A firm mechanical button press followed immediately by a small electrical pop and the channel opening into a thin live speaker hiss. Close-mic, tactile. No voices, no speech, no music, no tones.`
-
-### `ch02-130-sirens`
-
-| | |
-|---|---|
-| Asset | `amb_alarm_pulse` |
-| Category | alarm (sfx layer) |
-| Anchor | segment order 150 · clip `narrator-9e05ce60e7b8` · occurrence 1 |
-| Timing | before |
-| Sustain | loops to segment order 181 |
-| Gain | 0.00 |
-| Fades | in 3000ms · out -ms |
-| Duration requested | 18.6s, looping |
-| Reusable in Godot | yes |
-| Approx. review time | ~7:02 |
-
-**Manuscript:** Narrator — “Sirens began sounding outside.”
-
-**Why:** Sirens begin sounding outside. The procedural wail, for the same reason chapter 3 uses it: the recorded one announced its seam every 12 seconds. Same -4.4 dB cut.
-
-**Prompt:** `(hand-supplied asset; no prompt)`
 
 ### `ch02-150-overrides`
 
@@ -408,12 +368,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_keyboard_typing_short` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 153 · clip `narrator-f0b9c61b577a` · occurrence 1 |
+| Anchor | segment order 140 · clip `narrator-f0b9c61b577a` · occurrence 1 |
 | Timing | during +400ms |
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:11 |
+| Approx. review time | ~5:14 |
 
 **Manuscript:** Narrator — “Jack searched through the manual overrides.”
 
@@ -427,12 +387,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_alert_warning_hit` |
 | Category | alarm (sfx layer) |
-| Anchor | segment order 166 · clip `narrator-6e1c3da3fb9d` · occurrence 1 |
+| Anchor | segment order 153 · clip `narrator-6e1c3da3fb9d` · occurrence 1 |
 | Timing | after |
 | Gain | 0.02 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:41 |
+| Approx. review time | ~5:40 |
 
 **Manuscript:** Narrator — “The display changed.”
 
@@ -446,12 +406,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_system_notify_soft` |
 | Category | interface (sfx layer) |
-| Anchor | segment order 170 · clip `narrator-ebb691a6c92b` · occurrence 1 |
+| Anchor | segment order 157 · clip `narrator-ebb691a6c92b` · occurrence 1 |
 | Timing | after |
 | Gain | 0.03 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:47 |
+| Approx. review time | ~5:46 |
 
 **Manuscript:** Narrator — “A second line appeared.”
 
@@ -463,7 +423,6 @@ anchor to its stop anchor and loops underneath.
 
 | Asset | Category | Loop | Secs | Events | Godot | State |
 |---|---|---|---|---|---|---|
-| `amb_alarm_pulse` | alarm | yes | 18.6 | 1 | yes | cached |
 | `amb_computer_lab` | ambience | yes | 45.1 | 1 | yes | cached |
 | `amb_console_alarm_bed` | alarm | yes | 12 | 1 | yes | cached |
 | `amb_intercom_channel_open` | ambience | yes | 10 | 1 | yes | cached |
@@ -472,12 +431,12 @@ anchor to its stop anchor and loops underneath.
 | `sfx_chair_roll_fast` | foley | no | 2 | 1 | yes | cached |
 | `sfx_equipment_power_up_soft` | system | no | 2.5 | 1 | yes | cached |
 | `sfx_footsteps_sarah_sneakers` | foley | no | 3 | 1 | yes | cached |
-| `sfx_intercom_open` | interface | no | 1.5 | 2 | yes | cached |
+| `sfx_intercom_open` | interface | no | 1.5 | 1 | yes | cached |
 | `sfx_keyboard_typing_short` | foley | no | 3 | 3 | yes | cached |
 | `sfx_lab_door_slide` | foley | no | 2.5 | 1 | yes | cached |
 | `sfx_shutdown_lever_pull` | foley | no | 3 | 1 | yes | cached |
 | `sfx_system_notify_soft` | interface | no | 1.5 | 2 | yes | cached |
 | `sfx_wrist_terminal_chirp` | interface | no | 1.5 | 2 | yes | cached |
 
-15 of 15 are reusable in Godot. The game decides when each one plays; this cue
+14 of 14 are reusable in Godot. The game decides when each one plays; this cue
 sheet only decides when the audiobook plays it.

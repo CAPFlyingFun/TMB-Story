@@ -233,7 +233,7 @@
       "cueId": "ch02-110-map-work",
       "asset": "sfx_keyboard_typing_short",
       "anchor": {
-        "clipId": "narrator-d65b688f1891",
+        "clipId": "narrator-0543c5ab9301",
         "occurrence": 1
       },
       "timing": "during",
@@ -245,42 +245,13 @@
       "cueId": "ch02-120-intercom",
       "asset": "sfx_intercom_open",
       "anchor": {
-        "clipId": "narrator-6e6f9e1dbe3f",
+        "clipId": "narrator-e3976fd92976",
         "occurrence": 1
       },
       "timing": "during",
       "offsetMs": 500,
       "gain": 0.052,
       "why": "Reuses chapter 1's intercom. Jack declaring a settlement-wide emergency is the chapter's turn outward from two people to five hundred."
-    },
-    {
-      "cueId": "ch02-130-sirens",
-      "asset": "amb_alarm_pulse",
-      "anchor": {
-        "clipId": "narrator-9e05ce60e7b8",
-        "occurrence": 1
-      },
-      "timing": "before",
-      "gain": 0.003,
-      "fadeInMs": 3000,
-      "sustain": {
-        "until": "chapterEnd",
-        "timing": "after"
-      },
-      "why": "Sirens begin sounding outside. The procedural wail, for the same reason chapter 3 uses it: the recorded one announced its seam every 12 seconds. Same -4.4 dB cut.",
-      "emphasisDb": -20.0
-    },
-    {
-      "cueId": "ch02-140-intercom-again",
-      "asset": "sfx_intercom_open",
-      "anchor": {
-        "clipId": "narrator-50d3345e6192",
-        "occurrence": 1
-      },
-      "timing": "during",
-      "offsetMs": 400,
-      "gain": 0.052,
-      "why": "Changing the evacuation order. Same asset, quieter: the second use is a correction rather than a declaration."
     },
     {
       "cueId": "ch02-150-overrides",
@@ -315,6 +286,18 @@
       "timing": "after",
       "gain": 0.029,
       "why": "Scale factor calculating arrives quietly, which is worse. The chapter ends on the calm voice of something that has already decided."
+    }
+  ],
+  "_removed": [
+    {
+      "cueId": "ch02-130-sirens",
+      "asset": "amb_alarm_pulse",
+      "why": "Removed 2026-09-21. THE SETTLEMENT-WIDE SIREN IS NO LONGER CANON. In the revised manuscript Jack tells Lena to keep the laboratory isolated and not sound a settlement alarm, and nearly five hundred people sleep through the activation. A siren outside the window contradicts the line that follows it. Local console warning tones stay; they are the lab's own and the revised text keeps them."
+    },
+    {
+      "cueId": "ch02-140-intercom-again",
+      "asset": "sfx_intercom_open",
+      "why": "Jack no longer keys the intercom a second time. That was the line where he changed the evacuation order, and there is no evacuation order in the revised chapter: he tells Lena to keep the laboratory isolated and not sound an alarm."
     }
   ]
 }

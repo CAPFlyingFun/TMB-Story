@@ -1479,16 +1479,6 @@ class ProceduralTests(unittest.TestCase):
                 self.assertTrue(audio.endswith(".mp3"),
                                 "%s is played once; mp3 padding costs nothing" % aid)
 
-    def test_the_extension_reaches_the_cue_and_therefore_the_player(self):
-        root = os.path.dirname(os.path.dirname(HERE))
-        man = json.load(open(os.path.join(root, "audio", "manifests", "chapter-03.json"),
-                             encoding="utf-8"))
-        sirens = [c for c in man["cues"] if c["asset"].startswith("amb_alarm_pulse")]
-        self.assertTrue(sirens)
-        for c in sirens:
-            self.assertTrue(c["audio"].endswith(".wav"),
-                            "the browser fetches whatever the manifest says")
-
     def test_a_procedural_asset_is_never_web_compressed(self):
         src = open(os.path.join(os.path.dirname(os.path.dirname(HERE)),
                                 "scripts", "tmbaudio", "normalize.py"), encoding="utf-8").read()
@@ -1573,79 +1563,62 @@ class ProceduralTests(unittest.TestCase):
         self.assertIn("exp(-max(0,t-3)/3)", expr, "and then decays")
         self.assertNotIn("cos(", expr, "a wind-down does not sweep back up")
 
-    def test_the_shipped_winddown_is_a_one_shot_with_a_fade(self):
-        root = os.path.dirname(os.path.dirname(HERE))
-        reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))
-        a = reg["assets"]["sfx_siren_winddown"]
-        self.assertIs(a["loop"], False)
-        self.assertTrue(a["recipe"]["fadeOutMs"] > 0)
-        cues = json.load(open(os.path.join(root, "audio", "cues", "chapter-03.json"),
-                              encoding="utf-8"))["cues"]
-        cue = [c for c in cues if c["asset"] == "sfx_siren_winddown"][0]
-        self.assertNotIn("sustain", cue, "a wind-down that looped would never wind down")
+class QuietEventTests(unittest.TestCase):
+    """The catastrophe is quiet, and that is a thing the audio can contradict.
 
-    def test_the_sirens_sit_further_away_than_the_swell(self):
-        """Distance is level AND filtering; the swell at the window is neither."""
-        root = os.path.dirname(os.path.dirname(HERE))
-        reg = json.load(open(os.path.join(root, "audio", "sfx-registry.json"), encoding="utf-8"))
-        cues = json.load(open(os.path.join(root, "audio", "cues", "chapter-03.json"),
-                              encoding="utf-8"))["cues"]
-        beds = [c for c in cues if c["asset"].startswith("amb_alarm_pulse")]
-        swell = [c for c in cues if c["asset"] == "sfx_siren_winddown"][0]
-        for c in beds:
-            # Not a magic number: what matters is that a distant siren is well below
-            # the swell that is deliberately close. The figure has moved four times --
-            # -4.4, -10, -18 (silent), now -14 -- so pinning one would only record
-            # whichever guess was last.
-            self.assertLessEqual(c["emphasisDb"], -14.0)
-            self.assertLess(c["emphasisDb"], swell.get("emphasisDb", 0.0),
-                            "the swell is meant to be the loud one")
-            # Relative to the TONE, not an absolute cutoff: a filter below the tone
-            # erases the sound, and one far above it does nothing. What says "outside"
-            # is that the distant sirens are filtered harder than the close swell.
-            r = reg["assets"][c["asset"]]["recipe"]
-            bed = r["lowpassHz"] / float(r.get("toneHz") or r["startHz"])
-            sw = reg["assets"]["sfx_siren_winddown"]["recipe"]
-            close = sw["lowpassHz"] / float(sw.get("toneHz") or sw["startHz"])
-            self.assertLess(bed, close,
-                            "the distant sirens must be duller than the one at the window")
-            self.assertLessEqual(bed, 2.0,
-                                 "a wall eats the high end; that is what makes it outside")
+    Joshua's revision, 2026-09-21: Jack tells Lena to keep the laboratory isolated and
+    NOT sound a settlement alarm, and nearly five hundred people sleep through the
+    activation. The distinction he drew is the one these tests hold:
 
-    def test_the_swell_is_audibly_louder_than_the_distant_sirens(self):
-        """"Louder on purpose for a few seconds" is only true if it actually is.
+        a local console warning tone  -- yes, the revised text keeps them
+        a settlement-wide siren       -- no, not before the activation
 
-        At emphasis 0 the wind-down sat 23 dB under the narration while the beds sat
-        37 dB under -- a 14 dB difference that still left the loud moment quiet. The
-        gap is what the scene needs, not the absolute number.
-        """
-        root = os.path.dirname(os.path.dirname(HERE))
-        cues = json.load(open(os.path.join(root, "audio", "cues", "chapter-03.json"),
-                              encoding="utf-8"))["cues"]
-        swell = [c for c in cues if c["asset"] == "sfx_siren_winddown"][0]
-        beds = [c for c in cues if c["asset"].startswith("amb_alarm_pulse")]
-        self.assertGreater(swell["emphasisDb"], 0.0,
-                           "the one close moment has to sit above its category")
-        for c in beds:
-            self.assertGreaterEqual(swell["emphasisDb"] - c["emphasisDb"], 15.0,
-                                    "the swell must be clearly the loud one")
+    These replace five tests that pinned the old sirens' level, filtering and pitch
+    change. Those were correct about a story that no longer exists; a test that
+    defends deleted canon is worse than no test, because it argues for putting it back.
+    """
 
-    def test_the_manuscript_pitch_change_has_a_cue(self):
-        """Chapter 3 says the sirens changed pitch; for a while the audio did not."""
-        root = os.path.dirname(os.path.dirname(HERE))
-        cues = json.load(open(os.path.join(root, "audio", "cues", "chapter-03.json"),
-                              encoding="utf-8"))["cues"]
-        beds = [c for c in cues if c["asset"].startswith("amb_alarm_pulse")]
-        self.assertEqual(len(beds), 2, "one before the line, a different one after")
-        self.assertEqual(len({c["asset"] for c in beds}), 2,
-                         "the same asset twice would change nothing")
-        change = [c for c in beds if "changed-pitch" in c["cueId"]][0]
-        first = [c for c in beds if c is not change][0]
-        # The one that changes must START on the line that says it changed, and the
-        # other must have STOPPED by then -- two sirens overlapping is not a change.
-        self.assertEqual(change["anchor"]["clipId"], "narrator-f252c126c3eb")
-        self.assertNotEqual(first["sustain"]["until"], change["anchor"],
-                            "the first has to end before the second begins")
+    SETTLEMENT = ("amb_alarm_pulse", "amb_alarm_pulse_fast", "sfx_siren_winddown",
+                  "amb_settlement_sirens")
+
+    def _cues(self, n):
+        return sfxmod.load_cues(n).get("cues") or []
+
+    def test_no_settlement_siren_sounds_anywhere_in_the_quiet_night(self):
+        for n in (1, 2, 3, 4):
+            for cue in self._cues(n):
+                self.assertNotIn(cue["asset"], self.SETTLEMENT,
+                                 "chapter %d still cues %s (%s). The settlement does "
+                                 "not sound an alarm before the activation."
+                                 % (n, cue["asset"], cue["cueId"]))
+
+    def test_the_local_console_tones_are_still_there(self):
+        """The other half of the rule. Silencing the lab's own warnings would be the
+        opposite mistake: the chapter opens on a console waking Jack up."""
+        assets = {c["asset"] for c in self._cues(1)}
+        self.assertIn("sfx_console_tone_soft", assets)
+        self.assertIn("sfx_alert_warning_hit", assets)
+
+    def test_no_spoken_line_orders_an_evacuation_or_a_settlement_alarm(self):
+        reg = Registry()
+        overrides = mf.load_overrides()
+        for n, path in sorted(mf.chapter_files().items()):
+            for seg in parse.parse_chapter(path, reg, overrides)["segments"]:
+                said = seg["displayText"].lower()
+                for phrase in ("full evacuation", "evacuation protocol",
+                               "settlement-wide emergency", "sirens began"):
+                    self.assertNotIn(phrase, said,
+                                     "chapter %d still says %r: %r"
+                                     % (n, phrase, seg["displayText"][:70]))
+
+    def test_the_removed_cues_are_recorded_rather_than_vanished(self):
+        """A cue sheet says why a cue went, so the next person does not re-add it."""
+        removed = []
+        for n in (1, 2, 3):
+            removed += sfxmod.load_cues(n).get("_removed") or []
+        self.assertGreaterEqual(len(removed), 6)
+        for entry in removed:
+            self.assertTrue(entry.get("why"), "%s was removed with no reason" % entry)
 
 
 class WebEncodeTests(unittest.TestCase):
@@ -2167,9 +2140,23 @@ class SpeakerCorrectionTests(unittest.TestCase):
             self.assertTrue(key in provisional,
                             "override %s no longer matches anything the parser "
                             "produces, so its correction is not being applied" % key)
-        pinned = sum(1 for n in sorted(self.files)
-                     for seg in self._segments(n) if seg.get("method") == "override")
-        self.assertEqual(pinned, len(self.overrides))
+        landed = {}
+        for n in sorted(self.files):
+            for seg in self._segments(n):
+                if seg.get("method") == "override":
+                    landed[(n, seg["order"])] = seg
+        # Every pin has to land somewhere, and the number of pinned segments has to be
+        # accounted for: a pin that fires in more than one place must SAY it is meant
+        # to, because a global pin on a line like "No." would rewrite the voice of
+        # every other "No." in six chapters and nothing would complain.
+        self.assertGreaterEqual(len(landed), len(self.overrides))
+        for key, pin in self.overrides.items():
+            scope = pin.get("chapters") or ([pin["chapter"]] if pin.get("chapter") else None)
+            if scope is None:
+                self.assertEqual(pin.get("scope"), "everywhere",
+                                 "override %s names no chapter, so it applies to every "
+                                 "matching line in the book. Say `\"scope\": "
+                                 "\"everywhere\"` if that is intended." % key)
 
 
 class ChapterTimelineTests(unittest.TestCase):
