@@ -41,6 +41,56 @@ def api_key():
     return key
 
 
+def _why(exc):
+    """What ElevenLabs actually said, without ever printing the key.
+
+    A 401 FROM THIS API IS TWO COMPLETELY DIFFERENT PROBLEMS and the status code does
+    not tell them apart: a key that is wrong, and a key that is fine on an account
+    whose character quota is spent. The old message said "Check the secret" for both,
+    which sends the reader to the one place that is not broken. The answer is in the
+    response body -- `detail.status` is `invalid_api_key`, `quota_exceeded`,
+    `detected_unusual_activity` and so on -- so it is read and quoted.
+
+    The body is the server's and never contains the key; the redaction below is belt
+    and braces, because printing a secret once is permanent.
+    """
+    try:
+        body = exc.read().decode("utf-8", "replace")[:600]
+    except Exception:                                    # noqa: BLE001 - diagnostics only
+        return ""
+    status = message = ""
+    try:
+        detail = (json.loads(body) or {}).get("detail")
+        if isinstance(detail, dict):
+            status, message = detail.get("status", ""), detail.get("message", "")
+        elif isinstance(detail, str):
+            message = detail
+    except ValueError:
+        message = body.strip()
+    said = " ".join(x for x in (status, message) if x).strip()
+    key = os.environ.get(KEY_ENV)
+    if key and key in said:
+        said = said.replace(key, "<the key>")
+    return said
+
+
+def _refusal(exc):
+    """The 401/403 message, with the next action named rather than guessed at."""
+    said = _why(exc)
+    low = said.lower()
+    if "quota" in low or "credit" in low:
+        hint = ("The KEY IS FINE AND THE ACCOUNT IS OUT. Nothing generates until the "
+                "plan is topped up or renews. Every clip already made is kept, so the "
+                "re-run afterwards costs only what is still missing.")
+    elif "unusual" in low:
+        hint = ("ElevenLabs has flagged the ACCOUNT, not the key. That is cleared with "
+                "them; re-running will not help.")
+    else:
+        hint = "Check the %s secret." % KEY_ENV
+    return ("ElevenLabs refused the request (HTTP %d)%s %s The key itself is never "
+            "printed." % (exc.code, (": " + said) if said else ".", hint))
+
+
 def _request(text, voice_id, model, output_format, settings, timeout):
     """One synchronous request. Returns audio bytes. Raises on failure."""
     url = "%s/%s?output_format=%s" % (API_ROOT, voice_id, output_format)
@@ -87,9 +137,7 @@ def generate_one(seg, registry, log=print):
         except urllib.error.HTTPError as exc:
             last = exc
             if exc.code in (401, 403):
-                raise RuntimeError(
-                    "ElevenLabs rejected the credentials (HTTP %d). Check the "
-                    "%s secret. The key itself is not printed." % (exc.code, KEY_ENV))
+                raise RuntimeError(_refusal(exc))
             if exc.code == 422:
                 raise RuntimeError("ElevenLabs rejected the request for %s (HTTP 422); "
                                    "check the voice id and settings" % seg["clipId"])
@@ -230,9 +278,7 @@ def generate_one_sfx(plan, sfx_registry, log=print):
         except urllib.error.HTTPError as exc:
             last = exc
             if exc.code in (401, 403):
-                raise RuntimeError(
-                    "ElevenLabs rejected the credentials (HTTP %d). Check the "
-                    "%s secret. The key itself is not printed." % (exc.code, KEY_ENV))
+                raise RuntimeError(_refusal(exc))
             if exc.code in (400, 422):
                 # Not retryable and deliberately not retried: the request itself is
                 # wrong, so a second identical attempt only wastes a call. A 22-second

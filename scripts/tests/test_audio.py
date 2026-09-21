@@ -17,6 +17,7 @@ import sys
 import tempfile
 import types
 import unittest
+import urllib.error
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))          # scripts/
@@ -1562,6 +1563,60 @@ class ProceduralTests(unittest.TestCase):
         self.assertIn("min(t,3)", expr, "it holds before it falls")
         self.assertIn("exp(-max(0,t-3)/3)", expr, "and then decays")
         self.assertNotIn("cos(", expr, "a wind-down does not sweep back up")
+
+class ApiRefusalTests(unittest.TestCase):
+    """A 401 is two different problems, and the message has to say which.
+
+    On 2026-09-21 a run generated 156 clips and then failed 572 in a row, and all the
+    pipeline could say was "Check the ELEVENLABS_API_KEY secret" -- which pointed at
+    the one thing that had not changed. The reason is in the response body and was
+    being thrown away.
+    """
+
+    class FakeError(urllib.error.HTTPError):
+        def __init__(self, code, body):
+            self._body = body.encode("utf-8")
+            urllib.error.HTTPError.__init__(self, "u", code, "m", {}, None)
+
+        def read(self):
+            return self._body
+
+    def test_a_spent_quota_does_not_send_anyone_to_check_the_key(self):
+        said = elevenlabs._refusal(self.FakeError(401, json.dumps(
+            {"detail": {"status": "quota_exceeded",
+                        "message": "You have 0 credits remaining"}})))
+        self.assertIn("quota_exceeded", said)
+        self.assertIn("ACCOUNT IS OUT", said)
+        self.assertNotIn("Check the ELEVENLABS_API_KEY", said)
+
+    def test_a_bad_key_still_says_to_check_the_key(self):
+        said = elevenlabs._refusal(self.FakeError(401, json.dumps(
+            {"detail": {"status": "invalid_api_key", "message": "bad key"}})))
+        self.assertIn("invalid_api_key", said)
+        self.assertIn("Check the ELEVENLABS_API_KEY", said)
+
+    def test_a_flagged_account_says_re_running_will_not_help(self):
+        said = elevenlabs._refusal(self.FakeError(401, json.dumps(
+            {"detail": {"status": "detected_unusual_activity", "message": "blocked"}})))
+        self.assertIn("re-running will not help", said)
+
+    def test_an_unreadable_body_still_produces_a_usable_message(self):
+        said = elevenlabs._refusal(self.FakeError(403, "<html>gateway</html>"))
+        self.assertIn("HTTP 403", said)
+        self.assertIn("Check the ELEVENLABS_API_KEY", said)
+
+    def test_the_key_is_never_echoed_even_if_the_server_sends_it_back(self):
+        """Belt and braces: printing a secret once is permanent."""
+        os.environ["ELEVENLABS_API_KEY"] = "sk_secret_value"
+        try:
+            said = elevenlabs._refusal(self.FakeError(401, json.dumps(
+                {"detail": {"status": "invalid_api_key",
+                            "message": "key sk_secret_value is not valid"}})))
+        finally:
+            del os.environ["ELEVENLABS_API_KEY"]
+        self.assertNotIn("sk_secret_value", said)
+        self.assertIn("<the key>", said)
+
 
 class QuietEventTests(unittest.TestCase):
     """The catastrophe is quiet, and that is a thing the audio can contradict.
