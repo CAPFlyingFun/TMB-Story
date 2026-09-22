@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a0232565a6a0",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "947f93cee5ab46925b5d684f19f8db1f632533af746e5d5043ef55d64a901b1f",
+  "text": "Mark hesitated.",
+  "bytes": 24703,
+  "generated": "2026-09-22T19:21:34Z"
+}

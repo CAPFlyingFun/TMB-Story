@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-7dfa5ed5ebda",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1a6ffced4fddcb83a847376da37d3053f2ad6cffc1b4b7c7872b987de1b21e5a",
+  "text": "Don't make me reconsider.",
+  "bytes": 25539,
+  "generated": "2026-09-22T19:21:39Z"
+}

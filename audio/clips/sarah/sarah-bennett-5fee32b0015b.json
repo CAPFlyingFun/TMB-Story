@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-5fee32b0015b",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "84712980c96741114801af5c9138a7fc56b17b399a783ccae62b6604717ecb85",
+  "text": "They don't know.",
+  "bytes": 14254,
+  "generated": "2026-09-22T19:21:32Z"
+}

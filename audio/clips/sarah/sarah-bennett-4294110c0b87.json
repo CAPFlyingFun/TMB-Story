@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-4294110c0b87",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0e8e630a5aeaebcc1dae21b42d2bbbb8fd61c22b3197d7983e44eb515d1c712d",
+  "text": "That's what I'm trying to confirm.",
+  "bytes": 20942,
+  "generated": "2026-09-22T19:21:40Z"
+}

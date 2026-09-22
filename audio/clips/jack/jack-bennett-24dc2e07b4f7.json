@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-24dc2e07b4f7",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "45f93fe6f7673d05fd3253cd76bba610bc05009e32f1f56c0e3359520fc830bd",
+  "text": "Give it time.",
+  "bytes": 15926,
+  "generated": "2026-09-22T19:21:37Z"
+}
