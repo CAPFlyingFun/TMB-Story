@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-31762f90e1ba",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0a8cdf41e2fb62a8ebfc990db542c2e947f084efc419fb16adba75365b69bd3d",
+  "text": "Mark said, and stepped back from the doorway.",
+  "bytes": 43511,
+  "generated": "2026-09-22T02:57:48Z"
+}

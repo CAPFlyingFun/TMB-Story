@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-4129f89f2744",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1c2b4e4f91ad6c76ba434f865f862b2f10d8517ceaff740d2f904317bbe0b84f",
+  "text": "Toenail or thumbnail?",
+  "bytes": 24703,
+  "generated": "2026-09-22T02:57:59Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-9be678e1f9dd",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "83a01e3cf3bdea937d793487014ddc47990599a5f8cdd047bf6ebfea406cc8eb",
+  "text": "Not even a little?",
+  "bytes": 19688,
+  "generated": "2026-09-22T02:57:51Z"
+}

@@ -22,7 +22,7 @@
   "format": "wav",
   "expression": "0.5*lt(mod(t,3.6),2.4)*lt(mod(mod(t,3.6),0.6),0.4)*sin(PI*mod(mod(t,3.6),0.6)/0.4)*sin(2*PI*1040*t)",
   "measured": {
-    "measuredAt": "2026-09-21",
+    "measuredAt": "2026-09-22",
     "source": "scripts/audio.py normalize-sfx, decoded PCM, file unchanged",
     "seconds": 18.0,
     "peakDbfs": -7.7,

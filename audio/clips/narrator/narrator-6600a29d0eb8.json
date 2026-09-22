@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6600a29d0eb8",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fb442cb7bb61995946097ba9fb4af23bd41b1d351924b3a9611a9af0c261bfb6",
+  "text": "Now it stretched longer than Jack was tall.",
+  "bytes": 43511,
+  "generated": "2026-09-22T02:58:00Z"
+}

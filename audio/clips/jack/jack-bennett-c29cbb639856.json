@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-c29cbb639856",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a7eb6f90aa71ed42ba12bab5da65cd6af760b493b86e6e365cea036c0347b916",
+  "text": "I don't know. What do you think?",
+  "bytes": 31391,
+  "generated": "2026-09-22T02:57:55Z"
+}

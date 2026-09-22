@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-bdf5ced59ade",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cd95116337aa674ee0b80bb4ae167b2b9322f742c9ab0083a06f1da05985913a",
+  "text": "It's not a UFO, Mark.",
+  "bytes": 23449,
+  "generated": "2026-09-22T02:57:56Z"
+}

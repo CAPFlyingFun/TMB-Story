@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-c3f931f2116d",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a2fcc9bb16b67bbc08d45f01d90e3330b4c8223b887614a0374c8b29aac8b83b",
+  "text": "Hey Jack, what's that look like to you?",
+  "bytes": 33062,
+  "generated": "2026-09-22T02:57:54Z"
+}

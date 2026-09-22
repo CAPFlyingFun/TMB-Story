@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-39af4bc30eb3",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c6980319d5c8bc5e373b2940dbf286d54cad28a6c157c2dd4dd8474068212ff8",
+  "text": "Lena stood outside, still in her orange utility jacket. She held up both hands before either of them could ask.",
+  "bytes": 118326,
+  "generated": "2026-09-22T02:57:45Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-3c5e583e09dc",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "71e71320e7ec9941a07b7b2cd15f8994bd70a59a6de50287854b4cd4e634e0a7",
+  "text": "Jack found Mark waiting by the utility vehicle. Sarah and Lena stayed connected through his wrist terminal the whole way.",
+  "bytes": 113311,
+  "generated": "2026-09-22T02:57:50Z"
+}

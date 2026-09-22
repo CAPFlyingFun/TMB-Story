@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-ddacdde4cdca",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d0fa690839f39d19855422e8f06872ef81e3d300c8fb9330e22cd099eea18c6a",
+  "text": "A security officer stood just outside it, radio clipped to his shoulder, careful not to step past the threshold.",
+  "bytes": 108713,
+  "generated": "2026-09-22T02:57:46Z"
+}

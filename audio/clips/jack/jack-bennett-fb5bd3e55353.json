@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-fb5bd3e55353",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b6be2fd3bb1b0c7024a055aee9fe523cf509a38a61030339906593449a808817",
+  "text": "It's long. Curved. Kind of like a moon.",
+  "bytes": 39750,
+  "generated": "2026-09-22T02:57:56Z"
+}

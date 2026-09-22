@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-2036bc0e4081",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7e27c514f1a21752ec84c1b12dffc4049de11582144512aa6275e48a784d9136",
+  "text": "Jack went still.",
+  "bytes": 24703,
+  "generated": "2026-09-22T02:57:58Z"
+}

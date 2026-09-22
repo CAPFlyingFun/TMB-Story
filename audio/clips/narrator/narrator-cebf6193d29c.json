@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-cebf6193d29c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "437775fd391d3b68fcf98edcbc1d16af6420e31fd9a41562f2d79b64a6295308",
+  "text": "Jack let out a chuckle while moving the sensor closer.",
+  "bytes": 51035,
+  "generated": "2026-09-22T02:57:53Z"
+}

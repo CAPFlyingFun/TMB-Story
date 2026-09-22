@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-ce22b75916ec",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f548e0f091933ef78f5fe0255536ff8a84f2d10e93b69ae4bf6824d437e7f4b3",
+  "text": "Mark grinned and said nothing else.",
+  "bytes": 35152,
+  "generated": "2026-09-22T02:57:52Z"
+}

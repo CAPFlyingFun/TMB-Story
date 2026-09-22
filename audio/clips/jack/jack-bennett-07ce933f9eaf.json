@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-07ce933f9eaf",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "84312f4befb5933e46297aaa7d192168646fc8da86af91874b2ee37a61c16ab4",
+  "text": "We're done. Let's move.",
+  "bytes": 27629,
+  "generated": "2026-09-22T02:58:01Z"
+}

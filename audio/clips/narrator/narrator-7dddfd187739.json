@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7dddfd187739",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bb5a515c45b55526bb1a9995dd5957fbf5089267672913f41fc9758a9aad197a",
+  "text": "He nodded down the hallway behind him.",
+  "bytes": 37660,
+  "generated": "2026-09-22T02:57:47Z"
+}

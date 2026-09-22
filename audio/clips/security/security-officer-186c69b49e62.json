@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-186c69b49e62",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "de3987519bd58982d787039bfa15624a58b4de023b046548f63f19da773e3c0e",
+  "text": "Funny thing about tonight. Usually when your problems get smaller, that's good news.",
+  "bytes": 74440,
+  "generated": "2026-09-22T02:57:51Z"
+}

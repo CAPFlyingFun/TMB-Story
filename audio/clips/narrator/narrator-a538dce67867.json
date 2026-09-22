@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a538dce67867",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b5bb727d958c9be3d75a999aebdcf528935a4e64da00338bc17e587028a74759",
+  "text": "A second knock came from the still-open door.",
+  "bytes": 42675,
+  "generated": "2026-09-22T02:57:45Z"
+}

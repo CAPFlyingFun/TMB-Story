@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-37cf39ae06f2",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4e4bbf8885d635174099b4b8fc4b970fdb10e59d58e98209e1fc4a45b4a5270c",
+  "text": "Doctor Bennett?",
+  "bytes": 18852,
+  "generated": "2026-09-22T02:57:46Z"
+}

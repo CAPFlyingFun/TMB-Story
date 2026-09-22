@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-130bb3083352",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b247ba0b5fb83de2f588eeab43c506c531f0b8300419f2523c7a46e448a02da5",
+  "text": "I don't know. That's why I asked you.",
+  "bytes": 36824,
+  "generated": "2026-09-22T02:57:55Z"
+}

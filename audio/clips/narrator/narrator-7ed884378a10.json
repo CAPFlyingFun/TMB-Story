@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7ed884378a10",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5656dd4f19deeb92fc3e772315dd710a77ea555a47f93b1299265b3716f37165",
+  "text": "It was about the size of his head.",
+  "bytes": 34316,
+  "generated": "2026-09-22T02:57:53Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-64cec3e70836",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1f63600e03378ba0a21a909fe2fca0bdd0bf917f9796e671856ee187c0b0f315",
+  "text": "UFO?",
+  "bytes": 15926,
+  "generated": "2026-09-22T02:57:56Z"
+}

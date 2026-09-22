@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-19d9f3f89866",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "260f54a6b1496feeefce4878bc8b44108ac6136ea4a1b5d0e6cb28944fec1c37",
+  "text": "I'm headed to the southern boundary for a visual check, inside the developed zone. Wanted you to know before I go.",
+  "bytes": 105787,
+  "generated": "2026-09-22T02:57:48Z"
+}

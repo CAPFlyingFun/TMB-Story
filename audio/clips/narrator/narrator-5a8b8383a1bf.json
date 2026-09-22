@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5a8b8383a1bf",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "49e6b2832c5715b8d93cfff67008cc8a107c8c5d92b4d8bd7aaad4e9d6737cb7",
+  "text": "Sarah's voice cut in over the comm.",
+  "bytes": 37660,
+  "generated": "2026-09-22T02:57:51Z"
+}

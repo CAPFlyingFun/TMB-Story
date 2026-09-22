@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a2e14822006a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8bc97177341e066bf17f634f74a3d06e436ea94cba54637869fc22062f034840",
+  "text": "Mark took a step back.",
+  "bytes": 31391,
+  "generated": "2026-09-22T02:57:54Z"
+}
