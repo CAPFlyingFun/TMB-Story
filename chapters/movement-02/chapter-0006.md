@@ -3,19 +3,20 @@ chapter: 6
 title: "Someone Knew"
 movement: 2
 pov: Jack
-word_count: 2106
+word_count: 2102
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
   opens: "After the return from the perimeter, in the main control room, still before dawn"
   elapsed: "the hours after the boundary inspection"
 objective: "Work out how small the settlement is, and find out whether TOMBS was given a target rather than simply going wrong."
-locations: ["The main control room"]
-characters: [Jack, Sarah, "Lena Ortiz", "A settlement security officer"]
+locations: ["The main control room", "The settlement medical center (remote, by call)"]
+characters: [Jack, Sarah, "Lena Ortiz", "Mark Jones, perimeter security", "Doctor Mercer (remote, by wrist terminal)"]
 status_changes:
   - "The scale is calculated: an average adult is now somewhere around several millimeters tall"
   - "The wrist-camera footage shows narrow legs and a curved shape above them. Sarah says the word insect"
   - "TOMBS was given a target scale, which means somebody chose how small"
+  - "Doctor Mercer calls: the medical center is undamaged, and she is told the town got smaller"
   - "The boundary follows the developed settlement rather than a radius: somebody drew a selection"
   - "The boundary took what the settlement needs for hours, not what it needs to survive"
   - "A diagnostic trace the intruder did not erase shows the boundary definition was loaded, not created"
@@ -25,12 +26,12 @@ new_canon:
   - "The event was prepared three weeks in advance and executed with Jack's own administrator certificate"
   - "Whoever did it knew which infrastructure counted as developed"
   - "There is a phase two"
-playable_beat_flow: ["connect the environmental sensor", "replay the wrist-camera footage frame by frame", "calculate the scale from the TOMBS event log", "open the original calibration records", "compare the unauthorized command with the internal calculation", "overlay the boundary on the island development survey", "open the maintenance partition", "read the file metadata", "open the ownership field", "open the label"]
+playable_beat_flow: ["connect the environmental sensor", "replay the wrist-camera footage frame by frame", "calculate the scale from the TOMBS event log", "open the original calibration records", "compare the unauthorized command with the internal calculation", "take the medical center call", "overlay the boundary on the island development survey", "open the maintenance partition", "read the file metadata", "open the ownership field", "open the label"]
 ending_type: revelation
 review_status: approved
 audio_status: pending
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, 983de326-04-06_Chapters - TRADDOMIUM Micro Battle - Updated 4-6.docx, imported 2026-09-21"
+source: "Joshua's revised Word manuscript, 311bad41-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22"
 ---
 # Chapter 6: Someone Knew
 
@@ -74,9 +75,9 @@ Lena remained at the console with the southern camera enlarged. "For the record,
 
 Jack walked over. "We didn't run."
 
-One of the security officers entered behind him. "We ran."
+Mark stepped in behind him. "We ran."
 
-Lena pointed at the officer. "I like him."
+Lena pointed at Mark. "I like him."
 
 Jack ignored both of them and connected the environmental sensor to the console.
 
@@ -310,7 +311,7 @@ The call ended.
 
 Nobody spoke for a moment.
 
-Sarah broke the silence. "Morning's coming."
+Sarah broke the silence. "Dawn's coming."
 
 "I know."
 
@@ -600,7 +601,7 @@ The control-room window trembled.
 
 Nobody looked away from the screen.
 
-Jack had spent the last couple of hours trying to understand what had gone wrong with TOMBS.
+Jack had spent every minute since the activation trying to understand what had gone wrong with TOMBS.
 
 Now, for the first time, he understood something worse.
 

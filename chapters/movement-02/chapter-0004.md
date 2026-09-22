@@ -3,31 +3,33 @@ chapter: 4
 title: "The First Calls"
 movement: 2
 pov: Jack
-word_count: 1214
+word_count: 1571
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
   opens: "Immediately after Chapter 3, in the main control room, still late on the same night"
-  elapsed: "the first several minutes after the activation"
+  elapsed: "the first hour after the activation, ending around midnight"
 objective: "Find out what the settlement has become, and decide who to tell first, while nearly five hundred people are still asleep and do not know anything has happened."
-locations: ["The main control room", "The island utility station (remote, by call)", "The settlement medical center (remote, by call)", "The southern perimeter road (remote, by security channel)"]
-characters: [Jack, Sarah, "Lena Ortiz (remote, by wrist terminal)", "Doctor Mercer (remote, by wrist terminal)", "A settlement security officer, Unit Twelve (remote, by security channel)"]
+locations: ["The main control room", "The island utility station (remote, by call)", "The southern perimeter road (remote, by security channel)"]
+characters: [Jack, Sarah, "Lena Ortiz (remote, by wrist terminal)", "A settlement security officer, Unit Twelve (remote, by security channel)"]
 status_changes:
   - "Lena sees the wall of earth beyond the utility station fence and locks the exterior doors"
-  - "Doctor Mercer reports the medical center undamaged and is told the settlement changed scale"
   - "Security finds the southern road ending at the boundary and is ordered back"
   - "Jack decides against a general alarm: the people who need to know are told first"
   - "The settlement infrastructure is found cut cleanly at the boundary; the freshwater intake ends in a smooth face"
   - "A shadow crosses the soil beyond the eastern fence, and Jack orders nobody outside the developed zone"
+  - "Around midnight the settlement is still asleep; only utility, security and a few night-shift workers know"
+  - "Lena's water estimate arrives: several days at normal consumption, longer under restriction, and restrictions start"
 new_canon:
   - "The boundary cut the settlement's external connections cleanly rather than tearing them"
   - "Something large is moving in the wilderness beyond the developed zone"
-playable_beat_flow: ["answer the utility call", "bring up the utility station cameras", "take the medical center call", "answer the security channel", "open the settlement infrastructure schematic", "trace the freshwater intake to the boundary", "inspect the cut pipe on the maintenance camera", "step through the frozen camera frames"]
-ending_type: revelation
+  - "Water is the first hard limit: the tanks were buffers, and the reservoir did not come with them"
+playable_beat_flow: ["answer the utility call", "bring up the utility station cameras", "answer the security channel", "open the settlement infrastructure schematic", "trace the freshwater intake to the boundary", "inspect the cut pipe on the maintenance camera", "step through the frozen camera frames", "take the water estimate"]
+ending_type: quiet beat
 review_status: approved
 audio_status: pending
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, 983de326-04-06_Chapters - TRADDOMIUM Micro Battle - Updated 4-6.docx, imported 2026-09-21"
+source: "Joshua's revised Word manuscript, 311bad41-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22"
 ---
 # Chapter 4: The First Calls
 
@@ -252,3 +254,63 @@ He kept his eyes on the dark edge of the feed.
 Sarah looked toward the impossible forest beyond the window.
 
 This time, she didn't argue.
+
+Around midnight, most of the settlement was still asleep. Inside the laboratory, the past hour had felt endless. Outside, it had almost gone unnoticed.
+
+Jack stood at the main console with a cup of coffee he had forgotten to drink. A handful of porch lights had come on since the last vibration, scattered across the residential blocks like the town was blinking awake one eye at a time. Everything else stayed dark: streets empty, windows black, the settlement behaving as though nothing at all had happened while it slept through the strangest hour of its existence.
+
+Only a few people knew otherwise. Utility. Security. A handful of night-shift workers who had felt the floor move and gone to a window instead of back to bed.
+
+For now, that was small enough to manage.
+
+Medical remained stable. Utility crews had isolated the few damaged lines they could reach safely. The settlement still had power, breathable air, and stored water.
+
+It was an impressive list of things that had not gone wrong.
+
+Jack hated that it felt reassuring.
+
+Sarah sat at the neighboring console with her feet propped on a small equipment case. She had objected when Jack brought it over, then used it without another word.
+
+He glanced at her.
+
+Sarah caught him looking. "Don't."
+
+"I didn't say anything."
+
+"You were about to."
+
+Jack returned to his screen. "I was thinking internally."
+
+"With your eyes open this time?"
+
+"Advanced technique."
+
+Sarah's mouth twitched, but she didn't look up from her tablet.
+
+A call came through on the console. Lena's name.
+
+"We have a water estimate," she said, before Jack could even greet her.
+
+Jack straightened. "How bad?"
+
+"At current normal consumption, bad. With emergency restrictions, considerably less bad."
+
+Sarah lowered her tablet. "How long?"
+
+"Several days before we have to start making uncomfortable decisions. Longer if we shut down nonessential industrial use and recycle aggressively."
+
+Jack nodded. "Do it."
+
+"Already started."
+
+Sarah glanced at him. "I like her."
+
+"So do I."
+
+Lena's voice came through dryly. "I can hear you."
+
+Jack muted the channel.
+
+Sarah laughed quietly.
+
+For a moment, it almost sounded like an ordinary late shift.
