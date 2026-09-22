@@ -29,7 +29,7 @@ ending_type: quiet beat
 review_status: approved
 audio_status: pending
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, 311bad41-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22"
+source: "Joshua's revised Word manuscript, 211bc46e-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22 (split quotes joined for the narrator)"
 ---
 # Chapter 4: The First Calls
 
@@ -51,11 +51,11 @@ Lena's voice came through quietly. "Jack, what happened?"
 
 He turned toward the window. A blade of grass swayed beyond the streetlights, its tip disappearing into the darkness above the nearest buildings.
 
-"TOMBS activated," Jack said. "We think the developed zone was inside the boundary."
+"TOMBS activated. We think the developed zone was inside the boundary," Jack said.
 
 Lena paused. "Think?"
 
-"The system hid the final coordinates before activation." Jack looked at the event record. "We only confirmed the result afterward."
+Jack looked at the event record. "The system hid the final coordinates before activation. We only confirmed the result afterward."
 
 "And the result is?"
 
@@ -75,7 +75,7 @@ Then Lena stopped moving.
 
 Jack brought up the utility station's exterior cameras. "What do you see?"
 
-"I'm not sure." Her voice had gone very still. "There's a wall behind the east fence."
+Her voice had gone very still. "I'm not sure. There's a wall behind the east fence."
 
 Sarah leaned toward Jack's screen as he selected the camera. The utility station appeared intact beneath its exterior lights. Transformers, service vehicles, and the perimeter fence all looked exactly as they had before the activation.
 
@@ -87,7 +87,7 @@ Jack enlarged the feed. "That's the ground."
 
 Lena let out a quiet breath. "I was hoping you wouldn't say that."
 
-"Stay inside," Jack said. "Keep the night crew inside too. No general alarm yet. I don't want people pouring into the streets before we know what's out there."
+"Stay inside. Keep the night crew inside too. No general alarm yet. I don't want people pouring into the streets before we know what's out there," Jack said.
 
 "Already locking the exterior doors."
 
@@ -109,7 +109,7 @@ A man's voice answered. "Doctor, I wasn't planning on crossing it."
 
 "What do you see?"
 
-"Dirt. Grass. A lot of both." The officer hesitated. "And I think the dirt is higher than my vehicle."
+The officer hesitated. "Dirt. Grass. A lot of both. And I think the dirt is higher than my vehicle."
 
 Sarah leaned closer to the speaker. "Any movement?"
 
@@ -185,11 +185,11 @@ Lena's call returned through Sarah's tablet. "You found the intake, didn't you?"
 
 Sarah picked it up. "We're looking at it."
 
-"I checked three boundary crossings," Lena said. "Same thing. Power conduit, water intake, and the old fiber trunk. Everything ends cleanly."
+"I checked three boundary crossings. Same thing. Power conduit, water intake, and the old fiber trunk. Everything ends cleanly," Lena said.
 
 Jack opened the utility inventory. "How much water is stored inside the settlement?"
 
-"I'm calculating consumption now." Lena paused as keys clicked faintly through the call. "The tanks were designed as buffers, not as our only supply."
+Lena paused as keys clicked faintly through the call. "I'm calculating consumption now. The tanks were designed as buffers, not as our only supply."
 
 Sarah opened the population estimate. "Give us the conservative number when you have it."
 
@@ -213,7 +213,7 @@ Sarah rested one palm against her stomach.
 
 Jack turned immediately. "You okay?"
 
-"Yes." She waited, then gave him a small nod. "He's moving."
+She waited, then gave him a small nod. "Yes. He's moving."
 
 Jack let out the breath he had started holding.
 

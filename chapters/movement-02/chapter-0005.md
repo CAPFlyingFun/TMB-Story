@@ -3,7 +3,7 @@ chapter: 5
 title: "The Edge"
 movement: 2
 pov: Jack
-word_count: 1587
+word_count: 1584
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -29,7 +29,7 @@ ending_type: cliffhanger
 review_status: approved
 audio_status: pending
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, 311bad41-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22"
+source: "Joshua's revised Word manuscript, 211bc46e-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22 (split quotes joined for the narrator)"
 ---
 # Chapter 5: The Edge
 
@@ -39,11 +39,11 @@ The laughter disappeared.
 
 Jack unmuted the channel and opened the perimeter cameras. "Any more shadows?"
 
-"Nothing clear," Lena said. "Security logged three vibrations since the last one. They don't match anything on the local seismic sensors."
+"Nothing clear. Security logged three vibrations since the last one. They don't match anything on the local seismic sensors," Lena said.
 
 Sarah pulled up the times. "They're not regular."
 
-"No," Jack said. "But they're moving."
+"No. But they're moving," Jack said.
 
 She looked at him. "Moving?"
 
@@ -119,7 +119,7 @@ A security officer stood just outside it, radio clipped to his shoulder, careful
 
 "That's me."
 
-"Mark Jones, perimeter security." He nodded down the hallway behind him. "I'm headed to the southern boundary for a visual check, inside the developed zone. Wanted you to know before I go."
+He nodded down the hallway behind him. "Mark Jones, perimeter security. I'm headed to the southern boundary for a visual check, inside the developed zone. Wanted you to know before I go."
 
 "I'll be at the vehicle," Mark said, and stepped back from the doorway.
 
@@ -137,7 +137,7 @@ The answer came so fast that Jack looked up.
 
 "I didn't need to. It's dangerous."
 
-"I know," Jack said, keeping his voice even. "But the cameras aren't enough. I've watched that boundary since this started and it hasn't told me anything the sensors couldn't already give me as a number."
+"I know. But the cameras aren't enough. I've watched that boundary since this started and it hasn't told me anything the sensors couldn't already give me as a number," Jack said, keeping his voice even.
 
 "So now you want to go stand next to it."
 
@@ -147,7 +147,7 @@ Sarah didn't answer right away.
 
 She looked past him at the boundary map, then at the frozen shape on the security feed that still hadn't resolved into anything.
 
-"Okay," she said. "You can go."
+"Okay. You can go," she said.
 
 Jack blinked. "Really?"
 
@@ -197,7 +197,7 @@ Sarah rested a hand against it. "Both of us."
 
 "Stay on our side," she added, already turning back to the console.
 
-"I'll stay on our side," Jack said. "I promise not to make friends with the grass."
+"I'll stay on our side. I promise not to make friends with the grass," Jack said.
 
 "Jack."
 
@@ -269,9 +269,7 @@ Mark shone his light across the soil. Something glittered near the base of the r
 
 Jack adjusted his flashlight.
 
-A droplet of water clung beneath a grass blade.
-
-It was about the size of his head.
+A droplet of water clung beneath a grass blade, rising nearly to Jack's chest.
 
 Mark took a step back. "That is deeply unpleasant."
 
@@ -297,7 +295,7 @@ Mark swept his light toward it. "Hey Jack, what's that look like to you?"
 
 "I don't know. That's why I asked you."
 
-"Fair." Jack studied the shape through his wrist camera. "It's long. Curved. Kind of like a moon."
+Jack studied the shape through his wrist camera. "Fair. It's long. Curved. Kind of like a moon."
 
 "UFO?"
 

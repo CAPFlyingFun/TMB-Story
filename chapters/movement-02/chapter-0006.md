@@ -31,7 +31,7 @@ ending_type: revelation
 review_status: approved
 audio_status: pending
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, 311bad41-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22"
+source: "Joshua's revised Word manuscript, 211bc46e-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22 (split quotes joined for the narrator)"
 ---
 # Chapter 6: Someone Knew
 
@@ -255,13 +255,13 @@ MEDICAL CENTER.
 
 Jack glanced at Sarah before answering. "Bennett."
 
-"Doctor Bennett, this is Doctor Mercer." A woman's voice, brisk and fully awake. "Did your lab cause that vibration a little while ago?"
+A woman's voice, brisk and fully awake. "Doctor Bennett, this is Doctor Mercer. Did your lab cause that vibration a little while ago?"
 
 "Probably."
 
 "That is not the answer I wanted."
 
-"It's not the one I wanted to give." Jack pulled up the medical center's status panel. "Any damage?"
+Jack pulled up the medical center's status panel. "It's not the one I wanted to give. Any damage?"
 
 "Nothing serious. One patient woke up frightened, two nurses felt the floor move, and half my overnight staff are arguing about whether we had an earthquake."
 
@@ -301,7 +301,7 @@ Doctor Mercer's voice shifted from disbelief into something steadier, more proce
 
 Jack looked toward the dark residential map. "We're working on that."
 
-"Understood." A pause. "Jack. How long before the rest of the settlement knows?"
+A pause. "Understood. Jack. How long before the rest of the settlement knows?"
 
 "Not long," he admitted.
 
@@ -519,7 +519,7 @@ Lena looked at him. "Jack?"
 
 Sarah immediately shook her head. "He didn't."
 
-"I know," Lena said. "I'm asking why the computer thinks he did."
+"I know. I'm asking why the computer thinks he did," Lena said.
 
 Jack opened the authentication signature.
 
