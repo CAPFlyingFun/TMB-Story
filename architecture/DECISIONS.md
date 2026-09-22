@@ -203,3 +203,5 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 
 **Consequences:** Word counts 1,571 / 1,584 / 2,102 become 1,558 / 1,562 / 2,094. A de-tagged line is a new clip (its text changed), so the twenty-two lines regenerate; the tag clips are simply no longer referenced. The same import carries his other two fixes: Chapter 4's Unit Twelve is now named as Mark, and the midnight paragraph separates the residents who went back to bed from the utility and security staff already on duty.
 **Status:** Accepted, 2026-09-22.
+
+**0024, addendum (2026-09-22, same day):** Joshua: "you'll also check chapters 1 through three to make sure they're also good from 'Said'?" Scanned with the same rule. Chapter 1 and Chapter 3 have no bare tag (their "said"s are inside dialogue, or "Jack said nothing."). Chapter 2 has two -- `"It just hid them," she said.` and `"Understood," Lena said.` -- and they come out the same way. Chapter 2 is otherwise still the verbatim 2026-09-21 import, and its `source:` line says so. 1,008 words become 1,004.

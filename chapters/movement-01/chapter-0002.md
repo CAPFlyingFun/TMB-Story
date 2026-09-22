@@ -3,7 +3,7 @@ chapter: 2
 title: "The Boundary"
 movement: 1
 pov: Jack
-word_count: 1008
+word_count: 1004
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -24,7 +24,7 @@ ending_type: revelation
 review_status: approved
 audio_status: recorded
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscripts, 01-03 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. These replace the pre-revision opening: the catastrophe is now quiet, there is no settlement-wide siren before activation, and most residents sleep through the event."
+source: "Joshua's revised Word manuscripts, 01-03 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. These replace the pre-revision opening: the catastrophe is now quiet, there is no settlement-wide siren before activation, and most residents sleep through the event. Two bare said-tags removed at Joshua's instruction on 2026-09-22 (Decision 0024): 'It just hid them,' she said. and 'Understood,' Lena said. now end at the closing quote. No other change."
 ---
 
 # Chapter 2: The Boundary
@@ -147,7 +147,7 @@ Jack highlighted the figures. "The target dimensions."
 
 Sarah leaned closer. The values flickered, vanished, and returned as unreadable placeholders.
 
-"It just hid them," she said.
+"It just hid them."
 
 Jack tried to reopen the raw parameters. "Or somebody hid them."
 
@@ -173,7 +173,7 @@ Sarah nodded. "Quiet containment until we know the boundary."
 
 "Exactly." Jack looked back at the screen. "If anything changes outside this building, call us."
 
-"Understood," Lena said.
+"Understood."
 
 The laboratory remained quiet beyond the muted warning tones at their consoles. Somewhere outside, nearly five hundred people slept through an emergency they did not know existed.
 
