@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-0f5dabf769fa",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7653fdab64631cab2d80a04a973ced8c78beb2039f3e31565c666e8d9b763224",
+  "text": "Mark Jones, perimeter security. I'm headed to the southern boundary for a visual check, inside the developed zone. Wanted you to know before I go.",
+  "bytes": 134208,
+  "generated": "2026-09-22T17:38:25Z"
+}

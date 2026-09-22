@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-5e515035b0af",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e356711b921c126db71f7b1a4a459942d1bd35521b816d53deb8dd4448393451",
+  "text": "The system hid the final coordinates before activation. We only confirmed the result afterward.",
+  "bytes": 79874,
+  "generated": "2026-09-22T17:38:21Z"
+}

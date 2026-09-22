@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-ba5a0d37c24b",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "821d0b80fbd231fad4972be459c3985aa26285ff95d06f36d7f8c26f4e53cb5c",
+  "text": "No. But they're moving,",
+  "bytes": 24703,
+  "generated": "2026-09-22T17:38:24Z"
+}

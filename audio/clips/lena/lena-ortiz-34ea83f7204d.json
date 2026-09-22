@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-34ea83f7204d",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "80986412e371c81dde067b80c217a0cf4ce39e6c9267c07b047a3ab5bbefa3ec",
+  "text": "I checked three boundary crossings. Same thing. Power conduit, water intake, and the old fiber trunk. Everything ends cleanly,",
+  "bytes": 158032,
+  "generated": "2026-09-22T17:38:23Z"
+}

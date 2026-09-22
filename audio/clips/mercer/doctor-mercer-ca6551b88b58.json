@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-ca6551b88b58",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "91b77ce017931ea3b0732dd93fbac816e17082a15582b776757ca42b8275774a",
+  "text": "Doctor Bennett, this is Doctor Mercer. Did your lab cause that vibration a little while ago?",
+  "bytes": 78202,
+  "generated": "2026-09-22T17:38:27Z"
+}

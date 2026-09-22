@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-ba567844cd6a",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8db50f2594a5c6c649fae2fe5b57f504931e802f27a9db605de0eb1a9eece3d3",
+  "text": "Dirt. Grass. A lot of both. And I think the dirt is higher than my vehicle.",
+  "bytes": 89487,
+  "generated": "2026-09-22T17:38:22Z"
+}

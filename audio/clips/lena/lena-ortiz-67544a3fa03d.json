@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-67544a3fa03d",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6a61093f3fb3859a24f1d1d0a29ad40cfd726b7e15c45efa44cc79c9f12ae230",
+  "text": "Nothing clear. Security logged three vibrations since the last one. They don't match anything on the local seismic sensors,",
+  "bytes": 134208,
+  "generated": "2026-09-22T17:38:25Z"
+}

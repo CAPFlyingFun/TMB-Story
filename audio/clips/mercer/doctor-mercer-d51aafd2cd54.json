@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-d51aafd2cd54",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "caf3521b436da6470304306ea7203dfa4f1a51bfe10f8496841b50b184e28bd0",
+  "text": "Understood. Jack. How long before the rest of the settlement knows?",
+  "bytes": 62737,
+  "generated": "2026-09-22T17:38:28Z"
+}
