@@ -3,7 +3,7 @@ chapter: 5
 title: "The Edge"
 movement: 2
 pov: Jack
-word_count: 1584
+word_count: 1562
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -29,7 +29,7 @@ ending_type: cliffhanger
 review_status: approved
 audio_status: pending
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, 211bc46e-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22 (split quotes joined for the narrator)"
+source: "Joshua's revised Word manuscript, bb443a4e-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22, with the bare said-tags removed at his instruction the same day"
 ---
 # Chapter 5: The Edge
 
@@ -39,11 +39,11 @@ The laughter disappeared.
 
 Jack unmuted the channel and opened the perimeter cameras. "Any more shadows?"
 
-"Nothing clear. Security logged three vibrations since the last one. They don't match anything on the local seismic sensors," Lena said.
+"Nothing clear. Security logged three vibrations since the last one. They don't match anything on the local seismic sensors."
 
 Sarah pulled up the times. "They're not regular."
 
-"No. But they're moving," Jack said.
+"No. But they're moving."
 
 She looked at him. "Moving?"
 
@@ -55,7 +55,7 @@ Sarah's eyes followed the pattern.
 
 Lena spoke from the console. "Please tell me we're not using the phrase whatever is causing them in any public announcement."
 
-"Nobody's making a public announcement yet," Jack said.
+"Nobody's making a public announcement yet."
 
 "Good."
 
@@ -111,7 +111,7 @@ Sarah looked at him.
 
 Lena walked to the console and stared through the reinforced window at the dormant TOMBS Array. "It looks disappointingly normal for a machine that ruined everyone's night."
 
-"Give it time," Jack said.
+"Give it time."
 
 A second knock came from the still-open door.
 
@@ -127,7 +127,7 @@ Jack looked at the camera feeds again. The same still grass. The same dark, unre
 
 He would learn more standing at that line for thirty seconds than he would staring at this screen for another hour.
 
-"I need to go outside," he said.
+"I need to go outside."
 
 "No."
 
@@ -147,7 +147,7 @@ Sarah didn't answer right away.
 
 She looked past him at the boundary map, then at the frozen shape on the security feed that still hadn't resolved into anything.
 
-"Okay. You can go," she said.
+"Okay. You can go."
 
 Jack blinked. "Really?"
 
@@ -159,7 +159,7 @@ Sarah stood and picked up her tablet. "I'll stay here and monitor TOMBS, the per
 
 Lena raised a hand. "I'll help her yell at you if you do something stupid."
 
-"Noted," Jack said.
+"Noted."
 
 Sarah crossed to him and handed him a small environmental sensor from the console drawer. "Air composition, temperature, pressure, particulates, radiation. Anything the unit can measure."
 
@@ -179,7 +179,7 @@ She raised an eyebrow.
 
 He tucked the sensor into his jacket and stopped at the door.
 
-"Keep safe," he said.
+"Keep safe."
 
 Sarah looked up. "Safe? You're the one leaving and going outside."
 
@@ -191,13 +191,13 @@ Jack glanced at her stomach. "Both of you."
 
 Sarah rested a hand against it. "Both of us."
 
-"Love you," Jack said.
+"Love you."
 
 "Love you too. Now go, before I change my mind."
 
 "Stay on our side," she added, already turning back to the console.
 
-"I'll stay on our side. I promise not to make friends with the grass," Jack said.
+"I'll stay on our side. I promise not to make friends with the grass."
 
 "Jack."
 
@@ -217,7 +217,7 @@ Sarah's voice came through his wrist. "You still there?"
 
 Mark glanced over. "Funny thing about tonight. Usually when your problems get smaller, that's good news."
 
-"Not tonight," Jack said.
+"Not tonight."
 
 "Not even a little?"
 

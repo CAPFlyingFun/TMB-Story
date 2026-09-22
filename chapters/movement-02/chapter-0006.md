@@ -3,7 +3,7 @@ chapter: 6
 title: "Someone Knew"
 movement: 2
 pov: Jack
-word_count: 2102
+word_count: 2094
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -31,7 +31,7 @@ ending_type: revelation
 review_status: approved
 audio_status: pending
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, 211bc46e-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22 (split quotes joined for the narrator)"
+source: "Joshua's revised Word manuscript, bb443a4e-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22, with the bare said-tags removed at his instruction the same day"
 ---
 # Chapter 6: Someone Knew
 
@@ -195,7 +195,7 @@ Lena looked between them. "In normal-person language?"
 
 Sarah answered while Jack expanded the field. "TOMBS wasn't simply told to make the settlement smaller."
 
-"It was given a target scale," Jack said.
+"It was given a target scale."
 
 Lena's expression changed. "Meaning whoever did this chose how small?"
 
@@ -321,7 +321,7 @@ Jack rubbed his eyes. "We just need a little more before we lose the choice."
 
 Lena, still watching the frozen frame of the shape in the grass, didn't look up. "For what it's worth, I'd rather know what that is before we wake everyone up to look at it."
 
-"Same," Jack said.
+"Same."
 
 He turned back to the console.
 
@@ -519,7 +519,7 @@ Lena looked at him. "Jack?"
 
 Sarah immediately shook her head. "He didn't."
 
-"I know. I'm asking why the computer thinks he did," Lena said.
+"I know. I'm asking why the computer thinks he did."
 
 Jack opened the authentication signature.
 
@@ -555,7 +555,7 @@ Sarah had been there too.
 
 Lena read the entry. "You were both at the community center."
 
-"For almost two hours," Sarah said.
+"For almost two hours."
 
 Jack looked back at the file.
 

@@ -4,7 +4,7 @@
   "source": "chapters/movement-02/chapter-0005.md",
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
-  "segmentCount": 229,
+  "segmentCount": 218,
   "segments": [
     {
       "speaker": "narrator",
@@ -88,43 +88,23 @@
     },
     {
       "speaker": "lena-ortiz",
-      "method": "explicit-tag",
-      "note": "",
-      "displayText": "Nothing clear. Security logged three vibrations since the last one. They don't match anything on the local seismic sensors,",
-      "ttsText": "Nothing clear. Security logged three vibrations since the last one. They don't match anything on the local seismic sensors,",
+      "method": "override",
+      "note": "ch5 order 4: 'Nothing clear. Security logged three vibrations...' -- Lena answering 'Any more shadows?'; was 'Lena said'. Added 2026-09-22 when the bare said-tags came out.",
+      "displayText": "Nothing clear. Security logged three vibrations since the last one. They don't match anything on the local seismic sensors.",
+      "ttsText": "Nothing clear. Security logged three vibrations since the last one. They don't match anything on the local seismic sensors.",
       "paragraph": 3,
       "spanInParagraph": 0,
       "order": 4,
-      "clipId": "lena-ortiz-67544a3fa03d",
+      "clipId": "lena-ortiz-d5240964667d",
       "voiceId": "4O1sYUnmtThcBoSBrri7",
       "voiceVersion": 1,
-      "fingerprint": "6a61093f3fb3859a24f1d1d0a29ad40cfd726b7e15c45efa44cc79c9f12ae230",
-      "audio": "audio/clips/lena/lena-ortiz-67544a3fa03d.mp3",
-      "cached": true,
+      "fingerprint": "7b3dd58e07311c57cc51d04b5bbcf7e892b288beb2bbdb133a5630636c932a7c",
+      "audio": "audio/clips/lena/lena-ortiz-d5240964667d.mp3",
+      "cached": false,
       "pauseBeforeMs": 420,
       "speakerName": "Lena Ortiz",
       "startMs": 9724,
-      "endMs": 18109
-    },
-    {
-      "speaker": "narrator",
-      "method": "narration",
-      "note": "",
-      "displayText": "Lena said.",
-      "ttsText": "Lena said.",
-      "paragraph": 3,
-      "spanInParagraph": 1,
-      "order": 5,
-      "clipId": "narrator-abcf4f20e286",
-      "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
-      "voiceVersion": 1,
-      "fingerprint": "d80d2055e82efd5a25c1b4108f17241b8c5292bf789652a2ef206de0222041b9",
-      "audio": "audio/clips/narrator/narrator-abcf4f20e286.mp3",
-      "cached": true,
-      "pauseBeforeMs": 320,
-      "speakerName": "Narrator",
-      "startMs": 18429,
-      "endMs": 19604
+      "endMs": 9724
     },
     {
       "speaker": "narrator",
@@ -134,17 +114,17 @@
       "ttsText": "Sarah pulled up the times.",
       "paragraph": 4,
       "spanInParagraph": 0,
-      "order": 6,
+      "order": 5,
       "clipId": "narrator-1c5f6cb5dc54",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
       "fingerprint": "d9e646e32b4441106cd042ab2040fd4dec070fe72a99c177011b550791cca2e8",
       "audio": "audio/clips/narrator/narrator-1c5f6cb5dc54.mp3",
       "cached": true,
-      "pauseBeforeMs": 260,
+      "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 19864,
-      "endMs": 21798
+      "startMs": 10044,
+      "endMs": 11977
     },
     {
       "speaker": "sarah-bennett",
@@ -154,7 +134,7 @@
       "ttsText": "They're not regular.",
       "paragraph": 4,
       "spanInParagraph": 1,
-      "order": 7,
+      "order": 6,
       "clipId": "sarah-bennett-eadefb9d2541",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -163,48 +143,28 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 22118,
-      "endMs": 23398
+      "startMs": 12297,
+      "endMs": 13577
     },
     {
       "speaker": "jack-bennett",
-      "method": "explicit-tag",
-      "note": "",
-      "displayText": "No. But they're moving,",
-      "ttsText": "No. But they're moving,",
+      "method": "alternation",
+      "note": "inferred from the two-speaker exchange",
+      "displayText": "No. But they're moving.",
+      "ttsText": "No. But they're moving.",
       "paragraph": 5,
       "spanInParagraph": 0,
-      "order": 8,
-      "clipId": "jack-bennett-ba5a0d37c24b",
+      "order": 7,
+      "clipId": "jack-bennett-c5a86b7a0f67",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
-      "fingerprint": "821d0b80fbd231fad4972be459c3985aa26285ff95d06f36d7f8c26f4e53cb5c",
-      "audio": "audio/clips/jack/jack-bennett-ba5a0d37c24b.mp3",
-      "cached": true,
+      "fingerprint": "738d8849b728dcff29cf19e845b041c3369efee7f43d54581b0c1c630155b9fb",
+      "audio": "audio/clips/jack/jack-bennett-c5a86b7a0f67.mp3",
+      "cached": false,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 23818,
-      "endMs": 25359
-    },
-    {
-      "speaker": "narrator",
-      "method": "narration",
-      "note": "",
-      "displayText": "Jack said.",
-      "ttsText": "Jack said.",
-      "paragraph": 5,
-      "spanInParagraph": 1,
-      "order": 9,
-      "clipId": "narrator-e0b0057effaf",
-      "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
-      "voiceVersion": 1,
-      "fingerprint": "bfe1dd16b2a00c026225bd3255b776a5976e8c90cbba985d5b2aea4e36c87e6b",
-      "audio": "audio/clips/narrator/narrator-e0b0057effaf.mp3",
-      "cached": true,
-      "pauseBeforeMs": 320,
-      "speakerName": "Narrator",
-      "startMs": 25679,
-      "endMs": 26776
+      "startMs": 13997,
+      "endMs": 13997
     },
     {
       "speaker": "narrator",
@@ -214,17 +174,17 @@
       "ttsText": "She looked at him.",
       "paragraph": 6,
       "spanInParagraph": 0,
-      "order": 10,
+      "order": 8,
       "clipId": "narrator-b3225cced1b3",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
       "fingerprint": "06ee01f20953066e769cd9b03e4bbda74b07fafd7a2f3d6d0e8f789699335948",
       "audio": "audio/clips/narrator/narrator-b3225cced1b3.mp3",
       "cached": true,
-      "pauseBeforeMs": 260,
+      "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 27036,
-      "endMs": 28447
+      "startMs": 14317,
+      "endMs": 15727
     },
     {
       "speaker": "sarah-bennett",
@@ -234,7 +194,7 @@
       "ttsText": "Moving?",
       "paragraph": 6,
       "spanInParagraph": 1,
-      "order": 11,
+      "order": 9,
       "clipId": "sarah-bennett-b72a3c05be22",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -243,8 +203,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 28767,
-      "endMs": 29472
+      "startMs": 16047,
+      "endMs": 16753
     },
     {
       "speaker": "narrator",
@@ -254,7 +214,7 @@
       "ttsText": "Jack overlaid the reports on the settlement map. The first vibrations had been strongest near the eastern boundary. Later reports came from the north.",
       "paragraph": 7,
       "spanInParagraph": 0,
-      "order": 12,
+      "order": 10,
       "clipId": "narrator-b0325f93ac7f",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -263,8 +223,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 29792,
-      "endMs": 40215
+      "startMs": 17073,
+      "endMs": 27496
     },
     {
       "speaker": "jack-bennett",
@@ -274,7 +234,7 @@
       "ttsText": "Or whatever is causing them is.",
       "paragraph": 8,
       "spanInParagraph": 0,
-      "order": 13,
+      "order": 11,
       "clipId": "jack-bennett-4e7393fe01ad",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -283,8 +243,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 40535,
-      "endMs": 42311
+      "startMs": 27816,
+      "endMs": 29592
     },
     {
       "speaker": "narrator",
@@ -294,7 +254,7 @@
       "ttsText": "Sarah's eyes followed the pattern.",
       "paragraph": 9,
       "spanInParagraph": 0,
-      "order": 14,
+      "order": 12,
       "clipId": "narrator-6d9c271825d0",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -303,8 +263,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 42631,
-      "endMs": 44825
+      "startMs": 29912,
+      "endMs": 32106
     },
     {
       "speaker": "narrator",
@@ -314,7 +274,7 @@
       "ttsText": "Lena spoke from the console.",
       "paragraph": 10,
       "spanInParagraph": 0,
-      "order": 15,
+      "order": 13,
       "clipId": "narrator-7350f225607f",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -323,8 +283,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 45085,
-      "endMs": 47201
+      "startMs": 32366,
+      "endMs": 34482
     },
     {
       "speaker": "lena-ortiz",
@@ -334,7 +294,7 @@
       "ttsText": "Please tell me we're not using the phrase whatever is causing them in any public announcement.",
       "paragraph": 10,
       "spanInParagraph": 1,
-      "order": 16,
+      "order": 14,
       "clipId": "lena-ortiz-1bb4c4e40ac7",
       "voiceId": "4O1sYUnmtThcBoSBrri7",
       "voiceVersion": 1,
@@ -343,48 +303,28 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 47521,
-      "endMs": 54130
+      "startMs": 34802,
+      "endMs": 41411
     },
     {
       "speaker": "jack-bennett",
-      "method": "explicit-tag",
-      "note": "",
-      "displayText": "Nobody's making a public announcement yet,",
-      "ttsText": "Nobody's making a public announcement yet,",
+      "method": "alternation",
+      "note": "inferred from the two-speaker exchange",
+      "displayText": "Nobody's making a public announcement yet.",
+      "ttsText": "Nobody's making a public announcement yet.",
       "paragraph": 11,
       "spanInParagraph": 0,
-      "order": 17,
-      "clipId": "jack-bennett-dbf3157f6b8f",
+      "order": 15,
+      "clipId": "jack-bennett-8ced4a130d62",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
-      "fingerprint": "e3b6eafaeb64cccf083cfc172e8ad9be1aa12c0a1c83d6a87a7bd699fa6e666c",
-      "audio": "audio/clips/jack/jack-bennett-dbf3157f6b8f.mp3",
-      "cached": true,
+      "fingerprint": "a4cc874a34f24e18144b29b651b78cda41e565bbd7690102606d746a69c82ddb",
+      "audio": "audio/clips/jack/jack-bennett-8ced4a130d62.mp3",
+      "cached": false,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 54550,
-      "endMs": 57032
-    },
-    {
-      "speaker": "narrator",
-      "method": "narration",
-      "note": "",
-      "displayText": "Jack said.",
-      "ttsText": "Jack said.",
-      "paragraph": 11,
-      "spanInParagraph": 1,
-      "order": 18,
-      "clipId": "narrator-e0b0057effaf",
-      "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
-      "voiceVersion": 1,
-      "fingerprint": "bfe1dd16b2a00c026225bd3255b776a5976e8c90cbba985d5b2aea4e36c87e6b",
-      "audio": "audio/clips/narrator/narrator-e0b0057effaf.mp3",
-      "cached": true,
-      "pauseBeforeMs": 320,
-      "speakerName": "Narrator",
-      "startMs": 57352,
-      "endMs": 58449
+      "startMs": 41831,
+      "endMs": 41831
     },
     {
       "speaker": "lena-ortiz",
@@ -394,17 +334,17 @@
       "ttsText": "Good.",
       "paragraph": 12,
       "spanInParagraph": 0,
-      "order": 19,
+      "order": 16,
       "clipId": "lena-ortiz-ea33e4cabdc5",
       "voiceId": "4O1sYUnmtThcBoSBrri7",
       "voiceVersion": 1,
       "fingerprint": "a2b5e7ee184eb9a4ce85cfda8b39eb429555e72dae5f518c5cac20d7bc5c1a83",
       "audio": "audio/clips/lena/lena-ortiz-ea33e4cabdc5.mp3",
       "cached": true,
-      "pauseBeforeMs": 320,
+      "pauseBeforeMs": 420,
       "speakerName": "Lena Ortiz",
-      "startMs": 58769,
-      "endMs": 59527
+      "startMs": 42251,
+      "endMs": 43009
     },
     {
       "speaker": "narrator",
@@ -414,7 +354,7 @@
       "ttsText": "Jack closed the vibration map and opened the TOMBS event record again. The same final entry waited for him.",
       "paragraph": 13,
       "spanInParagraph": 0,
-      "order": 20,
+      "order": 17,
       "clipId": "narrator-37f3e5cf26a5",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -423,8 +363,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 59847,
-      "endMs": 67161
+      "startMs": 43329,
+      "endMs": 50643
     },
     {
       "speaker": "narrator",
@@ -434,7 +374,7 @@
       "ttsText": "Boundary event complete.",
       "paragraph": 14,
       "spanInParagraph": 0,
-      "order": 21,
+      "order": 18,
       "clipId": "narrator-c016cc78d2a5",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -443,8 +383,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 67421,
-      "endMs": 69354
+      "startMs": 50903,
+      "endMs": 52836
     },
     {
       "speaker": "narrator",
@@ -454,7 +394,7 @@
       "ttsText": "No error.",
       "paragraph": 15,
       "spanInParagraph": 0,
-      "order": 22,
+      "order": 19,
       "clipId": "narrator-4ff4b9e8c729",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -463,8 +403,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 69614,
-      "endMs": 70972
+      "startMs": 53096,
+      "endMs": 54454
     },
     {
       "speaker": "narrator",
@@ -474,7 +414,7 @@
       "ttsText": "No failure.",
       "paragraph": 16,
       "spanInParagraph": 0,
-      "order": 23,
+      "order": 20,
       "clipId": "narrator-a7cf00e501f2",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -483,8 +423,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 71232,
-      "endMs": 72408
+      "startMs": 54714,
+      "endMs": 55890
     },
     {
       "speaker": "narrator",
@@ -494,7 +434,7 @@
       "ttsText": "No emergency shutdown.",
       "paragraph": 17,
       "spanInParagraph": 0,
-      "order": 24,
+      "order": 21,
       "clipId": "narrator-d0d5aa07280a",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -503,8 +443,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 72668,
-      "endMs": 74444
+      "startMs": 56150,
+      "endMs": 57926
     },
     {
       "speaker": "narrator",
@@ -514,7 +454,7 @@
       "ttsText": "Complete.",
       "paragraph": 18,
       "spanInParagraph": 0,
-      "order": 25,
+      "order": 22,
       "clipId": "narrator-00fe92a8e83a",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -523,8 +463,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 74704,
-      "endMs": 75749
+      "startMs": 58186,
+      "endMs": 59231
     },
     {
       "speaker": "narrator",
@@ -534,7 +474,7 @@
       "ttsText": "Sarah noticed where he had gone.",
       "paragraph": 19,
       "spanInParagraph": 0,
-      "order": 26,
+      "order": 23,
       "clipId": "narrator-c171f853aa22",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -543,8 +483,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 76009,
-      "endMs": 78125
+      "startMs": 59491,
+      "endMs": 61607
     },
     {
       "speaker": "sarah-bennett",
@@ -554,7 +494,7 @@
       "ttsText": "Still nothing?",
       "paragraph": 19,
       "spanInParagraph": 1,
-      "order": 27,
+      "order": 24,
       "clipId": "sarah-bennett-36f78d41639e",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -563,18 +503,18 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 78445,
-      "endMs": 79542
+      "startMs": 61927,
+      "endMs": 63024
     },
     {
       "speaker": "jack-bennett",
       "method": "override",
-      "note": "ch5 order 30: Jack's answer to 'Still nothing?' | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 25: Jack's answer to 'Still nothing?' | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "The logs are too clean.",
       "ttsText": "The logs are too clean.",
       "paragraph": 20,
       "spanInParagraph": 0,
-      "order": 28,
+      "order": 25,
       "clipId": "jack-bennett-1f9cdc31c77b",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -583,8 +523,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 79962,
-      "endMs": 81268
+      "startMs": 63444,
+      "endMs": 64750
     },
     {
       "speaker": "sarah-bennett",
@@ -594,7 +534,7 @@
       "ttsText": "Like the security logs before activation.",
       "paragraph": 21,
       "spanInParagraph": 0,
-      "order": 29,
+      "order": 26,
       "clipId": "sarah-bennett-14a7f5d6873b",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -603,8 +543,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 81688,
-      "endMs": 84065
+      "startMs": 65170,
+      "endMs": 67547
     },
     {
       "speaker": "narrator",
@@ -614,7 +554,7 @@
       "ttsText": "Jack nodded.",
       "paragraph": 22,
       "spanInParagraph": 0,
-      "order": 30,
+      "order": 27,
       "clipId": "narrator-0d3174211b67",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -623,8 +563,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 84385,
-      "endMs": 85744
+      "startMs": 67867,
+      "endMs": 69226
     },
     {
       "speaker": "jack-bennett",
@@ -634,7 +574,7 @@
       "ttsText": "Exactly like them.",
       "paragraph": 22,
       "spanInParagraph": 1,
-      "order": 31,
+      "order": 28,
       "clipId": "jack-bennett-8a1aa845ea34",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -643,8 +583,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 86064,
-      "endMs": 87474
+      "startMs": 69546,
+      "endMs": 70956
     },
     {
       "speaker": "narrator",
@@ -654,7 +594,7 @@
       "ttsText": "He searched the event sequence for a source address. Nothing. Authentication history had been stripped. Remote command records existed, but every identifying field was blank.",
       "paragraph": 23,
       "spanInParagraph": 0,
-      "order": 32,
+      "order": 29,
       "clipId": "narrator-42df2fb42257",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -663,8 +603,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 87794,
-      "endMs": 99549
+      "startMs": 71276,
+      "endMs": 83031
     },
     {
       "speaker": "narrator",
@@ -674,7 +614,7 @@
       "ttsText": "Sarah rolled her chair closer.",
       "paragraph": 24,
       "spanInParagraph": 0,
-      "order": 33,
+      "order": 30,
       "clipId": "narrator-35569cfa2f05",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -683,8 +623,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 99809,
-      "endMs": 101925
+      "startMs": 83291,
+      "endMs": 85407
     },
     {
       "speaker": "sarah-bennett",
@@ -694,7 +634,7 @@
       "ttsText": "Could TOMBS erase that itself?",
       "paragraph": 24,
       "spanInParagraph": 1,
-      "order": 34,
+      "order": 31,
       "clipId": "sarah-bennett-109e0a15096f",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -703,8 +643,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 102245,
-      "endMs": 104126
+      "startMs": 85727,
+      "endMs": 87608
     },
     {
       "speaker": "jack-bennett",
@@ -714,7 +654,7 @@
       "ttsText": "It could delete logs if an administrator ordered it.",
       "paragraph": 25,
       "spanInParagraph": 0,
-      "order": 35,
+      "order": 32,
       "clipId": "jack-bennett-d9d75538251c",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -723,8 +663,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 104546,
-      "endMs": 107576
+      "startMs": 88028,
+      "endMs": 91058
     },
     {
       "speaker": "sarah-bennett",
@@ -734,7 +674,7 @@
       "ttsText": "But you didn't.",
       "paragraph": 26,
       "spanInParagraph": 0,
-      "order": 36,
+      "order": 33,
       "clipId": "sarah-bennett-bab7521e458d",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -743,8 +683,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 107996,
-      "endMs": 109093
+      "startMs": 91478,
+      "endMs": 92576
     },
     {
       "speaker": "jack-bennett",
@@ -754,7 +694,7 @@
       "ttsText": "No.",
       "paragraph": 27,
       "spanInParagraph": 0,
-      "order": 37,
+      "order": 34,
       "clipId": "jack-bennett-a40ffc6ce592",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -763,8 +703,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 109513,
-      "endMs": 110193
+      "startMs": 92996,
+      "endMs": 93675
     },
     {
       "speaker": "narrator",
@@ -774,7 +714,7 @@
       "ttsText": "Sarah studied the screen.",
       "paragraph": 28,
       "spanInParagraph": 0,
-      "order": 38,
+      "order": 35,
       "clipId": "narrator-168cfee1fd4a",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -783,8 +723,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 110513,
-      "endMs": 112341
+      "startMs": 93995,
+      "endMs": 95823
     },
     {
       "speaker": "sarah-bennett",
@@ -794,7 +734,7 @@
       "ttsText": "Then whoever did this had more than remote access.",
       "paragraph": 28,
       "spanInParagraph": 1,
-      "order": 39,
+      "order": 36,
       "clipId": "sarah-bennett-95f7233524d4",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -803,8 +743,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 112661,
-      "endMs": 115744
+      "startMs": 96143,
+      "endMs": 99226
     },
     {
       "speaker": "narrator",
@@ -814,7 +754,7 @@
       "ttsText": "Jack opened the permissions table.",
       "paragraph": 29,
       "spanInParagraph": 0,
-      "order": 40,
+      "order": 37,
       "clipId": "narrator-7b1cd732e37d",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -823,8 +763,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 116064,
-      "endMs": 118258
+      "startMs": 99546,
+      "endMs": 101740
     },
     {
       "speaker": "jack-bennett",
@@ -834,7 +774,7 @@
       "ttsText": "They had control.",
       "paragraph": 29,
       "spanInParagraph": 1,
-      "order": 41,
+      "order": 38,
       "clipId": "jack-bennett-3caffcff336f",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -843,8 +783,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 118578,
-      "endMs": 119858
+      "startMs": 102060,
+      "endMs": 103340
     },
     {
       "speaker": "narrator",
@@ -854,7 +794,7 @@
       "ttsText": "He closed the window before either of them had to sit with that for too long.",
       "paragraph": 30,
       "spanInParagraph": 0,
-      "order": 42,
+      "order": 39,
       "clipId": "narrator-b1688fb4172f",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -863,8 +803,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 120178,
-      "endMs": 124279
+      "startMs": 103660,
+      "endMs": 107761
     },
     {
       "speaker": "narrator",
@@ -874,7 +814,7 @@
       "ttsText": "A knock sounded at the control-room door.",
       "paragraph": 31,
       "spanInParagraph": 0,
-      "order": 43,
+      "order": 40,
       "clipId": "narrator-80329697921c",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -883,8 +823,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 124539,
-      "endMs": 127151
+      "startMs": 108021,
+      "endMs": 110633
     },
     {
       "speaker": "narrator",
@@ -894,7 +834,7 @@
       "ttsText": "Both turned.",
       "paragraph": 32,
       "spanInParagraph": 0,
-      "order": 44,
+      "order": 41,
       "clipId": "narrator-b7888f945208",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -903,8 +843,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 127411,
-      "endMs": 128718
+      "startMs": 110893,
+      "endMs": 112200
     },
     {
       "speaker": "narrator",
@@ -914,7 +854,7 @@
       "ttsText": "Lena stood outside, still in her orange utility jacket. She held up both hands before either of them could ask.",
       "paragraph": 33,
       "spanInParagraph": 0,
-      "order": 45,
+      "order": 42,
       "clipId": "narrator-39af4bc30eb3",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -923,18 +863,18 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 128978,
-      "endMs": 136370
+      "startMs": 112460,
+      "endMs": 119852
     },
     {
       "speaker": "lena-ortiz",
       "method": "override",
-      "note": "ch5 order 48: 'Before you start, yes, the station is staffed...' -- Lena, in the doorway with both hands up. The paragraph names the officer, then Lena, then 'she held up both hands'. Added 2026-09-21 auditing the revised chapters. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 43: 'Before you start, yes, the station is staffed...' -- Lena, in the doorway with both hands up. The paragraph names the officer, then Lena, then 'she held up both hands'. Added 2026-09-21 auditing the revised chapters. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "Before you start, yes, the station is staffed, yes, the grid is stable, and yes, I locked the door.",
       "ttsText": "Before you start, yes, the station is staffed, yes, the grid is stable, and yes, I locked the door.",
       "paragraph": 34,
       "spanInParagraph": 0,
-      "order": 46,
+      "order": 43,
       "clipId": "lena-ortiz-1c4fa4a7870b",
       "voiceId": "4O1sYUnmtThcBoSBrri7",
       "voiceVersion": 1,
@@ -943,8 +883,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 136690,
-      "endMs": 143717
+      "startMs": 120172,
+      "endMs": 127199
     },
     {
       "speaker": "narrator",
@@ -954,7 +894,7 @@
       "ttsText": "Jack pointed at her.",
       "paragraph": 35,
       "spanInParagraph": 0,
-      "order": 47,
+      "order": 44,
       "clipId": "narrator-b9e96e0d3d52",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -963,8 +903,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 144037,
-      "endMs": 145918
+      "startMs": 127519,
+      "endMs": 129400
     },
     {
       "speaker": "jack-bennett",
@@ -974,7 +914,7 @@
       "ttsText": "I wasn't going to ask.",
       "paragraph": 35,
       "spanInParagraph": 1,
-      "order": 48,
+      "order": 45,
       "clipId": "jack-bennett-6e14dc409ce5",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -983,8 +923,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 146238,
-      "endMs": 147701
+      "startMs": 129720,
+      "endMs": 131183
     },
     {
       "speaker": "narrator",
@@ -994,7 +934,7 @@
       "ttsText": "Sarah looked at him.",
       "paragraph": 36,
       "spanInParagraph": 0,
-      "order": 49,
+      "order": 46,
       "clipId": "narrator-31e416acd036",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1003,18 +943,18 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 148021,
-      "endMs": 149562
+      "startMs": 131503,
+      "endMs": 133044
     },
     {
       "speaker": "jack-bennett",
       "method": "override",
-      "note": "ch5 order 52: 'I was going to ask two of those.' -- Jack, after 'I wasn't going to ask.' and Sarah's look. Added 2026-09-21 auditing the revised chapters. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 47: 'I was going to ask two of those.' -- Jack, after 'I wasn't going to ask.' and Sarah's look. Added 2026-09-21 auditing the revised chapters. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "I was going to ask two of those.",
       "ttsText": "I was going to ask two of those.",
       "paragraph": 37,
       "spanInParagraph": 0,
-      "order": 50,
+      "order": 47,
       "clipId": "jack-bennett-21b3d1fa14a5",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -1023,8 +963,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 149882,
-      "endMs": 151606
+      "startMs": 133364,
+      "endMs": 135088
     },
     {
       "speaker": "narrator",
@@ -1034,7 +974,7 @@
       "ttsText": "Lena walked to the console and stared through the reinforced window at the dormant TOMBS Array.",
       "paragraph": 38,
       "spanInParagraph": 0,
-      "order": 51,
+      "order": 48,
       "clipId": "narrator-1548c044541e",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1043,8 +983,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 151926,
-      "endMs": 157516
+      "startMs": 135408,
+      "endMs": 140998
     },
     {
       "speaker": "lena-ortiz",
@@ -1054,7 +994,7 @@
       "ttsText": "It looks disappointingly normal for a machine that ruined everyone's night.",
       "paragraph": 38,
       "spanInParagraph": 1,
-      "order": 52,
+      "order": 49,
       "clipId": "lena-ortiz-b4b3df86f6d4",
       "voiceId": "4O1sYUnmtThcBoSBrri7",
       "voiceVersion": 1,
@@ -1063,48 +1003,28 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 157836,
-      "endMs": 162277
+      "startMs": 141318,
+      "endMs": 145759
     },
     {
       "speaker": "jack-bennett",
-      "method": "explicit-tag",
-      "note": "",
-      "displayText": "Give it time,",
-      "ttsText": "Give it time,",
+      "method": "override",
+      "note": "ch5 order 50: 'Give it time.' -- Jack, to Lena's 'disappointingly normal'; was 'Jack said'. Added 2026-09-22 when the bare said-tags came out.",
+      "displayText": "Give it time.",
+      "ttsText": "Give it time.",
       "paragraph": 39,
       "spanInParagraph": 0,
-      "order": 53,
-      "clipId": "jack-bennett-8dab70644da0",
+      "order": 50,
+      "clipId": "jack-bennett-24dc2e07b4f7",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
-      "fingerprint": "a2e85b10831b48ab6d4a3038944b3c949dd554027c22add95aa8994af58791f0",
-      "audio": "audio/clips/jack/jack-bennett-8dab70644da0.mp3",
-      "cached": true,
+      "fingerprint": "45f93fe6f7673d05fd3253cd76bba610bc05009e32f1f56c0e3359520fc830bd",
+      "audio": "audio/clips/jack/jack-bennett-24dc2e07b4f7.mp3",
+      "cached": false,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 162697,
-      "endMs": 164056
-    },
-    {
-      "speaker": "narrator",
-      "method": "narration",
-      "note": "",
-      "displayText": "Jack said.",
-      "ttsText": "Jack said.",
-      "paragraph": 39,
-      "spanInParagraph": 1,
-      "order": 54,
-      "clipId": "narrator-e0b0057effaf",
-      "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
-      "voiceVersion": 1,
-      "fingerprint": "bfe1dd16b2a00c026225bd3255b776a5976e8c90cbba985d5b2aea4e36c87e6b",
-      "audio": "audio/clips/narrator/narrator-e0b0057effaf.mp3",
-      "cached": true,
-      "pauseBeforeMs": 320,
-      "speakerName": "Narrator",
-      "startMs": 164376,
-      "endMs": 165473
+      "startMs": 146179,
+      "endMs": 146179
     },
     {
       "speaker": "narrator",
@@ -1114,17 +1034,17 @@
       "ttsText": "A second knock came from the still-open door.",
       "paragraph": 40,
       "spanInParagraph": 0,
-      "order": 55,
+      "order": 51,
       "clipId": "narrator-a538dce67867",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
       "fingerprint": "b5bb727d958c9be3d75a999aebdcf528935a4e64da00338bc17e587028a74759",
       "audio": "audio/clips/narrator/narrator-a538dce67867.mp3",
       "cached": true,
-      "pauseBeforeMs": 260,
+      "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 165733,
-      "endMs": 168397
+      "startMs": 146499,
+      "endMs": 149164
     },
     {
       "speaker": "narrator",
@@ -1134,7 +1054,7 @@
       "ttsText": "A security officer stood just outside it, radio clipped to his shoulder, careful not to step past the threshold.",
       "paragraph": 41,
       "spanInParagraph": 0,
-      "order": 56,
+      "order": 52,
       "clipId": "narrator-ddacdde4cdca",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1143,18 +1063,18 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 168657,
-      "endMs": 175449
+      "startMs": 149424,
+      "endMs": 156216
     },
     {
       "speaker": "security-officer",
       "method": "override",
-      "note": "ch5 order 59: 'Doctor Bennett?' -- Mark Jones at the door, asking. The parser hears the name and gives the line to Jack; Jack is the one being addressed. Added 2026-09-22. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 53: 'Doctor Bennett?' -- Mark Jones at the door, asking. The parser hears the name and gives the line to Jack; Jack is the one being addressed. Added 2026-09-22. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "Doctor Bennett?",
       "ttsText": "Doctor Bennett?",
       "paragraph": 41,
       "spanInParagraph": 1,
-      "order": 57,
+      "order": 53,
       "clipId": "security-officer-37cf39ae06f2",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -1163,18 +1083,18 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Settlement security",
-      "startMs": 175769,
-      "endMs": 176944
+      "startMs": 156536,
+      "endMs": 157711
     },
     {
       "speaker": "jack-bennett",
       "method": "override",
-      "note": "ch5 order 60: 'That's me.' -- Jack answering the officer. Lena is in the room and last spoke four segments earlier. Added 2026-09-22. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 54: 'That's me.' -- Jack answering the officer. Lena is in the room and last spoke four segments earlier. Added 2026-09-22. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "That's me.",
       "ttsText": "That's me.",
       "paragraph": 42,
       "spanInParagraph": 0,
-      "order": 58,
+      "order": 54,
       "clipId": "jack-bennett-d9a015d2b49d",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -1183,8 +1103,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 177364,
-      "endMs": 178227
+      "startMs": 158131,
+      "endMs": 158993
     },
     {
       "speaker": "narrator",
@@ -1194,7 +1114,7 @@
       "ttsText": "He nodded down the hallway behind him.",
       "paragraph": 43,
       "spanInParagraph": 0,
-      "order": 59,
+      "order": 55,
       "clipId": "narrator-7dddfd187739",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1203,18 +1123,18 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 178547,
-      "endMs": 180898
+      "startMs": 159313,
+      "endMs": 161664
     },
     {
       "speaker": "security-officer",
       "method": "override",
-      "note": "ch5 order 60: 'Mark Jones, perimeter security. I'm headed to the southern boundary...' -- Mark introducing himself, one line since the 2026-09-22 join. The parser hears 'He nodded' and the name and gives it to Jack.",
+      "note": "ch5 order 56: 'Mark Jones, perimeter security. I'm headed to the southern boundary...' -- Mark introducing himself, one line since the 2026-09-22 join. The parser hears 'He nodded' and the name and gives it to Jack. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "Mark Jones, perimeter security. I'm headed to the southern boundary for a visual check, inside the developed zone. Wanted you to know before I go.",
       "ttsText": "Mark Jones, perimeter security. I'm headed to the southern boundary for a visual check, inside the developed zone. Wanted you to know before I go.",
       "paragraph": 43,
       "spanInParagraph": 1,
-      "order": 60,
+      "order": 56,
       "clipId": "security-officer-0f5dabf769fa",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -1223,8 +1143,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Settlement security",
-      "startMs": 181218,
-      "endMs": 189603
+      "startMs": 161984,
+      "endMs": 170369
     },
     {
       "speaker": "security-officer",
@@ -1234,7 +1154,7 @@
       "ttsText": "I'll be at the vehicle,",
       "paragraph": 44,
       "spanInParagraph": 0,
-      "order": 61,
+      "order": 57,
       "clipId": "security-officer-5338929bc076",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -1243,8 +1163,8 @@
       "cached": true,
       "pauseBeforeMs": 200,
       "speakerName": "Settlement security",
-      "startMs": 189803,
-      "endMs": 191161
+      "startMs": 170569,
+      "endMs": 171928
     },
     {
       "speaker": "narrator",
@@ -1254,7 +1174,7 @@
       "ttsText": "Mark said, and stepped back from the doorway.",
       "paragraph": 44,
       "spanInParagraph": 1,
-      "order": 62,
+      "order": 58,
       "clipId": "narrator-31762f90e1ba",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1263,8 +1183,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 191481,
-      "endMs": 194198
+      "startMs": 172248,
+      "endMs": 174964
     },
     {
       "speaker": "narrator",
@@ -1274,7 +1194,7 @@
       "ttsText": "Jack looked at the camera feeds again. The same still grass. The same dark, unreadable line where the settlement stopped.",
       "paragraph": 45,
       "spanInParagraph": 0,
-      "order": 63,
+      "order": 59,
       "clipId": "narrator-5b8e2039da16",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1283,8 +1203,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 194458,
-      "endMs": 202504
+      "startMs": 175224,
+      "endMs": 183270
     },
     {
       "speaker": "narrator",
@@ -1294,7 +1214,7 @@
       "ttsText": "He would learn more standing at that line for thirty seconds than he would staring at this screen for another hour.",
       "paragraph": 46,
       "spanInParagraph": 0,
-      "order": 64,
+      "order": 60,
       "clipId": "narrator-7f80638b364c",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1303,68 +1223,48 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 202764,
-      "endMs": 208641
+      "startMs": 183530,
+      "endMs": 189408
     },
     {
       "speaker": "jack-bennett",
-      "method": "explicit-tag",
-      "note": "",
-      "displayText": "I need to go outside,",
-      "ttsText": "I need to go outside,",
+      "method": "alternation",
+      "note": "inferred from the two-speaker exchange",
+      "displayText": "I need to go outside.",
+      "ttsText": "I need to go outside.",
       "paragraph": 47,
       "spanInParagraph": 0,
-      "order": 65,
-      "clipId": "jack-bennett-d863a5f89390",
+      "order": 61,
+      "clipId": "jack-bennett-3d0d0952e81d",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
-      "fingerprint": "ea2a3379a4538351a6c95831da0d40f09ef574725239ade80753995a9693855b",
-      "audio": "audio/clips/jack/jack-bennett-d863a5f89390.mp3",
-      "cached": true,
+      "fingerprint": "87a16afd0723ab64dea993685ea1d281d80db39f9f07d7ef13808c547a136dec",
+      "audio": "audio/clips/jack/jack-bennett-3d0d0952e81d.mp3",
+      "cached": false,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 208961,
-      "endMs": 210502
-    },
-    {
-      "speaker": "narrator",
-      "method": "narration",
-      "note": "",
-      "displayText": "he said.",
-      "ttsText": "he said.",
-      "paragraph": 47,
-      "spanInParagraph": 1,
-      "order": 66,
-      "clipId": "narrator-794c4c2fd5fb",
-      "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
-      "voiceVersion": 1,
-      "fingerprint": "4deec056ab2da51a3d5c8c83ef53cbaa28f7c57c34178158d40b1d1baf434623",
-      "audio": "audio/clips/narrator/narrator-794c4c2fd5fb.mp3",
-      "cached": true,
-      "pauseBeforeMs": 320,
-      "speakerName": "Narrator",
-      "startMs": 210822,
-      "endMs": 211998
+      "startMs": 189728,
+      "endMs": 189728
     },
     {
       "speaker": "sarah-bennett",
       "method": "override",
-      "note": "ch5 order 70: 'No.' -- Sarah, refusing Jack's 'I need to go outside.' The officer spoke last, which is why the parser took him; he is not in this exchange. Added 2026-09-21 auditing the revised chapters. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 62: 'No.' -- Sarah, refusing Jack's 'I need to go outside.' The officer spoke last, which is why the parser took him; he is not in this exchange. Added 2026-09-21 auditing the revised chapters. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "No.",
       "ttsText": "No.",
       "paragraph": 48,
       "spanInParagraph": 0,
-      "order": 67,
+      "order": 62,
       "clipId": "sarah-bennett-937447a849cb",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
       "fingerprint": "6d59903001eca555ebb90a91c58d6867cc0ff107277f40ac1fa9142ae863ca6e",
       "audio": "audio/clips/sarah/sarah-bennett-937447a849cb.mp3",
       "cached": true,
-      "pauseBeforeMs": 320,
+      "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 212318,
-      "endMs": 212893
+      "startMs": 190148,
+      "endMs": 190722
     },
     {
       "speaker": "narrator",
@@ -1374,7 +1274,7 @@
       "ttsText": "The answer came so fast that Jack looked up.",
       "paragraph": 49,
       "spanInParagraph": 0,
-      "order": 68,
+      "order": 63,
       "clipId": "narrator-298e2fa87325",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1383,8 +1283,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 213213,
-      "endMs": 216191
+      "startMs": 191042,
+      "endMs": 194020
     },
     {
       "speaker": "jack-bennett",
@@ -1394,7 +1294,7 @@
       "ttsText": "You didn't even think about it.",
       "paragraph": 50,
       "spanInParagraph": 0,
-      "order": 69,
+      "order": 64,
       "clipId": "jack-bennett-ed2c364065c1",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -1403,18 +1303,18 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 216511,
-      "endMs": 218052
+      "startMs": 194340,
+      "endMs": 195882
     },
     {
       "speaker": "sarah-bennett",
       "method": "override",
-      "note": "ch5 order 73: 'I didn't need to. It's dangerous.' -- Sarah, same exchange. Added 2026-09-21 auditing the revised chapters. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 65: 'I didn't need to. It's dangerous.' -- Sarah, same exchange. Added 2026-09-21 auditing the revised chapters. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "I didn't need to. It's dangerous.",
       "ttsText": "I didn't need to. It's dangerous.",
       "paragraph": 51,
       "spanInParagraph": 0,
-      "order": 70,
+      "order": 65,
       "clipId": "sarah-bennett-a5d9d59d781c",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -1423,8 +1323,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 218472,
-      "endMs": 220536
+      "startMs": 196302,
+      "endMs": 198365
     },
     {
       "speaker": "jack-bennett",
@@ -1434,7 +1334,7 @@
       "ttsText": "I know. But the cameras aren't enough. I've watched that boundary since this started and it hasn't told me anything the sensors couldn't already give me as a number,",
       "paragraph": 52,
       "spanInParagraph": 0,
-      "order": 71,
+      "order": 66,
       "clipId": "jack-bennett-771b5540cfc5",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -1443,8 +1343,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 220956,
-      "endMs": 229942
+      "startMs": 198785,
+      "endMs": 207771
     },
     {
       "speaker": "narrator",
@@ -1454,7 +1354,7 @@
       "ttsText": "Jack said, keeping his voice even.",
       "paragraph": 52,
       "spanInParagraph": 1,
-      "order": 72,
+      "order": 67,
       "clipId": "narrator-2b70c8df720f",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1463,18 +1363,18 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 230262,
-      "endMs": 232508
+      "startMs": 208091,
+      "endMs": 210338
     },
     {
       "speaker": "sarah-bennett",
       "method": "override",
-      "note": "ch5 order 77: 'So now you want to go stand next to it.' -- Sarah, same exchange. Added 2026-09-21 auditing the revised chapters. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 68: 'So now you want to go stand next to it.' -- Sarah, same exchange. Added 2026-09-21 auditing the revised chapters. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "So now you want to go stand next to it.",
       "ttsText": "So now you want to go stand next to it.",
       "paragraph": 53,
       "spanInParagraph": 0,
-      "order": 73,
+      "order": 68,
       "clipId": "sarah-bennett-98f835a85541",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -1483,8 +1383,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 232828,
-      "endMs": 234709
+      "startMs": 210658,
+      "endMs": 212539
     },
     {
       "speaker": "jack-bennett",
@@ -1494,7 +1394,7 @@
       "ttsText": "Not into the wilderness. Just the edge, on our side. I'll walk the line, take real environmental readings, and see what's actually there instead of what a camera decides to show me. We need firsthand information, not another feed.",
       "paragraph": 54,
       "spanInParagraph": 0,
-      "order": 74,
+      "order": 69,
       "clipId": "jack-bennett-465b977548da",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -1503,8 +1403,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 235129,
-      "endMs": 249183
+      "startMs": 212959,
+      "endMs": 227013
     },
     {
       "speaker": "narrator",
@@ -1514,7 +1414,7 @@
       "ttsText": "Sarah didn't answer right away.",
       "paragraph": 55,
       "spanInParagraph": 0,
-      "order": 75,
+      "order": 70,
       "clipId": "narrator-2fee650c30c0",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1523,8 +1423,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 249503,
-      "endMs": 251567
+      "startMs": 227333,
+      "endMs": 229396
     },
     {
       "speaker": "narrator",
@@ -1534,7 +1434,7 @@
       "ttsText": "She looked past him at the boundary map, then at the frozen shape on the security feed that still hadn't resolved into anything.",
       "paragraph": 56,
       "spanInParagraph": 0,
-      "order": 76,
+      "order": 71,
       "clipId": "narrator-b624bcabe980",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1543,48 +1443,28 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 251827,
-      "endMs": 259193
+      "startMs": 229656,
+      "endMs": 237023
     },
     {
       "speaker": "sarah-bennett",
-      "method": "explicit-tag",
-      "note": "",
-      "displayText": "Okay. You can go,",
-      "ttsText": "Okay. You can go,",
+      "method": "override",
+      "note": "ch5 order 72: 'Okay. You can go.' -- Sarah relenting; was 'she said'. Mark spoke last, which is why the parser took him. Added 2026-09-22 when the bare said-tags came out.",
+      "displayText": "Okay. You can go.",
+      "ttsText": "Okay. You can go.",
       "paragraph": 57,
       "spanInParagraph": 0,
-      "order": 77,
-      "clipId": "sarah-bennett-551a69a60972",
+      "order": 72,
+      "clipId": "sarah-bennett-91a27bb1e8dd",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
-      "fingerprint": "d1b213b6786493f6f9ca58fd9ea67de2d4117d34928d1248a99a99d1abbc1ec4",
-      "audio": "audio/clips/sarah/sarah-bennett-551a69a60972.mp3",
-      "cached": true,
+      "fingerprint": "b382d74bfc076da71f838aab1e73df3bca38602ae9313a91cafca7e3e4a90bee",
+      "audio": "audio/clips/sarah/sarah-bennett-91a27bb1e8dd.mp3",
+      "cached": false,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 259513,
-      "endMs": 260819
-    },
-    {
-      "speaker": "narrator",
-      "method": "narration",
-      "note": "",
-      "displayText": "she said.",
-      "ttsText": "she said.",
-      "paragraph": 57,
-      "spanInParagraph": 1,
-      "order": 78,
-      "clipId": "narrator-ac465792d888",
-      "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
-      "voiceVersion": 1,
-      "fingerprint": "78d82be169818aed13bab5aad9a67f06fc522a61d0a4ff84602b613113b239b8",
-      "audio": "audio/clips/narrator/narrator-ac465792d888.mp3",
-      "cached": true,
-      "pauseBeforeMs": 320,
-      "speakerName": "Narrator",
-      "startMs": 261139,
-      "endMs": 262132
+      "startMs": 237343,
+      "endMs": 237343
     },
     {
       "speaker": "narrator",
@@ -1594,17 +1474,17 @@
       "ttsText": "Jack blinked.",
       "paragraph": 58,
       "spanInParagraph": 0,
-      "order": 79,
+      "order": 73,
       "clipId": "narrator-57ec1686d312",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
       "fingerprint": "2eefae23e5939cc6466027b8bfd20f002949b815bfb2496b975700fccf034eae",
       "audio": "audio/clips/narrator/narrator-57ec1686d312.mp3",
       "cached": true,
-      "pauseBeforeMs": 260,
+      "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 262392,
-      "endMs": 263672
+      "startMs": 237663,
+      "endMs": 238943
     },
     {
       "speaker": "jack-bennett",
@@ -1614,7 +1494,7 @@
       "ttsText": "Really?",
       "paragraph": 58,
       "spanInParagraph": 1,
-      "order": 80,
+      "order": 74,
       "clipId": "jack-bennett-70ef5fed85f7",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -1623,28 +1503,28 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 263992,
-      "endMs": 264619
+      "startMs": 239263,
+      "endMs": 239890
     },
     {
-      "speaker": "sarah-bennett",
+      "speaker": "security-officer",
       "method": "alternation",
       "note": "inferred from the two-speaker exchange",
       "displayText": "Don't make me reconsider.",
       "ttsText": "Don't make me reconsider.",
       "paragraph": 59,
       "spanInParagraph": 0,
-      "order": 81,
-      "clipId": "sarah-bennett-071491a7d192",
-      "voiceId": "MClEFoImJXBTgLwdLI5n",
+      "order": 75,
+      "clipId": "security-officer-7dfa5ed5ebda",
+      "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
-      "fingerprint": "221aa5501b99084ec94e9b7baed0517906c5466a6aa91100ebf1be0186324a1f",
-      "audio": "audio/clips/sarah/sarah-bennett-071491a7d192.mp3",
-      "cached": true,
+      "fingerprint": "1a6ffced4fddcb83a847376da37d3053f2ad6cffc1b4b7c7872b987de1b21e5a",
+      "audio": "audio/clips/security/security-officer-7dfa5ed5ebda.mp3",
+      "cached": false,
       "pauseBeforeMs": 420,
-      "speakerName": "Sarah Bennett",
-      "startMs": 265039,
-      "endMs": 266267
+      "speakerName": "Settlement security",
+      "startMs": 240310,
+      "endMs": 240310
     },
     {
       "speaker": "narrator",
@@ -1654,7 +1534,7 @@
       "ttsText": "A smile started to show on Jack's face.",
       "paragraph": 60,
       "spanInParagraph": 0,
-      "order": 82,
+      "order": 76,
       "clipId": "narrator-67bbc2fd2cc2",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1663,8 +1543,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 266587,
-      "endMs": 269251
+      "startMs": 240630,
+      "endMs": 243294
     },
     {
       "speaker": "narrator",
@@ -1674,7 +1554,7 @@
       "ttsText": "Sarah stood and picked up her tablet.",
       "paragraph": 61,
       "spanInParagraph": 0,
-      "order": 83,
+      "order": 77,
       "clipId": "narrator-20594dab2860",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1683,8 +1563,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 269511,
-      "endMs": 271758
+      "startMs": 243554,
+      "endMs": 245801
     },
     {
       "speaker": "sarah-bennett",
@@ -1694,7 +1574,7 @@
       "ttsText": "I'll stay here and monitor TOMBS, the perimeter cameras, and your sensor feed the whole time. You won't be out there alone.",
       "paragraph": 61,
       "spanInParagraph": 1,
-      "order": 84,
+      "order": 78,
       "clipId": "sarah-bennett-e7553735e211",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -1703,8 +1583,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 272078,
-      "endMs": 279052
+      "startMs": 246121,
+      "endMs": 253096
     },
     {
       "speaker": "narrator",
@@ -1714,7 +1594,7 @@
       "ttsText": "Lena raised a hand.",
       "paragraph": 62,
       "spanInParagraph": 0,
-      "order": 85,
+      "order": 79,
       "clipId": "narrator-dde0d4464999",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1723,8 +1603,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 279372,
-      "endMs": 281096
+      "startMs": 253416,
+      "endMs": 255140
     },
     {
       "speaker": "lena-ortiz",
@@ -1734,7 +1614,7 @@
       "ttsText": "I'll help her yell at you if you do something stupid.",
       "paragraph": 62,
       "spanInParagraph": 1,
-      "order": 86,
+      "order": 80,
       "clipId": "lena-ortiz-91911ca62358",
       "voiceId": "4O1sYUnmtThcBoSBrri7",
       "voiceVersion": 1,
@@ -1743,48 +1623,28 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 281416,
-      "endMs": 284316
+      "startMs": 255460,
+      "endMs": 258359
     },
     {
       "speaker": "jack-bennett",
-      "method": "explicit-tag",
-      "note": "",
-      "displayText": "Noted,",
-      "ttsText": "Noted,",
+      "method": "override",
+      "note": "ch5 order 81: 'Noted.' -- Jack, to Lena's offer to help yell at him; was 'Jack said'. Added 2026-09-22 when the bare said-tags came out.",
+      "displayText": "Noted.",
+      "ttsText": "Noted.",
       "paragraph": 63,
       "spanInParagraph": 0,
-      "order": 87,
-      "clipId": "jack-bennett-82a1d166f7cd",
+      "order": 81,
+      "clipId": "jack-bennett-e7ca19376fea",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
-      "fingerprint": "42cce61de630873e68b484264f0ba725e2e264ad3f10a8d53f01f8965f14027f",
-      "audio": "audio/clips/jack/jack-bennett-82a1d166f7cd.mp3",
-      "cached": true,
+      "fingerprint": "d8d4036e1076ec10d0116a491aeaefc3e22f1d36981109f9660935790999c765",
+      "audio": "audio/clips/jack/jack-bennett-e7ca19376fea.mp3",
+      "cached": false,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 284736,
-      "endMs": 285493
-    },
-    {
-      "speaker": "narrator",
-      "method": "narration",
-      "note": "",
-      "displayText": "Jack said.",
-      "ttsText": "Jack said.",
-      "paragraph": 63,
-      "spanInParagraph": 1,
-      "order": 88,
-      "clipId": "narrator-e0b0057effaf",
-      "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
-      "voiceVersion": 1,
-      "fingerprint": "bfe1dd16b2a00c026225bd3255b776a5976e8c90cbba985d5b2aea4e36c87e6b",
-      "audio": "audio/clips/narrator/narrator-e0b0057effaf.mp3",
-      "cached": true,
-      "pauseBeforeMs": 320,
-      "speakerName": "Narrator",
-      "startMs": 285813,
-      "endMs": 286911
+      "startMs": 258779,
+      "endMs": 258779
     },
     {
       "speaker": "narrator",
@@ -1794,17 +1654,17 @@
       "ttsText": "Sarah crossed to him and handed him a small environmental sensor from the console drawer.",
       "paragraph": 64,
       "spanInParagraph": 0,
-      "order": 89,
+      "order": 82,
       "clipId": "narrator-7e91dd003ca6",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
       "fingerprint": "e21d7a10d4109e0cb611450c423501c2ed1b7b21812fb7b2ac04dc0888d11b2e",
       "audio": "audio/clips/narrator/narrator-7e91dd003ca6.mp3",
       "cached": true,
-      "pauseBeforeMs": 260,
+      "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 287171,
-      "endMs": 291977
+      "startMs": 259099,
+      "endMs": 263906
     },
     {
       "speaker": "sarah-bennett",
@@ -1814,7 +1674,7 @@
       "ttsText": "Air composition, temperature, pressure, particulates, radiation. Anything the unit can measure.",
       "paragraph": 64,
       "spanInParagraph": 1,
-      "order": 90,
+      "order": 83,
       "clipId": "sarah-bennett-9e04aab855b9",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -1823,18 +1683,18 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 292297,
-      "endMs": 298619
+      "startMs": 264226,
+      "endMs": 270547
     },
     {
       "speaker": "sarah-bennett",
       "method": "override",
-      "note": "ch5 order 96: 'And don't cross the line.' -- Sarah, continuing after she hands Jack the sensor. Added 2026-09-21 auditing the revised chapters. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 84: 'And don't cross the line.' -- Sarah, continuing after she hands Jack the sensor. Added 2026-09-21 auditing the revised chapters. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "And don't cross the line.",
       "ttsText": "And don't cross the line.",
       "paragraph": 65,
       "spanInParagraph": 0,
-      "order": 91,
+      "order": 84,
       "clipId": "sarah-bennett-8abb224bbad9",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -1843,18 +1703,18 @@
       "cached": true,
       "pauseBeforeMs": 200,
       "speakerName": "Sarah Bennett",
-      "startMs": 298819,
-      "endMs": 300229
+      "startMs": 270747,
+      "endMs": 272158
     },
     {
       "speaker": "jack-bennett",
       "method": "override",
-      "note": "ch5 order 97: His reply. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 85: His reply. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "I wasn't planning to.",
       "ttsText": "I wasn't planning to.",
       "paragraph": 66,
       "spanInParagraph": 0,
-      "order": 92,
+      "order": 85,
       "clipId": "jack-bennett-73cbc0b36065",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -1863,8 +1723,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 300649,
-      "endMs": 301929
+      "startMs": 272578,
+      "endMs": 273858
     },
     {
       "speaker": "narrator",
@@ -1874,7 +1734,7 @@
       "ttsText": "She raised an eyebrow.",
       "paragraph": 67,
       "spanInParagraph": 0,
-      "order": 93,
+      "order": 86,
       "clipId": "narrator-af5866e28dc5",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1883,8 +1743,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 302249,
-      "endMs": 303791
+      "startMs": 274178,
+      "endMs": 275719
     },
     {
       "speaker": "jack-bennett",
@@ -1894,7 +1754,7 @@
       "ttsText": "Intentionally,",
       "paragraph": 68,
       "spanInParagraph": 0,
-      "order": 94,
+      "order": 87,
       "clipId": "jack-bennett-34a8fe97d24e",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -1903,8 +1763,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 304111,
-      "endMs": 305234
+      "startMs": 276039,
+      "endMs": 277162
     },
     {
       "speaker": "narrator",
@@ -1914,7 +1774,7 @@
       "ttsText": "he added.",
       "paragraph": 68,
       "spanInParagraph": 1,
-      "order": 95,
+      "order": 88,
       "clipId": "narrator-b07b86bee1c2",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -1923,8 +1783,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 305554,
-      "endMs": 306729
+      "startMs": 277482,
+      "endMs": 278658
     },
     {
       "speaker": "sarah-bennett",
@@ -1934,7 +1794,7 @@
       "ttsText": "Jack.",
       "paragraph": 69,
       "spanInParagraph": 0,
-      "order": 96,
+      "order": 89,
       "clipId": "sarah-bennett-ea3f24b4acf1",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -1943,8 +1803,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 307049,
-      "endMs": 307624
+      "startMs": 278978,
+      "endMs": 279553
     },
     {
       "speaker": "jack-bennett",
@@ -1954,7 +1814,7 @@
       "ttsText": "I'm joking.",
       "paragraph": 70,
       "spanInParagraph": 0,
-      "order": 97,
+      "order": 90,
       "clipId": "jack-bennett-99bbdeeeddf2",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -1963,8 +1823,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 308044,
-      "endMs": 308984
+      "startMs": 279973,
+      "endMs": 280913
     },
     {
       "speaker": "sarah-bennett",
@@ -1974,7 +1834,7 @@
       "ttsText": "Try harder.",
       "paragraph": 71,
       "spanInParagraph": 0,
-      "order": 98,
+      "order": 91,
       "clipId": "sarah-bennett-70c2112449a2",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -1983,8 +1843,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 309404,
-      "endMs": 310449
+      "startMs": 281333,
+      "endMs": 282378
     },
     {
       "speaker": "narrator",
@@ -1994,7 +1854,7 @@
       "ttsText": "He tucked the sensor into his jacket and stopped at the door.",
       "paragraph": 72,
       "spanInParagraph": 0,
-      "order": 99,
+      "order": 92,
       "clipId": "narrator-b3ee689b3ff4",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2003,48 +1863,28 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 310769,
-      "endMs": 313982
+      "startMs": 282698,
+      "endMs": 285911
     },
     {
       "speaker": "jack-bennett",
-      "method": "explicit-tag",
-      "note": "",
-      "displayText": "Keep safe,",
-      "ttsText": "Keep safe,",
+      "method": "alternation",
+      "note": "inferred from the two-speaker exchange",
+      "displayText": "Keep safe.",
+      "ttsText": "Keep safe.",
       "paragraph": 73,
       "spanInParagraph": 0,
-      "order": 100,
-      "clipId": "jack-bennett-4123af5baa1c",
+      "order": 93,
+      "clipId": "jack-bennett-2530652e5cf8",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
-      "fingerprint": "3518bf9587cd426c62b5c1c207901d13d1da7b5a956cfed76a95317b97099ad3",
-      "audio": "audio/clips/jack/jack-bennett-4123af5baa1c.mp3",
-      "cached": true,
+      "fingerprint": "6a3a3ba623d747e5097bdad6afc077308f49d150302bbb24db1f546c519e58bd",
+      "audio": "audio/clips/jack/jack-bennett-2530652e5cf8.mp3",
+      "cached": false,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 314302,
-      "endMs": 315478
-    },
-    {
-      "speaker": "narrator",
-      "method": "narration",
-      "note": "",
-      "displayText": "he said.",
-      "ttsText": "he said.",
-      "paragraph": 73,
-      "spanInParagraph": 1,
-      "order": 101,
-      "clipId": "narrator-794c4c2fd5fb",
-      "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
-      "voiceVersion": 1,
-      "fingerprint": "4deec056ab2da51a3d5c8c83ef53cbaa28f7c57c34178158d40b1d1baf434623",
-      "audio": "audio/clips/narrator/narrator-794c4c2fd5fb.mp3",
-      "cached": true,
-      "pauseBeforeMs": 320,
-      "speakerName": "Narrator",
-      "startMs": 315798,
-      "endMs": 316973
+      "startMs": 286231,
+      "endMs": 286231
     },
     {
       "speaker": "narrator",
@@ -2054,17 +1894,17 @@
       "ttsText": "Sarah looked up.",
       "paragraph": 74,
       "spanInParagraph": 0,
-      "order": 102,
+      "order": 94,
       "clipId": "narrator-a754f63d5445",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
       "fingerprint": "5e0e4d7c2f13e411dff30cedd409f849301fcda349b5e071fc8550cf906d1e9c",
       "audio": "audio/clips/narrator/narrator-a754f63d5445.mp3",
       "cached": true,
-      "pauseBeforeMs": 260,
+      "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 317233,
-      "endMs": 318775
+      "startMs": 286551,
+      "endMs": 288092
     },
     {
       "speaker": "sarah-bennett",
@@ -2074,7 +1914,7 @@
       "ttsText": "Safe? You're the one leaving and going outside.",
       "paragraph": 74,
       "spanInParagraph": 1,
-      "order": 103,
+      "order": 95,
       "clipId": "sarah-bennett-a2f1b1827870",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -2083,8 +1923,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 319095,
-      "endMs": 321864
+      "startMs": 288412,
+      "endMs": 291181
     },
     {
       "speaker": "jack-bennett",
@@ -2094,7 +1934,7 @@
       "ttsText": "I know. I still want you safe.",
       "paragraph": 75,
       "spanInParagraph": 0,
-      "order": 104,
+      "order": 96,
       "clipId": "jack-bennett-b1a6b5b6b8bb",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -2103,8 +1943,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 322284,
-      "endMs": 323982
+      "startMs": 291601,
+      "endMs": 293299
     },
     {
       "speaker": "narrator",
@@ -2114,7 +1954,7 @@
       "ttsText": "Something in her expression softened.",
       "paragraph": 76,
       "spanInParagraph": 0,
-      "order": 105,
+      "order": 97,
       "clipId": "narrator-21e607274e20",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2123,8 +1963,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 324302,
-      "endMs": 326600
+      "startMs": 293619,
+      "endMs": 295918
     },
     {
       "speaker": "sarah-bennett",
@@ -2134,7 +1974,7 @@
       "ttsText": "That's sweet of you. But I need you to be safe. I'll be fine in here.",
       "paragraph": 76,
       "spanInParagraph": 1,
-      "order": 106,
+      "order": 98,
       "clipId": "sarah-bennett-ba9f811ad2c1",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -2143,8 +1983,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 326920,
-      "endMs": 330316
+      "startMs": 296238,
+      "endMs": 299634
     },
     {
       "speaker": "narrator",
@@ -2154,7 +1994,7 @@
       "ttsText": "Jack glanced at her stomach.",
       "paragraph": 77,
       "spanInParagraph": 0,
-      "order": 107,
+      "order": 99,
       "clipId": "narrator-acd5a4e16a58",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2163,8 +2003,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 330636,
-      "endMs": 332596
+      "startMs": 299954,
+      "endMs": 301913
     },
     {
       "speaker": "jack-bennett",
@@ -2174,7 +2014,7 @@
       "ttsText": "Both of you.",
       "paragraph": 77,
       "spanInParagraph": 1,
-      "order": 108,
+      "order": 100,
       "clipId": "jack-bennett-24c560b55a41",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -2183,8 +2023,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 332916,
-      "endMs": 333725
+      "startMs": 302233,
+      "endMs": 303043
     },
     {
       "speaker": "narrator",
@@ -2194,7 +2034,7 @@
       "ttsText": "Sarah rested a hand against it.",
       "paragraph": 78,
       "spanInParagraph": 0,
-      "order": 109,
+      "order": 101,
       "clipId": "narrator-adb76148b4df",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2203,8 +2043,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 334045,
-      "endMs": 336292
+      "startMs": 303363,
+      "endMs": 305609
     },
     {
       "speaker": "sarah-bennett",
@@ -2214,7 +2054,7 @@
       "ttsText": "Both of us.",
       "paragraph": 78,
       "spanInParagraph": 1,
-      "order": 110,
+      "order": 102,
       "clipId": "sarah-bennett-c021970fb06e",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -2223,48 +2063,28 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 336612,
-      "endMs": 337422
+      "startMs": 305929,
+      "endMs": 306739
     },
     {
       "speaker": "jack-bennett",
-      "method": "explicit-tag",
-      "note": "",
-      "displayText": "Love you,",
-      "ttsText": "Love you,",
+      "method": "alternation",
+      "note": "inferred from the two-speaker exchange",
+      "displayText": "Love you.",
+      "ttsText": "Love you.",
       "paragraph": 79,
       "spanInParagraph": 0,
-      "order": 111,
-      "clipId": "jack-bennett-c6de14733f8a",
+      "order": 103,
+      "clipId": "jack-bennett-03c320304fe1",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
-      "fingerprint": "452d8375e6f12fe13ebeae6c46ea6c1509fcab8c4cc236beeebf816b654c1a55",
-      "audio": "audio/clips/jack/jack-bennett-c6de14733f8a.mp3",
-      "cached": true,
+      "fingerprint": "5c3c96ab060997e3e3ad90007efe1a6e5761a92db6cf9f28f25bab1e915fd690",
+      "audio": "audio/clips/jack/jack-bennett-03c320304fe1.mp3",
+      "cached": false,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 337842,
-      "endMs": 338887
-    },
-    {
-      "speaker": "narrator",
-      "method": "narration",
-      "note": "",
-      "displayText": "Jack said.",
-      "ttsText": "Jack said.",
-      "paragraph": 79,
-      "spanInParagraph": 1,
-      "order": 112,
-      "clipId": "narrator-e0b0057effaf",
-      "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
-      "voiceVersion": 1,
-      "fingerprint": "bfe1dd16b2a00c026225bd3255b776a5976e8c90cbba985d5b2aea4e36c87e6b",
-      "audio": "audio/clips/narrator/narrator-e0b0057effaf.mp3",
-      "cached": true,
-      "pauseBeforeMs": 320,
-      "speakerName": "Narrator",
-      "startMs": 339207,
-      "endMs": 340304
+      "startMs": 307159,
+      "endMs": 307159
     },
     {
       "speaker": "sarah-bennett",
@@ -2274,17 +2094,17 @@
       "ttsText": "Love you too. Now go, before I change my mind.",
       "paragraph": 80,
       "spanInParagraph": 0,
-      "order": 113,
+      "order": 104,
       "clipId": "sarah-bennett-217331758004",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
       "fingerprint": "67d4092f531f6c1a1b88f801149ab272460c1d5a7f6d904cf73f66564913cd28",
       "audio": "audio/clips/sarah/sarah-bennett-217331758004.mp3",
       "cached": true,
-      "pauseBeforeMs": 320,
+      "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 340624,
-      "endMs": 343105
+      "startMs": 307579,
+      "endMs": 310061
     },
     {
       "speaker": "sarah-bennett",
@@ -2294,7 +2114,7 @@
       "ttsText": "Stay on our side,",
       "paragraph": 81,
       "spanInParagraph": 0,
-      "order": 114,
+      "order": 105,
       "clipId": "sarah-bennett-3bae8c210258",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -2303,8 +2123,8 @@
       "cached": true,
       "pauseBeforeMs": 200,
       "speakerName": "Sarah Bennett",
-      "startMs": 343305,
-      "endMs": 344611
+      "startMs": 310261,
+      "endMs": 311567
     },
     {
       "speaker": "narrator",
@@ -2314,7 +2134,7 @@
       "ttsText": "she added, already turning back to the console.",
       "paragraph": 81,
       "spanInParagraph": 1,
-      "order": 115,
+      "order": 106,
       "clipId": "narrator-6298180bb743",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2323,48 +2143,28 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 344931,
-      "endMs": 347779
+      "startMs": 311887,
+      "endMs": 314734
     },
     {
       "speaker": "jack-bennett",
-      "method": "explicit-tag",
-      "note": "",
-      "displayText": "I'll stay on our side. I promise not to make friends with the grass,",
-      "ttsText": "I'll stay on our side. I promise not to make friends with the grass,",
+      "method": "alternation",
+      "note": "inferred from the two-speaker exchange",
+      "displayText": "I'll stay on our side. I promise not to make friends with the grass.",
+      "ttsText": "I'll stay on our side. I promise not to make friends with the grass.",
       "paragraph": 82,
       "spanInParagraph": 0,
-      "order": 116,
-      "clipId": "jack-bennett-7b374c3754dd",
+      "order": 107,
+      "clipId": "jack-bennett-aa4eabbc70f8",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
-      "fingerprint": "aae77eae2a16885f023d4797f3ea44be1d35f8a4976ca449a38d9e4d3ca0e5bf",
-      "audio": "audio/clips/jack/jack-bennett-7b374c3754dd.mp3",
-      "cached": true,
+      "fingerprint": "01c51ba953267873226240905b14468504051eea3e36f59e35dbd60d92ce2d05",
+      "audio": "audio/clips/jack/jack-bennett-aa4eabbc70f8.mp3",
+      "cached": false,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 348099,
-      "endMs": 351913
-    },
-    {
-      "speaker": "narrator",
-      "method": "narration",
-      "note": "",
-      "displayText": "Jack said.",
-      "ttsText": "Jack said.",
-      "paragraph": 82,
-      "spanInParagraph": 1,
-      "order": 117,
-      "clipId": "narrator-e0b0057effaf",
-      "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
-      "voiceVersion": 1,
-      "fingerprint": "bfe1dd16b2a00c026225bd3255b776a5976e8c90cbba985d5b2aea4e36c87e6b",
-      "audio": "audio/clips/narrator/narrator-e0b0057effaf.mp3",
-      "cached": true,
-      "pauseBeforeMs": 320,
-      "speakerName": "Narrator",
-      "startMs": 352233,
-      "endMs": 353330
+      "startMs": 315054,
+      "endMs": 315054
     },
     {
       "speaker": "sarah-bennett",
@@ -2374,17 +2174,17 @@
       "ttsText": "Jack.",
       "paragraph": 83,
       "spanInParagraph": 0,
-      "order": 118,
+      "order": 108,
       "clipId": "sarah-bennett-ea3f24b4acf1",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
       "fingerprint": "ce684b8b4ffd2f67ea399f297aad82c2f42129ff170466476a570932db01e397",
       "audio": "audio/clips/sarah/sarah-bennett-ea3f24b4acf1.mp3",
       "cached": true,
-      "pauseBeforeMs": 320,
+      "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 353650,
-      "endMs": 354224
+      "startMs": 315474,
+      "endMs": 316049
     },
     {
       "speaker": "jack-bennett",
@@ -2394,7 +2194,7 @@
       "ttsText": "Going.",
       "paragraph": 84,
       "spanInParagraph": 0,
-      "order": 119,
+      "order": 109,
       "clipId": "jack-bennett-dc0eff9b4f37",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -2403,8 +2203,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 354644,
-      "endMs": 355324
+      "startMs": 316469,
+      "endMs": 317148
     },
     {
       "speaker": "narrator",
@@ -2414,7 +2214,7 @@
       "ttsText": "Jack found Mark waiting by the utility vehicle. Sarah and Lena stayed connected through his wrist terminal the whole way.",
       "paragraph": 85,
       "spanInParagraph": 0,
-      "order": 120,
+      "order": 110,
       "clipId": "narrator-3c5e583e09dc",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2423,8 +2223,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 355644,
-      "endMs": 362723
+      "startMs": 317468,
+      "endMs": 324547
     },
     {
       "speaker": "narrator",
@@ -2434,7 +2234,7 @@
       "ttsText": "Most of the houses along the route were still dark. Here and there a porch light burned, or a curtain shifted as someone looked out and did not come outside. A single dog barked somewhere behind a fence and went quiet again.",
       "paragraph": 86,
       "spanInParagraph": 0,
-      "order": 121,
+      "order": 111,
       "clipId": "narrator-a093ab3202c2",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2443,8 +2243,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 362983,
-      "endMs": 377063
+      "startMs": 324807,
+      "endMs": 338887
     },
     {
       "speaker": "narrator",
@@ -2454,7 +2254,7 @@
       "ttsText": "It felt, for a few blocks, almost like an ordinary night.",
       "paragraph": 87,
       "spanInParagraph": 0,
-      "order": 122,
+      "order": 112,
       "clipId": "narrator-32a1f0637e1b",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2463,8 +2263,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 377323,
-      "endMs": 380640
+      "startMs": 339147,
+      "endMs": 342465
     },
     {
       "speaker": "narrator",
@@ -2474,7 +2274,7 @@
       "ttsText": "Sarah's voice came through his wrist.",
       "paragraph": 88,
       "spanInParagraph": 0,
-      "order": 123,
+      "order": 113,
       "clipId": "narrator-b48c5590aad4",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2483,8 +2283,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 380900,
-      "endMs": 383147
+      "startMs": 342725,
+      "endMs": 344971
     },
     {
       "speaker": "sarah-bennett",
@@ -2494,7 +2294,7 @@
       "ttsText": "You still there?",
       "paragraph": 88,
       "spanInParagraph": 1,
-      "order": 124,
+      "order": 114,
       "clipId": "sarah-bennett-c789b72fb403",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -2503,8 +2303,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 383467,
-      "endMs": 384512
+      "startMs": 345291,
+      "endMs": 346336
     },
     {
       "speaker": "jack-bennett",
@@ -2514,7 +2314,7 @@
       "ttsText": "Still here. Still boring.",
       "paragraph": 89,
       "spanInParagraph": 0,
-      "order": 125,
+      "order": 115,
       "clipId": "jack-bennett-67ab9342f223",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -2523,8 +2323,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 384932,
-      "endMs": 386473
+      "startMs": 346756,
+      "endMs": 348298
     },
     {
       "speaker": "sarah-bennett",
@@ -2534,7 +2334,7 @@
       "ttsText": "Good. Keep it boring.",
       "paragraph": 90,
       "spanInParagraph": 0,
-      "order": 126,
+      "order": 116,
       "clipId": "sarah-bennett-91309cea2164",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -2543,8 +2343,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 386893,
-      "endMs": 388408
+      "startMs": 348718,
+      "endMs": 350233
     },
     {
       "speaker": "narrator",
@@ -2554,7 +2354,7 @@
       "ttsText": "Mark glanced over.",
       "paragraph": 91,
       "spanInParagraph": 0,
-      "order": 127,
+      "order": 117,
       "clipId": "narrator-7468db4ddd2b",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2563,8 +2363,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 388728,
-      "endMs": 390504
+      "startMs": 350553,
+      "endMs": 352329
     },
     {
       "speaker": "security-officer",
@@ -2574,7 +2374,7 @@
       "ttsText": "Funny thing about tonight. Usually when your problems get smaller, that's good news.",
       "paragraph": 91,
       "spanInParagraph": 1,
-      "order": 128,
+      "order": 118,
       "clipId": "security-officer-186c69b49e62",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -2583,48 +2383,28 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Settlement security",
-      "startMs": 390824,
-      "endMs": 395474
+      "startMs": 352649,
+      "endMs": 357299
     },
     {
       "speaker": "jack-bennett",
-      "method": "explicit-tag",
-      "note": "",
-      "displayText": "Not tonight,",
-      "ttsText": "Not tonight,",
+      "method": "override",
+      "note": "ch5 order 119: 'Not tonight.' -- Jack answering Mark in the vehicle; was 'Jack said'. Added 2026-09-22 when the bare said-tags came out.",
+      "displayText": "Not tonight.",
+      "ttsText": "Not tonight.",
       "paragraph": 92,
       "spanInParagraph": 0,
-      "order": 129,
-      "clipId": "jack-bennett-d387688f86f8",
+      "order": 119,
+      "clipId": "jack-bennett-415f9f5eadc8",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
-      "fingerprint": "1027161d30220f2be5a9592a92b1e4a8ad5dc0595c89d1c4499a170bffc05ca1",
-      "audio": "audio/clips/jack/jack-bennett-d387688f86f8.mp3",
-      "cached": true,
+      "fingerprint": "b1aecb952ee302477303fc7f686a31c1c16e1ee87676233470845a396ee59da1",
+      "audio": "audio/clips/jack/jack-bennett-415f9f5eadc8.mp3",
+      "cached": false,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 395894,
-      "endMs": 397174
-    },
-    {
-      "speaker": "narrator",
-      "method": "narration",
-      "note": "",
-      "displayText": "Jack said.",
-      "ttsText": "Jack said.",
-      "paragraph": 92,
-      "spanInParagraph": 1,
-      "order": 130,
-      "clipId": "narrator-e0b0057effaf",
-      "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
-      "voiceVersion": 1,
-      "fingerprint": "bfe1dd16b2a00c026225bd3255b776a5976e8c90cbba985d5b2aea4e36c87e6b",
-      "audio": "audio/clips/narrator/narrator-e0b0057effaf.mp3",
-      "cached": true,
-      "pauseBeforeMs": 320,
-      "speakerName": "Narrator",
-      "startMs": 397494,
-      "endMs": 398591
+      "startMs": 357719,
+      "endMs": 357719
     },
     {
       "speaker": "security-officer",
@@ -2634,17 +2414,17 @@
       "ttsText": "Not even a little?",
       "paragraph": 93,
       "spanInParagraph": 0,
-      "order": 131,
+      "order": 120,
       "clipId": "security-officer-9be678e1f9dd",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
       "fingerprint": "83a01e3cf3bdea937d793487014ddc47990599a5f8cdd047bf6ebfea406cc8eb",
       "audio": "audio/clips/security/security-officer-9be678e1f9dd.mp3",
       "cached": true,
-      "pauseBeforeMs": 320,
+      "pauseBeforeMs": 420,
       "speakerName": "Settlement security",
-      "startMs": 398911,
-      "endMs": 400139
+      "startMs": 358139,
+      "endMs": 359367
     },
     {
       "speaker": "narrator",
@@ -2654,7 +2434,7 @@
       "ttsText": "Sarah's voice cut in over the comm.",
       "paragraph": 94,
       "spanInParagraph": 0,
-      "order": 132,
+      "order": 121,
       "clipId": "narrator-5a8b8383a1bf",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2663,8 +2443,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 400459,
-      "endMs": 402810
+      "startMs": 359687,
+      "endMs": 362038
     },
     {
       "speaker": "sarah-bennett",
@@ -2674,7 +2454,7 @@
       "ttsText": "I heard that.",
       "paragraph": 94,
       "spanInParagraph": 1,
-      "order": 133,
+      "order": 122,
       "clipId": "sarah-bennett-c8e8fe245461",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -2683,8 +2463,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 403130,
-      "endMs": 404227
+      "startMs": 362358,
+      "endMs": 363455
     },
     {
       "speaker": "narrator",
@@ -2694,7 +2474,7 @@
       "ttsText": "Mark grinned and said nothing else.",
       "paragraph": 95,
       "spanInParagraph": 0,
-      "order": 134,
+      "order": 123,
       "clipId": "narrator-ce22b75916ec",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2703,8 +2483,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 404547,
-      "endMs": 406742
+      "startMs": 363775,
+      "endMs": 365969
     },
     {
       "speaker": "narrator",
@@ -2714,7 +2494,7 @@
       "ttsText": "As they approached the edge of the developed zone, the road seemed normal until it suddenly wasn't.",
       "paragraph": 96,
       "spanInParagraph": 0,
-      "order": 135,
+      "order": 124,
       "clipId": "narrator-57663e0b33e3",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2723,8 +2503,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 407002,
-      "endMs": 412644
+      "startMs": 366229,
+      "endMs": 371871
     },
     {
       "speaker": "narrator",
@@ -2734,7 +2514,7 @@
       "ttsText": "The pavement ended in a perfectly straight line.",
       "paragraph": 97,
       "spanInParagraph": 0,
-      "order": 136,
+      "order": 125,
       "clipId": "narrator-3c2a762f1eb2",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2743,8 +2523,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 412904,
-      "endMs": 415856
+      "startMs": 372131,
+      "endMs": 375083
     },
     {
       "speaker": "narrator",
@@ -2754,7 +2534,7 @@
       "ttsText": "Beyond it rose wilderness.",
       "paragraph": 98,
       "spanInParagraph": 0,
-      "order": 137,
+      "order": 126,
       "clipId": "narrator-cd49661485a7",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2763,8 +2543,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 416116,
-      "endMs": 418127
+      "startMs": 375343,
+      "endMs": 377355
     },
     {
       "speaker": "narrator",
@@ -2774,7 +2554,7 @@
       "ttsText": "Jack stepped out of the vehicle.",
       "paragraph": 99,
       "spanInParagraph": 0,
-      "order": 138,
+      "order": 127,
       "clipId": "narrator-bf4b5d5c01d5",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2783,8 +2563,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 418387,
-      "endMs": 420399
+      "startMs": 377615,
+      "endMs": 379626
     },
     {
       "speaker": "narrator",
@@ -2794,7 +2574,7 @@
       "ttsText": "The nearest blade of grass towered over him. Its base was wider than his torso, and fine hairs along its surface looked like stiff branches. A ridge of soil beyond the pavement rose several stories above the road.",
       "paragraph": 100,
       "spanInParagraph": 0,
-      "order": 139,
+      "order": 128,
       "clipId": "narrator-7e7f414a1666",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2803,8 +2583,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 420659,
-      "endMs": 434791
+      "startMs": 379886,
+      "endMs": 394018
     },
     {
       "speaker": "narrator",
@@ -2814,7 +2594,7 @@
       "ttsText": "Mark whispered,",
       "paragraph": 101,
       "spanInParagraph": 0,
-      "order": 140,
+      "order": 129,
       "clipId": "narrator-5e7d37502a99",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2823,8 +2603,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 435051,
-      "endMs": 436514
+      "startMs": 394278,
+      "endMs": 395741
     },
     {
       "speaker": "security-officer",
@@ -2834,7 +2614,7 @@
       "ttsText": "That's grass.",
       "paragraph": 101,
       "spanInParagraph": 1,
-      "order": 141,
+      "order": 130,
       "clipId": "security-officer-d399856036bd",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -2843,8 +2623,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Settlement security",
-      "startMs": 436834,
-      "endMs": 437931
+      "startMs": 396061,
+      "endMs": 397158
     },
     {
       "speaker": "narrator",
@@ -2854,7 +2634,7 @@
       "ttsText": "Jack lifted the sensor.",
       "paragraph": 102,
       "spanInParagraph": 0,
-      "order": 142,
+      "order": 131,
       "clipId": "narrator-4649918cd7d8",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2863,8 +2643,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 438251,
-      "endMs": 440027
+      "startMs": 397478,
+      "endMs": 399255
     },
     {
       "speaker": "jack-bennett",
@@ -2874,7 +2654,7 @@
       "ttsText": "Apparently.",
       "paragraph": 102,
       "spanInParagraph": 1,
-      "order": 143,
+      "order": 132,
       "clipId": "jack-bennett-1ac8a77017f5",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -2883,8 +2663,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 440347,
-      "endMs": 441288
+      "startMs": 399575,
+      "endMs": 400515
     },
     {
       "speaker": "narrator",
@@ -2894,7 +2674,7 @@
       "ttsText": "Sarah's voice came through his wrist.",
       "paragraph": 103,
       "spanInParagraph": 0,
-      "order": 144,
+      "order": 133,
       "clipId": "narrator-b48c5590aad4",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2903,8 +2683,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 441608,
-      "endMs": 443854
+      "startMs": 400835,
+      "endMs": 403082
     },
     {
       "speaker": "sarah-bennett",
@@ -2914,7 +2694,7 @@
       "ttsText": "Readings?",
       "paragraph": 103,
       "spanInParagraph": 1,
-      "order": 145,
+      "order": 134,
       "clipId": "sarah-bennett-052b008ed536",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -2923,8 +2703,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 444174,
-      "endMs": 445167
+      "startMs": 403402,
+      "endMs": 404394
     },
     {
       "speaker": "narrator",
@@ -2934,7 +2714,7 @@
       "ttsText": "He held the device toward the boundary.",
       "paragraph": 104,
       "spanInParagraph": 0,
-      "order": 146,
+      "order": 135,
       "clipId": "narrator-bf33001155a8",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2943,8 +2723,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 445487,
-      "endMs": 447786
+      "startMs": 404714,
+      "endMs": 407013
     },
     {
       "speaker": "jack-bennett",
@@ -2954,7 +2734,7 @@
       "ttsText": "Air is normal. Temperature difference is negligible. Pressure is normal.",
       "paragraph": 104,
       "spanInParagraph": 1,
-      "order": 147,
+      "order": 136,
       "clipId": "jack-bennett-ae14f437fc87",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -2963,8 +2743,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 448106,
-      "endMs": 452547
+      "startMs": 407333,
+      "endMs": 411774
     },
     {
       "speaker": "narrator",
@@ -2974,7 +2754,7 @@
       "ttsText": "Lena asked,",
       "paragraph": 105,
       "spanInParagraph": 0,
-      "order": 148,
+      "order": 137,
       "clipId": "narrator-560f775f6068",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -2983,8 +2763,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 452867,
-      "endMs": 454173
+      "startMs": 412094,
+      "endMs": 413400
     },
     {
       "speaker": "lena-ortiz",
@@ -2994,7 +2774,7 @@
       "ttsText": "Radiation?",
       "paragraph": 105,
       "spanInParagraph": 1,
-      "order": 149,
+      "order": 138,
       "clipId": "lena-ortiz-2773230a5fd6",
       "voiceId": "4O1sYUnmtThcBoSBrri7",
       "voiceVersion": 1,
@@ -3003,8 +2783,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 454493,
-      "endMs": 455616
+      "startMs": 413720,
+      "endMs": 414843
     },
     {
       "speaker": "jack-bennett",
@@ -3014,7 +2794,7 @@
       "ttsText": "Background.",
       "paragraph": 106,
       "spanInParagraph": 0,
-      "order": 150,
+      "order": 139,
       "clipId": "jack-bennett-a01af73cad01",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -3023,8 +2803,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 456036,
-      "endMs": 456976
+      "startMs": 415263,
+      "endMs": 416204
     },
     {
       "speaker": "narrator",
@@ -3034,7 +2814,7 @@
       "ttsText": "Jack crouched near the end of the pavement.",
       "paragraph": 107,
       "spanInParagraph": 0,
-      "order": 151,
+      "order": 140,
       "clipId": "narrator-2f36c0d0dd45",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3043,8 +2823,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 457296,
-      "endMs": 459961
+      "startMs": 416524,
+      "endMs": 419188
     },
     {
       "speaker": "narrator",
@@ -3054,7 +2834,7 @@
       "ttsText": "The boundary itself was invisible.",
       "paragraph": 108,
       "spanInParagraph": 0,
-      "order": 152,
+      "order": 141,
       "clipId": "narrator-816524b0ca0e",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3063,8 +2843,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 460221,
-      "endMs": 462755
+      "startMs": 419448,
+      "endMs": 421982
     },
     {
       "speaker": "narrator",
@@ -3074,7 +2854,7 @@
       "ttsText": "There was no glowing wall, no distortion, no lingering TOMBS field. Asphalt simply stopped and soil began.",
       "paragraph": 109,
       "spanInParagraph": 0,
-      "order": 153,
+      "order": 142,
       "clipId": "narrator-23268b608f6c",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3083,8 +2863,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 463015,
-      "endMs": 472001
+      "startMs": 422242,
+      "endMs": 431228
     },
     {
       "speaker": "narrator",
@@ -3094,7 +2874,7 @@
       "ttsText": "He reached toward the edge.",
       "paragraph": 110,
       "spanInParagraph": 0,
-      "order": 154,
+      "order": 143,
       "clipId": "narrator-5e2e3ca82260",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3103,8 +2883,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 472261,
-      "endMs": 474037
+      "startMs": 431488,
+      "endMs": 433264
     },
     {
       "speaker": "narrator",
@@ -3114,7 +2894,7 @@
       "ttsText": "Sarah's voice sharpened immediately.",
       "paragraph": 111,
       "spanInParagraph": 0,
-      "order": 155,
+      "order": 144,
       "clipId": "narrator-d9fb97e5e65d",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3123,8 +2903,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 474297,
-      "endMs": 476779
+      "startMs": 433524,
+      "endMs": 436006
     },
     {
       "speaker": "sarah-bennett",
@@ -3134,7 +2914,7 @@
       "ttsText": "Jack.",
       "paragraph": 111,
       "spanInParagraph": 1,
-      "order": 156,
+      "order": 145,
       "clipId": "sarah-bennett-ea3f24b4acf1",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -3143,8 +2923,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 477099,
-      "endMs": 477673
+      "startMs": 436326,
+      "endMs": 436901
     },
     {
       "speaker": "jack-bennett",
@@ -3154,7 +2934,7 @@
       "ttsText": "My hand is still on our side.",
       "paragraph": 112,
       "spanInParagraph": 0,
-      "order": 157,
+      "order": 146,
       "clipId": "jack-bennett-4d97524a001e",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -3163,8 +2943,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 478093,
-      "endMs": 479818
+      "startMs": 437321,
+      "endMs": 439045
     },
     {
       "speaker": "sarah-bennett",
@@ -3174,7 +2954,7 @@
       "ttsText": "You are genetically incapable of saying that reassuringly.",
       "paragraph": 113,
       "spanInParagraph": 0,
-      "order": 158,
+      "order": 147,
       "clipId": "sarah-bennett-30af4f103f65",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -3183,8 +2963,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 480238,
-      "endMs": 483320
+      "startMs": 439465,
+      "endMs": 442547
     },
     {
       "speaker": "narrator",
@@ -3194,7 +2974,7 @@
       "ttsText": "Jack let out a chuckle while moving the sensor closer.",
       "paragraph": 114,
       "spanInParagraph": 0,
-      "order": 159,
+      "order": 148,
       "clipId": "narrator-cebf6193d29c",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3203,8 +2983,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 483640,
-      "endMs": 486827
+      "startMs": 442867,
+      "endMs": 446054
     },
     {
       "speaker": "narrator",
@@ -3214,7 +2994,7 @@
       "ttsText": "The instrument remained normal.",
       "paragraph": 115,
       "spanInParagraph": 0,
-      "order": 160,
+      "order": 149,
       "clipId": "narrator-0ca6fd224359",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3223,8 +3003,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 487087,
-      "endMs": 489151
+      "startMs": 446314,
+      "endMs": 448378
     },
     {
       "speaker": "narrator",
@@ -3234,7 +3014,7 @@
       "ttsText": "Mark shone his light across the soil. Something glittered near the base of the ridge.",
       "paragraph": 116,
       "spanInParagraph": 0,
-      "order": 161,
+      "order": 150,
       "clipId": "narrator-1aa3f3811be4",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3243,8 +3023,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 489411,
-      "endMs": 494713
+      "startMs": 448638,
+      "endMs": 453941
     },
     {
       "speaker": "narrator",
@@ -3254,7 +3034,7 @@
       "ttsText": "Jack adjusted his flashlight.",
       "paragraph": 117,
       "spanInParagraph": 0,
-      "order": 162,
+      "order": 151,
       "clipId": "narrator-7db70204d3c7",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3263,8 +3043,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 494973,
-      "endMs": 496985
+      "startMs": 454201,
+      "endMs": 456212
     },
     {
       "speaker": "narrator",
@@ -3274,7 +3054,7 @@
       "ttsText": "A droplet of water clung beneath a grass blade, rising nearly to Jack's chest.",
       "paragraph": 118,
       "spanInParagraph": 0,
-      "order": 163,
+      "order": 152,
       "clipId": "narrator-13d17a654183",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3283,8 +3063,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 497245,
-      "endMs": 502287
+      "startMs": 456472,
+      "endMs": 461514
     },
     {
       "speaker": "narrator",
@@ -3294,7 +3074,7 @@
       "ttsText": "Mark took a step back.",
       "paragraph": 119,
       "spanInParagraph": 0,
-      "order": 164,
+      "order": 153,
       "clipId": "narrator-a2e14822006a",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3303,8 +3083,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 502547,
-      "endMs": 504506
+      "startMs": 461774,
+      "endMs": 463733
     },
     {
       "speaker": "security-officer",
@@ -3314,7 +3094,7 @@
       "ttsText": "That is deeply unpleasant.",
       "paragraph": 119,
       "spanInParagraph": 1,
-      "order": 165,
+      "order": 154,
       "clipId": "security-officer-87e0eda64b7a",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -3323,8 +3103,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Settlement security",
-      "startMs": 504826,
-      "endMs": 506471
+      "startMs": 464053,
+      "endMs": 465699
     },
     {
       "speaker": "narrator",
@@ -3334,7 +3114,7 @@
       "ttsText": "Jack watched the surface of the droplet tremble.",
       "paragraph": 120,
       "spanInParagraph": 0,
-      "order": 166,
+      "order": 155,
       "clipId": "narrator-d62798d27382",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3343,8 +3123,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 506791,
-      "endMs": 509587
+      "startMs": 466019,
+      "endMs": 468814
     },
     {
       "speaker": "jack-bennett",
@@ -3354,7 +3134,7 @@
       "ttsText": "It's water.",
       "paragraph": 120,
       "spanInParagraph": 1,
-      "order": 167,
+      "order": 156,
       "clipId": "jack-bennett-6258a630ef81",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -3363,8 +3143,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 509907,
-      "endMs": 510847
+      "startMs": 469134,
+      "endMs": 470074
     },
     {
       "speaker": "security-officer",
@@ -3374,7 +3154,7 @@
       "ttsText": "That doesn't make it less unpleasant.",
       "paragraph": 121,
       "spanInParagraph": 0,
-      "order": 168,
+      "order": 157,
       "clipId": "security-officer-8111f6a9e071",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -3383,8 +3163,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Settlement security",
-      "startMs": 511267,
-      "endMs": 513513
+      "startMs": 470494,
+      "endMs": 472741
     },
     {
       "speaker": "narrator",
@@ -3394,7 +3174,7 @@
       "ttsText": "Sarah's voice came through his wrist.",
       "paragraph": 122,
       "spanInParagraph": 0,
-      "order": 169,
+      "order": 158,
       "clipId": "narrator-b48c5590aad4",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3403,8 +3183,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 513833,
-      "endMs": 516080
+      "startMs": 473061,
+      "endMs": 475307
     },
     {
       "speaker": "sarah-bennett",
@@ -3414,7 +3194,7 @@
       "ttsText": "Don't touch it.",
       "paragraph": 122,
       "spanInParagraph": 1,
-      "order": 170,
+      "order": 159,
       "clipId": "sarah-bennett-106b724bf6ca",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -3423,18 +3203,18 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 516400,
-      "endMs": 517576
+      "startMs": 475627,
+      "endMs": 476803
     },
     {
       "speaker": "jack-bennett",
       "method": "override",
-      "note": "ch5 order 178: Sarah tells Jack not to touch the droplet; the reply is his. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 160: Sarah tells Jack not to touch the droplet; the reply is his. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "I wasn't going to.",
       "ttsText": "I wasn't going to.",
       "paragraph": 123,
       "spanInParagraph": 0,
-      "order": 171,
+      "order": 160,
       "clipId": "jack-bennett-390609bb7f81",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -3443,8 +3223,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 517996,
-      "endMs": 519223
+      "startMs": 477223,
+      "endMs": 478451
     },
     {
       "speaker": "narrator",
@@ -3454,7 +3234,7 @@
       "ttsText": "Lena added,",
       "paragraph": 124,
       "spanInParagraph": 0,
-      "order": 172,
+      "order": 161,
       "clipId": "narrator-a133a5bf2c75",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3463,8 +3243,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 519543,
-      "endMs": 520823
+      "startMs": 478771,
+      "endMs": 480051
     },
     {
       "speaker": "lena-ortiz",
@@ -3474,7 +3254,7 @@
       "ttsText": "For once, I believe him.",
       "paragraph": 124,
       "spanInParagraph": 1,
-      "order": 173,
+      "order": 162,
       "clipId": "lena-ortiz-a56c917f657f",
       "voiceId": "4O1sYUnmtThcBoSBrri7",
       "voiceVersion": 1,
@@ -3483,8 +3263,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 521143,
-      "endMs": 522737
+      "startMs": 480371,
+      "endMs": 481964
     },
     {
       "speaker": "narrator",
@@ -3494,7 +3274,7 @@
       "ttsText": "Jack stood and swept his light farther along the boundary.",
       "paragraph": 125,
       "spanInParagraph": 0,
-      "order": 174,
+      "order": 163,
       "clipId": "narrator-317777892c21",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3503,8 +3283,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 523057,
-      "endMs": 526609
+      "startMs": 482284,
+      "endMs": 485837
     },
     {
       "speaker": "narrator",
@@ -3514,7 +3294,7 @@
       "ttsText": "Something pale lay half buried in the soil.",
       "paragraph": 126,
       "spanInParagraph": 0,
-      "order": 175,
+      "order": 164,
       "clipId": "narrator-b5f29c1b6ff0",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3523,8 +3303,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 526869,
-      "endMs": 529821
+      "startMs": 486097,
+      "endMs": 489049
     },
     {
       "speaker": "narrator",
@@ -3534,7 +3314,7 @@
       "ttsText": "He moved several steps down the pavement, staying well inside the developed zone.",
       "paragraph": 127,
       "spanInParagraph": 0,
-      "order": 176,
+      "order": 165,
       "clipId": "narrator-39815158583c",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3543,8 +3323,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 530081,
-      "endMs": 535071
+      "startMs": 489309,
+      "endMs": 494298
     },
     {
       "speaker": "narrator",
@@ -3554,7 +3334,7 @@
       "ttsText": "Mark swept his light toward it.",
       "paragraph": 128,
       "spanInParagraph": 0,
-      "order": 177,
+      "order": 166,
       "clipId": "narrator-23d4fc9d1a69",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3563,8 +3343,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 535331,
-      "endMs": 537342
+      "startMs": 494558,
+      "endMs": 496569
     },
     {
       "speaker": "security-officer",
@@ -3574,7 +3354,7 @@
       "ttsText": "Hey Jack, what's that look like to you?",
       "paragraph": 128,
       "spanInParagraph": 1,
-      "order": 178,
+      "order": 167,
       "clipId": "security-officer-c3f931f2116d",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -3583,18 +3363,18 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Settlement security",
-      "startMs": 537662,
-      "endMs": 539726
+      "startMs": 496889,
+      "endMs": 498953
     },
     {
       "speaker": "jack-bennett",
       "method": "override",
-      "note": "ch5 order 186: 'I don't know. What do you think?' -- Jack answering Mark's 'what's that look like to you?' Lena is on the comm, not at the boundary. Added 2026-09-22. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 168: 'I don't know. What do you think?' -- Jack answering Mark's 'what's that look like to you?' Lena is on the comm, not at the boundary. Added 2026-09-22. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "I don't know. What do you think?",
       "ttsText": "I don't know. What do you think?",
       "paragraph": 129,
       "spanInParagraph": 0,
-      "order": 179,
+      "order": 168,
       "clipId": "jack-bennett-c29cbb639856",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -3603,8 +3383,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 540146,
-      "endMs": 542105
+      "startMs": 499373,
+      "endMs": 501332
     },
     {
       "speaker": "security-officer",
@@ -3614,7 +3394,7 @@
       "ttsText": "I don't know. That's why I asked you.",
       "paragraph": 130,
       "spanInParagraph": 0,
-      "order": 180,
+      "order": 169,
       "clipId": "security-officer-130bb3083352",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -3623,8 +3403,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Settlement security",
-      "startMs": 542525,
-      "endMs": 544824
+      "startMs": 501752,
+      "endMs": 504051
     },
     {
       "speaker": "narrator",
@@ -3634,7 +3414,7 @@
       "ttsText": "Jack studied the shape through his wrist camera.",
       "paragraph": 131,
       "spanInParagraph": 0,
-      "order": 181,
+      "order": 170,
       "clipId": "narrator-cb4ee3db03c0",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3643,8 +3423,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 545144,
-      "endMs": 548096
+      "startMs": 504371,
+      "endMs": 507323
     },
     {
       "speaker": "jack-bennett",
@@ -3654,7 +3434,7 @@
       "ttsText": "Fair. It's long. Curved. Kind of like a moon.",
       "paragraph": 131,
       "spanInParagraph": 1,
-      "order": 182,
+      "order": 171,
       "clipId": "jack-bennett-041f9a3fcbd8",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -3663,8 +3443,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 548416,
-      "endMs": 550976
+      "startMs": 507643,
+      "endMs": 510203
     },
     {
       "speaker": "security-officer",
@@ -3674,7 +3454,7 @@
       "ttsText": "UFO?",
       "paragraph": 132,
       "spanInParagraph": 0,
-      "order": 183,
+      "order": 172,
       "clipId": "security-officer-64cec3e70836",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -3683,8 +3463,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Settlement security",
-      "startMs": 551396,
-      "endMs": 552388
+      "startMs": 510623,
+      "endMs": 511616
     },
     {
       "speaker": "jack-bennett",
@@ -3694,7 +3474,7 @@
       "ttsText": "It's not a UFO, Mark.",
       "paragraph": 133,
       "spanInParagraph": 0,
-      "order": 184,
+      "order": 173,
       "clipId": "jack-bennett-bdf5ced59ade",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -3703,8 +3483,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 552808,
-      "endMs": 554271
+      "startMs": 512036,
+      "endMs": 513498
     },
     {
       "speaker": "narrator",
@@ -3714,7 +3494,7 @@
       "ttsText": "Jack zoomed in further. The pale object curved upward from the dirt, smooth and translucent at one end.",
       "paragraph": 134,
       "spanInParagraph": 0,
-      "order": 185,
+      "order": 174,
       "clipId": "narrator-b81544295ec9",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3723,8 +3503,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 554591,
-      "endMs": 561905
+      "startMs": 513818,
+      "endMs": 521133
     },
     {
       "speaker": "security-officer",
@@ -3734,7 +3514,7 @@
       "ttsText": "Is that plastic?",
       "paragraph": 135,
       "spanInParagraph": 0,
-      "order": 186,
+      "order": 175,
       "clipId": "security-officer-2da5be9137d5",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -3743,8 +3523,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Settlement security",
-      "startMs": 562225,
-      "endMs": 563505
+      "startMs": 521453,
+      "endMs": 522733
     },
     {
       "speaker": "narrator",
@@ -3754,7 +3534,7 @@
       "ttsText": "Mark asked.",
       "paragraph": 135,
       "spanInParagraph": 1,
-      "order": 187,
+      "order": 176,
       "clipId": "narrator-22ff9c669c61",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3763,8 +3543,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 563825,
-      "endMs": 565105
+      "startMs": 523053,
+      "endMs": 524333
     },
     {
       "speaker": "narrator",
@@ -3774,7 +3554,7 @@
       "ttsText": "Jack increased the magnification.",
       "paragraph": 136,
       "spanInParagraph": 0,
-      "order": 188,
+      "order": 177,
       "clipId": "narrator-e0d2f4b36d48",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3783,8 +3563,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 565365,
-      "endMs": 567716
+      "startMs": 524593,
+      "endMs": 526944
     },
     {
       "speaker": "narrator",
@@ -3794,7 +3574,7 @@
       "ttsText": "Fine ridges crossed its surface.",
       "paragraph": 137,
       "spanInParagraph": 0,
-      "order": 189,
+      "order": 178,
       "clipId": "narrator-ac2d46b03000",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3803,8 +3583,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 567976,
-      "endMs": 570353
+      "startMs": 527204,
+      "endMs": 529581
     },
     {
       "speaker": "jack-bennett",
@@ -3814,7 +3594,7 @@
       "ttsText": "No.",
       "paragraph": 138,
       "spanInParagraph": 0,
-      "order": 190,
+      "order": 179,
       "clipId": "jack-bennett-a40ffc6ce592",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -3823,8 +3603,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 570673,
-      "endMs": 571353
+      "startMs": 529901,
+      "endMs": 530580
     },
     {
       "speaker": "narrator",
@@ -3834,7 +3614,7 @@
       "ttsText": "He had seen objects like it his entire life, usually without thinking about them.",
       "paragraph": 139,
       "spanInParagraph": 0,
-      "order": 191,
+      "order": 180,
       "clipId": "narrator-85dcb02a2b42",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3843,8 +3623,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 571673,
-      "endMs": 576558
+      "startMs": 530900,
+      "endMs": 535785
     },
     {
       "speaker": "narrator",
@@ -3854,7 +3634,7 @@
       "ttsText": "Mark squinted at the screen.",
       "paragraph": 140,
       "spanInParagraph": 0,
-      "order": 192,
+      "order": 181,
       "clipId": "narrator-092594393901",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3863,8 +3643,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 576818,
-      "endMs": 578646
+      "startMs": 536045,
+      "endMs": 537873
     },
     {
       "speaker": "security-officer",
@@ -3874,7 +3654,7 @@
       "ttsText": "...Fingernail?",
       "paragraph": 140,
       "spanInParagraph": 1,
-      "order": 193,
+      "order": 182,
       "clipId": "security-officer-930319fea3ae",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -3883,8 +3663,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Settlement security",
-      "startMs": 578966,
-      "endMs": 580246
+      "startMs": 538193,
+      "endMs": 539473
     },
     {
       "speaker": "narrator",
@@ -3894,7 +3674,7 @@
       "ttsText": "Jack went still.",
       "paragraph": 141,
       "spanInParagraph": 0,
-      "order": 194,
+      "order": 183,
       "clipId": "narrator-2036bc0e4081",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3903,8 +3683,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 580566,
-      "endMs": 582107
+      "startMs": 539793,
+      "endMs": 541335
     },
     {
       "speaker": "jack-bennett",
@@ -3914,7 +3694,7 @@
       "ttsText": "Yeah. Actually — yeah.",
       "paragraph": 141,
       "spanInParagraph": 1,
-      "order": 195,
+      "order": 184,
       "clipId": "jack-bennett-179c7e8a4a08",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -3923,8 +3703,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 582427,
-      "endMs": 583838
+      "startMs": 541655,
+      "endMs": 543065
     },
     {
       "speaker": "narrator",
@@ -3934,7 +3714,7 @@
       "ttsText": "Sarah confirmed it a second later, over the feed.",
       "paragraph": 142,
       "spanInParagraph": 0,
-      "order": 196,
+      "order": 185,
       "clipId": "narrator-5eee5fab5eb3",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -3943,8 +3723,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 584158,
-      "endMs": 587188
+      "startMs": 543385,
+      "endMs": 546416
     },
     {
       "speaker": "sarah-bennett",
@@ -3954,7 +3734,7 @@
       "ttsText": "Jack, that's a fingernail.",
       "paragraph": 142,
       "spanInParagraph": 1,
-      "order": 197,
+      "order": 186,
       "clipId": "sarah-bennett-0c3f787da3c6",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -3963,8 +3743,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 587508,
-      "endMs": 588684
+      "startMs": 546736,
+      "endMs": 547911
     },
     {
       "speaker": "security-officer",
@@ -3974,7 +3754,7 @@
       "ttsText": "Toenail or thumbnail?",
       "paragraph": 143,
       "spanInParagraph": 0,
-      "order": 198,
+      "order": 187,
       "clipId": "security-officer-4129f89f2744",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -3983,8 +3763,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Settlement security",
-      "startMs": 589104,
-      "endMs": 590645
+      "startMs": 548331,
+      "endMs": 549872
     },
     {
       "speaker": "narrator",
@@ -3994,7 +3774,7 @@
       "ttsText": "Mark asked.",
       "paragraph": 143,
       "spanInParagraph": 1,
-      "order": 199,
+      "order": 188,
       "clipId": "narrator-22ff9c669c61",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4003,18 +3783,18 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 590965,
-      "endMs": 592245
+      "startMs": 550192,
+      "endMs": 551472
     },
     {
       "speaker": "jack-bennett",
       "method": "override",
-      "note": "ch5 order 208: 'Does it matter?' -- Jack, to Mark's 'Toenail or thumbnail?'; Mark answers 'A little.' Sarah's fingernail line is the one before. Added 2026-09-22. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 189: 'Does it matter?' -- Jack, to Mark's 'Toenail or thumbnail?'; Mark answers 'A little.' Sarah's fingernail line is the one before. Added 2026-09-22. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "Does it matter?",
       "ttsText": "Does it matter?",
       "paragraph": 144,
       "spanInParagraph": 0,
-      "order": 200,
+      "order": 189,
       "clipId": "jack-bennett-c08c94b8e8b7",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -4023,8 +3803,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 592565,
-      "endMs": 593610
+      "startMs": 551792,
+      "endMs": 552837
     },
     {
       "speaker": "security-officer",
@@ -4034,7 +3814,7 @@
       "ttsText": "A little.",
       "paragraph": 145,
       "spanInParagraph": 0,
-      "order": 201,
+      "order": 190,
       "clipId": "security-officer-4d500c6d84c4",
       "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
       "voiceVersion": 1,
@@ -4043,8 +3823,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Settlement security",
-      "startMs": 594030,
-      "endMs": 594840
+      "startMs": 553257,
+      "endMs": 554067
     },
     {
       "speaker": "narrator",
@@ -4054,7 +3834,7 @@
       "ttsText": "He stared at the object.",
       "paragraph": 146,
       "spanInParagraph": 0,
-      "order": 202,
+      "order": 191,
       "clipId": "narrator-cc468eb1ae31",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4063,8 +3843,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 595160,
-      "endMs": 596570
+      "startMs": 554387,
+      "endMs": 555798
     },
     {
       "speaker": "narrator",
@@ -4074,7 +3854,7 @@
       "ttsText": "Not a fingernail attached to a finger.",
       "paragraph": 147,
       "spanInParagraph": 0,
-      "order": 203,
+      "order": 192,
       "clipId": "narrator-6979e594abbb",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4083,8 +3863,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 596830,
-      "endMs": 599312
+      "startMs": 556058,
+      "endMs": 558539
     },
     {
       "speaker": "narrator",
@@ -4094,7 +3874,7 @@
       "ttsText": "A clipping.",
       "paragraph": 148,
       "spanInParagraph": 0,
-      "order": 204,
+      "order": 193,
       "clipId": "narrator-1073b1770deb",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4103,8 +3883,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 599572,
-      "endMs": 600617
+      "startMs": 558799,
+      "endMs": 559844
     },
     {
       "speaker": "narrator",
@@ -4114,7 +3894,7 @@
       "ttsText": "Discarded somewhere on the island before tonight, unnoticed among dirt and grass.",
       "paragraph": 149,
       "spanInParagraph": 0,
-      "order": 205,
+      "order": 194,
       "clipId": "narrator-36afa0b91f41",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4123,8 +3903,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 600877,
-      "endMs": 606049
+      "startMs": 560104,
+      "endMs": 565276
     },
     {
       "speaker": "narrator",
@@ -4134,7 +3914,7 @@
       "ttsText": "Now it stretched longer than Jack was tall.",
       "paragraph": 150,
       "spanInParagraph": 0,
-      "order": 206,
+      "order": 195,
       "clipId": "narrator-6600a29d0eb8",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4143,8 +3923,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 606309,
-      "endMs": 609026
+      "startMs": 565536,
+      "endMs": 568253
     },
     {
       "speaker": "narrator",
@@ -4154,7 +3934,7 @@
       "ttsText": "Nobody spoke for several seconds.",
       "paragraph": 151,
       "spanInParagraph": 0,
-      "order": 207,
+      "order": 196,
       "clipId": "narrator-1c1a4390cb5f",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4163,8 +3943,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 609286,
-      "endMs": 611532
+      "startMs": 568513,
+      "endMs": 570760
     },
     {
       "speaker": "narrator",
@@ -4174,7 +3954,7 @@
       "ttsText": "The grass above them shifted.",
       "paragraph": 152,
       "spanInParagraph": 0,
-      "order": 208,
+      "order": 197,
       "clipId": "narrator-2a9f8b195e0c",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4183,8 +3963,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 611792,
-      "endMs": 613751
+      "startMs": 571020,
+      "endMs": 572979
     },
     {
       "speaker": "narrator",
@@ -4194,7 +3974,7 @@
       "ttsText": "Jack looked up.",
       "paragraph": 153,
       "spanInParagraph": 0,
-      "order": 209,
+      "order": 198,
       "clipId": "narrator-eafd8c17013a",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4203,8 +3983,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 614011,
-      "endMs": 615422
+      "startMs": 573239,
+      "endMs": 574649
     },
     {
       "speaker": "narrator",
@@ -4214,7 +3994,7 @@
       "ttsText": "A vibration rolled through the ground.",
       "paragraph": 154,
       "spanInParagraph": 0,
-      "order": 210,
+      "order": 199,
       "clipId": "narrator-57ba1779f3a7",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4223,8 +4003,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 615682,
-      "endMs": 617981
+      "startMs": 574909,
+      "endMs": 577208
     },
     {
       "speaker": "narrator",
@@ -4234,7 +4014,7 @@
       "ttsText": "This time, there was no doubt where it came from.",
       "paragraph": 155,
       "spanInParagraph": 0,
-      "order": 211,
+      "order": 200,
       "clipId": "narrator-33c6a0440af7",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4243,8 +4023,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 618241,
-      "endMs": 620905
+      "startMs": 577468,
+      "endMs": 580133
     },
     {
       "speaker": "narrator",
@@ -4254,7 +4034,7 @@
       "ttsText": "Something was moving through the wilderness.",
       "paragraph": 156,
       "spanInParagraph": 0,
-      "order": 212,
+      "order": 201,
       "clipId": "narrator-3a23675ed497",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4263,8 +4043,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 621165,
-      "endMs": 623647
+      "startMs": 580393,
+      "endMs": 582874
     },
     {
       "speaker": "narrator",
@@ -4274,7 +4054,7 @@
       "ttsText": "Mark raised his light.",
       "paragraph": 157,
       "spanInParagraph": 0,
-      "order": 213,
+      "order": 202,
       "clipId": "narrator-4afab7009c7a",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4283,8 +4063,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 623907,
-      "endMs": 625448
+      "startMs": 583134,
+      "endMs": 584676
     },
     {
       "speaker": "narrator",
@@ -4294,7 +4074,7 @@
       "ttsText": "Jack backed toward the vehicle.",
       "paragraph": 158,
       "spanInParagraph": 0,
-      "order": 214,
+      "order": 203,
       "clipId": "narrator-3fd6dcabd96e",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4303,8 +4083,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 625708,
-      "endMs": 627824
+      "startMs": 584936,
+      "endMs": 587051
     },
     {
       "speaker": "jack-bennett",
@@ -4314,7 +4094,7 @@
       "ttsText": "We're done. Let's move.",
       "paragraph": 158,
       "spanInParagraph": 1,
-      "order": 215,
+      "order": 204,
       "clipId": "jack-bennett-07ce933f9eaf",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -4323,8 +4103,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 628144,
-      "endMs": 629868
+      "startMs": 587371,
+      "endMs": 589096
     },
     {
       "speaker": "narrator",
@@ -4334,7 +4114,7 @@
       "ttsText": "The grass stems moved one after another in the darkness, not with the wind but in a line approaching the settlement.",
       "paragraph": 159,
       "spanInParagraph": 0,
-      "order": 216,
+      "order": 205,
       "clipId": "narrator-cb53a3add60d",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4343,8 +4123,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 630188,
-      "endMs": 636902
+      "startMs": 589416,
+      "endMs": 596129
     },
     {
       "speaker": "narrator",
@@ -4354,7 +4134,7 @@
       "ttsText": "Sarah's voice came through his wrist.",
       "paragraph": 160,
       "spanInParagraph": 0,
-      "order": 217,
+      "order": 206,
       "clipId": "narrator-b48c5590aad4",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4363,8 +4143,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 637162,
-      "endMs": 639408
+      "startMs": 596389,
+      "endMs": 598636
     },
     {
       "speaker": "sarah-bennett",
@@ -4374,7 +4154,7 @@
       "ttsText": "Jack, what's happening?",
       "paragraph": 160,
       "spanInParagraph": 1,
-      "order": 218,
+      "order": 207,
       "clipId": "sarah-bennett-5ab283f0d121",
       "voiceId": "MClEFoImJXBTgLwdLI5n",
       "voiceVersion": 1,
@@ -4383,8 +4163,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 639728,
-      "endMs": 641034
+      "startMs": 598956,
+      "endMs": 600262
     },
     {
       "speaker": "narrator",
@@ -4394,7 +4174,7 @@
       "ttsText": "He climbed into the vehicle without taking his eyes off the boundary.",
       "paragraph": 161,
       "spanInParagraph": 0,
-      "order": 219,
+      "order": 208,
       "clipId": "narrator-38519f7f4f42",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4403,8 +4183,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 641354,
-      "endMs": 645142
+      "startMs": 600582,
+      "endMs": 604369
     },
     {
       "speaker": "jack-bennett",
@@ -4414,7 +4194,7 @@
       "ttsText": "Something's coming.",
       "paragraph": 162,
       "spanInParagraph": 0,
-      "order": 220,
+      "order": 209,
       "clipId": "jack-bennett-bd1ef8757150",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -4423,8 +4203,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 645462,
-      "endMs": 646455
+      "startMs": 604689,
+      "endMs": 605682
     },
     {
       "speaker": "narrator",
@@ -4434,7 +4214,7 @@
       "ttsText": "Mark started the vehicle's motor.",
       "paragraph": 163,
       "spanInParagraph": 0,
-      "order": 221,
+      "order": 210,
       "clipId": "narrator-fdc2dbbe308b",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4443,8 +4223,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 646775,
-      "endMs": 648891
+      "startMs": 606002,
+      "endMs": 608118
     },
     {
       "speaker": "narrator",
@@ -4454,7 +4234,7 @@
       "ttsText": "A dark shape passed between two enormous blades of grass.",
       "paragraph": 164,
       "spanInParagraph": 0,
-      "order": 222,
+      "order": 211,
       "clipId": "narrator-3c1dabaaeb95",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4463,8 +4243,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 649151,
-      "endMs": 652938
+      "startMs": 608378,
+      "endMs": 612166
     },
     {
       "speaker": "narrator",
@@ -4474,7 +4254,7 @@
       "ttsText": "For one instant, Jack caught the outline of several thin legs.",
       "paragraph": 165,
       "spanInParagraph": 0,
-      "order": 223,
+      "order": 212,
       "clipId": "narrator-204801321205",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4483,8 +4263,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 653198,
-      "endMs": 657012
+      "startMs": 612426,
+      "endMs": 616240
     },
     {
       "speaker": "narrator",
@@ -4494,7 +4274,7 @@
       "ttsText": "Then it vanished behind the soil ridge.",
       "paragraph": 166,
       "spanInParagraph": 0,
-      "order": 224,
+      "order": 213,
       "clipId": "narrator-6762d26e28c3",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4503,8 +4283,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 657272,
-      "endMs": 659702
+      "startMs": 616500,
+      "endMs": 618929
     },
     {
       "speaker": "narrator",
@@ -4514,7 +4294,7 @@
       "ttsText": "He shut the door.",
       "paragraph": 167,
       "spanInParagraph": 0,
-      "order": 225,
+      "order": 214,
       "clipId": "narrator-a24df1df7d02",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4523,18 +4303,18 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 659962,
-      "endMs": 661503
+      "startMs": 619189,
+      "endMs": 620730
     },
     {
       "speaker": "jack-bennett",
       "method": "override",
-      "note": "ch5 order 234: Jack, in the vehicle, telling the driver to go. | Re-pointed 2026-09-22 after split quotes were joined for the narrator.",
+      "note": "ch5 order 215: Jack, in the vehicle, telling the driver to go. | Re-pointed 2026-09-22 after the bare said-tags came out.",
       "displayText": "Go.",
       "ttsText": "Go.",
       "paragraph": 168,
       "spanInParagraph": 0,
-      "order": 226,
+      "order": 215,
       "clipId": "jack-bennett-a53dd00e2c4a",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
@@ -4543,8 +4323,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 661823,
-      "endMs": 662450
+      "startMs": 621050,
+      "endMs": 621677
     },
     {
       "speaker": "narrator",
@@ -4554,7 +4334,7 @@
       "ttsText": "The vehicle accelerated away from the boundary.",
       "paragraph": 169,
       "spanInParagraph": 0,
-      "order": 227,
+      "order": 216,
       "clipId": "narrator-a09ea1792947",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4563,8 +4343,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 662770,
-      "endMs": 665539
+      "startMs": 621997,
+      "endMs": 624766
     },
     {
       "speaker": "narrator",
@@ -4574,7 +4354,7 @@
       "ttsText": "Behind them, the grass kept moving.",
       "paragraph": 170,
       "spanInParagraph": 0,
-      "order": 228,
+      "order": 217,
       "clipId": "narrator-81c52afdb05e",
       "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
       "voiceVersion": 1,
@@ -4583,8 +4363,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 665799,
-      "endMs": 668045
+      "startMs": 625026,
+      "endMs": 627273
     }
   ],
   "cues": [
@@ -4607,7 +4387,7 @@
       "category": "interface",
       "layer": "sfx",
       "timing": "after",
-      "order": 139,
+      "order": 128,
       "gain": 0.019,
       "loop": false,
       "audio": "audio/sfx/interface/sfx_wrist_terminal_chirp.mp3",
@@ -4620,7 +4400,7 @@
       "category": "system",
       "layer": "sfx",
       "timing": "before",
-      "order": 210,
+      "order": 199,
       "gain": 0.151,
       "loop": false,
       "audio": "audio/sfx/system/sfx_distant_vibration_deep.mp3",
@@ -4633,7 +4413,7 @@
       "category": "foley",
       "layer": "sfx",
       "timing": "during",
-      "order": 227,
+      "order": 216,
       "gain": 0.032,
       "loop": false,
       "audio": "audio/sfx/foley/sfx_building_shake.mp3",
@@ -4830,9 +4610,9 @@
     }
   },
   "timeline": {
-    "totalMs": 668045,
-    "complete": true,
-    "missingClips": 0,
+    "totalMs": 627273,
+    "complete": false,
+    "missingClips": 12,
     "source": "each segment's pause then its clip; the same sum the exports are built with"
   },
   "exports": {
@@ -4846,237 +4626,7 @@
         "ambience",
         "sfx"
       ],
-      "startMs": [
-        0,
-        2507,
-        4491,
-        8259,
-        9724,
-        18429,
-        19864,
-        22118,
-        23818,
-        25679,
-        27036,
-        28767,
-        29792,
-        40535,
-        42631,
-        45085,
-        47521,
-        54550,
-        57352,
-        58769,
-        59847,
-        67421,
-        69614,
-        71232,
-        72668,
-        74704,
-        76009,
-        78445,
-        79962,
-        81688,
-        84385,
-        86064,
-        87794,
-        99809,
-        102245,
-        104546,
-        107996,
-        109513,
-        110513,
-        112661,
-        116064,
-        118578,
-        120178,
-        124539,
-        127411,
-        128978,
-        136690,
-        144037,
-        146238,
-        148021,
-        149882,
-        151926,
-        157836,
-        162697,
-        164376,
-        165733,
-        168657,
-        175769,
-        177364,
-        178547,
-        181218,
-        189803,
-        191481,
-        194458,
-        202764,
-        208961,
-        210822,
-        212318,
-        213213,
-        216511,
-        218472,
-        220956,
-        230262,
-        232828,
-        235129,
-        249503,
-        251827,
-        259513,
-        261139,
-        262392,
-        263992,
-        265039,
-        266587,
-        269511,
-        272078,
-        279372,
-        281416,
-        284736,
-        285813,
-        287171,
-        292297,
-        298819,
-        300649,
-        302249,
-        304111,
-        305554,
-        307049,
-        308044,
-        309404,
-        310769,
-        314302,
-        315798,
-        317233,
-        319095,
-        322284,
-        324302,
-        326920,
-        330636,
-        332916,
-        334045,
-        336612,
-        337842,
-        339207,
-        340624,
-        343305,
-        344931,
-        348099,
-        352233,
-        353650,
-        354644,
-        355644,
-        362983,
-        377323,
-        380900,
-        383467,
-        384932,
-        386893,
-        388728,
-        390824,
-        395894,
-        397494,
-        398911,
-        400459,
-        403130,
-        404547,
-        407002,
-        412904,
-        416116,
-        418387,
-        420659,
-        435051,
-        436834,
-        438251,
-        440347,
-        441608,
-        444174,
-        445487,
-        448106,
-        452867,
-        454493,
-        456036,
-        457296,
-        460221,
-        463015,
-        472261,
-        474297,
-        477099,
-        478093,
-        480238,
-        483640,
-        487087,
-        489411,
-        494973,
-        497245,
-        502547,
-        504826,
-        506791,
-        509907,
-        511267,
-        513833,
-        516400,
-        517996,
-        519543,
-        521143,
-        523057,
-        526869,
-        530081,
-        535331,
-        537662,
-        540146,
-        542525,
-        545144,
-        548416,
-        551396,
-        552808,
-        554591,
-        562225,
-        563825,
-        565365,
-        567976,
-        570673,
-        571673,
-        576818,
-        578966,
-        580566,
-        582427,
-        584158,
-        587508,
-        589104,
-        590965,
-        592565,
-        594030,
-        595160,
-        596830,
-        599572,
-        600877,
-        606309,
-        609286,
-        611792,
-        614011,
-        615682,
-        618241,
-        621165,
-        623907,
-        625708,
-        628144,
-        630188,
-        637162,
-        639728,
-        641354,
-        645462,
-        646775,
-        649151,
-        653198,
-        657272,
-        659962,
-        661823,
-        662770,
-        665799
-      ],
+      "startMs": null,
       "indexSource": "the manifest timeline, which the mix is built from"
     },
     "voice": {

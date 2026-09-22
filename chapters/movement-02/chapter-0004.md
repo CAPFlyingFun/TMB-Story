@@ -3,7 +3,7 @@ chapter: 4
 title: "The First Calls"
 movement: 2
 pov: Jack
-word_count: 1571
+word_count: 1558
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -11,7 +11,7 @@ story_time:
   elapsed: "the first hour after the activation, ending around midnight"
 objective: "Find out what the settlement has become, and decide who to tell first, while nearly five hundred people are still asleep and do not know anything has happened."
 locations: ["The main control room", "The island utility station (remote, by call)", "The southern perimeter road (remote, by security channel)"]
-characters: [Jack, Sarah, "Lena Ortiz (remote, by wrist terminal)", "A settlement security officer, Unit Twelve (remote, by security channel)"]
+characters: [Jack, Sarah, "Lena Ortiz (remote, by wrist terminal)", "Mark Jones, perimeter security, Unit Twelve (remote, by security channel)"]
 status_changes:
   - "Lena sees the wall of earth beyond the utility station fence and locks the exterior doors"
   - "Security finds the southern road ending at the boundary and is ordered back"
@@ -29,7 +29,7 @@ ending_type: quiet beat
 review_status: approved
 audio_status: pending
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, 211bc46e-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22 (split quotes joined for the narrator)"
+source: "Joshua's revised Word manuscript, bb443a4e-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22, with the bare said-tags removed at his instruction the same day"
 ---
 # Chapter 4: The First Calls
 
@@ -41,7 +41,7 @@ For several seconds, the impossible forest beyond the settlement remained perfec
 
 Sarah looked past Jack toward the darkened homes outside. Most of their windows were still black.
 
-"They don't know," she said.
+"They don't know."
 
 Jack understood immediately. Nearly five hundred people had just been carried into a different scale, and most of them were still asleep.
 
@@ -51,7 +51,7 @@ Lena's voice came through quietly. "Jack, what happened?"
 
 He turned toward the window. A blade of grass swayed beyond the streetlights, its tip disappearing into the darkness above the nearest buildings.
 
-"TOMBS activated. We think the developed zone was inside the boundary," Jack said.
+"TOMBS activated. We think the developed zone was inside the boundary."
 
 Lena paused. "Think?"
 
@@ -87,15 +87,15 @@ Jack enlarged the feed. "That's the ground."
 
 Lena let out a quiet breath. "I was hoping you wouldn't say that."
 
-"Stay inside. Keep the night crew inside too. No general alarm yet. I don't want people pouring into the streets before we know what's out there," Jack said.
+"Stay inside. Keep the night crew inside too. No general alarm yet. I don't want people pouring into the streets before we know what's out there."
 
 "Already locking the exterior doors."
 
 Lena continued, steadier now. "Most of the developed zone still has power. Three localized faults, nothing catastrophic."
 
-"That's good," Jack said.
+"That's good."
 
-"It is," Lena said.
+"It is."
 
 Jack stared at the dark residential blocks on the map. "It doesn't feel good."
 
@@ -105,11 +105,11 @@ SOUTH PATROL: ROAD ENDS AT PERIMETER. REQUEST INSTRUCTIONS.
 
 Jack opened the channel. "Unit Twelve, this is Bennett. Do not cross the end of the road. Turn around and return to the developed zone."
 
-A man's voice answered. "Doctor, I wasn't planning on crossing it."
+Mark's voice answered. "Doctor, I wasn't planning on crossing it."
 
 "What do you see?"
 
-The officer hesitated. "Dirt. Grass. A lot of both. And I think the dirt is higher than my vehicle."
+Mark hesitated. "Dirt. Grass. A lot of both. And I think the dirt is higher than my vehicle."
 
 Sarah leaned closer to the speaker. "Any movement?"
 
@@ -185,7 +185,7 @@ Lena's call returned through Sarah's tablet. "You found the intake, didn't you?"
 
 Sarah picked it up. "We're looking at it."
 
-"I checked three boundary crossings. Same thing. Power conduit, water intake, and the old fiber trunk. Everything ends cleanly," Lena said.
+"I checked three boundary crossings. Same thing. Power conduit, water intake, and the old fiber trunk. Everything ends cleanly."
 
 Jack opened the utility inventory. "How much water is stored inside the settlement?"
 
@@ -249,7 +249,7 @@ Lena spoke more quietly. "Jack?"
 
 He kept his eyes on the dark edge of the feed.
 
-"Nobody goes outside the developed zone," he said.
+"Nobody goes outside the developed zone."
 
 Sarah looked toward the impossible forest beyond the window.
 
@@ -259,7 +259,7 @@ Around midnight, most of the settlement was still asleep. Inside the laboratory,
 
 Jack stood at the main console with a cup of coffee he had forgotten to drink. A handful of porch lights had come on since the last vibration, scattered across the residential blocks like the town was blinking awake one eye at a time. Everything else stayed dark: streets empty, windows black, the settlement behaving as though nothing at all had happened while it slept through the strangest hour of its existence.
 
-Only a few people knew otherwise. Utility. Security. A handful of night-shift workers who had felt the floor move and gone to a window instead of back to bed.
+Only a few people knew otherwise. Utility and security, already on duty. A handful of residents who had felt the floor move, gone to a window, and gone back to bed unconvinced.
 
 For now, that was small enough to manage.
 
