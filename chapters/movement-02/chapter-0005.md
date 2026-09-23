@@ -29,7 +29,7 @@ ending_type: cliffhanger
 review_status: approved
 audio_status: pending
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, bb443a4e-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-22, with the bare said-tags removed at his instruction the same day"
+source: "Joshua's revised Word manuscript, 80a85a2b-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 11 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first."
 ---
 # Chapter 5: The Edge
 

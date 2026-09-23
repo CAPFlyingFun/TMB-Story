@@ -3,7 +3,7 @@ chapter: 1
 title: "The Alarm"
 movement: 1
 pov: Jack
-word_count: 1163
+word_count: 1215
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -23,7 +23,7 @@ ending_type: unanswered question
 review_status: approved
 audio_status: recorded
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscripts, 01-03 and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx. Chapters 1 to 3 re-imported 2026-09-21 from his corrected copy of the 01-03 document, which fixes the keyboard repetition at source. This file is the manuscript and is not edited without his instruction."
+source: "Joshua's revised Word manuscript, 3e9a1f9b-01-03_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 0 bare said-tag(s) removed, and 3 quote(s) split by a beat joined into one line with the beat first."
 revision_notes:
   - date: "2026-09-21"
     what: "The 'returning to the keyboard' / 'returned to the keyboard' repetition is fixed in the document itself."
@@ -31,7 +31,6 @@ revision_notes:
     now: "'...rested a hand briefly against her stomach, then returned to typing.' and 'Sarah's hands went still.'"
     second_pass: "'Sarah temporarily paused on the keyboard' became 'Sarah's hands went still' on Joshua's instruction, after he and ChatGPT weighed three options. A pause is already temporary, and one pauses AT a keyboard rather than on it -- but the reason this is the better line is that stillness is a REACTION to what Jack just said, so the beat earns its place instead of filling the gap before her reply. It also anchors Sarah plainly before the punchline, which matters when one narrator reads everyone. Joshua then asked for 'returned to typing', which 'before' cannot take -- it wants a gerund -- so the clause was restructured rather than the word forced: 'rested a hand briefly against her stomach, then returned to typing.' Same beat, his word, and it reads as two actions in order instead of one action defined against the other."
 ---
-
 # Chapter 1: The Alarm
 
 It was March fifth, in the year twenty-one ten.
@@ -68,7 +67,7 @@ Static answered him.
 
 Jack tapped the button again. "Sarah, you there?"
 
-"I'm here," Sarah answered through the speaker. "What's wrong?"
+Sarah answered through the speaker. "I'm here. What's wrong?"
 
 "I've got something weird on my computer. It tripped a security alarm."
 
@@ -104,7 +103,7 @@ Jack gestured toward the console. "No. That was my defense."
 
 Sarah raised an eyebrow. "Against what?"
 
-"Whatever this is." Jack pointed toward the monitor as she walked over. "I was reviewing yesterday's test results."
+Jack pointed toward the monitor as she walked over. "Whatever this is. I was reviewing yesterday's test results."
 
 "You were sleeping," Sarah corrected him.
 
@@ -116,7 +115,7 @@ Jack nodded solemnly. "It's an advanced technique."
 
 She leaned over his shoulder and studied the screen. "Jack."
 
-"Right. Problem." Jack straightened in his chair while Sarah placed her tablet beside the keyboard. "I got an unauthorized access warning. I checked the network monitor and saw a connection I didn't recognize, but it disappeared before I could trace it."
+Jack straightened in his chair while Sarah placed her tablet beside the keyboard. "Right. Problem. I got an unauthorized access warning. I checked the network monitor and saw a connection I didn't recognize, but it disappeared before I could trace it."
 
 Sarah tapped the edge of the keyboard. "And then?"
 
@@ -136,29 +135,29 @@ Jack leaned back. "It unlocked itself."
 
 Sarah stared at him for a moment before looking back at the monitor. Jack pointed at the screen. "I know."
 
-She pulled another chair beside him and nudged his out of the way. "Move."
+Sarah started powering up the other console next to Jack. "Can I take your chair?"
 
 Jack kept one hand on the keyboard. "I'm sitting here."
 
-Sarah nudged the arm of his chair. "Then move your chair."
+Sarah nudged the arm of his chair, looking slightly annoyed, but sympathetic. "Let me have your chair and get another chair."
 
-"Oh." Jack rolled sideways to give her room.
+"Oh. Of course. Anything for you." Jack gave Sarah his chair, crossed to the next workstation, and dragged its chair back, wheels squeaking against the floor, before pulling himself up to his own screen.
 
-Sarah immediately started typing. "You said the connection disappeared?"
+Sarah was already typing. "You said the connection disappeared?"
 
-Jack watched the log scroll. "Almost immediately."
+Jack watched his own log scroll. "Almost immediately."
 
-Sarah opened the connection history. "External?"
+Sarah opened the connection history on her screen. "External?"
 
 Jack shook his head. "I couldn't tell."
 
 Sarah exhaled through her nose. "That's reassuring."
 
-"I thought so." Jack watched as Sarah opened another window and began digging through the security logs.
+"I thought so." Jack pulled up the TOMBS directory again, tracing back through what had changed.
 
-"These are clean," she murmured after a few seconds.
+"These are clean," Sarah murmured after a few seconds, still scanning her own feed.
 
-Jack pointed at the empty entries. "Exactly."
+Jack pointed at his own screen. "Mine too. Whoever it was covered both trails."
 
 Sarah narrowed her eyes at the display. "Too clean."
 
@@ -190,7 +189,7 @@ Jack surrendered with a small nod. "Fair."
 
 Jack smiled at the movement beneath her hand. "Already takes after me."
 
-Sarah's hands went still. "That's what I'm afraid of."
+Sarah’s hands went still. "That's what I'm afraid of."
 
 A new warning tone interrupted them. Both turned toward the main console as another message appeared.
 

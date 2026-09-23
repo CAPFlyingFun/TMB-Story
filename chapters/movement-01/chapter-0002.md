@@ -24,9 +24,8 @@ ending_type: revelation
 review_status: approved
 audio_status: recorded
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscripts, 01-03 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. These replace the pre-revision opening: the catastrophe is now quiet, there is no settlement-wide siren before activation, and most residents sleep through the event. Two bare said-tags removed at Joshua's instruction on 2026-09-22 (Decision 0024): 'It just hid them,' she said. and 'Understood,' Lena said. now end at the closing quote. No other change."
+source: "Joshua's revised Word manuscript, 3e9a1f9b-01-03_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 2 bare said-tag(s) removed, and 1 quote(s) split by a beat joined into one line with the beat first."
 ---
-
 # Chapter 2: The Boundary
 
 The lights flickered as a low hum passed through the floor. Sarah turned toward the far end of the laboratory. "Was that the array?"
@@ -171,7 +170,7 @@ Lena answered immediately. "You sure?"
 
 Sarah nodded. "Quiet containment until we know the boundary."
 
-"Exactly." Jack looked back at the screen. "If anything changes outside this building, call us."
+Jack looked back at the screen. "Exactly. If anything changes outside this building, call us."
 
 "Understood."
 

@@ -24,9 +24,8 @@ ending_type: revelation
 review_status: approved
 audio_status: recorded
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscripts, 01-03 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx and 04-06 Chapters - TRADDOMIUM Micro Battle - Revised Quiet Event.docx, imported 2026-09-21. These replace the pre-revision opening: the catastrophe is now quiet, there is no settlement-wide siren before activation, and most residents sleep through the event."
+source: "Joshua's revised Word manuscript, 3e9a1f9b-01-03_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 0 bare said-tag(s) removed, and 3 quote(s) split by a beat joined into one line with the beat first."
 ---
-
 # Chapter 3: The Activation
 
 Jack's fingers raced over the keyboard. "Give me manual control."
@@ -79,7 +78,7 @@ Then everything snapped back.
 
 Sound returned all at once as Jack hit the floor and Sarah landed beside him. Somewhere inside the array chamber, metal rang once and went still.
 
-"Sarah!" Jack crawled toward her. "Are you hurt?"
+Jack crawled toward her. "Sarah! Are you hurt?"
 
 Sarah pushed herself upright. "I'm here. I don't think so."
 
@@ -103,7 +102,7 @@ Jack glanced back at the main console. The display had gone dark except for a si
 
 Sarah followed more carefully, one hand resting beneath her stomach. "Offline because you stopped it?"
 
-Jack tried the controls again. "No." He hated how quickly the answer came. "Offline because it finished."
+Jack tried the controls again. He hated how quickly the answer came. "No. Offline because it finished."
 
 Sarah looked toward the chamber window. "Finished what?"
 
@@ -113,7 +112,7 @@ That bothered him more than a room full of broken equipment would have.
 
 Sarah watched him move through the readings. "Anything?"
 
-"Everything says we're fine." Jack opened another panel. "Which means something is very wrong."
+Jack opened another panel. "Everything says we're fine. Which means something is very wrong."
 
 Jack looked through the chamber window. "I don't know."
 
