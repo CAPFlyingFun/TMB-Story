@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f7ea88e061a2",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "43c390199555759e44e2a7939f71bf785078d58e8e7547bfe0c8a03213cade4c",
+  "text": "Jack tried the controls again. He hated how quickly the answer came.",
+  "bytes": 74022,
+  "generated": "2026-09-23T19:34:24Z"
+}

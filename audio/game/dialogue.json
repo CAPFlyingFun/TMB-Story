@@ -1,6 +1,6 @@
 {
   "_comment": "Canonical character and system voice lines for the game. Narration is excluded because it is audiobook-only. `audio` points at the same clip the audiobook plays: one generated line, used in both places.",
-  "lineCount": 495,
+  "lineCount": 490,
   "lines": [
     {
       "lineId": "system-884c6f5a459a",
@@ -147,23 +147,12 @@
       ]
     },
     {
-      "lineId": "sarah-bennett-3f51406be04d",
+      "lineId": "sarah-bennett-284f0b08b165",
       "character": "sarah-bennett",
       "characterName": "Sarah Bennett",
       "kind": "character",
-      "text": "I'm here,",
-      "audio": "audio/clips/sarah/sarah-bennett-3f51406be04d.mp3",
-      "chapters": [
-        1
-      ]
-    },
-    {
-      "lineId": "sarah-bennett-0df3f0a6bee0",
-      "character": "sarah-bennett",
-      "characterName": "Sarah Bennett",
-      "kind": "character",
-      "text": "What's wrong?",
-      "audio": "audio/clips/sarah/sarah-bennett-0df3f0a6bee0.mp3",
+      "text": "I'm here. What's wrong?",
+      "audio": "audio/clips/sarah/sarah-bennett-284f0b08b165.mp3",
       "chapters": [
         1
       ]
@@ -345,23 +334,12 @@
       ]
     },
     {
-      "lineId": "jack-bennett-ab5acb662fb5",
+      "lineId": "jack-bennett-5658c97ddd78",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "Whatever this is.",
-      "audio": "audio/clips/jack/jack-bennett-ab5acb662fb5.mp3",
-      "chapters": [
-        1
-      ]
-    },
-    {
-      "lineId": "jack-bennett-68873cb0ae3a",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "I was reviewing yesterday's test results.",
-      "audio": "audio/clips/jack/jack-bennett-68873cb0ae3a.mp3",
+      "text": "Whatever this is. I was reviewing yesterday's test results.",
+      "audio": "audio/clips/jack/jack-bennett-5658c97ddd78.mp3",
       "chapters": [
         1
       ]
@@ -425,23 +403,12 @@
       ]
     },
     {
-      "lineId": "jack-bennett-06415c9f30d8",
+      "lineId": "jack-bennett-5520e22c887a",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "Right. Problem.",
-      "audio": "audio/clips/jack/jack-bennett-06415c9f30d8.mp3",
-      "chapters": [
-        1
-      ]
-    },
-    {
-      "lineId": "jack-bennett-eb7b0cfc9b60",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "I got an unauthorized access warning. I checked the network monitor and saw a connection I didn't recognize, but it disappeared before I could trace it.",
-      "audio": "audio/clips/jack/jack-bennett-eb7b0cfc9b60.mp3",
+      "text": "Right. Problem. I got an unauthorized access warning. I checked the network monitor and saw a connection I didn't recognize, but it disappeared before I could trace it.",
+      "audio": "audio/clips/jack/jack-bennett-5520e22c887a.mp3",
       "chapters": [
         1
       ]
@@ -538,12 +505,12 @@
       ]
     },
     {
-      "lineId": "sarah-bennett-dc74b2a7f99a",
+      "lineId": "sarah-bennett-8c46e3a53152",
       "character": "sarah-bennett",
       "characterName": "Sarah Bennett",
       "kind": "character",
-      "text": "Move.",
-      "audio": "audio/clips/sarah/sarah-bennett-dc74b2a7f99a.mp3",
+      "text": "Can I take your chair?",
+      "audio": "audio/clips/sarah/sarah-bennett-8c46e3a53152.mp3",
       "chapters": [
         1
       ]
@@ -560,23 +527,23 @@
       ]
     },
     {
-      "lineId": "sarah-bennett-a7934bd42c67",
+      "lineId": "sarah-bennett-bf55452b11b2",
       "character": "sarah-bennett",
       "characterName": "Sarah Bennett",
       "kind": "character",
-      "text": "Then move your chair.",
-      "audio": "audio/clips/sarah/sarah-bennett-a7934bd42c67.mp3",
+      "text": "Let me have your chair and get another chair.",
+      "audio": "audio/clips/sarah/sarah-bennett-bf55452b11b2.mp3",
       "chapters": [
         1
       ]
     },
     {
-      "lineId": "jack-bennett-6d611e695fd8",
+      "lineId": "jack-bennett-a5c6ccccd8ca",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "Oh.",
-      "audio": "audio/clips/jack/jack-bennett-6d611e695fd8.mp3",
+      "text": "Oh. Of course. Anything for you.",
+      "audio": "audio/clips/jack/jack-bennett-a5c6ccccd8ca.mp3",
       "chapters": [
         1
       ]
@@ -659,15 +626,14 @@
       ]
     },
     {
-      "lineId": "jack-bennett-e42d2e1230ff",
+      "lineId": "jack-bennett-57a1f5dfe461",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "Exactly.",
-      "audio": "audio/clips/jack/jack-bennett-e42d2e1230ff.mp3",
+      "text": "Mine too. Whoever it was covered both trails.",
+      "audio": "audio/clips/jack/jack-bennett-57a1f5dfe461.mp3",
       "chapters": [
-        1,
-        2
+        1
       ]
     },
     {
@@ -1639,12 +1605,12 @@
       ]
     },
     {
-      "lineId": "jack-bennett-718df38c892b",
+      "lineId": "jack-bennett-5240d2ca0753",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "If anything changes outside this building, call us.",
-      "audio": "audio/clips/jack/jack-bennett-718df38c892b.mp3",
+      "text": "Exactly. If anything changes outside this building, call us.",
+      "audio": "audio/clips/jack/jack-bennett-5240d2ca0753.mp3",
       "chapters": [
         2
       ]
@@ -1995,23 +1961,12 @@
       ]
     },
     {
-      "lineId": "jack-bennett-c0395cccedb6",
+      "lineId": "jack-bennett-8c89ca7d821c",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "Sarah!",
-      "audio": "audio/clips/jack/jack-bennett-c0395cccedb6.mp3",
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "lineId": "jack-bennett-f2aea80be3e4",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "Are you hurt?",
-      "audio": "audio/clips/jack/jack-bennett-f2aea80be3e4.mp3",
+      "text": "Sarah! Are you hurt?",
+      "audio": "audio/clips/jack/jack-bennett-8c89ca7d821c.mp3",
       "chapters": [
         3
       ]
@@ -2116,12 +2071,12 @@
       ]
     },
     {
-      "lineId": "jack-bennett-3b14d2243587",
+      "lineId": "jack-bennett-03b804f5ff67",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "Offline because it finished.",
-      "audio": "audio/clips/jack/jack-bennett-3b14d2243587.mp3",
+      "text": "No. Offline because it finished.",
+      "audio": "audio/clips/jack/jack-bennett-03b804f5ff67.mp3",
       "chapters": [
         3
       ]
@@ -2149,23 +2104,12 @@
       ]
     },
     {
-      "lineId": "jack-bennett-f9af46b91604",
+      "lineId": "jack-bennett-e7b59a054e4c",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
-      "text": "Everything says we're fine.",
-      "audio": "audio/clips/jack/jack-bennett-f9af46b91604.mp3",
-      "chapters": [
-        3
-      ]
-    },
-    {
-      "lineId": "jack-bennett-20e4802bf61f",
-      "character": "jack-bennett",
-      "characterName": "Jack Bennett",
-      "kind": "character",
-      "text": "Which means something is very wrong.",
-      "audio": "audio/clips/jack/jack-bennett-20e4802bf61f.mp3",
+      "text": "Everything says we're fine. Which means something is very wrong.",
+      "audio": "audio/clips/jack/jack-bennett-e7b59a054e4c.mp3",
       "chapters": [
         3
       ]

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-22289c65a15f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ba532278902679f1472dd2fd39463f8395cf176b078ea8066fe605b852b05a31",
+  "text": "Sarah opened the connection history on her screen.",
+  "bytes": 52288,
+  "generated": "2026-09-23T19:34:21Z"
+}

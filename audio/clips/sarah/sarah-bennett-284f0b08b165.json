@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-284f0b08b165",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c140dbd718bc7743c7a5035164cab69f601c7c90201cf758c685e85e88987870",
+  "text": "I'm here. What's wrong?",
+  "bytes": 18016,
+  "generated": "2026-09-23T19:34:17Z"
+}

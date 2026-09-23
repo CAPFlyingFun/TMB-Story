@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-5520e22c887a",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "aadba26786620ff337affef0864ff3e75a8ff45e1e068b3fae23a7e6a9d33c30",
+  "text": "Right. Problem. I got an unauthorized access warning. I checked the network monitor and saw a connection I didn't recognize, but it disappeared before I could trace it.",
+  "bytes": 152599,
+  "generated": "2026-09-23T19:34:18Z"
+}

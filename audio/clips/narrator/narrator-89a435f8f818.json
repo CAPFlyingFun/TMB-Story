@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-89a435f8f818",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "90cca976b98b531ad73e9589adcb34aeac5d70a64d62fdb44e1c2598ae18af38",
+  "text": "Sarah murmured after a few seconds, still scanning her own feed.",
+  "bytes": 58140,
+  "generated": "2026-09-23T19:34:21Z"
+}

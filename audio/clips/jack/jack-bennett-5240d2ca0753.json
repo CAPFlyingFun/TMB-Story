@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-5240d2ca0753",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "910139be8322a6550b3fb4f9f220abd0dd45c176415711818bcf66290129a98a",
+  "text": "Exactly. If anything changes outside this building, call us.",
+  "bytes": 51035,
+  "generated": "2026-09-23T19:34:22Z"
+}

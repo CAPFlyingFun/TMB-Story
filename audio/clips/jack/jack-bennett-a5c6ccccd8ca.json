@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-a5c6ccccd8ca",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2d852c4021027825df1e2e94b81f748a5e432160115893ada8572034d31b3e22",
+  "text": "Oh. Of course. Anything for you.",
+  "bytes": 30973,
+  "generated": "2026-09-23T19:34:19Z"
+}
