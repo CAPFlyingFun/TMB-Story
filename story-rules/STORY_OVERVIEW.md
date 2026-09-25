@@ -2,16 +2,20 @@
 
 Read this every chapter. Canon established by the approved manuscript only.
 
-**Currently at: Movement 1 (Chapters 1 to 3) approved and imported verbatim from
-Joshua's Word manuscript, 2026-09-17. Next: the aftermath, at a length not yet fixed.
-Not yet outlined and not to be drafted unasked.**
+**Currently at: Movements 1 and 2 (Chapters 1 to 6) approved and canon, from Joshua's
+Word manuscripts. Next: continue from "PHASE ONE READY", still overnight with dawn
+approaching. Not to be drafted unasked.**
+
+**Author-level rules the characters do not know are in `WORLD_RULES.md`.** The premise
+below is written the way the characters and the reader currently understand it.
 
 ## Premise
 
 On March fifth, in the year twenty-one ten, a research settlement on a remote island
-in the Atlantic is reduced in scale by its own experimental system. The island does
-not change. Only the developed town does. Nearly five hundred people wake to a world
-that no longer fits them.
+in the Atlantic is reduced in scale by its own experimental system. As far as anyone
+inside can tell, the island does not change and only the developed town does. Nearly
+five hundred people wake to a world that no longer fits them. (That belief is
+incomplete. See `WORLD_RULES.md` section 2, and never correct it on the page unasked.)
 
 ## What Chapters 1 to 3 establish
 
@@ -64,9 +68,10 @@ that no longer fits them.
    realisation that this may not be reversible, and the early foundations of the
    society that exists after the jump. **How many chapters this takes is open and
    must not be fixed.** `outline/STORY_DIRECTION.md` holds the full note.
-3. **Then, when Joshua deliberately chooses the chapter for it,** a time jump of
-   about eighteen years. Not when the aftermath merely feels long enough.
-4. **After the jump,** Jack and Sarah's son, about eighteen, becomes the primary
+3. **Then, when Joshua deliberately chooses the chapter for it,** a time jump to
+   twenty-one twenty-eight. Not when the aftermath merely feels long enough. The story
+   stays in twenty-one ten through Sarah giving birth.
+4. **After the jump,** Jack and Sarah's son, nearing eighteen, becomes the primary
    protagonist. He was born after the catastrophe and has never experienced normal
    human scale. Academy and survival-training material belongs here. He is not the
    protagonist before the jump, and he is not born yet.

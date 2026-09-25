@@ -28,7 +28,22 @@ Only what the approved manuscript establishes. Cite the chapter.
   the sensor grid read normal for temperature, pressure, atmosphere and structure
   `[ch 3]`.
 - **The scale factor** was calculated, locked and recorded. Its value is displayed on
-  the page and never spoken. **No number has been assigned. Do not invent one.**
+  the page and has not been read aloud. **The author value is about 1:180,
+  island-relative** (`reference/README.md`, `WORLD_RULES.md`). Chapter 6 works it out
+  as an adult "somewhere around several millimeters tall". Whether a character ever
+  says the number aloud is still Q05.
+- **How it actually works (author-level, `WORLD_RULES.md` section 1):** a one-time
+  spatial-scale transformation, not a shrinking of objects in fixed space. The
+  settlement is transformed uniformly, a gradual transition region joins it to the
+  island, and TOMBS fires once and shuts down. No field holds the result, so nothing
+  needs to stay powered. The characters do not know this.
+
+## The settlement's own systems
+
+- **Power:** its own microgrid and backups, normally tied to an island-wide master
+  grid. That is why the town still has power `[ch 4]` (`WORLD_RULES.md` section 4).
+- **Communications:** local networking and Wi-Fi, local servers, handheld and security
+  radios, cameras, emergency channels. Nothing external `[ch 3]`.
 
 ## The machine voice
 

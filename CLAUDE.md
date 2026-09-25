@@ -31,6 +31,8 @@ Chapter 3.
 3. **`story-rules/TMB_STORY_RULES.md`** — the writing rules and the canon index. Read
    it every chapter, along with `story-rules/STORY_OVERVIEW.md`.
 4. **The rest of `story-rules/`** — canon as the manuscript establishes it.
+   `story-rules/WORLD_RULES.md` is the author-level physics of scale, the edge, power
+   and signals, including what the characters must not find out yet.
 5. **`architecture/DECISIONS.md`** — dated decisions, append-only. A decision outranks
    the file it changes until that file is updated to match.
 6. This file — stable operating guidance, not design truth.
@@ -67,7 +69,10 @@ not a fifty-chapter arc. Full version: `outline/WORKFLOW.md`. In short:
 7. On his approval, flip `review_status`, add the `CHAPTER_INDEX.md` rows, apply the
    story-rules updates, move the tracker line, and commit.
 
-Chapters 4 onward are not finalized. Do not draft them unasked.
+Chapters 1 to 6 are canon and the foundation; they are not rewritten or restructured
+unasked. Nothing past Chapter 6 is drafted unasked. When Joshua hands over a
+ChatGPT-drafted block, it is a proposal to review, not canon: the steps are in
+`outline/WORKFLOW.md`.
 `outline/STORY_DIRECTION.md` says what the stretch after Chapter 3 is about --
 several chapters of immediate aftermath before the eventual time jump -- and what
 has deliberately not been decided, including how many chapters that takes.

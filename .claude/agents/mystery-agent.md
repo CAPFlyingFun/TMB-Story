@@ -24,11 +24,12 @@ read-only inspection.
 - **Who knows what.** The most common serialized continuity failure is a character
   reacting as if they do not know something the audience watched them learn. Check
   every reveal against the knowledge table.
-- **Discipline.** Some things stay unknown by design: what is under the sealed
-  tunnel, the anomaly's origin, whether Daniel's device discovered or created the
-  phenomenon, who all funded his research, whether there is more than one island,
-  Daniel's exact whereabouts, the mechanism of the split vision. Flag any draft that
-  drifts toward explaining them. Flag any answer arriving earlier than the ladder's
+- **Discipline.** Some things stay unknown by design: every [HIDDEN] item in
+  `story-rules/WORLD_RULES.md` (the transition region beyond the apparent boundary,
+  and the island's own transformation relative to Earth), anything [NOT CANON] there,
+  and every open row in `story-rules/OPEN_QUESTIONS.md` until Joshua answers it. Flag
+  any draft that drifts toward explaining them, including a character getting
+  suspiciously close to one. Flag any answer arriving earlier than the ladder's
   Part range without a decision recorded in `architecture/DECISIONS.md`.
 - **Fair play.** Clues are planted where a re-listener could find them; answers are
   earned by investigation, not delivered by coincidence.
@@ -65,12 +66,17 @@ propose in its handoff report. Do not rewrite prose.
 
 ## REBOOT NOTICE (2026-09-17)
 
-The story was rebooted. Canon is the manuscript in `chapters/` (Chapters 1 to 3: Jack
-and Sarah Bennett, the TOMBS catastrophe, March fifth, twenty-one ten) plus
-`story-rules/`. Everything under `archive/pre-reboot/` — the twins Caleb and Nora,
+The story was rebooted. Canon is the manuscript in `chapters/` (Chapters 1 to 6: Jack
+and Sarah Bennett, the TOMBS catastrophe and the first night after it, March fifth,
+twenty-one ten) plus `story-rules/`. **`story-rules/WORLD_RULES.md` holds the
+author-level rules for scale, geometry, power and signals, including what the
+characters do not know.** Flag any draft that contradicts it, and flag any line that
+hints at one of its [HIDDEN] items. If an example elsewhere in this file names a
+pre-reboot person or system (Nora, Caleb, Theo, Maya, Daniel's device, the shield, two
+clocks), it is a leftover; ignore it. `story-rules/` wins. Everything under `archive/pre-reboot/` — the twins Caleb and Nora,
 Alder Sound, Tern Island, Daniel Mercer, the fifty-chapter outline — is NOT canon and
 must never be cited as such. If a current file seems to conflict with an archived one,
 the current file wins and the archived one is simply old.
 
-Chapters 1 to 3 are Joshua's approved Word manuscript, imported verbatim. Do not
+Chapters 1 to 6 are Joshua's approved Word manuscript, and are the foundation. Do not
 propose prose changes to them. Review them only for information Joshua has asked for.

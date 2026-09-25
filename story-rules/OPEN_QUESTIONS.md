@@ -27,7 +27,18 @@ ladder, which is archived. Ids are stable; add, never renumber.
 - **The audience:** everything Jack and Sarah have, and no more. Nobody has identified
   the intruder.
 
+## What the author knows and no character does
+
+`WORLD_RULES.md` records hidden truths that sit under these questions. **Nothing in a
+chapter may answer, hint at or edge toward them until Joshua chooses to.** In short:
+the edge is not a wall but the inner edge of a scale-transition region, TOMBS holds
+nothing in place, and the island itself was transformed relative to Earth. None of
+that closes a question above. Q03 (the array's power) and Q07 (external
+communications) stay open.
+
 ## Deliberately unassigned
 
-The scale factor's numeric value, and the year the settlement was founded. Do not
-invent either.
+The year the settlement was founded, and anything about the island's owners or a
+concealment system (`WORLD_RULES.md` section 6). Do not invent them. The scale factor
+now has an author value of about 1:180 island-relative, but no character has said it
+aloud, so Q05 stays open.

@@ -7,8 +7,14 @@ Only what the approved manuscript establishes. Cite the chapter.
 - In the Atlantic Ocean, remote. Roughly fifty-six kilometers across, about
   thirty-five miles from one side to the other `[ch 1]`.
 - Most of it is undeveloped wilderness `[ch 1]`.
-- **The island was not affected by the activation.** Its wilderness, its ocean and the
-  rest of the world are exactly the size they were `[ch 3]`.
+- **As the characters understand it,** the island was not affected by the activation:
+  its wilderness, its ocean and the rest of the world are exactly the size they were
+  `[ch 3]`. **That is their belief, not the truth.** `WORLD_RULES.md` section 2 has the
+  hidden outer transformation. Keep writing the characters' belief until Joshua
+  reveals it.
+- **It is an artificial research island,** man-made, with engineered infrastructure
+  inside it. The characters know this; the page has not said it yet
+  (`WORLD_RULES.md` section 3).
 
 ## The research settlement
 
@@ -19,7 +25,9 @@ Only what the approved manuscript establishes. Cite the chapter.
   a communications building with a camera mounted high on it `[ch 2, ch 3]`.
 - **The settlement is what was reduced.** The boundary traced the developed sections
   and stopped almost perfectly where the developed town gave way to untouched island
-  `[ch 2, ch 3]`.
+  `[ch 2, ch 3]`. "The boundary" is the characters' name for the visible edge. What
+  actually lies around it is a scale-transition region they do not know about
+  (`WORLD_RULES.md` section 1).
 - After the activation the streets, the buildings, the streetlights and a parked
   utility vehicle are all exactly where they were and look normal from inside `[ch 3]`.
 

@@ -34,8 +34,8 @@ For the chapter under consideration, everything that must agree with what came b
 - **Unresolved actions.** Promises, plans, pending questions and threats left open
   in earlier chapters that this chapter ignores or contradicts.
 - **Names and fixed facts.** Spellings, ages, relationships, geography, the settlement's
-  level logic, the shield's real job, and every LOCKED item in
-  `architecture/SERIES_ARCHITECTURE.md` §14 and `architecture/DECISIONS.md`.
+  scale and geometry in `story-rules/WORLD_RULES.md`, and every decision in
+  `architecture/DECISIONS.md`.
 
 Leave what should happen to scene-agent, emotion to character-agent, biology to
 world-creature-agent and clue strategy to mystery-agent. You are about what is true.
@@ -83,12 +83,17 @@ as a contradiction for `story-rules/CONTINUITY_LOG.md` and do not pick a side.
 
 ## REBOOT NOTICE (2026-09-17)
 
-The story was rebooted. Canon is the manuscript in `chapters/` (Chapters 1 to 3: Jack
-and Sarah Bennett, the TOMBS catastrophe, March fifth, twenty-one ten) plus
-`story-rules/`. Everything under `archive/pre-reboot/` — the twins Caleb and Nora,
+The story was rebooted. Canon is the manuscript in `chapters/` (Chapters 1 to 6: Jack
+and Sarah Bennett, the TOMBS catastrophe and the first night after it, March fifth,
+twenty-one ten) plus `story-rules/`. **`story-rules/WORLD_RULES.md` holds the
+author-level rules for scale, geometry, power and signals, including what the
+characters do not know.** Flag any draft that contradicts it, and flag any line that
+hints at one of its [HIDDEN] items. If an example elsewhere in this file names a
+pre-reboot person or system (Nora, Caleb, Theo, Maya, Daniel's device, the shield, two
+clocks), it is a leftover; ignore it. `story-rules/` wins. Everything under `archive/pre-reboot/` — the twins Caleb and Nora,
 Alder Sound, Tern Island, Daniel Mercer, the fifty-chapter outline — is NOT canon and
 must never be cited as such. If a current file seems to conflict with an archived one,
 the current file wins and the archived one is simply old.
 
-Chapters 1 to 3 are Joshua's approved Word manuscript, imported verbatim. Do not
+Chapters 1 to 6 are Joshua's approved Word manuscript, and are the foundation. Do not
 propose prose changes to them. Review them only for information Joshua has asked for.

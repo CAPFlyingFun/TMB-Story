@@ -21,8 +21,9 @@
 
 ## Ahead
 
-- **Chapters 4 to 6:** the immediate aftermath. Same days, not yet written.
-- **Then a jump of about eighteen years.** After it, Jack and Sarah's son is about
-  eighteen. He was born after the catastrophe, so his birth falls in twenty-one ten,
-  and the post-jump present falls around twenty-one twenty-eight. Treat those as
-  derived, not yet stated on the page.
+- **Chapters 4 to 6:** the same night, to "PHASE ONE READY" before dawn. Written and
+  canon.
+- **Next:** still overnight, dawn approaching. The story stays in twenty-one ten
+  through Sarah giving birth (Joshua, 2026-09-25).
+- **Then the jump to twenty-one twenty-eight,** at a chapter Joshua chooses. Jack and
+  Sarah's son, born in twenty-one ten, is nearing eighteen.

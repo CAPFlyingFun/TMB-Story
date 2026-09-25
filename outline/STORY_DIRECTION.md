@@ -1,5 +1,14 @@
 # Story direction after Chapter 3
 
+## Update, 2026-09-25: after Chapter 6
+
+Chapters 4 to 6 are written and canon, and end on "PHASE ONE READY." **The next
+movement continues from there, with the settlement still in the overnight emergency and
+dawn approaching.** The story stays in twenty-one ten through Sarah giving birth, and
+only then, at a chapter Joshua chooses, jumps to twenty-one twenty-eight, when their
+son is nearing eighteen. Scale, geometry and what the characters do not know are in
+`story-rules/WORLD_RULES.md`. The note below is from 2026-09-18 and still stands.
+
 **Joshua, 2026-09-18.** This is a DIRECTION, not an outline. It says what the next
 stretch is about and what it is not. It does not say how many chapters, and nothing
 in it is a licence to draft.
@@ -43,7 +52,7 @@ manuscript has already put on the page, not from a plan laid over it.
 - **The son is not the protagonist yet.** He is not born yet.
 - **The time jump happens when Joshua deliberately chooses the chapter for it.** Not
   when the aftermath feels long enough, and not because this file exists.
-- **Chapters 4 onward are not drafted until he asks.** Recording a direction is not
+- **Nothing past Chapter 6 is drafted until he asks.** Recording a direction is not
   the same as being told to write.
 
 ## How this relates to the rest

@@ -43,3 +43,8 @@ A chapter that needs to know how big something feels reads this rather than inve
 a comparison, and a comparison that contradicts it is a continuity error. If a story
 need ever requires a different scale, change it here and in `STORY_OVERVIEW.md`
 first — do not let a chapter imply a second scale in passing.
+
+**There IS a second scale, and it is hidden.** 1:180 is the settlement against the
+island, and it is the only scale that belongs on the page. The island is itself about
+1:180 against Earth, which puts the people at about 1:32,400 against Earth. No
+character knows this. See `../WORLD_RULES.md` section 2.

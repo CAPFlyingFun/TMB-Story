@@ -13,7 +13,10 @@ do with the Bible. Nothing. The name is now plain (decision 0019).
    Chapters 1 to 3 were imported verbatim from Joshua's approved Word document on
    2026-09-17 and are not edited without his instruction for that chapter.
 3. **This file and the rest of `story-rules/`** — canon as the manuscript establishes
-   it, plus the craft rules below.
+   it, plus the craft rules below. **`story-rules/WORLD_RULES.md` holds the
+   author-level physics and geography,** including what the characters do not know.
+   Read it before writing or reviewing any chapter that touches scale, the edge,
+   power or signals.
 4. **`architecture/DECISIONS.md`** — dated decisions, append-only. A decision
    outranks the file it changes until that file is updated to match.
 5. **Post-reboot planning documents.**
@@ -30,11 +33,14 @@ The catastrophe happens immediately. It is not fifty chapters away.
 - **Chapters 1 to 3** cover the TOMBS catastrophe, on one night. The Alarm, The
   Boundary, The Activation. By the end of Chapter 3 the story is already in the
   miniature setting.
-- **Chapters 4 to 6** will cover the immediate aftermath: survival, community
-  response, adaptation, consequences. Not yet written. Do not draft them unasked.
-- **Later,** after the aftermath is established, the story makes a jump of about
-  eighteen years.
-- **After the jump,** Jack and Sarah's son is about eighteen and becomes the primary
+- **Chapters 4 to 6** cover the first hours of the aftermath and end on "PHASE ONE
+  READY." They are canon. Chapters 1 to 6 are the foundation and are not rewritten or
+  restructured without Joshua's instruction for that chapter (Decision 0025).
+- **Next,** the story continues from "PHASE ONE READY", with the settlement still in
+  the overnight emergency and dawn approaching. It stays in twenty-one ten through
+  Sarah giving birth.
+- **Later,** at a chapter Joshua chooses, the story jumps to twenty-one twenty-eight.
+- **After the jump,** Jack and Sarah's son is nearing eighteen and becomes the primary
   protagonist. He was born after the catastrophe and has never experienced normal
   human scale. The academy and survival-training material belongs here, after the
   jump, and nowhere earlier.
@@ -48,7 +54,15 @@ breaks, no character portraits, no subtitles and no game screen.
    outranks anything that only works on the page.
 2. **Close third person, past tense, natural US English.** Spelling and idiom both.
 3. **Dialogue-heavy, with physical action mixed into the narration.** Avoid long
-   descriptive passages.
+   descriptive passages. Aim for roughly seventy percent dialogue and action to thirty
+   percent description and background.
+3a. **Technology is understandable, not lectured.** Show a technical idea through
+    something concrete: what a screen shows, what a hand does, what a camera sees.
+    No exposition dumps and no hard-science explanation. The technology can be
+    advanced speculative fiction as long as its consequences stay logical and match
+    `WORLD_RULES.md`.
+3b. **Characters stay funny under pressure.** Natural Jack and Sarah dialogue, humor
+    that comes from the relationships, even in the worst hour of the night.
 4. **Speaker identity must be understandable by ear.** The listener has to know who
    is speaking without seeing the text.
 5. **The two-turn anchor guideline.** After roughly two unanchored dialogue turns,
