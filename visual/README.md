@@ -97,6 +97,10 @@ Built so these can be added without rewriting the engine: props and vegetation a
 objects sorted by `y` with the characters, more sets per scene, more screen templates,
 and more scenes registered in `engine/app.js`.
 
+Watch is landscape only, as Beyond Extinction is: a phone or tablet held upright sees a
+"Rotate your device" card (pure CSS, `pointer: coarse` only, so a laptop is never
+blocked), and turning upright mid-film pauses it until the device turns back.
+
 The player is movie-style: the controls hide while it plays and a tap on the picture
 brings them back. **CC** turns closed captions on and off (remembered per device); they
 come from the manifest, so they are always the manuscript's words, with characters

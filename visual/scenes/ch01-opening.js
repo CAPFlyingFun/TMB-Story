@@ -122,7 +122,9 @@ const REST = [
   //  Jack to the computer."
   { at: L("Sarah Bennett stepped inside"), action: "scene", name: "Sarah" },
   { at: { cue: "ch01-101-sarah-enters", offset: -0.4 }, action: "show", actor: "sarah" },
-  ...walk("sarah", { cue: "ch01-101-sarah-enters", offset: -0.4 }, [1740, 1250], 3.0, "northwest", "west"),
+  // She stops at the corner of the desks, left of the second console (Joshua, 2026-09-26,
+  // marking it on a screenshot), nearer the camera than Jack, so she stands tall in frame.
+  ...walk("sarah", { cue: "ch01-101-sarah-enters", offset: -0.4 }, [1270, 1290], 3.2, "northwest", "west"),
   { at: L("Please tell me you didn't break"), action: "face", actor: "jack", direction: "east", label: "Jack turns to her" },
   { at: L("Please tell me you didn't break"), action: "state", actor: "jack", state: "awake" },
   { at: L("Jack gestured toward the console."), action: "face", actor: "jack", direction: "northeast" },

@@ -45,6 +45,16 @@
       <button id="cc" type="button" aria-pressed="false" aria-label="Closed captions">CC</button>
     </div>
   </div>
+  <!-- Landscape only, as in Beyond Extinction. iOS will not let a page rotate itself, so a
+       phone or tablet held upright gets this card instead of the film; it is pure CSS, so it
+       can never get stuck, and it never shows on a laptop or desktop, which cannot turn. -->
+  <div id="rotate" aria-hidden="true">
+    <div class="rot-inner">
+      <div class="rot-phone"></div>
+      <div class="rot-title">Rotate your device</div>
+      <p class="rot-hint">Watch plays in landscape.</p>
+    </div>
+  </div>
   <audio id="audio" preload="auto" playsinline></audio>
   <script type="module" src="engine/app.js"></script>
 </body>

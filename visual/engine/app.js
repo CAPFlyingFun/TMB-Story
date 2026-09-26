@@ -179,6 +179,35 @@ async function boot() {
     }
   }
 
+  // Landscape only on phones and tablets (the #rotate card, pure CSS). Turning upright
+  // mid-film pauses it rather than playing on behind the card, and turning back resumes.
+  const upright = window.matchMedia("(orientation: portrait) and (pointer: coarse)");
+  let heldForRotate = false;
+  upright.addEventListener("change", () => {
+    if (upright.matches && clock.playing) {
+      heldForRotate = true;
+      pause();
+    } else if (!upright.matches && heldForRotate) {
+      heldForRotate = false;
+      play();
+    }
+  });
+  // iOS can leave the layout viewport at the old orientation's width after a turn, so the
+  // page lays out wrong and is scaled; re-asserting the viewport makes it recompute
+  // (the same fix Beyond Extinction uses).
+  const vp = document.querySelector('meta[name="viewport"]');
+  const VP = vp ? vp.getAttribute("content") : "";
+  const kickViewport = () => {
+    if (!vp) return;
+    vp.setAttribute("content", "width=device-width");
+    requestAnimationFrame(() => vp.setAttribute("content", VP));
+  };
+  window.addEventListener("orientationchange", () => {
+    kickViewport();
+    setTimeout(kickViewport, 350);
+    dirty = true;
+  });
+
   $("start").onclick = play;
   $("toggle").onclick = () => (clock.playing ? pause() : play());
   $("restart").onclick = () => {
