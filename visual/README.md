@@ -1,8 +1,9 @@
 # Visual story mode (prototype)
 
 `visual/index.html` plays a chapter's real audio with a 2D scene over it. It is a proof
-of concept: one scene, the first ninety seconds of Chapter 1: the date over black, the
-island at night from high above, the settlement near its centre, then the lab.
+of concept: one scene, the whole of Chapter 1 (8 min 33 s): the date over black, the
+island at night from high above, the settlement near its centre, then the lab with Jack
+and Sarah through to "I didn't."
 
 **The audio is the clock.** The scene is a pure function of `audio.currentTime`, so pause,
 seek, skip and replay need no special handling — the renderer asks "what does the scene
@@ -19,7 +20,7 @@ line; the voice-only export is not indexable.
 | `engine/camera.js` | fits a named shot into any viewport without stretching or letterboxing |
 | `engine/stage.js` | draws a state: layers, characters, lights, screens (DOM + GPU transforms) |
 | `engine/homography.js` | pins a flat screen overlay onto a monitor's four corners |
-| `screens/console.js` | the lab console screen states (diagnostics, warning, intrusion) |
+| `screens/console.js` | the lab console screen states: diagnostics, warning, intrusion, network monitor, access logs, the TOMBS directory, locked, the initialization request; Sarah's console |
 | `paint/island.js` | procedural paint: the settlement's lights, drawn once into a canvas |
 | `scenes/ch01-opening.js` | the scene: sets, actors, objects, shots and events — data only |
 | `../scripts/split-sprites.py` | turns a character sheet into per-direction PNGs (`assets/characters/`) |
@@ -55,7 +56,7 @@ written with a single top-level `world` is one set.
 | `move` | `actor`, `x y` or `dx dy`, `duration`, `ease` |
 | `face` | `actor`, `direction` (south, southwest, … southeast) |
 | `sit` / `stand` / `pose` | `actor` (`pose` for any other pose) |
-| `state` | `actor`, `state`: idle, asleep, awake, leaning — drives the idle sway and lean |
+| `state` | `actor`, `state`: idle, asleep, awake, leaning, still, walking — drives the idle sway, lean and step |
 | `jolt` | `actor`, `amount`, `duration` — a startle or a shift |
 | `show` / `hide` | `actor` |
 | `screen` | `target`, `state`, `params`, `text: { line }` (shows the manuscript line), `flash` |
@@ -103,3 +104,9 @@ named and the narrator not.
 Debug: `?debug=1` shows the state panel (or press D), `?t=62.5` opens at a time,
 `?silent=1` runs without audio, `?nogate` skips the play card. Space plays and pauses, the arrow keys step line by
 line, C toggles captions.
+
+Staging notes. The seated sprites carry their chair, so anything that moves a chair is
+staged with poses: in Chapter 1 Jack stands and steps away, Sarah sits in his place and
+rolls to her console, and Jack sits at the next workstation and rolls that chair back.
+Screens draw behind the people, and a screen in its `off` state shows the painted
+monitor from the background image.

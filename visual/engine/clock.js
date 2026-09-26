@@ -24,7 +24,7 @@
 //    a slow connection a seek into an mp3 that has not downloaded takes longer than that,
 //    so each nudge restarted it: frozen at 0:00.3 on a cold start, fine once cached.
 
-const LOGGED = ["loadedmetadata", "canplay", "play", "playing", "pause", "waiting", "stalled", "seeking", "seeked", "error"];
+const LOGGED = ["loadedmetadata", "canplay", "play", "playing", "pause", "waiting", "stalled", "seeking", "seeked", "ended", "error"];
 
 export class AudioClock {
   constructor(audio, { src, start, end, silent = false }) {
@@ -58,8 +58,17 @@ export class AudioClock {
     audio.addEventListener("playing", () => {
       this._lastAudio = -1; // re-anchor on the next frame
     });
+    // The file itself ran out (a scene that ends where the chapter does). That pause is the
+    // end, not iOS: resuming it would restart the element from 0:00.
+    audio.addEventListener("ended", () => {
+      if (!this.playing || this.virtual) return;
+      this._t = this.end;
+      this.playing = false;
+      this.waiting = false;
+      this.ended = true;
+    });
     audio.addEventListener("pause", () => {
-      if (!this.playing || this.virtual || this._pausing) return;
+      if (!this.playing || this.virtual || this._pausing || audio.ended) return;
       if (document.hidden) this.pause(); // locked or switched away: follow it
       else this._resume(); // on screen: iOS's own pause, not the listener's
     });
@@ -185,7 +194,7 @@ export class AudioClock {
   // aborted play, an interruption inside the guard). Press play again, at most every 1.5 s.
   _kick(p) {
     const a = this.audio;
-    if (this.playing && a.paused && !a.seeking && !this._pausing && p - this._lastKick > 1500) {
+    if (this.playing && a.paused && !a.ended && !a.seeking && !this._pausing && p - this._lastKick > 1500) {
       this._lastKick = p;
       this._resume();
     }

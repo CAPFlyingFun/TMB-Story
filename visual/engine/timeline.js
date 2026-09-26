@@ -47,13 +47,13 @@ export function makeAnchors(manifest) {
     else t = Math.max(0, (s.startMs - (s.pauseBeforeMs || 0)) / 1000);
     cueTimes.set(c.cueId, t);
   }
-  function lineSeg(text, nth = 0) {
+  function lineSeg(text, nth) {
     const n = norm(text);
     let hits = segs.filter((s) => norm(s.displayText).startsWith(n));
     if (!hits.length) hits = segs.filter((s) => norm(s.displayText).includes(n));
     if (!hits.length) throw new Error(`timeline: no line in the manifest matches "${text}"`);
-    if (hits.length > 1 && nth === 0) console.warn(`timeline: "${text}" matches ${hits.length} lines; using the first (pass nth to choose)`);
-    return hits[Math.min(nth, hits.length - 1)];
+    if (hits.length > 1 && nth === undefined) console.warn(`timeline: "${text}" matches ${hits.length} lines; using the first (pass nth to choose)`);
+    return hits[Math.min(nth || 0, hits.length - 1)];
   }
   function resolve(at) {
     if (typeof at === "number") return at;

@@ -14,6 +14,8 @@ const IDLE = {
   asleep: { sway: 0.5, period: 5.4, lean: -1.6 },
   awake: { sway: 0.22, period: 3.0, lean: 0 },
   leaning: { sway: 0.14, period: 2.8, lean: 1.4 },
+  still: { sway: 0.03, period: 4, lean: 0 }, // froze, holding his breath
+  walking: { sway: 0.9, period: 1.05, lean: 0.6, step: 1 }, // a storybook walk: a sway and a light step
 };
 const CROSSFADE = 0.14; // seconds, when a character turns or changes pose
 
@@ -174,7 +176,8 @@ export class Stage {
     const sway = pv.sway + (st.sway - pv.sway) * k, lean = pv.lean + (st.lean - pv.lean) * k;
     const period = pv.period + (st.period - pv.period) * k;
     const rot = lean + sway * Math.sin((2 * Math.PI * t) / period) - a.jolt * 3.2;
-    const hop = -a.jolt * 5;
+    const step = (pv.step || 0) + ((st.step || 0) - (pv.step || 0)) * Math.min(1, (t - a.state.since) / 0.25);
+    const hop = -a.jolt * 5 - step * Math.abs(Math.sin((2 * Math.PI * t) / period)) * 5;
     node.wrap.style.zIndex = Math.round(a.y);
     node.wrap.style.transform = `translate3d(${a.x.toFixed(2)}px,${(a.y + hop).toFixed(2)}px,0) rotate(${rot.toFixed(3)}deg) scale(${s.toFixed(4)})`;
   }
