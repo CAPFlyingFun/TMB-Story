@@ -270,85 +270,85 @@
       "cueId": "ch01-101-sarah-enters",
       "asset": "sfx_footsteps_sarah_sneakers",
       "anchor": {
-        "clipId": "narrator-1fe67963523b",
+        "clipId": "narrator-843953ba3301",
         "occurrence": 1
       },
       "timing": "during",
       "offsetMs": 300,
       "gain": 0.146,
-      "why": "Someone entering is one of the few things footsteps are for. Soft rubber soles on a hard floor, because Chapter 1 canon puts her in gray sneakers."
+      "why": "Someone entering is one of the few things footsteps are for. Soft rubber soles on a hard floor, because Chapter 1 canon puts her in gray sneakers. Re-anchored 2026-09-26 to the revised line, 'walked straight in ... already crossing toward him'."
     },
     {
       "cueId": "ch01-110-sarah-crosses",
       "asset": "sfx_footsteps_sarah_sneakers",
       "anchor": {
-        "clipId": "narrator-98744cc92aa4",
+        "clipId": "narrator-34c58d279a37",
         "occurrence": 1
       },
       "timing": "during",
-      "offsetMs": 900,
+      "offsetMs": 300,
       "gain": 0.146,
-      "why": "'as she walked over' -- the second and last time the chapter hears her walk. It moves her from the doorway to Jack's shoulder, which is where she stays."
+      "why": "'Sarah closed the distance between them' -- the second and last time the chapter hears her walk, carrying her to Jack's shoulder, where she stays. Moved 2026-09-26 from 'as she walked over', which Joshua's revised entrance dropped in favour of this line."
     },
     {
       "cueId": "ch01-120-second-chair",
       "asset": "sfx_chair_roll_slow",
       "anchor": {
-        "clipId": "narrator-a1d352c4ee9f",
+        "clipId": "narrator-25bf9a648f08",
         "occurrence": 1
       },
       "timing": "during",
-      "offsetMs": 400,
+      "offsetMs": 5100,
       "gain": 0.038,
-      "why": "Two people arranging themselves around one workstation. The chairs are how the chapter shows them working as a pair, and it is worth hearing once."
+      "why": "'dragged its chair back, wheels squeaking against the floor' -- the manuscript names the sound. Two people arranging themselves around two workstations; the chairs are how the chapter shows them working as a pair. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since."
     },
     {
       "cueId": "ch01-121-jack-makes-room",
       "asset": "sfx_chair_roll_slow",
       "anchor": {
-        "clipId": "narrator-0444653f442f",
+        "clipId": "narrator-25bf9a648f08",
         "occurrence": 1
       },
       "timing": "during",
-      "offsetMs": 200,
+      "offsetMs": 700,
       "gain": 0.038,
-      "why": "The same asset closing the small joke that started with 'Move.' Jack gives up the keyboard, physically."
+      "why": "'Jack gave Sarah his chair' -- the same slow roll as the second chair, closing the small exchange that started with 'Can I take your chair?': Jack gives up his seat, physically. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since."
     },
     {
       "cueId": "ch01-130-sarah-types",
       "asset": "sfx_keyboard_typing_short",
       "anchor": {
-        "clipId": "narrator-2fd1747b8b44",
+        "clipId": "narrator-90d95cfdf22a",
         "occurrence": 1
       },
       "timing": "during",
       "offsetMs": 300,
       "gain": 0.234,
-      "why": "'Sarah immediately started typing' -- the moment the competent one takes over. Marking who has the keyboard is the scene's quiet shift of authority."
+      "why": "'Sarah was already typing' -- the moment the competent one takes over. Marking who has a keyboard is the scene's quiet shift of authority. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since."
     },
     {
       "cueId": "ch01-131-sarah-history",
       "asset": "sfx_keyboard_typing_short",
       "anchor": {
-        "clipId": "narrator-94fb639def2d",
+        "clipId": "narrator-22289c65a15f",
         "occurrence": 1
       },
       "timing": "during",
       "offsetMs": 250,
       "gain": 0.234,
-      "why": "Sarah opening the connection history. She has the keyboard now and the scene should keep saying so."
+      "why": "Sarah opening the connection history on her screen. She has her own console now and the scene should keep saying so. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since."
     },
     {
       "cueId": "ch01-132-sarah-digs",
       "asset": "sfx_keyboard_typing_short",
       "anchor": {
-        "clipId": "narrator-d4aef8b58a3e",
+        "clipId": "narrator-86e124a3c0e4",
         "occurrence": 1
       },
       "timing": "during",
       "offsetMs": 1600,
       "gain": 0.234,
-      "why": "“began digging through the security logs” is the longest stretch of work in the chapter and had no sound under it at all."
+      "why": "'Jack pulled up the TOMBS directory again, tracing back through what had changed' -- the longest stretch of work in the scene, now on Jack's keyboard beside hers, and it had no sound under it. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since."
     },
     {
       "cueId": "ch01-133-sarah-keeps-typing",

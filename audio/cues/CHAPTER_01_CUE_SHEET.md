@@ -10,7 +10,7 @@ with `python3 scripts/render-cue-sheet.py 1`.
 |---|---|
 | Playback events | **34** |
 | Unique assets | **19** (0 still to generate) |
-| Chapter runtime as it plays today | 8:19 |
+| Chapter runtime as it plays today | 8:21 |
 | Voice clips regenerated for this | **none** |
 
 Events outnumber assets because sounds are reused: `sfx_access_denied_tone` x2, `sfx_alert_warning_hit` x2, `sfx_chair_roll_slow` x2, `sfx_console_tone_soft` x2, `sfx_footsteps_sarah_sneakers` x2, `sfx_intercom_open` x2, `sfx_keyboard_typing_short` x9, `sfx_system_notify_soft` x2.
@@ -37,7 +37,7 @@ anchor to its stop anchor and loops underneath.
 | Category | ambience (ambience layer) |
 | Anchor | segment order 2 · clip `narrator-0b2f58c70a4c` · occurrence 1 |
 | Timing | before |
-| Sustain | loops to segment order 184 |
+| Sustain | loops to segment order 181 |
 | Gain | 0.12 |
 | Fades | in 3000ms · out 4000ms |
 | Duration requested | 45.1s, looping |
@@ -269,7 +269,7 @@ anchor to its stop anchor and loops underneath.
 | Category | ambience (ambience layer) |
 | Anchor | segment order 27 · clip `jack-bennett-a8a6aa7ae3b3` · occurrence 1 |
 | Timing | before |
-| Sustain | loops to segment order 49 |
+| Sustain | loops to segment order 48 |
 | Gain | 0.01 |
 | Fades | in 200ms · out 600ms |
 | Duration requested | 10s, looping |
@@ -326,12 +326,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_intercom_close` |
 | Category | interface (sfx layer) |
-| Anchor | segment order 49 · clip `narrator-91b25dbe2d24` · occurrence 1 |
+| Anchor | segment order 48 · clip `narrator-91b25dbe2d24` · occurrence 1 |
 | Timing | during +700ms |
 | Gain | 0.03 |
 | Duration requested | 1s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:08 |
+| Approx. review time | ~3:07 |
 
 **Manuscript:** Narrator — “Jack released the intercom and looked back at the monitor. The TOMBS directory was still open.”
 
@@ -345,12 +345,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_system_notify_soft` |
 | Category | interface (sfx layer) |
-| Anchor | segment order 53 · clip `system-49a4bf38c005` · occurrence 1 |
+| Anchor | segment order 52 · clip `system-49a4bf38c005` · occurrence 1 |
 | Timing | before |
 | Gain | 0.03 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:21 |
+| Approx. review time | ~3:20 |
 
 **Manuscript:** TOMBS / settlement systems — “Boundary control.”
 
@@ -364,12 +364,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_lab_door_slide` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 55 · clip `narrator-e2bfa452045f` · occurrence 1 |
+| Anchor | segment order 54 · clip `narrator-e2bfa452045f` · occurrence 1 |
 | Timing | during +1500ms |
 | Gain | 0.02 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:24 |
+| Approx. review time | ~3:23 |
 
 **Manuscript:** Narrator — “He reached for the keyboard just as the laboratory door slid open behind him.”
 
@@ -383,16 +383,16 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_footsteps_sarah_sneakers` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 56 · clip `narrator-1fe67963523b` · occurrence 1 |
+| Anchor | segment order 55 · clip `narrator-843953ba3301` · occurrence 1 |
 | Timing | during +300ms |
 | Gain | 0.15 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:29 |
+| Approx. review time | ~3:27 |
 
-**Manuscript:** Narrator — “Sarah Bennett stepped inside with a tablet tucked beneath one arm. She glanced from Jack to the computer.”
+**Manuscript:** Narrator — “Sarah Bennett walked straight in, tablet tucked beneath one arm, already crossing toward him. She glanced from Jack to the computer.”
 
-**Why:** Someone entering is one of the few things footsteps are for. Soft rubber soles on a hard floor, because Chapter 1 canon puts her in gray sneakers.
+**Why:** Someone entering is one of the few things footsteps are for. Soft rubber soles on a hard floor, because Chapter 1 canon puts her in gray sneakers. Re-anchored 2026-09-26 to the revised line, 'walked straight in ... already crossing toward him'.
 
 **Prompt:** `Four or five footsteps of an adult in rubber-soled sneakers on a hard smooth laboratory floor, microphone at floor level beside them. Rubbery contact with a broad low thud under it and no heel click, an even walking gait. Close and filling the frame, recorded at a strong present level, with modest room reflection. No voices, no music, no heels, no hard shoes, no boots.`
 
@@ -402,16 +402,16 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_footsteps_sarah_sneakers` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 67 · clip `narrator-98744cc92aa4` · occurrence 1 |
-| Timing | during +900ms |
+| Anchor | segment order 59 · clip `narrator-34c58d279a37` · occurrence 1 |
+| Timing | during +300ms |
 | Gain | 0.15 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~3:55 |
+| Approx. review time | ~3:33 |
 
-**Manuscript:** Narrator — “Jack pointed toward the monitor as she walked over.”
+**Manuscript:** Narrator — “Sarah closed the distance between them.”
 
-**Why:** 'as she walked over' -- the second and last time the chapter hears her walk. It moves her from the doorway to Jack's shoulder, which is where she stays.
+**Why:** 'Sarah closed the distance between them' -- the second and last time the chapter hears her walk, carrying her to Jack's shoulder, where she stays. Moved 2026-09-26 from 'as she walked over', which Joshua's revised entrance dropped in favour of this line.
 
 **Prompt:** `Four or five footsteps of an adult in rubber-soled sneakers on a hard smooth laboratory floor, microphone at floor level beside them. Rubbery contact with a broad low thud under it and no heel click, an even walking gait. Close and filling the frame, recorded at a strong present level, with modest room reflection. No voices, no music, no heels, no hard shoes, no boots.`
 
@@ -421,16 +421,16 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_chair_roll_slow` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 99 · clip `narrator-a1d352c4ee9f` · occurrence 1 |
-| Timing | during +400ms |
+| Anchor | segment order 103 · clip `narrator-25bf9a648f08` · occurrence 1 |
+| Timing | during +5100ms |
 | Gain | 0.04 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:09 |
+| Approx. review time | ~5:14 |
 
-**Manuscript:** Narrator — “She pulled another chair beside him and nudged his out of the way.”
+**Manuscript:** Narrator — “Jack gave Sarah his chair, crossed to the next workstation, and dragged its chair back, wheels squeaking against the floor, before pulling himself up to his own screen.”
 
-**Why:** Two people arranging themselves around one workstation. The chairs are how the chapter shows them working as a pair, and it is worth hearing once.
+**Why:** 'dragged its chair back, wheels squeaking against the floor' -- the manuscript names the sound. Two people arranging themselves around two workstations; the chairs are how the chapter shows them working as a pair. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since.
 
 **Prompt:** `An office chair on castors rolled a short distance across a hard floor, microphone right at the castors. An even castor rumble at walking pace over a smooth surface, ending in a settle as the chair takes weight. Close and physical, filling the frame, recorded at a strong present level, with room reflection. No voices, no music, no impact.`
 
@@ -440,16 +440,16 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_chair_roll_slow` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 106 · clip `narrator-0444653f442f` · occurrence 1 |
-| Timing | during +200ms |
+| Anchor | segment order 103 · clip `narrator-25bf9a648f08` · occurrence 1 |
+| Timing | during +700ms |
 | Gain | 0.04 |
 | Duration requested | 2.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:23 |
+| Approx. review time | ~5:14 |
 
-**Manuscript:** Narrator — “Jack rolled sideways to give her room.”
+**Manuscript:** Narrator — “Jack gave Sarah his chair, crossed to the next workstation, and dragged its chair back, wheels squeaking against the floor, before pulling himself up to his own screen.”
 
-**Why:** The same asset closing the small joke that started with 'Move.' Jack gives up the keyboard, physically.
+**Why:** 'Jack gave Sarah his chair' -- the same slow roll as the second chair, closing the small exchange that started with 'Can I take your chair?': Jack gives up his seat, physically. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since.
 
 **Prompt:** `An office chair on castors rolled a short distance across a hard floor, microphone right at the castors. An even castor rumble at walking pace over a smooth surface, ending in a settle as the chair takes weight. Close and physical, filling the frame, recorded at a strong present level, with room reflection. No voices, no music, no impact.`
 
@@ -459,16 +459,16 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_keyboard_typing_short` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 107 · clip `narrator-2fd1747b8b44` · occurrence 1 |
+| Anchor | segment order 104 · clip `narrator-90d95cfdf22a` · occurrence 1 |
 | Timing | during +300ms |
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:26 |
+| Approx. review time | ~5:24 |
 
-**Manuscript:** Narrator — “Sarah immediately started typing.”
+**Manuscript:** Narrator — “Sarah was already typing.”
 
-**Why:** 'Sarah immediately started typing' -- the moment the competent one takes over. Marking who has the keyboard is the scene's quiet shift of authority.
+**Why:** 'Sarah was already typing' -- the moment the competent one takes over. Marking who has a keyboard is the scene's quiet shift of authority. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since.
 
 **Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
@@ -478,16 +478,16 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_keyboard_typing_short` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 111 · clip `narrator-94fb639def2d` · occurrence 1 |
+| Anchor | segment order 108 · clip `narrator-22289c65a15f` · occurrence 1 |
 | Timing | during +250ms |
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:35 |
+| Approx. review time | ~5:33 |
 
-**Manuscript:** Narrator — “Sarah opened the connection history.”
+**Manuscript:** Narrator — “Sarah opened the connection history on her screen.”
 
-**Why:** Sarah opening the connection history. She has the keyboard now and the scene should keep saying so.
+**Why:** Sarah opening the connection history on her screen. She has her own console now and the scene should keep saying so. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since.
 
 **Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
@@ -497,16 +497,16 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_keyboard_typing_short` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 118 · clip `narrator-d4aef8b58a3e` · occurrence 1 |
+| Anchor | segment order 115 · clip `narrator-86e124a3c0e4` · occurrence 1 |
 | Timing | during +1600ms |
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~5:47 |
+| Approx. review time | ~5:46 |
 
-**Manuscript:** Narrator — “Jack watched as Sarah opened another window and began digging through the security logs.”
+**Manuscript:** Narrator — “Jack pulled up the TOMBS directory again, tracing back through what had changed.”
 
-**Why:** “began digging through the security logs” is the longest stretch of work in the chapter and had no sound under it at all.
+**Why:** 'Jack pulled up the TOMBS directory again, tracing back through what had changed' -- the longest stretch of work in the scene, now on Jack's keyboard beside hers, and it had no sound under it. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since.
 
 **Prompt:** `Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.`
 
@@ -516,12 +516,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_keyboard_typing_short` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 132 · clip `narrator-a1ae4cf23cd8` · occurrence 1 |
+| Anchor | segment order 129 · clip `narrator-a1ae4cf23cd8` · occurrence 1 |
 | Timing | during +200ms |
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~6:23 |
+| Approx. review time | ~6:25 |
 
 **Manuscript:** Narrator — “Sarah kept typing.”
 
@@ -535,12 +535,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_keyboard_typing_short` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 148 · clip `narrator-4ae27aba679f` · occurrence 1 |
+| Anchor | segment order 145 · clip `narrator-4ae27aba679f` · occurrence 1 |
 | Timing | during +200ms |
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~6:58 |
+| Approx. review time | ~7:00 |
 
 **Manuscript:** Narrator — “Sarah rested a hand briefly against her stomach, then returned to typing.”
 
@@ -554,12 +554,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_alert_warning_hit` |
 | Category | alarm (sfx layer) |
-| Anchor | segment order 153 · clip `narrator-2525fa15c09f` · occurrence 1 |
+| Anchor | segment order 150 · clip `narrator-2525fa15c09f` · occurrence 1 |
 | Timing | before |
 | Gain | 0.02 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:12 |
+| Approx. review time | ~7:14 |
 
 **Manuscript:** Narrator — “A new warning tone interrupted them. Both turned toward the main console as another message appeared.”
 
@@ -573,13 +573,13 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `amb_tombs_array_power_rise` |
 | Category | system (sfx layer) |
-| Anchor | segment order 154 · clip `system-f6a28699a3b1` · occurrence 1 |
+| Anchor | segment order 151 · clip `system-f6a28699a3b1` · occurrence 1 |
 | Timing | after |
 | Gain | 0.02 |
 | Fades | in 4000ms · out -ms |
 | Duration requested | 20s, looping |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:18 |
+| Approx. review time | ~7:20 |
 
 **Manuscript:** TOMBS / settlement systems — “Tombs array remote initialization request.”
 
@@ -593,12 +593,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_access_denied_tone` |
 | Category | system (sfx layer) |
-| Anchor | segment order 162 · clip `system-0fe0cf2a5742` · occurrence 1 |
+| Anchor | segment order 159 · clip `system-0fe0cf2a5742` · occurrence 1 |
 | Timing | before |
 | Gain | 0.08 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:35 |
+| Approx. review time | ~7:37 |
 
 **Manuscript:** TOMBS / settlement systems — “Request denied.”
 
@@ -612,12 +612,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_access_denied_tone` |
 | Category | system (sfx layer) |
-| Anchor | segment order 164 · clip `system-0fe0cf2a5742` · occurrence 2 |
+| Anchor | segment order 161 · clip `system-0fe0cf2a5742` · occurrence 2 |
 | Timing | before |
 | Gain | 0.08 |
 | Duration requested | 1.5s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:38 |
+| Approx. review time | ~7:40 |
 
 **Manuscript:** TOMBS / settlement systems — “Request denied.”
 
@@ -631,12 +631,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_keyboard_typing_short` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 167 · clip `narrator-cddc94b869d1` · occurrence 1 |
+| Anchor | segment order 164 · clip `narrator-cddc94b869d1` · occurrence 1 |
 | Timing | during +500ms |
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:44 |
+| Approx. review time | ~7:46 |
 
 **Manuscript:** Narrator — “He entered his administrator credentials, but a new message appeared before he could issue another command.”
 
@@ -650,12 +650,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_access_revoked_tone` |
 | Category | system (sfx layer) |
-| Anchor | segment order 168 · clip `system-28a18477a67e` · occurrence 1 |
+| Anchor | segment order 165 · clip `system-28a18477a67e` · occurrence 1 |
 | Timing | before |
 | Gain | 0.08 |
 | Duration requested | 2s |
 | Reusable in Godot | yes |
-| Approx. review time | ~7:50 |
+| Approx. review time | ~7:51 |
 
 **Manuscript:** TOMBS / settlement systems — “Access revoked.”
 
@@ -669,12 +669,12 @@ anchor to its stop anchor and loops underneath.
 |---|---|
 | Asset | `sfx_keyboard_typing_short` |
 | Category | foley (sfx layer) |
-| Anchor | segment order 175 · clip `narrator-7fd987f61325` · occurrence 1 |
+| Anchor | segment order 172 · clip `narrator-7fd987f61325` · occurrence 1 |
 | Timing | during +250ms |
 | Gain | 0.23 |
 | Duration requested | 3s |
 | Reusable in Godot | yes |
-| Approx. review time | ~8:03 |
+| Approx. review time | ~8:04 |
 
 **Manuscript:** Narrator — “Jack tried his credentials again.”
 

@@ -3,7 +3,7 @@ chapter: 1
 title: "The Alarm"
 movement: 1
 pov: Jack
-word_count: 1215
+word_count: 1214
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -23,8 +23,11 @@ ending_type: unanswered question
 review_status: approved
 audio_status: recorded
 approved_on: "2026-09-21"
-source: "Joshua's revised Word manuscript, 3e9a1f9b-01-03_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 0 bare said-tag(s) removed, and 3 quote(s) split by a beat joined into one line with the beat first."
+source: "Joshua's revised Word manuscript, 3c63298d-01-03_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-26 (three lines of Sarah's entrance changed; the rest identical to 3e9a1f9b, imported 2026-09-23). For the audio, at his instruction the same day (Decision 0024): 0 bare said-tag(s) removed, and 3 quote(s) split by a beat joined into one line with the beat first."
 revision_notes:
+  - date: "2026-09-26"
+    what: "Sarah's entrance, at Joshua's instruction: she 'walked straight in ... already crossing toward him' instead of 'stepped inside'; 'Sarah closed the distance between them' replaces 'Sarah stopped just inside the doorway'; and 'Jack pointed toward the monitor.' drops 'as she walked over'. Three lines; nothing else in Chapters 1 to 3 differs from the previous document."
+    history: "Found watching the visual prototype: she had already crossed to Jack when the text still had her stopping in the doorway."
   - date: "2026-09-21"
     what: "The 'returning to the keyboard' / 'returned to the keyboard' repetition is fixed in the document itself."
     history: "The first revised document restored the wording Joshua had corrected by ear on 2026-09-18. It was followed verbatim and flagged rather than patched downstream, and he then fixed it at source and re-sent the document. That is the right end of the loop: the manuscript is his."
@@ -93,17 +96,17 @@ Jack froze as a file opened.
 
 "Boundary control." "No, no, no." He reached for the keyboard just as the laboratory door slid open behind him.
 
-Sarah Bennett stepped inside with a tablet tucked beneath one arm. She glanced from Jack to the computer. "Please tell me you didn't break something."
+Sarah Bennett walked straight in, tablet tucked beneath one arm, already crossing toward him. She glanced from Jack to the computer. "Please tell me you didn't break something."
 
 "I was asleep," Jack replied.
 
-Sarah stopped just inside the doorway. "You called me in here to admit that?"
+Sarah closed the distance between them. "You called me in here to admit that?"
 
 Jack gestured toward the console. "No. That was my defense."
 
 Sarah raised an eyebrow. "Against what?"
 
-Jack pointed toward the monitor as she walked over. "Whatever this is. I was reviewing yesterday's test results."
+Jack pointed toward the monitor. "Whatever this is. I was reviewing yesterday's test results."
 
 "You were sleeping," Sarah corrected him.
 

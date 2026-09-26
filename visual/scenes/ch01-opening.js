@@ -118,9 +118,9 @@ const REST = [
   { at: { cue: "ch01-100-door-slides" }, action: "camera", shot: "doorway", duration: 2.6, ease: "inOut", label: "the door, behind him" },
   { at: { cue: "ch01-100-door-slides" }, action: "jolt", actor: "jack", amount: 0.5, duration: 0.5 },
 
-  // "Sarah Bennett stepped inside with a tablet tucked beneath one arm. She glanced from
-  //  Jack to the computer."
-  { at: L("Sarah Bennett stepped inside"), action: "scene", name: "Sarah" },
+  // "Sarah Bennett walked straight in, tablet tucked beneath one arm, already crossing
+  //  toward him. She glanced from Jack to the computer." (revised 2026-09-26)
+  { at: L("Sarah Bennett"), action: "scene", name: "Sarah" },
   { at: { cue: "ch01-101-sarah-enters", offset: -0.4 }, action: "show", actor: "sarah" },
   // She stops at the corner of the desks, left of the second console (Joshua, 2026-09-26,
   // marking it on a screenshot), nearer the camera than Jack, so she stands tall in frame.
@@ -129,10 +129,13 @@ const REST = [
   { at: L("Please tell me you didn't break"), action: "state", actor: "jack", state: "awake" },
   { at: L("Jack gestured toward the console."), action: "face", actor: "jack", direction: "northeast" },
   { at: L("Jack gestured toward the console."), action: "jolt", actor: "jack", amount: 0.3, duration: 0.5 },
-  { at: L("Sarah raised an eyebrow."), action: "camera", shot: "twoshot", duration: 4, ease: "inOut" },
-  // "Jack pointed toward the monitor as she walked over."
-  ...walk("sarah", L("Jack pointed toward the monitor as she walked over."), [1115, 1236], 3.4, "west", "northwest"),
-  { at: L("Jack pointed toward the monitor as she walked over."), action: "jolt", actor: "jack", amount: 0.25, duration: 0.5 },
+  // "Sarah closed the distance between them." (segment 59: anchored by order, because the
+  // line replaced "Sarah stopped just inside the doorway" on 2026-09-26 and both texts must
+  // work while the audio catches up.)
+  ...walk("sarah", { seg: 59 }, [1115, 1236], 2.6, "west", "northwest"),
+  { at: { seg: 59 }, action: "camera", shot: "twoshot", duration: 4, ease: "inOut" },
+  // "Jack pointed toward the monitor. 'Whatever this is.'"
+  { at: L("Jack pointed toward the monitor"), action: "jolt", actor: "jack", amount: 0.25, duration: 0.5 },
   { at: L("Whatever this is."), action: "face", actor: "jack", direction: "east" },
   { at: L("Jack sat a little straighter."), action: "move", actor: "jack", x: 745, y: 1188, duration: 0.5, ease: "out" },
   { at: L("Jack nodded solemnly."), action: "jolt", actor: "jack", amount: 0.3, duration: 0.7 },
