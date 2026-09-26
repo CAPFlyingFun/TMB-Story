@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-34c58d279a37",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ac17d12ffa95da522cb4717421c2af46adc35a71697780032d0b1d7de8259416",
+  "text": "Sarah closed the distance between them.",
+  "bytes": 38914,
+  "generated": "2026-09-26T22:13:23Z"
+}
