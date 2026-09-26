@@ -60,8 +60,10 @@
         346
       ],
       "figureHeightPx": 328.5,
-      "heightM": 1.318,
-      "pxPerMeter": 249.32,
+      "heightM": 1.33,
+      "pxPerMeter": 247.06,
+      "chairBasePx": 168.0,
+      "chairBaseM": 0.68,
       "frames": {
         "south": {
           "file": "sitting/south.png",

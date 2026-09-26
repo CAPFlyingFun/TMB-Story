@@ -88,7 +88,7 @@ export class Stage {
       const prev = el("img", "frame prev", wrap);
       const cur = el("img", "frame", wrap);
       prev.alt = cur.alt = "";
-      this.actors[id] = { wrap, cur, prev, sprite: sprites[id], curSrc: "", prevSrc: "", seatLiftM: a.seatLiftM || 0 };
+      this.actors[id] = { wrap, cur, prev, sprite: sprites[id], curSrc: "", prevSrc: "" };
     }
     this.lights = {};
     for (const [id, l] of Object.entries(set.lights || {})) {
@@ -183,10 +183,7 @@ export class Stage {
     const step = (pv.step || 0) + ((st.step || 0) - (pv.step || 0)) * Math.min(1, (t - a.state.since) / 0.25);
     const hop = -a.jolt * 5 - step * Math.abs(Math.sin((2 * Math.PI * t) / period)) * 5;
     node.wrap.style.zIndex = Math.round(a.y);
-    // A seated character may sit a little higher than the chair drawn under them
-    // (seatLiftM, metres): the chair in the art is lower than the lab's desks.
-    const lift = a.pose.v === "sitting" ? node.seatLiftM * this.ppm(a.y) : 0;
-    node.wrap.style.transform = `translate3d(${a.x.toFixed(2)}px,${(a.y + hop - lift).toFixed(2)}px,0) rotate(${rot.toFixed(3)}deg) scale(${s.toFixed(4)})`;
+    node.wrap.style.transform = `translate3d(${a.x.toFixed(2)}px,${(a.y + hop).toFixed(2)}px,0) rotate(${rot.toFixed(3)}deg) scale(${s.toFixed(4)})`;
   }
 
   drawLight(node, l) {

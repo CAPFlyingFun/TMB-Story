@@ -44,7 +44,7 @@ const says = (line, o) => ({ at: L(line, o), action: "light", target: "intercom"
 const J = "jack-monitor", S = "sarah-monitor";
 
 // Where the two end up: Jack at his own screen, Sarah at the console to his right.
-const JACK_SEAT = [745, 1184], SARAH_SEAT = [1150, 1196];
+const JACK_SEAT = [745, 1184], SARAH_SEAT = [1150, 1184]; // the same depth: the same-size chairs
 
 const REST = [
   // "Come on. What are you doing?" / "An unfamiliar connection appeared for half a second
@@ -173,7 +173,9 @@ const REST = [
   // Jack goes out past the camera on the left -- Sarah's entrance mirrored -- growing as he
   // nears the lens, to "the next workstation", which is behind the camera.
   ...walk("jack", L("Jack gave Sarah his chair", { offset: 0.5 }), [-330, 1600], 2.4, "southwest"),
-  ...walk("sarah", L("Jack gave Sarah his chair", { offset: 1.1 }), JACK_SEAT, 0.9, "northwest"),
+  // Exactly where Jack's chair stood (he leaned back to 740, 1196), so the chair she sits in
+  // is his: same place, same size.
+  ...walk("sarah", L("Jack gave Sarah his chair", { offset: 1.1 }), [740, 1196], 0.9, "northwest"),
   { at: L("Jack gave Sarah his chair", { offset: 2.1 }), action: "sit", actor: "sarah" },
   { at: L("Jack gave Sarah his chair", { offset: 2.1 }), action: "face", actor: "sarah", direction: "north" },
   { at: L("Jack gave Sarah his chair", { offset: 2.6 }), action: "move", actor: "sarah", x: SARAH_SEAT[0], y: SARAH_SEAT[1], duration: 2.2, ease: "inOut", label: "Sarah rolls to her console" },
@@ -342,7 +344,7 @@ export default {
         // The door is behind the camera, to the right. Sarah comes in past the lens, from off
         // the bottom-right corner: near the camera she is large, and she shrinks to her normal
         // size as she walks into the room (perspective does it; nothing is scaled by hand).
-        sarah: { sprite: "../assets/characters/sarah/", pose: "standing", facing: "northwest", state: "idle", x: 2330, y: 1580, layer: "room", visible: false, seatLiftM: 0.05 },
+        sarah: { sprite: "../assets/characters/sarah/", pose: "standing", facing: "northwest", state: "idle", x: 2330, y: 1580, layer: "room", visible: false },
       },
 
       screens: {

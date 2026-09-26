@@ -26,6 +26,12 @@ DIRECTIONS = ["south", "southwest", "west", "northwest", "north", "northeast", "
 PAD = 6            # transparent margin around the widest frame
 GROUND_BAND = 0.06 # standing: the lowest 6% of the figure (the feet) is the ground point
 CHAIR_BAND = 0.18  # sitting: the dark chair base within the lowest 18%
+# Every sheet draws the SAME office chair, so a seated sprite is sized by its chair, not by
+# the person's height: the wheelbase (the widest dark extent in the lowest 12% of the back
+# view) is this many metres. Sized from heights instead, the chair came out a different size
+# for each character (4-7%), and jumped when Sarah sat in Jack's (Joshua, 2026-09-26). The
+# 0.68 m keeps Jack's chair where it was; a typical office-chair base is 0.63-0.70 m.
+CHAIR_BASE_M = 0.68
 
 
 def clean_alpha(rgba):
@@ -72,6 +78,15 @@ def measure(mask, rgba, pose):
     return {"x0": x0, "x1": x1, "y0": y0, "y1": y1, "ax": float(xs[band].mean()), "ay": float(y1)}
 
 
+def wheelbase(mask, rgba):
+    """Width in pixels of the chair's star base: the widest near-black extent low down."""
+    ys, xs = np.nonzero(mask)
+    y0, y1 = ys.min(), ys.max()
+    lum = rgba[ys, xs, :3].astype(int).mean(axis=1)
+    band = (ys >= y1 - int((y1 - y0) * 0.12)) & (lum < 55)
+    return float(xs[band].max() - xs[band].min())
+
+
 def main():
     cfg = json.load(open(CONFIG, encoding="utf-8"))
     for name, spec in cfg["figures"].items():
@@ -109,10 +124,20 @@ def main():
                 frames[d] = {"file": "%s/%s.png" % (pose, d), "mirrorOf": src}
             for d, im in canv.items():
                 im.save(os.path.join(out_dir, pose, d + ".png"), optimize=True)
-            height_m = spec["heightM"] * (spec.get("sittingHeightRatio", 0.72) if pose == "sitting" else 1.0)
+            extra = {}
+            if pose == "sitting":
+                # Scaled by the chair (the back view shows the whole base); the seated height
+                # then follows from how the artist drew the person in it.
+                base_px = wheelbase(figs[(pose, direct["north"])], rgba)
+                ppm = base_px / CHAIR_BASE_M
+                height_m = fig_px / ppm
+                extra = {"chairBasePx": base_px, "chairBaseM": CHAIR_BASE_M}
+            else:
+                height_m = spec["heightM"]
+                ppm = fig_px / height_m
             record["poses"][pose] = {
                 "canvas": [W, H], "anchor": [anchor[0], anchor[1]], "figureHeightPx": round(fig_px, 1),
-                "heightM": round(height_m, 3), "pxPerMeter": round(fig_px / height_m, 2),
+                "heightM": round(height_m, 3), "pxPerMeter": round(ppm, 2), **extra,
                 "frames": {d: frames[d] for d in DIRECTIONS},
             }
             print("%-6s %-8s canvas %dx%d  figure %.0f px  mirrored: %s"
