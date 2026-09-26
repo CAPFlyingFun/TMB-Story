@@ -1,7 +1,8 @@
 # Visual story mode (prototype)
 
 `visual/index.html` plays a chapter's real audio with a 2D scene over it. It is a proof
-of concept: one scene, the first minute of Chapter 1 in the lab.
+of concept: one scene, the first ninety seconds of Chapter 1: the date over black, the
+island at night from high above, the settlement near its centre, then the lab.
 
 **The audio is the clock.** The scene is a pure function of `audio.currentTime`, so pause,
 seek, skip and replay need no special handling — the renderer asks "what does the scene
@@ -19,8 +20,10 @@ line; the voice-only export is not indexable.
 | `engine/stage.js` | draws a state: layers, characters, lights, screens (DOM + GPU transforms) |
 | `engine/homography.js` | pins a flat screen overlay onto a monitor's four corners |
 | `screens/console.js` | the lab console screen states (diagnostics, warning, intrusion) |
-| `scenes/ch01-opening.js` | the scene: world, actors, shots and events — data only |
+| `paint/island.js` | procedural paint: the settlement's lights, drawn once into a canvas |
+| `scenes/ch01-opening.js` | the scene: sets, actors, objects, shots and events — data only |
 | `../scripts/split-sprites.py` | turns a character sheet into per-direction PNGs (`assets/characters/`) |
+| `../scripts/make-island-art.py` | grades the Beyond Extinction island to moonlight, caps its volcano with cloud, and makes the cloud wisps |
 
 ## Writing a scene
 
@@ -35,7 +38,15 @@ A scene is data. Anchor events to the audio, not to hand-typed seconds:
 
 `line` matches the start of a manuscript line in the chapter's manifest (`edge: "end"`
 for its end, `nth` if it repeats). `cue` is a sound cue from the drama mix, placed by the
-same rule the mixer uses. A regenerated clip moves every event anchored to it.
+same rule the mixer uses. `seg` is a line by its order. Inside one long narrated line,
+`{ line: "...", phrase: "Near its center" }` lands on that phrase, estimated from its
+share of the line's characters (narration runs at a nearly even pace). A regenerated clip
+moves every event anchored to it.
+
+A scene is one or more **sets**, each with its own `world`, `shots`, `camera`, actors,
+objects, screens and lights. `initialSet` opens it and `{ action: "set", set: "lab" }`
+cuts; each set keeps its own camera, so cutting back returns to where it was. A scene
+written with a single top-level `world` is one set.
 
 | action | fields |
 |---|---|
@@ -50,6 +61,9 @@ same rule the mixer uses. A regenerated clip moves every event anchored to it.
 | `screen` | `target`, `state`, `params`, `text: { line }` (shows the manuscript line), `flash` |
 | `light` | `target`, `color`, `intensity`, `duration`, `pulse`, `throb` (Hz) |
 | `fade` | `to` (0 clear, 1 black), `duration` |
+| `set` | `set` — cut to another set |
+| `opacity` | `target` (an object), `to`, `duration` |
+| `title` | `text`, `sub`, `duration`, `fadeIn`, `fadeOut` — a title card over the picture |
 | `scene` | `name` (the label in the debug panel) |
 
 Reserved, not built yet: `sound`, `parallax`, `interaction`. `ease` is one of linear, in,
@@ -63,12 +77,22 @@ own pixels per metre (`sprite.json`), so a character is always its real height a
 as it moves toward the camera. Zoom never changes the size relationship between objects.
 An insect-scale world is the same system with a different `pxPerMeter`.
 
+## Depth
+
+A world's `layers` each move by their own `parallax` (1 is the ground; clouds above it
+are more) and can also zoom faster than the ground as the camera pushes in
+(`zoomDepth`), the way something nearer the lens does. At the widest framing every layer
+lines up, and they separate as the camera comes down. `objects` place an image (`src`)
+or a painted canvas (`paint`, a function in the scene's `painters`) on a layer in world
+coordinates, with an `opacity` and an optional `drift` in pixels per second. A world's
+`color` fills everything past the layers: the island's open sea is a colour, not a
+9000-pixel picture.
+
 ## Growing it later
 
-Built so these can be added without rewriting the engine: more layers with `parallax`
-(each layer already moves by its own factor), props and vegetation as objects sorted by
-`y` with the characters, more screen templates, and more scenes registered in
-`engine/app.js`.
+Built so these can be added without rewriting the engine: props and vegetation as
+objects sorted by `y` with the characters, more sets per scene, more screen templates,
+and more scenes registered in `engine/app.js`.
 
 The player is movie-style: the controls hide while it plays and a tap on the picture
 brings them back. **CC** turns closed captions on and off (remembered per device); they
@@ -76,5 +100,5 @@ come from the manifest, so they are always the manuscript's words, with characte
 named and the narrator not.
 
 Debug: `?debug=1` shows the state panel (or press D), `?t=62.5` opens at a time,
-`?silent=1` runs without audio. Space plays and pauses, the arrow keys step line by
+`?silent=1` runs without audio, `?nogate` skips the play card. Space plays and pauses, the arrow keys step line by
 line, C toggles captions.

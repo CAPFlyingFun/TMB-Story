@@ -1,12 +1,25 @@
-// Chapter 1, the opening in the lab: from "Deep inside one of those laboratories" to Jack
-// opening the network monitor. About a minute of the real chapter audio.
+// Chapter 1, the opening: the date over black, the island at night from high above, the
+// settlement near its centre, then inside the lab from "Deep inside one of those
+// laboratories" to Jack opening the network monitor. About ninety seconds of the real
+// chapter audio, from 0:00.
 //
 // The events follow the manuscript; they add nothing to it. Every `at` is anchored to a
-// line or a sound cue in audio/manifests/chapter-01.json, so a regenerated clip moves the
-// visuals with it. Coordinates are pixels of the lab image (2048 x 1152), the world's
-// native units; sizes come from metres through `perspective`.
+// line, a phrase inside a line, or a sound cue in audio/manifests/chapter-01.json, so a
+// regenerated clip moves the visuals with it.
+//
+// Two sets. ISLAND: a 9000 px square of night ocean with the graded island image
+// (2048 px, assets/backgrounds/island-night.jpg) in the middle; image pixel (x, y) is
+// world (x + 3476, y + 3476). The ocean is so large because the camera never shows past
+// the world's edge: at the widest framing a phone sees the whole world across its
+// longer side, so the island can only start small if the sea around it is big. Clouds sit on two depth layers that pan and zoom faster
+// than the ground, so the camera seems to come down through them. The volcano in the
+// source art is under a standing cloud painted into the image by
+// scripts/make-island-art.py: the island is man-made, and nothing on screen should say
+// otherwise. LAB: coordinates are pixels of the lab image (2048 x 1152); sizes come
+// from metres through `perspective`.
 
 import { templates } from "../screens/console.js";
+import { settlementLights } from "../paint/island.js";
 
 const DIAG_BLUE = "rgba(80,160,255,0.55)";
 const AMBER = "rgba(255,160,50,0.62)";
@@ -17,56 +30,119 @@ export default {
   audio: "../audio/exports/chapter-01-drama.mp3",
   manifest: "../audio/manifests/chapter-01.json",
   range: {
-    start: { cue: "ch01-005-lab-bed" },
+    start: { seg: 0 },
     end: { line: "Several windows were opening", edge: "end", offset: 0.6 },
   },
   fadeFromBlack: true,
+  painters: { settlementLights },
+  initialSet: "island",
 
-  world: {
-    width: 2048,
-    height: 1152,
-    background: "../assets/backgrounds/lab-main.jpg",
-    // Floor perspective, measured on the image: the centre desk's legs meet the floor at
-    // y = 1135, where the 1.7 m desk spans 660 px; its edges converge near y = 580. A point
-    // on the floor at y is (y - 580) * 388 / 555 pixels per metre.
-    perspective: { horizonY: 580, ref: { y: 1135, pxPerMeter: 388 } },
-    layers: [{ id: "room", parallax: 1 }],
-    grade: "rgba(7,11,24,0.30)", // late at night: the room dims, the monitor does not
-  },
+  sets: {
+    island: {
+      world: {
+        width: 9000,
+        height: 9000,
+        color: "#040812", // the open sea, the colour the island image is feathered into
+        background: "../assets/backgrounds/island-night.jpg",
+        backgroundRect: { x: 3476, y: 3476, w: 2048, h: 2048 },
+        layers: [
+          { id: "ground", parallax: 1, z: 0 },
+          { id: "clouds-low", parallax: 1.1, zoomDepth: 0.3, z: 1 },
+          { id: "clouds-high", parallax: 1.3, zoomDepth: 0.6, z: 2 },
+        ],
+      },
+      objects: [
+        // The research settlement, in the clearing south-east of the island's middle.
+        { id: "settlement", layer: "ground", paint: "settlementLights", x: 4656, y: 4636, w: 560, h: 400, canvas: [1120, 800], opacity: 0.4, seed: 7, z: 12 },
+        // Cloud the camera comes down through: two depth layers, drifting east.
+        { id: "low-w", layer: "clouds-low", src: "../assets/backgrounds/clouds/wisp-1.png", x: 3800, y: 4950, w: 1300, h: 480, opacity: 0.85, drift: [5, 1] },
+        { id: "low-e", layer: "clouds-low", src: "../assets/backgrounds/clouds/wisp-2.png", x: 5450, y: 4350, w: 1200, h: 450, opacity: 0.8, drift: [4, 1] },
+        { id: "low-s", layer: "clouds-low", src: "../assets/backgrounds/clouds/wisp-3.png", x: 4900, y: 5500, w: 1200, h: 560, opacity: 0.8, drift: [4, 1] },
+        { id: "high-a", layer: "clouds-high", src: "../assets/backgrounds/clouds/wisp-4.png", x: 3950, y: 4250, w: 1700, h: 520, opacity: 0.75, drift: [9, 2] },
+        { id: "high-b", layer: "clouds-high", src: "../assets/backgrounds/clouds/wisp-1.png", x: 5350, y: 5150, w: 1600, h: 590, opacity: 0.7, drift: [8, 2] },
+        { id: "high-c", layer: "clouds-high", src: "../assets/backgrounds/clouds/wisp-3.png", x: 5250, y: 3600, w: 1300, h: 600, opacity: 0.7, drift: [8, 2] },
+        { id: "high-d", layer: "clouds-high", src: "../assets/backgrounds/clouds/wisp-2.png", x: 3550, y: 5350, w: 1300, h: 490, opacity: 0.7, drift: [9, 2] },
+      ],
+      shots: {
+        high: { x: 0, y: 0, w: 9000, h: 9000, focus: [4550, 4550] },
+        island: { x: 3380, y: 3380, w: 2300, h: 2300, focus: [4600, 4600] },
+        approach: { x: 4006, y: 4136, w: 1300, h: 1000, focus: [4656, 4636] },
+        settlement: { x: 4346, y: 4406, w: 620, h: 460, focus: [4656, 4636] },
+      },
+      camera: { initial: { shot: "high" }, name: "Island · night" },
+    },
 
-  actors: {
-    jack: { sprite: "../assets/characters/jack/", pose: "sitting", facing: "northeast", state: "asleep", x: 720, y: 1200, layer: "room" },
-  },
+    lab: {
+      world: {
+        width: 2048,
+        height: 1152,
+        background: "../assets/backgrounds/lab-main.jpg",
+        // Floor perspective, measured on the image: the centre desk's legs meet the floor at
+        // y = 1135, where the 1.7 m desk spans 660 px; its edges converge near y = 580. A point
+        // on the floor at y is (y - 580) * 388 / 555 pixels per metre.
+        perspective: { horizonY: 580, ref: { y: 1135, pxPerMeter: 388 } },
+        layers: [{ id: "room", parallax: 1 }],
+        grade: "rgba(7,11,24,0.30)", // late at night: the room dims, the monitor does not
+      },
 
-  screens: {
-    "jack-monitor": {
-      corners: [[890, 614], [1071, 614], [890, 730], [1071, 730]],
-      width: 543, height: 348, // drawn at 3x the world size so text stays sharp when the camera pushes in
-      templates,
-      state: "diagnostics",
+      actors: {
+        jack: { sprite: "../assets/characters/jack/", pose: "sitting", facing: "northeast", state: "asleep", x: 720, y: 1200, layer: "room" },
+      },
+
+      screens: {
+        "jack-monitor": {
+          corners: [[890, 614], [1071, 614], [890, 730], [1071, 730]],
+          width: 543, height: 348, // drawn at 3x the world size so text stays sharp when the camera pushes in
+          templates,
+          state: "diagnostics",
+        },
+      },
+
+      lights: {
+        monitor: { x: 980, y: 690, radius: 560, color: DIAG_BLUE, intensity: 0.32 },
+        alarm: { x: 980, y: 690, radius: 760, color: AMBER, intensity: 0 },
+      },
+
+      // Named framings: the world rectangle to show, and the point to keep in view when a
+      // narrow screen cannot show all of it.
+      shots: {
+        establishing: { x: 0, y: 0, w: 2048, h: 1152, focus: [900, 780] },
+        room: { x: 170, y: 170, w: 1700, h: 960, focus: [860, 780] },
+        asleep: { x: 420, y: 430, w: 900, h: 700, focus: [820, 800] },
+        chirp: { x: 500, y: 470, w: 760, h: 600, focus: [880, 760] },
+        close: { x: 560, y: 510, w: 640, h: 520, focus: [900, 740] },
+        rollback: { x: 340, y: 400, w: 1000, h: 752, focus: [760, 820] },
+        medium: { x: 520, y: 470, w: 760, h: 640, focus: [860, 760] },
+        screen: { x: 700, y: 540, w: 560, h: 420, focus: [960, 690] },
+      },
+      camera: { initial: { shot: "establishing" }, name: "Lab" },
     },
   },
 
-  lights: {
-    monitor: { x: 980, y: 690, radius: 560, color: DIAG_BLUE, intensity: 0.32 },
-    alarm: { x: 980, y: 690, radius: 760, color: AMBER, intensity: 0 },
-  },
-
-  // Named framings: the world rectangle to show, and the point to keep in view when a
-  // narrow screen cannot show all of it.
-  shots: {
-    establishing: { x: 0, y: 0, w: 2048, h: 1152, focus: [900, 780] },
-    room: { x: 170, y: 170, w: 1700, h: 960, focus: [860, 780] },
-    asleep: { x: 420, y: 430, w: 900, h: 700, focus: [820, 800] },
-    chirp: { x: 500, y: 470, w: 760, h: 600, focus: [880, 760] },
-    close: { x: 560, y: 510, w: 640, h: 520, focus: [900, 740] },
-    rollback: { x: 340, y: 400, w: 1000, h: 752, focus: [760, 820] },
-    medium: { x: 520, y: 470, w: 760, h: 640, focus: [860, 760] },
-    screen: { x: 700, y: 540, w: 560, h: 420, focus: [960, 690] },
-  },
-  camera: { initial: { shot: "establishing" }, name: "Lab" },
-
   events: [
+    // "It was March fifth, in the year twenty-one ten."
+    { at: { seg: 0 }, action: "scene", name: "Date" },
+    { at: { seg: 0, offset: 0.25 }, action: "title", text: "March 5, 2110", duration: 4.6, fadeIn: 1.0, fadeOut: 1.3 },
+
+    // "It was almost eleven at night on a remote island somewhere in the Atlantic Ocean.
+    //  The island stretched roughly fifty-six kilometers across ... most of it remained
+    //  undeveloped wilderness."
+    { at: { seg: 1, offset: -0.3 }, action: "scene", name: "The island from high above" },
+    { at: { seg: 1, offset: -0.3 }, action: "fade", to: 0, duration: 3.5, ease: "out" },
+    { at: { seg: 1 }, action: "camera", shot: "island", duration: 13, ease: "inOut", label: "slow descent toward the island" },
+
+    // "Near its center sat a research settlement of laboratories, homes, workshops..."
+    { at: { line: "It was almost eleven", phrase: "Near its center" }, action: "scene", name: "The settlement" },
+    { at: { line: "It was almost eleven", phrase: "Near its center", offset: -0.4 }, action: "opacity", target: "settlement", to: 1, duration: 2.6, ease: "inOut", label: "the settlement's lights come up" },
+    { at: { line: "It was almost eleven", phrase: "Near its center" }, action: "camera", shot: "approach", duration: 4.5, ease: "inOut", label: "push toward the settlement" },
+    ...["high-a", "high-b", "high-c", "high-d"].map((id) => ({ at: { line: "It was almost eleven", phrase: "Near its center", offset: 1 }, action: "opacity", target: id, to: 0, duration: 4, ease: "inOut" })),
+    // "... medical facilities, and other buildings supporting the nearly five hundred
+    //  people who lived there."
+    { at: { line: "It was almost eleven", phrase: "medical facilities" }, action: "camera", shot: "settlement", duration: 4.6, ease: "inOut", label: "closer over the town" },
+    ...["low-w", "low-e", "low-s"].map((id) => ({ at: { line: "It was almost eleven", phrase: "medical facilities" }, action: "opacity", target: id, to: 0, duration: 3, ease: "inOut" })),
+    { at: { line: "It was almost eleven", edge: "end", offset: -1.0 }, action: "fade", to: 1, duration: 1.0, ease: "in", label: "dip to black" },
+    { at: { cue: "ch01-005-lab-bed", offset: -0.05 }, action: "set", set: "lab", label: "cut to the lab" },
+
     // "Deep inside one of those laboratories, Dr. Jack Bennett was hard at work. Technically."
     { at: { cue: "ch01-005-lab-bed" }, action: "scene", name: "Lab · establishing" },
     { at: { cue: "ch01-005-lab-bed" }, action: "fade", to: 0, duration: 2.2, ease: "out" },

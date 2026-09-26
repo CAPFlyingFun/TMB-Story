@@ -1,6 +1,8 @@
-// Draws a scene state. One DOM layer per parallax plane, moved as a whole by one GPU
-// transform; each character is one element with a single transform. Nothing is laid out
-// per frame and nothing is re-rendered unless it changed.
+// Draws one SET of a scene -- a room, an island -- at a given state. One DOM layer per
+// depth plane, moved as a whole by one GPU transform; each character or object is one
+// element with a single transform. Nothing is laid out per frame and nothing is
+// re-rendered unless it changed. A scene with several sets gets one Stage per set, and
+// only the active one is drawn.
 
 import { frameShot, layerTransform } from "./camera.js";
 import { quadMatrix3d } from "./homography.js";
@@ -16,55 +18,83 @@ const IDLE = {
 const CROSSFADE = 0.14; // seconds, when a character turns or changes pose
 
 export class Stage {
-  constructor(root, scene, sprites, url) {
+  constructor(root, set, sprites, url, painters = {}) {
     this.root = root;
-    this.scene = scene;
-    this.world = { w: scene.world.width, h: scene.world.height };
-    this.sprites = sprites;
+    this.set = set;
+    const W = set.world;
+    this.world = { w: W.width, h: W.height };
     this.url = url;
-    const p = scene.world.perspective;
-    this.ppmK = p.ref.pxPerMeter / (p.ref.y - p.horizonY);
-    this.horizonY = p.horizonY;
-    this.layers = {};
-    for (const L of scene.world.layers) {
-      const el = document.createElement("div");
-      el.className = "layer";
-      el.style.width = this.world.w + "px";
-      el.style.height = this.world.h + "px";
-      el.style.zIndex = L.z || 0;
-      root.appendChild(el);
-      this.layers[L.id] = { el, parallax: L.parallax ?? 1 };
+    if (W.color) root.style.background = W.color; // fills past the layers: an open sea, a sky
+    const p = W.perspective;
+    if (p) {
+      this.ppmK = p.ref.pxPerMeter / (p.ref.y - p.horizonY);
+      this.horizonY = p.horizonY;
     }
-    const room = this.layers[scene.world.backgroundLayer || scene.world.layers[0].id].el;
+    this.layers = {};
+    for (const L of W.layers) {
+      const e = el("div", "layer", root);
+      e.style.width = this.world.w + "px";
+      e.style.height = this.world.h + "px";
+      e.style.zIndex = L.z || 0;
+      if (L.color) e.style.background = L.color;
+      this.layers[L.id] = { el: e, parallax: L.parallax ?? 1, zoomDepth: L.zoomDepth || 0 };
+    }
+    const base = this.layers[W.backgroundLayer || W.layers[0].id].el;
+    const r = W.backgroundRect || { x: 0, y: 0, w: this.world.w, h: this.world.h };
     const bg = document.createElement("img");
     bg.className = "bg";
-    bg.src = url(scene.world.background);
-    bg.width = this.world.w;
-    bg.height = this.world.h;
+    bg.src = url(W.background);
+    bg.width = r.w;
+    bg.height = r.h;
+    bg.style.left = r.x + "px";
+    bg.style.top = r.y + "px";
     bg.alt = "";
-    room.appendChild(bg);
-    this.grade = el("div", "grade", room);
-    if (scene.world.grade) this.grade.style.background = scene.world.grade;
+    base.appendChild(bg);
+    if (W.grade) {
+      this.grade = el("div", "grade", base);
+      this.grade.style.background = W.grade;
+    }
+
+    // Objects: sprites or procedurally painted canvases placed in world coordinates.
+    this.objects = {};
+    for (const o of set.objects || []) {
+      const layer = this.layers[o.layer || W.layers[0].id].el;
+      let node;
+      if (o.paint) {
+        node = document.createElement("canvas");
+        node.width = o.canvas ? o.canvas[0] : o.w;
+        node.height = o.canvas ? o.canvas[1] : o.h;
+        painters[o.paint](node, o);
+      } else {
+        node = document.createElement("img");
+        node.src = url(o.src);
+        node.alt = "";
+      }
+      node.className = "object";
+      Object.assign(node.style, { left: o.x - o.w / 2 + "px", top: o.y - o.h / 2 + "px", width: o.w + "px", height: o.h + "px", zIndex: o.z || 10 });
+      layer.appendChild(node);
+      this.objects[o.id] = { node, spec: o, shown: -1 };
+    }
 
     this.actors = {};
-    for (const [id, a] of Object.entries(scene.actors)) {
-      const wrap = el("div", "actor", this.layers[a.layer || "room"].el);
+    for (const [id, a] of Object.entries(set.actors || {})) {
+      const wrap = el("div", "actor", this.layers[a.layer || W.layers[0].id].el);
       const prev = el("img", "frame prev", wrap);
       const cur = el("img", "frame", wrap);
       prev.alt = cur.alt = "";
       this.actors[id] = { wrap, cur, prev, sprite: sprites[id], curSrc: "", prevSrc: "" };
     }
     this.lights = {};
-    for (const [id, l] of Object.entries(scene.lights || {})) {
-      const g = el("div", "light", room);
+    for (const [id, l] of Object.entries(set.lights || {})) {
+      const g = el("div", "light", base);
       g.style.left = l.x - l.radius + "px";
       g.style.top = l.y - l.radius + "px";
       g.style.width = g.style.height = 2 * l.radius + "px";
       this.lights[id] = { el: g, color: "" };
     }
     this.screens = {};
-    for (const [id, s] of Object.entries(scene.screens || {})) {
-      const host = el("div", "screen", room);
+    for (const [id, s] of Object.entries(set.screens || {})) {
+      const host = el("div", "screen", base);
       host.style.width = s.width + "px";
       host.style.height = s.height + "px";
       host.style.transform = quadMatrix3d(s.width, s.height, s.corners);
@@ -81,12 +111,24 @@ export class Stage {
     const cam = frameShot(shot, view, this.world);
     const sx = shot.shake ? shot.shake * 0.8 : 0, sy = shot.shake ? shot.shake * 0.5 : 0;
     for (const L of Object.values(this.layers)) {
-      const m = layerTransform(cam, this.world, L.parallax);
+      const m = layerTransform(cam, this.world, L.parallax, L.zoomDepth);
       L.el.style.transform = `translate3d(${(m.tx + sx).toFixed(2)}px,${(m.ty + sy).toFixed(2)}px,0) scale(${m.zoom.toFixed(5)})`;
     }
-    for (const [id, a] of Object.entries(state.actors)) this.drawActor(this.actors[id], a, state.t);
-    for (const [id, l] of Object.entries(state.lights)) this.drawLight(this.lights[id], l);
-    for (const [id, s] of Object.entries(state.screens)) this.drawScreen(this.screens[id], s, state.t);
+    for (const [id, node] of Object.entries(this.actors)) this.drawActor(node, state.actors[id], state.t);
+    for (const [id, node] of Object.entries(this.lights)) this.drawLight(node, state.lights[id]);
+    for (const [id, node] of Object.entries(this.screens)) this.drawScreen(node, state.screens[id], state.t);
+    for (const [id, node] of Object.entries(this.objects)) {
+      const o = state.objects[id];
+      const v = Math.round(Math.max(0, Math.min(1, o.opacity)) * 1000) / 1000;
+      if (v !== node.shown) {
+        node.node.style.opacity = v;
+        node.node.style.visibility = v > 0 ? "visible" : "hidden";
+        node.shown = v;
+      }
+      // A slow drift (clouds) is a function of time, so a seek puts it back exactly.
+      const d = node.spec.drift;
+      if (d && v > 0) node.node.style.transform = `translate3d(${(d[0] * state.t).toFixed(2)}px,${(d[1] * state.t).toFixed(2)}px,0)`;
+    }
     return cam;
   }
 

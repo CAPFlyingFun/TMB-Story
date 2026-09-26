@@ -25,16 +25,20 @@ export function frameShot(shot, view, world) {
   const bcx = box.x + box.w / 2, bcy = box.y + box.h / 2;
   cx = clamp(cx, bcx / zoom, world.w - (view.w - bcx) / zoom);
   cy = clamp(cy, bcy / zoom, world.h - (view.h - bcy) / zoom);
-  return { zoom, tx: bcx - cx * zoom, ty: bcy - cy * zoom, cx, cy };
+  return { zoom, tx: bcx - cx * zoom, ty: bcy - cy * zoom, cx, cy, bcx, bcy, cover };
 }
 
-// A layer with parallax p moves p times as far as the camera around the world's centre.
-// p = 1 is the room itself; a distant backdrop would be < 1, a foreground plant > 1.
-export function layerTransform(cam, world, p = 1) {
-  if (p === 1) return cam;
+// Depth for flat layers. A layer with parallax p pans p times as far as the camera around
+// the world's centre (p = 1 is the ground; clouds above it are > 1). zoomDepth makes a
+// layer also ZOOM faster than the ground as the camera pushes in, the way something
+// nearer the lens does: its scale is zoom * (zoom / cover) ^ zoomDepth, so at the widest
+// framing every layer lines up and they separate as the camera descends.
+export function layerTransform(cam, world, p = 1, zoomDepth = 0) {
+  if (p === 1 && !zoomDepth) return cam;
+  const zoom = cam.zoom * Math.pow(cam.zoom / cam.cover, zoomDepth);
   const cx = world.w / 2 + (cam.cx - world.w / 2) * p;
   const cy = world.h / 2 + (cam.cy - world.h / 2) * p;
-  return { zoom: cam.zoom, tx: cam.tx + (cam.cx - cx) * cam.zoom, ty: cam.ty + (cam.cy - cy) * cam.zoom };
+  return { zoom, tx: cam.bcx - cx * zoom, ty: cam.bcy - cy * zoom };
 }
 
 function clamp(v, lo, hi) {

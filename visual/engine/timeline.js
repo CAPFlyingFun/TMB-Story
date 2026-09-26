@@ -12,7 +12,14 @@
 //   { line: "...", edge: "end" }             end of it
 //   { cue: "ch01-011-second-chirp" }         when the drama mix plays that sound cue
 //   { seg: 7 }                               segment by order
+//   { line: "It was almost eleven", phrase: "Near its center" }
+//                                            partway through a long line, placed by the
+//                                            phrase's share of the line's characters
 // Any anchor takes `offset` in seconds; a line anchor takes `nth` when a line repeats.
+//
+// A scene is made of one or more SETS (the island, the lab), each with its own world,
+// shots and camera; `{ action: "set", set: "lab" }` cuts between them. A scene written
+// with a single `world` is one set called "main".
 
 export const EASE = {
   linear: (p) => p,
@@ -55,6 +62,13 @@ export function makeAnchors(manifest) {
     if (at.line !== undefined || at.seg !== undefined) {
       const s = at.line !== undefined ? lineSeg(at.line, at.nth) : byOrder.get(at.seg);
       if (!s) throw new Error(`timeline: no segment ${at.seg}`);
+      if (at.phrase !== undefined) {
+        // Narration runs at a nearly even pace, so a phrase's share of the characters is a
+        // good estimate of when it is spoken inside one long clip.
+        const i = norm(s.displayText).indexOf(norm(at.phrase));
+        if (i < 0) throw new Error(`timeline: "${at.phrase}" is not in the line "${s.displayText.slice(0, 40)}…"`);
+        return (s.startMs + ((s.endMs - s.startMs) * i) / norm(s.displayText).length) / 1000 + off;
+      }
       return (at.edge === "end" ? s.endMs : s.startMs) / 1000 + off;
     }
     if (at.cue !== undefined) {
@@ -139,25 +153,53 @@ const bump = (p) => Math.sin(Math.PI * p) * (1 - p * 0.35);
 
 const RESERVED = new Set(["sound", "parallax", "interaction"]); // named in the design, not built yet
 
+// A scene's sets, whichever way it was written.
+export function setsOf(scene) {
+  if (scene.sets) return scene.sets;
+  const { world, actors, screens, lights, objects, shots, camera } = scene;
+  return { main: { world, actors, screens, lights, objects, shots, camera } };
+}
+
 export function compileScene(scene, anchors) {
-  const shots = scene.shots || {};
-  const shotOf = (ev) => {
-    const r = ev.shot ? shots[ev.shot] : ev;
-    if (!r) throw new Error(`timeline: unknown shot "${ev.shot}"`);
+  const sets = setsOf(scene);
+  const setIds = Object.keys(sets);
+  const initialSet = scene.initialSet || setIds[0];
+  const all = (key) => Object.assign({}, ...setIds.map((id) => sets[id][key] || {}));
+  const shotSet = (ev) => {
+    if (ev.set) return ev.set;
+    if (ev.shot) {
+      const owner = setIds.find((id) => sets[id].shots && sets[id].shots[ev.shot]);
+      if (!owner) throw new Error(`timeline: unknown shot "${ev.shot}"`);
+      return owner;
+    }
+    return initialSet;
+  };
+  const shotOf = (ev, setId = shotSet(ev)) => {
+    const r = ev.shot ? sets[setId].shots[ev.shot] : ev;
+    if (!r) throw new Error(`timeline: unknown shot "${ev.shot}" in set "${setId}"`);
     return { x: r.x, y: r.y, w: r.w, h: r.h, fx: r.focus ? r.focus[0] : r.x + r.w / 2, fy: r.focus ? r.focus[1] : r.y + r.h / 2 };
   };
 
   const T = {
-    camera: new Cont(shotOf(scene.camera.initial)),
+    cameras: {},
+    set: new Step(initialSet),
     shakes: [],
     fade: new Cont({ v: scene.fadeFromBlack ? 1 : 0 }),
-    sceneName: new Step(scene.camera.name || ""),
+    sceneName: new Step((sets[initialSet].camera && sets[initialSet].camera.name) || ""),
+    titles: [],
     actors: {},
     screens: {},
     lights: {},
+    objects: {},
     log: [],
   };
-  for (const [id, a] of Object.entries(scene.actors || {})) {
+  for (const id of setIds) {
+    const W = sets[id].world;
+    const init = sets[id].camera ? sets[id].camera.initial : { x: 0, y: 0, w: W.width, h: W.height };
+    T.cameras[id] = new Cont(shotOf(init, id));
+  }
+  for (const o of setIds.flatMap((id) => sets[id].objects || [])) T.objects[o.id] = { opacity: new Cont({ v: o.opacity ?? 1 }) };
+  for (const [id, a] of Object.entries(all("actors"))) {
     T.actors[id] = {
       pos: new Cont({ x: a.x, y: a.y }),
       facing: new Step(a.facing),
@@ -167,10 +209,10 @@ export function compileScene(scene, anchors) {
       jolts: [],
     };
   }
-  for (const [id, s] of Object.entries(scene.screens || {})) {
+  for (const [id, s] of Object.entries(all("screens"))) {
     T.screens[id] = { state: new Step({ state: s.state, params: s.params || {} }), flashes: [] };
   }
-  for (const [id, l] of Object.entries(scene.lights || {})) {
+  for (const [id, l] of Object.entries(all("lights"))) {
     T.lights[id] = { level: new Cont({ i: l.intensity || 0 }), color: new Step(l.color), throb: new Step(l.throb || 0), pulses: [] };
   }
 
@@ -187,8 +229,21 @@ export function compileScene(scene, anchors) {
       return o;
     };
     switch (ev.action) {
-      case "camera":
-        T.camera.add(ev.t, dur, shotOf(ev), ease);
+      case "camera": {
+        const id = shotSet(ev);
+        T.cameras[id].add(ev.t, dur, shotOf(ev, id), ease);
+        break;
+      }
+      case "set":
+        if (!sets[ev.set]) throw new Error(`timeline: unknown set "${ev.set}"`);
+        T.set.add(ev.t, ev.set);
+        break;
+      case "opacity":
+        need("objects", ev.target).opacity.add(ev.t, dur, { v: ev.to }, ease);
+        break;
+      case "title":
+        // A title card over the picture: fades in, holds, fades out.
+        T.titles.push({ t: ev.t, dur: dur || 3, fadeIn: ev.fadeIn ?? 0.8, fadeOut: ev.fadeOut ?? 0.8, text: ev.text, sub: ev.sub || "" });
         break;
       case "shake":
         T.shakes.push({ t: ev.t, dur: dur || 0.35, amp: ev.amount ?? 4 });
@@ -247,11 +302,12 @@ export function compileScene(scene, anchors) {
         if (RESERVED.has(ev.action)) console.info(`timeline: "${ev.action}" is reserved and not implemented yet; skipped`);
         else console.warn(`timeline: unknown action "${ev.action}"; skipped`);
     }
-    T.log.push({ t: ev.t, label: ev.label || `${ev.action} ${ev.actor || ev.target || ev.shot || ev.name || ""}`.trim() });
+    T.log.push({ t: ev.t, label: ev.label || `${ev.action} ${ev.actor || ev.target || ev.shot || ev.set || ev.name || ev.text || ""}`.trim() });
   }
 
   function evaluate(t) {
-    const cam = T.camera.valueAt(t);
+    const set = T.set.at(t).v;
+    const cam = T.cameras[set].valueAt(t);
     const shake = T.shakes.length ? impulses(T.shakes, t, (p, dt) => Math.sin(dt * 2 * Math.PI * 17) * (1 - p)) : 0;
     const actors = {};
     for (const [id, a] of Object.entries(T.actors)) {
@@ -277,12 +333,20 @@ export function compileScene(scene, anchors) {
       const throb = hz.v ? 0.5 + 0.5 * Math.cos(2 * Math.PI * hz.v * (t - hz.since)) : 0;
       lights[id] = { intensity: l.level.valueAt(t).i, color: l.color.at(t).v, throb, throbbing: !!hz.v, pulse: impulses(l.pulses, t, bump) };
     }
+    const objects = {};
+    for (const [id, o] of Object.entries(T.objects)) objects[id] = { opacity: o.opacity.valueAt(t).v };
+    let title = null;
+    for (const c of T.titles) {
+      if (t < c.t || t > c.t + c.dur) continue;
+      const a = Math.min(1, (t - c.t) / c.fadeIn, (c.t + c.dur - t) / c.fadeOut);
+      title = { text: c.text, sub: c.sub, opacity: EASE.smooth(Math.max(0, a)) };
+    }
     let event = null;
     for (const e of T.log) {
       if (e.t <= t) event = e;
       else break;
     }
-    return { t, camera: { ...cam, shake }, fade: T.fade.valueAt(t).v, scene: T.sceneName.at(t).v, actors, screens, lights, event };
+    return { t, set, camera: { ...cam, shake }, fade: T.fade.valueAt(t).v, scene: T.sceneName.at(t).v, actors, screens, lights, objects, title, event };
   }
 
   return { evaluate, events: T.log };

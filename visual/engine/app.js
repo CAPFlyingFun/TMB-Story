@@ -2,7 +2,7 @@
 // then renders the scene at whatever time the audio clock says, every frame.
 
 import { AudioClock } from "./clock.js";
-import { makeAnchors, compileScene } from "./timeline.js";
+import { makeAnchors, compileScene, setsOf } from "./timeline.js";
 import { Stage } from "./stage.js";
 
 const SCENES = { "ch01-opening": () => import("../scenes/ch01-opening.js") };
@@ -60,20 +60,32 @@ async function boot() {
   const start = anchors.resolve(scene.range.start);
   const end = anchors.resolve(scene.range.end);
 
+  const sets = setsOf(scene);
   const sprites = {};
-  const preload = [url(scene.world.background)];
-  for (const [id, a] of Object.entries(scene.actors)) {
+  const preload = Object.values(sets).map((s) => url(s.world.background));
+  for (const s of Object.values(sets)) for (const o of s.objects || []) if (o.src) preload.push(url(o.src));
+  for (const [id, a] of Object.entries(Object.assign({}, ...Object.values(sets).map((s) => s.actors || {})))) {
     const rec = await (await fetch(url(a.sprite + "sprite.json"))).json();
     rec.base = a.sprite;
     sprites[id] = rec;
     for (const pose of Object.values(rec.poses)) for (const f of Object.values(pose.frames)) preload.push(url(a.sprite + f.file));
   }
-  gateMsg.textContent = "Loading the lab…";
+  gateMsg.textContent = "Loading…";
   await Promise.all(preload.map(loadImage));
 
   const audio = $("audio");
   const clock = new AudioClock(audio, { src: url(scene.audio), start, end, silent: q.has("silent") });
-  const stage = new Stage($("world"), scene, sprites, url);
+  // One stage per set; only the active one is shown and drawn.
+  const stages = {};
+  for (const [id, set] of Object.entries(sets)) {
+    const root = document.createElement("div");
+    root.className = "set";
+    root.dataset.set = id;
+    root.hidden = true;
+    $("world").appendChild(root);
+    stages[id] = new Stage(root, set, sprites, url, scene.painters || {});
+  }
+  let shownSet = null, titleShown = null;
 
   const beats = anchors.segments.map((s) => s.startMs / 1000).filter((t) => t >= start - 0.01 && t < end);
   let dirty = true, lastDebug = 0, showDebug = q.get("debug") === "1";
@@ -214,7 +226,19 @@ async function boot() {
     }
     if (clock.playing || dirty) {
       const st = timeline.evaluate(t);
-      const cam = stage.render(st, view());
+      if (st.set !== shownSet) {
+        if (shownSet) stages[shownSet].root.hidden = true;
+        stages[st.set].root.hidden = false;
+        shownSet = st.set;
+      }
+      const cam = stages[st.set].render(st, view());
+      const tkey = st.title ? st.title.text + "|" + st.title.sub : "";
+      if (tkey !== titleShown) {
+        titleShown = tkey;
+        $("title").innerHTML = st.title ? `<span class="t">${esc(st.title.text)}</span>${st.title.sub ? `<span class="s">${esc(st.title.sub)}</span>` : ""}` : "";
+        $("title").hidden = !st.title;
+      }
+      if (st.title) $("title").style.opacity = st.title.opacity.toFixed(3);
       $("fader").style.opacity = st.fade.toFixed(3);
       $("loading").hidden = !(clock.playing && clock.waiting);
       drawCaption(t);
@@ -223,11 +247,12 @@ async function boot() {
       if (showDebug && (now - lastDebug > 120 || !clock.playing)) {
         lastDebug = now;
         const j = st.actors.jack, line = anchors.lineAt(t);
+        const who = j && st.set === "lab" ? `${j.pose.v} · ${j.facing.v} · ${j.state.v} · x${j.x.toFixed(0)} y${j.y.toFixed(0)}` : "—";
         $("debug").textContent =
           `audio   ${fmt(t)}  (chapter)   scene ${fmt(t - start)}\n` +
-          `scene   ${st.scene}\n` +
+          `scene   ${st.scene}   [set ${st.set}]\n` +
           `event   ${st.event ? st.event.label + "  @" + st.event.t.toFixed(2) : "—"}\n` +
-          `jack    ${j.pose.v} · ${j.facing.v} · ${j.state.v} · x${j.x.toFixed(0)} y${j.y.toFixed(0)}\n` +
+          `jack    ${who}\n` +
           `camera  ${cam.zoom.toFixed(2)}x · centre ${cam.cx.toFixed(0)},${cam.cy.toFixed(0)}\n` +
           `line    ${line ? `[${line.speakerName || line.speaker}] ${line.displayText.slice(0, 70)}${line.displayText.length > 70 ? "…" : ""}` : "—"}\n` +
           `media   ready ${audio.readyState} \u00b7 ${audio.paused ? "paused" : "running"}${audio.seeking ? " \u00b7 seeking" : ""} \u00b7 at ${audio.currentTime.toFixed(1)}\n` +

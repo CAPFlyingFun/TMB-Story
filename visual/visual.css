@@ -5,7 +5,10 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #e8e2d8;
 }
 #stage { position: fixed; inset: 0; overflow: hidden; background: #000; }
-#world { position: absolute; inset: 0; }
+#world { position: absolute; inset: 0; z-index: 0; } /* its own stacking context: nothing in a set can rise above the fader or the title */
+.set { position: absolute; inset: 0; overflow: hidden; }
+.set[hidden] { display: none; }
+.object { position: absolute; display: block; max-width: none; pointer-events: none; }
 .layer { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
 .bg { position: absolute; left: 0; top: 0; display: block; max-width: none; }
 .grade { position: absolute; inset: 0; z-index: 5000; pointer-events: none; }
@@ -87,3 +90,12 @@ body.ui-hidden #captions { bottom: calc(env(safe-area-inset-bottom) + 22px); }
 @media (max-height: 460px) { #captions { bottom: calc(env(safe-area-inset-bottom) + 86px); font-size: 14px; max-width: min(80vw, 640px); padding: 4px 10px; } }
 #cc { font-weight: 700; letter-spacing: .04em; }
 #cc[aria-pressed="true"] { background: #f5ede4; color: #12100e; border-color: #f5ede4; }
+
+/* ---------- title card (the date over black) ---------- */
+#title {
+  position: absolute; inset: 0; z-index: 8; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  pointer-events: none; text-align: center; color: #efe6d6; text-shadow: 0 2px 18px rgba(0,0,0,.9);
+}
+#title[hidden] { display: none; }
+#title .t { font: 400 clamp(26px, 3.2vw + 12px, 54px)/1.1 Georgia, "Times New Roman", serif; letter-spacing: .14em; }
+#title .s { margin-top: 12px; font: 600 clamp(11px, .6vw + 8px, 15px)/1 system-ui, -apple-system, sans-serif; letter-spacing: .32em; text-transform: uppercase; color: #d4a853; }
