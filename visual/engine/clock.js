@@ -9,18 +9,27 @@
 // iOS RULES, learned from the reader, which plays this same file on Joshua's phone:
 //  - Nothing loads until a tap. A seek issued before the metadata is in is dropped, so the
 //    position is (re)applied on loadedmetadata and again once playback is running.
-//  - iOS pauses the element for a moment around a seek or while it buffers. The element's
-//    `pause` event is therefore NOT taken as the user stopping the scene unless it lasts;
-//    a transient one is resumed. Treating every pause as final is what froze the first
-//    build at 0:00.3.
+//  - iOS pauses the element on its own -- around a load, a seek, a gap in the data on LTE.
+//    So while the page is on screen the element's `pause` event never stops the scene:
+//    only the scene's own buttons (and the lock-screen / Dynamic Island controls, routed
+//    to them through Media Session) do, and a stray pause is resumed. A pause while the
+//    page is HIDDEN (locked, switched away) is followed. The first build took every pause
+//    as final and froze at 0:00.3; the second trusted pauses after a 2.5 s window, which a
+//    cold start on LTE outlasts, and froze at 0:00.7 on Joshua's phone.
 //  - While the audio is not actually advancing (buffering, a seek in flight) the scene
 //    waits for it rather than running ahead: never more than 0.35 s past what is heard.
+//  - The FIRST start carries its position in the URL (a media fragment, `#t=28.47`), so
+//    the browser begins loading at the lab instead of loading 0:00 and then seeking.
+//  - A seek in flight is never interrupted. The second build nudged every second, and on
+//    a slow connection a seek into an mp3 that has not downloaded takes longer than that,
+//    so each nudge restarted it: frozen at 0:00.3 on a cold start, fine once cached.
 
-const GUARD_MS = 2500; // after a play or a seek, a pause is presumed to be iOS, not the user
+const LOGGED = ["loadedmetadata", "canplay", "play", "playing", "pause", "waiting", "stalled", "seeking", "seeked", "error"];
 
 export class AudioClock {
-  constructor(audio, { start, end, silent = false }) {
+  constructor(audio, { src, start, end, silent = false }) {
     this.audio = audio;
+    this.src = src;
     this.start = start;
     this.end = end;
     this.virtual = silent;
@@ -33,13 +42,17 @@ export class AudioClock {
     this._lastAudio = -1;
     this._seekTarget = null;
     this._seekPerf = 0;
-    this._guardUntil = 0;
+    this.log = []; // the last few media events, for the debug panel
     this._lastReseek = 0;
+    this._lastKick = 0;
 
     audio.addEventListener("loadedmetadata", () => {
-      if (this._seekTarget !== null) this._applySeek(this._seekTarget);
+      if (this._seekTarget !== null && Math.abs(audio.currentTime - this._seekTarget) > 0.5) this._applySeek(this._seekTarget);
     });
     audio.addEventListener("seeked", () => {
+      // The jump is done. From here the scene follows whatever the audio plays.
+      this._seekTarget = null;
+      this._lastAudio = -1;
       if (this.playing && !this.virtual && audio.paused) this._resume();
     });
     audio.addEventListener("playing", () => {
@@ -47,14 +60,15 @@ export class AudioClock {
     });
     audio.addEventListener("pause", () => {
       if (!this.playing || this.virtual || this._pausing) return;
-      if (audio.seeking || performance.now() < this._guardUntil) {
-        this._resume();
-        return;
-      }
-      // A pause that is not ours and not a seek: a phone call, headphones out, the
-      // lock screen. Follow it.
-      this.pause();
+      if (document.hidden) this.pause(); // locked or switched away: follow it
+      else this._resume(); // on screen: iOS's own pause, not the listener's
     });
+    for (const type of LOGGED) {
+      audio.addEventListener(type, () => {
+        this.log.push(`${type}@${audio.currentTime.toFixed(1)}`);
+        if (this.log.length > 6) this.log.shift();
+      });
+    }
   }
 
   now() {
@@ -65,17 +79,27 @@ export class AudioClock {
       t = this._base + (p - this._basePerf) / 1000;
     } else {
       const a = this.audio, at = a.currentTime;
-      const seekPending = this._seekTarget !== null && Math.abs(at - this._seekTarget) > 0.5;
-      if (seekPending || at < this.start - 0.5 || at > this.end + 1) {
-        // The element is not where the scene is yet. Hold still, and nudge it again
-        // once a second in case the browser dropped the seek.
-        if (p - this._lastReseek > 1000) {
+      // Hold the scene only while the audio is genuinely not there yet: a seek in flight
+      // (the browser's own flag), the first 0.4 s after we asked for one (before the flag
+      // is up), or the audio sitting outside the scene altogether. The third build also
+      // held while the audio was "more than 0.5 s from where we sent it" -- which never
+      // cleared if the audio arrived and played on between two checks, so on LTE the
+      // picture froze at 0:00.7 while the narration carried on, and the clock kept
+      // yanking the audio back. Distance from a target is not a signal; `seeking` is.
+      const outside = at < this.start - 0.5 || at > this.end + 1;
+      const justAsked = this._seekTarget !== null && p - this._seekPerf < 400;
+      if (a.seeking || justAsked || outside) {
+        // Re-issue a seek only when the audio is outside the scene with nothing in flight
+        // (the browser dropped it), and no more than every 3 s.
+        if (outside && !a.seeking && a.readyState >= 1 && p - this._seekPerf > 1500 && p - this._lastReseek > 3000) {
           this._lastReseek = p;
-          this._applySeek(this._seekTarget ?? this._t);
+          this._applySeek(this._t);
         }
+        this._kick(p);
         this.waiting = true;
         return this._t;
       }
+      this._kick(p);
       this._seekTarget = null;
       if (at !== this._lastAudio) {
         this._lastAudio = at;
@@ -103,14 +127,18 @@ export class AudioClock {
     this.playing = true;
     if (this.virtual) return true;
     const a = this.audio;
-    this._guardUntil = performance.now() + GUARD_MS;
-    // Inside the tap: start loading now (iOS ignores preload), and queue the position so
-    // loadedmetadata applies it.
-    if (a.readyState === 0) a.load();
-    this._applySeek(this._t);
+    if (a.readyState === 0) {
+      // Inside the tap, and the first time only: load the file starting AT the scene
+      // (iOS ignores preload), instead of loading 0:00 and seeking into it.
+      a.src = this.src + "#t=" + this._t.toFixed(2);
+      a.load();
+      this._seekTarget = this._t;
+      this._seekPerf = performance.now();
+    } else if (Math.abs(a.currentTime - this._t) > 0.3) {
+      this._applySeek(this._t);
+    }
     try {
       await a.play();
-      if (Math.abs(a.currentTime - this._t) > 0.3) this._applySeek(this._t);
       return true;
     } catch (err) {
       if (err && err.name === "AbortError") return true; // superseded by a later play or load
@@ -140,18 +168,26 @@ export class AudioClock {
     this._basePerf = performance.now();
     this._lastAudio = -1;
     if (this.virtual) return;
-    this._guardUntil = performance.now() + GUARD_MS;
     this._applySeek(t);
   }
 
   _applySeek(t) {
     this._seekTarget = t;
     this._seekPerf = performance.now();
-    this._guardUntil = Math.max(this._guardUntil, this._seekPerf + GUARD_MS);
     try {
       if (this.audio.readyState > 0) this.audio.currentTime = t;
     } catch (e) {
       /* not loaded yet; loadedmetadata applies it */
+    }
+  }
+
+  // Playing, but the element sits paused and is not seeking: iOS left it there (an
+  // aborted play, an interruption inside the guard). Press play again, at most every 1.5 s.
+  _kick(p) {
+    const a = this.audio;
+    if (this.playing && a.paused && !a.seeking && !this._pausing && p - this._lastKick > 1500) {
+      this._lastKick = p;
+      this._resume();
     }
   }
 

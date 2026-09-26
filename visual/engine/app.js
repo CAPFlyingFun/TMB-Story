@@ -45,8 +45,7 @@ async function boot() {
   await Promise.all(preload.map(loadImage));
 
   const audio = $("audio");
-  audio.src = url(scene.audio);
-  const clock = new AudioClock(audio, { start, end, silent: q.has("silent") });
+  const clock = new AudioClock(audio, { src: url(scene.audio), start, end, silent: q.has("silent") });
   const stage = new Stage($("world"), scene, sprites, url);
 
   const beats = anchors.segments.map((s) => s.startMs / 1000).filter((t) => t >= start - 0.01 && t < end);
@@ -81,6 +80,18 @@ async function boot() {
     clock.seek(t);
     $("endcard").hidden = true;
     dirty = true;
+  }
+
+  // The lock screen and the Dynamic Island drive the same play and pause as the buttons,
+  // so pausing from there is a real pause rather than one the clock resumes.
+  if ("mediaSession" in navigator) {
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({ title: scene.title, artist: "TRADDOMIUM: Micro Battle!" });
+      navigator.mediaSession.setActionHandler("play", () => play());
+      navigator.mediaSession.setActionHandler("pause", () => pause());
+    } catch (e) {
+      /* older browsers: the buttons still work */
+    }
   }
 
   $("start").onclick = play;
@@ -132,6 +143,7 @@ async function boot() {
       const st = timeline.evaluate(t);
       const cam = stage.render(st, view());
       $("fader").style.opacity = st.fade.toFixed(3);
+      $("loading").hidden = !(clock.playing && clock.waiting);
       if (document.activeElement !== scrub) scrub.value = Math.round(((t - start) / (end - start)) * 1000);
       $("clock").textContent = `${fmt(t - start)} / ${fmt(end - start)}`;
       if (showDebug && (now - lastDebug > 120 || !clock.playing)) {
@@ -144,6 +156,8 @@ async function boot() {
           `jack    ${j.pose.v} · ${j.facing.v} · ${j.state.v} · x${j.x.toFixed(0)} y${j.y.toFixed(0)}\n` +
           `camera  ${cam.zoom.toFixed(2)}x · centre ${cam.cx.toFixed(0)},${cam.cy.toFixed(0)}\n` +
           `line    ${line ? `[${line.speakerName || line.speaker}] ${line.displayText.slice(0, 70)}${line.displayText.length > 70 ? "…" : ""}` : "—"}\n` +
+          `media   ready ${audio.readyState} \u00b7 ${audio.paused ? "paused" : "running"}${audio.seeking ? " \u00b7 seeking" : ""} \u00b7 at ${audio.currentTime.toFixed(1)}\n` +
+          `events  ${clock.log.join(" ") || "\u2014"}\n` +
           `clock   ${clock.playing ? (clock.waiting ? "waiting for audio\u2026" : "playing") : "paused"}${clock.virtual ? " · SILENT (no audio)" : ""}`;
       }
       dirty = false;
