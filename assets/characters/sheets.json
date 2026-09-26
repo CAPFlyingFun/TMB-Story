@@ -117,30 +117,33 @@
     "lena": {
       "sheet": "assets/source/lena-sheet.png",
       "heightM": 1.68,
-      "_notes": "Lena Ortiz, night-shift power technician (Ch 2-5). Height is game tuning, not canon. CANON CONFLICT: Chapter 5 has her 'still in her orange utility jacket'; this sheet draws a white lab coat.",
+      "_notes": "Lena Ortiz, night-shift power technician (Ch 2-5), in her orange utility jacket (Ch 5). Height is game tuning, not canon. Sheet redrawn 2026-09-26; this one runs the opposite way round to Mark's (column 3 faces screen left).",
       "standing": {
         "south": 1,
-        "southeast": 2,
-        "east": 3,
-        "northeast": 4,
-        "north": 5,
-        "northwest": 6,
-        "west": 7,
-        "southwest": 8
-      },
-      "sitting": {
-        "south": 1,
-        "southeast": 2,
+        "southwest": 2,
         "west": 3,
         "northwest": 4,
         "north": 5,
         "northeast": 6,
-        "southwest": 8,
-        "east": {
-          "mirror": "west"
+        "east": 7,
+        "southeast": 8
+      },
+      "sitting": {
+        "south": 1,
+        "southwest": 2,
+        "east": 3,
+        "northeast": 4,
+        "north": 5,
+        "northwest": 6,
+        "west": {
+          "mirror": "east"
+        },
+        "southeast": {
+          "mirror": "southwest"
         },
         "_unused": {
-          "7": "a second west, face turned toward the camera"
+          "7": "a second east",
+          "8": "a second southwest, face toward the camera"
         }
       },
       "sittingHeightRatio": 0.72

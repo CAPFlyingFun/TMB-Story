@@ -5,16 +5,16 @@
   "poses": {
     "standing": {
       "canvas": [
-        172,
-        482
+        195,
+        544
       ],
       "anchor": [
-        86.0,
-        476
+        97.5,
+        538
       ],
-      "figureHeightPx": 467.5,
+      "figureHeightPx": 528.5,
       "heightM": 1.68,
-      "pxPerMeter": 278.27,
+      "pxPerMeter": 314.58,
       "frames": {
         "south": {
           "file": "standing/south.png",
@@ -22,15 +22,15 @@
         },
         "southwest": {
           "file": "standing/southwest.png",
-          "sourceColumn": 8
+          "sourceColumn": 2
         },
         "west": {
           "file": "standing/west.png",
-          "sourceColumn": 7
+          "sourceColumn": 3
         },
         "northwest": {
           "file": "standing/northwest.png",
-          "sourceColumn": 6
+          "sourceColumn": 4
         },
         "north": {
           "file": "standing/north.png",
@@ -38,30 +38,30 @@
         },
         "northeast": {
           "file": "standing/northeast.png",
-          "sourceColumn": 4
+          "sourceColumn": 6
         },
         "east": {
           "file": "standing/east.png",
-          "sourceColumn": 3
+          "sourceColumn": 7
         },
         "southeast": {
           "file": "standing/southeast.png",
-          "sourceColumn": 2
+          "sourceColumn": 8
         }
       }
     },
     "sitting": {
       "canvas": [
-        260,
-        348
+        252,
+        314
       ],
       "anchor": [
-        130.0,
-        342
+        126.0,
+        308
       ],
-      "figureHeightPx": 322.0,
+      "figureHeightPx": 286.5,
       "heightM": 1.21,
-      "pxPerMeter": 266.2,
+      "pxPerMeter": 236.86,
       "frames": {
         "south": {
           "file": "sitting/south.png",
@@ -69,15 +69,15 @@
         },
         "southwest": {
           "file": "sitting/southwest.png",
-          "sourceColumn": 8
+          "sourceColumn": 2
         },
         "west": {
           "file": "sitting/west.png",
-          "sourceColumn": 3
+          "mirrorOf": "east"
         },
         "northwest": {
           "file": "sitting/northwest.png",
-          "sourceColumn": 4
+          "sourceColumn": 6
         },
         "north": {
           "file": "sitting/north.png",
@@ -85,15 +85,15 @@
         },
         "northeast": {
           "file": "sitting/northeast.png",
-          "sourceColumn": 6
+          "sourceColumn": 4
         },
         "east": {
           "file": "sitting/east.png",
-          "mirrorOf": "west"
+          "sourceColumn": 3
         },
         "southeast": {
           "file": "sitting/southeast.png",
-          "sourceColumn": 2
+          "mirrorOf": "southwest"
         }
       }
     }
