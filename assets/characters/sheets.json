@@ -87,6 +87,63 @@
         }
       },
       "sittingHeightRatio": 0.72
+    },
+    "mark": {
+      "sheet": "assets/source/mark-sheet.png",
+      "heightM": 1.83,
+      "_notes": "Mark Jones, perimeter security (Ch 4-5). Height is game tuning, not canon. Both rows are complete rotations.",
+      "standing": {
+        "south": 1,
+        "southeast": 2,
+        "east": 3,
+        "northeast": 4,
+        "north": 5,
+        "northwest": 6,
+        "west": 7,
+        "southwest": 8
+      },
+      "sitting": {
+        "south": 1,
+        "southeast": 2,
+        "east": 3,
+        "northeast": 4,
+        "north": 5,
+        "northwest": 6,
+        "west": 7,
+        "southwest": 8
+      },
+      "sittingHeightRatio": 0.72
+    },
+    "lena": {
+      "sheet": "assets/source/lena-sheet.png",
+      "heightM": 1.68,
+      "_notes": "Lena Ortiz, night-shift power technician (Ch 2-5). Height is game tuning, not canon. CANON CONFLICT: Chapter 5 has her 'still in her orange utility jacket'; this sheet draws a white lab coat.",
+      "standing": {
+        "south": 1,
+        "southeast": 2,
+        "east": 3,
+        "northeast": 4,
+        "north": 5,
+        "northwest": 6,
+        "west": 7,
+        "southwest": 8
+      },
+      "sitting": {
+        "south": 1,
+        "southeast": 2,
+        "west": 3,
+        "northwest": 4,
+        "north": 5,
+        "northeast": 6,
+        "southwest": 8,
+        "east": {
+          "mirror": "west"
+        },
+        "_unused": {
+          "7": "a second west, face turned toward the camera"
+        }
+      },
+      "sittingHeightRatio": 0.72
     }
   }
 }

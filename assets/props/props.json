@@ -1,0 +1,439 @@
+{
+ "source": "assets/source/props-sheet.png",
+ "props": {
+  "comms-building": {
+   "file": "comms-building.png",
+   "size": [
+    206,
+    306
+   ],
+   "anchor": [
+    103.0,
+    302.0
+   ],
+   "heightM": 14,
+   "pxPerMeter": 21.29,
+   "what": "a research building with a dish and masts on the roof"
+  },
+  "comms-buildings-pair": {
+   "file": "comms-buildings-pair.png",
+   "size": [
+    271,
+    318
+   ],
+   "anchor": [
+    135.5,
+    314.0
+   ],
+   "heightM": 16,
+   "pxPerMeter": 19.38,
+   "what": "two research buildings, joined in the art"
+  },
+  "suv-front-quarter": {
+   "file": "suv-front-quarter.png",
+   "size": [
+    188,
+    161
+   ],
+   "anchor": [
+    94.0,
+    157.0
+   ],
+   "heightM": 1.95,
+   "pxPerMeter": 78.46,
+   "what": "white expedition SUV, three-quarter front: Mark's utility vehicle (Ch 5)"
+  },
+  "suv-rear": {
+   "file": "suv-rear.png",
+   "size": [
+    165,
+    153
+   ],
+   "anchor": [
+    82.5,
+    149.0
+   ],
+   "heightM": 1.95,
+   "pxPerMeter": 74.36,
+   "what": "the same SUV from behind"
+  },
+  "suv-front": {
+   "file": "suv-front.png",
+   "size": [
+    151,
+    162
+   ],
+   "anchor": [
+    75.5,
+    158.0
+   ],
+   "heightM": 1.95,
+   "pxPerMeter": 78.97,
+   "what": "the same SUV head-on"
+  },
+  "satellite-dish": {
+   "file": "satellite-dish.png",
+   "size": [
+    143,
+    238
+   ],
+   "anchor": [
+    71.5,
+    234.0
+   ],
+   "heightM": 8,
+   "pxPerMeter": 28.75,
+   "what": "a dish on a concrete plinth"
+  },
+  "security-gate": {
+   "file": "security-gate.png",
+   "size": [
+    172,
+    172
+   ],
+   "anchor": [
+    86.0,
+    168.0
+   ],
+   "heightM": 2.4,
+   "pxPerMeter": 68.33,
+   "what": "a mesh security gate"
+  },
+  "cell-tower": {
+   "file": "cell-tower.png",
+   "size": [
+    88,
+    301
+   ],
+   "anchor": [
+    44.0,
+    297.0
+   ],
+   "heightM": 25,
+   "pxPerMeter": 11.72,
+   "what": "a lattice mast with antennas"
+  },
+  "floodlight": {
+   "file": "floodlight.png",
+   "size": [
+    144,
+    262
+   ],
+   "anchor": [
+    72.0,
+    258.0
+   ],
+   "heightM": 6,
+   "pxPerMeter": 42.33,
+   "what": "a twin floodlight on a pole"
+  },
+  "generator": {
+   "file": "generator.png",
+   "size": [
+    223,
+    163
+   ],
+   "anchor": [
+    111.5,
+    159.0
+   ],
+   "heightM": 2.2,
+   "pxPerMeter": 70.45,
+   "what": "a containerised generator"
+  },
+  "hard-case": {
+   "file": "hard-case.png",
+   "size": [
+    160,
+    137
+   ],
+   "anchor": [
+    80.0,
+    133.0
+   ],
+   "heightM": 0.6,
+   "pxPerMeter": 215.0,
+   "what": "a grey equipment case"
+  },
+  "wooden-crate": {
+   "file": "wooden-crate.png",
+   "size": [
+    159,
+    145
+   ],
+   "anchor": [
+    79.5,
+    141.0
+   ],
+   "heightM": 1.0,
+   "pxPerMeter": 137.0,
+   "what": "a wooden crate"
+  },
+  "cases-stacked": {
+   "file": "cases-stacked.png",
+   "size": [
+    146,
+    177
+   ],
+   "anchor": [
+    73.0,
+    173.0
+   ],
+   "heightM": 1.1,
+   "pxPerMeter": 153.64,
+   "what": "two green equipment cases, stacked"
+  },
+  "pallet": {
+   "file": "pallet.png",
+   "size": [
+    177,
+    122
+   ],
+   "anchor": [
+    88.5,
+    118.0
+   ],
+   "heightM": 0.35,
+   "pxPerMeter": 325.71,
+   "what": "a wooden pallet"
+  },
+  "barrels": {
+   "file": "barrels.png",
+   "size": [
+    142,
+    150
+   ],
+   "anchor": [
+    71.0,
+    146.0
+   ],
+   "heightM": 0.9,
+   "pxPerMeter": 157.78,
+   "what": "a blue and a red drum"
+  },
+  "ac-unit": {
+   "file": "ac-unit.png",
+   "size": [
+    164,
+    158
+   ],
+   "anchor": [
+    82.0,
+    154.0
+   ],
+   "heightM": 0.9,
+   "pxPerMeter": 166.67,
+   "what": "an air-conditioner condenser"
+  },
+  "field-laptop": {
+   "file": "field-laptop.png",
+   "size": [
+    166,
+    198
+   ],
+   "anchor": [
+    83.0,
+    194.0
+   ],
+   "heightM": 1.0,
+   "pxPerMeter": 190.0,
+   "what": "a laptop and radio on a rugged case"
+  },
+  "electrical-cabinet": {
+   "file": "electrical-cabinet.png",
+   "size": [
+    158,
+    169
+   ],
+   "anchor": [
+    79.0,
+    165.0
+   ],
+   "heightM": 1.4,
+   "pxPerMeter": 115.0,
+   "what": "a high-voltage cabinet"
+  },
+  "jersey-barrier": {
+   "file": "jersey-barrier.png",
+   "size": [
+    204,
+    125
+   ],
+   "anchor": [
+    102.0,
+    121.0
+   ],
+   "heightM": 0.8,
+   "pxPerMeter": 146.25,
+   "what": "a striped concrete barrier"
+  },
+  "traffic-cone": {
+   "file": "traffic-cone.png",
+   "size": [
+    113,
+    156
+   ],
+   "anchor": [
+    56.5,
+    152.0
+   ],
+   "heightM": 0.7,
+   "pxPerMeter": 211.43,
+   "what": "a traffic cone"
+  },
+  "cable-reel": {
+   "file": "cable-reel.png",
+   "size": [
+    146,
+    147
+   ],
+   "anchor": [
+    73.0,
+    143.0
+   ],
+   "heightM": 0.9,
+   "pxPerMeter": 154.44,
+   "what": "a cable reel"
+  },
+  "concrete-blocks": {
+   "file": "concrete-blocks.png",
+   "size": [
+    157,
+    171
+   ],
+   "anchor": [
+    78.5,
+    167.0
+   ],
+   "heightM": 1.2,
+   "pxPerMeter": 135.83,
+   "what": "two stacked concrete blocks"
+  },
+  "security-camera-pole": {
+   "file": "security-camera-pole.png",
+   "size": [
+    91,
+    246
+   ],
+   "anchor": [
+    45.5,
+    242.0
+   ],
+   "heightM": 3.5,
+   "pxPerMeter": 68.0,
+   "what": "a security camera on a post: the perimeter cameras"
+  },
+  "palm-tree": {
+   "file": "palm-tree.png",
+   "size": [
+    186,
+    256
+   ],
+   "anchor": [
+    93.0,
+    252.0
+   ],
+   "heightM": 8,
+   "pxPerMeter": 31.0,
+   "what": "a coconut palm"
+  },
+  "tree": {
+   "file": "tree.png",
+   "size": [
+    201,
+    218
+   ],
+   "anchor": [
+    100.5,
+    214.0
+   ],
+   "heightM": 6,
+   "pxPerMeter": 35.0,
+   "what": "a broad-leaf tree"
+  },
+  "hibiscus-bush": {
+   "file": "hibiscus-bush.png",
+   "size": [
+    170,
+    164
+   ],
+   "anchor": [
+    85.0,
+    160.0
+   ],
+   "heightM": 1.2,
+   "pxPerMeter": 130.0,
+   "what": "a flowering bush"
+  },
+  "banana-plant": {
+   "file": "banana-plant.png",
+   "size": [
+    168,
+    209
+   ],
+   "anchor": [
+    84.0,
+    205.0
+   ],
+   "heightM": 2.2,
+   "pxPerMeter": 91.36,
+   "what": "a banana plant"
+  },
+  "grass-clump": {
+   "file": "grass-clump.png",
+   "size": [
+    149,
+    180
+   ],
+   "anchor": [
+    74.5,
+    176.0
+   ],
+   "heightM": 1.0,
+   "pxPerMeter": 172.0,
+   "what": "a clump of tall grass"
+  },
+  "heliconia": {
+   "file": "heliconia.png",
+   "size": [
+    168,
+    154
+   ],
+   "anchor": [
+    84.0,
+    150.0
+   ],
+   "heightM": 1.2,
+   "pxPerMeter": 121.67,
+   "what": "red heliconia"
+  },
+  "boulder": {
+   "file": "boulder.png",
+   "size": [
+    165,
+    180
+   ],
+   "anchor": [
+    82.5,
+    176.0
+   ],
+   "heightM": 1.5,
+   "pxPerMeter": 114.67,
+   "what": "a mossy boulder"
+  },
+  "rock-outcrop": {
+   "file": "rock-outcrop.png",
+   "size": [
+    172,
+    192
+   ],
+   "anchor": [
+    86.0,
+    188.0
+   ],
+   "heightM": 2.5,
+   "pxPerMeter": 73.6,
+   "what": "a mossy rock outcrop"
+  }
+ }
+}

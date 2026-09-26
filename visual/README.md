@@ -24,6 +24,7 @@ line; the voice-only export is not indexable.
 | `paint/island.js` | procedural paint: the settlement's lights, drawn once into a canvas |
 | `scenes/ch01-opening.js` | the scene: sets, actors, objects, shots and events — data only |
 | `../scripts/split-sprites.py` | turns a character sheet into per-direction PNGs (`assets/characters/`) |
+| `../scripts/split-props.py` | cuts the props sheet into one PNG per object with a real height (`assets/props/props.json`), ready to place as `objects` |
 | `../scripts/make-island-art.py` | grades the Beyond Extinction island to moonlight, caps its volcano with cloud, and makes the cloud wisps |
 
 ## Writing a scene

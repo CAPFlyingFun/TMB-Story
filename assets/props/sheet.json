@@ -1,0 +1,352 @@
+{
+ "_comment": [
+  "Input for scripts/split-props.py. Each prop is the largest piece of artwork inside its `box`",
+  "([x, y, w, h] on the sheet). heightM is the real height of the object drawn -- GAME TUNING, estimated",
+  "from what it is, so props stand at a believable size beside the characters; correct any here and",
+  "re-run. The SUV is Mark's utility vehicle; the security camera post is the perimeter cameras."
+ ],
+ "sheet": "assets/source/props-sheet.png",
+ "props": [
+  {
+   "name": "comms-building",
+   "box": [
+    3,
+    99,
+    192,
+    292
+   ],
+   "heightM": 14,
+   "what": "a research building with a dish and masts on the roof"
+  },
+  {
+   "name": "comms-buildings-pair",
+   "box": [
+    198,
+    90,
+    257,
+    304
+   ],
+   "heightM": 16,
+   "what": "two research buildings, joined in the art"
+  },
+  {
+   "name": "suv-front-quarter",
+   "box": [
+    457,
+    241,
+    174,
+    147
+   ],
+   "heightM": 1.95,
+   "what": "white expedition SUV, three-quarter front: Mark's utility vehicle (Ch 5)"
+  },
+  {
+   "name": "suv-rear",
+   "box": [
+    635,
+    247,
+    151,
+    140
+   ],
+   "heightM": 1.95,
+   "what": "the same SUV from behind"
+  },
+  {
+   "name": "suv-front",
+   "box": [
+    799,
+    239,
+    137,
+    148
+   ],
+   "heightM": 1.95,
+   "what": "the same SUV head-on"
+  },
+  {
+   "name": "satellite-dish",
+   "box": [
+    947,
+    166,
+    129,
+    224
+   ],
+   "heightM": 8,
+   "what": "a dish on a concrete plinth"
+  },
+  {
+   "name": "security-gate",
+   "box": [
+    1088,
+    233,
+    158,
+    158
+   ],
+   "heightM": 2.4,
+   "what": "a mesh security gate"
+  },
+  {
+   "name": "cell-tower",
+   "box": [
+    38,
+    430,
+    74,
+    287
+   ],
+   "heightM": 25,
+   "what": "a lattice mast with antennas"
+  },
+  {
+   "name": "floodlight",
+   "box": [
+    141,
+    468,
+    130,
+    248
+   ],
+   "heightM": 6,
+   "what": "a twin floodlight on a pole"
+  },
+  {
+   "name": "generator",
+   "box": [
+    254,
+    574,
+    209,
+    149
+   ],
+   "heightM": 2.2,
+   "what": "a containerised generator"
+  },
+  {
+   "name": "hard-case",
+   "box": [
+    477,
+    600,
+    146,
+    123
+   ],
+   "heightM": 0.6,
+   "what": "a grey equipment case"
+  },
+  {
+   "name": "wooden-crate",
+   "box": [
+    639,
+    590,
+    145,
+    131
+   ],
+   "heightM": 1.0,
+   "what": "a wooden crate"
+  },
+  {
+   "name": "cases-stacked",
+   "box": [
+    798,
+    562,
+    132,
+    163
+   ],
+   "heightM": 1.1,
+   "what": "two green equipment cases, stacked"
+  },
+  {
+   "name": "pallet",
+   "box": [
+    939,
+    607,
+    163,
+    108
+   ],
+   "heightM": 0.35,
+   "what": "a wooden pallet"
+  },
+  {
+   "name": "barrels",
+   "box": [
+    1109,
+    578,
+    128,
+    136
+   ],
+   "heightM": 0.9,
+   "what": "a blue and a red drum"
+  },
+  {
+   "name": "ac-unit",
+   "box": [
+    21,
+    824,
+    150,
+    144
+   ],
+   "heightM": 0.9,
+   "what": "an air-conditioner condenser"
+  },
+  {
+   "name": "field-laptop",
+   "box": [
+    189,
+    786,
+    152,
+    184
+   ],
+   "heightM": 1.0,
+   "what": "a laptop and radio on a rugged case"
+  },
+  {
+   "name": "electrical-cabinet",
+   "box": [
+    355,
+    818,
+    144,
+    155
+   ],
+   "heightM": 1.4,
+   "what": "a high-voltage cabinet"
+  },
+  {
+   "name": "jersey-barrier",
+   "box": [
+    511,
+    859,
+    190,
+    111
+   ],
+   "heightM": 0.8,
+   "what": "a striped concrete barrier"
+  },
+  {
+   "name": "traffic-cone",
+   "box": [
+    714,
+    823,
+    99,
+    142
+   ],
+   "heightM": 0.7,
+   "what": "a traffic cone"
+  },
+  {
+   "name": "cable-reel",
+   "box": [
+    838,
+    833,
+    132,
+    133
+   ],
+   "heightM": 0.9,
+   "what": "a cable reel"
+  },
+  {
+   "name": "concrete-blocks",
+   "box": [
+    991,
+    818,
+    143,
+    157
+   ],
+   "heightM": 1.2,
+   "what": "two stacked concrete blocks"
+  },
+  {
+   "name": "security-camera-pole",
+   "box": [
+    1154,
+    734,
+    77,
+    232
+   ],
+   "heightM": 3.5,
+   "what": "a security camera on a post: the perimeter cameras"
+  },
+  {
+   "name": "palm-tree",
+   "box": [
+    4,
+    985,
+    172,
+    242
+   ],
+   "heightM": 8,
+   "what": "a coconut palm"
+  },
+  {
+   "name": "tree",
+   "box": [
+    169,
+    1022,
+    187,
+    204
+   ],
+   "heightM": 6,
+   "what": "a broad-leaf tree"
+  },
+  {
+   "name": "hibiscus-bush",
+   "box": [
+    322,
+    1072,
+    156,
+    150
+   ],
+   "heightM": 1.2,
+   "what": "a flowering bush"
+  },
+  {
+   "name": "banana-plant",
+   "box": [
+    476,
+    1024,
+    154,
+    195
+   ],
+   "heightM": 2.2,
+   "what": "a banana plant"
+  },
+  {
+   "name": "grass-clump",
+   "box": [
+    641,
+    1051,
+    135,
+    166
+   ],
+   "heightM": 1.0,
+   "what": "a clump of tall grass"
+  },
+  {
+   "name": "heliconia",
+   "box": [
+    783,
+    1078,
+    154,
+    140
+   ],
+   "heightM": 1.2,
+   "what": "red heliconia"
+  },
+  {
+   "name": "boulder",
+   "box": [
+    941,
+    1055,
+    151,
+    166
+   ],
+   "heightM": 1.5,
+   "what": "a mossy boulder"
+  },
+  {
+   "name": "rock-outcrop",
+   "box": [
+    1093,
+    1050,
+    158,
+    178
+   ],
+   "heightM": 2.5,
+   "what": "a mossy rock outcrop"
+  }
+ ]
+}

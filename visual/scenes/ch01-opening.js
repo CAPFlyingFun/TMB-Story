@@ -122,7 +122,7 @@ const REST = [
   //  Jack to the computer."
   { at: L("Sarah Bennett stepped inside"), action: "scene", name: "Sarah" },
   { at: { cue: "ch01-101-sarah-enters", offset: -0.4 }, action: "show", actor: "sarah" },
-  ...walk("sarah", { cue: "ch01-101-sarah-enters", offset: -0.4 }, [1760, 1205], 2.6, "west"),
+  ...walk("sarah", { cue: "ch01-101-sarah-enters", offset: -0.4 }, [1740, 1250], 3.0, "northwest", "west"),
   { at: L("Please tell me you didn't break"), action: "face", actor: "jack", direction: "east", label: "Jack turns to her" },
   { at: L("Please tell me you didn't break"), action: "state", actor: "jack", state: "awake" },
   { at: L("Jack gestured toward the console."), action: "face", actor: "jack", direction: "northeast" },
@@ -329,8 +329,10 @@ export default {
 
       actors: {
         jack: { sprite: "../assets/characters/jack/", pose: "sitting", facing: "northeast", state: "asleep", x: 720, y: 1200, layer: "room" },
-        // The door is behind the camera, to the right: Sarah comes in from off the right edge.
-        sarah: { sprite: "../assets/characters/sarah/", pose: "standing", facing: "west", state: "idle", x: 2250, y: 1210, layer: "room", visible: false },
+        // The door is behind the camera, to the right. Sarah comes in past the lens, from off
+        // the bottom-right corner: near the camera she is large, and she shrinks to her normal
+        // size as she walks into the room (perspective does it; nothing is scaled by hand).
+        sarah: { sprite: "../assets/characters/sarah/", pose: "standing", facing: "northwest", state: "idle", x: 2330, y: 1580, layer: "room", visible: false },
       },
 
       screens: {
