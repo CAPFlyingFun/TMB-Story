@@ -15,6 +15,9 @@ export function frameShot(shot, view, world, bounded = true) {
     w: view.w - view.safe.left - view.safe.right,
     h: view.h - view.safe.top - view.safe.bottom,
   };
+  // A world may start left of or above 0 (world.x, world.y): a backdrop widened past the
+  // picture the scene was first measured on keeps that picture's coordinates.
+  const wx = world.x || 0, wy = world.y || 0;
   const cover = Math.max(view.w / world.w, view.h / world.h);
   const fit = Math.min(box.w / shot.w, box.h / shot.h);
   // An open world (a sea that runs on in one colour past its edge) may be framed wider
@@ -27,8 +30,8 @@ export function frameShot(shot, view, world, bounded = true) {
   // Keep the whole viewport on the world: the framing box sits at bcx, the screen edges at 0 and view.w.
   const bcx = box.x + box.w / 2, bcy = box.y + box.h / 2;
   if (bounded) {
-    cx = clamp(cx, bcx / zoom, world.w - (view.w - bcx) / zoom);
-    cy = clamp(cy, bcy / zoom, world.h - (view.h - bcy) / zoom);
+    cx = clamp(cx, wx + bcx / zoom, wx + world.w - (view.w - bcx) / zoom);
+    cy = clamp(cy, wy + bcy / zoom, wy + world.h - (view.h - bcy) / zoom);
   }
   return { zoom, tx: bcx - cx * zoom, ty: bcy - cy * zoom, cx, cy, bcx, bcy, cover };
 }
@@ -41,8 +44,9 @@ export function frameShot(shot, view, world, bounded = true) {
 export function layerTransform(cam, world, p = 1, zoomDepth = 0) {
   if (p === 1 && !zoomDepth) return cam;
   const zoom = cam.zoom * Math.pow(cam.zoom / cam.cover, zoomDepth);
-  const cx = world.w / 2 + (cam.cx - world.w / 2) * p;
-  const cy = world.h / 2 + (cam.cy - world.h / 2) * p;
+  const mx = (world.x || 0) + world.w / 2, my = (world.y || 0) + world.h / 2;
+  const cx = mx + (cam.cx - mx) * p;
+  const cy = my + (cam.cy - my) * p;
   return { zoom, tx: cam.bcx - cx * zoom, ty: cam.bcy - cy * zoom };
 }
 

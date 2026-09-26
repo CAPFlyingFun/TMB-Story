@@ -24,6 +24,7 @@ line; the voice-only export is not indexable.
 | `paint/island.js` | procedural paint: the settlement's lights, drawn once into a canvas |
 | `scenes/ch01-opening.js` | the scene: sets, actors, objects, shots and events — data only |
 | `../scripts/split-sprites.py` | turns a character sheet into per-direction PNGs (`assets/characters/`) |
+| `../scripts/make-lab-wide.py` | sets the original lab back into Joshua's expanded lab picture, for the wide shot and people passing the camera |
 | `../scripts/split-props.py` | cuts the props sheet into one PNG per object with a real height (`assets/props/props.json`), ready to place as `objects` |
 | `../scripts/make-island-art.py` | grades the Beyond Extinction island to moonlight, caps its volcano with cloud, and makes the cloud wisps |
 
@@ -86,7 +87,8 @@ are more) and can also zoom faster than the ground as the camera pushes in
 (`zoomDepth`), the way something nearer the lens does. At the widest framing every layer
 lines up, and they separate as the camera comes down. `objects` place an image (`src`)
 or a painted canvas (`paint`, a function in the scene's `painters`) on a layer in world
-coordinates, with an `opacity` and an optional `drift` in pixels per second. A world's
+coordinates, with an `opacity` and an optional `drift` in pixels per second. A world's `bounds`
+can run past its measured picture (the lab's goes to negative x and y), and a world's
 `color` fills everything past the layers, and `bounded: false` lets the camera frame
 wider than the world (the sea runs on), so a long zoom never parks at the widest framing: the island's open sea is a colour, not a
 9000-pixel picture.

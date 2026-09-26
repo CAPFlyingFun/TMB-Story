@@ -24,7 +24,10 @@ export class Stage {
     this.root = root;
     this.set = set;
     const W = set.world;
-    this.world = { w: W.width, h: W.height };
+    // `bounds` widens the world past its measured picture (negative x/y allowed); the
+    // camera may frame anything inside it.
+    const B = W.bounds || { x: 0, y: 0, w: W.width, h: W.height };
+    this.world = { x: B.x, y: B.y, w: B.w, h: B.h };
     this.url = url;
     if (W.color) root.style.background = W.color; // fills past the layers: an open sea, a sky
     const p = W.perspective;
@@ -42,7 +45,7 @@ export class Stage {
       this.layers[L.id] = { el: e, parallax: L.parallax ?? 1, zoomDepth: L.zoomDepth || 0 };
     }
     const base = this.layers[W.backgroundLayer || W.layers[0].id].el;
-    const r = W.backgroundRect || { x: 0, y: 0, w: this.world.w, h: this.world.h };
+    const r = W.backgroundRect || B;
     const bg = document.createElement("img");
     bg.className = "bg";
     bg.src = url(W.background);
@@ -55,6 +58,7 @@ export class Stage {
     if (W.grade) {
       this.grade = el("div", "grade", base);
       this.grade.style.background = W.grade;
+      Object.assign(this.grade.style, { inset: "auto", left: B.x + "px", top: B.y + "px", width: B.w + "px", height: B.h + "px" });
     }
 
     // Objects: sprites or procedurally painted canvases placed in world coordinates.

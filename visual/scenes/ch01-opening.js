@@ -165,20 +165,22 @@ const REST = [
 
   // "Jack gave Sarah his chair, crossed to the next workstation, and dragged its chair back,
   //  wheels squeaking against the floor, before pulling himself up to his own screen."
-  // The seated sprites carry their chair, so the swap is staged: Jack stands and steps
-  // away, Sarah sits in his place and rolls to her console, Jack sits at the left-hand
-  // workstation and rolls the chair from there back to his own screen.
+  // The seated sprites carry their chair, so the swap is staged: Jack stands and walks out
+  // past the camera on the left, Sarah sits in his place and rolls to her console, and Jack
+  // comes back from past the camera already seated, rolling the other chair to his screen.
   { at: L("Jack gave Sarah his chair"), action: "scene", name: "The chair" },
   { at: L("Jack gave Sarah his chair", { offset: 0.2 }), action: "stand", actor: "jack" },
-  ...walk("jack", L("Jack gave Sarah his chair", { offset: 0.5 }), [575, 1222], 1.2, "west"),
+  // Jack goes out past the camera on the left -- Sarah's entrance mirrored -- growing as he
+  // nears the lens, to "the next workstation", which is behind the camera.
+  ...walk("jack", L("Jack gave Sarah his chair", { offset: 0.5 }), [-330, 1600], 2.4, "southwest"),
   ...walk("sarah", L("Jack gave Sarah his chair", { offset: 1.1 }), JACK_SEAT, 0.9, "northwest"),
   { at: L("Jack gave Sarah his chair", { offset: 2.1 }), action: "sit", actor: "sarah" },
   { at: L("Jack gave Sarah his chair", { offset: 2.1 }), action: "face", actor: "sarah", direction: "north" },
   { at: L("Jack gave Sarah his chair", { offset: 2.6 }), action: "move", actor: "sarah", x: SARAH_SEAT[0], y: SARAH_SEAT[1], duration: 2.2, ease: "inOut", label: "Sarah rolls to her console" },
-  ...walk("jack", L("Jack gave Sarah his chair", { offset: 1.7 }), [330, 1205], 1.6, "west"),
   { at: L("Jack gave Sarah his chair", { phrase: "and dragged its chair back" }), action: "sit", actor: "jack" },
-  { at: L("Jack gave Sarah his chair", { phrase: "and dragged its chair back" }), action: "face", actor: "jack", direction: "east" },
-  { at: L("Jack gave Sarah his chair", { phrase: "wheels squeaking" }), action: "move", actor: "jack", x: JACK_SEAT[0], y: JACK_SEAT[1], duration: 2.8, ease: "inOut", label: "Jack rolls the other chair back" },
+  { at: L("Jack gave Sarah his chair", { phrase: "and dragged its chair back" }), action: "face", actor: "jack", direction: "northeast" },
+  // ...and comes back seated, rolling in from past the lens and shrinking to his screen.
+  { at: L("Jack gave Sarah his chair", { phrase: "wheels squeaking" }), action: "move", actor: "jack", x: JACK_SEAT[0], y: JACK_SEAT[1], duration: 3.2, ease: "inOut", label: "Jack rolls the other chair back" },
   { at: L("Jack gave Sarah his chair", { edge: "end", offset: -0.4 }), action: "face", actor: "jack", direction: "northeast" },
   { at: L("Jack gave Sarah his chair", { edge: "end", offset: -0.4 }), action: "state", actor: "jack", state: "leaning" },
 
@@ -320,7 +322,13 @@ export default {
       world: {
         width: 2048,
         height: 1152,
-        background: "../assets/backgrounds/lab-main.jpg",
+        // The wide lab (scripts/make-lab-wide.py): Joshua's expansion of the lab picture, with
+        // the original set back in its middle. Coordinates are still pixels of the ORIGINAL
+        // (2048 x 1152); the expansion adds room to the sides and floor nearer the camera, so
+        // the world runs from (-790, -182) to (2838, 1859).
+        background: "../assets/backgrounds/lab-wide.jpg",
+        bounds: { x: -790, y: -182, w: 3628, h: 2041 },
+        backgroundRect: { x: -790, y: -182, w: 3628, h: 2041 },
         // Floor perspective, measured on the image: the centre desk's legs meet the floor at
         // y = 1135, where the 1.7 m desk spans 660 px; its edges converge near y = 580. A point
         // on the floor at y is (y - 580) * 388 / 555 pixels per metre.
@@ -363,7 +371,7 @@ export default {
       // Named framings: the world rectangle to show, and the point to keep in view when a
       // narrow screen cannot show all of it.
       shots: {
-        establishing: { x: 0, y: 0, w: 2048, h: 1152, focus: [900, 780] },
+        establishing: { x: -790, y: -182, w: 3628, h: 2041, focus: [920, 820] }, // the whole wide room
         room: { x: 170, y: 170, w: 1700, h: 960, focus: [860, 780] },
         asleep: { x: 420, y: 430, w: 900, h: 700, focus: [820, 800] },
         chirp: { x: 500, y: 470, w: 760, h: 600, focus: [880, 760] },
