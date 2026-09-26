@@ -13,6 +13,7 @@
     <div id="vignette"></div>
     <div id="fader"></div>
     <div id="loading" hidden>Loading audio&hellip;</div>
+    <div id="captions" hidden></div>
     <div id="gate">
       <div class="gate-card">
         <p class="kicker">TRADDOMIUM: Micro Battle!</p>
@@ -29,7 +30,7 @@
       </div>
     </div>
   </div>
-  <pre id="debug" aria-live="off"></pre>
+  <pre id="debug" aria-live="off" hidden></pre>
   <a id="home" href="../#listen">&larr; Reader</a>
   <div id="controls">
     <input id="scrub" type="range" min="0" max="1000" value="0" aria-label="Scene position">
@@ -39,7 +40,7 @@
       <button id="toggle" type="button" class="primary">Play</button>
       <button id="fwd" type="button" aria-label="Next line">&#9197;</button>
       <span id="clock">0:00.0</span>
-      <button id="dbg" type="button" aria-label="Toggle debug">dbg</button>
+      <button id="cc" type="button" aria-pressed="false" aria-label="Closed captions">CC</button>
     </div>
   </div>
   <audio id="audio" preload="auto" playsinline></audio>

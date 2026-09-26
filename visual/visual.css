@@ -69,3 +69,21 @@ button.primary, #start, #again { background: #d4a853; color: #12100e; border-col
   #controls .row { flex-wrap: wrap; row-gap: 4px; }
   #clock { order: -1; width: 100%; min-width: 0; font-size: 12px; }
 }
+
+/* ---------- movie mode: controls fade out while playing; captions ---------- */
+#controls, #home { transition: opacity .35s ease; }
+body.ui-hidden #controls, body.ui-hidden #home { opacity: 0; pointer-events: none; }
+#captions {
+  position: absolute; z-index: 12; left: 50%; transform: translateX(-50%);
+  bottom: calc(env(safe-area-inset-bottom) + 132px); transition: bottom .35s ease;
+  width: max-content; max-width: min(92vw, 780px); padding: 6px 12px; border-radius: 8px;
+  background: rgba(0,0,0,.62); color: #fff; text-align: center; pointer-events: none;
+  font: 600 clamp(14px, 0.9vw + 8px, 20px)/1.3 system-ui, -apple-system, sans-serif;
+}
+#captions b { color: #d4a853; font-weight: 700; }
+#captions[hidden] { display: none; }
+body.ui-hidden #captions { bottom: calc(env(safe-area-inset-bottom) + 22px); }
+@media (min-width: 521px) { #captions { bottom: calc(env(safe-area-inset-bottom) + 104px); } }
+@media (max-height: 460px) { #captions { bottom: calc(env(safe-area-inset-bottom) + 86px); font-size: 14px; max-width: min(80vw, 640px); padding: 4px 10px; } }
+#cc { font-weight: 700; letter-spacing: .04em; }
+#cc[aria-pressed="true"] { background: #f5ede4; color: #12100e; border-color: #f5ede4; }

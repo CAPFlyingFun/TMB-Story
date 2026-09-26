@@ -11,6 +11,33 @@ const q = new URLSearchParams(location.search);
 const $ = (id) => document.getElementById(id);
 const url = (p) => new URL(p, document.baseURI).href;
 const fmt = (s) => `${Math.floor(s / 60)}:${(s % 60).toFixed(1).padStart(4, "0")}`;
+const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c]);
+const store = {
+  get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* private mode */ } },
+};
+
+// Closed captions from the manifest: a long line is split into sentences, each given a
+// share of the line's time in proportion to its length. Characters are named; the
+// narrator is not.
+function buildCaptions(segments, start, end) {
+  const out = [];
+  for (const s of segments) {
+    const a = s.startMs / 1000, b = s.endMs / 1000;
+    if (b < start || a > end) continue;
+    const label = s.speaker === "narrator" ? "" : String(s.speakerName || s.speaker).split(" / ")[0].split(" ")[0];
+    // A short line shows whole; only long narration is split, so "What?" never flashes alone.
+    const parts = s.displayText.length <= 100 ? [s.displayText] : s.displayText.match(/[^.!?\u2026]+[.!?\u2026]+["\u201d\u2019)]*\s*|[^.!?\u2026]+$/g) || [s.displayText];
+    const total = parts.reduce((n, p) => n + p.length, 0);
+    let t = a;
+    for (const p of parts) {
+      const d = ((b - a) * p.length) / total;
+      out.push({ start: t, end: t + d, text: p.trim(), label });
+      t += d;
+    }
+  }
+  return out;
+}
 
 async function loadImage(src) {
   const img = new Image();
@@ -49,14 +76,60 @@ async function boot() {
   const stage = new Stage($("world"), scene, sprites, url);
 
   const beats = anchors.segments.map((s) => s.startMs / 1000).filter((t) => t >= start - 0.01 && t < end);
-  let dirty = true, lastDebug = 0, showDebug = q.get("debug") !== "0";
+  let dirty = true, lastDebug = 0, showDebug = q.get("debug") === "1";
   $("debug").hidden = !showDebug;
 
   const view = () => ({
     w: window.innerWidth,
     h: window.innerHeight,
-    safe: { top: 0, left: 0, right: 0, bottom: $("controls").offsetHeight * 0.6 },
+    safe: { top: 0, left: 0, right: 0, bottom: 0 }, // full frame: the controls float over it and hide
   });
+
+  // Movie-style controls: hidden while playing, a tap on the picture brings them back,
+  // and they fade again after a few seconds. While paused they stay.
+  let uiTimer = 0;
+  function showUI(ms = 3000) {
+    document.body.classList.remove("ui-hidden");
+    clearTimeout(uiTimer);
+    if (clock.playing) uiTimer = setTimeout(() => clock.playing && document.body.classList.add("ui-hidden"), ms);
+  }
+  $("stage").addEventListener("click", (e) => {
+    if (e.target.closest("button, a, input")) return;
+    if (document.body.classList.contains("ui-hidden") || !clock.playing) showUI();
+    else {
+      clearTimeout(uiTimer);
+      document.body.classList.add("ui-hidden");
+    }
+  });
+  $("controls").addEventListener("pointerdown", () => showUI());
+
+  // Captions: off unless turned on, and remembered.
+  const captions = buildCaptions(anchors.segments, start, end);
+  const capEl = $("captions");
+  let ccOn = store.get("tmb.cc") === "1", capShown = null;
+  function setCC(on) {
+    ccOn = on;
+    store.set("tmb.cc", on ? "1" : "0");
+    $("cc").setAttribute("aria-pressed", on ? "true" : "false");
+    capShown = null;
+    dirty = true;
+  }
+  setCC(ccOn);
+  $("cc").onclick = () => setCC(!ccOn);
+  function drawCaption(t) {
+    let c = null;
+    for (const k of captions) {
+      if (k.start <= t) c = k;
+      else break;
+    }
+    if (c && t > c.end + 0.6) c = null;
+    const html = ccOn && c ? (c.label ? `<b>${esc(c.label)}:</b> ` : "") + esc(c.text) : "";
+    if (html !== capShown) {
+      capShown = html;
+      capEl.innerHTML = html;
+      capEl.hidden = !html;
+    }
+  }
 
   let shownPlaying = null;
   function setPlaying(p) {
@@ -111,10 +184,7 @@ async function boot() {
     seek(next !== undefined ? next : end);
   };
   $("again").onclick = () => $("restart").onclick();
-  $("dbg").onclick = () => {
-    showDebug = !showDebug;
-    $("debug").hidden = !showDebug;
-  };
+
   const scrub = $("scrub");
   scrub.oninput = () => seek(start + (scrub.value / 1000) * (end - start));
   window.addEventListener("resize", () => (dirty = true));
@@ -122,6 +192,8 @@ async function boot() {
     if (e.code === "Space") { e.preventDefault(); $("toggle").onclick(); }
     if (e.code === "ArrowRight") $("fwd").onclick();
     if (e.code === "ArrowLeft") $("back").onclick();
+    if (e.code === "KeyC") setCC(!ccOn);
+    if (e.code === "KeyD") { showDebug = !showDebug; $("debug").hidden = !showDebug; }
   });
 
   if (q.has("t")) seek(parseFloat(q.get("t")));
@@ -137,6 +209,7 @@ async function boot() {
     // The clock can stop on its own (the end, a phone call); the button follows it.
     if (clock.playing !== shownPlaying) {
       setPlaying(clock.playing);
+      showUI(shownPlaying === null ? 3000 : 2200);
       dirty = true;
     }
     if (clock.playing || dirty) {
@@ -144,6 +217,7 @@ async function boot() {
       const cam = stage.render(st, view());
       $("fader").style.opacity = st.fade.toFixed(3);
       $("loading").hidden = !(clock.playing && clock.waiting);
+      drawCaption(t);
       if (document.activeElement !== scrub) scrub.value = Math.round(((t - start) / (end - start)) * 1000);
       $("clock").textContent = `${fmt(t - start)} / ${fmt(end - start)}`;
       if (showDebug && (now - lastDebug > 120 || !clock.playing)) {

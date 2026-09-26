@@ -70,5 +70,11 @@ Built so these can be added without rewriting the engine: more layers with `para
 `y` with the characters, more screen templates, and more scenes registered in
 `engine/app.js`.
 
-Debug: `?debug=0` hides the panel, `?t=62.5` opens at a time, `?silent=1` runs without
-audio. Space plays and pauses; the arrow keys step line by line.
+The player is movie-style: the controls hide while it plays and a tap on the picture
+brings them back. **CC** turns closed captions on and off (remembered per device); they
+come from the manifest, so they are always the manuscript's words, with characters
+named and the narrator not.
+
+Debug: `?debug=1` shows the state panel (or press D), `?t=62.5` opens at a time,
+`?silent=1` runs without audio. Space plays and pauses, the arrow keys step line by
+line, C toggles captions.
