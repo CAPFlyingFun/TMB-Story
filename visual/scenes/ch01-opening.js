@@ -43,6 +43,7 @@ export default {
         width: 9000,
         height: 9000,
         color: "#040812", // the open sea, the colour the island image is feathered into
+        bounded: false, // the sea runs on past the edge, so the camera may start wider than the world
         background: "../assets/backgrounds/island-night.jpg",
         backgroundRect: { x: 3476, y: 3476, w: 2048, h: 2048 },
         layers: [
@@ -64,10 +65,8 @@ export default {
         { id: "high-d", layer: "clouds-high", src: "../assets/backgrounds/clouds/wisp-2.png", x: 3550, y: 5350, w: 1300, h: 490, opacity: 0.7, drift: [9, 2] },
       ],
       shots: {
-        high: { x: 0, y: 0, w: 9000, h: 9000, focus: [4550, 4550] },
-        island: { x: 3380, y: 3380, w: 2300, h: 2300, focus: [4600, 4600] },
-        approach: { x: 4006, y: 4136, w: 1300, h: 1000, focus: [4656, 4636] },
-        settlement: { x: 4346, y: 4406, w: 620, h: 460, focus: [4656, 4636] },
+        high: { x: 2200, y: 2200, w: 4600, h: 4600, focus: [4500, 4500] },
+        settlement: { x: 4396, y: 4441, w: 520, h: 390, focus: [4656, 4636] },
       },
       camera: { initial: { shot: "high" }, name: "Island · night" },
     },
@@ -129,16 +128,16 @@ export default {
     //  undeveloped wilderness."
     { at: { seg: 1, offset: -0.3 }, action: "scene", name: "The island from high above" },
     { at: { seg: 1, offset: -0.3 }, action: "fade", to: 0, duration: 3.5, ease: "out" },
-    { at: { seg: 1 }, action: "camera", shot: "island", duration: 13, ease: "inOut", label: "slow descent toward the island" },
+    // One unbroken descent from high above to over the town, at a constant rate of zoom,
+    // from the first sight of the island until the picture is fully black.
+    { at: { seg: 1, offset: -0.3 }, action: "camera", shot: "settlement", path: "zoom", until: { line: "It was almost eleven", edge: "end" }, ease: "linear", label: "one slow descent to the town" },
 
     // "Near its center sat a research settlement of laboratories, homes, workshops..."
     { at: { line: "It was almost eleven", phrase: "Near its center" }, action: "scene", name: "The settlement" },
     { at: { line: "It was almost eleven", phrase: "Near its center", offset: -0.4 }, action: "opacity", target: "settlement", to: 1, duration: 2.6, ease: "inOut", label: "the settlement's lights come up" },
-    { at: { line: "It was almost eleven", phrase: "Near its center" }, action: "camera", shot: "approach", duration: 4.5, ease: "inOut", label: "push toward the settlement" },
     ...["high-a", "high-b", "high-c", "high-d"].map((id) => ({ at: { line: "It was almost eleven", phrase: "Near its center", offset: 1 }, action: "opacity", target: id, to: 0, duration: 4, ease: "inOut" })),
     // "... medical facilities, and other buildings supporting the nearly five hundred
     //  people who lived there."
-    { at: { line: "It was almost eleven", phrase: "medical facilities" }, action: "camera", shot: "settlement", duration: 4.6, ease: "inOut", label: "closer over the town" },
     ...["low-w", "low-e", "low-s"].map((id) => ({ at: { line: "It was almost eleven", phrase: "medical facilities" }, action: "opacity", target: id, to: 0, duration: 3, ease: "inOut" })),
     { at: { line: "It was almost eleven", edge: "end", offset: -1.0 }, action: "fade", to: 1, duration: 1.0, ease: "in", label: "dip to black" },
     { at: { cue: "ch01-005-lab-bed", offset: -0.05 }, action: "set", set: "lab", label: "cut to the lab" },

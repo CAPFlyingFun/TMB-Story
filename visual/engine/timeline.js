@@ -103,6 +103,7 @@ class Cont {
       if (kf.t <= t) {
         const p = kf.dur > 0 ? Math.min(1, (t - kf.t) / kf.dur) : 1;
         const e = kf.ease(p);
+        if (kf.lerp) return kf.lerp(kf.from, kf.to, e);
         const out = { ...kf.from };
         for (const key in kf.to) out[key] = kf.from[key] + (kf.to[key] - kf.from[key]) * e;
         return out;
@@ -110,11 +111,33 @@ class Cont {
     }
     return { ...this.init };
   }
-  add(t, dur, to, ease) {
+  add(t, dur, to, ease, lerp = null) {
     const from = this.valueAt(t);
     for (const key in to) if (from[key] === undefined) from[key] = to[key];
-    this.k.push({ t, dur, to, ease, from });
+    this.k.push({ t, dur, to, ease, from, lerp });
   }
+}
+
+// A camera move that zooms at a constant rate: the shot's size changes geometrically
+// (the same percentage every second, which is what the eye reads as steady) and the
+// centre moves so that one point stays fixed on screen, the point the move closes in on.
+// A plain interpolation of the rectangle instead zooms slowly at first and rushes at
+// the end.
+function zoomLerp(a, b, e) {
+  // Per axis: size s(e) = s0 * r^e, and the centre c(e) = F + (c0 - F) * r^e, where F is
+  // the one point that stays put (it solves c1 = F + (c0 - F) * r).
+  const axis = (p0, s0, f0, p1, s1, f1) => {
+    const r = s1 / s0, k = Math.pow(r, e), c0 = p0 + s0 / 2, c1 = p1 + s1 / 2;
+    const at = (a0, b0) => {
+      if (Math.abs(1 - r) < 1e-6) return a0 + (b0 - a0) * e;
+      const F = (b0 - a0 * r) / (1 - r);
+      return F + (a0 - F) * k;
+    };
+    const size = s0 * k;
+    return { pos: at(c0, c1) - size / 2, size, focus: at(f0, f1) };
+  };
+  const X = axis(a.x, a.w, a.fx, b.x, b.w, b.fx), Y = axis(a.y, a.h, a.fy, b.y, b.h, b.fy);
+  return { x: X.pos, y: Y.pos, w: X.size, h: Y.size, fx: X.focus, fy: Y.focus };
 }
 
 // A step track: a value that changes instantly, remembering what it changed from and when
@@ -221,7 +244,8 @@ export function compileScene(scene, anchors) {
     .sort((a, b) => a.t - b.t || a.i - b.i);
 
   for (const ev of events) {
-    const dur = ev.duration || 0;
+    // `until` ends a move on an anchor instead of after a fixed number of seconds.
+    const dur = ev.until !== undefined ? Math.max(0, anchors.resolve(ev.until) - ev.t) : ev.duration || 0;
     const ease = EASE[ev.ease || "inOut"] || EASE.inOut;
     const need = (group, id) => {
       const o = T[group][id];
@@ -231,7 +255,7 @@ export function compileScene(scene, anchors) {
     switch (ev.action) {
       case "camera": {
         const id = shotSet(ev);
-        T.cameras[id].add(ev.t, dur, shotOf(ev, id), ease);
+        T.cameras[id].add(ev.t, dur, shotOf(ev, id), ease, ev.path === "zoom" ? zoomLerp : null);
         break;
       }
       case "set":

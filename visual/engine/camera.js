@@ -8,7 +8,7 @@
 //     toward the focus point instead of cutting it off;
 //   - `safe` insets (the controls bar) are left out of the framing box.
 
-export function frameShot(shot, view, world) {
+export function frameShot(shot, view, world, bounded = true) {
   const box = {
     x: view.safe.left,
     y: view.safe.top,
@@ -16,15 +16,20 @@ export function frameShot(shot, view, world) {
     h: view.h - view.safe.top - view.safe.bottom,
   };
   const cover = Math.max(view.w / world.w, view.h / world.h);
-  const zoom = Math.max(cover, Math.min(box.w / shot.w, box.h / shot.h));
+  const fit = Math.min(box.w / shot.w, box.h / shot.h);
+  // An open world (a sea that runs on in one colour past its edge) may be framed wider
+  // than the world, so a long zoom never parks at the widest framing.
+  const zoom = bounded ? Math.max(cover, fit) : fit;
   const visW = box.w / zoom, visH = box.h / zoom;
   let cx = shot.x + shot.w / 2, cy = shot.y + shot.h / 2;
   if (shot.w > visW) cx = clamp(shot.fx, shot.x + visW / 2, shot.x + shot.w - visW / 2);
   if (shot.h > visH) cy = clamp(shot.fy, shot.y + visH / 2, shot.y + shot.h - visH / 2);
   // Keep the whole viewport on the world: the framing box sits at bcx, the screen edges at 0 and view.w.
   const bcx = box.x + box.w / 2, bcy = box.y + box.h / 2;
-  cx = clamp(cx, bcx / zoom, world.w - (view.w - bcx) / zoom);
-  cy = clamp(cy, bcy / zoom, world.h - (view.h - bcy) / zoom);
+  if (bounded) {
+    cx = clamp(cx, bcx / zoom, world.w - (view.w - bcx) / zoom);
+    cy = clamp(cy, bcy / zoom, world.h - (view.h - bcy) / zoom);
+  }
   return { zoom, tx: bcx - cx * zoom, ty: bcy - cy * zoom, cx, cy, bcx, bcy, cover };
 }
 

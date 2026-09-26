@@ -50,7 +50,7 @@ written with a single top-level `world` is one set.
 
 | action | fields |
 |---|---|
-| `camera` | `shot` (a name in `shots`) or `x y w h focus`, `duration`, `ease` |
+| `camera` | `shot` (a name in `shots`) or `x y w h focus`, `duration` (or `until`: an anchor), `ease`; `path: "zoom"` zooms at a constant rate toward one fixed point (use `ease: "linear"`) |
 | `shake` | `amount`, `duration` |
 | `move` | `actor`, `x y` or `dx dy`, `duration`, `ease` |
 | `face` | `actor`, `direction` (south, southwest, … southeast) |
@@ -85,7 +85,8 @@ are more) and can also zoom faster than the ground as the camera pushes in
 lines up, and they separate as the camera comes down. `objects` place an image (`src`)
 or a painted canvas (`paint`, a function in the scene's `painters`) on a layer in world
 coordinates, with an `opacity` and an optional `drift` in pixels per second. A world's
-`color` fills everything past the layers: the island's open sea is a colour, not a
+`color` fills everything past the layers, and `bounded: false` lets the camera frame
+wider than the world (the sea runs on), so a long zoom never parks at the widest framing: the island's open sea is a colour, not a
 9000-pixel picture.
 
 ## Growing it later

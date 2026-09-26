@@ -108,7 +108,7 @@ export class Stage {
 
   render(state, view) {
     const shot = state.camera;
-    const cam = frameShot(shot, view, this.world);
+    const cam = frameShot(shot, view, this.world, this.set.world.bounded !== false);
     const sx = shot.shake ? shot.shake * 0.8 : 0, sy = shot.shake ? shot.shake * 0.5 : 0;
     for (const L of Object.values(this.layers)) {
       const m = layerTransform(cam, this.world, L.parallax, L.zoomDepth);
