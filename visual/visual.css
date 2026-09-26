@@ -1,0 +1,63 @@
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+body {
+  touch-action: manipulation; -webkit-user-select: none; user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #e8e2d8;
+}
+#stage { position: fixed; inset: 0; overflow: hidden; background: #000; }
+#world { position: absolute; inset: 0; }
+.layer { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
+.bg { position: absolute; left: 0; top: 0; display: block; max-width: none; }
+.grade { position: absolute; inset: 0; z-index: 5000; pointer-events: none; }
+.actor { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
+.actor .frame { position: absolute; display: block; max-width: none; }
+.light { position: absolute; z-index: 5001; pointer-events: none; mix-blend-mode: screen; opacity: 0; }
+.screen { position: absolute; left: 0; top: 0; transform-origin: 0 0; z-index: 5002; overflow: hidden; background: #03060b; }
+#vignette { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(0,0,0,.5) 100%); }
+#fader { position: absolute; inset: 0; background: #000; pointer-events: none; }
+
+/* ---------- lab console screens (drawn at 543 x 348) ---------- */
+.screen-inner { position: absolute; inset: 0; font: 15px/1.28 ui-monospace, Menlo, Consolas, monospace; color: #8fd6ff; background: #04101c; }
+.screen-inner .flash { position: absolute; inset: 0; background: #ffae3a; opacity: calc(var(--flash, 0) * .55); mix-blend-mode: screen; pointer-events: none; }
+.diag .bar { display: flex; justify-content: space-between; padding: 6px 12px; background: #0b2a44; color: #bfe6ff; font-weight: 700; letter-spacing: .08em; }
+.diag .diag-body { display: flex; gap: 10px; padding: 8px 12px; }
+.diag pre { margin: 0; font: inherit; opacity: .92; }
+.diag .wave { flex: 1; height: 120px; align-self: center; }
+.diag .wave path { fill: none; stroke: #52e0b0; stroke-width: 1.4; }
+.diag.amber { background: #1c1203; color: #ffc46b; }
+.diag.amber .bar { background: #4a2f05; color: #ffd796; }
+.diag.amber .wave path { stroke: #ffae3a; }
+.warn { background: #2a0c04; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.warn-title { font: 800 64px/1 system-ui, sans-serif; letter-spacing: .12em; color: #ffb03a; opacity: var(--blink, 1); text-shadow: 0 0 18px rgba(255,140,40,.8); }
+.warn-body { margin-top: 18px; font: 600 24px/1.2 system-ui, sans-serif; color: #ffe2b8; }
+.intrusion { background: #0a0604; color: #ffb56a; }
+.intrusion .alert-strip { position: absolute; left: 0; right: 0; top: 0; padding: 5px 10px; background: #7a1e06; color: #ffe1c2; font-weight: 700; letter-spacing: .06em; opacity: var(--blink, 1); }
+.intrusion .win { position: absolute; height: 26%; background: #14202c; border: 1px solid #5b7a96; color: #bcd8f0; font-size: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.6); }
+.intrusion .win b { display: block; padding: 2px 6px; background: #2c4a66; font-weight: 600; }
+.intrusion .win i { display: block; height: 6px; margin: 7px 6px 0; background: #3c5872; }
+.intrusion .win i:nth-child(3) { width: 70%; } .intrusion .win i:nth-child(4) { width: 45%; }
+.intrusion .stream { position: absolute; right: 0; top: 30px; bottom: 0; width: 38%; margin: 0; padding: 4px 8px; font: 12px/1.3 ui-monospace, Menlo, monospace; color: #7dffb0; background: rgba(0,0,0,.55); overflow: hidden; }
+.intrusion .netmon { position: absolute; left: 6%; top: 34%; width: 50%; padding: 6px 8px 8px; background: #06121e; border: 1px solid #58c4ff; color: #9fdcff; font-size: 12px; box-shadow: 0 0 14px rgba(80,180,255,.5); }
+.intrusion .netmon b { display: block; margin-bottom: 4px; letter-spacing: .08em; }
+.intrusion .netmon .row { display: flex; align-items: center; gap: 6px; margin-top: 3px; }
+.intrusion .netmon .row span { width: 26px; } .intrusion .netmon .row i { display: block; height: 7px; background: #4fb8ff; }
+
+/* ---------- overlays and controls ---------- */
+#gate, #endcard { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.62); z-index: 10; }
+#gate[hidden], #endcard[hidden] { display: none; }
+.gate-card { text-align: center; padding: 24px; max-width: 420px; }
+.gate-card h1 { margin: 4px 0; font: 700 26px/1.2 Georgia, serif; }
+.kicker { margin: 0; color: #d4a853; letter-spacing: .12em; font-size: 12px; text-transform: uppercase; }
+.sub { color: #c4b49a; margin: 6px 0 18px; }
+#gate-msg { min-height: 1.3em; color: #8b7e6e; font-size: 14px; }
+button { font: inherit; color: #f5ede4; background: rgba(38,34,32,.85); border: 1px solid #5a5048; border-radius: 10px; min-width: 44px; min-height: 44px; padding: 0 14px; touch-action: manipulation; }
+button:disabled { opacity: .4; }
+button.primary, #start, #again { background: #d4a853; color: #12100e; border-color: #d4a853; font-weight: 700; min-width: 96px; }
+#start, #again { font-size: 18px; padding: 0 26px; }
+#controls { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 6px max(12px, env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); background: linear-gradient(transparent, rgba(0,0,0,.72) 40%); }
+#controls .row { display: flex; align-items: center; gap: 8px; justify-content: center; }
+#clock { font: 13px ui-monospace, Menlo, monospace; color: #c4b49a; min-width: 108px; text-align: center; }
+#scrub { width: 100%; margin: 0 0 6px; accent-color: #d4a853; height: 24px; }
+#debug { position: fixed; z-index: 15; top: calc(6px + env(safe-area-inset-top)); left: calc(6px + env(safe-area-inset-left)); margin: 0; max-width: min(94vw, 560px); padding: 6px 8px; border-radius: 6px; background: rgba(0,0,0,.6); color: #cfe8d8; font: 11px/1.35 ui-monospace, Menlo, monospace; white-space: pre-wrap; pointer-events: none; }
+#debug[hidden] { display: none; }
+@media (max-height: 460px) { #controls { padding-top: 2px; } #scrub { margin-bottom: 2px; height: 18px; } button { min-height: 38px; } #debug { font-size: 10px; } }

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>TMB · Visual story prototype</title>
+  <link rel="stylesheet" href="visual.css">
+</head>
+<body>
+  <div id="stage">
+    <div id="world"></div>
+    <div id="vignette"></div>
+    <div id="fader"></div>
+    <div id="gate">
+      <div class="gate-card">
+        <p class="kicker">TRADDOMIUM: Micro Battle!</p>
+        <h1>Chapter 1 &middot; The Alarm</h1>
+        <p class="sub">Visual story prototype &middot; the opening in the lab</p>
+        <button id="start" type="button" disabled>&#9654; Play</button>
+        <p id="gate-msg">Loading&hellip;</p>
+      </div>
+    </div>
+    <div id="endcard" hidden>
+      <div class="gate-card">
+        <p class="sub">End of the prototype slice.</p>
+        <button id="again" type="button">&#8634; Restart</button>
+      </div>
+    </div>
+  </div>
+  <pre id="debug" aria-live="off"></pre>
+  <div id="controls">
+    <input id="scrub" type="range" min="0" max="1000" value="0" aria-label="Scene position">
+    <div class="row">
+      <button id="restart" type="button" aria-label="Restart">&#8634;</button>
+      <button id="back" type="button" aria-label="Previous line">&#9198;</button>
+      <button id="toggle" type="button" class="primary">Play</button>
+      <button id="fwd" type="button" aria-label="Next line">&#9197;</button>
+      <span id="clock">0:00.0</span>
+      <button id="dbg" type="button" aria-label="Toggle debug">dbg</button>
+    </div>
+  </div>
+  <audio id="audio" preload="auto" playsinline></audio>
+  <script type="module" src="engine/app.js"></script>
+</body>
+</html>

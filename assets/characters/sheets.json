@@ -1,0 +1,92 @@
+{
+  "_comment": [
+    "Input for scripts/split-sprites.py. Each source sheet has a standing row and a sitting row of",
+    "eight figures. The COLUMN ORDER IS NOT A ROTATION: the artwork repeats some angles and skips",
+    "others, so every column was classified by eye (2026-09-26) by which way the BODY faces --",
+    "knees, belly, chair back -- with the camera looking north (south = facing the viewer,",
+    "east = facing screen right). Change a column here and re-run the script to correct a call.",
+    "A direction the sheet does not contain is filled by mirroring its opposite ('mirror'), and",
+    "sprite.json records which files are mirrors. Unused columns are listed so nothing is lost.",
+    "The sheet's seated row is drawn ~10% smaller than its standing row, so a seated sprite gets its",
+    "own scale: seated head-top = sittingHeightRatio x standing height (0.72 is typical for an adult",
+    "on an office chair). Still one uniform scale per frame; nothing is stretched."
+  ],
+  "figures": {
+    "jack": {
+      "sheet": "assets/source/jack-sheet.png",
+      "heightM": 1.8,
+      "standing": {
+        "south": 1,
+        "southeast": 2,
+        "east": 3,
+        "northeast": 4,
+        "north": 5,
+        "northwest": 6,
+        "west": 7,
+        "southwest": 8,
+        "_notes": "Complete. Column 8's body faces southwest; his head is turned back toward the camera."
+      },
+      "sitting": {
+        "south": 1,
+        "southwest": 8,
+        "east": 3,
+        "northeast": 4,
+        "north": 5,
+        "northwest": 6,
+        "southeast": {
+          "mirror": "southwest"
+        },
+        "west": {
+          "mirror": "east"
+        },
+        "_unused": {
+          "2": "a second southwest",
+          "7": "west by the body, but the head faces east"
+        }
+      },
+      "sittingHeightRatio": 0.72
+    },
+    "sarah": {
+      "sheet": "assets/source/sarah-sheet.png",
+      "heightM": 1.65,
+      "standing": {
+        "south": 1,
+        "southwest": 8,
+        "east": 3,
+        "northeast": 4,
+        "north": 5,
+        "northwest": 6,
+        "southeast": {
+          "mirror": "southwest"
+        },
+        "west": {
+          "mirror": "east"
+        },
+        "_unused": {
+          "2": "a second southwest",
+          "7": "a second east"
+        },
+        "_notes": "Column 6's body faces northwest; her head is turned back over her shoulder."
+      },
+      "sitting": {
+        "south": 1,
+        "southwest": 8,
+        "east": 3,
+        "northeast": 4,
+        "north": 5,
+        "northwest": 6,
+        "southeast": {
+          "mirror": "southwest"
+        },
+        "west": {
+          "mirror": "east"
+        },
+        "_unused": {
+          "2": "a second southwest",
+          "7": "a second east"
+        }
+      },
+      "sittingHeightRatio": 0.72
+    }
+  }
+}
