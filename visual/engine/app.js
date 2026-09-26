@@ -59,7 +59,9 @@ async function boot() {
     safe: { top: 0, left: 0, right: 0, bottom: $("controls").offsetHeight * 0.6 },
   });
 
+  let shownPlaying = null;
   function setPlaying(p) {
+    shownPlaying = p;
     $("toggle").textContent = p ? "Pause" : "Play";
     $("toggle").setAttribute("aria-pressed", p ? "true" : "false");
   }
@@ -121,6 +123,11 @@ async function boot() {
 
   function frame(now) {
     const t = clock.now();
+    // The clock can stop on its own (the end, a phone call); the button follows it.
+    if (clock.playing !== shownPlaying) {
+      setPlaying(clock.playing);
+      dirty = true;
+    }
     if (clock.playing || dirty) {
       const st = timeline.evaluate(t);
       const cam = stage.render(st, view());
@@ -137,7 +144,7 @@ async function boot() {
           `jack    ${j.pose.v} · ${j.facing.v} · ${j.state.v} · x${j.x.toFixed(0)} y${j.y.toFixed(0)}\n` +
           `camera  ${cam.zoom.toFixed(2)}x · centre ${cam.cx.toFixed(0)},${cam.cy.toFixed(0)}\n` +
           `line    ${line ? `[${line.speakerName || line.speaker}] ${line.displayText.slice(0, 70)}${line.displayText.length > 70 ? "…" : ""}` : "—"}\n` +
-          `clock   ${clock.playing ? "playing" : "paused"}${clock.virtual ? " · SILENT (no audio)" : ""}`;
+          `clock   ${clock.playing ? (clock.waiting ? "waiting for audio\u2026" : "playing") : "paused"}${clock.virtual ? " · SILENT (no audio)" : ""}`;
       }
       dirty = false;
     }
