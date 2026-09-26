@@ -137,19 +137,32 @@ body.ui-hidden #captions { bottom: calc(env(safe-area-inset-bottom) + 22px); }
 #title .t { font: 400 clamp(26px, 3.2vw + 12px, 54px)/1.1 Georgia, "Times New Roman", serif; letter-spacing: .14em; }
 #title .s { margin-top: 12px; font: 600 clamp(11px, .6vw + 8px, 15px)/1 system-ui, -apple-system, sans-serif; letter-spacing: .32em; text-transform: uppercase; color: #d4a853; }
 
-/* ---------- landscape only (touch devices held upright) ---------- */
-#rotate { display: none; }
+/* ---------- the menu: always up on a phone held upright, the gear opens it in landscape ---------- */
+#menu { display: none; position: fixed; inset: 0; z-index: 100000; align-items: center; justify-content: center;
+  padding: 2rem; text-align: center; background: rgba(5,7,13,.9); }
+body.menu-open #menu { display: flex; }
+#menu .upright, #menu .rot-phone { display: none; }
 @media (orientation: portrait) and (pointer: coarse) {
-  #rotate {
-    display: flex; position: fixed; inset: 0; z-index: 100000; align-items: center; justify-content: center;
-    padding: 2rem; text-align: center; background: #05070d;
-  }
+  #menu { display: flex; background: #05070d; }
+  #menu .upright { display: block; }
+  #menu .rot-phone { display: block; }
+  #menu .level { display: none !important; }
+  /* Draw nothing behind the card: the phone does not re-render the film at the new size. */
+  #stage, #controls, #home, #debug { visibility: hidden; }
 }
-.rot-inner { max-width: 32ch; }
+.menu-card { width: min(300px, 90vw); }
+.menu-title { font: 700 1.45rem/1.25 Georgia, serif; color: #f5ede4; margin: 0 0 .5rem; }
+.menu-hint { margin: 0 0 .4rem; font-size: .95rem; line-height: 1.5; color: #c4b49a; }
+#menu-at { color: #8b7e6e; font: 13px ui-monospace, Menlo, monospace; }
+.menu-buttons { display: flex; flex-direction: column; gap: 10px; margin-top: 1.1rem; }
+.menu-buttons button, .menu-buttons .btn { width: 100%; }
+a.btn { display: flex; align-items: center; justify-content: center; box-sizing: border-box; min-height: 44px; padding: 0 14px;
+  border: 1px solid #5a5048; border-radius: 10px; background: rgba(38,34,32,.85); color: #f5ede4; text-decoration: none; }
+button.quiet { display: block; margin: 10px auto 0; background: transparent; }
+button.quiet[hidden] { display: none; }
+#settings { font-size: 20px; }
 .rot-phone {
-  width: 48px; height: 84px; margin: 0 auto 1.9rem; border: 3px solid #d4a853; border-radius: 11px;
+  width: 42px; height: 72px; margin: 0 auto 1.4rem; border: 3px solid #d4a853; border-radius: 10px;
   animation: rot-phone 2.4s ease-in-out infinite;
 }
 @keyframes rot-phone { 0%, 20% { transform: rotate(0deg); } 50%, 80% { transform: rotate(-90deg); } 100% { transform: rotate(0deg); } }
-.rot-title { font: 700 1.5rem/1.2 Georgia, serif; color: #f5ede4; margin-bottom: .6rem; }
-.rot-hint { margin: 0; font-size: .95rem; line-height: 1.5; color: #c4b49a; }

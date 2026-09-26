@@ -21,6 +21,7 @@
         <h1>Chapter 1 &middot; The Alarm</h1>
         <p class="sub">Visual story prototype &middot; the whole chapter</p>
         <button id="start" type="button" disabled>&#9654; Play</button>
+        <button id="startover" type="button" class="quiet" hidden>&#8634; Start over</button>
         <p id="gate-msg">Loading&hellip;</p>
       </div>
     </div>
@@ -43,16 +44,25 @@
       <button id="fwd" type="button" aria-label="Next line">&#9197;</button>
       <span id="clock">0:00.0</span>
       <button id="cc" type="button" aria-pressed="false" aria-label="Closed captions">CC</button>
+      <button id="settings" type="button" aria-label="Menu">&#9881;</button>
     </div>
   </div>
-  <!-- Landscape only, as in Beyond Extinction. iOS will not let a page rotate itself, so a
-       phone or tablet held upright gets this card instead of the film; it is pure CSS, so it
-       can never get stuck, and it never shows on a laptop or desktop, which cannot turn. -->
-  <div id="rotate" aria-hidden="true">
-    <div class="rot-inner">
+  <!-- The menu. On a phone or tablet held upright it is always shown (pure CSS, so it can
+       never get stuck): the film is landscape only, as in Beyond Extinction, and iOS will not
+       let a page rotate itself. It never shows by itself on a laptop or desktop, which cannot
+       turn. In landscape the gear button opens it. -->
+  <div id="menu" role="dialog" aria-label="Menu">
+    <div class="menu-card">
       <div class="rot-phone"></div>
-      <div class="rot-title">Rotate your device</div>
-      <p class="rot-hint">Watch plays in landscape.</p>
+      <h2 class="menu-title"><span class="upright">Story paused in portrait view</span><span class="level">Paused</span></h2>
+      <p class="menu-hint upright">Rotate back to landscape to continue.</p>
+      <p class="menu-hint" id="menu-at"></p>
+      <div class="menu-buttons">
+        <button id="m-resume" type="button" class="primary level">&#9654; Resume</button>
+        <button id="m-restart" type="button">&#8634; Start over</button>
+        <button id="m-cc" type="button">Captions: Off</button>
+        <a id="m-home" class="btn" href="../">Main menu</a>
+      </div>
     </div>
   </div>
   <audio id="audio" preload="auto" playsinline></audio>

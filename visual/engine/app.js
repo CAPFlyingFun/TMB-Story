@@ -88,6 +88,7 @@ async function boot() {
   let shownSet = null, titleShown = null;
 
   const beats = anchors.segments.map((s) => s.startMs / 1000).filter((t) => t >= start - 0.01 && t < end);
+  let lastSave = 0;
   let dirty = true, lastDebug = 0, showDebug = q.get("debug") === "1";
   $("debug").hidden = !showDebug;
 
@@ -159,8 +160,30 @@ async function boot() {
   function pause() {
     clock.pause();
     setPlaying(false);
+    savePosition();
     dirty = true;
   }
+
+  // The place in the film is remembered on the device, every second while it plays and
+  // whenever it stops. A phone can reload the page on its own (iOS does, short of memory,
+  // around a rotation), and the film should come back where it was, not at 0:00.
+  const POS_KEY = "tmb.watch." + scene.id;
+  function savePosition() {
+    const t = clock.now();
+    if (t > start + 1 && t < end - 1) store.set(POS_KEY, JSON.stringify({ t, at: Date.now() }));
+    else store.set(POS_KEY, "");
+  }
+  function savedPosition() {
+    try {
+      const v = JSON.parse(store.get(POS_KEY) || "null");
+      if (v && v.t > start + 3 && v.t < end - 3 && Date.now() - v.at < 30 * 864e5) return v.t;
+    } catch (e) {
+      /* nothing saved */
+    }
+    return null;
+  }
+  window.addEventListener("pagehide", savePosition);
+  document.addEventListener("visibilitychange", () => document.hidden && savePosition());
   function seek(t) {
     clock.seek(t);
     $("endcard").hidden = true;
@@ -179,19 +202,57 @@ async function boot() {
     }
   }
 
-  // Landscape only on phones and tablets (the #rotate card, pure CSS). Turning upright
-  // mid-film pauses it rather than playing on behind the card, and turning back resumes.
+  // The menu. On a phone held upright it is always up (pure CSS): the film is landscape
+  // only, so turning upright pauses it and turning back resumes it, where it was. In
+  // landscape the gear opens the same menu with Resume.
   const upright = window.matchMedia("(orientation: portrait) and (pointer: coarse)");
   let heldForRotate = false;
+  function showMenuPosition() {
+    $("menu-at").textContent = `${fmt(clock.now() - start)} of ${fmt(end - start)}`;
+    $("m-cc").textContent = "Captions: " + (ccOn ? "On" : "Off");
+  }
+  function openMenu() {
+    if (clock.playing) pause();
+    showMenuPosition();
+    document.body.classList.add("menu-open");
+  }
+  function closeMenu() {
+    document.body.classList.remove("menu-open");
+  }
   upright.addEventListener("change", () => {
-    if (upright.matches && clock.playing) {
-      heldForRotate = true;
-      pause();
-    } else if (!upright.matches && heldForRotate) {
+    if (upright.matches) {
+      if (clock.playing) {
+        heldForRotate = true;
+        pause();
+      }
+      showMenuPosition();
+    } else if (heldForRotate) {
       heldForRotate = false;
+      closeMenu();
       play();
     }
   });
+  $("settings").onclick = openMenu;
+  $("m-resume").onclick = () => {
+    closeMenu();
+    play();
+  };
+  $("m-restart").onclick = () => {
+    seek(start);
+    savePosition();
+    closeMenu();
+    if (upright.matches) {
+      heldForRotate = true; // starts from the top as soon as the phone turns back
+      showMenuPosition();
+    } else play();
+  };
+  $("m-cc").onclick = () => {
+    setCC(!ccOn);
+    showMenuPosition();
+  };
+  $("m-home").onclick = () => savePosition();
+  if (upright.matches) showMenuPosition();
+
   // iOS can leave the layout viewport at the old orientation's width after a turn, so the
   // page lays out wrong and is scaled; re-asserting the viewport makes it recompute
   // (the same fix Beyond Extinction uses).
@@ -237,8 +298,17 @@ async function boot() {
     if (e.code === "KeyD") { showDebug = !showDebug; $("debug").hidden = !showDebug; }
   });
 
+  const resumeAt = q.has("t") ? null : savedPosition();
   if (q.has("t")) seek(parseFloat(q.get("t")));
-  else seek(start);
+  else seek(resumeAt !== null ? resumeAt : start);
+  if (resumeAt !== null) {
+    $("start").innerHTML = `&#9654; Resume at ${fmt(resumeAt - start).replace(/\.\d$/, "")}`;
+    $("startover").hidden = false;
+    $("startover").onclick = () => {
+      seek(start);
+      play();
+    };
+  }
   if (q.has("nogate")) $("gate").hidden = true;
   else {
     gateMsg.textContent = "";
@@ -290,7 +360,12 @@ async function boot() {
       }
       dirty = false;
     }
+    if (clock.playing && now - lastSave > 1000) {
+      lastSave = now;
+      savePosition();
+    }
     if (clock.ended) {
+      store.set(POS_KEY, ""); // finished: next time starts from the top
       setPlaying(false);
       $("endcard").hidden = false;
       clock.ended = false;

@@ -97,9 +97,13 @@ Built so these can be added without rewriting the engine: props and vegetation a
 objects sorted by `y` with the characters, more sets per scene, more screen templates,
 and more scenes registered in `engine/app.js`.
 
-Watch is landscape only, as Beyond Extinction is: a phone or tablet held upright sees a
-"Rotate your device" card (pure CSS, `pointer: coarse` only, so a laptop is never
-blocked), and turning upright mid-film pauses it until the device turns back.
+Watch is landscape only, as Beyond Extinction is. A phone or tablet held upright gets the
+menu instead of the film ("Story paused in portrait view", with Start over, Captions and
+Main menu); it is pure CSS and `pointer: coarse` only, so a laptop is never blocked.
+Turning upright pauses the film and turning back resumes it where it was. In landscape
+the gear button opens the same menu with Resume. The position is saved on the device
+every second, so if the phone reloads the page the card offers "Resume at 0:12" and
+"Start over".
 
 The player is movie-style: the controls hide while it plays and a tap on the picture
 brings them back. **CC** turns closed captions on and off (remembered per device); they
