@@ -342,7 +342,7 @@ export default {
         // The door is behind the camera, to the right. Sarah comes in past the lens, from off
         // the bottom-right corner: near the camera she is large, and she shrinks to her normal
         // size as she walks into the room (perspective does it; nothing is scaled by hand).
-        sarah: { sprite: "../assets/characters/sarah/", pose: "standing", facing: "northwest", state: "idle", x: 2330, y: 1580, layer: "room", visible: false },
+        sarah: { sprite: "../assets/characters/sarah/", pose: "standing", facing: "northwest", state: "idle", x: 2330, y: 1580, layer: "room", visible: false, seatLiftM: 0.05 },
       },
 
       screens: {
