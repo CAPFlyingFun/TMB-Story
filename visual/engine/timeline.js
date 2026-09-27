@@ -231,6 +231,7 @@ export function compileScene(scene, anchors) {
       visible: new Step(a.visible !== false),
       opacity: new Cont({ v: a.opacity ?? 1 }),
       jolts: [],
+      gestures: [],
     };
   }
   for (const [id, s] of Object.entries(all("screens"))) {
@@ -294,6 +295,11 @@ export function compileScene(scene, anchors) {
       case "state":
         need("actors", ev.actor).state.add(ev.t, ev.state);
         break;
+      case "gesture":
+        // A cutout-rig animation preset (engine/gestures.js): drawn only when rigs are on
+        // (?rig=1); otherwise the character keeps its plain sprite.
+        need("actors", ev.actor).gestures.push({ t: ev.t, dur: dur || 1, name: ev.animation, opts: { arm: ev.arm, amount: ev.amount } });
+        break;
       case "jolt":
         need("actors", ev.actor).jolts.push({ t: ev.t, dur: dur || 0.55, amp: ev.amount ?? 1 });
         break;
@@ -348,6 +354,7 @@ export function compileScene(scene, anchors) {
         state: a.state.at(t),
         visible: a.visible.at(t).v,
         opacity: a.opacity.valueAt(t).v,
+        gestures: a.gestures.filter((g) => t >= g.t && t < g.t + g.dur).map((g) => ({ name: g.name, u: (t - g.t) / g.dur, opts: g.opts })),
         jolt: impulses(a.jolts, t, bump),
       };
     }

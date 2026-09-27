@@ -27,6 +27,10 @@ line; the voice-only export is not indexable.
 | `../scripts/make-lab-wide.py` | sets the original lab back into Joshua's expanded lab picture, for the wide shot and people passing the camera |
 | `../scripts/split-props.py` | cuts the props sheet into one PNG per object with a real height (`assets/props/props.json`), ready to place as `objects` |
 | `../scripts/make-island-art.py` | grades the Beyond Extinction island to moonlight, caps its volcano with cloud, and makes the cloud wisps |
+| `engine/rig.js` | the optional cutout rig: cuts a sprite into body parts along polygons and turns them about pivots |
+| `engine/gestures.js` | the animation presets (nod, look-left, point, wave, type, lean-forward, walk…) as small eased joint angles |
+| `rig.html` + `engine/rig-editor.js` | dev-only rig editor; not linked from the story |
+| `../assets/characters/<name>/rig.json` | each character's rig: parts, pivots and limits, normalized to the sprite, per pose and direction |
 
 ## Writing a scene
 
@@ -126,3 +130,33 @@ staged with poses: in Chapter 1 Jack stands and steps away, Sarah sits in his pl
 rolls to her console, and Jack sits at the next workstation and rolls that chair back.
 Screens draw behind the people, and a screen in its `off` state shows the painted
 monitor from the background image.
+
+## Cutout rig (optional, off by default)
+
+The sprites stay the canonical art. `?rig=1` lets a character move a little between
+directions: the rig cuts the current sprite into head, torso, upper and lower arms,
+hands and legs along the polygons in `assets/characters/<name>/rig.json` (coordinates are
+0..1 of the sprite canvas, so a re-exported sheet at another size still fits), fills
+what a moved part uncovers from the pixels around it, and turns each part about its
+pivot. Turning the body is still a swap to another of the eight directions; the rig
+never fakes 3D. Without `?rig=1` nothing changes, and a character with no gesture and
+no step is drawn from the plain sprite even with it.
+
+A scene asks for a gesture on a line:
+
+    { at: L("Jack entered a command"), action: "gesture", actor: "jack",
+      animation: "type", duration: 3.0 }
+
+`arm: "left" | "right"` picks an arm and `amount` scales it. The presets keep the ranges
+small (head 5 to 10 degrees, torso 3 to 6, arms 10 to 30) and ease in and out; the
+limits in each rig.json cap them again per character. Sarah's torso is limited to 3
+degrees and her torso is one rigid piece, so her pregnancy is never bent or stretched.
+
+The rigs were made automatically from each sprite's silhouette. That is good enough for
+heads, torsos and arms held away from the body, but it cannot see a hand lying on a
+thigh: the pixels between the fingers are trousers, and what is behind the hand was
+never drawn. Those arms are capped at 4 degrees until someone outlines the hand by hand.
+`visual/rig.html` is the editor for that: pick character, pose and direction, drag
+pivots, tick "Edit shapes" and drag corners, double-click an edge to add a corner,
+right-click or Alt-click one to remove it, preview presets, then download rig.json.
+Edits are kept in that browser until exported.

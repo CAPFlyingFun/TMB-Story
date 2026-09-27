@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>TMB · Rig editor (dev)</title>
+  <style>
+    :root { color-scheme: dark; }
+    html, body { margin: 0; height: 100%; background: #15171b; color: #e8e2d8; font: 13px/1.35 system-ui, -apple-system, sans-serif; }
+    body { display: grid; grid-template-columns: 300px 1fr; height: 100vh; }
+    aside { overflow: auto; padding: 10px 12px; background: #1d2026; border-right: 1px solid #2c3038; }
+    main { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    h1 { margin: 0 0 6px; font: 700 15px Georgia, serif; }
+    .dev { color: #d4a853; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+    fieldset { border: 1px solid #2f343d; border-radius: 8px; margin: 8px 0; padding: 6px 8px; }
+    legend { color: #c4b49a; padding: 0 4px; }
+    label { display: flex; align-items: center; gap: 6px; margin: 3px 0; }
+    select, button, input[type=number] { font: inherit; color: #eee; background: #2a2e36; border: 1px solid #444a55; border-radius: 6px; padding: 4px 6px; }
+    button { cursor: pointer; margin: 2px 2px 2px 0; }
+    button.primary { background: #d4a853; color: #12100e; border-color: #d4a853; font-weight: 700; }
+    .joint { display: grid; grid-template-columns: 102px 1fr 38px; align-items: center; gap: 4px; margin: 2px 0; }
+    .joint span { font-size: 12px; } .joint b { font-weight: 400; text-align: right; font-variant-numeric: tabular-nums; }
+    .joint.sel span { color: #d4a853; }
+    #stagebox { position: relative; }
+    #stagebox canvas { position: absolute; left: 0; top: 0; }
+    #bg { background: repeating-conic-gradient(#2a2d33 0 25%, #23262b 0 50%) 0 0 / 24px 24px; }
+    #msg { position: absolute; left: 10px; bottom: 8px; color: #8b7e6e; font-size: 12px; }
+    textarea { width: 100%; height: 110px; font: 11px ui-monospace, Menlo, monospace; background: #111; color: #cfe8d8; border: 1px solid #333; border-radius: 6px; }
+    @media (max-width: 760px) { body { grid-template-columns: 1fr; grid-template-rows: auto 60vh; } aside { max-height: 45vh; } }
+  </style>
+</head>
+<body>
+  <aside>
+    <p class="dev">Development tool · not part of the story</p>
+    <h1>Cutout rig editor</h1>
+    <fieldset><legend>Sprite</legend>
+      <label>Character <select id="char"><option>jack</option><option>sarah</option><option>mark</option><option>lena</option></select></label>
+      <label>Pose <select id="pose"><option>standing</option><option>sitting</option></select></label>
+      <label>Direction <select id="dir"></select></label>
+    </fieldset>
+    <fieldset><legend>Show</legend>
+      <label><input type="checkbox" id="showParts" checked> Part boundaries</label>
+      <label><input type="checkbox" id="showPivots" checked> Pivots (drag to move)</label>
+      <label><input type="checkbox" id="editShapes"> Edit shapes (drag corners)</label>
+      <p style="margin:2px 0 4px;color:#8b7e6e">Pick a part by its name in the joint list, then double-click an edge to add a corner, Alt-click or right-click a corner to remove it. Outline hands closely where they touch the legs.</p>
+      <label><input type="checkbox" id="showOriginal"> Original sprite underneath (ghost)</label>
+    </fieldset>
+    <fieldset><legend>Joints (degrees)</legend><div id="joints"></div>
+      <button id="reset">Reset pose</button>
+    </fieldset>
+    <fieldset><legend>Presets</legend>
+      <label>Preset <select id="preset"></select></label>
+      <label>Arm <select id="arm"><option value="">auto</option><option>left</option><option>right</option></select></label>
+      <label>Duration <input id="dur" type="number" value="1.2" step="0.1" min="0.2" style="width:60px"> s</label>
+      <label><input type="checkbox" id="walk"> Walk cycle</label>
+      <button id="play" class="primary">&#9654; Play preset</button>
+    </fieldset>
+    <fieldset><legend>Rig data</legend>
+      <button id="auto">Re-rig this view automatically</button>
+      <button id="copyView">Copy this view as JSON</button>
+      <button id="copyAll">Copy rig.json</button>
+      <button id="download">Download rig.json</button>
+      <textarea id="out" readonly placeholder="Exported JSON appears here too."></textarea>
+      <p style="color:#8b7e6e;margin:4px 0 0">Edits are kept in this browser. Send the exported rig.json to have it committed.</p>
+    </fieldset>
+  </aside>
+  <main><div id="stagebox"><canvas id="bg"></canvas><canvas id="ghost"></canvas><canvas id="art"></canvas><canvas id="ov"></canvas></div><div id="msg"></div></main>
+  <script type="module" src="engine/rig-editor.js"></script>
+</body>
+</html>

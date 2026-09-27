@@ -6,6 +6,8 @@
 
 import { frameShot, layerTransform } from "./camera.js";
 import { quadMatrix3d } from "./homography.js";
+import { Rig, rigFor } from "./rig.js";
+import { poseFrom } from "./gestures.js";
 
 const IDLE = {
   // Breathing and weight are a slow sway about the ground point, so the chair or the feet
@@ -21,7 +23,8 @@ const CROSSFADE = 0.14; // seconds, when a character turns or changes pose
 const FEET_HALF_M = 0.2; // half the width a standing person's feet take on the floor
 
 export class Stage {
-  constructor(root, set, sprites, url, painters = {}) {
+  constructor(root, set, sprites, url, painters = {}, options = {}) {
+    this.rigFiles = options.rigs || null; // { actorId: rig.json or {} } when cutout rigs are on
     this.root = root;
     this.set = set;
     const W = set.world;
@@ -91,6 +94,11 @@ export class Stage {
       const cur = el("img", "frame", wrap);
       prev.alt = cur.alt = "";
       this.actors[id] = { wrap, cur, prev, sprite: sprites[id], curSrc: "", prevSrc: "" };
+      if (this.rigFiles) {
+        const rc = el("canvas", "frame rig", wrap);
+        rc.style.display = "none";
+        Object.assign(this.actors[id], { rigCanvas: rc, rigs: {}, rigFile: this.rigFiles[id] || {} });
+      }
     }
     this.lights = {};
     for (const [id, l] of Object.entries(set.lights || {})) {
@@ -231,6 +239,38 @@ export class Stage {
     const hop = -a.jolt * 5 - step * Math.abs(Math.sin((2 * Math.PI * t) / period)) * 5;
     node.wrap.style.zIndex = Math.round(fy);
     node.wrap.style.transform = `translate3d(${fx.toFixed(2)}px,${(fy + hop).toFixed(2)}px,0) rotate(${rot.toFixed(3)}deg) scale(${s.toFixed(4)})`;
+    // The cutout rig (?rig=1): only while a gesture or a walk is moving a part, and never
+    // during a turn's crossfade. At rest the plain sprite is the picture.
+    if (node.rigCanvas) {
+      const gestures = a.gestures || [];
+      const turning = p >= 0 && p < 1;
+      const R = (gestures.length || step > 0.01) && !turning ? this.rigInstance(node, a.pose.v, a.facing.v) : null;
+      if (R) {
+        const P = poseFrom(R.rig, gestures, t, step);
+        R.draw(node.rigCanvas, P.angles, P.shift);
+        node.rigCanvas.style.left = -(ax + R.M) + "px";
+        node.rigCanvas.style.top = -(ay + R.M) + "px";
+        node.rigCanvas.style.display = "";
+        node.cur.style.visibility = node.prev.style.visibility = "hidden";
+      } else {
+        node.rigCanvas.style.display = "none";
+        node.cur.style.visibility = node.prev.style.visibility = "";
+      }
+    }
+  }
+
+  // A rig for this pose and direction, built once from the decoded sprite frame. Returns
+  // null until it is ready; the plain sprite shows meanwhile.
+  rigInstance(node, pose, dir) {
+    const k = pose + "/" + dir;
+    if (node.rigs[k] !== undefined) return node.rigs[k];
+    node.rigs[k] = null;
+    const img = new Image();
+    img.src = this.url(node.sprite.base + node.sprite.poses[pose].frames[dir].file);
+    img.decode().then(() => {
+      node.rigs[k] = new Rig(img, rigFor(node.rigFile, node.sprite, pose, dir, img), (node.rigFile && node.rigFile.limits) || {});
+    }).catch(() => {});
+    return null;
   }
 
   drawLight(node, l) {

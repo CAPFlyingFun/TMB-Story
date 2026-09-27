@@ -289,6 +289,29 @@ const REST = [
   { at: L("Sarah slowly turned toward him."), action: "state", actor: "sarah", state: "still" },
   { at: L("Jack met her eyes."), action: "face", actor: "jack", direction: "east" },
   { at: L("I didn't.", { edge: "end", offset: -0.35 }), action: "fade", to: 1, duration: 0.3, ease: "in", label: "cut to black" },
+  // Cutout-rig gestures, each on the line that describes it. Drawn only with ?rig=1 (an
+  // experiment: engine/rig.js, visual/rig.html); without it the plain sprites are unchanged.
+  { at: L("Jack entered a command"), action: "gesture", actor: "jack", animation: "type", duration: 3.0 },
+  { at: L("He reached for the intercom."), action: "gesture", actor: "jack", animation: "lean-forward", duration: 1.4 },
+  { at: L("Jack smiled despite himself."), action: "gesture", actor: "jack", animation: "look-down", duration: 1.0 },
+  { at: L("Sarah raised an eyebrow."), action: "gesture", actor: "sarah", animation: "look-left", duration: 0.9 },
+  { at: L("Jack pointed toward the monitor"), action: "gesture", actor: "jack", animation: "point", duration: 1.2 },
+  { at: L("Jack nodded solemnly."), action: "gesture", actor: "jack", animation: "nod", duration: 1.2 },
+  { at: L("Jack nodded.", { nth: 0 }), action: "gesture", actor: "jack", animation: "nod", duration: 0.9 },
+  { at: L("Sarah was already typing."), action: "gesture", actor: "sarah", animation: "type", duration: 2.4 },
+  { at: L("Jack shook his head."), action: "gesture", actor: "jack", animation: "shake-head", duration: 1.0 },
+  { at: L("Jack nodded.", { nth: 1 }), action: "gesture", actor: "jack", animation: "nod", duration: 0.9 },
+  { at: L("Sarah looked sideways at him."), action: "gesture", actor: "sarah", animation: "look-left", duration: 1.4 },
+  { at: L("Sarah shook her head"), action: "gesture", actor: "sarah", animation: "shake-head", duration: 1.0 },
+  { at: L("Sarah kept typing."), action: "gesture", actor: "sarah", animation: "type", duration: 1.8 },
+  { at: L("Jack spread his hands."), action: "gesture", actor: "jack", animation: "small-hand-gesture", duration: 1.2 },
+  { at: L("Jack considered it."), action: "gesture", actor: "jack", animation: "look-up", duration: 1.3 },
+  { at: L("Jack surrendered with a small nod."), action: "gesture", actor: "jack", animation: "nod", duration: 0.9 },
+  { at: L("Sarah rested a hand briefly"), action: "gesture", actor: "sarah", animation: "small-hand-gesture", duration: 2.0 },
+  { at: L("Sarah sat upright."), action: "gesture", actor: "sarah", animation: "lean-back", duration: 0.8 },
+  { at: L("He entered his administrator credentials"), action: "gesture", actor: "jack", animation: "type", duration: 2.0 },
+  { at: L("Jack tried his credentials again."), action: "gesture", actor: "jack", animation: "type", duration: 1.4 },
+  { at: L("Sarah leaned toward the screen."), action: "gesture", actor: "sarah", animation: "lean-forward", duration: 1.6 },
 ];
 
 export default {

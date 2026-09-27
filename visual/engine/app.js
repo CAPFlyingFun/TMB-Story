@@ -70,6 +70,19 @@ async function boot() {
     sprites[id] = rec;
     for (const pose of Object.values(rec.poses)) for (const f of Object.values(pose.frames)) preload.push(url(a.sprite + f.file));
   }
+  // Cutout rigs are an experiment: on only with ?rig=1 (engine/rig.js, visual/rig.html).
+  let rigFiles = null;
+  if (q.get("rig") === "1") {
+    rigFiles = {};
+    for (const id of Object.keys(sprites)) {
+      try {
+        const r = await fetch(url(sprites[id].base + "rig.json"));
+        rigFiles[id] = r.ok ? await r.json() : {};
+      } catch (e) {
+        rigFiles[id] = {};
+      }
+    }
+  }
   gateMsg.textContent = "Loading…";
   await Promise.all(preload.map(loadImage));
 
@@ -83,7 +96,7 @@ async function boot() {
     root.dataset.set = id;
     root.hidden = true;
     $("world").appendChild(root);
-    stages[id] = new Stage(root, set, sprites, url, scene.painters || {});
+    stages[id] = new Stage(root, set, sprites, url, scene.painters || {}, { rigs: rigFiles });
   }
   let shownSet = null, titleShown = null;
 
