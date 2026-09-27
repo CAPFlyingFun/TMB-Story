@@ -171,8 +171,10 @@ const REST = [
   { at: L("Sarah nudged the arm of his chair", { offset: 1.2 }), action: "jolt", actor: "jack", amount: 0.35, duration: 0.5 },
   { at: L("Sarah nudged the arm of his chair", { offset: 1.2 }), action: "jolt", actor: "sarah", amount: 0.2, duration: 0.4 },
   { at: L("Let me have your chair"), action: "camera", shot: "room", duration: 2.6, ease: "inOut", label: "wide for the chair swap" },
-  // ...and backs up out of his way, still facing him, so he has room to stand.
-  { at: L("Let me have your chair", { offset: 0.2 }), action: "move", actor: "sarah", x: 1130, y: 1264, duration: 1.2, ease: "inOut", label: "Sarah backs up" },
+  // ...and backs off to the side, still facing him, so he has room to stand. She stays at
+  // his depth (y 1196), so when he is on his feet beside her their feet are on one line;
+  // backing toward the camera put hers lower and made him look as if he floated.
+  { at: L("Let me have your chair", { offset: 0.2 }), action: "move", actor: "sarah", x: 1150, y: JACKS_OLD_CHAIR[1], duration: 1.2, ease: "inOut", label: "Sarah backs off" },
 
   // "Jack gave Sarah his chair, crossed to the next workstation, and dragged its chair back,
   //  wheels squeaking against the floor, before pulling himself up to his own screen."
