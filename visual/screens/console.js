@@ -146,7 +146,9 @@ function directory({ local, params }) {
   let cursor = "";
   if (params.cursorAt !== undefined && local >= params.cursorAt) {
     const p = Math.min(1, (local - params.cursorAt) / 1.6), e = p * p * (3 - 2 * p);
-    cursor = `<div class="cursor" style="left:${(82 - 58 * e).toFixed(1)}%;top:${(86 - 45 * e).toFixed(1)}%"></div>`;
+    // The arrow's TIP is at (left, top). It ends on the second row, boundary_control, whose
+    // middle is 85 px down the 348 px screen (a 31 px title bar, an 8 px gap, 30.5 px rows).
+    cursor = `<div class="cursor" style="left:${(82 - 60 * e).toFixed(1)}%;top:${(86 - 61.6 * e).toFixed(1)}%"></div>`;
   }
   const open = params.openAt !== undefined && local >= params.openAt;
   const win = open

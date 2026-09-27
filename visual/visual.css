@@ -58,7 +58,7 @@ body {
 .dir ul { list-style: none; margin: 8px 0 0; padding: 0 12px; font-size: 16px; }
 .dir li { padding: 5px 6px; }
 .dir li.hot { background: #1f4f7a; color: #fff; }
-.dir .cursor { position: absolute; width: 0; height: 0; border-left: 9px solid transparent; border-right: 9px solid transparent; border-bottom: 22px solid #fff; transform: rotate(-28deg); transform-origin: 0 0; filter: drop-shadow(0 1px 2px #000); }
+.dir .cursor { position: absolute; width: 0; height: 0; margin-left: -9px; border-left: 9px solid transparent; border-right: 9px solid transparent; border-bottom: 22px solid #fff; transform: rotate(-28deg); transform-origin: 9px 0; filter: drop-shadow(0 1px 2px #000); } /* rotated about its tip, which sits exactly at left/top */
 .dir .filewin { position: absolute; left: 30%; top: 26%; width: 62%; background: #0a1624; border: 1px solid #ff9a3a; box-shadow: 0 0 16px rgba(255,140,40,.5); color: #ffcf96; }
 .dir .filewin b { display: block; padding: 4px 8px; background: #6a3406; letter-spacing: .08em; }
 .dir .filewin pre { margin: 0; padding: 6px 8px; font: 13px/1.35 ui-monospace, Menlo, monospace; }
