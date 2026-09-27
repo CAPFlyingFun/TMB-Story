@@ -359,7 +359,9 @@ export default {
         // Floor perspective, measured on the image: the centre desk's legs meet the floor at
         // y = 1135, where the 1.7 m desk spans 660 px; its edges converge near y = 580. A point
         // on the floor at y is (y - 580) * 388 / 555 pixels per metre.
-        perspective: { horizonY: 580, ref: { y: 1135, pxPerMeter: 388 } },
+        // lockHeadsAt: heads keep the height they have at the seats' depth; walking toward or
+        // away from the camera changes a figure's size from the head down, not the head.
+        perspective: { horizonY: 580, ref: { y: 1135, pxPerMeter: 388 }, lockHeadsAt: 1184 },
         layers: [{ id: "room", parallax: 1 }],
         grade: "rgba(7,11,24,0.30)", // late at night: the room dims, the monitor does not
       },

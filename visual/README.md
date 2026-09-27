@@ -78,7 +78,9 @@ Coordinates are pixels of the background image. Sizes are not: the scene's
 `perspective` gives pixels per metre at any floor position, and each sprite pose knows its
 own pixels per metre (`sprite.json`), so a character is always its real height and grows
 as it moves toward the camera. Zoom never changes the size relationship between objects.
-An insect-scale world is the same system with a different `pxPerMeter`.
+An insect-scale world is the same system with a different `pxPerMeter`. With `perspective.lockHeadsAt` (a floor depth), each person keeps the head height they
+have at that depth wherever they walk, and nearer or farther only grows or shrinks the
+figure from the head down, in proportion; at that depth the two rules agree exactly.
 
 ## Depth
 

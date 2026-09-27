@@ -35,6 +35,7 @@ export class Stage {
     if (p) {
       this.ppmK = p.ref.pxPerMeter / (p.ref.y - p.horizonY);
       this.horizonY = p.horizonY;
+      this.lockHeadsAt = p.lockHeadsAt; // see scaleAt
     }
     this.layers = {};
     for (const L of W.layers) {
@@ -127,15 +128,29 @@ export class Stage {
     return lo <= hi ? [lo, hi] : null;
   }
 
+  // How big a character is drawn with their feet at floor depth y. By perspective alone the
+  // size is proportional to the distance below the horizon, and a person taller than the
+  // camera is high has their head climb as they come toward the lens. With lockHeadsAt set
+  // (Joshua, 2026-09-27: "lock the max height... the bottom stretches in the correct aspect
+  // ratio"), each person keeps the head height they have at that depth wherever they
+  // stand, and the figure grows or shrinks from the head downward, in proportion. At that
+  // depth the two rules agree exactly, so seated pairs and matched chairs are unchanged.
+  scaleAt(y, pose) {
+    const L = this.lockHeadsAt;
+    if (L === undefined) return this.ppm(y) / pose.pxPerMeter;
+    const head = L - pose.heightM * this.ppm(L); // the locked head line for this person and pose
+    return Math.max(0.02, (y - head) / pose.figureHeightPx);
+  }
+
   onFloor(a, pose) {
     const F = this.set.world.floor;
-    if (!F) return [a.x, a.y];
-    let y = Math.max(a.y, Math.min(...F.map((p) => p[1])));
-    const r = this.floorRange(y);
-    if (!r) return [a.x, y];
-    const half = (pose.chairBaseM ? pose.chairBaseM / 2 : FEET_HALF_M) * this.ppm(y);
+    let y = F ? Math.max(a.y, Math.min(...F.map((p) => p[1]))) : a.y;
+    const s = this.scaleAt(y, pose);
+    const r = F && this.floorRange(y);
+    if (!r) return [a.x, y, s];
+    const half = (pose.chairBaseM ? pose.chairBaseM / 2 : FEET_HALF_M) * pose.pxPerMeter * s;
     const lo = r[0] + half, hi = r[1] - half;
-    return [lo > hi ? (r[0] + r[1]) / 2 : Math.min(Math.max(a.x, lo), hi), y];
+    return [lo > hi ? (r[0] + r[1]) / 2 : Math.min(Math.max(a.x, lo), hi), y, s];
   }
 
   ppm(y) {
@@ -200,8 +215,7 @@ export class Stage {
     }
     // One scale from world units: the pose's pixels per metre against the room's
     // pixels per metre at this depth. Moving toward the camera makes a character larger.
-    const [fx, fy] = this.onFloor(a, pose);
-    const s = this.ppm(fy) / pose.pxPerMeter;
+    const [fx, fy, s] = this.onFloor(a, pose);
     const [ax, ay] = pose.anchor;
     for (const img of [node.cur, node.prev]) {
       img.style.left = -ax + "px";
