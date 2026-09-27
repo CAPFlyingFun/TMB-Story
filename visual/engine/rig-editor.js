@@ -21,8 +21,15 @@ for (const p of PRESET_NAMES) $("preset").append(new Option(p, p));
 $("preset").value = "nod";
 
 function key() { return `${$("pose").value}/${$("dir").value}`; }
-function edits() { return store.get("tmb.rig." + $("char").value) || {}; }
-function saveEdit(r) { const e = edits(); e[key()] = r; store.set("tmb.rig." + $("char").value, e); }
+// Browser edits are kept against the rig.json revision they were made on; when the file
+// moves on (a newer, hand-traced rig), older edits are set aside rather than hiding it.
+function revision() { return (rigFile && rigFile.revision) || 1; }
+function edits() {
+  const e = store.get("tmb.rig." + $("char").value);
+  return e && e.revision === revision() && e.rigs ? e.rigs : {};
+}
+function saveEdit(r) { const e = edits(); e[key()] = r; store.set("tmb.rig." + $("char").value, { revision: revision(), rigs: e }); }
+function dropEdit() { const e = edits(); delete e[key()]; store.set("tmb.rig." + $("char").value, { revision: revision(), rigs: e }); }
 
 async function loadImage(src) {
   const i = new Image();
@@ -144,10 +151,13 @@ function draw(pose = { angles, shift: {} }) {
 // Dragging pivots and polygon corners (in the rest pose: the handles are drawn there).
 let drag = null;
 $("ov").addEventListener("pointerdown", (e) => {
+  if (e.button !== 0) return; // right-click removes a corner (contextmenu), it never drags
   const r = $("ov").getBoundingClientRect(), M = built.M;
   const px = (e.clientX - r.left) / scale - M, py = (e.clientY - r.top) / scale - M;
   const near = (x, y) => Math.hypot(x * built.W - px, y * built.H - py) < 9 / scale + 3;
-  for (const [name, j] of Object.entries(rig.joints)) {
+  // Traced parts overlap at the elbow and wrist, so the selected part's corners come first.
+  const order = Object.entries(rig.joints).sort(([a], [b]) => (b === selected) - (a === selected));
+  for (const [name, j] of order) {
     if ($("editShapes").checked) {
       const k = j.polygon.findIndex(([x, y]) => near(x, y));
       if (k >= 0) { drag = { name, k }; selected = name; break; }
@@ -231,13 +241,15 @@ function tick(now) {
 $("reset").onclick = () => { angles = {}; anim = null; $("walk").checked = false; buildJointList(); draw(); };
 $("auto").onclick = () => {
   rig = autoRig(img, $("pose").value, $("dir").value);
-  const e = edits(); delete e[key()]; store.set("tmb.rig." + $("char").value, e);
+  saveEdit(rig);
   angles = {}; rebuild(); buildJointList(); draw();
 };
+// Forget this browser's edits to this view and show rig.json's again.
+$("revert").onclick = () => { dropEdit(); loadView(); };
 
 function exportAll() {
   // Everything known for this character: rig.json entries overlaid with this browser's edits.
-  const out = { character: $("char").value, version: 1, units: "normalized to the sprite canvas (0..1)", limits: rigFile.limits || {}, rigs: { ...rigFile.rigs, ...edits() } };
+  const out = { character: $("char").value, version: 1, revision: revision(), units: "normalized to the sprite canvas (0..1)", limits: rigFile.limits || {}, rigs: { ...rigFile.rigs, ...edits() } };
   return JSON.stringify(out, null, 1);
 }
 function copy(text) {

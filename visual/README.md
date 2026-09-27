@@ -31,6 +31,7 @@ line; the voice-only export is not indexable.
 | `engine/gestures.js` | the animation presets (nod, look-left, point, wave, type, lean-forward, walk…) as small eased joint angles |
 | `rig.html` + `engine/rig-editor.js` | dev-only rig editor; not linked from the story |
 | `../assets/characters/<name>/rig.json` | each character's rig: parts, pivots and limits, normalized to the sprite, per pose and direction |
+| `../scripts/trace-arms.py` | traces the arm parts in rig.json to each arm's own outline, from the skeletons in `<name>/arms.json` |
 
 ## Writing a scene
 
@@ -152,11 +153,18 @@ small (head 5 to 10 degrees, torso 3 to 6, arms 10 to 30) and ease in and out; t
 limits in each rig.json cap them again per character. Sarah's torso is limited to 3
 degrees and her torso is one rigid piece, so her pregnancy is never bent or stretched.
 
-The rigs were made automatically from each sprite's silhouette. That is good enough for
-heads, torsos and arms held away from the body, but it cannot see a hand lying on a
-thigh: the pixels between the fingers are trousers, and what is behind the hand was
-never drawn. Those arms are capped at 4 degrees until someone outlines the hand by hand.
-`visual/rig.html` is the editor for that: pick character, pose and direction, drag
-pivots, tick "Edit shapes" and drag corners, double-click an edge to add a corner,
-right-click or Alt-click one to remove it, preview presets, then download rig.json.
-Edits are kept in that browser until exported.
+The rigs started automatic, cut from each sprite's silhouette as boxes. A box cannot
+see a hand lying on a thigh: the pixels between the fingers are trousers, and they went
+with the hand. So Jack's and Sarah's arms are now traced to the arm's own outline in
+every view (`scripts/trace-arms.py`, from the arm skeletons in each character's
+`arms.json`), with a cap at the elbow and wrist so a bend does not open a notch. What a
+moved arm uncovers is filled from the colours around it: trousers under a hand, shirt
+beside an elbow, the armrest under a wrist. Arms hidden behind the body or the chair are
+not parts. Heads, torsos and legs are still boxes. Mark's and Lena's rigs are still fully
+automatic, with side and seated arms capped at 4 degrees until they are traced the same way.
+
+`visual/rig.html` is the editor: pick character, pose and direction, drag pivots, tick
+"Edit shapes" and drag corners, double-click an edge to add a corner, right-click or
+Alt-click one to remove it, preview presets, then download rig.json. Edits are kept in
+that browser until exported, against the rig.json revision they were made on, so a newer
+rig.json is never hidden by old edits; "Revert this view to rig.json" drops them.

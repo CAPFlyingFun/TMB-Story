@@ -45,7 +45,8 @@ export function mirrorRig(rig) {
       polygon: j.polygon.map(([x, y]) => [1 - x, y]),
     };
   }
-  return { ...rig, facing: -(rig.facing || 0), joints };
+  const fill = rig.fill && rig.fill.map((poly) => poly.map(([x, y]) => [1 - x, y]));
+  return { ...rig, facing: -(rig.facing || 0), joints, ...(fill ? { fill } : {}) };
 }
 
 // ---------------------------------------------------------------------------------------
@@ -161,6 +162,7 @@ function armChain(put, side, xs, xe, xw, armW, lv, fy, s) {
 // Building the layers: one canvas per part plus a base for whatever no part covers.
 
 const MARGIN = 0.3; // room around the sprite for a part that swings out, as a share of its width
+const GROW = 2; // px: how far past a covering part's pixels the part behind it is refilled
 
 function polyPath(g, poly, W, H) {
   g.beginPath();
@@ -214,33 +216,66 @@ export class Rig {
     bg.drawImage(img, 0, 0);
     bg.globalCompositeOperation = "destination-out";
     for (const [, j] of joints) { polyPath(bg, j.polygon, W, H); bg.fill(); }
+    // What the parts uncover inside the figure (a thigh under a resting hand, a chair's
+    // armrest): rig.fill marks those areas, and they are filled from the colours around
+    // them. Elsewhere the base stays open, so a hand held against the background leaves
+    // background behind it.
+    if (rig.fill && rig.fill.length) {
+      const mask = canvas(W, H), mg = mask.getContext("2d");
+      mg.fillStyle = "#000";
+      for (const poly of rig.fill) { polyPath(mg, poly, W, H); mg.fill(); }
+      const under = canvas(W, H), ug = under.getContext("2d");
+      ug.drawImage(pushPull(base), 0, 0);
+      ug.globalCompositeOperation = "destination-in";
+      ug.drawImage(mask, 0, 0);
+      bg.globalCompositeOperation = "destination-over";
+      bg.drawImage(under, 0, 0);
+    }
     this.base = base;
+    // Each part as drawn: the sprite clipped to its polygon.
+    const own = {};
     for (const [name, j] of joints) {
-      // The part as drawn...
-      const own = canvas(W, H), og = own.getContext("2d");
-      og.save();
-      polyPath(og, j.polygon, W, H);
-      og.clip();
-      og.drawImage(img, 0, 0);
-      og.restore();
-
-      // ...and where parts in front of it cover it, a fill from its own colours. The
-      // covering shapes are shrunk by 3 px so the edge a part in front blends over is still
-      // the original picture: at rest nothing shows a seam.
-      const front = joints.filter(([, k]) => k.z > j.z);
+      const c = canvas(W, H), g = c.getContext("2d");
+      g.save();
+      polyPath(g, j.polygon, W, H);
+      g.clip();
+      g.drawImage(img, 0, 0);
+      g.restore();
+      own[name] = c;
+    }
+    for (const [name, j] of joints) {
+      // Where a part in front really covers this one (for a traced part, its drawn pixels
+      // and 2 px more so the edge it blended over goes too), this part gets a
+      // fill from its own colours around the hole. So a moved hand uncovers trousers, not a
+      // hand-shaped ghost of itself. A limb's own next piece (the forearm over the end of
+      // the upper arm, the hand over the wrist) is the same limb, not a cover: the piece
+      // behind keeps its real pixels there.
+      const sameLimb = (k) => k.parent === name && name !== "torso" && name !== "head";
+      const front = joints.filter(([, k]) => k.z > j.z && !sameLimb(k));
       if (front.length) {
         const hole = canvas(W, H), hg = hole.getContext("2d");
-        hg.fillStyle = "#000";
-        for (const [, k] of front) { polyPath(hg, k.polygon, W, H); hg.fill(); }
-        hg.globalCompositeOperation = "destination-out";
-        hg.lineWidth = 6;
-        for (const [, k] of front) { polyPath(hg, k.polygon, W, H); hg.stroke(); }
+        for (const [kn, k] of front) {
+          if (k.traced) {
+            // an outline traced to the part itself (scripts/trace-arms.py): its pixels
+            for (let dx = -GROW; dx <= GROW; dx++)
+              for (let dy = -GROW; dy <= GROW; dy++) if (dx * dx + dy * dy <= GROW * GROW + 1) hg.drawImage(own[kn], dx, dy);
+          } else {
+            // a rough automatic box: its polygon shrunk by 3 px, so the straight edge it
+            // cuts through the body is still the original picture at rest
+            const b = canvas(W, H), bg2 = b.getContext("2d");
+            bg2.fillStyle = "#000";
+            polyPath(bg2, k.polygon, W, H); bg2.fill();
+            bg2.globalCompositeOperation = "destination-out";
+            bg2.lineWidth = 6;
+            polyPath(bg2, k.polygon, W, H); bg2.stroke();
+            hg.drawImage(b, 0, 0);
+          }
+        }
         hg.globalCompositeOperation = "destination-in";
-        polyPath(hg, j.polygon, W, H);
-        hg.fill();
+        hg.drawImage(own[name], 0, 0);
         // own pixels outside the hole, then the fill inside it
         const keep = canvas(W, H), kg = keep.getContext("2d");
-        kg.drawImage(own, 0, 0);
+        kg.drawImage(own[name], 0, 0);
         kg.globalCompositeOperation = "destination-out";
         kg.drawImage(hole, 0, 0);
         const filled = pushPull(keep), fg = canvas(W, H), f2 = fg.getContext("2d");
@@ -250,7 +285,7 @@ export class Rig {
         f2.globalCompositeOperation = "source-over";
         f2.drawImage(keep, 0, 0);
         this.layers[name] = fg;
-      } else this.layers[name] = own;
+      } else this.layers[name] = own[name];
     }
   }
 
