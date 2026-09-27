@@ -67,7 +67,15 @@ def trace_arm(img, pts, widths, bg=(), fg=(), hem=None):
     core = set(np.unique(lab[(dn < 0.4) & arm & ~sleeve])) - {0}
     arm = np.isin(lab, list(core)) | sleeve
     arm = cv2.morphologyEx(arm.astype(np.uint8), cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8)).astype(bool)
-    parts = [(arm & (near == i)) for i in range(3)]
+    # Split at the joints square to the bone above, not on the bisector: a pixel nearer the
+    # forearm but still above the elbow belongs to the upper arm, and one nearer the upper
+    # arm but past the elbow belongs to the forearm. Otherwise the corner of the upper arm
+    # past the joint pokes out when the forearm turns away (a step at the wrist).
+    seg = near.copy()
+    for i in range(2):
+        seg[(near == i) & (T[i] > 1)] = i + 1
+        seg[(near == i + 1) & (T[i + 1] < 0) & (T[i] <= 1)] = i
+    parts = [(arm & (seg == i)) for i in range(3)]
     # Caps: the forearm also carries the end of the upper arm around the elbow, and the hand
     # the end of the forearm around the wrist. At rest these are the same pixels drawn twice;
     # when a joint bends, the cap turns with the lower piece and closes the notch that a
