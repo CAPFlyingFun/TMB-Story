@@ -122,9 +122,11 @@ const REST = [
   //  toward him. She glanced from Jack to the computer." (revised 2026-09-26)
   { at: L("Sarah Bennett"), action: "scene", name: "Sarah" },
   { at: { cue: "ch01-101-sarah-enters", offset: -0.4 }, action: "show", actor: "sarah" },
-  // She stops at the corner of the desks, left of the second console (Joshua, 2026-09-26,
-  // marking it on a screenshot), nearer the camera than Jack, so she stands tall in frame.
-  ...walk("sarah", { cue: "ch01-101-sarah-enters", offset: -0.4 }, [1270, 1290], 3.2, "northwest", "west"),
+  { at: { cue: "ch01-101-sarah-enters", offset: -0.4 }, action: "opacity", target: "sarah", to: 1, duration: 0.4, ease: "out" },
+  // Straight up the aisle from the bottom of the frame -- heading 272 degrees in GameMaker's
+  // terms, inside Joshua's 265-275 -- to the corner of the desks he marked, large at the
+  // bottom and her normal size where she stops.
+  ...walk("sarah", { cue: "ch01-101-sarah-enters", offset: -0.4 }, [1270, 1290], 3.2, "north", "west"),
   { at: L("Please tell me you didn't break"), action: "face", actor: "jack", direction: "east", label: "Jack turns to her" },
   { at: L("Please tell me you didn't break"), action: "state", actor: "jack", state: "awake" },
   { at: L("Jack gestured toward the console."), action: "face", actor: "jack", direction: "northeast" },
@@ -173,9 +175,10 @@ const REST = [
   // comes back from past the camera already seated, rolling the other chair to his screen.
   { at: L("Jack gave Sarah his chair"), action: "scene", name: "The chair" },
   { at: L("Jack gave Sarah his chair", { offset: 0.2 }), action: "stand", actor: "jack" },
-  // Jack goes out past the camera on the left -- Sarah's entrance mirrored -- growing as he
-  // nears the lens, to "the next workstation", which is behind the camera.
-  ...walk("jack", L("Jack gave Sarah his chair", { offset: 0.5 }), [-330, 1600], 2.4, "southwest"),
+  // Jack walks straight down the aisle toward the lens (heading 271 degrees), growing, and
+  // fades as he passes the camera to "the next workstation", which is behind it.
+  ...walk("jack", L("Jack gave Sarah his chair", { offset: 0.5 }), [760, 2050], 2.4, "south"),
+  { at: L("Jack gave Sarah his chair", { offset: 2.3 }), action: "opacity", target: "jack", to: 0, duration: 0.6, ease: "in" },
   // Exactly where Jack's chair stood (he leaned back to 740, 1196), so the chair she sits in
   // is his: same place, same size.
   ...walk("sarah", L("Jack gave Sarah his chair", { offset: 1.1 }), [740, 1196], 0.9, "northwest"),
@@ -183,8 +186,10 @@ const REST = [
   { at: L("Jack gave Sarah his chair", { offset: 2.1 }), action: "face", actor: "sarah", direction: "north" },
   { at: L("Jack gave Sarah his chair", { offset: 2.6 }), action: "move", actor: "sarah", x: SARAH_SEAT[0], y: SARAH_SEAT[1], duration: 2.2, ease: "inOut", label: "Sarah rolls to her console" },
   { at: L("Jack gave Sarah his chair", { phrase: "and dragged its chair back" }), action: "sit", actor: "jack" },
-  { at: L("Jack gave Sarah his chair", { phrase: "and dragged its chair back" }), action: "face", actor: "jack", direction: "northeast" },
-  // ...and comes back seated, rolling in from past the lens and shrinking to his screen.
+  { at: L("Jack gave Sarah his chair", { phrase: "and dragged its chair back" }), action: "face", actor: "jack", direction: "north" },
+  // ...and comes back seated, rolling straight up the aisle from past the lens (heading
+  // 269 degrees the other way round) and shrinking to his screen.
+  { at: L("Jack gave Sarah his chair", { phrase: "wheels squeaking" }), action: "opacity", target: "jack", to: 1, duration: 0.5, ease: "out" },
   { at: L("Jack gave Sarah his chair", { phrase: "wheels squeaking" }), action: "move", actor: "jack", x: JACK_SEAT[0], y: JACK_SEAT[1], duration: 3.2, ease: "inOut", label: "Jack rolls the other chair back" },
   { at: L("Jack gave Sarah his chair", { edge: "end", offset: -0.4 }), action: "face", actor: "jack", direction: "northeast" },
   { at: L("Jack gave Sarah his chair", { edge: "end", offset: -0.4 }), action: "state", actor: "jack", state: "leaning" },
@@ -334,6 +339,13 @@ export default {
         background: "../assets/backgrounds/lab-wide.jpg",
         bounds: { x: -790, y: -182, w: 3628, h: 2041 },
         backgroundRect: { x: -790, y: -182, w: 3628, h: 2041 },
+        // The walkable floor: the aisle between the two runs of cabinets, traced on the wide
+        // picture where the cabinets meet the floor (Joshua, 2026-09-27: "Jack's chair's foot
+        // is in the cabinet"). The back edge is the front of the centre desk; the sides run
+        // out toward the camera and on past the bottom of the picture. The stage keeps every
+        // footprint inside it: the chair's base seated, the feet standing.
+        floor: [[690, 1100], [1400, 1100], [1420, 1213], [1513, 1320], [1740, 1587], [1920, 1780], [3240, 3200],
+          [-708, 3200], [300, 1760], [620, 1300], [690, 1290]],
         // Floor perspective, measured on the image: the centre desk's legs meet the floor at
         // y = 1135, where the 1.7 m desk spans 660 px; its edges converge near y = 580. A point
         // on the floor at y is (y - 580) * 388 / 555 pixels per metre.
@@ -344,10 +356,10 @@ export default {
 
       actors: {
         jack: { sprite: "../assets/characters/jack/", pose: "sitting", facing: "northeast", state: "asleep", x: 720, y: 1200, layer: "room" },
-        // The door is behind the camera, to the right. Sarah comes in past the lens, from off
-        // the bottom-right corner: near the camera she is large, and she shrinks to her normal
-        // size as she walks into the room (perspective does it; nothing is scaled by hand).
-        sarah: { sprite: "../assets/characters/sarah/", pose: "standing", facing: "northwest", state: "idle", x: 2330, y: 1580, layer: "room", visible: false },
+        // The door is behind the camera. Sarah comes in past the lens at the bottom of the
+        // frame, large, and shrinks to her normal size as she walks up into the room
+        // (perspective does it; nothing is scaled by hand).
+        sarah: { sprite: "../assets/characters/sarah/", pose: "standing", facing: "north", state: "idle", x: 1255, y: 1700, layer: "room", visible: false, opacity: 0 },
       },
 
       screens: {

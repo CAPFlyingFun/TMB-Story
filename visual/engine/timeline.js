@@ -229,6 +229,7 @@ export function compileScene(scene, anchors) {
       pose: new Step(a.pose),
       state: new Step(a.state || "idle"),
       visible: new Step(a.visible !== false),
+      opacity: new Cont({ v: a.opacity ?? 1 }),
       jolts: [],
     };
   }
@@ -262,9 +263,12 @@ export function compileScene(scene, anchors) {
         if (!sets[ev.set]) throw new Error(`timeline: unknown set "${ev.set}"`);
         T.set.add(ev.t, ev.set);
         break;
-      case "opacity":
-        need("objects", ev.target).opacity.add(ev.t, dur, { v: ev.to }, ease);
+      case "opacity": {
+        // An object, or a character fading (passing the camera, stepping out of shot).
+        const o = T.objects[ev.target] || T.actors[ev.target] || need("objects", ev.target);
+        o.opacity.add(ev.t, dur, { v: ev.to }, ease);
         break;
+      }
       case "title":
         // A title card over the picture: fades in, holds, fades out.
         T.titles.push({ t: ev.t, dur: dur || 3, fadeIn: ev.fadeIn ?? 0.8, fadeOut: ev.fadeOut ?? 0.8, text: ev.text, sub: ev.sub || "" });
@@ -343,6 +347,7 @@ export function compileScene(scene, anchors) {
         pose: a.pose.at(t),
         state: a.state.at(t),
         visible: a.visible.at(t).v,
+        opacity: a.opacity.valueAt(t).v,
         jolt: impulses(a.jolts, t, bump),
       };
     }

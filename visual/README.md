@@ -87,7 +87,10 @@ are more) and can also zoom faster than the ground as the camera pushes in
 (`zoomDepth`), the way something nearer the lens does. At the widest framing every layer
 lines up, and they separate as the camera comes down. `objects` place an image (`src`)
 or a painted canvas (`paint`, a function in the scene's `painters`) on a layer in world
-coordinates, with an `opacity` and an optional `drift` in pixels per second. A world's `bounds`
+coordinates, with an `opacity` and an optional `drift` in pixels per second. A world's `floor` (a polygon) is where
+people can be: the stage keeps each footprint inside it every frame, the chair's base
+seated and the feet standing. Characters fade with `opacity` like objects (for passing
+the camera). A world's `bounds`
 can run past its measured picture (the lab's goes to negative x and y), and a world's
 `color` fills everything past the layers, and `bounded: false` lets the camera frame
 wider than the world (the sea runs on), so a long zoom never parks at the widest framing: the island's open sea is a colour, not a

@@ -18,6 +18,7 @@ const IDLE = {
   walking: { sway: 0.9, period: 1.05, lean: 0.6, step: 1 }, // a storybook walk: a sway and a light step
 };
 const CROSSFADE = 0.14; // seconds, when a character turns or changes pose
+const FEET_HALF_M = 0.2; // half the width a standing person's feet take on the floor
 
 export class Stage {
   constructor(root, set, sprites, url, painters = {}) {
@@ -108,6 +109,35 @@ export class Stage {
     }
   }
 
+  // The walkable floor (world.floor, a polygon in world units). A character's footprint --
+  // the chair's base seated, the feet standing -- is kept inside it every frame, so a chair
+  // wheel never sinks into a cabinet whatever the scene asks for.
+  floorRange(y) {
+    const P = this.set.world.floor;
+    let lo = Infinity, hi = -Infinity;
+    for (let i = 0; i < P.length; i++) {
+      const [x1, y1] = P[i], [x2, y2] = P[(i + 1) % P.length];
+      if ((y1 <= y && y <= y2) || (y2 <= y && y <= y1)) {
+        const x = y1 === y2 ? Math.min(x1, x2) : x1 + ((y - y1) * (x2 - x1)) / (y2 - y1);
+        const xb = y1 === y2 ? Math.max(x1, x2) : x;
+        lo = Math.min(lo, x, xb);
+        hi = Math.max(hi, x, xb);
+      }
+    }
+    return lo <= hi ? [lo, hi] : null;
+  }
+
+  onFloor(a, pose) {
+    const F = this.set.world.floor;
+    if (!F) return [a.x, a.y];
+    let y = Math.max(a.y, Math.min(...F.map((p) => p[1])));
+    const r = this.floorRange(y);
+    if (!r) return [a.x, y];
+    const half = (pose.chairBaseM ? pose.chairBaseM / 2 : FEET_HALF_M) * this.ppm(y);
+    const lo = r[0] + half, hi = r[1] - half;
+    return [lo > hi ? (r[0] + r[1]) / 2 : Math.min(Math.max(a.x, lo), hi), y];
+  }
+
   ppm(y) {
     return this.ppmK * (y - this.horizonY);
   }
@@ -139,8 +169,10 @@ export class Stage {
   }
 
   drawActor(node, a, t) {
-    node.wrap.style.display = a.visible ? "" : "none";
-    if (!a.visible) return;
+    const shown = a.visible && a.opacity > 0.001;
+    node.wrap.style.display = shown ? "" : "none";
+    if (!shown) return;
+    node.wrap.style.opacity = a.opacity < 1 ? a.opacity.toFixed(3) : "";
     const spr = node.sprite;
     const pose = spr.poses[a.pose.v];
     const frame = (poseName, dir) => this.url(spr.base + spr.poses[poseName].frames[dir].file);
@@ -168,7 +200,8 @@ export class Stage {
     }
     // One scale from world units: the pose's pixels per metre against the room's
     // pixels per metre at this depth. Moving toward the camera makes a character larger.
-    const s = this.ppm(a.y) / pose.pxPerMeter;
+    const [fx, fy] = this.onFloor(a, pose);
+    const s = this.ppm(fy) / pose.pxPerMeter;
     const [ax, ay] = pose.anchor;
     for (const img of [node.cur, node.prev]) {
       img.style.left = -ax + "px";
@@ -182,8 +215,8 @@ export class Stage {
     const rot = lean + sway * Math.sin((2 * Math.PI * t) / period) - a.jolt * 3.2;
     const step = (pv.step || 0) + ((st.step || 0) - (pv.step || 0)) * Math.min(1, (t - a.state.since) / 0.25);
     const hop = -a.jolt * 5 - step * Math.abs(Math.sin((2 * Math.PI * t) / period)) * 5;
-    node.wrap.style.zIndex = Math.round(a.y);
-    node.wrap.style.transform = `translate3d(${a.x.toFixed(2)}px,${(a.y + hop).toFixed(2)}px,0) rotate(${rot.toFixed(3)}deg) scale(${s.toFixed(4)})`;
+    node.wrap.style.zIndex = Math.round(fy);
+    node.wrap.style.transform = `translate3d(${fx.toFixed(2)}px,${(fy + hop).toFixed(2)}px,0) rotate(${rot.toFixed(3)}deg) scale(${s.toFixed(4)})`;
   }
 
   drawLight(node, l) {
