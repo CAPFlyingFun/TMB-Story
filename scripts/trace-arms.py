@@ -77,8 +77,12 @@ def trace_arm(img, pts, widths, bg=(), fg=(), hem=None):
         parts[i] = parts[i] | (arm & (np.hypot(xx - cx, yy - cy) < widths[i - 1] * 0.85))
     return parts, arm
 
-def to_poly(m, W, H, eps=0.8):
-    m = cv2.dilate(m.astype(np.uint8), np.ones((3, 3), np.uint8))
+def to_poly(m, W, H, alpha, eps=0.6):
+    # Grow one pixel only into empty background, where it takes the arm's soft edge along.
+    # Against the body (a hand on a knee) the edge pixels are part khaki, so the outline
+    # stops at the arm's own pixels and the part behind is refilled under it.
+    m = m.astype(np.uint8)
+    m = (m | (cv2.dilate(m, np.ones((3, 3), np.uint8)) & ~alpha)).astype(np.uint8)
     cs, _ = cv2.findContours(m, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     if not cs: return None
     c = max(cs, key=cv2.contourArea)
@@ -117,7 +121,7 @@ if __name__ == "__main__":
                     parts, names, pivs = [parts[0] | parts[1] | parts[2]], ["Hand"], [pts[2]]
                 for name, m, pv in zip(names, parts, pivs):
                     j = rig["joints"][side + name]
-                    j["polygon"] = to_poly(m, W, H); j["pivotX"] = round(pv[0] / W, 4); j["pivotY"] = round(pv[1] / H, 4)
+                    j["polygon"] = to_poly(m, W, H, (im[..., 3] > 8).astype(np.uint8)); j["pivotX"] = round(pv[0] / W, 4); j["pivotY"] = round(pv[1] / H, 4)
                     j.pop("maxAngle", None)
                     j["traced"] = True
                     col = {"UpperArm": (0, 220, 255, 255), "Forearm": (255, 220, 0, 255), "Hand": (255, 40, 40, 255)}[name]
