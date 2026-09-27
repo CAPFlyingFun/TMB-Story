@@ -44,7 +44,10 @@ const says = (line, o) => ({ at: L(line, o), action: "light", target: "intercom"
 const J = "jack-monitor", S = "sarah-monitor";
 
 // Where the two end up: Jack at his own screen, Sarah at the console to his right.
-const JACK_SEAT = [745, 1184], SARAH_SEAT = [1150, 1184]; // the same depth: the same-size chairs
+// Side by side, each nearly in front of their own monitor (Joshua, 2026-09-27), at the same
+// depth so the chairs are the same size. Jack's first chair, the one he gives Sarah, sits
+// where the floor lets it: against the left cabinets at 836.
+const JACK_SEAT = [890, 1184], SARAH_SEAT = [1210, 1184], JACKS_OLD_CHAIR = [836, 1196];
 
 const REST = [
   // "Come on. What are you doing?" / "An unfamiliar connection appeared for half a second
@@ -150,7 +153,7 @@ const REST = [
   { at: L("Sarah tapped the edge of the keyboard."), action: "jolt", actor: "sarah", amount: 0.2, duration: 0.4 },
   { at: L("Sarah's attention sharpened."), action: "state", actor: "sarah", state: "awake" },
   { at: L("Jack nodded.", { nth: 0 }), action: "jolt", actor: "jack", amount: 0.25, duration: 0.5 },
-  { at: L("Jack leaned back."), action: "move", actor: "jack", x: 740, y: 1196, duration: 0.8, ease: "out" },
+  { at: L("Jack leaned back."), action: "move", actor: "jack", x: JACKS_OLD_CHAIR[0], y: JACKS_OLD_CHAIR[1], duration: 0.8, ease: "out" },
   { at: L("Jack leaned back."), action: "state", actor: "jack", state: "idle" },
   { at: L("Sarah stared at him"), action: "face", actor: "sarah", direction: "west" },
   { at: L("Sarah stared at him", { phrase: "before looking back" }), action: "face", actor: "sarah", direction: "northwest" },
@@ -163,10 +166,13 @@ const REST = [
   { at: L("Sarah started powering up", { offset: 1.6 }), action: "light", target: "sarahScreen", intensity: 0.3, duration: 1.2 },
   { at: L("Can I take your chair?"), action: "face", actor: "sarah", direction: "west" },
   // "Sarah nudged the arm of his chair, looking slightly annoyed, but sympathetic."
-  ...walk("sarah", L("Sarah nudged the arm of his chair"), [935, 1234], 1.1, "west"),
+  // 1) She comes in close to nudge his chair...
+  ...walk("sarah", L("Sarah nudged the arm of his chair"), [950, 1234], 1.1, "west"),
   { at: L("Sarah nudged the arm of his chair", { offset: 1.2 }), action: "jolt", actor: "jack", amount: 0.35, duration: 0.5 },
   { at: L("Sarah nudged the arm of his chair", { offset: 1.2 }), action: "jolt", actor: "sarah", amount: 0.2, duration: 0.4 },
   { at: L("Let me have your chair"), action: "camera", shot: "room", duration: 2.6, ease: "inOut", label: "wide for the chair swap" },
+  // ...and backs up out of his way, still facing him, so he has room to stand.
+  { at: L("Let me have your chair", { offset: 0.2 }), action: "move", actor: "sarah", x: 1130, y: 1264, duration: 1.2, ease: "inOut", label: "Sarah backs up" },
 
   // "Jack gave Sarah his chair, crossed to the next workstation, and dragged its chair back,
   //  wheels squeaking against the floor, before pulling himself up to his own screen."
@@ -174,21 +180,23 @@ const REST = [
   // past the camera on the left, Sarah sits in his place and rolls to her console, and Jack
   // comes back from past the camera already seated, rolling the other chair to his screen.
   { at: L("Jack gave Sarah his chair"), action: "scene", name: "The chair" },
+  // 2) Jack stands...
   { at: L("Jack gave Sarah his chair", { offset: 0.2 }), action: "stand", actor: "jack" },
-  // Jack walks straight down the aisle toward the lens (heading 271 degrees), growing, and
+  // 3) ...and walks straight down the aisle toward the lens (heading 270), growing, and
   // fades as he passes the camera to "the next workstation", which is behind it.
-  ...walk("jack", L("Jack gave Sarah his chair", { offset: 0.5 }), [760, 2050], 2.4, "south"),
-  { at: L("Jack gave Sarah his chair", { offset: 2.3 }), action: "opacity", target: "jack", to: 0, duration: 0.6, ease: "in" },
-  // Exactly where Jack's chair stood (he leaned back to 740, 1196), so the chair she sits in
-  // is his: same place, same size.
-  ...walk("sarah", L("Jack gave Sarah his chair", { offset: 1.1 }), [740, 1196], 0.9, "northwest"),
-  { at: L("Jack gave Sarah his chair", { offset: 2.1 }), action: "sit", actor: "sarah" },
-  { at: L("Jack gave Sarah his chair", { offset: 2.1 }), action: "face", actor: "sarah", direction: "north" },
-  { at: L("Jack gave Sarah his chair", { offset: 2.6 }), action: "move", actor: "sarah", x: SARAH_SEAT[0], y: SARAH_SEAT[1], duration: 2.2, ease: "inOut", label: "Sarah rolls to her console" },
+  ...walk("jack", L("Jack gave Sarah his chair", { offset: 0.4 }), [836, 2050], 2.4, "south"),
+  { at: L("Jack gave Sarah his chair", { offset: 2.0 }), action: "opacity", target: "jack", to: 0, duration: 0.8, ease: "in" },
+  // 3a) Once he is out of her way, Sarah takes his chair -- exactly where it stood -- and
+  // rolls it to her own screen while he is still on his way out.
+  ...walk("sarah", L("Jack gave Sarah his chair", { offset: 1.6 }), JACKS_OLD_CHAIR, 0.9, "west"),
+  { at: L("Jack gave Sarah his chair", { offset: 2.5 }), action: "sit", actor: "sarah" },
+  { at: L("Jack gave Sarah his chair", { offset: 2.5 }), action: "face", actor: "sarah", direction: "north" },
+  { at: L("Jack gave Sarah his chair", { offset: 2.8 }), action: "move", actor: "sarah", x: SARAH_SEAT[0], y: SARAH_SEAT[1], duration: 2.2, ease: "inOut", label: "Sarah rolls to her console" },
   { at: L("Jack gave Sarah his chair", { phrase: "and dragged its chair back" }), action: "sit", actor: "jack" },
+  { at: L("Jack gave Sarah his chair", { phrase: "and dragged its chair back" }), action: "move", actor: "jack", x: 860, y: 2050, label: "(out of sight, with the other chair)" },
   { at: L("Jack gave Sarah his chair", { phrase: "and dragged its chair back" }), action: "face", actor: "jack", direction: "north" },
-  // ...and comes back seated, rolling straight up the aisle from past the lens (heading
-  // 269 degrees the other way round) and shrinking to his screen.
+  // ...and comes back seated, rolling straight up the aisle from past the lens (within 2
+  // degrees of straight up) and shrinking to his screen.
   { at: L("Jack gave Sarah his chair", { phrase: "wheels squeaking" }), action: "opacity", target: "jack", to: 1, duration: 0.5, ease: "out" },
   { at: L("Jack gave Sarah his chair", { phrase: "wheels squeaking" }), action: "move", actor: "jack", x: JACK_SEAT[0], y: JACK_SEAT[1], duration: 3.2, ease: "inOut", label: "Jack rolls the other chair back" },
   { at: L("Jack gave Sarah his chair", { edge: "end", offset: -0.4 }), action: "face", actor: "jack", direction: "northeast" },
@@ -401,9 +409,9 @@ export default {
         twoshot: { x: 420, y: 380, w: 1180, h: 772, focus: [930, 820] },
         leanover: { x: 540, y: 440, w: 760, h: 660, focus: [880, 820] },
         sarahScreen: { x: 1010, y: 560, w: 340, h: 256, focus: [1176, 656] },
-        pair: { x: 520, y: 450, w: 900, h: 660, focus: [945, 830] },
-        pairClose: { x: 600, y: 520, w: 700, h: 560, focus: [945, 840] },
-        onSarah: { x: 880, y: 520, w: 560, h: 480, focus: [1150, 840] },
+        pair: { x: 600, y: 450, w: 900, h: 660, focus: [1050, 830] },
+        pairClose: { x: 700, y: 520, w: 700, h: 560, focus: [1050, 840] },
+        onSarah: { x: 940, y: 520, w: 560, h: 480, focus: [1210, 840] },
       },
       camera: { initial: { shot: "establishing" }, name: "Lab" },
     },
