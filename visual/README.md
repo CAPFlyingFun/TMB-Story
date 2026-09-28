@@ -32,6 +32,7 @@ line; the voice-only export is not indexable.
 | `rig.html` + `engine/rig-editor.js` | dev-only rig editor; not linked from the story |
 | `../assets/characters/<name>/rig.json` | each character's rig: parts, pivots and limits, normalized to the sprite, per pose and direction |
 | `../scripts/trace-arms.py` | traces the arm parts in rig.json to each arm's own outline, from the skeletons in `<name>/arms.json` |
+| `../scripts/trace-legs.py` | traces the standing legs in rig.json from the silhouette (run after trace-arms.py) |
 
 ## Writing a scene
 
@@ -160,8 +161,25 @@ every view (`scripts/trace-arms.py`, from the arm skeletons in each character's
 `arms.json`), with a cap at the elbow and wrist so a bend does not open a notch. What a
 moved arm uncovers is filled from the colours around it: trousers under a hand, shirt
 beside an elbow, the armrest under a wrist. Arms hidden behind the body or the chair are
-not parts. Heads, torsos and legs are still boxes. Mark's and Lena's rigs are still fully
-automatic, with side and seated arms capped at 4 degrees until they are traced the same way.
+not parts. Standing legs are traced too (`scripts/trace-legs.py`, run after the arms):
+every pixel of the figure below the hips that is not an arm belongs to a leg, split
+between the two legs down the gap that shows between them, so a whole leg and its shoe
+move together. Sarah's skirt stays with her body and her legs move under it. In a side
+view the legs overlap into one shape and are left as drawn. Heads and torsos are still
+boxes. Mark's and Lena's rigs are still fully automatic, with side and seated arms capped
+at 4 degrees until they are traced the same way.
+
+At rest the rig is the sprite, pixel for pixel: parts are cut with hard edges, each
+half-transparent edge pixel belongs to one part only, and what a part uncovers is
+painted in only under solid pixels and only as the part in front actually moves. Under a
+traced limb, only what the tracer found inside the body is painted in; above a forearm
+lying on a lap is the room, and the room shows.
+
+With `?rig=1` the characters are never quite still: they breathe, and their heads drift
+a little, each at their own pace. Jack dozes at the start of the lab scene, head tipped
+toward one shoulder, stirs at the first tone, and snaps up when he jerks awake. After
+that, each line of Chapter 1 that describes a movement has its gesture (leaning in,
+glancing across, pointing, reaching for the console, typing).
 
 `visual/rig.html` is the editor: pick character, pose and direction, drag pivots, tick
 "Edit shapes" and drag corners, double-click an edge to add a corner, right-click or

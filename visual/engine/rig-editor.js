@@ -74,7 +74,7 @@ async function loadView() {
   $("msg").textContent = `${$("char").value} · ${key()} · ${img.naturalWidth}x${img.naturalHeight} · rig: ${src}`;
 }
 
-function rebuild() { built = new Rig(img, rig, rigFile.limits || {}); }
+function rebuild() { built = new Rig(img, { ...rig, pose: $("pose").value }, rigFile.limits || {}); }
 
 function buildJointList() {
   const box = $("joints");
@@ -231,7 +231,7 @@ function tick(now) {
     if (u >= 1) anim = null;
     else gestures.push({ name: anim.name, u, opts: { arm: anim.arm } });
   }
-  const p = poseFrom(rig, gestures, t, $("walk").checked ? 1 : 0);
+  const p = poseFrom(built.rig, gestures, t, $("walk").checked ? 1 : 0);
   for (const [k, v] of Object.entries(angles)) p.angles[k] = (p.angles[k] || 0) + v;
   draw(p);
   if (anim || $("walk").checked) requestAnimationFrame(tick);

@@ -97,7 +97,7 @@ export class Stage {
       if (this.rigFiles) {
         const rc = el("canvas", "frame rig", wrap);
         rc.style.display = "none";
-        Object.assign(this.actors[id], { rigCanvas: rc, rigs: {}, rigFile: this.rigFiles[id] || {} });
+        Object.assign(this.actors[id], { rigCanvas: rc, rigs: {}, rigFile: this.rigFiles[id] || {}, seed: Object.keys(this.actors).length - 1 });
       }
     }
     this.lights = {};
@@ -239,14 +239,14 @@ export class Stage {
     const hop = -a.jolt * 5 - step * Math.abs(Math.sin((2 * Math.PI * t) / period)) * 5;
     node.wrap.style.zIndex = Math.round(fy);
     node.wrap.style.transform = `translate3d(${fx.toFixed(2)}px,${(fy + hop).toFixed(2)}px,0) rotate(${rot.toFixed(3)}deg) scale(${s.toFixed(4)})`;
-    // The cutout rig (?rig=1): only while a gesture or a walk is moving a part, and never
-    // during a turn's crossfade. At rest the plain sprite is the picture.
+    // The cutout rig (?rig=1): gestures, the walk and a quiet idle (breathing, a small drift
+    // of the head), never during a turn's crossfade, which stays the two plain sprites.
     if (node.rigCanvas) {
       const gestures = a.gestures || [];
       const turning = p >= 0 && p < 1;
-      const R = (gestures.length || step > 0.01) && !turning ? this.rigInstance(node, a.pose.v, a.facing.v) : null;
+      const R = !turning ? this.rigInstance(node, a.pose.v, a.facing.v) : null;
       if (R) {
-        const P = poseFrom(R.rig, gestures, t, step);
+        const P = poseFrom(R.rig, gestures, t, step, step > 0.01 ? null : node.seed);
         R.draw(node.rigCanvas, P.angles, P.shift);
         node.rigCanvas.style.left = -(ax + R.M) + "px";
         node.rigCanvas.style.top = -(ay + R.M) + "px";
@@ -268,7 +268,8 @@ export class Stage {
     const img = new Image();
     img.src = this.url(node.sprite.base + node.sprite.poses[pose].frames[dir].file);
     img.decode().then(() => {
-      node.rigs[k] = new Rig(img, rigFor(node.rigFile, node.sprite, pose, dir, img), (node.rigFile && node.rigFile.limits) || {});
+      const r = { ...rigFor(node.rigFile, node.sprite, pose, dir, img), pose };
+      node.rigs[k] = new Rig(img, r, (node.rigFile && node.rigFile.limits) || {});
     }).catch(() => {});
     return null;
   }

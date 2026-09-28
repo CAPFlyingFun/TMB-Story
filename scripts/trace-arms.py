@@ -115,6 +115,8 @@ if __name__ == "__main__":
             H, W = im.shape[:2]
             rig = rf["rigs"][key]
             allarm = np.zeros((H, W), bool)
+            shoulders = np.zeros((H, W), bool)
+            nofill = np.zeros((H, W), bool)
             prev = Image.fromarray(im).convert("RGBA"); bg = Image.new("RGBA", prev.size, (90, 140, 90, 255)); bg.alpha_composite(prev)
             d = ImageDraw.Draw(bg)
             for side, a in arms.items():
@@ -126,7 +128,11 @@ if __name__ == "__main__":
                 if a.get("upperOnly"):  # forearm and hand hidden (behind an armrest): one piece
                     for n in ["Forearm", "Hand"]: rig["joints"].pop(side + n, None)
                 parts, arm = trace_arm(im, pts, ws, [(x*W, y*H, r*W) for x, y, r in a.get('bg', [])], [(x*W, y*H, r*W) for x, y, r in a.get('fg', [])], [(x*W, y*H) for x, y in a['hem']] if 'hem' in a else None); allarm |= arm
+                if a.get("noFill"): nofill |= arm
                 names, pivs = ["UpperArm", "Forearm", "Hand"], pts[:3]
+                # the top of the arm is the shoulder: when the arm swings, the body is still there
+                yy0, xx0 = np.mgrid[0:H, 0:W]
+                shoulders |= parts[0] & (np.hypot(xx0 - pts[0][0], yy0 - pts[0][1]) < 0.75 * ws[0])
                 if a.get("upperOnly"): parts = [parts[0] | parts[1] | parts[2]]
                 if a.get("handOnly"):  # only the hand shows (the rest is behind her): one piece about the wrist
                     for n in ["UpperArm", "Forearm"]: rig["joints"].pop(side + n, None)
@@ -145,6 +151,31 @@ if __name__ == "__main__":
             r = max(5, int(0.05 * W)) | 1
             closed = cv2.morphologyEx(rest.astype(np.uint8), cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (2*r+1, 2*r+1))).astype(bool)
             fillm = closed & allarm
+            # A limb lying ON something (a forearm across a lap, on an armrest) has the room
+            # above it, not the body: walking straight up through the arm from such a pixel
+            # reaches empty background within a short distance. Those pixels get no fill, so
+            # a lifted forearm uncovers the room, not a block of invented trousers.
+            D = max(8, int(0.08 * W))
+            opaque = im[..., 3] > 8
+            for x in range(W):
+                col = fillm[:, x]
+                if not col.any():
+                    continue
+                run = 0
+                for y in range(H):
+                    if allarm[y, x]:
+                        run += 1
+                        if col[y] and run <= D:
+                            # look up past the arm pixels above this one
+                            yy_ = y - 1
+                            while yy_ >= 0 and allarm[yy_, x]:
+                                yy_ -= 1
+                            if (y - yy_) <= D and (yy_ < 0 or not opaque[yy_, x]):
+                                fillm[y, x] = False
+                    else:
+                        run = 0
+            fillm &= ~nofill
+            fillm |= shoulders
             polys = []
             if fillm.sum() > 20:
                 fm = cv2.dilate(fillm.astype(np.uint8), np.ones((3, 3), np.uint8))

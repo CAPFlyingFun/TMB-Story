@@ -170,6 +170,22 @@ function polyPath(g, poly, W, H) {
   g.closePath();
 }
 
+// A part's shape as a hard-edged mask: every pixel wholly in or wholly out. Cutting the
+// sprite with soft (anti-aliased) edges leaves each edge pixel half in the part and half in
+// the base, and two half-transparent pixels drawn over each other are not a solid one: a
+// faint seam shows along every cut. With hard masks the part and the base add up to the
+// sprite exactly.
+function polyMask(poly, W, H) {
+  const c = canvas(W, H), g = c.getContext("2d", { willReadFrequently: true });
+  polyPath(g, poly, W, H);
+  g.fillStyle = "#000";
+  g.fill();
+  const d = g.getImageData(0, 0, W, H), a = d.data;
+  for (let i = 3; i < a.length; i += 4) a[i] = a[i] >= 128 ? 255 : 0;
+  g.putImageData(d, 0, 0);
+  return c;
+}
+
 function canvas(W, H) {
   const c = document.createElement("canvas");
   c.width = W;
@@ -198,7 +214,14 @@ function pushPull(src) {
     g.drawImage(levels[i + 1], 0, 0, up.width, up.height);
     levels[i] = up;
   }
-  return levels[0];
+  // The averaging leaves the invented colours partly transparent (it counted the empty
+  // background around the figure too): make them solid, or a fill lets the background
+  // show through as a dark line.
+  const out = levels[0], g = out.getContext("2d", { willReadFrequently: true });
+  const d = g.getImageData(0, 0, out.width, out.height), a = d.data;
+  for (let i = 3; i < a.length; i += 4) if (a[i] > 0) a[i] = 255;
+  g.putImageData(d, 0, 0);
+  return out;
 }
 
 export class Rig {
@@ -212,80 +235,163 @@ export class Rig {
     this.order = joints.sort((a, b) => a[1].z - b[1].z).map(([n]) => n);
     this.layers = {};
     // The base: the sprite with every part cut out (the chair, anything unrigged).
+    const masks = {};
+    for (const [name, j] of joints) masks[name] = polyMask(j.polygon, W, H);
+    // The sprite's fully opaque pixels. Anything painted in to hide what a moved part
+    // uncovers goes only under these: a half-transparent edge pixel drawn over a fill is
+    // no longer the pixel the artist drew, so at rest the rig would not be the sprite.
+    const solid = canvas(W, H);
+    {
+      const sg = solid.getContext("2d", { willReadFrequently: true });
+      sg.drawImage(img, 0, 0);
+      const d = sg.getImageData(0, 0, W, H), a = d.data;
+      for (let i = 0; i < a.length; i += 4) { const on = a[i + 3] === 255; a[i] = a[i + 1] = a[i + 2] = 0; a[i + 3] = on ? 255 : 0; }
+      sg.putImageData(d, 0, 0);
+    }
+    const binary = (c) => {
+      const g = c.getContext("2d", { willReadFrequently: true }), d = g.getImageData(0, 0, W, H), a = d.data;
+      for (let i = 3; i < a.length; i += 4) a[i] = a[i] > 0 ? 255 : 0;
+      g.putImageData(d, 0, 0);
+      return c;
+    };
     const base = canvas(W, H), bg = base.getContext("2d");
     bg.drawImage(img, 0, 0);
     bg.globalCompositeOperation = "destination-out";
-    for (const [, j] of joints) { polyPath(bg, j.polygon, W, H); bg.fill(); }
+    for (const [name] of joints) bg.drawImage(masks[name], 0, 0);
     // What the parts uncover inside the figure (a thigh under a resting hand, a chair's
     // armrest): rig.fill marks those areas, and they are filled from the colours around
     // them. Elsewhere the base stays open, so a hand held against the background leaves
     // background behind it.
-    if (rig.fill && rig.fill.length) {
+    // The same for the torso while it is still an automatic box: its straight edge crosses
+    // the shirt, and a breath or a lean would open a hairline to the background along it.
+    // Only inside the figure, so a box's empty corners never paint anything.
+    // Inside the body, as the tracer found it (rig.fill): only there is what a traced limb
+    // uncovers painted in. Elsewhere under a limb is the room, and it shows.
+    const bodyFill = canvas(W, H);
+    {
+      const g = bodyFill.getContext("2d");
+      g.fillStyle = "#000";
+      for (const poly of rig.fill || []) { polyPath(g, poly, W, H); g.fill(); }
+      binary(bodyFill);
+    }
+    const tracedCore = canvas(W, H);
+    {
+      const g = tracedCore.getContext("2d");
+      for (const [n, j] of joints) if (j.traced) g.drawImage(masks[n], 0, 0);
+      g.globalCompositeOperation = "destination-out";
+      g.drawImage(bodyFill, 0, 0);
+    }
+    const boxes = joints.filter(([n, j]) => !j.traced && n !== "head");
+    if ((rig.fill && rig.fill.length) || boxes.length) {
       const mask = canvas(W, H), mg = mask.getContext("2d");
-      mg.fillStyle = "#000";
-      for (const poly of rig.fill) { polyPath(mg, poly, W, H); mg.fill(); }
+      mg.drawImage(bodyFill, 0, 0);
+      // a band just inside each box's straight edge, where a breath would open a hairline
+      for (const [n, j] of boxes) {
+        const band = canvas(W, H), bg3 = band.getContext("2d");
+        bg3.drawImage(masks[n], 0, 0);
+        bg3.globalCompositeOperation = "destination-out";
+        bg3.fillStyle = "#000";
+        polyPath(bg3, j.polygon, W, H); bg3.fill();
+        bg3.globalCompositeOperation = "source-over";
+        bg3.lineWidth = 14; bg3.strokeStyle = "#000";
+        polyPath(bg3, j.polygon, W, H); bg3.stroke();
+        bg3.globalCompositeOperation = "destination-in";
+        bg3.drawImage(masks[n], 0, 0);
+        mg.drawImage(band, 0, 0);
+      }
+      mg.globalCompositeOperation = "destination-in";
+      mg.drawImage(solid, 0, 0);
+      mg.globalCompositeOperation = "destination-out";
+      mg.drawImage(tracedCore, 0, 0);
+      // not under the head: what a turned head uncovers is the room behind it, not shirt
+      if (masks.head) {
+        mg.globalCompositeOperation = "destination-out";
+        for (let dx = -4; dx <= 4; dx += 2) for (let dy = -4; dy <= 4; dy += 2) mg.drawImage(masks.head, dx, dy);
+      }
       const under = canvas(W, H), ug = under.getContext("2d");
       ug.drawImage(pushPull(base), 0, 0);
       ug.globalCompositeOperation = "destination-in";
-      ug.drawImage(mask, 0, 0);
+      ug.drawImage(binary(mask), 0, 0);
       bg.globalCompositeOperation = "destination-over";
       bg.drawImage(under, 0, 0);
     }
     this.base = base;
-    // Each part as drawn: the sprite clipped to its polygon.
-    const own = {};
-    for (const [name, j] of joints) {
-      const c = canvas(W, H), g = c.getContext("2d");
-      g.save();
-      polyPath(g, j.polygon, W, H);
-      g.clip();
+    // Each part as drawn: the sprite cut by its mask. Parts overlap by a pixel on purpose
+    // (a turn must not open a hairline between them), and an opaque pixel drawn twice is
+    // the same pixel; a half-transparent one is not. So an edge pixel already drawn by a
+    // part further back is left out of the parts in front of it.
+    const own = {}, soft = canvas(W, H), claimed = canvas(W, H), cg = claimed.getContext("2d");
+    {
+      const g = soft.getContext("2d");
       g.drawImage(img, 0, 0);
-      g.restore();
+      g.globalCompositeOperation = "destination-out";
+      g.drawImage(solid, 0, 0);
+      binary(soft);
+    }
+    for (const name of this.order) {
+      const c = canvas(W, H), g = c.getContext("2d");
+      g.drawImage(img, 0, 0);
+      g.globalCompositeOperation = "destination-in";
+      g.drawImage(masks[name], 0, 0);
+      const taken = canvas(W, H), tg = taken.getContext("2d");
+      tg.drawImage(claimed, 0, 0);
+      tg.globalCompositeOperation = "destination-in";
+      tg.drawImage(soft, 0, 0);
+      g.globalCompositeOperation = "destination-out";
+      g.drawImage(taken, 0, 0);
+      cg.drawImage(masks[name], 0, 0);
       own[name] = c;
     }
+    // Where a part in front covers this one (a traced part's drawn pixels and GROW px more,
+    // so the edge it blended over goes too; an automatic box's polygon shrunk by 3 px),
+    // this part has a fill from its own colours around the hole. So a moved hand uncovers
+    // trousers, not a hand-shaped ghost of itself. A limb's own next piece (the forearm over
+    // the end of the upper arm) is the same limb, not a cover.
+    //
+    // Each part is kept as three layers that add up to it exactly: `keep` (outside the
+    // hole), `hole` (its own pixels inside the hole) and `fill`. draw() lays the fill
+    // under the hole's own pixels and fades those out only as the covering part actually
+    // moves away (this.cover), so at rest the rig is the sprite, pixel for pixel.
+    this.cover = {};
     for (const [name, j] of joints) {
-      // Where a part in front really covers this one (for a traced part, its drawn pixels
-      // and 2 px more so the edge it blended over goes too), this part gets a
-      // fill from its own colours around the hole. So a moved hand uncovers trousers, not a
-      // hand-shaped ghost of itself. A limb's own next piece (the forearm over the end of
-      // the upper arm, the hand over the wrist) is the same limb, not a cover: the piece
-      // behind keeps its real pixels there.
       const sameLimb = (k) => k.parent === name && name !== "torso" && name !== "head";
       const front = joints.filter(([, k]) => k.z > j.z && !sameLimb(k));
-      if (front.length) {
-        const hole = canvas(W, H), hg = hole.getContext("2d");
-        for (const [kn, k] of front) {
-          if (k.traced) {
-            // an outline traced to the part itself (scripts/trace-arms.py): its pixels
-            for (let dx = -GROW; dx <= GROW; dx++)
-              for (let dy = -GROW; dy <= GROW; dy++) if (dx * dx + dy * dy <= GROW * GROW + 1) hg.drawImage(own[kn], dx, dy);
-          } else {
-            // a rough automatic box: its polygon shrunk by 3 px, so the straight edge it
-            // cuts through the body is still the original picture at rest
-            const b = canvas(W, H), bg2 = b.getContext("2d");
-            bg2.fillStyle = "#000";
-            polyPath(bg2, k.polygon, W, H); bg2.fill();
-            bg2.globalCompositeOperation = "destination-out";
-            bg2.lineWidth = 6;
-            polyPath(bg2, k.polygon, W, H); bg2.stroke();
-            hg.drawImage(b, 0, 0);
-          }
+      if (!front.length) { this.layers[name] = { keep: own[name] }; continue; }
+      const hole = canvas(W, H), hg = hole.getContext("2d");
+      for (const [kn, k] of front) {
+        if (k.traced) {
+          for (let dx = -GROW; dx <= GROW; dx++)
+            for (let dy = -GROW; dy <= GROW; dy++) if (dx * dx + dy * dy <= GROW * GROW + 1) hg.drawImage(own[kn], dx, dy);
+        } else {
+          const b = canvas(W, H), bg2 = b.getContext("2d");
+          bg2.fillStyle = "#000";
+          polyPath(bg2, k.polygon, W, H); bg2.fill();
+          bg2.globalCompositeOperation = "destination-out";
+          bg2.lineWidth = 6;
+          polyPath(bg2, k.polygon, W, H); bg2.stroke();
+          hg.drawImage(b, 0, 0);
         }
-        hg.globalCompositeOperation = "destination-in";
-        hg.drawImage(own[name], 0, 0);
-        // own pixels outside the hole, then the fill inside it
-        const keep = canvas(W, H), kg = keep.getContext("2d");
-        kg.drawImage(own[name], 0, 0);
-        kg.globalCompositeOperation = "destination-out";
-        kg.drawImage(hole, 0, 0);
-        const filled = pushPull(keep), fg = canvas(W, H), f2 = fg.getContext("2d");
-        f2.drawImage(filled, 0, 0);
-        f2.globalCompositeOperation = "destination-in";
-        f2.drawImage(hole, 0, 0);
-        f2.globalCompositeOperation = "source-over";
-        f2.drawImage(keep, 0, 0);
-        this.layers[name] = fg;
-      } else this.layers[name] = own[name];
+      }
+      binary(hole);
+      hg.globalCompositeOperation = "destination-in";
+      hg.drawImage(masks[name], 0, 0);
+      hg.drawImage(solid, 0, 0);
+      const keep = canvas(W, H), kg = keep.getContext("2d");
+      kg.drawImage(own[name], 0, 0);
+      kg.globalCompositeOperation = "destination-out";
+      kg.drawImage(hole, 0, 0);
+      const inHole = canvas(W, H), ig = inHole.getContext("2d");
+      ig.drawImage(own[name], 0, 0);
+      ig.globalCompositeOperation = "destination-in";
+      ig.drawImage(hole, 0, 0);
+      const fill = canvas(W, H), f2 = fill.getContext("2d");
+      f2.drawImage(pushPull(keep), 0, 0);
+      f2.globalCompositeOperation = "destination-in";
+      f2.drawImage(hole, 0, 0);
+      f2.globalCompositeOperation = "destination-out";
+      f2.drawImage(tracedCore, 0, 0); // under a traced limb and not inside the body: the room
+      this.layers[name] = { keep, hole: inHole, fill };
+      this.cover[name] = front.map(([kn]) => kn);
     }
   }
 
@@ -316,9 +422,24 @@ export class Rig {
       const m = parent.translate(dx * W, dy * H).translate(px, py).rotate(a).translate(-px, -py);
       return (mats[name] = m);
     };
+    for (const name of this.order) matOf(name);
     for (const name of this.order) {
-      g.setTransform(matOf(name));
-      g.drawImage(this.layers[name], 0, 0);
+      const L = this.layers[name], m = mats[name];
+      g.setTransform(m);
+      g.drawImage(L.keep, 0, 0);
+      if (!L.hole) continue;
+      // how far the parts covering this one have moved relative to it, in pixels
+      let moved = 0;
+      const inv = m.inverse();
+      for (const kn of this.cover[name]) {
+        const k = this.rig.joints[kn], r = inv.multiply(mats[kn]);
+        const px = k.pivotX * W, py = k.pivotY * H, far = 0.25 * H;
+        const at = (x, y) => Math.hypot(r.a * x + r.c * y + r.e - x, r.b * x + r.d * y + r.f - y);
+        moved = Math.max(moved, at(px, py), at(px + far, py), at(px, py + far));
+      }
+      const show = Math.min(1, moved / 2); // fully refilled once the cover has moved 2 px
+      if (show > 0.001) g.drawImage(L.fill, 0, 0);
+      if (show < 0.999) { g.globalAlpha = 1 - show; g.drawImage(L.hole, 0, 0); g.globalAlpha = 1; }
     }
     g.setTransform(1, 0, 0, 1, 0, 0);
   }
