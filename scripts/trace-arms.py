@@ -66,7 +66,8 @@ def trace_arm(img, pts, widths, bg=(), fg=(), hem=None):
     n, lab = cv2.connectedComponents(arm.astype(np.uint8))
     core = set(np.unique(lab[(dn < 0.4) & arm & ~sleeve])) - {0}
     arm = np.isin(lab, list(core)) | sleeve
-    arm = cv2.morphologyEx(arm.astype(np.uint8), cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8)).astype(bool)
+    arm = cv2.morphologyEx(arm.astype(np.uint8), cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8))
+    arm = (cv2.medianBlur(arm * 255, 3) > 127) & alpha  # smooth single-pixel bumps along the edge
     # Split at the joints square to the bone above, not on the bisector: a pixel nearer the
     # forearm but still above the elbow belongs to the upper arm, and one nearer the upper
     # arm but past the elbow belongs to the forearm. Otherwise the corner of the upper arm
@@ -82,15 +83,19 @@ def trace_arm(img, pts, widths, bg=(), fg=(), hem=None):
     # straight cut would open on the outside of the bend.
     for i in (1, 2):
         cx, cy = pts[i]
-        parts[i] = parts[i] | (arm & (np.hypot(xx - cx, yy - cy) < widths[i - 1] * 0.85))
+        # Just the joint: a cap reaching further up the bone draws its round edge across
+        # the forearm as a visible offset when the hand tilts.
+        parts[i] = parts[i] | (arm & (np.hypot(xx - cx, yy - cy) < min(widths[i - 1], widths[i]) * 0.5))
     return parts, arm
 
-def to_poly(m, W, H, alpha, eps=0.6):
+def to_poly(m, W, H, growable, eps=0.6):
     # Grow one pixel only into empty background, where it takes the arm's soft edge along.
     # Against the body (a hand on a knee) the edge pixels are part khaki, so the outline
     # stops at the arm's own pixels and the part behind is refilled under it.
     m = m.astype(np.uint8)
-    m = (m | (cv2.dilate(m, np.ones((3, 3), np.uint8)) & ~alpha)).astype(np.uint8)
+    # growable: empty background, and the arm's own other pieces, so that neighbouring
+    # pieces overlap by a pixel instead of leaving a hairline between them.
+    m = (m | (cv2.dilate(m, np.ones((3, 3), np.uint8)) & growable)).astype(np.uint8)
     cs, _ = cv2.findContours(m, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     if not cs: return None
     c = max(cs, key=cv2.contourArea)
@@ -129,7 +134,7 @@ if __name__ == "__main__":
                     parts, names, pivs = [parts[0] | parts[1] | parts[2]], ["Hand"], [pts[2]]
                 for name, m, pv in zip(names, parts, pivs):
                     j = rig["joints"][side + name]
-                    j["polygon"] = to_poly(m, W, H, (im[..., 3] > 8).astype(np.uint8)); j["pivotX"] = round(pv[0] / W, 4); j["pivotY"] = round(pv[1] / H, 4)
+                    j["polygon"] = to_poly(m, W, H, ((im[..., 3] <= 8) | arm).astype(np.uint8)); j["pivotX"] = round(pv[0] / W, 4); j["pivotY"] = round(pv[1] / H, 4)
                     j.pop("maxAngle", None)
                     j["traced"] = True
                     col = {"UpperArm": (0, 220, 255, 255), "Forearm": (255, 220, 0, 255), "Hand": (255, 40, 40, 255)}[name]

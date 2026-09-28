@@ -47,7 +47,8 @@ export const PRESETS = {
   },
   "small-hand-gesture": (u, rig, o) => {
     const arm = armNames(rig, o.arm), s = armSigns(rig, arm), e = envelope(u), w = Math.sin(u * 2 * Math.PI * 1.5);
-    return { angles: { [arm + "UpperArm"]: s.fwd * 10 * e, [arm + "Forearm"]: s.inward * (20 + 6 * w) * e, [arm + "Hand"]: 8 * w * e } };
+    // the wrist only follows a little: a hand that turns much on the forearm reads as a break
+    return { angles: { [arm + "UpperArm"]: s.fwd * 10 * e, [arm + "Forearm"]: s.inward * (20 + 6 * w) * e, [arm + "Hand"]: 4 * w * e } };
   },
   point: (u, rig, o) => {
     const arm = armNames(rig, o.arm), s = armSigns(rig, arm), e = envelope(u, 0.2);
