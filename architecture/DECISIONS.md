@@ -224,3 +224,9 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 
 **Two questions this raises are left to Joshua,** in `WORLD_RULES.md` section 7: Chapter 5 puts full island-scale material right at the pavement line, which a scale gradient starting at the pavement would not; and the timing of the island's own transformation.
 **Status:** Accepted, 2026-09-25.
+
+### 0026 — The Watch mode's people are the 3D models, and the camera may really move
+**Context:** Joshua, 2026-09-29: "I was wanting to replace the 2D storyboard with the 3D models in TMB-story." The 3D lab had first been built as a scene in TRADDOMIUM: Micro Battle. Asked whether the Watch mode should keep the painted picture with 3D people in it, or become a 3D room with a real camera, he answered "Both, switchable."
+**Decision:** In the Watch mode (`visual/`), Jack and Sarah are TRADDOMIUM's rigged models (that game's pair, which the sprites were drawn from; never another project's Jack and Sarah), posed by that game's rig code. By default they are drawn into the unchanged painting through the camera the picture was painted from. A shot may instead move the camera for real (`cam3`), and then the room is the picture baked onto its own shapes. Chapter 1 does this for its opening push-in only. The drawn sprites remain one menu button away (`People: Drawn`, or `?people=2d`) and stand in if the models cannot load. Details: `visual/README.md`, "People in 3D".
+**Consequences:** The Watch mode now loads about 7 MB of models and an 800 KB script before it plays. The cutout rig (`?rig=1`) applies only to the drawn people. Nothing in `chapters/` changes.
+**Status:** Accepted, 2026-09-29.

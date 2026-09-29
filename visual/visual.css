@@ -12,6 +12,7 @@ body {
 .layer { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
 .bg { position: absolute; left: 0; top: 0; display: block; max-width: none; }
 .grade { position: absolute; inset: 0; z-index: 5000; pointer-events: none; }
+.canvas3d { position: absolute; pointer-events: none; }
 .actor { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
 .actor .frame { position: absolute; display: block; max-width: none; }
 .light { position: absolute; z-index: 5001; pointer-events: none; mix-blend-mode: screen; opacity: 0; }

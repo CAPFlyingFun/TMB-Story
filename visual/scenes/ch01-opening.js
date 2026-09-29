@@ -289,8 +289,8 @@ const REST = [
   { at: L("Sarah slowly turned toward him."), action: "state", actor: "sarah", state: "still" },
   { at: L("Jack met her eyes."), action: "face", actor: "jack", direction: "east" },
   { at: L("I didn't.", { edge: "end", offset: -0.35 }), action: "fade", to: 1, duration: 0.3, ease: "in", label: "cut to black" },
-  // Cutout-rig gestures, each on the line that describes it. Drawn only with ?rig=1 (an
-  // experiment: engine/rig.js, visual/rig.html); without it the plain sprites are unchanged.
+  // Gestures, each on the line that describes it: joint turns on the 3D people
+  // (engine/people3d.js), and the cutout rig's for the drawn ones with ?rig=1 (engine/rig.js).
   { at: L("Jack entered a command"), action: "gesture", actor: "jack", animation: "type", duration: 3.0 },
   { at: L("He reached for the intercom."), action: "gesture", actor: "jack", animation: "lean-forward", duration: 1.4 },
   { at: L("Jack smiled despite himself."), action: "gesture", actor: "jack", animation: "look-down", duration: 1.0 },
@@ -412,6 +412,17 @@ export default {
         perspective: { horizonY: 580, ref: { y: 1135, pxPerMeter: 388 }, lockHeadsAt: 1184 },
         layers: [{ id: "room", parallax: 1 }],
         grade: "rgba(7,11,24,0.30)", // late at night: the room dims, the monitor does not
+        // The people in 3D (engine/people3d.js): TRADDOMIUM's rigged Jack and Sarah, drawn
+        // through the camera this picture was painted from -- 1300 px focal length on the
+        // original frame, level, 1.43 m up, the room's depth lines vanishing at x 905 --
+        // and the room itself baked back onto its shapes for the shots that move the camera
+        // (scripts/bake-lab-3d.py). `aisle` is the floor between the cabinets, in metres.
+        people3d: {
+          room: "../assets/models/lab-3d.glb",
+          models: { jack: "../assets/models/jack.glb", sarah: "../assets/models/sarah.glb" },
+          camera: { focal: 1300, principal: [1024, 581], height: 1.43, vanishX: 905.2 },
+          aisle: { left: -0.5, right: 1.22, deskFront: -3.65, rightRunEnds: -1.46, rightNear: 1.06 },
+        },
       },
 
       actors: {
@@ -450,9 +461,14 @@ export default {
       shots: {
         establishing: { x: -790, y: -182, w: 3628, h: 2041, focus: [920, 820] }, // the whole wide room
         room: { x: 170, y: 170, w: 1700, h: 960, focus: [860, 780] },
-        asleep: { x: 420, y: 430, w: 900, h: 700, focus: [820, 800] },
-        chirp: { x: 500, y: 470, w: 760, h: 600, focus: [880, 760] },
-        close: { x: 560, y: 510, w: 640, h: 520, focus: [900, 740] },
+        // The opening's push-in is a REAL camera move when the people are in 3D (Joshua,
+        // 2026-09-29: the 3D room is for "specific shots needing a real camera move"): the
+        // lens travels up the aisle to Jack asleep, then over his shoulder to the warning.
+        // `cam3` is where it goes, in metres (Jack's head is at about (-0.08, 1.23, -3.0),
+        // his monitor at (0.22, 1.11, -3.8)); x/y/w/h stay the flat framing for drawn people.
+        asleep: { x: 420, y: 430, w: 900, h: 700, focus: [820, 800], cam3: { at: [0.3, 1.45, -1.55], look: [-0.05, 1.1, -3.1], hfov: 50 } },
+        chirp: { x: 500, y: 470, w: 760, h: 600, focus: [880, 760], cam3: { at: [0.28, 1.42, -2.0], look: [0.02, 1.12, -3.3], hfov: 47 } },
+        close: { x: 560, y: 510, w: 640, h: 520, focus: [900, 740], cam3: { at: [0.5, 1.42, -2.1], look: [0.18, 1.14, -3.6], hfov: 50 } },
         rollback: { x: 340, y: 400, w: 1000, h: 752, focus: [760, 820] },
         medium: { x: 520, y: 470, w: 760, h: 640, focus: [860, 760] },
         screen: { x: 700, y: 540, w: 560, h: 420, focus: [960, 690] },

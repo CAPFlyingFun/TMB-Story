@@ -50,6 +50,7 @@ export class Stage {
       this.layers[L.id] = { el: e, parallax: L.parallax ?? 1, zoomDepth: L.zoomDepth || 0 };
     }
     const base = this.layers[W.backgroundLayer || W.layers[0].id].el;
+    this.baseLayer = base;
     const r = W.backgroundRect || B;
     const bg = document.createElement("img");
     bg.className = "bg";
@@ -116,6 +117,10 @@ export class Stage {
       host.style.transform = quadMatrix3d(s.width, s.height, s.corners);
       this.screens[id] = { host, html: "", cls: "", spec: s };
     }
+    // The people in 3D (engine/people3d.js), for a set that has them and when they are on.
+    // The sprites stay until the models have loaded, and come back if 3D is turned off.
+    this.people = null;
+    if (options.People3D && W.people3d) this.people = new options.People3D(this, W.people3d, { url, ...options.people3d });
   }
 
   // The walkable floor (world.floor, a polygon in world units). A character's footprint --
@@ -173,7 +178,11 @@ export class Stage {
       const m = layerTransform(cam, this.world, L.parallax, L.zoomDepth);
       L.el.style.transform = `translate3d(${(m.tx + sx).toFixed(2)}px,${(m.ty + sy).toFixed(2)}px,0) scale(${m.zoom.toFixed(5)})`;
     }
-    for (const [id, node] of Object.entries(this.actors)) this.drawActor(node, state.actors[id], state.t);
+    const in3d = this.people && this.people.active;
+    for (const [id, node] of Object.entries(this.actors)) {
+      if (in3d && this.people.bodies[id]) node.wrap.style.display = "none";
+      else this.drawActor(node, state.actors[id], state.t);
+    }
     for (const [id, node] of Object.entries(this.lights)) this.drawLight(node, state.lights[id]);
     for (const [id, node] of Object.entries(this.screens)) this.drawScreen(node, state.screens[id], state.t);
     for (const [id, node] of Object.entries(this.objects)) {
@@ -188,6 +197,7 @@ export class Stage {
       const d = node.spec.drift;
       if (d && v > 0) node.node.style.transform = `translate3d(${(d[0] * state.t).toFixed(2)}px,${(d[1] * state.t).toFixed(2)}px,0)`;
     }
+    if (in3d) this.people.render(state, cam, view);
     return cam;
   }
 

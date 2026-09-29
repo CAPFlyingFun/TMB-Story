@@ -140,6 +140,21 @@ function zoomLerp(a, b, e) {
   return { x: X.pos, y: Y.pos, w: X.size, h: Y.size, fx: X.focus, fy: Y.focus };
 }
 
+// A set drawn in 3D (engine/people3d.js) carries its camera in every shot as numbers the
+// camera track can interpolate: where the lens is (cx3, cy3, cz3, metres), which way it
+// looks (yaw3, pitch3, degrees, three's rotation.y and .x), its width of view (hfov3), and
+// d3, how far the shot has left the picture's own camera for a real one (0 or 1). A flat
+// shot is the picture's camera, cropped; a shot with `cam3: { at, look, hfov }` moves it.
+function cam3Of(c, pc) {
+  if (!c) {
+    const yaw = Math.atan2(pc.principal[0] - pc.vanishX, pc.focal);
+    return { d3: 0, cx3: 0, cy3: pc.height, cz3: 0, yaw3: (-yaw * 180) / Math.PI, pitch3: 0, hfov3: 60 };
+  }
+  const d = [c.look[0] - c.at[0], c.look[1] - c.at[1], c.look[2] - c.at[2]];
+  const deg = 180 / Math.PI;
+  return { d3: 1, cx3: c.at[0], cy3: c.at[1], cz3: c.at[2], yaw3: Math.atan2(-d[0], -d[2]) * deg, pitch3: Math.atan2(d[1], Math.hypot(d[0], d[2])) * deg, hfov3: c.hfov || 50 };
+}
+
 // A step track: a value that changes instantly, remembering what it changed from and when
 // (which is what a crossfade or a settling idle needs).
 class Step {
@@ -200,7 +215,9 @@ export function compileScene(scene, anchors) {
   const shotOf = (ev, setId = shotSet(ev)) => {
     const r = ev.shot ? sets[setId].shots[ev.shot] : ev;
     if (!r) throw new Error(`timeline: unknown shot "${ev.shot}" in set "${setId}"`);
-    return { x: r.x, y: r.y, w: r.w, h: r.h, fx: r.focus ? r.focus[0] : r.x + r.w / 2, fy: r.focus ? r.focus[1] : r.y + r.h / 2 };
+    const out = { x: r.x, y: r.y, w: r.w, h: r.h, fx: r.focus ? r.focus[0] : r.x + r.w / 2, fy: r.focus ? r.focus[1] : r.y + r.h / 2 };
+    const p3 = sets[setId].world && sets[setId].world.people3d;
+    return p3 ? Object.assign(out, cam3Of(r.cam3, p3.camera)) : out;
   };
 
   const T = {
@@ -296,8 +313,8 @@ export function compileScene(scene, anchors) {
         need("actors", ev.actor).state.add(ev.t, ev.state);
         break;
       case "gesture":
-        // A cutout-rig animation preset (engine/gestures.js): drawn only when rigs are on
-        // (?rig=1); otherwise the character keeps its plain sprite.
+        // An animation preset (engine/gestures.js): joint turns on the 3D people, or the
+        // cutout rig's when the people are drawn and rigs are on (?rig=1).
         need("actors", ev.actor).gestures.push({ t: ev.t, dur: dur || 1, name: ev.animation, opts: { arm: ev.arm, amount: ev.amount, side: ev.side, dur: dur || 1 } });
         break;
       case "jolt":

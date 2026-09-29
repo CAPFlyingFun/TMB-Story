@@ -27,6 +27,10 @@ line; the voice-only export is not indexable.
 | `../scripts/make-lab-wide.py` | sets the original lab back into Joshua's expanded lab picture, for the wide shot and people passing the camera |
 | `../scripts/split-props.py` | cuts the props sheet into one PNG per object with a real height (`assets/props/props.json`), ready to place as `objects` |
 | `../scripts/make-island-art.py` | grades the Beyond Extinction island to moonlight, caps its volcano with cloud, and makes the cloud wisps |
+| `engine/people3d.js` | Jack and Sarah as rigged 3D models, drawn into the painted lab through the picture's own camera, and the baked 3D room for shots that move the camera |
+| `vendor/three-human.js` | three.js r185, its glTF loader and meshopt decoder, and TRADDOMIUM's human rig and poses (`src/actor/human*.ts`, `src/view/HumanRig.ts`), bundled into one module |
+| `../assets/models/` | `jack.glb` and `sarah.glb` (TRADDOMIUM: Micro Battle's rigged pair, the ones the sprites were drawn from) and `lab-3d.glb`, the lab picture baked onto its own shapes |
+| `../scripts/bake-lab-3d.py` | rebuilds `lab-3d.glb` from `lab-wide.jpg` (needs numpy and OpenCV) |
 | `engine/rig.js` | the optional cutout rig: cuts a sprite into body parts along polygons and turns them about pivots |
 | `engine/gestures.js` | the animation presets (nod, look-left, point, wave, type, lean-forward, walk…) as small eased joint angles |
 | `rig.html` + `engine/rig-editor.js` | dev-only rig editor; not linked from the story |
@@ -132,6 +136,45 @@ staged with poses: in Chapter 1 Jack stands and steps away, Sarah sits in his pl
 rolls to her console, and Jack sits at the next workstation and rolls that chair back.
 Screens draw behind the people, and a screen in its `off` state shows the painted
 monitor from the background image.
+
+## People in 3D (on by default)
+
+Jack and Sarah are TRADDOMIUM: Micro Battle's rigged models, not the drawn sprites
+(Joshua, 2026-09-29: "replace the 2D storyboard with the 3D models... Both, switchable").
+They are posed by that game's own rig code, bundled into `vendor/three-human.js`: seated
+(`doze` while Jack is asleep, `sit` otherwise), standing, and walking, with the scene's
+states (leaning, still, a jolt) and gestures (nod, look, point, reach, type…) added as
+small joint turns. A change of pose or state blends over about half a second, and a
+change of direction turns rather than cuts. A seated person has a chair; a person who
+stands leaves it where it was, and the next person to sit down there takes it.
+
+Two ways to see the room, chosen per shot:
+
+- **The painting** (every shot unless it says otherwise). The picture is untouched and
+  the camera crops it as before. The people are drawn over it through the camera the
+  picture was painted from: 1300 px focal length on the original frame, level, 1.43 m
+  up, turned 5.2 degrees off the room's axis (recovered from the picture's lines; see
+  `scripts/bake-lab-3d.py`). So a floor point in stage coordinates IS a floor point in
+  metres, and the room's shapes, drawn invisibly into the depth buffer, hide whatever is
+  behind a cabinet. They sit under the night grade and the glows, and the monitor, alarm
+  and intercom glows light them in their current colour.
+- **The room** (a shot with `cam3`). The camera really moves. The room is the picture
+  baked back onto its shapes, so from the picture's camera it IS the picture and the
+  change from painting to room cannot be seen; away from it the parallax is real. The
+  screens and glows follow to where the moving camera sees them. Chapter 1 uses it for
+  the opening push-in: up the aisle to Jack asleep, closer at the second chirp, over his
+  shoulder to the warning, then back out as his chair rolls.
+
+      asleep: { x: 420, y: 430, w: 900, h: 700, focus: [820, 800],
+                cam3: { at: [0.3, 1.45, -1.55], look: [-0.05, 1.1, -3.1], hfov: 50 } },
+
+  Metres in the room frame: x right, y up, z toward the picture's camera, the floor at
+  y = 0. The flat `x/y/w/h` stays the framing when the people are drawn.
+
+**Switchable.** The menu's "People: 3D / Drawn" button (remembered on the device) or
+`?people=2d` puts the sprites back; `?people=3d` forces 3D. The sprites also stand in if
+the models cannot load. The set's `people3d` block names the models, the room, the
+picture's camera and the aisle between the cabinets.
 
 ## Cutout rig (optional, off by default)
 

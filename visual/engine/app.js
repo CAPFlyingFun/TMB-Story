@@ -86,6 +86,12 @@ async function boot() {
   gateMsg.textContent = "Loading…";
   await Promise.all(preload.map(loadImage));
 
+  // The people in 3D (engine/people3d.js): on unless ?people=2d or the menu turned them off.
+  const has3d = Object.values(sets).some((s) => s.world.people3d);
+  const want3d = has3d && (q.get("people") === "3d" || (q.get("people") !== "2d" && store.get("tmb.people3d") !== "0"));
+  const People3D = want3d ? (await import("./people3d.js")).People3D : null;
+
+  let dirty = true;
   const audio = $("audio");
   const clock = new AudioClock(audio, { src: url(scene.audio), start, end, silent: q.has("silent") });
   // One stage per set; only the active one is shown and drawn.
@@ -96,13 +102,27 @@ async function boot() {
     root.dataset.set = id;
     root.hidden = true;
     $("world").appendChild(root);
-    stages[id] = new Stage(root, set, sprites, url, scene.painters || {}, { rigs: rigFiles });
+    stages[id] = new Stage(root, set, sprites, url, scene.painters || {}, { rigs: rigFiles, People3D, people3d: { timeline, setId: id, range: [start, end] } });
+  }
+  const people = Object.values(stages).map((s) => s.people).filter(Boolean);
+  if (people.length) {
+    gateMsg.textContent = "Loading the 3D people…";
+    const late = new Promise((res) => setTimeout(() => res("late"), 45000));
+    try {
+      if ((await Promise.race([Promise.all(people.map((p) => p.ready)), late])) === "late") {
+        console.warn("3D people are still loading; the drawn ones stand in until they arrive");
+        for (const p of people) p.ready.then(() => (dirty = true));
+      }
+    } catch (e) {
+      console.error("3D people could not load; using the drawn ones", e);
+      for (const p of people) p.setEnabled(false);
+    }
   }
   let shownSet = null, titleShown = null;
 
   const beats = anchors.segments.map((s) => s.startMs / 1000).filter((t) => t >= start - 0.01 && t < end);
   let lastSave = 0;
-  let dirty = true, lastDebug = 0, showDebug = q.get("debug") === "1";
+  let lastDebug = 0, showDebug = q.get("debug") === "1";
   $("debug").hidden = !showDebug;
 
   const view = () => ({
@@ -223,6 +243,8 @@ async function boot() {
   function showMenuPosition() {
     $("menu-at").textContent = `${fmt(clock.now() - start)} of ${fmt(end - start)}`;
     $("m-cc").textContent = "Captions: " + (ccOn ? "On" : "Off");
+    $("m-people").hidden = !has3d;
+    $("m-people").textContent = "People: " + (want3d ? "3D" : "Drawn");
   }
   function openMenu() {
     if (clock.playing) pause();
@@ -264,6 +286,14 @@ async function boot() {
     showMenuPosition();
   };
   $("m-home").onclick = () => savePosition();
+  // 3D or drawn people: remembered, and applied by reloading where the film is.
+  $("m-people").onclick = () => {
+    store.set("tmb.people3d", want3d ? "0" : "1");
+    savePosition();
+    const u = new URL(location.href);
+    u.searchParams.delete("people");
+    location.replace(u.href);
+  };
   if (upright.matches) showMenuPosition();
 
   // iOS can leave the layout viewport at the old orientation's width after a turn, so the
@@ -386,7 +416,7 @@ async function boot() {
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
-  window.__tmb = { clock, timeline, seek, scene }; // for probes and the console
+  window.__tmb = { clock, timeline, seek, scene, stages }; // for probes and the console
 }
 
 boot().catch((err) => {
