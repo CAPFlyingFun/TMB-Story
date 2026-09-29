@@ -80,6 +80,22 @@ function blendMaps(a, b, k) {
   for (const j of new Set([...a.keys(), ...b.keys()])) out.set(j, qSlerp(a.get(j) || IDENTITY, b.get(j) || IDENTITY, k));
   return out;
 }
+// Gestures that give an arm a job, so a talking hand leaves it alone.
+const HANDS_BUSY = new Set(["type", "reach", "point", "hand-on-belly", "small-hand-gesture", "wave"]);
+// Turn a bone so that the world direction `from` (from its joint) points along `to`.
+function turnBone(bone, from, to) {
+  const q = new THREE.Quaternion().setFromUnitVectors(from.clone().normalize(), to.clone().normalize());
+  worldTurn(bone, q);
+}
+function spinBone(bone, axis, angle) {
+  worldTurn(bone, new THREE.Quaternion().setFromAxisAngle(axis, angle));
+}
+function worldTurn(bone, q) {
+  const pw = bone.parent.getWorldQuaternion(new THREE.Quaternion());
+  const bw = bone.getWorldQuaternion(new THREE.Quaternion());
+  bone.quaternion.copy(pw.invert().multiply(q).multiply(bw));
+  bone.updateMatrixWorld(true);
+}
 function lerpAngle(a, b, t) {
   let d = b - a;
   while (d > Math.PI) d -= 2 * Math.PI;
@@ -191,6 +207,8 @@ export class People3D {
     this.stage = stage;
     this.spec = spec;
     this.url = options.url;
+    this.lineAt = options.lineAt || null; // who is speaking when: talking moves the hands
+    this.keyboards = [];
     this.cam0 = new PictureCamera(spec.camera);
     this.enabled = true;
     this.readyFlag = false;
@@ -286,6 +304,11 @@ export class People3D {
     for (const [id, s] of Object.entries(this.stage.set.screens || {})) {
       this.screenAnchors[id] = s.corners.map(([u, v]) => hit(u, v));
     }
+    // Keyboards, from each end as painted: where hands go to type.
+    for (const [a, b] of Object.values(this.spec.keyboards || {})) {
+      const L = hit(...a), R = hit(...b);
+      this.keyboards.push({ c: L.clone().add(R).multiplyScalar(0.5), axis: R.clone().sub(L).normalize() });
+    }
     for (const [id, l] of Object.entries(this.stage.set.lights || {})) {
       const p = hit(l.x, l.y);
       this.lightAnchors[id] = { p, depth: depth(p), radius: l.radius };
@@ -308,8 +331,24 @@ export class People3D {
     model.updateMatrixWorld(true);
     const skin = THREE.findSkinnedMesh(model), bones = skin.skeleton.bones, j = measure.joints;
     const w = (i) => bones[i].getWorldPosition(new THREE.Vector3());
+    // THE HEAD. What the rig measures as `head` is the crown (the highest joint, inside the
+    // skull), so turning it turns only the hair. The head turns at the base of the skull,
+    // its parent. (Joshua, 2026-09-29: "only his hair moves".)
+    const crownParent = rig.bind[j.head].parent;
+    const head = crownParent >= 0 && crownParent !== j.neck ? crownParent : j.head;
+    // Each hand's rotation in the bind, to know which way its palm faces once posed.
+    const bindQ = (i) => {
+      const q = new THREE.Quaternion();
+      new THREE.Matrix4().copy(skin.skeleton.boneInverses[i]).invert().decompose(new THREE.Vector3(), q, new THREE.Vector3());
+      return q.normalize().invert();
+    };
+    const handBindInv = { L: bindQ(j.wristL), R: bindQ(j.wristR) };
     const hips = w(j.hipL).add(w(j.hipR)).multiplyScalar(0.5);
     const ankle = Math.min(w(j.ankleL).y, w(j.ankleR).y);
+    const headAboveHips = w(head).y - hips.y;
+    rig.rest();
+    model.updateMatrixWorld(true);
+    const standEye = w(head).y - Math.min(w(j.ankleL).y, w(j.ankleR).y) + 0.08 + 0.06;
     // a sole and a heel put the ankle ~8 cm off the floor; the hip joint sits ~10 cm above the pad
     const seatTop = Math.min(0.55, Math.max(0.4, hips.y - ankle + 0.08 - 0.1));
     const materials = [];
@@ -322,7 +361,8 @@ export class People3D {
     const shadow = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: this.shadowTex, transparent: true, depthWrite: false, opacity: 0.5 }));
     shadow.rotation.x = -Math.PI / 2;
     this.scene.add(model, shadow);
-    this.bodies[id] = { id, model, rig, measure, materials, shadow, seatTop, hips, seed: Object.keys(this.bodies).length, opacity: 1 };
+    const eye = { stand: standEye, sit: seatTop + 0.1 + headAboveHips + 0.04 };
+    this.bodies[id] = { id, model, rig, measure, materials, shadow, seatTop, hips, head, bones, handBindInv, eye, seed: Object.keys(this.bodies).length, opacity: 1 };
   }
 
   // Where a character is on the floor, in metres: the stage's own rule first (the floor
@@ -428,7 +468,7 @@ export class People3D {
   // of someone awake, and the gestures (engine/gestures.js names them; here they are joint
   // turns in the bind frame -- see TRADDOMIUM's humanSeated.ts for the sign rules).
   extras(body, a, t, seated) {
-    const j = body.measure.joints, L = body.measure.leftSign < 0 ? -1 : 1;
+    const j = { ...body.measure.joints, head: body.head }, L = body.measure.leftSign < 0 ? -1 : 1;
     const out = [];
     const add = (joint, q) => out.push([joint, q]);
     const st = a.state, k = smooth((t - st.since) / 0.8);
@@ -446,6 +486,35 @@ export class People3D {
     if (awake > 0.01) {
       const s = body.seed, h = Math.sin((2 * Math.PI * t) / (7.3 + s * 1.3) + s) + 0.5 * Math.sin((2 * Math.PI * t) / (3.1 + s * 0.4) + 2 * s);
       add(j.neck, ry(L * 3 * DEG * h * awake));
+    }
+    // Standing still, the arms hang relaxed: a little bent, the hands a little forward.
+    const standing = !seated && st.v !== "walking";
+    if (standing) {
+      for (const [sh, el, s] of [[j.shoulderL, j.elbowL, L], [j.shoulderR, j.elbowR, -L]]) {
+        add(sh, rx(-5 * DEG));
+        add(el, ry(-s * 14 * DEG));
+      }
+    }
+    // On their feet, walking or not, the arms hang in to the body with the palms toward the
+    // thighs, not flared out with the palms forward.
+    if (!seated) {
+      for (const [sh, s] of [[j.shoulderL, L], [j.shoulderR, -L]]) add(sh, qMul(ry(-s * 26 * DEG), rz(-s * 3 * DEG)));
+    }
+    // Typing: lean in to the keys, so the arms bend instead of locking straight.
+    if (a._typingIK) add(j.spine, rx(12 * DEG * a._typingIK));
+    // Talking: while their own line is heard, the head moves with the words and a hand
+    // comes up and goes down again, slowly, at each person's own pace.
+    const talk = this.talking(body.id, t);
+    if (talk > 0 && st.v !== "asleep") {
+      const s = body.seed;
+      add(j.head, rx(3.5 * DEG * talk * Math.sin(t * 2 * Math.PI * 1.6 + s)));
+      add(j.neck, ry(L * 3 * DEG * talk * Math.sin(t * 2 * Math.PI * 0.55 + 2 * s)));
+      if (!seated && !(a.gestures || []).some((g) => HANDS_BUSY.has(g.name))) {
+        const g = talk * (0.55 + 0.45 * Math.sin(t * 2 * Math.PI * 0.42 + 3 * s));
+        const [sh, el, sg] = s % 2 ? [j.shoulderL, j.elbowL, L] : [j.shoulderR, j.elbowR, -L];
+        add(sh, rx(-(seated ? 10 : 18) * DEG * g));
+        add(el, ry(-sg * (seated ? 22 : 45) * DEG * g));
+      }
     }
     // The arm a gesture uses: the right unless the scene says otherwise. `s` is the way the
     // arm runs in the bind (+1 along +x); the rig bends an elbow with ry(-s * angle).
@@ -503,11 +572,14 @@ export class People3D {
         }
         case "reach": {
           const A = armOf(o), e = envelope(u, 0.3);
+          if (a._typingIK) { add(j.spine, rx(5 * DEG * e)); break; }
           add(A.sh, rx(-(seated ? 30 : 45) * DEG * e));
           if (seated) add(A.el, ry(A.s * 30 * DEG * e));
           add(j.spine, rx(5 * DEG * e));
           break;
         }
+        case "hand-on-belly":
+          break; // an arm reach (reachArms), not a turn
         case "small-hand-gesture": {
           const A = armOf(o), e = envelope(u), v = Math.sin(u * 2 * Math.PI * 1.5);
           add(A.sh, rx(-14 * DEG * e));
@@ -522,6 +594,7 @@ export class People3D {
           break;
         }
         case "type": {
+          if (a._typingIK) break; // the hands are on the keys (reachArms)
           const e = envelope(u, 0.1);
           for (const [el, wr, s, ph] of [[j.elbowL, j.wristL, L, 0], [j.elbowR, j.wristR, -L, Math.PI]]) {
             add(el, ry(-s * 3 * DEG * e * Math.sin(t * 2 * Math.PI * 5.5 + ph)));
@@ -537,17 +610,78 @@ export class People3D {
     return out;
   }
 
+  // How much this person is talking at t (0..1, easing in and out of each of their lines).
+  talking(id, t) {
+    if (!this.lineAt) return 0;
+    const line = this.lineAt(t);
+    if (!line || !String(line.speaker || "").startsWith(id)) return 0;
+    const a = line.startMs / 1000, b = line.endMs / 1000;
+    return smooth((t - a) / 0.4) * smooth((b - t) / 0.4);
+  }
+
+  // WHERE THEY LOOK (Joshua, 2026-09-29: Jack's head "needs to face in the direction of the
+  // computer and Sarah"; Sarah's "between Jack and the computer"). The scene says which way
+  // a body faces in eight directions; what it looks at is whatever lies that way: the other
+  // person's face or a monitor, each weighted by how near it is to that direction, so a
+  // turn between them moves the gaze between them.
+  gaze(id, at, faceYaw, seated, state, placedAt) {
+    const body = this.bodies[id];
+    const eye = new THREE.Vector3(at[0], seated ? body.eye.sit : body.eye.stand, at[2]);
+    let sum = 0;
+    const tgt = new THREE.Vector3();
+    const consider = (p, bias) => {
+      const d = lerpAngle(0, Math.atan2(p.x - eye.x, p.z - eye.z) - faceYaw, 1);
+      const w = bias * smooth((Math.abs(d) < Math.PI ? (70 * DEG - Math.abs(d)) : -1) / (40 * DEG));
+      if (w > 0) { tgt.addScaledVector(p, w); sum += w; }
+    };
+    for (const [other, p] of Object.entries(placedAt)) {
+      if (other !== id && p) consider(new THREE.Vector3(p.at[0], p.seated ? this.bodies[other].eye.sit : this.bodies[other].eye.stand, p.at[2]), 1.4);
+    }
+    for (const P of Object.values(this.screenAnchors)) {
+      consider(P[0].clone().add(P[1]).add(P[2]).add(P[3]).multiplyScalar(0.25), 1);
+    }
+    if (sum < 1e-3) return null;
+    return { eye, target: tgt.multiplyScalar(1 / sum), amount: Math.min(1, sum) };
+  }
+
   poseKind(pose, state) {
     if (pose === "sitting") return state === "asleep" ? "doze" : "sit";
     return state === "walking" ? "walk" : "stand";
   }
 
-  // Everything about one body at time t: its joints, where it stands, which way it faces.
-  drawBody(id, a, t) {
-    const body = this.bodies[id];
+  // Where a body is and which way it faces, before its joints: the look decides the last
+  // part of the turn, so this runs for everyone first (drawBody reads the others' places).
+  placeBody(id, a, t) {
     const shown = a.visible && a.opacity > 0.001;
-    body.model.visible = body.shadow.visible = shown;
     if (!shown) return null;
+    return { at: this.floorOf(id, a, a.pose.v), yaw: this.facingAt(a, t), seated: a.pose.v === "sitting" };
+  }
+
+  // Everything about one body at time t: its joints, where it stands, which way it faces.
+  drawBody(id, a, t, place, placedAt) {
+    const body = this.bodies[id];
+    body.model.visible = body.shadow.visible = !!place;
+    if (!place) return null;
+    const j = body.measure.joints, L = body.measure.leftSign < 0 ? -1 : 1;
+    const seated = place.seated;
+
+    // The look: turn the body part of the way (a seated person swivels the chair), the
+    // neck and head the rest.
+    const awake = a.state.v === "asleep" ? 0 : 1;
+    const look = awake ? this.gaze(id, place.at, place.yaw, seated, a.state.v, placedAt) : null;
+    let yaw = place.yaw;
+    if (look) {
+      const want = Math.atan2(look.target.x - look.eye.x, look.target.z - look.eye.z);
+      const d = lerpAngle(0, want - yaw, 1);
+      yaw += Math.max(-25 * DEG, Math.min(25 * DEG, d)) * (seated ? 0.7 : 0.5) * look.amount;
+    }
+    place.yaw = yaw;
+
+    // Hands at work: typing on the nearest keyboard in reach, reaching for it, a hand on
+    // Sarah's stomach. Decided first, because the turns leave these arms to the reach.
+    const reaches = this.reachesFor(body, a, t, place);
+    a._typingIK = reaches.reduce((m, r) => (r.typing ? Math.max(m, r.weight) : m), 0);
+
     // The pose, blended from whatever it was a moment ago (asleep to awake, standing up).
     const cur = this.poseKind(a.pose.v, a.state.v);
     const poseChangedLast = a.pose.since >= a.state.since;
@@ -556,12 +690,37 @@ export class People3D {
     const k = smooth((t - changedAt) / BLEND_SECONDS);
     let map = this.basePose(body, cur, t, a);
     if (prev !== cur && k < 1) map = blendMaps(this.basePose(body, prev, t, a), map, k);
-    const seated = a.pose.v === "sitting";
-    for (const [joint, q] of this.extras(body, a, t, seated)) map.set(joint, qMul(q, map.get(joint) || IDENTITY));
+    // the poses turn the crown; the head turns at the base of the skull
+    if (body.head !== j.head && map.has(j.head)) {
+      map.set(body.head, qMul(map.get(j.head), map.get(body.head) || IDENTITY));
+      map.delete(j.head);
+    }
+    const add = (joint, q) => map.set(joint, qMul(q, map.get(joint) || IDENTITY));
+    for (const [joint, q] of this.extras(body, a, t, seated)) add(joint, q);
+    if (look) {
+      // the target in the body's own frame (it faces +z; its left is +x when leftSign is +1)
+      const v = look.target.clone().sub(look.eye);
+      const c = Math.cos(-yaw), sn = Math.sin(-yaw);
+      const x = v.x * c + v.z * sn, z = -v.x * sn + v.z * c;
+      const turn = Math.max(-75 * DEG, Math.min(75 * DEG, Math.atan2(x, z))) * look.amount;
+      const down = Math.max(-25 * DEG, Math.min(35 * DEG, -Math.atan2(v.y, Math.hypot(x, z)))) * look.amount;
+      add(j.neck, qMul(ry(turn * 0.45), rx(down * 0.4)));
+      add(body.head, qMul(ry(turn * 0.55), rx(down * 0.6)));
+    }
+    // THE SHOULDERS (Joshua, 2026-09-29: "Jack's shoulders look weird"). The poses lower
+    // each arm from the T at the upper arm alone, and the skin there folds into a hard
+    // square shoulder. A real shoulder drops the collarbone too: it takes part of the
+    // turn, and the upper arm keeps the same direction in the world.
+    for (const [sh, s] of [[j.shoulderL, L], [j.shoulderR, -L]]) {
+      const clav = body.rig.bind[sh].parent;
+      if (clav < 0 || clav === j.chest || !map.has(sh)) continue;
+      const Rc = qMul(ry(-s * (seated ? 10 : 5) * DEG), rz(-s * 16 * DEG));
+      map.set(clav, qMul(Rc, map.get(clav) || IDENTITY));
+      map.set(sh, qMul([-Rc[0], -Rc[1], -Rc[2], Rc[3]], map.get(sh)));
+    }
     body.rig.apply(toTurns(map));
 
     // Where: the floor point, and for a seated body the hips over the chair's seat.
-    const yaw = this.facingAt(a, t);
     const root = (poseName) => {
       const p = this.floorOf(id, a, poseName);
       if (poseName !== "sitting") return { p, root: [p[0], 0, p[2]] };
@@ -579,6 +738,9 @@ export class People3D {
     const hop = a.jolt ? 0.015 * a.jolt : 0;
     body.model.position.set(r[0], r[1] + hop, r[2]);
     body.model.rotation.set(0, yaw, 0);
+    body.model.updateMatrixWorld(true);
+    for (const R of reaches) this.reachArm(body, R);
+
     body.shadow.position.set(now.p[0], 0.004, now.p[2]);
     const size = seated ? 0.62 : 0.5;
     body.shadow.scale.set(size, size, 1);
@@ -592,6 +754,121 @@ export class People3D {
       }
     }
     return { at: now.p, yaw, seated };
+  }
+
+  // ------------------------------------------------------------------------ the reaches
+  // Arms that have somewhere to be, in the room: { side, target (world), weight, palm }.
+  reachesFor(body, a, t, place) {
+    const out = [];
+    const gest = a.gestures || [];
+    const yaw = place.yaw, fwd = new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw));
+    const L = body.measure.leftSign < 0 ? -1 : 1;
+    const left = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw)).multiplyScalar(L);
+    const shoulderY = place.seated ? body.eye.sit - 0.22 : body.eye.stand - 0.22;
+    const chest = new THREE.Vector3(place.at[0], shoulderY, place.at[2]);
+    // the nearest keyboard in front, within an arm and a lean
+    let kb = null, best = 0.95;
+    for (const K of this.keyboards) {
+      const v = K.c.clone().sub(chest);
+      const d = Math.hypot(v.x, v.z);
+      if (d < best && v.x * fwd.x + v.z * fwd.z > 0.2) { best = d; kb = K; }
+    }
+    // Seated and awake, the hands rest on the thighs instead of hanging in the air, and
+    // while this person talks one of them comes up in front of the chest and goes back.
+    const busy = new Set();
+    for (const g of gest) {
+      if ((g.name === "type" || g.name === "reach") && kb) { busy.add("L"); busy.add("R"); }
+      if (["point", "small-hand-gesture", "wave", "hand-on-belly"].includes(g.name)) busy.add(g.opts && g.opts.arm === "left" ? "L" : "R");
+    }
+    if (place.seated && a.state.v !== "asleep") {
+      const wake = a.state.prev === "asleep" ? smooth((t - a.state.since) / 0.8) : 1;
+      const talk = this.talking(body.id, t), s = body.seed;
+      const lift = talk * (0.55 + 0.45 * Math.sin(t * 2 * Math.PI * 0.42 + 3 * s));
+      const talker = s % 2 ? "L" : "R";
+      for (const side of ["L", "R"]) {
+        if (busy.has(side)) continue;
+        out.push({ side, rest: true, weight: wake, lift: side === talker ? lift : 0 });
+      }
+    }
+    for (const g of gest) {
+      if (g.name === "type" && kb) {
+        const e = envelope(g.u, Math.min(0.3, 0.5 / Math.max(0.5, (g.opts && g.opts.dur) || 1)));
+        const sgn = kb.axis.dot(left) > 0 ? 1 : -1;
+        for (const [side, off, ph] of [["L", 0.1 * sgn, 0], ["R", -0.1 * sgn, Math.PI]]) {
+          const target = kb.c.clone().addScaledVector(kb.axis, off);
+          target.y += 0.045 + 0.012 * Math.max(0, Math.sin(t * 2 * Math.PI * 5.5 + ph));
+          out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true });
+        }
+      } else if (g.name === "reach" && kb) {
+        const e = envelope(g.u, 0.3), side = g.opts && g.opts.arm === "left" ? "L" : "R";
+        const target = kb.c.clone().addScaledVector(kb.axis, (side === "L" ? 1 : -1) * (kb.axis.dot(left) > 0 ? 0.08 : -0.08));
+        target.y += 0.05;
+        out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true });
+      } else if (g.name === "hand-on-belly") {
+        const e = envelope(g.u, 0.25), side = g.opts && g.opts.arm === "left" ? "L" : "R";
+        out.push({ side, belly: true, weight: e }); // the spot is read off the placed body (reachArm)
+      }
+    }
+    return out;
+  }
+
+  // Two-bone reach: the upper arm and the forearm turned so the wrist lands on the target
+  // (the elbow falls down and out), then the forearm and hand rolled so the palm faces the
+  // way the work wants. Written straight onto the bones, after the pose.
+  reachArm(body, R) {
+    const j = body.measure.joints, B = body.bones;
+    const [sh, el, wr] = R.side === "L" ? [j.shoulderL, j.elbowL, j.wristL] : [j.shoulderR, j.elbowR, j.wristR];
+    const pos = (b) => b.getWorldPosition(new THREE.Vector3());
+    const S = pos(B[sh]), E = pos(B[el]), W = pos(B[wr]);
+    const yaw = body.model.rotation.y, fwd = new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw));
+    let target = R.target;
+    let palm = R.palm;
+    if (R.rest) {
+      // on the thigh, two thirds of the way to the knee, palm down; or up, talking
+      const [hip, knee] = R.side === "L" ? [j.hipL, j.kneeL] : [j.hipR, j.kneeR];
+      const H = pos(B[hip]), K = pos(B[knee]);
+      target = H.lerp(K, 0.6).add(new THREE.Vector3(0, 0.09, 0));
+      palm = new THREE.Vector3(0, -1, 0);
+      if (R.lift > 0) {
+        const chest = pos(B[j.chest]);
+        const up = chest.clone().addScaledVector(fwd, 0.34).add(new THREE.Vector3(0, -0.12, 0)).addScaledVector(S.clone().sub(chest).setY(0).normalize(), 0.12);
+        target.lerp(up, R.lift);
+        palm = palm.lerp(S.clone().sub(chest).setY(0).normalize().negate().add(new THREE.Vector3(0, 0.6, 0)), R.lift).normalize();
+      }
+    }
+    if (R.belly) {
+      const spine = pos(B[j.spine]), pelvis = pos(B[j.pelvis]);
+      target = spine.clone().lerp(pelvis, 0.35).addScaledVector(fwd, 0.26);
+      const side = S.clone().sub(spine).setY(0).normalize();
+      target.addScaledVector(side, 0.03);
+      palm = fwd.clone().negate();
+    }
+    const T = W.clone().lerp(target, R.weight);
+    const a = S.distanceTo(E), b = E.distanceTo(W);
+    const dir = T.clone().sub(S);
+    let d = dir.length();
+    dir.normalize();
+    const maxd = (a + b) * 0.995;
+    if (d > maxd) { T.copy(S).addScaledVector(dir, maxd); d = maxd; }
+    const cosA = Math.max(-1, Math.min(1, (a * a + d * d - b * b) / (2 * a * d)));
+    const out = S.clone().sub(pos(B[j.chest])).setY(0).normalize();
+    const pole = new THREE.Vector3(0, -1, 0).addScaledVector(out, 0.8).addScaledVector(fwd, -0.3);
+    const perp = pole.addScaledVector(dir, -pole.dot(dir)).normalize();
+    const E2 = S.clone().addScaledVector(dir, a * cosA).addScaledVector(perp, a * Math.sqrt(1 - cosA * cosA));
+    turnBone(B[sh], E.clone().sub(S), E2.sub(S));
+    const E3 = pos(B[el]), W3 = pos(B[wr]);
+    turnBone(B[el], W3.clone().sub(E3), T.clone().sub(E3));
+    if (palm) {
+      // the palm faces down in the bind's T; roll forearm and hand together to face `palm`
+      const f = pos(B[wr]).sub(E3).normalize();
+      const q = B[wr].getWorldQuaternion(new THREE.Quaternion()).multiply(body.handBindInv[R.side]);
+      const n = new THREE.Vector3(0, -1, 0).applyQuaternion(q);
+      const flat = (v) => v.clone().addScaledVector(f, -v.dot(f)).normalize();
+      const n1 = flat(n), w1 = flat(palm);
+      const ang = Math.atan2(n1.clone().cross(w1).dot(f), n1.dot(w1)) * R.weight;
+      spinBone(B[el], f, ang * 0.6);
+      spinBone(B[wr], f, ang * 0.4);
+    }
   }
 
   drawChairs(state, t, placed) {
@@ -658,11 +935,9 @@ export class People3D {
     C.projectionMatrix.makePerspective((-cx / f) * n, ((W - cx) / f) * n, (cy / f) * n, (-(H - cy) / f) * n, n, far);
     C.projectionMatrixInverse.copy(C.projectionMatrix).invert();
 
-    const placed = {};
-    for (const id of Object.keys(this.bodies)) {
-      const a = state.actors[id];
-      if (a) placed[id] = this.drawBody(id, a, t);
-    }
+    const places = {}, placed = {};
+    for (const id of Object.keys(this.bodies)) if (state.actors[id]) places[id] = this.placeBody(id, state.actors[id], t);
+    for (const id of Object.keys(places)) placed[id] = this.drawBody(id, state.actors[id], t, places[id], places);
     this.drawChairs(state, t, placed);
     for (const [id, g] of Object.entries(this.glows)) {
       const l = state.lights[id];

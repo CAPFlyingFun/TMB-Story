@@ -129,15 +129,19 @@ const REST = [
   // Straight up the aisle from the bottom of the frame -- heading 272 degrees in GameMaker's
   // terms, inside Joshua's 265-275 -- to the corner of the desks he marked, large at the
   // bottom and her normal size where she stops.
-  ...walk("sarah", { cue: "ch01-101-sarah-enters", offset: -0.4 }, [1270, 1290], 3.2, "north", "west"),
+  // In 3D she stops level with Jack, by her own console, rather than half a metre nearer
+  // the lens (Joshua, 2026-09-29: "She stands too close to the camera").
+  ...walk("sarah", { cue: "ch01-101-sarah-enters", offset: -0.4 }, [1235, 1200], 3.2, "north", "west"),
   { at: L("Please tell me you didn't break"), action: "face", actor: "jack", direction: "east", label: "Jack turns to her" },
   { at: L("Please tell me you didn't break"), action: "state", actor: "jack", state: "awake" },
   { at: L("Jack gestured toward the console."), action: "face", actor: "jack", direction: "northeast" },
   { at: L("Jack gestured toward the console."), action: "jolt", actor: "jack", amount: 0.3, duration: 0.5 },
   // "Sarah closed the distance between them." (segment 59: anchored by order, because the
   // line replaced "Sarah stopped just inside the doorway" on 2026-09-26 and both texts must
-  // work while the audio catches up.)
-  ...walk("sarah", { seg: 59 }, [1115, 1236], 2.6, "west", "northwest"),
+  // work while the audio catches up.) Where she stands beside him is at HIS depth (y about
+  // 1196): in 3D a few pixels lower is a step nearer the lens, and she stood in front of him
+  // looking bigger (Joshua, 2026-09-29: "not the same distance as Jack").
+  ...walk("sarah", { seg: 59 }, [1075, 1196], 2.6, "west", "northwest"),
   { at: { seg: 59 }, action: "camera", shot: "twoshot", duration: 4, ease: "inOut" },
   // "Jack pointed toward the monitor. 'Whatever this is.'"
   { at: L("Jack pointed toward the monitor"), action: "jolt", actor: "jack", amount: 0.25, duration: 0.5 },
@@ -146,7 +150,7 @@ const REST = [
   { at: L("Jack nodded solemnly."), action: "jolt", actor: "jack", amount: 0.3, duration: 0.7 },
   // "She leaned over his shoulder and studied the screen." / "Jack."
   { at: L("She leaned over his shoulder"), action: "state", actor: "sarah", state: "leaning" },
-  { at: L("She leaned over his shoulder"), action: "move", actor: "sarah", x: 1085, y: 1230, duration: 1, ease: "inOut" },
+  { at: L("She leaned over his shoulder"), action: "move", actor: "sarah", x: 1045, y: 1200, duration: 1, ease: "inOut" },
   { at: L("She leaned over his shoulder"), action: "camera", shot: "leanover", duration: 3, ease: "inOut" },
   { at: L("Jack straightened in his chair"), action: "face", actor: "jack", direction: "northeast" },
   { at: L("Jack straightened in his chair"), action: "jolt", actor: "jack", amount: 0.3, duration: 0.5 },
@@ -161,13 +165,13 @@ const REST = [
 
   // "Sarah started powering up the other console next to Jack."
   { at: L("Sarah started powering up"), action: "scene", name: "The other console" },
-  ...walk("sarah", L("Sarah started powering up"), [1170, 1232], 1.6, "east", "north"),
+  ...walk("sarah", L("Sarah started powering up"), [1215, 1196], 1.6, "east", "north"),
   { at: L("Sarah started powering up", { offset: 1.6 }), action: "screen", target: S, state: "boot", label: "Sarah's console starts" },
   { at: L("Sarah started powering up", { offset: 1.6 }), action: "light", target: "sarahScreen", intensity: 0.3, duration: 1.2 },
   { at: L("Can I take your chair?"), action: "face", actor: "sarah", direction: "west" },
   // "Sarah nudged the arm of his chair, looking slightly annoyed, but sympathetic."
   // 1) She comes in close to nudge his chair...
-  ...walk("sarah", L("Sarah nudged the arm of his chair"), [950, 1234], 1.1, "west"),
+  ...walk("sarah", L("Sarah nudged the arm of his chair"), [1040, 1198], 1.1, "west"),
   { at: L("Sarah nudged the arm of his chair", { offset: 1.2 }), action: "jolt", actor: "jack", amount: 0.35, duration: 0.5 },
   { at: L("Sarah nudged the arm of his chair", { offset: 1.2 }), action: "jolt", actor: "sarah", amount: 0.2, duration: 0.4 },
   { at: L("Let me have your chair"), action: "camera", shot: "room", duration: 2.6, ease: "inOut", label: "wide for the chair swap" },
@@ -307,7 +311,7 @@ const REST = [
   { at: L("Jack spread his hands."), action: "gesture", actor: "jack", animation: "small-hand-gesture", duration: 1.2 },
   { at: L("Jack considered it."), action: "gesture", actor: "jack", animation: "look-up", duration: 1.3 },
   { at: L("Jack surrendered with a small nod."), action: "gesture", actor: "jack", animation: "nod", duration: 0.9 },
-  { at: L("Sarah rested a hand briefly"), action: "gesture", actor: "sarah", animation: "small-hand-gesture", duration: 2.0 },
+  { at: L("Sarah rested a hand briefly"), action: "gesture", actor: "sarah", animation: "hand-on-belly", duration: 2.4 },
   // The opening: asleep in the chair until the alarm, then everything the text has them do.
   { at: L("Jack sat slumped"), until: L("Jack jerked awake", { offset: 0.35 }), action: "gesture", actor: "jack", animation: "doze", label: "Jack's head tipped toward one shoulder" },
   { at: L("A warning tone chirped", { offset: 2.4 }), action: "gesture", actor: "jack", animation: "stir", duration: 1.4 },
@@ -422,6 +426,8 @@ export default {
           models: { jack: "../assets/models/jack.glb", sarah: "../assets/models/sarah.glb" },
           camera: { focal: 1300, principal: [1024, 581], height: 1.43, vanishX: 905.2 },
           aisle: { left: -0.5, right: 1.22, deskFront: -3.65, rightRunEnds: -1.46, rightNear: 1.06 },
+          // Each keyboard's two ends as painted: where the hands go when someone types.
+          keyboards: { jack: [[910, 788], [1070, 788]], sarah: [[1112, 770], [1238, 770]] },
         },
       },
 

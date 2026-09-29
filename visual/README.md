@@ -145,7 +145,13 @@ They are posed by that game's own rig code, bundled into `vendor/three-human.js`
 (`doze` while Jack is asleep, `sit` otherwise), standing, and walking, with the scene's
 states (leaning, still, a jolt) and gestures (nod, look, point, reach, type…) added as
 small joint turns. A change of pose or state blends over about half a second, and a
-change of direction turns rather than cuts. A seated person has a chair; a person who
+change of direction turns rather than cuts. Heads look at whatever lies the way the body
+faces, the other person's face or a monitor, and move between them as the body turns.
+Hands have places to be: on the keys when someone types (the set's `keyboards`, each
+painted end followed into the room), on the thighs when seated, on Sarah's stomach
+(`hand-on-belly`), and up in front of the chest while that person's own line is heard.
+The rig's `head` joint is the crown, so turns go to its parent, the base of the skull,
+and a lowered arm shares its drop with the collarbone so the shoulder does not square off. A seated person has a chair; a person who
 stands leaves it where it was, and the next person to sit down there takes it.
 
 Two ways to see the room, chosen per shot:

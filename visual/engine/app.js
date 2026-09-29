@@ -102,7 +102,7 @@ async function boot() {
     root.dataset.set = id;
     root.hidden = true;
     $("world").appendChild(root);
-    stages[id] = new Stage(root, set, sprites, url, scene.painters || {}, { rigs: rigFiles, People3D, people3d: { timeline, setId: id, range: [start, end] } });
+    stages[id] = new Stage(root, set, sprites, url, scene.painters || {}, { rigs: rigFiles, People3D, people3d: { timeline, setId: id, range: [start, end], lineAt: anchors.lineAt } });
   }
   const people = Object.values(stages).map((s) => s.people).filter(Boolean);
   if (people.length) {
@@ -416,7 +416,7 @@ async function boot() {
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
-  window.__tmb = { clock, timeline, seek, scene, stages }; // for probes and the console
+  window.__tmb = { clock, timeline, seek, scene, stages, anchors }; // for probes and the console
 }
 
 boot().catch((err) => {

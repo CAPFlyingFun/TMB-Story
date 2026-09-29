@@ -123,6 +123,10 @@ export const PRESETS = {
   },
 };
 
+// A hand on the stomach: in 3D the hand really goes there (engine/people3d.js); the drawn
+// rig can only lift a hand a little, so it borrows the small gesture.
+PRESETS["hand-on-belly"] = PRESETS["small-hand-gesture"];
+
 export const PRESET_NAMES = Object.keys(PRESETS);
 
 // Alive while nothing else is happening: slow breathing in the torso and a small drift of
