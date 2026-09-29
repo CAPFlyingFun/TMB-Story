@@ -227,9 +227,25 @@ export class People3D {
       base.appendChild(c);
       return c;
     };
-    // The room, under the screens (600); the people, over every sprite and under the grade.
+    // The room, under the screens (600). The people over everything painted, the glows
+    // included: a glow is a light on the back wall, and a person in front of it hides it
+    // (Joshua, 2026-09-29: "the intercom light was showing through Jack"). So the set's
+    // night grade, which lies over the painting, is applied to the people in their own
+    // canvas, and the glows reach them as lights (this.glows), not as a wash on top.
     this.roomCanvas = mk(500);
-    this.peopleCanvas = mk(4000);
+    this.peopleCanvas = mk(5002);
+    const g = rgba(stage.set.world.grade);
+    this.gradeScene = new THREE.Scene();
+    this.gradeCam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+    this.gradeScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), new THREE.ShaderMaterial({
+      uniforms: { tint: { value: new THREE.Vector4(g.color.r * g.a, g.color.g * g.a, g.color.b * g.a, stage.set.world.grade ? g.a : 0) } },
+      vertexShader: "void main() { gl_Position = vec4(position.xy, 0.0, 1.0); }",
+      // out = tint over the person, only where there is a person: src * dstAlpha + dst * (1 - a)
+      fragmentShader: "uniform vec4 tint; void main() { gl_FragColor = tint; }",
+      transparent: true, depthTest: false, depthWrite: false, premultipliedAlpha: true,
+      blending: THREE.CustomBlending, blendSrc: THREE.DstAlphaFactor, blendDst: THREE.OneMinusSrcAlphaFactor,
+      blendSrcAlpha: THREE.DstAlphaFactor, blendDstAlpha: THREE.OneMinusSrcAlphaFactor,
+    })));
 
     this.camera = new THREE.PerspectiveCamera();
     this.camera.rotation.order = "YXZ";
@@ -640,6 +656,11 @@ export class People3D {
     for (const P of Object.values(this.screenAnchors)) {
       consider(P[0].clone().add(P[1]).add(P[2]).add(P[3]).multiplyScalar(0.25), 1);
     }
+    // a lit call point (the intercom) draws the eye while it is on
+    for (const id of this.spec.lookAtLights || []) {
+      const l = this.lights && this.lights[id], A = this.lightAnchors[id];
+      if (l && A && l.intensity > 0.05) consider(A.p, 1.6);
+    }
     if (sum < 1e-3) return null;
     return { eye, target: tgt.multiplyScalar(1 / sum), amount: Math.min(1, sum) };
   }
@@ -935,6 +956,7 @@ export class People3D {
     C.projectionMatrix.makePerspective((-cx / f) * n, ((W - cx) / f) * n, (cy / f) * n, (-(H - cy) / f) * n, n, far);
     C.projectionMatrixInverse.copy(C.projectionMatrix).invert();
 
+    this.lights = state.lights;
     const places = {}, placed = {};
     for (const id of Object.keys(this.bodies)) if (state.actors[id]) places[id] = this.placeBody(id, state.actors[id], t);
     for (const id of Object.keys(places)) placed[id] = this.drawBody(id, state.actors[id], t, places[id], places);
@@ -950,6 +972,9 @@ export class People3D {
 
     this.peopleCanvas.style.display = "";
     this.peopleRenderer.render(this.scene, C);
+    this.peopleRenderer.autoClear = false;
+    this.peopleRenderer.render(this.gradeScene, this.gradeCam);
+    this.peopleRenderer.autoClear = true;
 
     const roomOn = d3 > 0.0005;
     if (roomOn) {

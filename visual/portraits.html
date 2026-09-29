@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caption portraits (3D)</title>
+  <style>
+    body { margin: 0; background: #1b1d21; color: #e8e2d8; font: 14px system-ui, sans-serif; padding: 16px; }
+    .row { display: flex; gap: 16px; flex-wrap: wrap; }
+    figure { margin: 0; text-align: center; }
+    canvas { width: 192px; height: 192px; background: #2a2d33; border-radius: 50%; display: block; }
+    a { color: #d4a853; }
+  </style>
+</head>
+<body>
+  <!-- Dev tool, not linked from the story: renders Jack's and Sarah's caption portraits from
+       their 3D models (assets/portraits/<name>-3d.png). Save each with its link. The drawn
+       portraits come from scripts/make-portraits.py. -->
+  <p>Caption portraits from the 3D models. <span id="msg">Rendering…</span></p>
+  <div class="row" id="row"></div>
+  <script type="module">
+    import * as THREE from "./vendor/three-human.js";
+    const SIZE = 384;
+    const DEG = Math.PI / 180;
+    const models = { jack: "../assets/models/jack.glb", sarah: "../assets/models/sarah.glb" };
+    const loader = new THREE.GLTFLoader();
+    loader.setMeshoptDecoder(THREE.MeshoptDecoder);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+    renderer.setSize(SIZE, SIZE);
+    renderer.setClearColor(0, 0);
+    const out = {};
+    for (const [id, file] of Object.entries(models)) {
+      const scene = new THREE.Scene();
+      scene.add(new THREE.HemisphereLight(0xdfe8f0, 0x2a2622, 1.1));
+      const key = new THREE.DirectionalLight(0xfff1e0, 2.2);
+      key.position.set(0.8, 2.2, 1.6);
+      const rim = new THREE.DirectionalLight(0x9fc8ff, 1.4);
+      rim.position.set(-1.2, 1.9, -1.4);
+      scene.add(key, rim);
+      const model = (await loader.loadAsync(file)).scene;
+      const rig = new THREE.HumanRig(model);
+      const m = THREE.measureHuman(rig.bind), j = m.joints, L = m.leftSign < 0 ? -1 : 1;
+      // standing, with the collarbones taking part of each arm's drop (as in engine/people3d.js)
+      const turns = THREE.poseHuman(m, rig.bind, { stance: "stand", phase: 0, seconds: 0, lean: 0 }, []).map((t) => ({ ...t }));
+      const q = (t) => new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(t.ax, t.ay, t.az), t.radians);
+      const put = (joint, quat) => {
+        const i = turns.findIndex((t) => t.joint === joint);
+        const ax = new THREE.Vector3(quat.x, quat.y, quat.z), s = ax.length();
+        const turn = { joint, ax: s > 1e-9 ? ax.x / s : 0, ay: s > 1e-9 ? ax.y / s : 1, az: s > 1e-9 ? ax.z / s : 0, radians: 2 * Math.atan2(s, quat.w) };
+        if (i >= 0) turns[i] = turn; else turns.push(turn);
+      };
+      for (const [sh, s] of [[j.shoulderL, L], [j.shoulderR, -L]]) {
+        const clav = rig.bind[sh].parent, t = turns.find((x) => x.joint === sh);
+        if (clav < 0 || !t) continue;
+        const Rc = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 0, 1), -s * 16 * DEG);
+        put(clav, Rc);
+        put(sh, Rc.clone().invert().multiply(q(t)));
+      }
+      rig.apply(turns);
+      model.updateMatrixWorld(true);
+      let skin; model.traverse((n) => { if (n.isSkinnedMesh && !skin) skin = n; n.frustumCulled = false; });
+      const bones = skin.skeleton.bones;
+      // Frame on the posed skin itself: the top of the head, and the middle of the top 22 cm
+      // (the bones are not a reliable guide: Sarah's skull bones sit behind her face).
+      const pts = [];
+      model.traverse((n) => {
+        if (!n.isSkinnedMesh) return;
+        const P = n.geometry.attributes.position, v = new THREE.Vector3();
+        for (let i = 0; i < P.count; i += 3) { v.fromBufferAttribute(P, i); n.applyBoneTransform(i, v); pts.push(v.clone().applyMatrix4(n.matrixWorld)); }
+      });
+      const top = Math.max(...pts.map((p) => p.y));
+      const cap = pts.filter((p) => p.y > top - 0.22);
+      const face = cap.reduce((a, p) => a.add(p), new THREE.Vector3()).multiplyScalar(1 / cap.length);
+      face.y = top - 0.12;
+      scene.add(model);
+      const cam = new THREE.PerspectiveCamera(22, 1, 0.05, 10);
+      const turn = 16 * DEG;
+      cam.position.copy(face).add(new THREE.Vector3(Math.sin(turn) * 1.1, 0.04, Math.cos(turn) * 1.1));
+      cam.lookAt(face.clone().add(new THREE.Vector3(0, -0.06, 0)));
+      renderer.render(scene, cam);
+      const c = document.createElement("canvas");
+      c.width = c.height = SIZE / 2;
+      c.getContext("2d").drawImage(renderer.domElement, 0, 0, SIZE / 2, SIZE / 2);
+      out[id] = c.toDataURL("image/png");
+      const fig = document.createElement("figure");
+      const a = document.createElement("a");
+      a.href = out[id];
+      a.download = id + "-3d.png";
+      a.textContent = id + "-3d.png";
+      fig.append(c, a);
+      document.getElementById("row").appendChild(fig);
+    }
+    document.getElementById("msg").textContent = "Done.";
+    window.__portraits = out;
+  </script>
+</body>
+</html>

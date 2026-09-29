@@ -31,6 +31,8 @@ line; the voice-only export is not indexable.
 | `vendor/three-human.js` | three.js r185, its glTF loader and meshopt decoder, and TRADDOMIUM's human rig and poses (`src/actor/human*.ts`, `src/view/HumanRig.ts`), bundled into one module |
 | `../assets/models/` | `jack.glb` and `sarah.glb` (TRADDOMIUM: Micro Battle's rigged pair, the ones the sprites were drawn from) and `lab-3d.glb`, the lab picture baked onto its own shapes |
 | `../scripts/bake-lab-3d.py` | rebuilds `lab-3d.glb` from `lab-wide.jpg` (needs numpy and OpenCV) |
+| `../scripts/make-portraits.py` | the caption portraits (`assets/portraits/`): cut from each character's front sprite, and the systems' terminal icon |
+| `portraits.html` | dev-only: renders Jack's and Sarah's 3D caption portraits (`<name>-3d.png`) from their models |
 | `engine/rig.js` | the optional cutout rig: cuts a sprite into body parts along polygons and turns them about pivots |
 | `engine/gestures.js` | the animation presets (nod, look-left, point, wave, type, lean-forward, walk…) as small eased joint angles |
 | `rig.html` + `engine/rig-editor.js` | dev-only rig editor; not linked from the story |
@@ -176,6 +178,17 @@ Two ways to see the room, chosen per shot:
 
   Metres in the room frame: x right, y up, z toward the picture's camera, the floor at
   y = 0. The flat `x/y/w/h` stays the framing when the people are drawn.
+
+**The glows and the people.** A glow is a light on the back wall, so with the people in
+3D their canvas sits over the glows (a person in front of the intercom hides it) and the
+set's night grade is applied to them inside that canvas; the glows light them as point
+lights instead. Chapter 1's intercom shot is taken from Jack's right, and a lit intercom
+draws his eye (`lookAtLights`).
+
+**Captions.** With CC on, the speaker's portrait sits beside their line: the 3D one for
+Jack and Sarah when the people are in 3D, the drawn one otherwise, and a terminal for the
+settlement's systems. Narration has none. A speaker with no portrait yet (Doctor Mercer,
+settlement security) shows the line alone.
 
 **Switchable.** The menu's "People: 3D / Drawn" button (remembered on the device) or
 `?people=2d` puts the sprites back; `?people=3d` forces 3D. The sprites also stand in if

@@ -428,6 +428,8 @@ export default {
           aisle: { left: -0.5, right: 1.22, deskFront: -3.65, rightRunEnds: -1.46, rightNear: 1.06 },
           // Each keyboard's two ends as painted: where the hands go when someone types.
           keyboards: { jack: [[910, 788], [1070, 788]], sarah: [[1112, 770], [1238, 770]] },
+          // Lights that draw a person's eye while they are on.
+          lookAtLights: ["intercom"],
         },
       },
 
@@ -478,7 +480,9 @@ export default {
         rollback: { x: 340, y: 400, w: 1000, h: 752, focus: [760, 820] },
         medium: { x: 520, y: 470, w: 760, h: 640, focus: [860, 760] },
         screen: { x: 700, y: 540, w: 560, h: 420, focus: [960, 690] },
-        intercom: { x: 560, y: 560, w: 560, h: 440, focus: [800, 780] },
+        // From Jack's right side when the people are in 3D, so he is not in front of the
+        // intercom he is talking to (Joshua, 2026-09-29).
+        intercom: { x: 560, y: 560, w: 560, h: 440, focus: [800, 780], cam3: { at: [1.0, 1.36, -2.7], look: [-0.2, 1.0, -3.6], hfov: 50 } },
         doorway: { x: 400, y: 250, w: 1648, h: 902, focus: [1660, 820] }, // a phone held upright keeps the door side
         twoshot: { x: 420, y: 380, w: 1180, h: 772, focus: [930, 820] },
         leanover: { x: 540, y: 440, w: 760, h: 660, focus: [880, 820] },

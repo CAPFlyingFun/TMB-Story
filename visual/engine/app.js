@@ -32,7 +32,7 @@ function buildCaptions(segments, start, end) {
     let t = a;
     for (const p of parts) {
       const d = ((b - a) * p.length) / total;
-      out.push({ start: t, end: t + d, text: p.trim(), label });
+      out.push({ start: t, end: t + d, text: p.trim(), label, speaker: s.speaker });
       t += d;
     }
   }
@@ -151,6 +151,16 @@ async function boot() {
 
   // Captions: off unless turned on, and remembered.
   const captions = buildCaptions(anchors.segments, start, end);
+  // With captions on, whoever is speaking has their small portrait beside the line
+  // (assets/portraits, scripts/make-portraits.py): the 3D one when the people are in 3D.
+  const PORTRAITS = new Set(["jack", "sarah", "mark", "lena", "system"]), PORTRAITS_3D = new Set(["jack", "sarah"]);
+  const faceOf = (speaker) => {
+    const key = String(speaker || "").split("-")[0];
+    if (!PORTRAITS.has(key)) return "";
+    const in3d = people.some((p) => p.active) && PORTRAITS_3D.has(key);
+    return url(`../assets/portraits/${key}${in3d ? "-3d" : ""}.png`);
+  };
+  for (const c of captions) if (c.speaker && faceOf(c.speaker)) new Image().src = faceOf(c.speaker);
   const capEl = $("captions");
   let ccOn = store.get("tmb.cc") === "1", capShown = null;
   function setCC(on) {
@@ -169,10 +179,13 @@ async function boot() {
       else break;
     }
     if (c && t > c.end + 0.6) c = null;
-    const html = ccOn && c ? (c.label ? `<b>${esc(c.label)}:</b> ` : "") + esc(c.text) : "";
+    const face = ccOn && c ? faceOf(c.speaker) : "";
+    const text = ccOn && c ? (c.label ? `<b>${esc(c.label)}:</b> ` : "") + esc(c.text) : "";
+    const html = text && face ? `<img class="cap-face" src="${face}" alt=""><span>${text}</span>` : text;
     if (html !== capShown) {
       capShown = html;
       capEl.innerHTML = html;
+      capEl.classList.toggle("has-face", !!face);
       capEl.hidden = !html;
     }
   }
