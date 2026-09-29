@@ -93,8 +93,25 @@ body {
 #gate-msg { min-height: 1.3em; color: #8b7e6e; font-size: 14px; }
 button { font: inherit; color: #f5ede4; background: rgba(38,34,32,.85); border: 1px solid #5a5048; border-radius: 10px; min-width: 44px; min-height: 44px; padding: 0 14px; touch-action: manipulation; }
 button:disabled { opacity: .4; }
-button.primary, #start, #again { background: #d4a853; color: #12100e; border-color: #d4a853; font-weight: 700; min-width: 96px; }
-#start, #again { font-size: 18px; padding: 0 26px; }
+button.primary, #again { background: #d4a853; color: #12100e; border-color: #d4a853; font-weight: 700; min-width: 96px; }
+#again { font-size: 18px; padding: 0 26px; }
+/* The start menu: Resume, Start over, Chapter select, Main menu. */
+.gate-buttons { display: flex; flex-direction: column; gap: 10px; width: min(280px, 80vw); margin: 0 auto; }
+.gate-buttons button, .gate-buttons .btn { width: 100%; font-size: 16px; }
+.gate-buttons button[hidden] { display: none; }
+#resume, #start.primary { background: #d4a853; color: #12100e; border-color: #d4a853; font-weight: 700; font-size: 17px; }
+#chapter-list[hidden], #gate-main[hidden] { display: none; }
+.chapter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: min(420px, 86vw); margin: 0 auto; }
+.chapter-grid button { text-align: left; font-size: 14px; min-height: 42px; line-height: 1.2; padding: 4px 12px; }
+.chapter-grid button small { display: block; color: #8b7e6e; font-size: 11px; }
+.chapter-grid button:disabled { opacity: .55; }
+@media (max-height: 460px) { .gate-card { padding: 10px; } .gate-card h1 { font-size: 22px; } .sub { margin: 2px 0 10px; } .gate-buttons { gap: 7px; } .gate-buttons button, .gate-buttons .btn { min-height: 40px; } }
+/* "Loading… 1.2MB/6.5MB (18.5%)": along the bottom, above the controls while they show. */
+#loadbar { position: fixed; left: 50%; transform: translateX(-50%); z-index: 25; bottom: calc(env(safe-area-inset-bottom) + 4px);
+  font: 12px ui-monospace, Menlo, monospace; color: #c4b49a; background: rgba(0,0,0,.55); padding: 2px 10px; border-radius: 8px;
+  pointer-events: none; white-space: nowrap; transition: bottom .35s ease; }
+#loadbar[hidden] { display: none; }
+body:not(.ui-hidden) #loadbar { bottom: calc(var(--controls-h, 90px) + 4px); }
 #controls { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 6px max(12px, env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); background: linear-gradient(transparent, rgba(0,0,0,.72) 40%); }
 #controls .row { display: flex; align-items: center; gap: 8px; justify-content: center; }
 #clock { font: 13px ui-monospace, Menlo, monospace; color: #c4b49a; min-width: 108px; text-align: center; }

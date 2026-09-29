@@ -18,10 +18,18 @@
     <div id="gate">
       <div class="gate-card">
         <p class="kicker">TRADDOMIUM: Micro Battle!</p>
-        <h1>Chapter 1 &middot; The Alarm</h1>
-        <p class="sub">Visual story prototype &middot; the whole chapter</p>
-        <button id="start" type="button" disabled>&#9654; Play</button>
-        <button id="startover" type="button" class="quiet" hidden>&#8634; Start over</button>
+        <h1 id="gate-title">Chapter 1 &middot; The Alarm</h1>
+        <p class="sub">Watch</p>
+        <div class="gate-buttons" id="gate-main">
+          <button id="resume" type="button" class="primary" hidden disabled>&#9654; Resume</button>
+          <button id="start" type="button" disabled>&#9654; Play</button>
+          <button id="chapters" type="button">Chapter select</button>
+          <a id="g-home" class="btn" href="../">Main menu</a>
+        </div>
+        <div id="chapter-list" hidden>
+          <div class="chapter-grid" id="chapter-grid"></div>
+          <button id="chapters-back" type="button" class="quiet">&larr; Back</button>
+        </div>
         <p id="gate-msg">Loading&hellip;</p>
       </div>
     </div>
@@ -33,6 +41,7 @@
       </div>
     </div>
   </div>
+  <div id="loadbar" hidden aria-live="polite"></div>
   <pre id="debug" aria-live="off" hidden></pre>
   <a id="home" href="../#listen">&larr; Reader</a>
   <div id="controls">

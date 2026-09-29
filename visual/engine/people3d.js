@@ -304,8 +304,10 @@ export class People3D {
   async load(options) {
     const loader = new THREE.GLTFLoader();
     loader.setMeshoptDecoder(THREE.MeshoptDecoder);
-    const people = await Promise.all(Object.values(this.spec.models).map((p) => loader.loadAsync(this.url(p))));
     const ids = Object.keys(this.spec.models);
+    // bytes already downloaded (engine/app.js counts them in), or fetched here
+    const B = options.buffers || {};
+    const people = await Promise.all(ids.map((id) => (B[id] ? loader.parseAsync(B[id], "") : loader.loadAsync(this.url(this.spec.models[id])))));
 
     // THE ROOM, built (engine/labRoom.js): drawn in its own canvas under the story's screens,
     // and again as depth only among the people, so a cabinet, a desk or a monitor hides

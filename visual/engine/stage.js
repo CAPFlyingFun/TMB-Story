@@ -124,6 +124,13 @@ export class Stage {
     if (options.People3D && W.people3d) this.people = new options.People3D(this, W.people3d, { url, ...options.people3d });
   }
 
+  // The 3D people arriving after the stage is up (engine/app.js downloads them in the
+  // background): the drawn people stand in until then.
+  attachPeople(People3D, opts) {
+    if (this.people || !this.set.world.people3d) return;
+    this.people = new People3D(this, this.set.world.people3d, { url: this.url, ...opts });
+  }
+
   // The walkable floor (world.floor, a polygon in world units). A character's footprint --
   // the chair's base seated, the feet standing -- is kept inside it every frame, so a chair
   // wheel never sinks into a cabinet whatever the scene asks for.

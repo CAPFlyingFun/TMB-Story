@@ -4,8 +4,19 @@
 import { AudioClock } from "./clock.js";
 import { makeAnchors, compileScene, setsOf } from "./timeline.js";
 import { Stage } from "./stage.js";
+import { Downloads } from "./download.js";
 
 const SCENES = { "ch01-opening": () => import("../scenes/ch01-opening.js") };
+// The chapter list on the start menu. Only a chapter with a scene can be watched; the rest
+// say so rather than looking playable.
+const CHAPTERS = [
+  { n: 1, title: "The Alarm", scene: "ch01-opening" },
+  { n: 2, title: "The Boundary" },
+  { n: 3, title: "The Activation" },
+  { n: 4, title: "The First Calls" },
+  { n: 5, title: "The Edge" },
+  { n: 6, title: "Someone Knew" },
+];
 
 const q = new URLSearchParams(location.search);
 const $ = (id) => document.getElementById(id);
@@ -61,6 +72,30 @@ async function boot() {
   const end = anchors.resolve(scene.range.end);
 
   const sets = setsOf(scene);
+
+  // The people in 3D (engine/people3d.js): on unless ?people=2d or the menu turned them off.
+  // Their files start downloading NOW, before anything else, and never hold up the menu:
+  // Start over plays the island intro while they finish (Joshua, 2026-09-29: "it will load
+  // the island intro which should be about right for the loading time for the models").
+  const has3d = Object.values(sets).some((s) => s.world.people3d);
+  const want3d = has3d && (q.get("people") === "3d" || (q.get("people") !== "2d" && store.get("tmb.people3d") !== "0"));
+  const loadbar = $("loadbar");
+  let loadDone = false;
+  const downloads = new Downloads((d) => {
+    if (loadDone) return;
+    loadbar.hidden = false;
+    loadbar.textContent = d.failed ? "3D people could not load; showing the drawn ones" : d.line();
+  });
+  let dl3d = null;
+  if (want3d) {
+    const spec = Object.values(sets).find((s) => s.world.people3d).world.people3d;
+    const three = downloads.fetch(url("vendor/three-human.js"));
+    const models = Object.fromEntries(Object.entries(spec.models).map(([id, p]) => [id, downloads.fetch(url(p))]));
+    // the module is imported once its bytes are in the browser's cache
+    const People3D = three.then(() => import("./people3d.js")).then((m) => m.People3D);
+    dl3d = { People3D, models };
+  }
+
   const sprites = {};
   const preload = Object.values(sets).map((s) => url(s.world.background));
   for (const s of Object.values(sets)) for (const o of s.objects || []) if (o.src) preload.push(url(o.src));
@@ -86,11 +121,6 @@ async function boot() {
   gateMsg.textContent = "Loading…";
   await Promise.all(preload.map(loadImage));
 
-  // The people in 3D (engine/people3d.js): on unless ?people=2d or the menu turned them off.
-  const has3d = Object.values(sets).some((s) => s.world.people3d);
-  const want3d = has3d && (q.get("people") === "3d" || (q.get("people") !== "2d" && store.get("tmb.people3d") !== "0"));
-  const People3D = want3d ? (await import("./people3d.js")).People3D : null;
-
   let dirty = true;
   const audio = $("audio");
   const clock = new AudioClock(audio, { src: url(scene.audio), start, end, silent: q.has("silent") });
@@ -102,22 +132,32 @@ async function boot() {
     root.dataset.set = id;
     root.hidden = true;
     $("world").appendChild(root);
-    stages[id] = new Stage(root, set, sprites, url, scene.painters || {}, { rigs: rigFiles, People3D, people3d: { timeline, setId: id, range: [start, end], lineAt: anchors.lineAt } });
+    stages[id] = new Stage(root, set, sprites, url, scene.painters || {}, { rigs: rigFiles });
   }
-  const people = Object.values(stages).map((s) => s.people).filter(Boolean);
-  if (people.length) {
-    gateMsg.textContent = "Loading the 3D people…";
-    const late = new Promise((res) => setTimeout(() => res("late"), 45000));
-    try {
-      if ((await Promise.race([Promise.all(people.map((p) => p.ready)), late])) === "late") {
-        console.warn("3D people are still loading; the drawn ones stand in until they arrive");
-        for (const p of people) p.ready.then(() => (dirty = true));
-      }
-    } catch (e) {
-      console.error("3D people could not load; using the drawn ones", e);
-      for (const p of people) p.setEnabled(false);
+  const people = () => Object.values(stages).map((s) => s.people).filter(Boolean);
+  // The 3D people join as soon as their files are in; until then the drawn ones stand in.
+  const ready3d = !dl3d ? Promise.resolve(false) : (async () => {
+    const People3D = await dl3d.People3D;
+    const buffers = {};
+    for (const [id, p] of Object.entries(dl3d.models)) buffers[id] = await p;
+    for (const [id, st] of Object.entries(stages)) {
+      st.attachPeople(People3D, { timeline, setId: id, range: [start, end], lineAt: anchors.lineAt, buffers });
     }
-  }
+    await Promise.all(people().map((p) => p.ready));
+    loadDone = true;
+    loadbar.textContent = "3D ready";
+    setTimeout(() => (loadbar.hidden = true), 1500);
+    dirty = true;
+    return true;
+  })().catch((e) => {
+    console.error("3D people could not load; using the drawn ones", e);
+    for (const p of people()) p.setEnabled(false);
+    loadDone = true;
+    loadbar.textContent = "3D people could not load; showing the drawn ones";
+    setTimeout(() => (loadbar.hidden = true), 4000);
+    dirty = true;
+    return false;
+  });
   let shownSet = null, titleShown = null;
 
   const beats = anchors.segments.map((s) => s.startMs / 1000).filter((t) => t >= start - 0.01 && t < end);
@@ -157,7 +197,7 @@ async function boot() {
   const faceOf = (speaker) => {
     const key = String(speaker || "").split("-")[0];
     if (!PORTRAITS.has(key)) return "";
-    const in3d = people.some((p) => p.active) && PORTRAITS_3D.has(key);
+    const in3d = people().some((p) => p.active) && PORTRAITS_3D.has(key);
     return url(`../assets/portraits/${key}${in3d ? "-3d" : ""}.png`);
   };
   for (const c of captions) if (c.speaker && faceOf(c.speaker)) new Image().src = faceOf(c.speaker);
@@ -325,7 +365,6 @@ async function boot() {
     dirty = true;
   });
 
-  $("start").onclick = play;
   $("toggle").onclick = () => (clock.playing ? pause() : play());
   $("restart").onclick = () => {
     seek(start);
@@ -354,21 +393,63 @@ async function boot() {
     if (e.code === "KeyD") { showDebug = !showDebug; $("debug").hidden = !showDebug; }
   });
 
+  // THE START MENU (Joshua, 2026-09-29: "when you start on Watch, add a resume, start
+  // over, chapter select, main menu"). Start over plays at once from the island, and the 3D
+  // people finish downloading under the intro. Resume into the lab waits for them, with
+  // the download's progress on the menu.
   const resumeAt = q.has("t") ? null : savedPosition();
   if (q.has("t")) seek(parseFloat(q.get("t")));
   else seek(resumeAt !== null ? resumeAt : start);
+  $("gate-title").innerHTML = esc(scene.title.replace(/\s*\(.*\)\s*$/, "")).replace(":", " &middot;");
   if (resumeAt !== null) {
-    $("start").innerHTML = `&#9654; Resume at ${fmt(resumeAt - start).replace(/\.\d$/, "")}`;
-    $("startover").hidden = false;
-    $("startover").onclick = () => {
-      seek(start);
-      play();
-    };
+    $("resume").hidden = false;
+    $("resume").innerHTML = `&#9654; Resume at ${fmt(resumeAt - start).replace(/\.\d$/, "")}`;
+    $("start").innerHTML = "&#8634; Start over";
+  } else {
+    $("start").classList.add("primary");
   }
+  $("start").onclick = () => {
+    seek(start);
+    play();
+  };
+  $("resume").onclick = async () => {
+    const inLab = sets[timeline.evaluate(resumeAt).set].world.people3d;
+    if (inLab && dl3d && !loadDone) {
+      for (const b of ["resume", "start", "chapters"]) $(b).disabled = true;
+      gateMsg.textContent = "Getting the 3D people ready…";
+      // never stuck: after a minute the drawn people carry on
+      await Promise.race([ready3d, new Promise((r) => setTimeout(r, 60000))]);
+      gateMsg.textContent = "";
+    }
+    seek(resumeAt);
+    play();
+  };
+  const grid = $("chapter-grid");
+  for (const c of CHAPTERS) {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.innerHTML = `${c.n} &middot; ${esc(c.title)}${c.scene ? "" : "<small>Not in Watch yet</small>"}`;
+    b.disabled = !c.scene;
+    b.onclick = () => {
+      if (c.scene === scene.id) $("start").onclick();
+      else location.href = `?scene=${encodeURIComponent(c.scene)}`;
+    };
+    grid.appendChild(b);
+  }
+  const showChapters = (on) => {
+    $("gate-main").hidden = on;
+    $("chapter-list").hidden = !on;
+  };
+  $("chapters").onclick = () => showChapters(true);
+  $("chapters-back").onclick = () => showChapters(false);
+  $("g-home").onclick = () => savePosition();
+  const controlsH = () => document.body.style.setProperty("--controls-h", $("controls").offsetHeight + "px");
+  controlsH();
+  window.addEventListener("resize", controlsH);
   if (q.has("nogate")) $("gate").hidden = true;
   else {
     gateMsg.textContent = "";
-    $("start").disabled = false;
+    for (const b of ["resume", "start"]) $(b).disabled = false;
   }
 
   function frame(now) {
@@ -429,7 +510,7 @@ async function boot() {
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
-  window.__tmb = { clock, timeline, seek, scene, stages, anchors }; // for probes and the console
+  window.__tmb = { clock, timeline, seek, scene, stages, anchors, ready3d, downloads }; // for probes and the console
 }
 
 boot().catch((err) => {

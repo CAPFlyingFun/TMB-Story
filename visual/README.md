@@ -198,6 +198,14 @@ Jack and Sarah when the people are in 3D, the drawn one otherwise, and a termina
 settlement's systems. Narration has none. A speaker with no portrait yet (Doctor Mercer,
 settlement security) shows the line alone.
 
+**The start menu and the download.** Watch opens on a menu: Resume (when a place is saved
+on the device), Start over, Chapter select (Chapter 1 now; the others say "Not in Watch
+yet") and Main menu. The 3D people's files (about 6.5 MB: the three.js bundle and the two
+models) start downloading the moment the page opens and never hold the menu up. Start over
+plays the island intro at once while they finish; Resume into the lab waits for them. A
+line along the bottom counts the bytes, "Loading… 1.2MB/6.5MB (18.5%)", above the controls
+while they show, and says "3D ready" when they have arrived (`engine/download.js`).
+
 **Switchable.** The menu's "People: 3D / Drawn" button (remembered on the device) or
 `?people=2d` puts the sprites back; `?people=3d` forces 3D. The sprites also stand in if
 the models cannot load. The set's `people3d` block names the models, the room, the
