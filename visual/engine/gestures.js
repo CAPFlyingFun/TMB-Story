@@ -126,6 +126,10 @@ export const PRESETS = {
 // A hand on the stomach: in 3D the hand really goes there (engine/people3d.js); the drawn
 // rig can only lift a hand a little, so it borrows the small gesture.
 PRESETS["hand-on-belly"] = PRESETS["small-hand-gesture"];
+// Pressing a button (the intercom): in 3D the finger goes to it; drawn, a reach and a
+// small push.
+PRESETS.press = PRESETS.reach;
+PRESETS.tap = () => ({});
 
 export const PRESET_NAMES = Object.keys(PRESETS);
 

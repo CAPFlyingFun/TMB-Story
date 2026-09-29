@@ -27,10 +27,10 @@ line; the voice-only export is not indexable.
 | `../scripts/make-lab-wide.py` | sets the original lab back into Joshua's expanded lab picture, for the wide shot and people passing the camera |
 | `../scripts/split-props.py` | cuts the props sheet into one PNG per object with a real height (`assets/props/props.json`), ready to place as `objects` |
 | `../scripts/make-island-art.py` | grades the Beyond Extinction island to moonlight, caps its volcano with cloud, and makes the cloud wisps |
-| `engine/people3d.js` | Jack and Sarah as rigged 3D models, drawn into the painted lab through the picture's own camera, and the baked 3D room for shots that move the camera |
+| `engine/people3d.js` | Jack and Sarah as rigged 3D models in the built lab, through the camera the picture was painted from, and the shots that move that camera |
+| `engine/labRoom.js` | the lab built as a 3D room after ChatGPT's procedural lab: shell, desks, racks, monitors, keyboards, the intercom, the props |
 | `vendor/three-human.js` | three.js r185, its glTF loader and meshopt decoder, and TRADDOMIUM's human rig and poses (`src/actor/human*.ts`, `src/view/HumanRig.ts`), bundled into one module |
-| `../assets/models/` | `jack.glb` and `sarah.glb` (TRADDOMIUM: Micro Battle's rigged pair, the ones the sprites were drawn from) and `lab-3d.glb`, the lab picture baked onto its own shapes |
-| `../scripts/bake-lab-3d.py` | rebuilds `lab-3d.glb` from `lab-wide.jpg` (needs numpy and OpenCV) |
+| `../assets/models/` | `jack.glb` and `sarah.glb` (TRADDOMIUM: Micro Battle's rigged pair, the ones the sprites were drawn from) |
 | `../scripts/make-portraits.py` | the caption portraits (`assets/portraits/`): cut from each character's front sprite, and the systems' terminal icon |
 | `portraits.html` | dev-only: renders Jack's and Sarah's 3D caption portraits (`<name>-3d.png`) from their models |
 | `engine/rig.js` | the optional cutout rig: cuts a sprite into body parts along polygons and turns them about pivots |
@@ -156,34 +156,42 @@ The rig's `head` joint is the crown, so turns go to its parent, the base of the 
 and a lowered arm shares its drop with the collarbone so the shoulder does not square off. A seated person has a chair; a person who
 stands leaves it where it was, and the next person to sit down there takes it.
 
-Two ways to see the room, chosen per shot:
+THE ROOM IS BUILT (Joshua, 2026-09-29: "rebuild the lab... you can use the Lab ChatGPT did
+as it looks better"). `engine/labRoom.js` is a lit 3D room in the style of ChatGPT's
+procedural lab (TMB-Interactive-Story, `app/game/three/lab-room.ts`): no photographs,
+blue-grey panels with steel ribs, teal strips, warm ceiling panels, the TOMBS sign, racks
+with teal lamps, monitors on stands, keyboards with keys, the intercom, a toolbox, an
+oscilloscope, a laptop. Its layout is the story's, in metres through the picture's camera
+(1300 px focal length on the original frame, level, 1.43 m up, turned 5.2 degrees off the
+room's axis), so every mark, walk and shot of Chapter 1 lands where it did: Jack's desk
+across the back, the aisle, the counters, the door behind the camera. The desk is a real
+0.7 m deep, so the back wall stands further back than the painting showed. The painting
+stays for the drawn people.
 
-- **The painting** (every shot unless it says otherwise). The picture is untouched and
-  the camera crops it as before. The people are drawn over it through the camera the
-  picture was painted from: 1300 px focal length on the original frame, level, 1.43 m
-  up, turned 5.2 degrees off the room's axis (recovered from the picture's lines; see
-  `scripts/bake-lab-3d.py`). So a floor point in stage coordinates IS a floor point in
-  metres, and the room's shapes, drawn invisibly into the depth buffer, hide whatever is
-  behind a cabinet. They sit under the night grade and the glows, and the monitor, alarm
-  and intercom glows light them in their current colour.
-- **The room** (a shot with `cam3`). The camera really moves. The room is the picture
-  baked back onto its shapes, so from the picture's camera it IS the picture and the
-  change from painting to room cannot be seen; away from it the parallax is real. The
-  screens and glows follow to where the moving camera sees them. Chapter 1 uses it for
-  the opening push-in: up the aisle to Jack asleep, closer at the second chirp, over his
-  shoulder to the warning, then back out as his chair rolls.
+Every flat shot is that camera cropped; a shot with `cam3` moves it:
 
       asleep: { x: 420, y: 430, w: 900, h: 700, focus: [820, 800],
                 cam3: { at: [0.3, 1.45, -1.55], look: [-0.05, 1.1, -3.1], hfov: 50 } },
 
-  Metres in the room frame: x right, y up, z toward the picture's camera, the floor at
-  y = 0. The flat `x/y/w/h` stays the framing when the people are drawn.
+Chapter 1 moves it for the opening push-in (up the aisle to Jack asleep, over his shoulder
+to the warning, back out as his chair rolls) and for the intercom, from his right. The
+story's screens are pinned to the built monitors and follow any camera.
 
-**The glows and the people.** A glow is a light on the back wall, so with the people in
-3D their canvas sits over the glows (a person in front of the intercom hides it) and the
-set's night grade is applied to them inside that canvas; the glows light them as point
-lights instead. Chapter 1's intercom shot is taken from Jack's right, and a lit intercom
-draws his eye (`lookAtLights`).
+**Hands on things.** Typing puts the hands on the keys, and "reach" puts one on the
+console. `press` holds a fingertip on a named button for as long as the gesture lasts
+(`target: "intercom"`), rolling the chair in and leaning if it is out of reach, and `tap`
+pushes it: Jack presses the intercom on the open, taps it again, and presses it once more
+to close the line. The intercom's lamp is lit while the line is open.
+
+**Bodies.** Nods and looks turn the head at the base of the skull (the rig's `head` joint
+is the crown). A lowered arm shares 9 degrees of its drop with the collarbone, the amount
+that keeps the shoulders natural in renders side by side. Sarah's skirt has its weights
+smoothed below the hips when she loads (ChatGPT's seated-skin correction), so it does not
+tear when she sits.
+
+**The glows.** In the built room the set's glows (monitor, alarm, intercom, Sarah's
+screen) are lights, in the colour and at the level the scene gives them, so nothing is
+painted over the people. A lit intercom draws Jack's eye (`lookAtLights`).
 
 **Captions.** With CC on, the speaker's portrait sits beside their line: the 3D one for
 Jack and Sarah when the people are in 3D, the drawn one otherwise, and a terminal for the

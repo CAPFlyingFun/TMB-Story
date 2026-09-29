@@ -315,7 +315,7 @@ export function compileScene(scene, anchors) {
       case "gesture":
         // An animation preset (engine/gestures.js): joint turns on the 3D people, or the
         // cutout rig's when the people are drawn and rigs are on (?rig=1).
-        need("actors", ev.actor).gestures.push({ t: ev.t, dur: dur || 1, name: ev.animation, opts: { arm: ev.arm, amount: ev.amount, side: ev.side, dur: dur || 1 } });
+        need("actors", ev.actor).gestures.push({ t: ev.t, dur: dur || 1, name: ev.animation, opts: { arm: ev.arm, amount: ev.amount, side: ev.side, target: ev.target, dur: dur || 1 } });
         break;
       case "jolt":
         need("actors", ev.actor).jolts.push({ t: ev.t, dur: dur || 0.55, amp: ev.amount ?? 1 });

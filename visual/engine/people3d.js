@@ -5,17 +5,13 @@
 // (vendor/three-human.js, bundled from its src/actor and src/view), and drawn in the
 // painted picture by the picture's own camera.
 //
-// TWO WAYS TO SEE THE ROOM, per shot:
-//   - THE PAINTING (every shot by default). The lab picture stays exactly as painted and
-//     the camera crops it the way it always has. The people are drawn over it through the
-//     camera the picture was painted from (recovered from its lines: scripts/bake-lab-3d.py),
-//     so a floor point in the scene's stage coordinates is the same floor point in 3D.
-//     The room is also drawn, invisibly, into the depth buffer, so a cabinet in front of
-//     someone hides them the way it hides the floor.
-//   - THE ROOM (a shot with `cam3`). The camera really moves: the room is the picture
-//     baked back onto its own shapes (assets/models/lab-3d.glb), and seen from where the
-//     picture was painted it IS the picture, so the cut from painting to room cannot be
-//     seen. The screens and the glows are carried along to where the new camera sees them.
+// THE ROOM is built (engine/labRoom.js, after ChatGPT's procedural lab) in the layout the
+// scene has always been staged in, and seen through the camera the lab picture was painted
+// from: 1300 px focal length on the original frame, level, 1.43 m up, turned 5.2 degrees off
+// the room's axis. So a floor point in the scene's stage coordinates is a floor point in the
+// room, and a flat shot is that camera cropped. A shot with `cam3` moves the camera for
+// real. The room is drawn twice: in its own canvas under the story's screens, and as depth
+// among the people, so a desk or a monitor hides whatever is behind it.
 //
 // SWITCHABLE: `?people=2d` (or the menu) puts the drawn sprites back; the scene is the
 // same either way, and a shot with `cam3` falls back to its flat framing.
@@ -26,6 +22,7 @@
 import * as THREE from "../vendor/three-human.js";
 import { envelope } from "./gestures.js";
 import { quadMatrix3d } from "./homography.js";
+import { buildLabRoom } from "./labRoom.js";
 
 const DEG = Math.PI / 180;
 const smooth = (p) => (p <= 0 ? 0 : p >= 1 ? 1 : p * p * (3 - 2 * p));
@@ -80,8 +77,57 @@ function blendMaps(a, b, k) {
   for (const j of new Set([...a.keys(), ...b.keys()])) out.set(j, qSlerp(a.get(j) || IDENTITY, b.get(j) || IDENTITY, k));
   return out;
 }
+// A SKIRT THAT SITS DOWN. Sarah's skirt is weighted to whichever leg bone is nearest, so
+// when her thighs come level it tears between them into points at the knees. This is
+// ChatGPT's correction (TMB-Interactive-Story, app/game/three/seated-skin.ts), by joint
+// rather than by bone name: below the hips, each vertex's weights are blended toward bands
+// down the leg on its own side -- the pelvis at the top, then thigh, shin and foot -- so the
+// cloth follows the legs smoothly. The GLB is untouched; the rest shape is unchanged, and
+// nothing above 0.98 m is.
+function smoothSkirt(root, j) {
+  const sm = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+  root.updateMatrixWorld(true);
+  root.traverse((o) => {
+    if (!o.isSkinnedMesh) return;
+    o.skeleton.update();
+    const g = o.geometry, P = g.getAttribute("position"), J0 = g.getAttribute("skinIndex"), W0 = g.getAttribute("skinWeight");
+    const J = new Uint16Array(P.count * 4), Wt = new Float32Array(P.count * 4), v = new THREE.Vector3();
+    for (let i = 0; i < P.count; i++) {
+      v.fromBufferAttribute(P, i);
+      o.applyBoneTransform(i, v);
+      v.applyMatrix4(o.matrixWorld);
+      const y = v.y, amount = 1 - sm(0.86, 0.98, y), sum = new Map();
+      const add = (b, w) => { if (b >= 0 && w > 0) sum.set(b, (sum.get(b) || 0) + w); };
+      for (let k = 0; k < 4; k++) add(J0.getComponent(i, k), W0.getComponent(i, k) * (1 - amount));
+      if (amount > 0) {
+        const hip = sm(0.79, 0.94, y), knee = sm(0.38, 0.57, y), ankle = sm(0.065, 0.17, y), right = sm(-0.045, 0.045, v.x);
+        add(j.pelvis, amount * hip);
+        for (const [legs, f] of [[[j.hipR, j.kneeR, j.ankleR], 1 - right], [[j.hipL, j.kneeL, j.ankleL], right]]) {
+          const w = amount * (1 - hip) * f;
+          add(legs[0], w * knee);
+          add(legs[1], w * (1 - knee) * ankle);
+          add(legs[2], w * (1 - knee) * (1 - ankle));
+        }
+      }
+      const best = [...sum].sort((a, b) => b[1] - a[1]).slice(0, 4), total = best.reduce((t, x) => t + x[1], 0) || 1;
+      for (let k = 0; k < 4; k++) {
+        J[i * 4 + k] = best[k] ? best[k][0] : 0;
+        Wt[i * 4 + k] = best[k] ? best[k][1] / total : 0;
+      }
+    }
+    g.setAttribute("skinIndex", new THREE.Uint16BufferAttribute(J, 4));
+    g.setAttribute("skinWeight", new THREE.Float32BufferAttribute(Wt, 4));
+  });
+}
+
 // Gestures that give an arm a job, so a talking hand leaves it alone.
-const HANDS_BUSY = new Set(["type", "reach", "point", "hand-on-belly", "small-hand-gesture", "wave"]);
+const HANDS_BUSY = new Set(["type", "reach", "point", "hand-on-belly", "small-hand-gesture", "wave", "press", "tap"]);
+// Holding a button: in over this long, out over this long, whatever the gesture's length.
+const PRESS_IN = 0.8, PRESS_OUT = 0.6;
+const pressWeight = (g) => {
+  const d = (g.opts && g.opts.dur) || 1, el = g.u * d;
+  return smooth(el / PRESS_IN) * smooth((d - el) / PRESS_OUT);
+};
 // Turn a bone so that the world direction `from` (from its joint) points along `to`.
 function turnBone(bone, from, to) {
   const q = new THREE.Quaternion().setFromUnitVectors(from.clone().normalize(), to.clone().normalize());
@@ -227,25 +273,10 @@ export class People3D {
       base.appendChild(c);
       return c;
     };
-    // The room, under the screens (600). The people over everything painted, the glows
-    // included: a glow is a light on the back wall, and a person in front of it hides it
-    // (Joshua, 2026-09-29: "the intercom light was showing through Jack"). So the set's
-    // night grade, which lies over the painting, is applied to the people in their own
-    // canvas, and the glows reach them as lights (this.glows), not as a wash on top.
+    // The room under the story's screens (600); the people over everything, so a person
+    // in front of a lit screen or the intercom hides it.
     this.roomCanvas = mk(500);
     this.peopleCanvas = mk(5002);
-    const g = rgba(stage.set.world.grade);
-    this.gradeScene = new THREE.Scene();
-    this.gradeCam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-    this.gradeScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), new THREE.ShaderMaterial({
-      uniforms: { tint: { value: new THREE.Vector4(g.color.r * g.a, g.color.g * g.a, g.color.b * g.a, stage.set.world.grade ? g.a : 0) } },
-      vertexShader: "void main() { gl_Position = vec4(position.xy, 0.0, 1.0); }",
-      // out = tint over the person, only where there is a person: src * dstAlpha + dst * (1 - a)
-      fragmentShader: "uniform vec4 tint; void main() { gl_FragColor = tint; }",
-      transparent: true, depthTest: false, depthWrite: false, premultipliedAlpha: true,
-      blending: THREE.CustomBlending, blendSrc: THREE.DstAlphaFactor, blendDst: THREE.OneMinusSrcAlphaFactor,
-      blendSrcAlpha: THREE.DstAlphaFactor, blendDstAlpha: THREE.OneMinusSrcAlphaFactor,
-    })));
 
     this.camera = new THREE.PerspectiveCamera();
     this.camera.rotation.order = "YXZ";
@@ -257,10 +288,10 @@ export class People3D {
     // panels, a key down from the panel row over the desks, and the set's own glows (the
     // monitor, the alarm, the intercom) as point lights that take their colour and level
     // from the scene every frame.
-    this.scene.add(new THREE.HemisphereLight(0xb8cee0, 0x22272c, 1.0));
-    const key = new THREE.DirectionalLight(0xe6f1ff, 1.2);
-    key.position.set(0.3, 2.6, -1.6);
-    key.target.position.set(-0.3, 0, -3.0);
+    this.scene.add(new THREE.HemisphereLight(0xd5e9f4, 0x40505b, 1.9));
+    const key = new THREE.DirectionalLight(0xffeed8, 2.0);
+    key.position.set(0.8, 5, 2.5);
+    key.target.position.set(0.2, 0, -2.5);
     this.scene.add(key, key.target);
     this.glows = {};
     this.shadowTex = shadowTexture();
@@ -273,23 +304,35 @@ export class People3D {
   async load(options) {
     const loader = new THREE.GLTFLoader();
     loader.setMeshoptDecoder(THREE.MeshoptDecoder);
-    const get = (p) => loader.loadAsync(this.url(p));
-    const [room, ...people] = await Promise.all([get(this.spec.room), ...Object.values(this.spec.models).map(get)]);
+    const people = await Promise.all(Object.values(this.spec.models).map((p) => loader.loadAsync(this.url(p))));
     const ids = Object.keys(this.spec.models);
 
-    // The room, twice: textured for THE ROOM shots, and depth only for the painting, where
-    // it hides whatever stands behind a cabinet and draws nothing itself.
-    this.room = room.scene;
+    // THE ROOM, built (engine/labRoom.js): drawn in its own canvas under the story's screens,
+    // and again as depth only among the people, so a cabinet, a desk or a monitor hides
+    // whatever is behind it.
+    this.lab = buildLabRoom();
+    this.room = this.lab.group;
     this.roomScene.add(this.room);
-    const mask = room.scene.clone(true);
+    const mask = this.room.clone(true);
     mask.traverse((n) => {
       if (n.isMesh) {
-        n.material = new THREE.MeshBasicMaterial({ colorWrite: false });
+        n.material = new THREE.MeshBasicMaterial({ colorWrite: false, side: THREE.DoubleSide });
         n.renderOrder = -1;
       }
     });
     this.scene.add(mask);
-    this.room.updateMatrixWorld(true);
+    this.props = { anchors: this.lab.anchors, lamps: this.lab.lamps };
+    this.keyboards = this.lab.keyboards;
+    // The room's light, ChatGPT's: a cool sky fill, a warm key from the ceiling panels, a
+    // teal fill off the racks. The set's glows join it in anchorSetPieces.
+    this.roomScene.add(new THREE.HemisphereLight(0xd5e9f4, 0x40505b, 2.3));
+    const key = new THREE.DirectionalLight(0xffeed8, 2.4);
+    key.position.set(0.8, 5, 2.5);
+    key.target.position.set(0.2, 0, -2.5);
+    this.roomScene.add(key, key.target);
+    const fill = new THREE.PointLight(0x53bacc, 10, 7, 2);
+    fill.position.set(-0.9, 2.1, -3.6);
+    this.roomScene.add(fill);
     this.anchorSetPieces();
 
     ids.forEach((id, i) => this.addBody(id, people[i].scene));
@@ -298,47 +341,42 @@ export class People3D {
     this.peopleRenderer = new THREE.WebGLRenderer({ canvas: this.peopleCanvas, alpha: true, antialias: true, premultipliedAlpha: true });
     this.peopleRenderer.setClearColor(0x000000, 0);
     this.roomRenderer = new THREE.WebGLRenderer({ canvas: this.roomCanvas, antialias: true });
-    for (const r of [this.peopleRenderer, this.roomRenderer]) r.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
-    // Upload the room's texture now, not on the first frame of the first camera move.
+    for (const r of [this.peopleRenderer, this.roomRenderer]) {
+      r.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
+      r.toneMapping = THREE.ACESFilmicToneMapping;
+      r.toneMappingExposure = 1.05;
+    }
     this.roomRenderer.compile(this.roomScene, this.camera);
-    this.room.traverse((n) => n.isMesh && n.material.map && this.roomRenderer.initTexture(n.material.map));
   }
 
-  // Where the screens and the glows are in the room: the painted pixel, followed from the
-  // picture's camera until it meets the room's shapes.
+  // Where the story's screens and glows are in the room: the lab's own monitors and lamps
+  // (engine/labRoom.js), each glow also a light for the people and the room.
   anchorSetPieces() {
-    const ray = new THREE.Raycaster();
     const eye = new THREE.Vector3(0, this.cam0.H, 0);
-    const hit = (u, v) => {
-      const d = new THREE.Vector3(...this.cam0.ray(u, v)).normalize();
-      ray.set(eye, d);
-      const h = ray.intersectObject(this.room, true)[0];
-      return h ? h.point.clone() : eye.clone().addScaledVector(d, 3.5);
-    };
     const fwd = new THREE.Vector3(this.cam0.s, 0, -this.cam0.c);
     const depth = (p) => p.clone().sub(eye).dot(fwd);
-    for (const [id, s] of Object.entries(this.stage.set.screens || {})) {
-      this.screenAnchors[id] = s.corners.map(([u, v]) => hit(u, v));
+    for (const id of Object.keys(this.stage.set.screens || {})) {
+      if (this.lab.screens[id]) this.screenAnchors[id] = this.lab.screens[id];
     }
-    // Keyboards, from each end as painted: where hands go to type.
-    for (const [a, b] of Object.values(this.spec.keyboards || {})) {
-      const L = hit(...a), R = hit(...b);
-      this.keyboards.push({ c: L.clone().add(R).multiplyScalar(0.5), axis: R.clone().sub(L).normalize() });
-    }
+    this.roomGlows = {};
     for (const [id, l] of Object.entries(this.stage.set.lights || {})) {
-      const p = hit(l.x, l.y);
+      const p = (this.lab.lights[id] || new THREE.Vector3(0.2, 1.1, -3.9)).clone();
       this.lightAnchors[id] = { p, depth: depth(p), radius: l.radius };
-      // the glow as a light for the people: a little in front of whatever it is painted on
+      // a little in front of whatever it glows on
       const glow = new THREE.PointLight(0xffffff, 0, 3.2, 1.6);
       glow.position.copy(p).addScaledVector(p.clone().sub(eye).normalize(), -0.3);
       this.scene.add(glow);
       this.glows[id] = glow;
+      const g2 = glow.clone();
+      this.roomScene.add(g2);
+      this.roomGlows[id] = g2;
     }
   }
 
   addBody(id, model) {
     const rig = new THREE.HumanRig(model);
     const measure = THREE.measureHuman(rig.bind);
+    if ((this.spec.skirted || []).includes(id)) smoothSkirt(model, measure.joints);
     // Seat geometry, measured once: pose the doze at the origin and read where it put the
     // hips and the ankles. A pose never moves the hips, so this holds for every pose.
     model.position.set(0, 0, 0);
@@ -388,14 +426,7 @@ export class People3D {
     const pose = node.sprite.poses[poseName];
     const [fx, fy] = this.stage.onFloor(a, pose);
     const p = this.cam0.floor(fx, fy);
-    const A = this.spec.aisle;
-    if (A) {
-      const r = poseName === "sitting" ? CHAIR.baseRadius + CHAIR.casterRadius + 0.03 : 0.2;
-      const right = p[2] + r > A.rightRunEnds ? Math.min(A.right, A.rightNear) : A.right;
-      p[0] = Math.min(Math.max(p[0], A.left + r), right - r);
-      p[2] = Math.max(p[2], A.deskFront + r);
-    }
-    return p;
+    return this.clampAisle(p, poseName === "sitting" ? CHAIR.baseRadius + CHAIR.casterRadius + 0.03 : 0.2);
   }
 
   facingAt(a, t) {
@@ -511,13 +542,9 @@ export class People3D {
         add(el, ry(-s * 14 * DEG));
       }
     }
-    // On their feet, walking or not, the arms hang in to the body with the palms toward the
-    // thighs, not flared out with the palms forward.
-    if (!seated) {
-      for (const [sh, s] of [[j.shoulderL, L], [j.shoulderR, -L]]) add(sh, qMul(ry(-s * 26 * DEG), rz(-s * 3 * DEG)));
-    }
     // Typing: lean in to the keys, so the arms bend instead of locking straight.
     if (a._typingIK) add(j.spine, rx(12 * DEG * a._typingIK));
+    if (a._pressing) add(j.spine, rx(16 * DEG * a._pressing));
     // Talking: while their own line is heard, the head moves with the words and a hand
     // comes up and goes down again, slowly, at each person's own pace.
     const talk = this.talking(body.id, t);
@@ -675,7 +702,36 @@ export class People3D {
   placeBody(id, a, t) {
     const shown = a.visible && a.opacity > 0.001;
     if (!shown) return null;
-    return { at: this.floorOf(id, a, a.pose.v), yaw: this.facingAt(a, t), seated: a.pose.v === "sitting" };
+    const seated = a.pose.v === "sitting";
+    const at = this.floorOf(id, a, a.pose.v);
+    // Reaching for something further than an arm (the intercom at the back of the desk):
+    // a seated person rolls the chair in toward it first, as far as the desk allows.
+    const press = (a.gestures || []).find((g) => g.name === "press" && this.targetOf(g));
+    if (press && seated) {
+      const T = this.targetOf(press), w = pressWeight(press);
+      const dx = T.x - at[0], dz = T.z - at[2], dist = Math.hypot(dx, dz), want = 0.58;
+      if (dist > want) {
+        const k = ((dist - want) / dist) * w;
+        at[0] += dx * k;
+        at[2] += dz * k;
+        this.clampAisle(at, CHAIR.baseRadius + CHAIR.casterRadius + 0.03);
+      }
+    }
+    return { at, yaw: this.facingAt(a, t), seated };
+  }
+
+  targetOf(g) {
+    const name = g.opts && g.opts.target;
+    return name && this.props ? this.props.anchors[name + ".button"] || this.props.anchors[name] || null : null;
+  }
+
+  clampAisle(p, r) {
+    const A = this.spec.aisle;
+    if (!A) return p;
+    const right = p[2] + r > A.rightRunEnds ? Math.min(A.right, A.rightNear) : A.right;
+    p[0] = Math.min(Math.max(p[0], A.left + r), right - r);
+    p[2] = Math.max(p[2], A.deskFront + r);
+    return p;
   }
 
   // Everything about one body at time t: its joints, where it stands, which way it faces.
@@ -702,6 +758,7 @@ export class People3D {
     // Sarah's stomach. Decided first, because the turns leave these arms to the reach.
     const reaches = this.reachesFor(body, a, t, place);
     a._typingIK = reaches.reduce((m, r) => (r.typing ? Math.max(m, r.weight) : m), 0);
+    a._pressing = reaches.reduce((m, r) => (r.pressing ? Math.max(m, r.pressing) : m), 0);
 
     // The pose, blended from whatever it was a moment ago (asleep to awake, standing up).
     const cur = this.poseKind(a.pose.v, a.state.v);
@@ -731,11 +788,15 @@ export class People3D {
     // THE SHOULDERS (Joshua, 2026-09-29: "Jack's shoulders look weird"). The poses lower
     // each arm from the T at the upper arm alone, and the skin there folds into a hard
     // square shoulder. A real shoulder drops the collarbone too: it takes part of the
-    // turn, and the upper arm keeps the same direction in the world.
+    // turn, and the upper arm keeps the same direction in the world. (Joshua, again the same
+    // day: "Jack's shoulders still look off sometimes".)
     for (const [sh, s] of [[j.shoulderL, L], [j.shoulderR, -L]]) {
       const clav = body.rig.bind[sh].parent;
       if (clav < 0 || clav === j.chest || !map.has(sh)) continue;
-      const Rc = qMul(ry(-s * (seated ? 10 : 5) * DEG), rz(-s * 16 * DEG));
+      // 9 degrees, chosen by rendering 0, 8, 11 and 16 side by side: none squares the
+      // shoulders off, 16 narrows them and bunches the sleeve, and twisting the upper arm
+      // to turn the palms in (tried, 2026-09-29) folded the sleeve into a lump
+      const Rc = qMul(ry(-s * (seated ? 10 : 5) * DEG), rz(-s * 9 * DEG));
       map.set(clav, qMul(Rc, map.get(clav) || IDENTITY));
       map.set(sh, qMul([-Rc[0], -Rc[1], -Rc[2], Rc[3]], map.get(sh)));
     }
@@ -743,7 +804,7 @@ export class People3D {
 
     // Where: the floor point, and for a seated body the hips over the chair's seat.
     const root = (poseName) => {
-      const p = this.floorOf(id, a, poseName);
+      const p = poseName === a.pose.v ? place.at.slice() : this.floorOf(id, a, poseName);
       if (poseName !== "sitting") return { p, root: [p[0], 0, p[2]] };
       const c = Math.cos(yaw), s = Math.sin(yaw);
       const rot = (x, z) => [x * c + z * s, -x * s + z * c];
@@ -797,6 +858,18 @@ export class People3D {
     // Seated and awake, the hands rest on the thighs instead of hanging in the air, and
     // while this person talks one of them comes up in front of the chest and goes back.
     const busy = new Set();
+    // Pressing a button: the fingertip on it, pushed in on each tap.
+    const taps = gest.filter((g) => g.name === "tap");
+    for (const g of gest) {
+      if (g.name !== "press" && !(g.name === "tap" && !gest.some((p) => p.name === "press"))) continue;
+      const T = this.targetOf(g);
+      if (!T) continue;
+      const side = g.opts && g.opts.arm === "left" ? "L" : "R";
+      const w = g.name === "press" ? pressWeight(g) : envelope(g.u, 0.3);
+      const push = taps.reduce((m, tp) => Math.max(m, Math.sin(Math.PI * tp.u)), 0);
+      out.push({ side, target: T.clone().add(new THREE.Vector3(0, 0.012 - 0.02 * push, 0)), weight: w, palm: new THREE.Vector3(0, -1, 0), finger: 0.15, pressing: w });
+      busy.add(side);
+    }
     for (const g of gest) {
       if ((g.name === "type" || g.name === "reach") && kb) { busy.add("L"); busy.add("R"); }
       if (["point", "small-hand-gesture", "wave", "hand-on-belly"].includes(g.name)) busy.add(g.opts && g.opts.arm === "left" ? "L" : "R");
@@ -818,13 +891,13 @@ export class People3D {
         for (const [side, off, ph] of [["L", 0.1 * sgn, 0], ["R", -0.1 * sgn, Math.PI]]) {
           const target = kb.c.clone().addScaledVector(kb.axis, off);
           target.y += 0.045 + 0.012 * Math.max(0, Math.sin(t * 2 * Math.PI * 5.5 + ph));
-          out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true });
+          out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true, finger: 0.07 });
         }
       } else if (g.name === "reach" && kb) {
         const e = envelope(g.u, 0.3), side = g.opts && g.opts.arm === "left" ? "L" : "R";
         const target = kb.c.clone().addScaledVector(kb.axis, (side === "L" ? 1 : -1) * (kb.axis.dot(left) > 0 ? 0.08 : -0.08));
         target.y += 0.05;
-        out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true });
+        out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true, finger: 0.08 });
       } else if (g.name === "hand-on-belly") {
         const e = envelope(g.u, 0.25), side = g.opts && g.opts.arm === "left" ? "L" : "R";
         out.push({ side, belly: true, weight: e }); // the spot is read off the placed body (reachArm)
@@ -863,6 +936,11 @@ export class People3D {
       const side = S.clone().sub(spine).setY(0).normalize();
       target.addScaledVector(side, 0.03);
       palm = fwd.clone().negate();
+    }
+    if (R.finger) {
+      // the wrist stops a hand's length short, so the fingers (not the wrist) arrive
+      const dirH = target.clone().sub(S).setY(0).normalize();
+      target = target.clone().addScaledVector(dirH, -R.finger).add(new THREE.Vector3(0, 0.02, 0));
     }
     const T = W.clone().lerp(target, R.weight);
     const a = S.distanceTo(E), b = E.distanceTo(W);
@@ -939,7 +1017,16 @@ export class People3D {
       if (s.x !== W || s.y !== H) r.setSize(W, H, false);
     }
 
-    const s3 = state.camera, d3 = this.spec.moves === false ? 0 : Math.max(0, Math.min(1, s3.d3 || 0));
+    // a probe may hold a camera of its own (window.__tmbCam3 = { at, look, hfov }): never set
+    // by the page itself
+    const hold = typeof window !== "undefined" && window.__tmbCam3;
+    let s3 = state.camera;
+    if (hold) {
+      const d = [hold.look[0] - hold.at[0], hold.look[1] - hold.at[1], hold.look[2] - hold.at[2]];
+      s3 = { ...s3, d3: 1, cx3: hold.at[0], cy3: hold.at[1], cz3: hold.at[2], yaw3: (Math.atan2(-d[0], -d[2]) * 180) / Math.PI,
+        pitch3: (Math.atan2(d[1], Math.hypot(d[0], d[2])) * 180) / Math.PI, hfov3: hold.hfov || 60 };
+    }
+    const d3 = this.spec.moves === false ? 0 : Math.max(0, Math.min(1, s3.d3 || 0));
     const F0 = this.cam0.F;
     const A = { f: z * F0, cx: z * this.cam0.CX + cam.tx, cy: z * this.cam0.CY + cam.ty };
     const fB = W / 2 / Math.tan(((s3.hfov3 || 60) * DEG) / 2);
@@ -968,24 +1055,20 @@ export class People3D {
       const v = Math.max(0, l.intensity * (l.throbbing ? 0.55 + 0.45 * l.throb : 1) + l.pulse);
       g.color.copy(color);
       g.intensity = 2.2 * a * v;
+      const r = this.roomGlows && this.roomGlows[id];
+      if (r) { r.color.copy(color); r.intensity = 1.6 * a * v; }
     }
+    // the intercom's lamp is lit while its line is open
+    const lamp = this.props && this.props.lamps.intercom, il = state.lights.intercom;
+    if (lamp && il) lamp.emissiveIntensity = 0.15 + 3 * Math.max(0, il.intensity + il.pulse * 0.5);
 
     this.peopleCanvas.style.display = "";
     this.peopleRenderer.render(this.scene, C);
-    this.peopleRenderer.autoClear = false;
-    this.peopleRenderer.render(this.gradeScene, this.gradeCam);
-    this.peopleRenderer.autoClear = true;
 
-    const roomOn = d3 > 0.0005;
-    if (roomOn) {
-      this.roomCanvas.style.display = "";
-      this.roomCanvas.style.opacity = Math.min(1, d3 * 25).toFixed(3);
-      this.roomRenderer.render(this.roomScene, C);
-      this.carrySetPieces(cam, W, H, f);
-    } else {
-      this.roomCanvas.style.display = "none";
-      this.restoreSetPieces();
-    }
+    // The built room is the set now, for every shot: the painting stays for the drawn people.
+    this.roomCanvas.style.display = "";
+    this.roomRenderer.render(this.roomScene, C);
+    this.carrySetPieces(cam, W, H, f);
   }
 
   // THE ROOM shots: the screens and the glows go where the moving camera sees them.
@@ -1004,17 +1087,12 @@ export class People3D {
       node.host.style.visibility = behind ? "hidden" : "";
       if (!behind) node.host.style.transform = quadMatrix3d(node.spec.width, node.spec.height, P.map(toLayer));
     }
-    for (const [id, node] of Object.entries(this.stage.lights)) {
-      const L = this.lightAnchors[id];
-      if (!L) continue;
-      if (!node.painted) node.painted = { left: node.el.style.left, top: node.el.style.top, width: node.el.style.width };
-      const d = L.p.clone().sub(eye).dot(fwd);
-      if (d < 0.06) { node.el.style.visibility = "hidden"; continue; }
-      node.el.style.visibility = "";
-      const [x, y] = toLayer(L.p);
-      const r = (L.radius * (L.depth / this.cam0.F) * (f / d)) / z;
-      Object.assign(node.el.style, { left: x - r + "px", top: y - r + "px", width: 2 * r + "px", height: 2 * r + "px" });
-    }
+    // The painting and its painted glows step aside: in the built room the glows are lights
+    // (this.glows, this.roomGlows) and the intercom has a lamp.
+    // The built room is lit for night; the painting's night grade is for the painting.
+    if (this.stage.bgImg) this.stage.bgImg.style.visibility = "hidden";
+    if (this.stage.grade) this.stage.grade.style.display = "none";
+    for (const node of Object.values(this.stage.lights)) node.el.style.display = "none";
     this.moved = true;
   }
 
@@ -1024,10 +1102,9 @@ export class People3D {
       if (node.painted !== undefined) node.host.style.transform = node.painted;
       node.host.style.visibility = "";
     }
-    for (const node of Object.values(this.stage.lights)) {
-      if (node.painted) Object.assign(node.el.style, { ...node.painted, height: node.painted.width });
-      node.el.style.visibility = "";
-    }
+    for (const node of Object.values(this.stage.lights)) node.el.style.display = "";
+    if (this.stage.bgImg) this.stage.bgImg.style.visibility = "";
+    if (this.stage.grade) this.stage.grade.style.display = "";
     this.moved = false;
   }
 }

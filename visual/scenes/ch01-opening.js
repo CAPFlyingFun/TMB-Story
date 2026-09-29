@@ -297,6 +297,13 @@ const REST = [
   // (engine/people3d.js), and the cutout rig's for the drawn ones with ?rig=1 (engine/rig.js).
   { at: L("Jack entered a command"), action: "gesture", actor: "jack", animation: "type", duration: 3.0 },
   { at: L("He reached for the intercom."), action: "gesture", actor: "jack", animation: "lean-forward", duration: 1.4 },
+  // His hand on the intercom's button for as long as the line is open (Joshua, 2026-09-29:
+  // "Jack's hand should be reaching for the intercom when he presses the button and also to
+  // turn it off"): a press on the open, again when he taps it, and once more to close it.
+  { at: L("He reached for the intercom."), until: { cue: "ch01-080-intercom-close", offset: 0.7 }, action: "gesture", actor: "jack", animation: "press", target: "intercom", arm: "left" },
+  { at: { cue: "ch01-070-intercom-open", offset: -0.15 }, action: "gesture", actor: "jack", animation: "tap", target: "intercom", arm: "left", duration: 0.45 },
+  { at: L("Jack tapped the button again."), action: "gesture", actor: "jack", animation: "tap", target: "intercom", arm: "left", duration: 0.45 },
+  { at: { cue: "ch01-080-intercom-close", offset: -0.15 }, action: "gesture", actor: "jack", animation: "tap", target: "intercom", arm: "left", duration: 0.45 },
   { at: L("Jack smiled despite himself."), action: "gesture", actor: "jack", animation: "look-down", duration: 1.0 },
   { at: L("Sarah raised an eyebrow."), action: "gesture", actor: "sarah", animation: "look-left", duration: 0.9 },
   { at: L("Jack pointed toward the monitor"), action: "gesture", actor: "jack", animation: "point", duration: 1.2 },
@@ -416,20 +423,19 @@ export default {
         perspective: { horizonY: 580, ref: { y: 1135, pxPerMeter: 388 }, lockHeadsAt: 1184 },
         layers: [{ id: "room", parallax: 1 }],
         grade: "rgba(7,11,24,0.30)", // late at night: the room dims, the monitor does not
-        // The people in 3D (engine/people3d.js): TRADDOMIUM's rigged Jack and Sarah, drawn
+        // The people in 3D (engine/people3d.js): TRADDOMIUM's rigged Jack and Sarah, in the
+        // lab built as a 3D room (engine/labRoom.js, after ChatGPT's procedural lab), seen
         // through the camera this picture was painted from -- 1300 px focal length on the
-        // original frame, level, 1.43 m up, the room's depth lines vanishing at x 905 --
-        // and the room itself baked back onto its shapes for the shots that move the camera
-        // (scripts/bake-lab-3d.py). `aisle` is the floor between the cabinets, in metres.
+        // original frame, level, 1.43 m up, the room's depth lines vanishing at x 905 -- so
+        // every mark and shot below lands in it. `aisle` is the floor between the counters.
         people3d: {
-          room: "../assets/models/lab-3d.glb",
           models: { jack: "../assets/models/jack.glb", sarah: "../assets/models/sarah.glb" },
           camera: { focal: 1300, principal: [1024, 581], height: 1.43, vanishX: 905.2 },
-          aisle: { left: -0.5, right: 1.22, deskFront: -3.65, rightRunEnds: -1.46, rightNear: 1.06 },
-          // Each keyboard's two ends as painted: where the hands go when someone types.
-          keyboards: { jack: [[910, 788], [1070, 788]], sarah: [[1112, 770], [1238, 770]] },
+          aisle: { left: -0.5, right: 1.2, deskFront: -3.65, rightRunEnds: -1.46, rightNear: 1.08 },
           // Lights that draw a person's eye while they are on.
           lookAtLights: ["intercom"],
+          // skirts that need their weights smoothed to sit down
+          skirted: ["sarah"],
         },
       },
 
@@ -482,7 +488,7 @@ export default {
         screen: { x: 700, y: 540, w: 560, h: 420, focus: [960, 690] },
         // From Jack's right side when the people are in 3D, so he is not in front of the
         // intercom he is talking to (Joshua, 2026-09-29).
-        intercom: { x: 560, y: 560, w: 560, h: 440, focus: [800, 780], cam3: { at: [1.0, 1.36, -2.7], look: [-0.2, 1.0, -3.6], hfov: 50 } },
+        intercom: { x: 560, y: 560, w: 560, h: 440, focus: [800, 780], cam3: { at: [0.78, 1.32, -3.42], look: [-0.22, 1.0, -3.78], hfov: 56 } },
         doorway: { x: 400, y: 250, w: 1648, h: 902, focus: [1660, 820] }, // a phone held upright keeps the door side
         twoshot: { x: 420, y: 380, w: 1180, h: 772, focus: [930, 820] },
         leanover: { x: 540, y: 440, w: 760, h: 660, focus: [880, 820] },

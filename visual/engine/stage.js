@@ -61,6 +61,7 @@ export class Stage {
     bg.style.top = r.y + "px";
     bg.alt = "";
     base.appendChild(bg);
+    this.bgImg = bg; // hidden while the 3D people draw the built room in its place
     if (W.grade) {
       this.grade = el("div", "grade", base);
       this.grade.style.background = W.grade;
