@@ -125,7 +125,15 @@ function smoothSkirt(root, j) {
 }
 
 // Gestures that give an arm a job, so a talking hand leaves it alone.
-const HANDS_BUSY = new Set(["type", "reach", "point", "hand-on-belly", "small-hand-gesture", "wave", "press", "tap"]);
+const HANDS_BUSY = new Set(["type", "keys", "reach", "point", "hand-on-belly", "small-hand-gesture", "wave", "press", "tap"]);
+// Standing bodies keep this far (metres, floor point to floor point) from anyone else. The
+// staging is placed in the picture's pixels, where a few pixels is a step; in 3D Sarah stood
+// 0.47 m from Jack's chair and her hand went through him (Joshua, 2026-09-30: "Sarah is a
+// little too close as her hand sometimes pass through Jack's body").
+const KEEP_APART_M = 0.72;
+// How far in front of the chest a keyboard can be and still be reached, metres: a working
+// reach, and a longer one for a hand that STAYS on the keys while its owner sits back.
+const KEYBOARD_REACH = 0.95, KEYBOARD_HOLD_REACH = 1.2;
 // Holding a button: in over this long, out over this long, whatever the gesture's length.
 const PRESS_IN = 0.8, PRESS_OUT = 0.6;
 const pressWeight = (g) => {
@@ -729,6 +737,26 @@ export class People3D {
     return { at, yaw: this.facingAt(a, t), seated };
   }
 
+  // No two bodies closer than KEEP_APART_M: whoever is standing gives way, along the line
+  // between them (both, half each, when both stand). Continuous in distance, so a body
+  // walking up to another simply stops at the gap rather than jumping.
+  keepApart(places) {
+    const ids = Object.keys(places).filter((id) => places[id]);
+    for (let i = 0; i < ids.length; i++) for (let k = i + 1; k < ids.length; k++) {
+      const A = places[ids[i]], B = places[ids[k]];
+      const dx = B.at[0] - A.at[0], dz = B.at[2] - A.at[2], d = Math.hypot(dx, dz);
+      if (d >= KEEP_APART_M || d < 1e-6) continue;
+      const moveA = !A.seated, moveB = !B.seated;
+      if (!moveA && !moveB) continue;
+      const push = KEEP_APART_M - d, ux = dx / d, uz = dz / d;
+      const shareA = moveA ? (moveB ? 0.5 : 1) : 0, shareB = moveB ? (moveA ? 0.5 : 1) : 0;
+      A.at[0] -= ux * push * shareA; A.at[2] -= uz * push * shareA;
+      B.at[0] += ux * push * shareB; B.at[2] += uz * push * shareB;
+      if (moveA) this.clampAisle(A.at, 0.2);
+      if (moveB) this.clampAisle(B.at, 0.2);
+    }
+  }
+
   targetOf(g) {
     const name = g.opts && g.opts.target;
     return name && this.props ? this.props.anchors[name + ".button"] || this.props.anchors[name] || null : null;
@@ -900,12 +928,16 @@ export class People3D {
     const shoulderY = place.seated ? body.eye.sit - 0.22 : body.eye.stand - 0.22;
     const chest = new THREE.Vector3(place.at[0], shoulderY, place.at[2]);
     // the nearest keyboard in front, within an arm and a lean
-    let kb = null, best = 0.95;
-    for (const K of this.keyboards) {
-      const v = K.c.clone().sub(chest);
-      const d = Math.hypot(v.x, v.z);
-      if (d < best && v.x * fwd.x + v.z * fwd.z > 0.2) { best = d; kb = K; }
-    }
+    const nearestKeyboard = (reach) => {
+      let found = null, best = reach;
+      for (const K of this.keyboards) {
+        const v = K.c.clone().sub(chest);
+        const d = Math.hypot(v.x, v.z);
+        if (d < best && v.x * fwd.x + v.z * fwd.z > 0.2) { best = d; found = K; }
+      }
+      return found;
+    };
+    const kb = nearestKeyboard(KEYBOARD_REACH);
     // Seated and awake, the hands rest on the thighs instead of hanging in the air, and
     // while this person talks one of them comes up in front of the chest and goes back.
     const busy = new Set();
@@ -922,8 +954,29 @@ export class People3D {
       busy.add(side);
     }
     for (const g of gest) {
-      if ((g.name === "type" || g.name === "reach") && kb) { busy.add("L"); busy.add("R"); }
+      if (g.name === "type" && kb && g.opts && g.opts.arm) busy.add(g.opts.arm === "left" ? "L" : "R");
+      else if ((g.name === "type" || g.name === "reach") && kb) { busy.add("L"); busy.add("R"); }
       if (["point", "small-hand-gesture", "wave", "hand-on-belly"].includes(g.name)) busy.add(g.opts && g.opts.arm === "left" ? "L" : "R");
+    }
+    // HANDS ON THE KEYS ("keys", over a stretch of the chapter): both hands -- or the one
+    // the event names -- rest on the nearest keyboard, the fingers never quite still, for as
+    // long as nothing else needs that hand. A point, the intercom button or a reach takes its
+    // own hand and the other stays; "type" with no arm takes both and types.
+    const keys = gest.find((g) => g.name === "keys");
+    const holdKb = keys ? nearestKeyboard(KEYBOARD_HOLD_REACH) : null;
+    const typingBoth = gest.some((g) => g.name === "type" && kb && !(g.opts && g.opts.arm));
+    if (keys && holdKb && !typingBoth) {
+      const d = (keys.opts && keys.opts.dur) || 1;
+      const e = envelope(keys.u, Math.min(0.3, 0.6 / Math.max(0.6, d)));
+      const sgn = holdKb.axis.dot(left) > 0 ? 1 : -1;
+      const sides = keys.opts && keys.opts.arm ? [keys.opts.arm === "left" ? "L" : "R"] : ["L", "R"];
+      for (const [side, off, ph] of [["L", 0.1 * sgn, 0], ["R", -0.1 * sgn, 2.1]]) {
+        if (!sides.includes(side) || busy.has(side)) continue;
+        const target = holdKb.c.clone().addScaledVector(holdKb.axis, off);
+        target.y += 0.045 + 0.004 * Math.sin(t * 2 * Math.PI * 0.9 + ph + body.seed);
+        out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true, finger: 0.07 });
+        busy.add(side);
+      }
     }
     if (place.seated && a.state.v !== "asleep") {
       const wake = a.state.prev === "asleep" ? smooth((t - a.state.since) / 0.8) : 1;
@@ -939,7 +992,9 @@ export class People3D {
       if (g.name === "type" && kb) {
         const e = envelope(g.u, Math.min(0.3, 0.5 / Math.max(0.5, (g.opts && g.opts.dur) || 1)));
         const sgn = kb.axis.dot(left) > 0 ? 1 : -1;
+        const only = g.opts && g.opts.arm ? (g.opts.arm === "left" ? "L" : "R") : null;
         for (const [side, off, ph] of [["L", 0.1 * sgn, 0], ["R", -0.1 * sgn, Math.PI]]) {
+          if (only && side !== only) continue;
           const target = kb.c.clone().addScaledVector(kb.axis, off);
           target.y += 0.045 + 0.012 * Math.max(0, Math.sin(t * 2 * Math.PI * 5.5 + ph));
           out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true, finger: 0.07 });
@@ -1097,6 +1152,7 @@ export class People3D {
     this.lights = state.lights;
     const places = {}, placed = {};
     for (const id of Object.keys(this.bodies)) if (state.actors[id]) places[id] = this.placeBody(id, state.actors[id], t);
+    this.keepApart(places);
     for (const id of Object.keys(places)) placed[id] = this.drawBody(id, state.actors[id], t, places[id], places);
     this.drawChairs(state, t, placed);
     for (const [id, g] of Object.entries(this.glows)) {

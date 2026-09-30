@@ -130,6 +130,7 @@ PRESETS["hand-on-belly"] = PRESETS["small-hand-gesture"];
 // small push.
 PRESETS.press = PRESETS.reach;
 PRESETS.tap = () => ({});
+PRESETS.keys = () => ({}); // hands resting on a keyboard: the 3D people's reach, nothing drawn
 
 export const PRESET_NAMES = Object.keys(PRESETS);
 

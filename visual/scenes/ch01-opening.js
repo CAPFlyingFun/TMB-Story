@@ -296,6 +296,22 @@ const REST = [
   // Gestures, each on the line that describes it: joint turns on the 3D people
   // (engine/people3d.js), and the cutout rig's for the drawn ones with ?rig=1 (engine/rig.js).
   { at: L("Jack entered a command"), action: "gesture", actor: "jack", animation: "type", duration: 3.0 },
+  // HIS HANDS STAY ON THE KEYBOARD once he is awake (Joshua, 2026-09-30: "after Jack is
+  // awake, his hands should remain on the keyboard almost the whole time"), as the
+  // manuscript has him: he grabs the keyboard, enters commands, tries searches, locks the
+  // terminal, reopens the network monitor during the call and reaches for the keyboard as
+  // the door opens. Anything that needs a hand -- the intercom button, a point, a reach --
+  // takes that hand and the other stays on the keys; turned to face Sarah, neither does.
+  // Off while he leans back and gives up his chair; the manuscript's "Jack kept one hand on
+  // the keyboard" in between is one hand.
+  { at: L("Several windows were opening", { phrase: "Jack grabbed the keyboard" }), until: L("Jack leaned back."), action: "gesture", actor: "jack", animation: "keys" },
+  { at: L("Jack kept one hand on the keyboard."), until: L("Jack gave Sarah his chair", { offset: 0.2 }), action: "gesture", actor: "jack", animation: "keys", arm: "right" },
+  { at: L("Sarah was already typing."), until: L("I didn't.", { edge: "end" }), action: "gesture", actor: "jack", animation: "keys" },
+  // "Jack reopened the network monitor." -- during the call, so with the hand that is not
+  // holding the intercom button.
+  { at: L("Jack reopened the network monitor."), action: "gesture", actor: "jack", animation: "type", arm: "right", duration: 1.6 },
+  // Sarah at her own keyboard while she works, until the TOMBS request interrupts them.
+  { at: L("Sarah was already typing."), until: L("A new warning tone interrupted them."), action: "gesture", actor: "sarah", animation: "keys" },
   { at: L("He reached for the intercom."), action: "gesture", actor: "jack", animation: "lean-forward", duration: 1.4 },
   // His hand on the intercom's button for as long as the line is open (Joshua, 2026-09-29:
   // "Jack's hand should be reaching for the intercom when he presses the button and also to
