@@ -33,9 +33,9 @@ const TURN_SECONDS = 0.45; // a change of facing, as a turn rather than a cut
 const BLEND_SECONDS = 0.55; // a change of pose or state (asleep to awake, sitting to standing)
 // A walk's phase is advanced by DISTANCE, never by time (TRADDOMIUM's Walker says why: a
 // phase run by the clock takes the same stride at any speed, so the planted foot slides).
-// One stride pair is two of the pose's own steps, 0.75 of the leg each (humanPose's
-// STEP_LENGTHS.walk), so the foot on the floor stays where it was put.
-const STEP_OF_LEG = 0.75;
+// The stride is the pose's own (humanStride, in bind units, rig.bindScale of them to the
+// metre), so the foot on the floor stays where it was put.
+const FLOOR = { y: 0, grip: 1 }; // the lab's floor, level and dry, under every foot
 const CHAIR_CLAIM_M = 0.7; // someone sitting down this close to a parked chair takes it
 
 // ------------------------------------------------------------------ small quaternion kit
@@ -511,7 +511,7 @@ export class People3D {
     if (kind === "doze" || kind === "sit") turns = THREE.poseSeated(measure, rig.bind, { style: kind, seconds: t + body.seed * 1.7, headSide: 1 }, []);
     else {
       const walking = kind === "walk";
-      const phase = walking ? body.walked / (2 * STEP_OF_LEG * measure.legLength) % 1 : 0;
+      const phase = walking ? ((body.walked * rig.bindScale) / THREE.humanStride(measure, "walk")) % 1 : 0;
       turns = THREE.poseHuman(measure, rig.bind, { stance: walking ? "walk" : "stand", phase, seconds: t + body.seed * 1.7, lean: 0 }, []);
     }
     return toMap(turns);
@@ -747,7 +747,7 @@ export class People3D {
     if (!place) return null;
     const j = body.measure.joints, L = body.measure.leftSign < 0 ? -1 : 1;
     const seated = place.seated;
-    // How far this body has walked, for the stride (see STEP_OF_LEG). Counted frame to frame
+    // How far this body has walked, for the stride (see humanStride above). Counted frame to frame
     // along the floor, and started again after a seek: a jump in time is not a walk.
     const was = body.walkedAt;
     body.walked = was && t >= was.t && t - was.t < 0.25 ? body.walked + Math.hypot(place.at[0] - was.x, place.at[2] - was.z) : 0;
@@ -811,7 +811,7 @@ export class People3D {
       map.set(clav, qMul(Rc, map.get(clav) || IDENTITY));
       map.set(sh, qMul([-Rc[0], -Rc[1], -Rc[2], Rc[3]], map.get(sh)));
     }
-    body.rig.apply(toTurns(map));
+    const posed = toTurns(map);
 
     // Where: the floor point, and for a seated body the hips over the chair's seat.
     const root = (poseName) => {
@@ -828,8 +828,21 @@ export class People3D {
       const was = root(a.pose.prev).root;
       r = was.map((v, i) => v + (r[i] - v) * k);
     }
+    // THE FEET (TRADDOMIUM's humanFeet): each foot is put on the floor and held there
+    // while it carries weight, and the body comes down onto them -- the feet drive the
+    // body. They let go while a body sits, stands up or sits down, and start again after a
+    // seek, because a jump in time is not a step.
+    const steady = was && t >= was.t && t - was.t < 0.25;
+    if (!steady || !body.feet) body.feet = THREE.createFeet(body.measure, body.rig.bind, -1);
+    const changingSeat = poseChangedLast && k < 1 && (a.pose.prev === "sitting" || a.pose.v === "sitting");
+    const grounded = THREE.groundFeet(body.feet, body.measure, body.rig.bind, posed, {
+      dt: steady ? t - was.t : 0, released: seated || changingSeat,
+      rootX: r[0], rootY: r[1], rootZ: r[2], rootYaw: yaw, unitsPerMetre: body.rig.bindScale,
+      groundAt: () => FLOOR,
+    }, body.feetTurns || (body.feetTurns = []));
+    body.rig.apply(grounded.turns);
     const hop = a.jolt ? 0.015 * a.jolt : 0;
-    body.model.position.set(r[0], r[1] + hop, r[2]);
+    body.model.position.set(r[0], r[1] + hop - grounded.rootDrop, r[2]);
     body.model.rotation.set(0, yaw, 0);
     body.model.updateMatrixWorld(true);
     for (const R of reaches) this.reachArm(body, R);
