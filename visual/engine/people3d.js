@@ -31,7 +31,11 @@ const smooth = (p) => (p <= 0 ? 0 : p >= 1 ? 1 : p * p * (3 - 2 * p));
 const FACING = { south: 0, southeast: Math.PI / 4, east: Math.PI / 2, northeast: (3 * Math.PI) / 4, north: Math.PI, northwest: (-3 * Math.PI) / 4, west: -Math.PI / 2, southwest: -Math.PI / 4 };
 const TURN_SECONDS = 0.45; // a change of facing, as a turn rather than a cut
 const BLEND_SECONDS = 0.55; // a change of pose or state (asleep to awake, sitting to standing)
-const WALK_CYCLE = 1.05; // seconds per stride pair, the 2D walk's period
+// A walk's phase is advanced by DISTANCE, never by time (TRADDOMIUM's Walker says why: a
+// phase run by the clock takes the same stride at any speed, so the planted foot slides).
+// One stride pair is two of the pose's own steps, 0.75 of the leg each (humanPose's
+// STEP_LENGTHS.walk), so the foot on the floor stays where it was put.
+const STEP_OF_LEG = 0.75;
 const CHAIR_CLAIM_M = 0.7; // someone sitting down this close to a parked chair takes it
 
 // ------------------------------------------------------------------ small quaternion kit
@@ -507,7 +511,7 @@ export class People3D {
     if (kind === "doze" || kind === "sit") turns = THREE.poseSeated(measure, rig.bind, { style: kind, seconds: t + body.seed * 1.7, headSide: 1 }, []);
     else {
       const walking = kind === "walk";
-      const phase = walking ? ((t - a.state.since) / WALK_CYCLE) % 1 : 0;
+      const phase = walking ? body.walked / (2 * STEP_OF_LEG * measure.legLength) % 1 : 0;
       turns = THREE.poseHuman(measure, rig.bind, { stance: walking ? "walk" : "stand", phase, seconds: t + body.seed * 1.7, lean: 0 }, []);
     }
     return toMap(turns);
@@ -743,6 +747,11 @@ export class People3D {
     if (!place) return null;
     const j = body.measure.joints, L = body.measure.leftSign < 0 ? -1 : 1;
     const seated = place.seated;
+    // How far this body has walked, for the stride (see STEP_OF_LEG). Counted frame to frame
+    // along the floor, and started again after a seek: a jump in time is not a walk.
+    const was = body.walkedAt;
+    body.walked = was && t >= was.t && t - was.t < 0.25 ? body.walked + Math.hypot(place.at[0] - was.x, place.at[2] - was.z) : 0;
+    body.walkedAt = { t, x: place.at[0], z: place.at[2] };
 
     // The look: turn the body part of the way (a seated person swivels the chair), the
     // neck and head the rest.
