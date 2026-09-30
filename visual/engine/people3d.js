@@ -541,12 +541,14 @@ export class People3D {
       const s = body.seed, h = Math.sin((2 * Math.PI * t) / (7.3 + s * 1.3) + s) + 0.5 * Math.sin((2 * Math.PI * t) / (3.1 + s * 0.4) + 2 * s);
       add(j.neck, ry(L * 3 * DEG * h * awake));
     }
-    // Standing still, the arms hang relaxed: a little bent, the hands a little forward.
+    // Standing still, the arms hang relaxed: barely bent, the hands a little forward. (It was
+    // 14 degrees at the elbow, on top of the pose's own: Joshua, 2026-09-30, "Jack's arms are
+    // folded in his sides".)
     const standing = !seated && st.v !== "walking";
     if (standing) {
       for (const [sh, el, s] of [[j.shoulderL, j.elbowL, L], [j.shoulderR, j.elbowR, -L]]) {
-        add(sh, rx(-5 * DEG));
-        add(el, ry(-s * 14 * DEG));
+        add(sh, rx(-3 * DEG));
+        add(el, ry(-s * 5 * DEG));
       }
     }
     // Typing: lean in to the keys, so the arms bend instead of locking straight.
