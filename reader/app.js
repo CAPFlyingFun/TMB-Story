@@ -120,7 +120,6 @@
       return "#rules/" + m[1].toLowerCase();
     }
     if (clean === "architecture/DECISIONS.md") return "#canon/decisions";
-    if (clean === "architecture/SERIES_ARCHITECTURE.md") return "#canon/architecture";
     if ((m = clean.match(/^chapters\/movement-\d+\/chapter-(\d{4})\.md$/))) return "#story/" + m[1];
     if ((m = clean.match(/^outline\/movement-(\d+)\//))) return "#outline/" + parseInt(m[1], 10);
     return null;
@@ -439,16 +438,16 @@
     return showMarkdownFile("story-rules/CHAPTER_INDEX.md");
   }
 
-  function viewCanon(subArg) {
+  // Canon is the decisions log. The old series bible (SERIES_ARCHITECTURE.md) was archived
+  // with the pre-reboot story on 2026-09-17 and is not canon, so it is not offered here;
+  // the current canon reference is the Story Rules tab. An old #canon/architecture link
+  // lands on the decisions rather than on a 404 (Joshua saw one, 2026-09-30).
+  function viewCanon() {
     setActiveTab("canon");
-    var sub = String(subArg || "architecture").toLowerCase();
-    if (sub !== "architecture" && sub !== "decisions") sub = "architecture";
     var pills = pillsHtml([
-      { key: "architecture", label: "Architecture", href: "#canon/architecture" },
       { key: "decisions", label: "Decisions", href: "#canon/decisions" }
-    ], sub);
-    var path = sub === "decisions" ? "architecture/DECISIONS.md" : "architecture/SERIES_ARCHITECTURE.md";
-    return showMarkdownFile(path, { before: pills });
+    ], "decisions");
+    return showMarkdownFile("architecture/DECISIONS.md", { before: pills });
   }
 
   // ------------------------------------------------------------------
