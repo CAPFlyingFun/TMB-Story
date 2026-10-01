@@ -39,10 +39,9 @@ intruder did not erase shows the boundary definition was **loaded, not created**
 three weeks earlier with Jack's own credentials, while he was at a planning meeting
 across the island. It carries a label: PHASE ONE READY.
 
-## Movement 3 — Chapters 7 onward
+## Movement 3 — Chapters 7 to 9
 
-Not outlined, not written. Do not draft it unasked. What Chapter 6 opens is the
-question of who, and the fact that there is a phase two.
+Joshua's manuscript, imported 2026-10-01: `outline/movement-03/overview.md`.
 
 ## Audio
 

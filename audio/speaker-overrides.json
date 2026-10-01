@@ -646,6 +646,279 @@
         133
       ],
       "note": "ch2 order 133: 'Understood.' -- Lena, over the wrist terminal, acknowledging 'If anything changes outside this building, call us.' Was 'Lena said' until the bare tags came out (Decision 0024). Scoped to Chapter 2: the officer and Doctor Mercer say the same word in Chapters 4 and 6. Added 2026-09-22. | Re-pointed 2026-09-23 after the 09-23 import."
+    },
+    "REVIEW_REQUIRED-dcf9d3561942": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 7, paragraph 5: 'I don't see anything.' -- \"I don't see anything,\" he said. -- Jack, at the console. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "lena-ortiz-c4da39af5cca": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 7, paragraph 7: 'I don't know.' -- answers Sarah's \"Then what hit the ground?\". The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "security-officer-8a468e18882f": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 7, paragraph 16: 'Not yet.' -- answers Lena leaning over his shoulder. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "security-officer-01a1de6535de": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 7, paragraph 41: 'Or something big enough that one footstep doesn't leave much of a trai' -- manuscript tag: Jack said. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "security-officer-b44f9c425ce6": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 7, paragraph 43: 'You didn't like that either.' -- manuscript tag: Jack said. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "jack-bennett-572f86465e47": {
+      "speaker": "security-officer",
+      "note": "Chapter 7, paragraph 45: 'Somebody want to catch me up?' -- \"Mark returned... He set the radio down... Somebody want to catch me up?\" He is Mark, not Jack. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "REVIEW_REQUIRED-5cf844e8d355": {
+      "speaker": "security-officer",
+      "note": "Chapter 7, paragraph 47: 'Phase one. As in, there's a two.' -- \"Mark read it once. Then again.\" -- his line. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "lena-ortiz-c695fc9907d5": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 7, paragraph 48: 'We don't know that yet.' -- manuscript tag: Sarah said. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "jack-bennett-467c9b887b72": {
+      "speaker": "security-officer",
+      "note": "Chapter 7, paragraph 49: 'You don't sound like you believe that.' -- Mark answers Sarah. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "REVIEW_REQUIRED-b274923da88e": {
+      "speaker": "doctor-mercer",
+      "note": "Chapter 7, paragraph 60: 'Jack, I trust you. That's the only reason I haven't paged the whole se' -- Doctor Mercer, on the wrist terminal, after \"Another pause\". The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "sarah-bennett-7105b3fb6ca3": {
+      "speaker": "lena-ortiz",
+      "note": "Chapter 7, paragraph 68: 'Four people, one doctor, and a security officer who ran from a shadow.' -- manuscript tag: Lena said. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "sarah-bennett-b9e72ea93895": {
+      "speaker": "lena-ortiz",
+      "note": "Chapter 7, paragraph 70: 'So do horses. You don't see me running from those.' -- Lena, trading with Mark. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "sarah-bennett-0269e39e851b": {
+      "speaker": "lena-ortiz",
+      "note": "Chapter 7, paragraph 72: 'Neither do I, usually. Tonight made an exception.' -- Lena, trading with Mark. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "security-officer-2f92e92747f0": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 7, paragraph 76: 'If they hid one file for three weeks, I don't think they stopped at on' -- Jack answers Sarah's \"What are you doing?\". The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "security-officer-e5e96b8ceb1c": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 7, paragraph 78: 'I think somebody patient enough to plant this three weeks in advance d' -- Jack answers Lena. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        7
+      ]
+    },
+    "REVIEW_REQUIRED-bc395b12c0f9": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 8, paragraph 2: 'No.' -- Jack answers Sarah reading over his shoulder. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "REVIEW_REQUIRED-39d7df6f52da": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 8, paragraph 3: 'Then what is it?' -- Sarah presses. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "sarah-bennett-682ed311321d": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 8, paragraph 19: 'This isn't going to give us a name.' -- manuscript: \"he said\" -- Jack, who pulled the checkout log. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "sarah-bennett-b10a51109ff4": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 8, paragraph 21: 'That's not helpful.' -- Jack, to Lena. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "lena-ortiz-e73a6a85a94f": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 8, paragraph 24: 'You can do that?' -- Jack, to Sarah. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "lena-ortiz-0ea6f45162b6": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 8, paragraph 27: 'Unless they didn't need a badge.' -- manuscript tag: Jack said. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "lena-ortiz-88897476f44c": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 8, paragraph 29: 'Everyone who's supposed to be here.' -- Jack: \"Sarah looked up at him\". The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "sarah-bennett-09b868e0e70c": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 8, paragraph 34: 'It might. Add it to the list.' -- manuscript tag: Jack said. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "sarah-bennett-84d0254335a5": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 8, paragraph 36: 'The night's getting long too. They're keeping pace.' -- manuscript tag: Jack said. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "sarah-bennett-cd9b7e432eaf": {
+      "speaker": "lena-ortiz",
+      "note": "Chapter 8, paragraph 42: 'Looking for what?' -- Lena, whom Jack has just asked. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "lena-ortiz-c69b97ab7775": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 8, paragraph 47: 'Or the same thing, moving.' -- manuscript tag: Jack said. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "jack-bennett-85098623e714": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 8, paragraph 55: 'Ten minutes. Cameras stay up the whole time, and you check in every tw' -- manuscript tag: she said -- Sarah. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "security-officer-fa4042ade0fa": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 8, paragraph 59: 'Go.' -- Sarah sends him off. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "jack-bennett-1abaa762a44e": {
+      "speaker": "security-officer",
+      "note": "Chapter 8, paragraph 66: 'You scared, Jack?' -- \"Mark didn't respond right away. When he did...\" -- Mark asks. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "security-officer-bc581c5761ab": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 8, paragraph 67: 'Yes.' -- Jack answers. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "jack-bennett-092f18440521": {
+      "speaker": "security-officer",
+      "note": "Chapter 8, paragraph 68: 'Good. Means you're paying attention.' -- Mark. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        8
+      ]
+    },
+    "sarah-bennett-37c897f415d4": {
+      "speaker": "security-officer",
+      "note": "Chapter 9, paragraph 6: 'Or somebody found it and never turned it back in.' -- manuscript tag: Mark said. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        9
+      ]
+    },
+    "sarah-bennett-ee67999ca098": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 9, paragraph 14: 'They didn't just plan the boundary. They planned for us finding the tr' -- manuscript: \"he said\" -- Jack. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        9
+      ]
+    },
+    "security-officer-270211569aee": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 9, paragraph 18: 'Barely.' -- Jack answers Sarah. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        9
+      ]
+    },
+    "security-officer-b470f09f31fa": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 9, paragraph 20: 'Does it?' -- Jack. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        9
+      ]
+    },
+    "sarah-bennett-8c59e5f16429": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 9, paragraph 25: 'Yeah.' -- manuscript tag: Jack said. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        9
+      ]
+    },
+    "REVIEW_REQUIRED-6d0da422242b": {
+      "speaker": "aiden",
+      "note": "Chapter 9, paragraph 33: 'This is Aiden, over at the greenhouse. I don't, I need someone to tell' -- \"A man's voice, breathless. This is Aiden...\" on the facilities channel. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        9
+      ]
+    },
+    "sarah-bennett-215a4ab79d17": {
+      "speaker": "aiden",
+      "note": "Chapter 9, paragraph 38: 'On your way to do what, exactly?' -- Aiden, on the channel. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        9
+      ]
+    },
+    "sarah-bennett-4455bf928abd": {
+      "speaker": "aiden",
+      "note": "Chapter 9, paragraph 40: 'That's not an answer!' -- Aiden, on the channel. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the tagged manuscript, 2026-10-01.",
+      "chapters": [
+        9
+      ]
     }
   }
 }

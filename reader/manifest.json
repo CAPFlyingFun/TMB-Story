@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26",
+  "generated": "2026-10-01",
   "movements": [
     {
       "number": 1,
@@ -11,6 +11,12 @@
       "number": 2,
       "dir": "outline/movement-02",
       "overview": "outline/movement-02/overview.md",
+      "miniArcs": []
+    },
+    {
+      "number": 3,
+      "dir": "outline/movement-03",
+      "overview": "outline/movement-03/overview.md",
       "miniArcs": []
     }
   ],
@@ -80,6 +86,39 @@
       "review_status": "approved",
       "audio_status": "pending",
       "ending_type": "revelation"
+    },
+    {
+      "number": 7,
+      "path": "chapters/movement-03/chapter-0007.md",
+      "movement": 3,
+      "title": "Phase Two",
+      "pov": "Jack",
+      "word_count": 1166,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "unanswered question"
+    },
+    {
+      "number": 8,
+      "path": "chapters/movement-03/chapter-0008.md",
+      "movement": 3,
+      "title": "Three Weeks",
+      "pov": "Jack",
+      "word_count": 1154,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "cliffhanger"
+    },
+    {
+      "number": 9,
+      "path": "chapters/movement-03/chapter-0009.md",
+      "movement": 3,
+      "title": "First Light",
+      "pov": "Jack",
+      "word_count": 1189,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "turning point"
     }
   ],
   "storyRules": [
