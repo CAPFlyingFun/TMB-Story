@@ -297,7 +297,8 @@ export function buildOutdoors(opts = {}) {
   if (variant === "east") {
     for (let i = 0; i < 26; i++) {
       const [x, z, h] = spots[(i * 7) % spots.length];
-      const d = new THREE.Mesh(new THREE.SphereGeometry(1.1 + r() * 0.5, 24, 16), waterM);
+      // "large enough to swallow a person whole": 2 to 2.5 m across, an 11 to 14 mm drop at 1:180
+      const d = new THREE.Mesh(new THREE.SphereGeometry(1.0 + r() * 0.25, 24, 16), waterM);
       d.scale.y = 1.15;
       d.position.set(x + 0.2 * h * 0.3, groundH(x, z) + h * (0.55 + r() * 0.3), z + 0.3 * h * 0.3);
       group.add(d);

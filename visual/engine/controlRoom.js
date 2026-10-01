@@ -427,7 +427,9 @@ export function buildControlRoom() {
   const dew = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 18, 12), dewM, 70);
   s = 7;
   for (let i = 0; i < 70; i++) {
-    const d = 30 + Math.pow(rnd(), 0.8) * 150, z = -120 + rnd() * 240, h = 6 + rnd() * 50, r0 = 1.4 + rnd() * 2.2;
+    // "the size of boulders": 1 to 2.2 m across, a 6 to 12 mm drop at 1:180 (Joshua,
+    // 2026-10-01: everything outside the town is 180 times the people)
+    const d = 30 + Math.pow(rnd(), 0.8) * 150, z = -120 + rnd() * 240, h = 6 + rnd() * 50, r0 = 0.5 + rnd() * 0.6;
     m4.compose(new THREE.Vector3(R.xr + 24 + d, h, z), new THREE.Quaternion(), new THREE.Vector3(r0, r0 * 1.12, r0));
     dew.setMatrixAt(i, m4);
   }
