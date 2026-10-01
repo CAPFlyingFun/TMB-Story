@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c338d18c9f63",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d2ecd62314955367f8fe2d070c63e478461d96855241d32f85a9acdd19a41a8c",
+  "text": "Jack didn't answer immediately. He turned back to the diagnostic snapshot instead, scrolling through file after file of routine hardware logs while the others kept talking behind him.",
+  "bytes": 171825,
+  "generated": "2026-10-01T18:02:16Z"
+}

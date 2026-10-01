@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-ca29f3ff72df",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ccbaceae972c3c11eff3fe19edfff05d1256ce86640b4096fae6b1c0be2fd8d1",
+  "text": "Even more reassuring.",
+  "bytes": 24703,
+  "generated": "2026-10-01T18:01:47Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-84ebcf7457b0",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "db434ffc78fce71d22679a18c5c4409902029f8acf04f41a9bce25622a6a1774",
+  "text": "Not alone.",
+  "bytes": 14254,
+  "generated": "2026-10-01T18:02:47Z"
+}

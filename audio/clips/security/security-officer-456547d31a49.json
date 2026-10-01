@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-456547d31a49",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "43c6867be66d26db6ef74e511bfcc8e7fff6d05b6b3a849505928250275c65b1",
+  "text": "I wasn't planning to be alone. I was planning to take you.",
+  "bytes": 48527,
+  "generated": "2026-10-01T18:02:48Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-cb5a10ce029a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3dba6222ecaaf15b9f166f0a99e6c4c660ef5fa30bd3826a01651f8cf3dfb2b4",
+  "text": "The file opened onto a short list of coordinates and a single line of metadata: a device signature Jack didn't recognize.",
+  "bytes": 121252,
+  "generated": "2026-10-01T18:02:21Z"
+}

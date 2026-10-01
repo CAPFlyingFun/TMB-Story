@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-7cd5c9954608",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "09d7bbe993e7362d3dc8b56c0ed8242e73154671a0482a3664d99330f880e05f",
+  "text": "A trigger needs two things. A condition, and a target.",
+  "bytes": 51035,
+  "generated": "2026-10-01T18:01:52Z"
+}

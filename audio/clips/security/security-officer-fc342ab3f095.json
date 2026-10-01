@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-fc342ab3f095",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "df44ac3f71916ee98bc22b77a2cb2f313e217b55023308d1f7ae362472934f89",
+  "text": "For what it's worth, the door logs would still catch a tailgater. Somebody walking in right behind a badge that already opened it.",
+  "bytes": 106623,
+  "generated": "2026-10-01T18:02:37Z"
+}

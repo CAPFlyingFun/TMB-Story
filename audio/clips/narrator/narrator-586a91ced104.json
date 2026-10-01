@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-586a91ced104",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4e5209d7a4e74894ddd246821de6a37fa50f017551aab7ba3011180f7a9843b0",
+  "text": "Even the light seemed slower here than it should have been, spilling down through the grass like something poured rather than something arriving. Jack found himself thinking, absurdly, that it was the kind of view someone would pay to see on vacation, if it weren't currently their entire backyard.",
+  "bytes": 292197,
+  "generated": "2026-10-01T18:03:22Z"
+}

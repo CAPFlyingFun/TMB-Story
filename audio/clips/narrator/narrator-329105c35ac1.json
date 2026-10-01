@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-329105c35ac1",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5c50d6f12715e7e5104e7ccce7b3c45bc7cabc70cbbaa6d524139fdb14ec8149",
+  "text": "Sarah set both hands flat against the edge of the console.",
+  "bytes": 56886,
+  "generated": "2026-10-01T18:02:10Z"
+}

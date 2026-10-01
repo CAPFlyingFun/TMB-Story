@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-f9acd284bd94",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1c68becf009deaa1237f0bb2efbd7645491b7e21286391845067529ba8d2b4e4",
+  "text": "Or the same thing, moving.",
+  "bytes": 24703,
+  "generated": "2026-10-01T18:02:45Z"
+}

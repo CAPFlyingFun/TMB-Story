@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4f5f03286b3a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4a6e8eca3b19c47380d244f1fd72c0d7e385cf115a7b4e37ca99bb5a1d8bf2fb",
+  "text": "Jack watched her work for a moment before returning to his own screen. The maintenance record wasn't the only thing bothering him. He opened the boundary definition again and looked past the false calm of the settlement's edge, toward the dark shape of the forest beyond it.",
+  "bytes": 254999,
+  "generated": "2026-10-01T18:02:41Z"
+}

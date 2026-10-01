@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-3ba232f9b1d8",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b55c8282b5601a8a7f8f6111c7cbba5ff19070d2ba5b8a8497e9a1946610b230",
+  "text": "Jack did the math out loud, more for himself than anyone else.",
+  "bytes": 64827,
+  "generated": "2026-10-01T18:02:46Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-0072b88d8919",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e11f556b5cc5150f6e76e2a318fbe9aa869cd62a1ac3f020f29c8b088350f103",
+  "text": "Jack. Two more patients are awake. One of them heard the tremor and won't stop asking what caused it.",
+  "bytes": 95338,
+  "generated": "2026-10-01T18:02:06Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-fb72fda7f2ce",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5a8b0a5345831485966d7682a0cef114d59388e8862699493e4cd09a37030803",
+  "text": "Sarah pulled up a badge-tracking overlay across the facility map.",
+  "bytes": 61066,
+  "generated": "2026-10-01T18:02:34Z"
+}

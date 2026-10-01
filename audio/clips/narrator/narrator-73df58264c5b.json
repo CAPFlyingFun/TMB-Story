@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-73df58264c5b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "34d92df7149d0d6e2a0e6b7cd1504894f462fabe7ce6c099f92f84fa165fc360",
+  "text": "Jack knelt and examined the soil anyway. Then he saw it: a single blade of grass, bent flat and pressed into the dirt, far heavier than wind alone could manage.",
+  "bytes": 163884,
+  "generated": "2026-10-01T18:02:57Z"
+}

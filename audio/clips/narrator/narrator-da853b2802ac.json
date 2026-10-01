@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-da853b2802ac",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "58b19b70ec01e101f74f4c945ed7880ff9f6da40d0b8b99119619f95774b164b",
+  "text": "The system took longer than it should have to respond. Long enough that Jack's hand hovered over the keyboard, ready to try again.",
+  "bytes": 124595,
+  "generated": "2026-10-01T18:02:19Z"
+}

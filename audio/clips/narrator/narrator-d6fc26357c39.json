@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d6fc26357c39",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bf3196683fce0e4acdc43fb18c7cfba230c4a7f6a4ddad4d8b87e1b11454a127",
+  "text": "Four cold cups of coffee sat forgotten along the edge of the console. Nobody had touched them in over an hour.",
+  "bytes": 106623,
+  "generated": "2026-10-01T18:01:37Z"
+}

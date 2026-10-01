@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-39e39dcb2d6b",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "40bc018925471ed4aca1d849179d3f796a2579935248a299a7883a4de613692a",
+  "text": "Neither do I, usually. Tonight made an exception.",
+  "bytes": 55214,
+  "generated": "2026-10-01T18:02:15Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-f0d6ce00d993",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "92f9071fde262dd68ddf38869e13a042390bb88e8452eb7efef31bd6ce33e4b2",
+  "text": "Then we handle that when it happens. We can't keep running this with four people and one extremely patient doctor.",
+  "bytes": 101190,
+  "generated": "2026-10-01T18:02:12Z"
+}

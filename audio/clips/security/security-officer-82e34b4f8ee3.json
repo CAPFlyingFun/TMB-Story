@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-82e34b4f8ee3",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "701daa078c7fa48b86947b58e5ec3f3d3855a1dc8c62bc6944efa66a44dfee60",
+  "text": "Phase one. As in, there's a two.",
+  "bytes": 49363,
+  "generated": "2026-10-01T18:02:03Z"
+}

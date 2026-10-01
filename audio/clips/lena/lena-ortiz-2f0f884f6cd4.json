@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-2f0f884f6cd4",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a80feaa732fd6bcfb6e31faf8bc4d1a1445af5374c5722415622a89c658b9a29",
+  "text": "There's a lot of parts you don't like tonight.",
+  "bytes": 35988,
+  "generated": "2026-10-01T18:01:55Z"
+}

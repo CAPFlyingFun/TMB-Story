@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-3e37d53bfb54",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f4ab9966dde4b5cd76e9bb3a5001478b18fac23cecbf65636291cab606dc2d6a",
+  "text": "So we're back to nothing.",
+  "bytes": 24703,
+  "generated": "2026-10-01T18:03:09Z"
+}

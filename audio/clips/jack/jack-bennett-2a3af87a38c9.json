@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-2a3af87a38c9",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6fcf92df728c4588536e774bbed0b380afc35e08c52e4aa772f2cfa950da1ab5",
+  "text": "Anything that moved and shouldn't have.",
+  "bytes": 33062,
+  "generated": "2026-10-01T18:02:42Z"
+}

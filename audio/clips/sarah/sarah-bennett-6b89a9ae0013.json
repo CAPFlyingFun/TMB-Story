@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-6b89a9ae0013",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5da42c52e78329f89c5340b680b25c8e9b43b784a3c54d5b5c2aeeb10c0f4218",
+  "text": "How long to put together something people can actually understand?",
+  "bytes": 58140,
+  "generated": "2026-10-01T18:03:34Z"
+}

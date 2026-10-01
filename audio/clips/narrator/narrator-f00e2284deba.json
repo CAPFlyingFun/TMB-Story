@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f00e2284deba",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "78c73c7ee15276c7e5b82986d915242c880635eb30940fc91e421c6330f84074",
+  "text": "Jack pulled the ticket up himself, as though seeing it wouldn't be enough until his own eyes had confirmed it. The complaint was three lines long, filed by a woman he'd never met, closed out with a standard replacement order the same week.",
+  "bytes": 229921,
+  "generated": "2026-10-01T18:03:07Z"
+}

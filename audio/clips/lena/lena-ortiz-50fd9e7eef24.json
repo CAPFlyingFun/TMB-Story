@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-50fd9e7eef24",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d72379ecf291a2ada75957b05a500072771b5464ce2f1efc6989cc2019903465",
+  "text": "She's not wrong.",
+  "bytes": 19688,
+  "generated": "2026-10-01T18:02:10Z"
+}

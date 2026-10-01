@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4ca5dc70d60b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6586e0e11b5133956f8e92e3ddb56a18a978bd92ee1032a0e220602db7f14aec",
+  "text": "Mark didn't respond right away. When he did, his voice had lost its usual dry edge.",
+  "bytes": 91577,
+  "generated": "2026-10-01T18:02:54Z"
+}

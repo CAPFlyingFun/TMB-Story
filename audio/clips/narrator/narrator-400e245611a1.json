@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-400e245611a1",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "64f65336b3af4d85bb0466791b94ba68d1de8efdb6325b07e161b6863c52ac9b",
+  "text": "Jack looked around the control room, at the cold coffee and the frozen frame of the shape in the grass and the three words still glowing at the edge of the display, and understood that nothing about the next few hours was going to be simple.",
+  "bytes": 204008,
+  "generated": "2026-10-01T18:03:38Z"
+}

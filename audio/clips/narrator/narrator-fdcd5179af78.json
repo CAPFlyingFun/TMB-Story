@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-fdcd5179af78",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "19c9a8737af46e6f78d7710d900821ac1251c71bfd87e4a8efc595f1bd7249d8",
+  "text": "Jack pulled the tablet's checkout log. Dozens of names scrolled past. Anyone with basic facilities access could have signed one out that week. No single entry stood apart.",
+  "bytes": 182274,
+  "generated": "2026-10-01T18:02:31Z"
+}

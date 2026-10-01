@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c530f5dcde6d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d6395ce7931e24e6b19d570bf62a07075cadeb81c7288089ca6ddd148b05393c",
+  "text": "It wasn't a plan. Not really. But it was the first thing all night that had felt like moving forward instead of just reacting to whatever happened next.",
+  "bytes": 145911,
+  "generated": "2026-10-01T18:03:32Z"
+}

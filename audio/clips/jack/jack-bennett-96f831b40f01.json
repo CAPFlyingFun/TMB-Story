@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-96f831b40f01",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "75ba7b00a1fc367dfbd1501f6ac0cdacaf2c42242cd61a9f42f8c04abdbbf3be",
+  "text": "Start with medical. Mercer's earned that much.",
+  "bytes": 41839,
+  "generated": "2026-10-01T18:03:32Z"
+}

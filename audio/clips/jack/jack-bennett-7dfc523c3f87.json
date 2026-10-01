@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-7dfc523c3f87",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "16821afa08ad0ab9eb0a0e9a9c63f9e1ee9ed45e3b54827e2eab8bc360a44954",
+  "text": "The equipment shed by the north pumping station.",
+  "bytes": 41004,
+  "generated": "2026-10-01T18:02:25Z"
+}

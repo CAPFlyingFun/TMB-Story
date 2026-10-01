@@ -18,7 +18,10 @@
         3,
         4,
         5,
-        6
+        6,
+        7,
+        8,
+        9
       ]
     },
     {
@@ -51,7 +54,10 @@
         2,
         3,
         4,
-        5
+        5,
+        7,
+        8,
+        9
       ]
     },
     {
@@ -65,7 +71,8 @@
       "suggestedGain": 0.4,
       "description": "Outdoor nature tone, for the miniature world once the characters are standing in it. Nearly ten minutes long, so under a chapter it is effectively continuous and never reaches a loop seam.",
       "chapters": [
-        3
+        3,
+        9
       ]
     },
     {
@@ -79,7 +86,8 @@
       "suggestedGain": 0.4,
       "description": "Outdoor night tone for the settlement -- the world beyond the lab wall after dark. Three minutes, so it loops roughly three times under a chapter-length scene.",
       "chapters": [
-        5
+        5,
+        8
       ]
     },
     {
@@ -139,7 +147,8 @@
       "chapters": [
         1,
         2,
-        3
+        3,
+        8
       ]
     },
     {
@@ -243,7 +252,8 @@
       "description": "The polite tone that fails to wake Jack. Used twice in Chapter 1 -- the second, louder tone is this same asset at a higher gain, which is what the manuscript describes.",
       "chapters": [
         1,
-        5
+        5,
+        9
       ]
     },
     {
@@ -306,7 +316,9 @@
       "chapters": [
         1,
         4,
-        5
+        5,
+        7,
+        9
       ]
     },
     {
@@ -323,7 +335,8 @@
         1,
         2,
         4,
-        5
+        5,
+        9
       ]
     },
     {
@@ -337,7 +350,9 @@
       "suggestedGain": 0.4,
       "description": "The manuscript makes static the ANSWER to Jack's question, so this is dialogue's turn in the scene, not decoration.",
       "chapters": [
-        1
+        1,
+        7,
+        8
       ]
     },
     {
@@ -355,7 +370,10 @@
         2,
         3,
         4,
-        6
+        6,
+        7,
+        8,
+        9
       ]
     },
     {
@@ -371,7 +389,9 @@
       "chapters": [
         1,
         2,
-        5
+        5,
+        7,
+        8
       ]
     },
     {
@@ -404,7 +424,10 @@
         3,
         4,
         5,
-        6
+        6,
+        7,
+        8,
+        9
       ]
     },
     {
@@ -435,7 +458,8 @@
         2,
         3,
         4,
-        5
+        5,
+        7
       ]
     }
   ]

@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-9047df69f6f7",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e96f13164b530b930781df9f91e0998016eb66f4e2399fc2bb4ec31a7ee7f55f",
+  "text": "Moving how fast?",
+  "bytes": 24285,
+  "generated": "2026-10-01T18:02:45Z"
+}

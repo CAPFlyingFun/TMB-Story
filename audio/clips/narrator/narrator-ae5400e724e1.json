@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-ae5400e724e1",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7a9ab983b6574fb3f77610080366545c8e31412f26d6466ad447706d0792d7d1",
+  "text": "Doctor Mercer's voice was tighter than it had been the first time.",
+  "bytes": 56886,
+  "generated": "2026-10-01T18:02:06Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-2fa60203f701",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7efcff00bbf825094f3be2e53a9d232fb95128882fb923ef55a7cf1aff8b6fd5",
+  "text": "A pause, longer than he liked.",
+  "bytes": 36824,
+  "generated": "2026-10-01T18:03:03Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-a1cbb5e2b48a",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f595d4dd670e3470bb4e831affc493a5e87a9b367c120d6459429eaf1c029c66",
+  "text": "Okay. That felt closer than the last one.",
+  "bytes": 43511,
+  "generated": "2026-10-01T18:01:38Z"
+}

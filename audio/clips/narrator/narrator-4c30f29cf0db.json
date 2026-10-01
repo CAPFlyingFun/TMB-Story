@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4c30f29cf0db",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ddc70b5f6cfd0cd94f73e4ed38f3ed6fc42676964e816ae0fab76bec59c53276",
+  "text": "Jack's hands were already moving across the console, pulling the southern camera feed onto the main display before he'd fully decided to do it. Grass swayed at the edge of the frame. Nothing else.",
+  "bytes": 190633,
+  "generated": "2026-10-01T18:01:40Z"
+}

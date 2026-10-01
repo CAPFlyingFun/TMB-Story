@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-fa196c43673b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "92599152595f1bd3d705cdc3428fcc7ef36f5b3558d7c5faffce756ed0125e91",
+  "text": "Lena exhaled slowly.",
+  "bytes": 32226,
+  "generated": "2026-10-01T18:02:09Z"
+}

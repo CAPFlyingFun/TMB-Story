@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-e2f1a8aaeb42",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "56a1d59f4844c714ccf799ceccfae916e4e01db931d5cd1460ba0065335898f5",
+  "text": "Lighter how?",
+  "bytes": 17598,
+  "generated": "2026-10-01T18:02:58Z"
+}

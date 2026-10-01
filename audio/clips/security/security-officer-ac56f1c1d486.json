@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-ac56f1c1d486",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e4aea58bf358829f54d7f05650ec0f21e10c64d227f0e16aa2f57ee700fdabb4",
+  "text": "Good. Means you're paying attention.",
+  "bytes": 36824,
+  "generated": "2026-10-01T18:02:54Z"
+}

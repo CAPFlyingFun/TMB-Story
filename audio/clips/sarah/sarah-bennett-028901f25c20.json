@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-028901f25c20",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "25a96a4302f48b54425fd74d681bf91c35cabac002b53a7cf156429f187faca8",
+  "text": "We tell three more people. Department heads. People who can help without starting a panic.",
+  "bytes": 84889,
+  "generated": "2026-10-01T18:02:11Z"
+}

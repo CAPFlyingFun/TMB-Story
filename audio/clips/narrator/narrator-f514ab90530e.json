@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f514ab90530e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f2c7e66e895f834218a05e920938f70271cfd0cf6cbe571816f8ba2fdc33246b",
+  "text": "PHASE ONE READY.",
+  "bytes": 27629,
+  "generated": "2026-10-01T18:01:44Z"
+}

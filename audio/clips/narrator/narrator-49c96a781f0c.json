@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-49c96a781f0c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6d79e1f3fec3cd0b2f01a21c2b00ecd3c42c7ce175d126b91d87a504381ceb9d",
+  "text": "Mark said,",
+  "bytes": 18016,
+  "generated": "2026-10-01T18:02:12Z"
+}

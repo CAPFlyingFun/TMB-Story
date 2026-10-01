@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-948505338b56",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b75723a9ecab72fde1b9b62b75a3640d6a7d2504ff47de7cebb1fd38856f0140",
+  "text": "Sarah looked at Jack.",
+  "bytes": 25539,
+  "generated": "2026-10-01T18:03:37Z"
+}

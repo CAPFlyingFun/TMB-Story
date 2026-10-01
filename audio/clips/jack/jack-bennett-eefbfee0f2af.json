@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-eefbfee0f2af",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "df9009e47f955ff006415e98df996b8f8800f4b9a384d832fd75d43fd8103f86",
+  "text": "The night's getting long too. They're keeping pace.",
+  "bytes": 46437,
+  "generated": "2026-10-01T18:02:38Z"
+}

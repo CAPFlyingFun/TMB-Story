@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-50a067ebfde2",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "60642d3f30fb7b3a35ca32d24d419ee80193353b899dfadd6b0772f5e137e5d1",
+  "text": "You don't sound like you believe that.",
+  "bytes": 31391,
+  "generated": "2026-10-01T18:02:04Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-6d95e91e8f66",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "44b430299e503cfb0a204f37be55dbf3344cff6c9c14a24e8d2249f4902cc743",
+  "text": "Whatever hit the ground, it's gone. There's a mark out here the size of a dinner plate. Pressed straight down. No drag marks. No trail leading in or out.",
+  "bytes": 150509,
+  "generated": "2026-10-01T18:01:59Z"
+}

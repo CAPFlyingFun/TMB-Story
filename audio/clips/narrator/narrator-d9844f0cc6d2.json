@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d9844f0cc6d2",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ba862df492af5a27f3d2c258a3a2c899e3ae3cd3d3b32b9f2547817491a2e05b",
+  "text": "Sarah joined them at the window. She didn't say anything about grass or scale or the size of what they were looking at. She just slid her hand into Jack's and held on.",
+  "bytes": 152599,
+  "generated": "2026-10-01T18:03:21Z"
+}

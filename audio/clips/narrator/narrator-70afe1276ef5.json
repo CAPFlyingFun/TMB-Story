@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-70afe1276ef5",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fa980e816c9db1e83de13a7ebe0b1869cef31ed52669a3b069fda1170b2b0780",
+  "text": "Jack rubbed the back of his neck.",
+  "bytes": 31391,
+  "generated": "2026-10-01T18:01:47Z"
+}

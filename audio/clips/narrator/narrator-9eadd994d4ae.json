@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-9eadd994d4ae",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "832a5aa90d9f0f2c459b243c7bca03da45c109ffb6e3d57a6a3fc8e353ec96ec",
+  "text": "The door slid shut behind him before she could argue further.",
+  "bytes": 56050,
+  "generated": "2026-10-01T18:01:43Z"
+}

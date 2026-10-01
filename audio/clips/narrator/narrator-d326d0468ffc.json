@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d326d0468ffc",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "04145f25d0f7e9dcdfac2603b64626fd9ff87f4f06ef833889fbc46a0471d0f0",
+  "text": "She worked in silence for a minute before letting out a slow breath.",
+  "bytes": 58976,
+  "generated": "2026-10-01T18:02:43Z"
+}

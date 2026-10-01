@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-03da11be5ca7",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "41576027d87276ba6b0b0a6b54ebe15bef9f4235054348d912994a7e1e3873ea",
+  "text": "I'll check the perimeter.",
+  "bytes": 22613,
+  "generated": "2026-10-01T18:01:41Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-baf652c256ef",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d808166e50ed0ef3ec0ad58b81322691e6629cbca0b11d2340da2f942e602b7a",
+  "text": "The same day you and Sarah were at the community center.",
+  "bytes": 53960,
+  "generated": "2026-10-01T18:02:23Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d238d51680fe",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e3638ea7353d861ee9e569a09c9d47f5ef464212f8847cca0f66c7231fa4620c",
+  "text": "Lena said,",
+  "bytes": 20942,
+  "generated": "2026-10-01T18:03:36Z"
+}

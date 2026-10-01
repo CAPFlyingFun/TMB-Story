@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-aab610bafbbd",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a8759e27d165c950451f82010cfd7cedda91400436ffbc88d51cf555ffce537a",
+  "text": "Jack looked at Sarah. She held his gaze and didn't look away. Whatever answer he gave was going to be hers as much as his.",
+  "bytes": 125849,
+  "generated": "2026-10-01T18:02:08Z"
+}

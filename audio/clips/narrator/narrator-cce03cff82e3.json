@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-cce03cff82e3",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e787159a75afb43726fe77884f7e39f9bf07159bce8b8f4b932385f59a348aea",
+  "text": "Lena trailed off, standing beside him.",
+  "bytes": 38914,
+  "generated": "2026-10-01T18:03:18Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-ba25186ca973",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cc2bb90d78e90bf847c33e547d3d8d8d218bf30841d2b7b564f2047bb3a09c6c",
+  "text": "Wasn't planning to be.",
+  "bytes": 23449,
+  "generated": "2026-10-01T18:01:43Z"
+}

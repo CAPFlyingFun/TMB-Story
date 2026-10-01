@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-45e625cc45f8",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a19e93c3b3bf6786c99d55654f20f26a263bb973c4144b84da76e12274a0bb33",
+  "text": "I'm going back out.",
+  "bytes": 20942,
+  "generated": "2026-10-01T18:02:47Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c676f5c7ae88",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bc0f484a6ebc38aa0f7488417787e939a6b6650c463b053f4e3c543c6ae38d88",
+  "text": "Mark was already moving toward the door.",
+  "bytes": 38078,
+  "generated": "2026-10-01T18:01:41Z"
+}

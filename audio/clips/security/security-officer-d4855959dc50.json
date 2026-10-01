@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-d4855959dc50",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "76f316917779ed35f0a10068e5f795a422682c47e37083fb4dcfc4b6fba9931b",
+  "text": "I'll get the department heads moving.",
+  "bytes": 31391,
+  "generated": "2026-10-01T18:03:32Z"
+}

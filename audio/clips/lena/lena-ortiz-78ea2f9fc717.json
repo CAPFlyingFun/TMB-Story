@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-78ea2f9fc717",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "609bab8c11d651ce57639370f5d788b03c6b1c0a87f660103c6424429243b8d8",
+  "text": "It's close enough to keep me up at night,",
+  "bytes": 34316,
+  "generated": "2026-10-01T18:02:28Z"
+}

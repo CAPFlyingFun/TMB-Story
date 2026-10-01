@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-01d35535e28c",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "48e5b6120fd24c8c724f59bcbfc981aea19978f6c7f27071606252ac5d318243",
+  "text": "Retired?",
+  "bytes": 12164,
+  "generated": "2026-10-01T18:03:05Z"
+}

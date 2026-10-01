@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-27dee7b60c82",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f4e8821eb3a4b362cb93c0bf391284ad4b7967eea4f5c52f6298d641b8b0c32f",
+  "text": "Sensor error?",
+  "bytes": 18016,
+  "generated": "2026-10-01T18:02:55Z"
+}

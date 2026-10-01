@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a950a7a4e5e6",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "efb554885a0cccfb7308cdb08c6cff1501daa12fbbce9675ad87f2d50f6e7ba4",
+  "text": "His radio crackled. Sarah's voice, tight with urgency.",
+  "bytes": 61066,
+  "generated": "2026-10-01T18:03:01Z"
+}

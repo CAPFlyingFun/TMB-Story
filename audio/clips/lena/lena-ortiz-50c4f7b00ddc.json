@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-50c4f7b00ddc",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "01b960427b78521d9d0aa834572873e30115613b07fcc9a145693439398be774",
+  "text": "Half these people I know. The other half I've waved at in the hallway and never learned their name.",
+  "bytes": 79038,
+  "generated": "2026-10-01T18:02:31Z"
+}

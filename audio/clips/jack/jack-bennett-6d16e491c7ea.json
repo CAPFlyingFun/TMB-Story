@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-6d16e491c7ea",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "42f7dce36681d52c7d517eb37605fafe76bfb2eb10b2464893c5eea64cf623dd",
+  "text": "I know that too.",
+  "bytes": 18016,
+  "generated": "2026-10-01T18:02:10Z"
+}

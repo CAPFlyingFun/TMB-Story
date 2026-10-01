@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-95478963bc8f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4629ffab99c2bd7dee30ed65df3a4c3d1cb5eb9f38718cebef3f47e9e1079008",
+  "text": "Mark said, following the beam of Jack's light along the tree line.",
+  "bytes": 64409,
+  "generated": "2026-10-01T18:02:52Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-128394e712c0",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fd7b75454203c28ff04810aa02de618bb9add35d608f09617da8c1ad2634416b",
+  "text": "You scared, Jack?",
+  "bytes": 19688,
+  "generated": "2026-10-01T18:02:54Z"
+}

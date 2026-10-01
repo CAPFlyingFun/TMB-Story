@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0c9fcf2a1216",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e3a058842c31c6efb3dcfa8d6649cf9cc7c39c50ef5316ecd2f299e7f941d055",
+  "text": "Jack admitted,",
+  "bytes": 21777,
+  "generated": "2026-10-01T18:01:54Z"
+}

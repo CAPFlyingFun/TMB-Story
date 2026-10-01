@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-65a6b0df0c94",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f94229bd4170a574d7121e87d8c27f26596612cf8ed92234f04faf00e0fafa69",
+  "text": "And if one of them panics anyway?",
+  "bytes": 31391,
+  "generated": "2026-10-01T18:02:11Z"
+}

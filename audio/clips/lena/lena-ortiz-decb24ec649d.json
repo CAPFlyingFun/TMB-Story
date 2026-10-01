@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-decb24ec649d",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8ae51383d4cd0fa13387259da86623a99af11ebbcc1189a15df6ebcdcf274f70",
+  "text": "So do horses. You don't see me running from those.",
+  "bytes": 50199,
+  "generated": "2026-10-01T18:02:14Z"
+}

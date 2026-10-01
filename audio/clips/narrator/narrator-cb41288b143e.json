@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-cb41288b143e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "10ec33e2ae2564f296260389c97bd5fd2678c36608598103ecc1f4928f128fb5",
+  "text": "Sarah said,",
+  "bytes": 18852,
+  "generated": "2026-10-01T18:01:52Z"
+}

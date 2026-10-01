@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7113c2afee8b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f1100237ad97bfc7606e8f79e17b8e7fb44c97d8a200ad2e3ed41f543e966e99",
+  "text": "For a moment, nobody spoke. The world outside the glass had never looked more beautiful, and it had never looked less like home.",
+  "bytes": 119162,
+  "generated": "2026-10-01T18:03:20Z"
+}

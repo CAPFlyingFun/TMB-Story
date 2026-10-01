@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-eced0978ab74",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c766e3f3ba1d02b1bd08f2237e701e34903a7ad61c6b9bceda989ed0b82cc4cc",
+  "text": "Or somebody found it and never turned it back in.",
+  "bytes": 44347,
+  "generated": "2026-10-01T18:03:07Z"
+}

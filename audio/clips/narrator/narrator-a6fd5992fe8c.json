@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a6fd5992fe8c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bfa2d6e2c5c3404e0e376d58bb20362f90c4ec95cb9d9afbe9247614a3f040f5",
+  "text": "Nobody argued with him.",
+  "bytes": 27211,
+  "generated": "2026-10-01T18:02:04Z"
+}

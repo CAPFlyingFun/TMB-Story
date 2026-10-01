@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-9bbf776ab087",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "59f600eb47d9bc9eba47132db9ad5d71ef0223fcff297243a7d33e36eaf8775e",
+  "text": "That mean anything to you? Scientifically?",
+  "bytes": 39750,
+  "generated": "2026-10-01T18:02:52Z"
+}

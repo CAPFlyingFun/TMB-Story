@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-0a9dafda7ed4",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "507e7ca0c0425e258007f6ed724c16445180d7e4933e72118f6b4bb17c796b1b",
+  "text": "To explain. Just stay put.",
+  "bytes": 25539,
+  "generated": "2026-10-01T18:03:26Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-d56be8750fcc",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ecfad93e7bfff0ac25d54ef9b068fd4256f6bd4a64ff9d45d62d35406c2cf168",
+  "text": "Somebody want to catch me up?",
+  "bytes": 23449,
+  "generated": "2026-10-01T18:02:02Z"
+}

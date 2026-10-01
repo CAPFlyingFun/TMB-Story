@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-11dbcaac8412",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4d65b2cd023b3f133fa467870843efe875976c321741d8515f3a1e7aef8520a6",
+  "text": "Horses don't vanish behind a ridge in half a second.",
+  "bytes": 46437,
+  "generated": "2026-10-01T18:02:14Z"
+}

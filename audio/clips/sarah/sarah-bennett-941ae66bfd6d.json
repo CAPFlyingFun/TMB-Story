@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-941ae66bfd6d",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "449a6dfb2c32cb7f31fdd948e3bede5cfd6cea950d7b02acf808e66c9d34c4a6",
+  "text": "Tonight it does.",
+  "bytes": 21777,
+  "generated": "2026-10-01T18:03:15Z"
+}

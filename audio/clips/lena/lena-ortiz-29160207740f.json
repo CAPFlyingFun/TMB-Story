@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-29160207740f",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "400bed9fe016efae206496bef5f66a253b11d4f65a40e54f9ed4c641b7e052f3",
+  "text": "Then twenty minutes. Maybe less.",
+  "bytes": 35988,
+  "generated": "2026-10-01T18:03:36Z"
+}

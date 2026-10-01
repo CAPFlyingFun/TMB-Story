@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-1978127de56f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d6ddb8c6b1e9ea5181fb62f715011c877c9ae9eb8dbd41770ef1abad166eef45",
+  "text": "He typed a search for the word phase across the rest of the diagnostic snapshot. The system returned nothing.",
+  "bytes": 113311,
+  "generated": "2026-10-01T18:01:45Z"
+}

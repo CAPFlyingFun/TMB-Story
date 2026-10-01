@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4710d0b8364b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7b79b855dff1f0f00d0597033dc734f9eb01e431965a3fa98bbd418dbe42618b",
+  "text": "Lena leaned over his shoulder again.",
+  "bytes": 36824,
+  "generated": "2026-10-01T18:02:17Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-29613072bf5a",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "18a2fc831aad6eb3fb2881672d48cf83f0fe42fc0974081ec0ae93a4c16414ec",
+  "text": "That's inside the boundary.",
+  "bytes": 27211,
+  "generated": "2026-10-01T18:02:27Z"
+}

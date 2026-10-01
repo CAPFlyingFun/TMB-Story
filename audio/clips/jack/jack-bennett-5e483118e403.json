@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-5e483118e403",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7eb59ceb13ed90a6f72b8bd68631c2ad140f391f017af3841b738d2038a784fe",
+  "text": "If those are the same source, it covered that distance in under fifteen minutes.",
+  "bytes": 69425,
+  "generated": "2026-10-01T18:02:46Z"
+}

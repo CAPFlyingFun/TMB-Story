@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-dc3197e7bafe",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "099f8d8e47c91a3c4bb41fccc2228442fe84fc128d1b0b21c9fe91ebdc1749ba",
+  "text": "Or something big enough that one footstep doesn't leave much of a trail to follow.",
+  "bytes": 64827,
+  "generated": "2026-10-01T18:02:00Z"
+}

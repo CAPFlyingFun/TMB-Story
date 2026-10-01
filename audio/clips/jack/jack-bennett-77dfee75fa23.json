@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-77dfee75fa23",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1d32320d74b661c2eda383c4320f9a89b4042d0ec2c2de7679d44c4d35329f22",
+  "text": "They didn't just plan the boundary. They planned for us finding the trail.",
+  "bytes": 59812,
+  "generated": "2026-10-01T18:03:11Z"
+}

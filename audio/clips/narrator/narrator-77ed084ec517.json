@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-77ed084ec517",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f890e4bec4aac70495697a7f56a1e0e32be8415db68a3d7f7b3896bba2206922",
+  "text": "The room absorbed that in silence.",
+  "bytes": 38914,
+  "generated": "2026-10-01T18:02:46Z"
+}

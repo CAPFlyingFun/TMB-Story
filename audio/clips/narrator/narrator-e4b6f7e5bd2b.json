@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e4b6f7e5bd2b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c1f5e6ca32f542ba5e4975c1864709e32c9b5f6821191e61596679520a31b08a",
+  "text": "She said,",
+  "bytes": 15926,
+  "generated": "2026-10-01T18:03:27Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-92f11fc96caa",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "dbf96d580c0e787e1aea669bbda455625a1ad9f309e9699dea942c5c55e5c5de",
+  "text": "He hesitated a beat before answering.",
+  "bytes": 39750,
+  "generated": "2026-10-01T18:02:07Z"
+}

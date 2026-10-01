@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-7f7c81710d61",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1bf0b1dbec27be4329342ed4887ba91e9d671d62f0ba85c0065b14623b5ea4cd",
+  "text": "I don't know. That's the part I don't like.",
+  "bytes": 32226,
+  "generated": "2026-10-01T18:01:54Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-43cb24497a2f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0726ef7e344a64f5edeed85048e1397755a15861cfa8e8c440147fc9164b362f",
+  "text": "Lena scrolled through the list herself, slower.",
+  "bytes": 54378,
+  "generated": "2026-10-01T18:02:30Z"
+}

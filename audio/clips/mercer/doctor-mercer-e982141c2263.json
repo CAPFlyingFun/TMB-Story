@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-e982141c2263",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e4b4f147e33aa6865c75239a2e4b55ddcd0641c6755c163c1df3cde6248fd4b8",
+  "text": "You said that an hour ago.",
+  "bytes": 24703,
+  "generated": "2026-10-01T18:02:08Z"
+}

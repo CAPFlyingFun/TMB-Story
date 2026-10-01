@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-6367a4cf7dee",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "158f6e8444352e41ca7a955f7f34937dc6e4d5b351ea1c4b42b402d65c2e7f63",
+  "text": "Can the target be something that already happened? Or does it have to be something we haven't done yet?",
+  "bytes": 87815,
+  "generated": "2026-10-01T18:01:55Z"
+}

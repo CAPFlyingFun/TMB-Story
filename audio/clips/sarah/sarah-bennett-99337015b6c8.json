@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-99337015b6c8",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c9df47ff397e9314c86360338e1c6e0c8112a64243a68e5daaabf78458230ef0",
+  "text": "Two impacts. Different locations.",
+  "bytes": 32226,
+  "generated": "2026-10-01T18:02:44Z"
+}

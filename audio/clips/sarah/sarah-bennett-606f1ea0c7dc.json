@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-606f1ea0c7dc",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "be11ea34710aa37a790611c626474ee2b569cec3ccfed790db5deaaee5f560d4",
+  "text": "Either way, it doesn't give us a name. It gives us proof that whoever's behind this thought two steps further ahead than we did.",
+  "bytes": 107877,
+  "generated": "2026-10-01T18:03:08Z"
+}

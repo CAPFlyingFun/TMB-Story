@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-f859d74a4a01",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "16dd367b854ca4bdc6ac22c0b564e0967273959682bf395c10f0bff1982c46d9",
+  "text": "And the badge itself was reported lost eight days before the incident. Facilities has a ticket for it and everything.",
+  "bytes": 124595,
+  "generated": "2026-10-01T18:03:06Z"
+}

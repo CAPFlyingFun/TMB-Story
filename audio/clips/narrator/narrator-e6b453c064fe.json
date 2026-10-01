@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e6b453c064fe",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e280842af41cc2e373430e14691eea1153743c20454a239de0d885b72b528d8e",
+  "text": "The stillness broke when Jack's wrist terminal chirped, a different tone than before, not the medical center this time, but the general facilities channel.",
+  "bytes": 143822,
+  "generated": "2026-10-01T18:03:23Z"
+}

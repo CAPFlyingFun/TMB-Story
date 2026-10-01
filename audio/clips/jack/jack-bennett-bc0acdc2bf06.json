@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-bc0acdc2bf06",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "909cc5d40f34f76b0bb0270a23d1ce916e7960df76b42a6b6c537214061aee8a",
+  "text": "So it's not a location. It's something that still has to trigger.",
+  "bytes": 58140,
+  "generated": "2026-10-01T18:01:50Z"
+}

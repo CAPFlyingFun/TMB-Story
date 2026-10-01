@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-ba32b73ab4ac",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ec711d04fffc5ae6b8b223a93ab255af025ce0a2cce8e8ba17cf0a86221cb497",
+  "text": "Outside, the air had shifted. Not warmer exactly, but less still. Somewhere above the tree line, the darkest part of the sky had started to soften at its edges.",
+  "bytes": 166809,
+  "generated": "2026-10-01T18:02:52Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-25fe07f0e30c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b927e0ca5183a77e808c2cd85b94f8c3db7188eb7eaed53b2f9dd941491abc97",
+  "text": "Lena rubbed her eyes with the heel of her hand.",
+  "bytes": 44347,
+  "generated": "2026-10-01T18:01:53Z"
+}
