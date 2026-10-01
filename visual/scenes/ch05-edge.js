@@ -12,9 +12,9 @@
 // No issues", 2026-10-01; his call the same day: "the Black Widow for the legs in the
 // shadows"). The chapter gives one instant and an outline, so that is all it gets: a dark
 // body crossing between two blades high on the ridge, lit by nothing but the night, and gone.
-// Its size is GAME TUNING from the animal's (a female's body about a centimetre, its legs
-// reaching three or four), at the settlement's 1:180: some five and a half metres, legs and
-// all.
+// Its size is GAME TUNING from the animal's (a big female's body, ~15 mm), at the settlement's
+// 1:180: in this model the body is about half the whole length, so 5.5 m from the front leg
+// tips to the back ones puts the body at 2.7 m, the same as Chapter 9's jumping spider.
 
 import { L, plus, shot3 } from "./metric.js";
 import { controlSet, SPOT, CM, CS, MAP, M, walkM, placeM } from "./controlSet.js";

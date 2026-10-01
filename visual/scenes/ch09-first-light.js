@@ -8,12 +8,14 @@
 //
 // Every `at` is a line or a phrase in audio/manifests/chapter-09.json (`nth` from 0).
 //
-// THE THING IN THE STEMS is, for now, the black widow, as in Chapter 5 (Joshua, 2026-10-01:
-// "hold off on the Jumping Spider and focus on the Black Widow until I redo the model"; his
-// plan is still the jumping spider here once it is remade -- architecture/DECISIONS.md 0027).
-// The chapter gives it no clean look and neither does this: it crosses low in the stems, far
-// out, in the gold light, and is gone. Its size is Chapter 5's (GAME TUNING from the
-// animal's: about five and a half metres, legs and all, at the settlement's 1:180).
+// THE THING IN THE STEMS is Joshua's jumping spider (TRADDOMIUM release "Jumping Spider Model
+// + Image", 2026-10-01; his call the same day: the black widow "for the legs in the shadows,
+// but Jumping spider later"). The chapter gives it no clean look and neither does this: it
+// crosses low in the stems, far out, in the gold light, and is gone. (Held back for a few
+// minutes the same day while Joshua considered remaking it; put back on seeing it.) Its size
+// is the reference chart's regal jumping spider (story-rules/reference, UF/IFAS: a female's
+// body ~15 mm, 2.7 m at 1:180). The model's body is 81% of its whole length -- its legs
+// reach little past it front and back -- so the whole animal is 3.35 m long.
 // Aiden's spider, at the greenhouse, is a voice on a call and is not shown.
 
 import { L, plus } from "./metric.js";
@@ -25,12 +27,12 @@ const control = controlSet({
   lena: [-1.35, -3.55],
   mark: SPOT.doorOut,
   lenaShown: true,
-  props: { cups: 4, dawn: 1, widow: 0, widowShow: 0 },
+  props: { cups: 4, dawn: 1, jumper: 0, jumperShow: 0 },
   screens: { [CM]: { state: "badge", params: {} }, [CS]: { state: "phase", params: { clock: "05:52" } }, [MAP]: { state: "facility", params: { badges: true, found: true, title: "BADGE TRACKING · DOOR LOGS" } } },
   creatures: {
-    widow: { model: "../assets/models/black-widow.glb", lengthM: 5.5, roughness: 0.32, prop: "widow", show: "widowShow", stride: 2.4,
-      // low through the stems beyond the perimeter lights, and gone
-      path: [[81, 0, 19], [76, 0, 12], [72, 0, 6], [68, 0, 1], [65, 0, -3], [62, 0, -6]] },
+    jumper: { model: "../assets/models/jumping-spider.glb", lengthM: 3.35, roughness: 0.6, prop: "jumper", show: "jumperShow", stride: 1.5,
+      // low through the stems beyond the perimeter lights, then a hop and gone
+      path: [[81, 0, 19], [76, 0, 12], [72, 0, 6], [68, 2.6, 1], [65, 0, -3], [62, 0, -6]] },
   },
 });
 control.actors.jack.visible = false;
@@ -110,9 +112,9 @@ export default {
     // "Somewhere below the grass line, out past the reach of the perimeter lights, something
     //  moved through the gold-lit stems and vanished again"
     { at: L("Somewhere below the grass line"), action: "camera", shot: "grassLine", duration: 0, ease: "inOut" },
-    { at: L("Somewhere below the grass line", { phrase: "something moved" }), action: "prop", target: "widowShow", to: 1, duration: 0 },
-    { at: L("Somewhere below the grass line", { phrase: "something moved" }), action: "prop", target: "widow", to: 1, duration: 3.6, ease: "linear" },
-    { at: L("Somewhere below the grass line", { phrase: "something moved", offset: 3.7 }), action: "prop", target: "widowShow", to: 0, duration: 0 },
+    { at: L("Somewhere below the grass line", { phrase: "something moved" }), action: "prop", target: "jumperShow", to: 1, duration: 0 },
+    { at: L("Somewhere below the grass line", { phrase: "something moved" }), action: "prop", target: "jumper", to: 1, duration: 3.6, ease: "linear" },
+    { at: L("Somewhere below the grass line", { phrase: "something moved", offset: 3.7 }), action: "prop", target: "jumperShow", to: 0, duration: 0 },
     { at: L("Somewhere below the grass line", { phrase: "Nobody mentioned it" }), action: "camera", shot: "windowGroup", duration: 2.4, ease: "inOut" },
     // Aiden, on the facilities channel
     { at: L("The stillness broke"), action: "scene", name: "The greenhouse" },

@@ -242,3 +242,5 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 **Status:** Accepted for the Watch mode, 2026-10-01.
 
 **0027, addendum (2026-10-01, same day):** Joshua, looking at the jumping spider's rig again: "maybe hold off on the Jumping Spider and focus on the Black Widow until I redo the model." Until he remakes it, the Watch mode's Chapter 9 glimpse is the black widow too, and the first jumping-spider model and the script that fixed its legs are out of the tree (git history keeps both, at 9a60a29). The plan above for Chapter 9 stands for when the new model arrives.
+
+**0027, second addendum (2026-10-01, same day):** Joshua, after a look at the jumping spider rendered on its own and in Chapter 9's first light: "Add the Jumping Spider back in." The plan above stands, and the model is back in the tree. Its size follows the reference chart's regal jumping spider: a body of 2.7 m to the settlement (UF/IFAS, ~15 mm), 3.35 m long including its legs. The widow's body is the same 2.7 m (game tuning), which in that model makes her 5.5 m from her front leg tips to her back ones.

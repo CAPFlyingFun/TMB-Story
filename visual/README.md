@@ -36,11 +36,11 @@ line; the voice-only export is not indexable.
 | `engine/outdoors.js` | the edge of the settlement, built: `south` (the road ending in a straight line, the grass, the soil ridge, the droplet, the clipping, the stems moving in a line) and `east` (the path between the blades, dew, the sensor marker, the blade pressed flat). The sheet's objects with no model -- Mark's SUV, the camera pole, the floodlight, barriers, cones -- stand in as cards |
 | `engine/creatures.js` | Joshua's rigged Meshy spiders walked along a path by a scene prop, with an eight-leg gait made here |
 | `screens/aftermath.js` | the screens of Chapters 4 to 9: the utility and maintenance cameras, the schematic, the wrist-camera replay, the scale calculation (a smear), the selection, the diagnostic trace, the metadata, PHASE ONE READY, the tablet, the checkout log, the badge (names unreadable) |
-| `../scripts/models/` | `prepare-model.mjs`: how a Meshy creature is made light enough for a phone |
+| `../scripts/models/` | `fix-jumping-spider-legs.mjs` and `prepare-model.mjs`: how the two spider models were made light enough for a phone |
 | `screens/control.js` | the control room's screens: the Array, the emitters, boundary acquisition, the hidden target parameters, the scale factor (never readable), access denied, the sensor grid, communications, the perimeter cameras, the structural monitor, the event log and the settlement map |
 | `engine/labRoom.js` | the lab built as a 3D room after ChatGPT's procedural lab: shell, desks, racks, monitors, keyboards, the intercom, the props |
 | `vendor/three-human.js` | three.js r185, its glTF loader and meshopt decoder, and TRADDOMIUM's human rig and poses (`src/actor/human*.ts`, `src/view/HumanRig.ts`), bundled into one module |
-| `../assets/models/` | `jack.glb` and `sarah.glb` (TRADDOMIUM: Micro Battle's rigged pair, the ones the sprites were drawn from); `black-widow.glb` (Joshua's Meshy release on TRADDOMIUM, 2026-10-01) |
+| `../assets/models/` | `jack.glb` and `sarah.glb` (TRADDOMIUM: Micro Battle's rigged pair, the ones the sprites were drawn from); `black-widow.glb` and `jumping-spider.glb` (Joshua's Meshy releases on TRADDOMIUM, 2026-10-01) |
 | `../scripts/make-portraits.py` | the caption portraits (`assets/portraits/`): cut from each character's front sprite, and the systems' terminal icon |
 | `portraits.html` | dev-only: renders Jack's and Sarah's 3D caption portraits (`<name>-3d.png`) from their models |
 | `engine/rig.js` | the optional cutout rig: cuts a sprite into body parts along polygons and turns them about pivots |
@@ -317,10 +317,8 @@ copy every frame (a door that slides open no longer hides whoever is standing in
 Anything see-through (a card's empty corners, water, the sky) sets `userData.noMask`.
 
 **The spiders are glimpses, as the chapters are.** The black widow crosses the ridge in
-Chapter 5 for the one instant the manuscript gives it, and for now it is also what moves
-through the gold-lit stems in Chapter 9 and is gone. Joshua's plan (2026-10-01) is the widow
-"for the legs in the shadows" and a jumping spider later; his first jumping-spider model is
-on hold until he remakes it ("hold off on the Jumping Spider ... until I redo the model"),
-and git history has it and the script that fixed its legs. Nothing on
+Chapter 5 for the one instant the manuscript gives it; the jumping spider moves through the
+gold-lit stems in Chapter 9 and is gone. Which spider is which is Joshua's call
+(2026-10-01): the widow "for the legs in the shadows", the jumping spider later. Nothing on
 screen says what either is. A creature is a set's `people3d.creatures` entry: a model, its
 length in metres, a path, and the two props that move and show it.
