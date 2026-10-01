@@ -147,18 +147,19 @@
       "name": "Aiden",
       "audioKey": "aiden",
       "kind": "character",
-      "elevenLabsVoiceId": null,
+      "elevenLabsVoiceId": "qA5SHJ9UjGlW2QwXWR7w",
       "voiceVersion": 1,
       "gameExport": true,
       "aliases": [
         "Aiden"
       ],
-      "notes": "Introduced in Chapter 9 (Joshua's 07-09 manuscript, imported 2026-10-01): works at the greenhouse and calls the facilities channel at dawn about a spider the size of a delivery truck. 'A man's voice, breathless.' Heard only through Jack's wrist terminal. UNASSIGNED: Joshua chooses the voice.",
+      "notes": "Introduced in Chapter 9 (Joshua's 07-09 manuscript, imported 2026-10-01): works at the greenhouse and calls the facilities channel at dawn about a spider the size of a delivery truck. 'A man's voice, breathless.' Heard only through Jack's wrist terminal. Voice assigned by Joshua on 2026-10-01.",
       "pronouns": [
         "he",
         "him",
         "his"
-      ]
+      ],
+      "voiceApproved": "2026-10-01"
     }
   }
 }
