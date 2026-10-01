@@ -23,6 +23,10 @@ import * as THREE from "../vendor/three-human.js";
 import { envelope } from "./gestures.js";
 import { quadMatrix3d } from "./homography.js";
 import { buildLabRoom } from "./labRoom.js";
+import { buildControlRoom, buildCorridor } from "./controlRoom.js";
+
+// The built rooms a set can stand its people in (its `people3d.room`; the lab by default).
+const ROOMS = { lab: buildLabRoom, control: buildControlRoom, corridor: buildCorridor };
 
 const DEG = Math.PI / 180;
 const smooth = (p) => (p <= 0 ? 0 : p >= 1 ? 1 : p * p * (3 - 2 * p));
@@ -308,11 +312,15 @@ export class People3D {
     // panels, a key down from the panel row over the desks, and the set's own glows (the
     // monitor, the alarm, the intercom) as point lights that take their colour and level
     // from the scene every frame.
-    this.scene.add(new THREE.HemisphereLight(0xd5e9f4, 0x40505b, 1.9));
+    const hemiP = new THREE.HemisphereLight(0xd5e9f4, 0x40505b, 1.9);
+    this.scene.add(hemiP);
     const key = new THREE.DirectionalLight(0xffeed8, 2.0);
     key.position.set(0.8, 5, 2.5);
     key.target.position.set(0.2, 0, -2.5);
     this.scene.add(key, key.target);
+    // the people's lights, for a room that changes its own lighting (the lever's dark, the
+    // emergency red) to change theirs with it
+    this.peopleLights = { hemi: hemiP, key, base: { hemi: 1.9, key: 2.0 } };
     this.glows = {};
     this.shadowTex = shadowTexture();
 
@@ -332,7 +340,7 @@ export class People3D {
     // THE ROOM, built (engine/labRoom.js): drawn in its own canvas under the story's screens,
     // and again as depth only among the people, so a cabinet, a desk or a monitor hides
     // whatever is behind it.
-    this.lab = buildLabRoom();
+    this.lab = (ROOMS[this.spec.room || "lab"] || buildLabRoom)();
     this.room = this.lab.group;
     this.roomScene.add(this.room);
     const mask = this.room.clone(true);
@@ -347,14 +355,25 @@ export class People3D {
     this.keyboards = this.lab.keyboards;
     // The room's light, ChatGPT's: a cool sky fill, a warm key from the ceiling panels, a
     // teal fill off the racks. The set's glows join it in anchorSetPieces.
-    this.roomScene.add(new THREE.HemisphereLight(0xd5e9f4, 0x40505b, 2.3));
+    const hemiR = new THREE.HemisphereLight(0xd5e9f4, 0x40505b, 2.3);
+    this.roomScene.add(hemiR);
     const key = new THREE.DirectionalLight(0xffeed8, 2.4);
     key.position.set(0.8, 5, 2.5);
     key.target.position.set(0.2, 0, -2.5);
     this.roomScene.add(key, key.target);
-    const fill = new THREE.PointLight(0x53bacc, 10, 7, 2);
-    fill.position.set(-0.9, 2.1, -3.6);
-    this.roomScene.add(fill);
+    this.roomLights = { hemi: hemiR, key, base: { hemi: 2.3, key: 2.4 } };
+    // the room's own extra lights (the lab's teal fill off the racks, the chamber's glow)
+    const extra = this.lab.extraLights || [{ type: "point", color: 0x53bacc, intensity: 10, distance: 7, decay: 2, at: [-0.9, 2.1, -3.6] }];
+    for (const L of extra) {
+      const l = new THREE.PointLight(L.color, L.intensity, L.distance, L.decay);
+      l.position.set(...L.at);
+      this.roomScene.add(l);
+      if (L.people) {
+        const lp = l.clone();
+        lp.intensity = L.people;
+        this.scene.add(lp);
+      }
+    }
     this.anchorSetPieces();
 
     ids.forEach((id, i) => this.addBody(id, people[i].scene));
@@ -471,7 +490,8 @@ export class People3D {
       if (st.set !== setId) continue;
       for (const [id, a] of Object.entries(st.actors)) {
         if (!this.bodies[id]) continue;
-        const sitting = a.pose.v === "sitting";
+        // on the floor (state "fallen", Chapter 3) is sitting without a chair
+        const sitting = a.pose.v === "sitting" && a.state.v !== "fallen";
         if (sitting && held[id] === undefined) {
           const p = this.floorOf(id, a, "sitting");
           let k = parked.findIndex((c) => Math.hypot(c.at[0] - p[0], c.at[2] - p[2]) < CHAIR_CLAIM_M);
@@ -907,7 +927,10 @@ export class People3D {
       const c = Math.cos(yaw), s = Math.sin(yaw);
       const rot = (x, z) => [x * c + z * s, -x * s + z * c];
       const back = rot(0, -0.04), hip = rot(body.hips.x, body.hips.z);
-      return { p, root: [p[0] + back[0] - hip[0], body.seatTop + 0.1 - body.hips.y, p[2] + back[1] - hip[1]] };
+      // FALLEN (Chapter 3: "Jack hit the floor and Sarah landed beside him"): the seated pose
+      // with the hips on the floor instead of a chair; the floor hides the shins below it.
+      const seatY = a.state.v === "fallen" ? 0.02 : body.seatTop;
+      return { p, root: [p[0] + back[0] - hip[0], seatY + 0.1 - body.hips.y, p[2] + back[1] - hip[1]] };
     };
     const now = root(a.pose.v);
     let r = now.root;
@@ -1189,7 +1212,7 @@ export class People3D {
     const A = { f: z * F0, cx: z * this.cam0.CX + cam.tx, cy: z * this.cam0.CY + cam.ty };
     const fB = W / 2 / Math.tan(((s3.hfov3 || 60) * DEG) / 2);
     const f = A.f + (fB - A.f) * d3, cx = A.cx + (W / 2 - A.cx) * d3, cy = A.cy + (H / 2 - A.cy) * d3;
-    const C = this.camera, n = 0.05, far = 40;
+    const C = this.camera, n = 0.05, far = this.lab.far || 40; // a room with a view (the control room's window) sees further
     if (d3 > 0) {
       C.position.set(s3.cx3, s3.cy3, s3.cz3);
       C.rotation.set(s3.pitch3 * DEG, s3.yaw3 * DEG, 0);
@@ -1202,6 +1225,8 @@ export class People3D {
     C.projectionMatrixInverse.copy(C.projectionMatrix).invert();
 
     this.lights = state.lights;
+    // a room that moves (the TOMBS rings, the lever, the lighting) moves by the scene's props
+    if (this.lab.update) this.lab.update(state.props || {}, t, { room: this.roomLights, people: this.peopleLights, scene: this.roomScene });
     const places = {}, placed = {};
     for (const id of Object.keys(this.bodies)) if (state.actors[id]) places[id] = this.placeBody(id, state.actors[id], t);
     this.pullChairsIn(places);

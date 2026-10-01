@@ -28,6 +28,10 @@ line; the voice-only export is not indexable.
 | `../scripts/split-props.py` | cuts the props sheet into one PNG per object with a real height (`assets/props/props.json`), ready to place as `objects` |
 | `../scripts/make-island-art.py` | grades the Beyond Extinction island to moonlight, caps its volcano with cloud, and makes the cloud wisps |
 | `engine/people3d.js` | Jack and Sarah as rigged 3D models in the built lab, through the camera the picture was painted from, and the shots that move that camera |
+| `scenes/ch02-boundary.js`, `scenes/ch03-activation.js` | Chapters 2 and 3: the lab, the corridor and the main control room |
+| `scenes/metric.js` | staging in METRES for the built rooms nobody painted: a virtual picture camera, `P(x, z)`, walks and real-camera shots |
+| `engine/controlRoom.js` | the corridor and the main control room, built in the lab's style: the TOMBS Array's chamber and rings behind the reinforced window, the consoles, the emergency panel and its lever, the street and (after the activation) the grass through the east window. Animated by the set's `props` |
+| `screens/control.js` | the control room's screens: the Array, the emitters, boundary acquisition, the hidden target parameters, the scale factor (never readable), access denied, the sensor grid, communications, the perimeter cameras, the structural monitor, the event log and the settlement map |
 | `engine/labRoom.js` | the lab built as a 3D room after ChatGPT's procedural lab: shell, desks, racks, monitors, keyboards, the intercom, the props |
 | `vendor/three-human.js` | three.js r185, its glTF loader and meshopt decoder, and TRADDOMIUM's human rig and poses (`src/actor/human*.ts`, `src/view/HumanRig.ts`), bundled into one module |
 | `../assets/models/` | `jack.glb` and `sarah.glb` (TRADDOMIUM: Micro Battle's rigged pair, the ones the sprites were drawn from) |
@@ -75,7 +79,8 @@ written with a single top-level `world` is one set.
 | `show` / `hide` | `actor` |
 | `screen` | `target`, `state`, `params`, `text: { line }` (shows the manuscript line), `flash` |
 | `light` | `target`, `color`, `intensity`, `duration`, `pulse`, `throb` (Hz) |
-| `fade` | `to` (0 clear, 1 black), `duration` |
+| `fade` | `to` (0 clear, 1 black), `duration`; `color` changes what it fades to from then on (white for the activation) |
+| `prop` | `target` (a name in the set's `props`), `to`, `duration`, `ease` -- a number the set's built room animates by (the TOMBS rings' speed, the lever, the lighting) |
 | `set` | `set` — cut to another set |
 | `opacity` | `target` (an object), `to`, `duration` |
 | `title` | `text`, `sub`, `duration`, `fadeIn`, `fadeOut` — a title card over the picture |
@@ -264,3 +269,22 @@ glancing across, pointing, reaching for the console, typing).
 Alt-click one to remove it, preview presets, then download rig.json. Edits are kept in
 that browser until exported, against the rig.json revision they were made on, so a newer
 rig.json is never hidden by old edits; "Revert this view to rig.json" drops them.
+
+## Built rooms with nothing painted (Chapters 2 and 3)
+
+The corridor and the main control room have no picture. A set for one names its room
+(`people3d.room`: `lab`, `corridor` or `control`, engine/people3d.js) and is written in
+metres through `scenes/metric.js`, whose virtual picture camera (level, 1.5 m up, looking
+down -z) turns a floor point into the pixels the stage places people in. Every shot is a
+real camera (`cam3`), because the room is always the built one; the background picture is
+a dark plate the drawn people (`?people=2d`) stand on.
+
+An actor is one actor across a scene's sets (the timeline keys them by name), so every set
+lists the same starting marks and a cut puts people on the next place's marks.
+
+A person can sit on the floor: state `fallen` with the sitting pose puts the hips on the
+floor and gives them no chair (Chapter 3, after the snap back).
+
+THE SCALE FACTOR IS NEVER SHOWN. It is hidden in story-rules/WORLD_RULES.md, and the
+manuscript has Jack and Sarah stare at it without saying it: screens/control.js draws it
+unreadable, and Chapter 3 frames Jack, not the screen, on "Jack stared at the number."

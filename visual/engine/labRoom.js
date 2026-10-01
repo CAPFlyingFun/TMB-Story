@@ -300,7 +300,7 @@ export function buildLabRoom() {
 // Hundreds of boxes are hundreds of draw calls, drawn twice (the room, and its depth among
 // the people): on a phone that is the frame. Everything that never moves is merged into one
 // mesh per material. Instanced keys, live lamps and the doors stay as they are.
-function mergeStatic(group, keep) {
+export function mergeStatic(group, keep) {
   const byMat = new Map(), gone = [];
   group.updateMatrixWorld(true);
   group.traverse((m) => {
@@ -341,7 +341,7 @@ function centre(q) {
 }
 
 // ChatGPT's palette (lab-room.ts), with a few more of the same family.
-function palette() {
+export function palette() {
   const std = (o) => new THREE.MeshStandardMaterial(o);
   return {
     shell: std({ color: 0x344952, roughness: 0.86 }),
@@ -367,7 +367,7 @@ function palette() {
   };
 }
 
-function canvasTexture(w, h, draw) {
+export function canvasTexture(w, h, draw) {
   const c = document.createElement("canvas");
   c.width = w;
   c.height = h;

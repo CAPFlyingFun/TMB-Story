@@ -194,8 +194,8 @@ const RESERVED = new Set(["sound", "parallax", "interaction"]); // named in the 
 // A scene's sets, whichever way it was written.
 export function setsOf(scene) {
   if (scene.sets) return scene.sets;
-  const { world, actors, screens, lights, objects, shots, camera } = scene;
-  return { main: { world, actors, screens, lights, objects, shots, camera } };
+  const { world, actors, screens, lights, objects, shots, camera, props } = scene;
+  return { main: { world, actors, screens, lights, objects, shots, camera, props } };
 }
 
 export function compileScene(scene, anchors) {
@@ -225,6 +225,8 @@ export function compileScene(scene, anchors) {
     set: new Step(initialSet),
     shakes: [],
     fade: new Cont({ v: scene.fadeFromBlack ? 1 : 0 }),
+    fadeColor: new Step(scene.fadeColor || "#000"),
+    props: {},
     sceneName: new Step((sets[initialSet].camera && sets[initialSet].camera.name) || ""),
     titles: [],
     actors: {},
@@ -239,6 +241,9 @@ export function compileScene(scene, anchors) {
     T.cameras[id] = new Cont(shotOf(init, id));
   }
   for (const o of setIds.flatMap((id) => sets[id].objects || [])) T.objects[o.id] = { opacity: new Cont({ v: o.opacity ?? 1 }) };
+  // A set's props: named numbers its built room animates by (the TOMBS rings' speed, the
+  // shutdown lever, the room's lighting), moved by `prop` events like any other track.
+  for (const [id, v] of Object.entries(all("props"))) T.props[id] = new Cont({ v });
   for (const [id, a] of Object.entries(all("actors"))) {
     T.actors[id] = {
       pos: new Cont({ x: a.x, y: a.y }),
@@ -344,7 +349,12 @@ export function compileScene(scene, anchors) {
         break;
       }
       case "fade":
+        // `color` changes what the picture fades to (white for the activation) from here on.
+        if (ev.color) T.fadeColor.add(ev.t, ev.color);
         T.fade.add(ev.t, dur, { v: ev.to }, ease);
+        break;
+      case "prop":
+        need("props", ev.target).add(ev.t, dur, { v: ev.to }, ease);
         break;
       case "scene":
         T.sceneName.add(ev.t, ev.name);
@@ -388,6 +398,8 @@ export function compileScene(scene, anchors) {
     }
     const objects = {};
     for (const [id, o] of Object.entries(T.objects)) objects[id] = { opacity: o.opacity.valueAt(t).v };
+    const props = {};
+    for (const [id, p] of Object.entries(T.props)) props[id] = p.valueAt(t).v;
     let title = null;
     for (const c of T.titles) {
       if (t < c.t || t > c.t + c.dur) continue;
@@ -399,7 +411,7 @@ export function compileScene(scene, anchors) {
       if (e.t <= t) event = e;
       else break;
     }
-    return { t, set, camera: { ...cam, shake }, fade: T.fade.valueAt(t).v, scene: T.sceneName.at(t).v, actors, screens, lights, objects, title, event };
+    return { t, set, camera: { ...cam, shake }, fade: T.fade.valueAt(t).v, fadeColor: T.fadeColor.at(t).v, scene: T.sceneName.at(t).v, actors, screens, lights, objects, props, title, event };
   }
 
   return { evaluate, events: T.log };

@@ -6,16 +6,23 @@ import { makeAnchors, compileScene, setsOf } from "./timeline.js";
 import { Stage } from "./stage.js";
 import { Downloads } from "./download.js";
 
-const SCENES = { "ch01-opening": () => import("../scenes/ch01-opening.js") };
+const SCENES = {
+  "ch01-opening": () => import("../scenes/ch01-opening.js"),
+  "ch02-boundary": () => import("../scenes/ch02-boundary.js"),
+  "ch03-activation": () => import("../scenes/ch03-activation.js"),
+};
 // The chapter list on the start menu. Only a chapter with a scene can be watched; the rest
 // say so rather than looking playable.
 const CHAPTERS = [
   { n: 1, title: "The Alarm", scene: "ch01-opening" },
-  { n: 2, title: "The Boundary" },
-  { n: 3, title: "The Activation" },
+  { n: 2, title: "The Boundary", scene: "ch02-boundary" },
+  { n: 3, title: "The Activation", scene: "ch03-activation" },
   { n: 4, title: "The First Calls" },
   { n: 5, title: "The Edge" },
   { n: 6, title: "Someone Knew" },
+  { n: 7, title: "Phase Two" },
+  { n: 8, title: "Three Weeks" },
+  { n: 9, title: "First Light" },
 ];
 
 const q = new URLSearchParams(location.search);
@@ -476,6 +483,7 @@ async function boot() {
       }
       if (st.title) $("title").style.opacity = st.title.opacity.toFixed(3);
       $("fader").style.opacity = st.fade.toFixed(3);
+      $("fader").style.background = st.fadeColor || "#000";
       $("loading").hidden = !(clock.playing && clock.waiting);
       drawCaption(t);
       if (document.activeElement !== scrub) scrub.value = Math.round(((t - start) / (end - start)) * 1000);
