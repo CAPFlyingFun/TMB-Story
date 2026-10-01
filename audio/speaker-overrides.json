@@ -919,6 +919,27 @@
       "chapters": [
         9
       ]
+    },
+    "lena-ortiz-e46f21b5995f": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 4, paragraph 121: 'I didn't say anything.' -- Jack, answering Sarah's 'Don't.' Lena is not in the room, only on a call. The import stripped the bare said-tags (Decision 0024), so the parser's alternation read the wrong person; checked against the manuscript, 2026-10-01.",
+      "chapters": [
+        4
+      ]
+    },
+    "security-officer-7dfa5ed5ebda": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 5, paragraph 59: 'Don't make me reconsider.' -- Sarah, answering Jack's 'Really?' after 'Okay. You can go.' Mark has already left for the vehicle. Bare said-tags stripped (Decision 0024); checked against the manuscript, 2026-10-01.",
+      "chapters": [
+        5
+      ]
+    },
+    "lena-ortiz-4862ba48f48b": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 6, paragraph 91: 'Jack.' -- Sarah, after 'Sarah watched the answer appear.' Lena moves closer next and asks 'What does it say?', so she has not seen it. Checked against the manuscript, 2026-10-01.",
+      "chapters": [
+        6
+      ]
     }
   }
 }
