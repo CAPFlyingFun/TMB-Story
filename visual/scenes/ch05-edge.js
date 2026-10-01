@@ -36,8 +36,9 @@ const south = {
     roomOptions: { variant: "south" },
     creatures: {
       widow: { model: "../assets/models/black-widow.glb", lengthM: 4.8, roughness: 0.32, prop: "widow", show: "widowShow", stride: 2.1,
-        // along the ridge's crest between the blades, then down its far side
-        path: [[-16, 10.6, -28], [-6, 11.2, -28], [3, 10.8, -28.4], [9, 6, -33]] },
+        // along the ridge's crest between the blades, then down its far side (on the soil:
+        // heights are above the ground)
+        path: [[-16, 0, -28], [-6, 0, -28], [3, 0, -28.4], [9, 0, -33]] },
     },
   }),
   props: { sky: 0, headlights: 0, torch: 0, rustle: 0, vehicle: 1, leaving: 0, widow: 0, widowShow: 0 },

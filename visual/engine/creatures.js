@@ -5,6 +5,9 @@
 //
 // A creature is a set's `people3d.creatures` entry:
 //   { model, lengthM, path: [[x, y, z], ...], prop, show, stride, roughness, legs }
+// A path's y is height ABOVE THE GROUND (0 walks on it; more is a leap): a set with uneven
+// ground (engine/outdoors.js) gives its groundAt(x, z), and the body follows the soil and
+// tilts to its slope. A creature placed at fixed heights floats wherever the ground dips.
 // `prop` names the scene prop that is its progress along the path (0 .. 1, tweened by `prop`
 // events like any other), `show` the prop that puts it in the set (0 or 1). The gait's phase
 // is the DISTANCE walked, read off the path, never the clock -- a seek lands on the same
@@ -38,8 +41,9 @@ function findLegs(bones, extent, used) {
 }
 
 export class Creatures {
-  constructor(scene, specs, url) {
+  constructor(scene, specs, url, groundAt) {
     this.scene = scene;
+    this.groundAt = groundAt || (() => 0);
     this.specs = specs || {};
     this.url = url;
     this.list = [];
@@ -123,9 +127,13 @@ export class Creatures {
       const phase = (d / stride) * Math.PI * 2;
       // the body rides a little on its steps
       const bob = s.lengthM * 0.012 * Math.abs(Math.sin(phase));
-      c.holder.position.set(p.x, p.y + bob, p.z);
-      c.holder.rotation.set(0, Math.atan2(dir.x, dir.z), 0);
-      c.shadow.position.set(p.x, p.y + 0.01, p.z);
+      // on the ground under it, tilted to the slope between its front and back feet
+      const g = this.groundAt(p.x, p.z), reach = s.lengthM * 0.35;
+      const gf = this.groundAt(p.x + dir.x * reach, p.z + dir.z * reach), gb = this.groundAt(p.x - dir.x * reach, p.z - dir.z * reach);
+      c.holder.rotation.order = "YXZ";
+      c.holder.position.set(p.x, g + p.y + bob, p.z);
+      c.holder.rotation.set(-Math.atan2(gf - gb, 2 * reach), Math.atan2(dir.x, dir.z), 0);
+      c.shadow.position.set(p.x, g + 0.03, p.z);
       // the legs, from their bind pose every frame
       for (const [b, q] of c.bind) b.quaternion.copy(q);
       c.model.updateMatrixWorld(true);

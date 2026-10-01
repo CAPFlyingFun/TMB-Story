@@ -471,5 +471,6 @@ export function buildOutdoors(opts = {}) {
     if (cam) for (const c of cards) drawCard(c, cam.position, night * 1.6);
   }
 
-  return { group, anchors: {}, lamps: {}, screens: {}, lights: {}, keyboards: [], room: { xl: -60, xr: 60, zb: -100, zs: 30, ceiling: 40 }, extraLights, update, far: 900 };
+  // groundAt: the soil's height, for anything that walks on it (engine/creatures.js)
+  return { group, anchors: {}, lamps: {}, screens: {}, lights: {}, keyboards: [], room: { xl: -60, xr: 60, zb: -100, zs: 30, ceiling: 40 }, extraLights, update, far: 900, groundAt: groundH };
 }

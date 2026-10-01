@@ -390,7 +390,7 @@ export class People3D {
     ids.forEach((id, i) => this.addBody(id, people[i].scene));
     await this.addBoards();
     // the set's animals (engine/creatures.js), drawn with the room so the grass hides them
-    this.creatures = new Creatures(this.roomScene, this.spec.creatures, this.url);
+    this.creatures = new Creatures(this.roomScene, this.spec.creatures, this.url, this.lab.groundAt);
     await this.creatures.load(B);
     this.planChairs(options);
 
