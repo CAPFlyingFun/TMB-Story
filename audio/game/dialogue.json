@@ -1,6 +1,6 @@
 {
   "_comment": "Canonical character and system voice lines for the game. Narration is excluded because it is audiobook-only. `audio` points at the same clip the audiobook plays: one generated line, used in both places.",
-  "lineCount": 637,
+  "lineCount": 636,
   "lines": [
     {
       "lineId": "system-884c6f5a459a",
@@ -399,7 +399,8 @@
         1,
         2,
         3,
-        5
+        5,
+        6
       ]
     },
     {
@@ -3051,12 +3052,12 @@
       ]
     },
     {
-      "lineId": "lena-ortiz-e46f21b5995f",
-      "character": "lena-ortiz",
-      "characterName": "Lena Ortiz",
+      "lineId": "jack-bennett-fb5ad8d65ad4",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
       "kind": "character",
       "text": "I didn't say anything.",
-      "audio": "audio/clips/lena/lena-ortiz-e46f21b5995f.mp3",
+      "audio": "audio/clips/jack/jack-bennett-fb5ad8d65ad4.mp3",
       "chapters": [
         4
       ]
@@ -3591,12 +3592,12 @@
       ]
     },
     {
-      "lineId": "security-officer-7dfa5ed5ebda",
-      "character": "security-officer",
-      "characterName": "Settlement security",
+      "lineId": "sarah-bennett-071491a7d192",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
       "kind": "character",
       "text": "Don't make me reconsider.",
-      "audio": "audio/clips/security/security-officer-7dfa5ed5ebda.mp3",
+      "audio": "audio/clips/sarah/sarah-bennett-071491a7d192.mp3",
       "chapters": [
         5
       ]
@@ -4708,17 +4709,6 @@
       "kind": "character",
       "text": "That's what I'm trying to confirm.",
       "audio": "audio/clips/sarah/sarah-bennett-4294110c0b87.mp3",
-      "chapters": [
-        6
-      ]
-    },
-    {
-      "lineId": "lena-ortiz-4862ba48f48b",
-      "character": "lena-ortiz",
-      "characterName": "Lena Ortiz",
-      "kind": "character",
-      "text": "Jack.",
-      "audio": "audio/clips/lena/lena-ortiz-4862ba48f48b.mp3",
       "chapters": [
         6
       ]
