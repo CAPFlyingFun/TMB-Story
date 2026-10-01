@@ -12,9 +12,10 @@
 // No issues", 2026-10-01; his call the same day: "the Black Widow for the legs in the
 // shadows"). The chapter gives one instant and an outline, so that is all it gets: a dark
 // body crossing between two blades high on the ridge, lit by nothing but the night, and gone.
-// Its size is GAME TUNING from the animal's (a big female's body, ~15 mm), at the settlement's
-// 1:180: in this model the body is about half the whole length, so 5.5 m from the front leg
-// tips to the back ones puts the body at 2.7 m, the same as Chapter 9's jumping spider.
+// Its size is the largest female's (Joshua, 2026-10-01: a black widow's body is 3 to 10 mm,
+// "some females measuring up to 13 mm", and 25 to 38 mm including legs), at the settlement's
+// 1:180: a 13 mm body is 2.34 m. In this model the body is 49% of the whole length, so 4.8 m
+// from the front leg tips to the back ones -- 26.7 mm, inside the 25 to 38.
 
 import { L, plus, shot3 } from "./metric.js";
 import { controlSet, SPOT, CM, CS, MAP, M, walkM, placeM } from "./controlSet.js";
@@ -34,7 +35,7 @@ const south = {
   world: M.builtWorld("outdoors", {
     roomOptions: { variant: "south" },
     creatures: {
-      widow: { model: "../assets/models/black-widow.glb", lengthM: 5.5, roughness: 0.32, prop: "widow", show: "widowShow", stride: 2.4,
+      widow: { model: "../assets/models/black-widow.glb", lengthM: 4.8, roughness: 0.32, prop: "widow", show: "widowShow", stride: 2.1,
         // along the ridge's crest between the blades, then down its far side
         path: [[-16, 10.6, -28], [-6, 11.2, -28], [3, 10.8, -28.4], [9, 6, -33]] },
     },
