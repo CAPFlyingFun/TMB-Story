@@ -10,6 +10,12 @@ const SCENES = {
   "ch01-opening": () => import("../scenes/ch01-opening.js"),
   "ch02-boundary": () => import("../scenes/ch02-boundary.js"),
   "ch03-activation": () => import("../scenes/ch03-activation.js"),
+  "ch04-calls": () => import("../scenes/ch04-calls.js"),
+  "ch05-edge": () => import("../scenes/ch05-edge.js"),
+  "ch06-someone-knew": () => import("../scenes/ch06-someone-knew.js"),
+  "ch07-phase-two": () => import("../scenes/ch07-phase-two.js"),
+  "ch08-three-weeks": () => import("../scenes/ch08-three-weeks.js"),
+  "ch09-first-light": () => import("../scenes/ch09-first-light.js"),
 };
 // The chapter list on the start menu. Only a chapter with a scene can be watched; the rest
 // say so rather than looking playable.
@@ -17,12 +23,12 @@ const CHAPTERS = [
   { n: 1, title: "The Alarm", scene: "ch01-opening" },
   { n: 2, title: "The Boundary", scene: "ch02-boundary" },
   { n: 3, title: "The Activation", scene: "ch03-activation" },
-  { n: 4, title: "The First Calls" },
-  { n: 5, title: "The Edge" },
-  { n: 6, title: "Someone Knew" },
-  { n: 7, title: "Phase Two" },
-  { n: 8, title: "Three Weeks" },
-  { n: 9, title: "First Light" },
+  { n: 4, title: "The First Calls", scene: "ch04-calls" },
+  { n: 5, title: "The Edge", scene: "ch05-edge" },
+  { n: 6, title: "Someone Knew", scene: "ch06-someone-knew" },
+  { n: 7, title: "Phase Two", scene: "ch07-phase-two" },
+  { n: 8, title: "Three Weeks", scene: "ch08-three-weeks" },
+  { n: 9, title: "First Light", scene: "ch09-first-light" },
 ];
 
 const q = new URLSearchParams(location.search);
@@ -98,6 +104,13 @@ async function boot() {
     const spec = Object.values(sets).find((s) => s.world.people3d).world.people3d;
     const three = downloads.fetch(url("vendor/three-human.js"));
     const models = Object.fromEntries(Object.entries(spec.models).map(([id, p]) => [id, downloads.fetch(url(p))]));
+    // the sets' animals (engine/creatures.js), each file once however many sets use it
+    for (const s of Object.values(sets)) {
+      for (const c of Object.values((s.world.people3d && s.world.people3d.creatures) || {})) {
+        const key = "creature:" + c.model;
+        if (!models[key]) models[key] = downloads.fetch(url(c.model));
+      }
+    }
     // the module is imported once its bytes are in the browser's cache
     const People3D = three.then(() => import("./people3d.js")).then((m) => m.People3D);
     dl3d = { People3D, models };

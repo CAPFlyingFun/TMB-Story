@@ -24,9 +24,11 @@ import { envelope } from "./gestures.js";
 import { quadMatrix3d } from "./homography.js";
 import { buildLabRoom } from "./labRoom.js";
 import { buildControlRoom, buildCorridor } from "./controlRoom.js";
+import { buildOutdoors } from "./outdoors.js";
+import { Creatures } from "./creatures.js";
 
 // The built rooms a set can stand its people in (its `people3d.room`; the lab by default).
-const ROOMS = { lab: buildLabRoom, control: buildControlRoom, corridor: buildCorridor };
+const ROOMS = { lab: buildLabRoom, control: buildControlRoom, corridor: buildCorridor, outdoors: buildOutdoors };
 
 const DEG = Math.PI / 180;
 const smooth = (p) => (p <= 0 ? 0 : p >= 1 ? 1 : p * p * (3 - 2 * p));
@@ -185,6 +187,9 @@ export class PictureCamera {
     this.CX = c.principal[0];
     this.CY = c.principal[1];
     this.H = c.height;
+    // A built set may stand its picture camera back from the room's origin (z0, metres), so
+    // a doorway behind the old camera is still a place on the floor (Chapters 4 to 9).
+    this.Z0 = c.z0 || 0;
     // The room's depth lines vanish at vanishX; the camera is turned that far off its axis.
     this.yaw = Math.atan2(c.principal[0] - c.vanishX, c.focal);
     this.c = Math.cos(this.yaw);
@@ -198,7 +203,7 @@ export class PictureCamera {
   floor(u, v) {
     const r = this.ray(u, v);
     const t = -this.H / Math.min(r[1], -1e-4);
-    return [t * r[0], 0, t * r[2]];
+    return [t * r[0], 0, this.Z0 + t * r[2]];
   }
 }
 
@@ -340,7 +345,7 @@ export class People3D {
     // THE ROOM, built (engine/labRoom.js): drawn in its own canvas under the story's screens,
     // and again as depth only among the people, so a cabinet, a desk or a monitor hides
     // whatever is behind it.
-    this.lab = (ROOMS[this.spec.room || "lab"] || buildLabRoom)();
+    this.lab = (ROOMS[this.spec.room || "lab"] || buildLabRoom)(this.spec.roomOptions || {});
     this.room = this.lab.group;
     this.roomScene.add(this.room);
     const mask = this.room.clone(true);
@@ -351,6 +356,12 @@ export class People3D {
       }
     });
     this.scene.add(mask);
+    // The mask is a copy; what the room moves (a door sliding open, the lever) has to move in
+    // it too, or a person through an open door is hidden by the door that was shut at load.
+    const a = [], b = [];
+    this.room.traverse((n) => a.push(n));
+    mask.traverse((n) => b.push(n));
+    this.maskPairs = a.map((n, i) => [n, b[i]]).filter(([n]) => n.isMesh || n.isGroup);
     this.props = { anchors: this.lab.anchors, lamps: this.lab.lamps };
     this.keyboards = this.lab.keyboards;
     // The room's light, ChatGPT's: a cool sky fill, a warm key from the ceiling panels, a
@@ -368,7 +379,7 @@ export class People3D {
       const l = new THREE.PointLight(L.color, L.intensity, L.distance, L.decay);
       l.position.set(...L.at);
       this.roomScene.add(l);
-      if (L.people) {
+      if (L.people !== undefined) {
         const lp = l.clone();
         lp.intensity = L.people;
         this.scene.add(lp);
@@ -377,6 +388,10 @@ export class People3D {
     this.anchorSetPieces();
 
     ids.forEach((id, i) => this.addBody(id, people[i].scene));
+    await this.addBoards();
+    // the set's animals (engine/creatures.js), drawn with the room so the grass hides them
+    this.creatures = new Creatures(this.roomScene, this.spec.creatures, this.url);
+    await this.creatures.load(B);
     this.planChairs(options);
 
     this.peopleRenderer = new THREE.WebGLRenderer({ canvas: this.peopleCanvas, alpha: true, antialias: true, premultipliedAlpha: true });
@@ -393,7 +408,7 @@ export class People3D {
   // Where the story's screens and glows are in the room: the lab's own monitors and lamps
   // (engine/labRoom.js), each glow also a light for the people and the room.
   anchorSetPieces() {
-    const eye = new THREE.Vector3(0, this.cam0.H, 0);
+    const eye = new THREE.Vector3(0, this.cam0.H, this.cam0.Z0);
     const fwd = new THREE.Vector3(this.cam0.s, 0, -this.cam0.c);
     const depth = (p) => p.clone().sub(eye).dot(fwd);
     for (const id of Object.keys(this.stage.set.screens || {})) {
@@ -526,6 +541,89 @@ export class People3D {
       for (const m of c.mesh.userData.materials) m.transparent = false;
       this.scene.add(c.mesh, c.shadow);
     }
+  }
+
+  // ------------------------------------------------------------------------ billboards
+  // THE PEOPLE WITHOUT A MODEL YET (Joshua, 2026-10-01: Lena and Mark "don't have the 3D
+  // models yet, just use the images like a Billboard with the 3D models so it will still
+  // have some depth"). Each stands in the room as their drawing on an upright card that turns
+  // to the camera, with the one of their eight drawings (assets/characters/<id>/) that shows
+  // them from where the camera is, at their real height, feet on the floor, behind or in
+  // front of the desks as the room says. A model, when one arrives, replaces the card: give
+  // the set's people3d.models an entry for them.
+  async addBoards() {
+    this.boards = {};
+    if (this.spec.billboards === false) return;
+    const loader = new THREE.TextureLoader();
+    for (const id of Object.keys(this.stage.actors)) {
+      if (this.spec.models[id]) continue;
+      const spr = this.stage.actors[id].sprite;
+      if (!spr) continue;
+      const poses = {};
+      for (const [pn, pose] of Object.entries(spr.poses)) {
+        const frames = {};
+        await Promise.all(Object.entries(pose.frames).map(async ([dir, f]) => {
+          const tex = await loader.loadAsync(this.url(spr.base + f.file));
+          tex.colorSpace = THREE.SRGBColorSpace;
+          tex.anisotropy = 4;
+          frames[dir] = tex;
+        }));
+        const [W, H] = pose.canvas, m = pose.pxPerMeter, [ax, ay] = pose.anchor;
+        // the card's size in metres, and where on it the feet (the anchor) are
+        poses[pn] = { frames, w: W / m, h: H / m, ax: (ax / W - 0.5) * (W / m), ay: (0.5 - ay / H) * (H / m), eye: pose.heightM ? pose.heightM - 0.1 : 1.55 };
+      }
+      const mat = new THREE.MeshBasicMaterial({ transparent: true, alphaTest: 0.5, side: THREE.DoubleSide, toneMapped: false, alphaToCoverage: true });
+      const card = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), mat);
+      card.frustumCulled = false;
+      const group = new THREE.Group();
+      group.add(card);
+      const shadow = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: this.shadowTex, transparent: true, depthWrite: false, opacity: 0.5 }));
+      shadow.rotation.x = -Math.PI / 2;
+      this.scene.add(group, shadow);
+      this.boards[id] = { id, group, card, mat, poses, shadow, opacity: 1 };
+    }
+  }
+
+  placeBoard(id, a, t) {
+    if (!(a.visible && a.opacity > 0.001)) return null;
+    const B = this.boards[id];
+    const pose = B.poses[a.pose.v] ? a.pose.v : "standing";
+    return { at: this.floorOf(id, a, pose), yaw: this.facingAt(a, t), seated: pose === "sitting", pose, board: true, eye: B.poses[pose].eye };
+  }
+
+  drawBoard(id, a, t, place) {
+    const B = this.boards[id];
+    B.group.visible = B.shadow.visible = !!place;
+    if (!place) return;
+    const cam = this.camera.position;
+    const toCam = Math.atan2(cam.x - place.at[0], cam.z - place.at[2]);
+    // which drawing: the way they face, seen from the camera (south = facing it)
+    const rel = place.yaw - toCam;
+    let best = "south", bd = 9;
+    for (const [dir, v] of Object.entries(FACING)) {
+      const e = Math.abs(lerpAngle(0, rel - v, 1));
+      if (e < bd) { bd = e; best = dir; }
+    }
+    const P = B.poses[place.pose], tex = P.frames[best] || P.frames.south;
+    if (B.mat.map !== tex) { B.mat.map = tex; B.mat.needsUpdate = true; }
+    B.card.scale.set(P.w, P.h, 1);
+    B.card.position.set(-P.ax, -P.ay, 0);
+    const bob = a.state.v === "walking" ? 0.012 * Math.abs(Math.sin((t * Math.PI * 2) / 1.05)) : 0;
+    B.group.position.set(place.at[0], bob, place.at[2]);
+    B.group.rotation.set(0, toCam, 0);
+    // lit as the people are: the room going dark takes the card with it
+    const L = this.peopleLights, k = 0.86 * Math.max(0.04, Math.min(1.15, (L.hemi.intensity / L.base.hemi) * 0.55 + (L.key.intensity / L.base.key) * 0.45)); // a drawing is lit flat; a little under the models'
+    B.mat.color.setRGB(k * L.hemi.color.r, k * L.hemi.color.g, k * L.hemi.color.b);
+    if (a.opacity !== B.opacity) {
+      B.opacity = a.opacity;
+      B.mat.opacity = a.opacity;
+      B.mat.alphaTest = a.opacity < 0.999 ? 0.02 : 0.5;
+      B.mat.needsUpdate = true;
+    }
+    B.shadow.position.set(place.at[0], 0.004, place.at[2]);
+    const size = place.seated ? 0.62 : 0.5;
+    B.shadow.scale.set(size, size, 1);
+    B.shadow.material.opacity = 0.5 * a.opacity;
   }
 
   setEnabled(on) {
@@ -726,7 +824,8 @@ export class People3D {
       if (w > best) { best = w; tgt.copy(p); }
     };
     for (const [other, p] of Object.entries(placedAt)) {
-      if (other !== id && p) {
+      if (other !== id && p && p.board) consider(new THREE.Vector3(p.at[0], p.eye, p.at[2]), 1.4);
+      else if (other !== id && p) {
         // their real eye, as their own head last aimed it, so two people meet eye to eye
         const them = this.bodies[other], e = them.aim && them.aimedAt && Math.abs(them.aimedAt - this.now) < 0.25 ? them.aim.eye : null;
         consider(e ? new THREE.Vector3(e.x, e.y, e.z) : new THREE.Vector3(p.at[0], p.seated ? them.eye.sit : them.eye.stand, p.at[2]), 1.4);
@@ -1217,7 +1316,7 @@ export class People3D {
       C.position.set(s3.cx3, s3.cy3, s3.cz3);
       C.rotation.set(s3.pitch3 * DEG, s3.yaw3 * DEG, 0);
     } else {
-      C.position.set(0, this.cam0.H, 0);
+      C.position.set(0, this.cam0.H, this.cam0.Z0);
       C.rotation.set(0, -this.cam0.yaw, 0);
     }
     C.updateMatrixWorld(true);
@@ -1226,12 +1325,22 @@ export class People3D {
 
     this.lights = state.lights;
     // a room that moves (the TOMBS rings, the lever, the lighting) moves by the scene's props
-    if (this.lab.update) this.lab.update(state.props || {}, t, { room: this.roomLights, people: this.peopleLights, scene: this.roomScene });
+    if (this.lab.update) this.lab.update(state.props || {}, t, { room: this.roomLights, people: this.peopleLights, scene: this.roomScene, peopleScene: this.scene, camera: this.camera });
+    for (const [n, m] of this.maskPairs || []) {
+      m.position.copy(n.position);
+      m.quaternion.copy(n.quaternion);
+      m.scale.copy(n.scale);
+      m.visible = n.visible && !n.userData.noMask;
+    }
     const places = {}, placed = {};
     for (const id of Object.keys(this.bodies)) if (state.actors[id]) places[id] = this.placeBody(id, state.actors[id], t);
     this.pullChairsIn(places);
     this.keepApart(places);
-    for (const id of Object.keys(places)) placed[id] = this.drawBody(id, state.actors[id], t, places[id], places);
+    const boardPlaces = {};
+    for (const id of Object.keys(this.boards || {})) if (state.actors[id]) boardPlaces[id] = this.placeBoard(id, state.actors[id], t);
+    for (const id of Object.keys(places)) placed[id] = this.drawBody(id, state.actors[id], t, places[id], { ...places, ...boardPlaces });
+    for (const [id, p] of Object.entries(boardPlaces)) this.drawBoard(id, state.actors[id], t, p);
+    if (this.creatures) this.creatures.update(state.props || {}, t);
     this.drawChairs(state, t, placed);
     for (const [id, g] of Object.entries(this.glows)) {
       const l = state.lights[id];

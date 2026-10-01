@@ -31,10 +31,16 @@ line; the voice-only export is not indexable.
 | `scenes/ch02-boundary.js`, `scenes/ch03-activation.js` | Chapters 2 and 3: the lab, the corridor and the main control room |
 | `scenes/metric.js` | staging in METRES for the built rooms nobody painted: a virtual picture camera, `P(x, z)`, walks and real-camera shots |
 | `engine/controlRoom.js` | the corridor and the main control room, built in the lab's style: the TOMBS Array's chamber and rings behind the reinforced window, the consoles, the emergency panel and its lever, the street and (after the activation) the grass through the east window. Animated by the set's `props` |
+| `scenes/ch04-calls.js` … `scenes/ch09-first-light.js` | Chapters 4 to 9: the night after the activation, in the control room, at the southern road's end (Ch 5) and on the walk to the eastern marker (Ch 8) |
+| `scenes/controlSet.js` | the control room as Chapters 4 to 9 share it: marks, screens, cameras, and everyone who comes through its door |
+| `engine/outdoors.js` | the edge of the settlement, built: `south` (the road ending in a straight line, the grass, the soil ridge, the droplet, the clipping, the stems moving in a line) and `east` (the path between the blades, dew, the sensor marker, the blade pressed flat). The sheet's objects with no model -- Mark's SUV, the camera pole, the floodlight, barriers, cones -- stand in as cards |
+| `engine/creatures.js` | Joshua's rigged Meshy spiders walked along a path by a scene prop, with an eight-leg gait made here |
+| `screens/aftermath.js` | the screens of Chapters 4 to 9: the utility and maintenance cameras, the schematic, the wrist-camera replay, the scale calculation (a smear), the selection, the diagnostic trace, the metadata, PHASE ONE READY, the tablet, the checkout log, the badge (names unreadable) |
+| `../scripts/models/` | `fix-jumping-spider-legs.mjs` and `prepare-model.mjs`: how the two spider models were made light enough for a phone |
 | `screens/control.js` | the control room's screens: the Array, the emitters, boundary acquisition, the hidden target parameters, the scale factor (never readable), access denied, the sensor grid, communications, the perimeter cameras, the structural monitor, the event log and the settlement map |
 | `engine/labRoom.js` | the lab built as a 3D room after ChatGPT's procedural lab: shell, desks, racks, monitors, keyboards, the intercom, the props |
 | `vendor/three-human.js` | three.js r185, its glTF loader and meshopt decoder, and TRADDOMIUM's human rig and poses (`src/actor/human*.ts`, `src/view/HumanRig.ts`), bundled into one module |
-| `../assets/models/` | `jack.glb` and `sarah.glb` (TRADDOMIUM: Micro Battle's rigged pair, the ones the sprites were drawn from) |
+| `../assets/models/` | `jack.glb` and `sarah.glb` (TRADDOMIUM: Micro Battle's rigged pair, the ones the sprites were drawn from); `black-widow.glb` and `jumping-spider.glb` (Joshua's Meshy releases on TRADDOMIUM, 2026-10-01) |
 | `../scripts/make-portraits.py` | the caption portraits (`assets/portraits/`): cut from each character's front sprite, and the systems' terminal icon |
 | `portraits.html` | dev-only: renders Jack's and Sarah's 3D caption portraits (`<name>-3d.png`) from their models |
 | `engine/rig.js` | the optional cutout rig: cuts a sprite into body parts along polygons and turns them about pivots |
@@ -288,3 +294,31 @@ floor and gives them no chair (Chapter 3, after the snap back).
 THE SCALE FACTOR IS NEVER SHOWN. It is hidden in story-rules/WORLD_RULES.md, and the
 manuscript has Jack and Sarah stare at it without saying it: screens/control.js draws it
 unreadable, and Chapter 3 frames Jack, not the screen, on "Jack stared at the number."
+
+## The night after (Chapters 4 to 9)
+
+**People without a model are cards.** Lena and Mark have drawings and no 3D model yet
+(Joshua, 2026-10-01: "use the images like a Billboard with the 3D models so it will still have
+some depth"). people3d.js stands each as an upright card in the room, turned to the camera,
+showing whichever of their eight drawings faces the way they face as seen from the camera,
+at their real height, behind or in front of the furniture as the room says. Give the set's
+`people3d.models` an entry for them and the model replaces the card. The same goes for the
+objects on the props sheet: an object with no model stands in as a card
+(engine/outdoors.js).
+
+**The picture camera can stand back.** `makeMetric(z0)` puts the virtual picture camera
+`z0` metres behind the room's origin, because a mark has to be in front of it to be a place
+on its floor; Chapters 4 to 9 use 4 m, past the control room's door, so people can arrive
+in the hallway. Chapters 2 and 3 keep 0.
+
+**The room's moving parts move in its depth mask too.** The people are drawn over a
+depth-only copy of the room; people3d.js copies each moving part's transform into that
+copy every frame (a door that slides open no longer hides whoever is standing in it).
+Anything see-through (a card's empty corners, water, the sky) sets `userData.noMask`.
+
+**The spiders are glimpses, as the chapters are.** The black widow crosses the ridge in
+Chapter 5 for the one instant the manuscript gives it; the jumping spider moves through the
+gold-lit stems in Chapter 9 and is gone. Which spider is which is Joshua's call
+(2026-10-01): the widow "for the legs in the shadows", the jumping spider later. Nothing on
+screen says what either is. A creature is a set's `people3d.creatures` entry: a model, its
+length in metres, a path, and the two props that move and show it.

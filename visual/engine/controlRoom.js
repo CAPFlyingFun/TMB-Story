@@ -24,6 +24,10 @@
 //   lighting  0 normal, 1 dark (the lever), 2 emergency red
 //   white     the activation's white light, 0 .. 1
 //   outside   0 the night as it was (hills), 1 the grass
+//   door      the door to the hallway, 0 shut .. 1 open (Chapters 5 to 9)
+//   dawn      Chapter 9's first light: 0 night, 1 deep grey, 2 gold down the blades, 3 morning
+//   cups      how many forgotten coffee cups stand on the consoles (0 .. 4, Chapters 4 and 7)
+//   case      the equipment case Sarah props her feet on (0/1, Chapter 4)
 //
 // Metres, the frame people3d.js uses: x right, y up, z toward the camera; the floor at y = 0
 // and the base camera at (0, ~1.5, 0) looking down -z. No scale on the page is implied by
@@ -113,6 +117,19 @@ export function buildControlRoom() {
   span(door[0], door[1], door[2], C, R.zs, R.zs + 0.1, M.shell);
   const doorL = span(door[0], (door[0] + door[1]) / 2, 0, door[2], R.zs + 0.02, R.zs + 0.07, M.dark);
   const doorR = span((door[0] + door[1]) / 2, door[1], 0, door[2], R.zs + 0.02, R.zs + 0.07, M.dark);
+  const doorAt = { L: doorL.position.x, R: doorR.position.x, w: (door[1] - door[0]) / 2 };
+  // the hallway outside the door (Chapter 5: "Lena stood outside"; Mark "careful not to step
+  // past the threshold"), lit, running east-west past the door
+  {
+    const hz0 = R.zs + 0.1, hz1 = R.zs + 2.6, hx0 = -6, hx1 = 3;
+    span(hx0, hx1, -0.02, 0, hz0, hz1, M.floor);
+    span(hx0, hx1, 2.6, 2.65, hz0, hz1, M.ceiling);
+    span(hx0, hx1, 0, 2.6, hz1, hz1 + 0.1, M.shell);
+    span(hx0 - 0.1, hx0, 0, 2.6, hz0, hz1, M.shell);
+    span(hx1, hx1 + 0.1, 0, 2.6, hz0, hz1, M.shell);
+    for (let x = hx0 + 0.6; x < hx1; x += 1.8) span(x - 0.3, x + 0.3, 2.59, 2.6, hz0 + 0.6, hz0 + 1.9, L.panelLight);
+    span(hx0, hx1, 1.2, 1.23, hz1 - 0.02, hz1, M.steel);
+  }
   span(door[0] - 0.06, door[1] + 0.06, door[2], door[2] + 0.06, R.zs - 0.02, R.zs, M.teal);
   // skirting, dado, ribs and the teal strips, as in the lab
   for (const [x0, x1, z0, z1] of [[R.xl, R.xl + 0.02, R.zb, R.zs], [R.xr - 0.02, R.xr, R.zb, OUTWIN.z0], [R.xr - 0.02, R.xr, OUTWIN.z1, R.zs]]) {
@@ -182,6 +199,29 @@ export function buildControlRoom() {
   }
   const prim = console_(PRIMARY, "control-main", 0.92, 0.5);
   console_(SECONDARY, "control-second", 0.7, 0.42);
+  // "Four cold cups of coffee sat forgotten along the edge of the console." (Chapter 7)
+  const cupM = new THREE.MeshStandardMaterial({ color: 0xe8e4dc, roughness: 0.6 });
+  const coffee = new THREE.MeshStandardMaterial({ color: 0x24140a, roughness: 0.2 });
+  const cups = [[-2.3, PRIMARY.z1 - 0.05], [0.15, PRIMARY.z1 - 0.06], [1.2, SECONDARY.z1 - 0.05], [2.6, SECONDARY.z1 - 0.06]].map(([x, z]) => {
+    const g = new THREE.Group();
+    g.position.set(x, PRIMARY.top, z);
+    const body = new THREE.Mesh(new THREE.CylinderGeometry(0.042, 0.035, 0.1, 18), cupM);
+    body.position.y = 0.05;
+    const top = new THREE.Mesh(new THREE.CircleGeometry(0.038, 18), coffee);
+    top.rotation.x = -Math.PI / 2;
+    top.position.y = 0.088;
+    g.add(body, top);
+    group.add(g);
+    g.visible = false;
+    return g;
+  });
+  // the small equipment case Jack brings over for Sarah's feet (Chapter 4)
+  const kase = new THREE.Group();
+  kase.position.set(1.95, 0, -4.05);
+  group.add(kase);
+  box(0.5, 0.3, 0.34, 0, 0.15, 0, new THREE.MeshStandardMaterial({ color: 0x2c3238, roughness: 0.55 }), kase);
+  box(0.52, 0.02, 0.36, 0, 0.2, 0, M.steel, kase);
+  kase.visible = false;
   lights.monitor = lights.alarm = centre(screens["control-main"]).add(new THREE.Vector3(0, 0, 0.1));
   lights.second = centre(screens["control-second"]).add(new THREE.Vector3(0, 0, 0.1));
   void prim;
@@ -282,7 +322,7 @@ export function buildControlRoom() {
   const asphalt = new THREE.MeshStandardMaterial({ color: 0x15191c, roughness: 0.95 });
   const kerb = new THREE.MeshStandardMaterial({ color: 0x3c4246, roughness: 0.9 });
   const groundM = new THREE.MeshStandardMaterial({ color: 0x0d1410, roughness: 1 });
-  ospan(R.xr + 0.12, 60, -0.05, 0, -60, 40, groundM);
+  ospan(R.xr + 0.12, 420, -0.05, 0, -240, 240, groundM); // out under the grass, too (Chapter 9: something moves in the stems)
   ospan(R.xr + 2.5, R.xr + 10.5, 0, 0.01, -60, 40, asphalt);
   ospan(R.xr + 2.2, R.xr + 2.5, 0, 0.12, -60, 40, kerb);
   ospan(R.xr + 10.5, R.xr + 10.8, 0, 0.12, -60, 40, kerb);
@@ -347,6 +387,16 @@ export function buildControlRoom() {
   const grass = new THREE.Group();
   outside.add(grass);
   const bladeM = new THREE.MeshStandardMaterial({ color: 0x24402a, roughness: 0.85, side: THREE.DoubleSide, emissive: 0x081208, emissiveIntensity: 0.4 });
+  // FIRST LIGHT (Chapter 9): "the first true light of morning reach[ed] the tops of the grass
+  // blades ... each one catching the light like a tree catching fire, slow and gold from the
+  // top down." A line of gold that comes down each blade from its tip as `gold` rises.
+  const goldU = { uGold: { value: 0 }, uGoldColor: { value: new THREE.Color(0xffb44a) } };
+  bladeM.onBeforeCompile = (sh) => {
+    Object.assign(sh.uniforms, goldU);
+    sh.vertexShader = sh.vertexShader.replace("#include <common>", "#include <common>\nvarying float vH;").replace("#include <begin_vertex>", "#include <begin_vertex>\nvH = position.y;");
+    sh.fragmentShader = sh.fragmentShader.replace("#include <common>", "#include <common>\nvarying float vH; uniform float uGold; uniform vec3 uGoldColor;")
+      .replace("#include <emissivemap_fragment>", "#include <emissivemap_fragment>\ntotalEmissiveRadiance += uGoldColor * 0.9 * smoothstep(1.0 - uGold - 0.06, 1.0 - uGold + 0.06, vH) * step(0.001, uGold);");
+  };
   const bladeGeo = bladeGeometry();
   const N = 260;
   const blades = new THREE.InstancedMesh(bladeGeo, bladeM, N);
@@ -364,15 +414,41 @@ export function buildControlRoom() {
     blades.setMatrixAt(i, m4);
   }
   grass.add(blades);
+  // "Dew clung to individual blades in beads the size of boulders, each one glowing faintly
+  // as the light passed through it."
+  const dewM = live(new THREE.MeshStandardMaterial({ color: 0x9cc8d8, roughness: 0.04, metalness: 0, transparent: true, depthWrite: false, emissive: 0xffc070, emissiveIntensity: 0 }));
+  // clear through the middle, bright at the rim (the same water as engine/outdoors.js)
+  dewM.onBeforeCompile = (sh) => {
+    sh.fragmentShader = sh.fragmentShader.replace("#include <dithering_fragment>", `#include <dithering_fragment>
+      float rim = pow(1.0 - abs(dot(normalize(-vViewPosition), normal)), 3.0);
+      gl_FragColor.rgb += vec3(0.55, 0.75, 0.85) * rim * 0.5;
+      gl_FragColor.a = clamp(0.1 + rim * 0.8, 0.0, 1.0);`);
+  };
+  const dew = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 18, 12), dewM, 70);
+  s = 7;
+  for (let i = 0; i < 70; i++) {
+    const d = 30 + Math.pow(rnd(), 0.8) * 150, z = -120 + rnd() * 240, h = 6 + rnd() * 50, r0 = 1.4 + rnd() * 2.2;
+    m4.compose(new THREE.Vector3(R.xr + 24 + d, h, z), new THREE.Quaternion(), new THREE.Vector3(r0, r0 * 1.12, r0));
+    dew.setMatrixAt(i, m4);
+  }
+  grass.add(dew);
   // a soft night sky glow behind it all, so the blades read as silhouettes
-  const skyM = live(new THREE.MeshBasicMaterial({ color: 0x0b1626, side: THREE.BackSide }));
+  // (a horizon and a zenith, so the sky over the grass reads as sky and not as a wall)
+  const skyU = { top: { value: new THREE.Color(0x060c16) }, bottom: { value: new THREE.Color(0x0e1a2a) } };
+  const skyM = live(new THREE.ShaderMaterial({
+    side: THREE.BackSide, depthWrite: false, uniforms: skyU,
+    vertexShader: "varying vec3 vP; void main(){ vP = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }",
+    fragmentShader: "uniform vec3 top; uniform vec3 bottom; varying vec3 vP; void main(){ float k = smoothstep(-0.02, 0.45, vP.y); gl_FragColor = vec4(mix(bottom, top, k), 1.0); }",
+  }));
   const sky = new THREE.Mesh(new THREE.SphereGeometry(900, 24, 12), skyM);
   sky.position.set(0, 0, 0);
   outside.add(sky);
 
   // ---------------------------------------------------------------------- finishing
   group.updateMatrixWorld(true);
-  const keep = new Set([doorL, doorR, pane, lever, panelDoor, sky, blades, ...rings.flatMap((r) => [r.gimbal]), core]);
+  const keep = new Set([doorL, doorR, pane, lever, panelDoor, sky, blades, dew, ...rings.flatMap((r) => [r.gimbal]), core]);
+  for (const c of cups) c.traverse((n) => n.isMesh && keep.add(n));
+  kase.traverse((n) => n.isMesh && keep.add(n));
   // the moving pieces stay as they are; everything else is merged by material
   for (const r of rings) r.gimbal.traverse((n) => n.isMesh && keep.add(n));
   lever.traverse((n) => n.isMesh && keep.add(n));
@@ -387,6 +463,11 @@ export function buildControlRoom() {
     ...streetLights.map((p) => ({ color: 0xffd09a, intensity: 60, distance: 22, decay: 1.5, at: [p.x, p.y, p.z] })),
     { color: 0xff2a1a, intensity: 0, distance: 12, decay: 1.4, at: [0, 2.6, -3], id: "emergency", people: 0 },
   ];
+  // the morning, coming in at the east window: a low warm sun over the grass and into the room
+  const sun = new THREE.DirectionalLight(0xffc88a, 0);
+  sun.position.set(400, 60, -40);
+  sun.target.position.set(0, 0, -4);
+  group.add(sun, sun.target);
 
   let lastT = null;
   function update(P, t, lightRig) {
@@ -433,6 +514,32 @@ export function buildControlRoom() {
     const out = Math.max(0, Math.min(1, P.outside || 0));
     hills.visible = out < 0.5;
     grass.visible = out >= 0.5;
+    // the door slides open, the two halves into the wall
+    const dk = Math.max(0, Math.min(1, P.door || 0));
+    doorL.position.x = doorAt.L - dk * doorAt.w * 0.95;
+    doorR.position.x = doorAt.R + dk * doorAt.w * 0.95;
+    for (const [i, c] of cups.entries()) c.visible = i < (P.cups || 0);
+    kase.visible = (P.case || 0) > 0.5;
+    // first light: black to grey, gold down the blades, then full morning blue
+    const dawn = Math.max(0, Math.min(3, P.dawn || 0));
+    const grey = Math.min(1, dawn), gold = Math.max(0, Math.min(1, dawn - 1)), day = Math.max(0, dawn - 2);
+    // horizon and zenith: night, grey, the gold low in the east, morning blue
+    const H = [0x0e1a2a, 0x56606a, 0xc08a5a, 0xb4d4ee], Z = [0x060c16, 0x262e38, 0x3a4c66, 0x5288c8];
+    const mix3 = (arr) => new THREE.Color(arr[0]).lerp(new THREE.Color(arr[1]), grey).lerp(new THREE.Color(arr[2]), gold * (1 - day)).lerp(new THREE.Color(arr[3]), day);
+    skyU.bottom.value.copy(mix3(H));
+    skyU.top.value.copy(mix3(Z));
+    // the gold comes down the top of each blade and stops there: "from the top down"
+    goldU.uGold.value = 0.45 * gold * (1 - day * 0.7);
+    bladeM.emissiveIntensity = 0.4 + 0.5 * grey;
+    dewM.emissiveIntensity = 0.6 * gold * (1 - 0.5 * day);
+    sun.intensity = 2.4 * Math.max(gold, day);
+    if (lightRig) {
+      for (const rig of [lightRig.room, lightRig.people]) {
+        if (!rig) continue;
+        rig.hemi.intensity += rig.base.hemi * 0.25 * grey;
+        rig.key.color.setRGB(1, 1 - 0.12 * gold * (1 - day), 1 - 0.3 * gold * (1 - day));
+      }
+    }
   }
   const extraRefs = [];
 

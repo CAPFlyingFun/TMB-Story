@@ -188,7 +188,7 @@ export class Stage {
     }
     const in3d = this.people && this.people.active;
     for (const [id, node] of Object.entries(this.actors)) {
-      if (in3d && this.people.bodies[id]) node.wrap.style.display = "none";
+      if (in3d && (this.people.bodies[id] || (this.people.boards && this.people.boards[id]))) node.wrap.style.display = "none";
       else this.drawActor(node, state.actors[id], state.t);
     }
     for (const [id, node] of Object.entries(this.lights)) this.drawLight(node, state.lights[id]);
