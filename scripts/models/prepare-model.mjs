@@ -2,8 +2,7 @@
 // vertex (three.js skins with four), a texture-aware simplify, the base colour at 1024 px
 // JPEG, the metallic-roughness map dropped, and meshopt compression.
 //
-//   node prepare-model.mjs <in.glb> <out.glb> <ratio> <error>      (UVW=80 for both spiders)
-//   jumping spider: UVW=80 ratio 0.3, error 0.05  -> ~83k triangles, 3.0 MB
+//   node prepare-model.mjs <in.glb> <out.glb> <ratio> <error>      (UVW=80)
 //   black widow:    UVW=80 ratio 0.15, error 0.05 -> ~42k triangles, 1.1 MB
 //
 // Meshy's unwrap puts nearly every vertex on a UV seam, so a seam-respecting simplify stops

@@ -10,10 +10,9 @@
 // is the DISTANCE walked, read off the path, never the clock -- a seek lands on the same
 // step, and a creature that stops ("it is not moving") stops its feet.
 //
-// lengthM is the whole animal, legs and all, front to back. The bodies come from the 1:180
-// chart in story-rules/reference (a regal jumping spider female, ~15 mm, is 2.7 m to the
-// settlement); a leg span is not in that chart, so the full length here is GAME TUNING
-// sized from the body (see each scene).
+// lengthM is the whole animal, legs and all, front to back, at the settlement's 1:180 (the
+// chart in story-rules/reference). Where the chart has no leg span the full length is GAME
+// TUNING sized from the animal's body (see each scene).
 
 import * as THREE from "../vendor/three-human.js";
 
