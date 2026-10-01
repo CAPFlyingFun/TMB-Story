@@ -307,19 +307,22 @@ const REST = [
   { at: L("Several windows were opening", { phrase: "Jack grabbed the keyboard" }), until: L("Jack leaned back."), action: "gesture", actor: "jack", animation: "keys" },
   { at: L("Jack kept one hand on the keyboard."), until: L("Jack gave Sarah his chair", { offset: 0.2 }), action: "gesture", actor: "jack", animation: "keys", arm: "right" },
   { at: L("Sarah was already typing."), until: L("I didn't.", { edge: "end" }), action: "gesture", actor: "jack", animation: "keys" },
-  // "Jack reopened the network monitor." -- during the call, so with the hand that is not
-  // holding the intercom button.
+  // "Jack reopened the network monitor." -- during the call, with his right hand: the left
+  // is the one that goes out to the intercom.
   { at: L("Jack reopened the network monitor."), action: "gesture", actor: "jack", animation: "type", arm: "right", duration: 1.6 },
   // Sarah at her own keyboard while she works, until the TOMBS request interrupts them.
   { at: L("Sarah was already typing."), until: L("A new warning tone interrupted them."), action: "gesture", actor: "sarah", animation: "keys" },
   { at: L("He reached for the intercom."), action: "gesture", actor: "jack", animation: "lean-forward", duration: 1.4 },
-  // His hand on the intercom's button for as long as the line is open (Joshua, 2026-09-29:
-  // "Jack's hand should be reaching for the intercom when he presses the button and also to
-  // turn it off"): a press on the open, again when he taps it, and once more to close it.
-  { at: L("He reached for the intercom."), until: { cue: "ch01-080-intercom-close", offset: 0.7 }, action: "gesture", actor: "jack", animation: "press", target: "intercom", arm: "left" },
-  { at: { cue: "ch01-070-intercom-open", offset: -0.15 }, action: "gesture", actor: "jack", animation: "tap", target: "intercom", arm: "left", duration: 0.45 },
-  { at: L("Jack tapped the button again."), action: "gesture", actor: "jack", animation: "tap", target: "intercom", arm: "left", duration: 0.45 },
-  { at: { cue: "ch01-080-intercom-close", offset: -0.15 }, action: "gesture", actor: "jack", animation: "tap", target: "intercom", arm: "left", duration: 0.45 },
+  // THE INTERCOM IS PRESS TO TALK, PRESS AGAIN TO END (Joshua, 2026-09-30: "it is a press to
+  // talk, press again to end the conversation"), so his hand does not stay on it: it goes out
+  // for each press and comes back to the keys. Three presses, each a reach out, the click and
+  // back: on the open, when he taps it again, and to close it (Joshua, 2026-09-29: "Jack's
+  // hand should be reaching for the intercom when he presses the button and also to turn it
+  // off"). The LEFT hand: the unit stands to the left of his keyboard, where his right would
+  // have to cross his body and the whole keyboard (his right is the one that gestures).
+  { at: { cue: "ch01-070-intercom-open", offset: -0.6 }, action: "gesture", actor: "jack", animation: "tap", target: "intercom", arm: "left", duration: 1.3 },
+  { at: L("Jack tapped the button again.", { offset: -0.45 }), action: "gesture", actor: "jack", animation: "tap", target: "intercom", arm: "left", duration: 1.3 },
+  { at: { cue: "ch01-080-intercom-close", offset: -0.6 }, action: "gesture", actor: "jack", animation: "tap", target: "intercom", arm: "left", duration: 1.3 },
   { at: L("Jack smiled despite himself."), action: "gesture", actor: "jack", animation: "look-down", duration: 1.0 },
   { at: L("Sarah raised an eyebrow."), action: "gesture", actor: "sarah", animation: "look-left", duration: 0.9 },
   { at: L("Jack pointed toward the monitor"), action: "gesture", actor: "jack", animation: "point", duration: 1.2 },

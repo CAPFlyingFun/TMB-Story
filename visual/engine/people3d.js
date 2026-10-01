@@ -134,8 +134,15 @@ const KEEP_APART_M = 0.72;
 // How far in front of the chest a keyboard can be and still be reached, metres: a working
 // reach, and a longer one for a hand that STAYS on the keys while its owner sits back.
 const KEYBOARD_REACH = 0.95, KEYBOARD_HOLD_REACH = 1.2;
+// The chair's middle this far behind a keyboard it is pulled in to (the hips sit 4 cm behind
+// the middle, so the keys are 0.30 m in front of them: about 65% of Jack's arm, elbows bent),
+// and how near the desk's front edge that middle may come, its base rolled under it.
+const CHAIR_TO_KEYS_M = 0.26, CHAIR_UNDER_DESK_M = 0.16;
 // Holding a button: in over this long, out over this long, whatever the gesture's length.
 const PRESS_IN = 0.8, PRESS_OUT = 0.6;
+// A fingertip resting on a keyboard sits this far above its anchor (the keys' tops): the
+// solver puts the FINGERTIP on a target, where the old reach put the wrist 4.5 cm up.
+const KEY_TOP = 0.006;
 const pressWeight = (g) => {
   const d = (g.opts && g.opts.dur) || 1, el = g.u * d;
   return smooth(el / PRESS_IN) * smooth((d - el) / PRESS_OUT);
@@ -682,20 +689,28 @@ export class People3D {
   // WHERE THEY LOOK (Joshua, 2026-09-29: Jack's head "needs to face in the direction of the
   // computer and Sarah"; Sarah's "between Jack and the computer"). The scene says which way
   // a body faces in eight directions; what it looks at is whatever lies that way: the other
-  // person's face or a monitor, each weighted by how near it is to that direction, so a
-  // turn between them moves the gaze between them.
+  // person's eyes, a monitor, or the lit intercom -- ONE of them, the one nearest that
+  // direction (Joshua, 2026-09-30: "it will know exactly where to position the head angles
+  // to face each thing"). It used to be an average of all of them, which looked at the empty
+  // air between two things. The head is then aimed at that point by TRADDOMIUM's
+  // humanAim, which eases from one target to the next, so a turn between them is a glance.
   gaze(id, at, faceYaw, seated, state, placedAt) {
     const body = this.bodies[id];
     const eye = new THREE.Vector3(at[0], seated ? body.eye.sit : body.eye.stand, at[2]);
-    let sum = 0;
+    let sum = 0, best = 0;
     const tgt = new THREE.Vector3();
     const consider = (p, bias) => {
       const d = lerpAngle(0, Math.atan2(p.x - eye.x, p.z - eye.z) - faceYaw, 1);
       const w = bias * smooth((Math.abs(d) < Math.PI ? (70 * DEG - Math.abs(d)) : -1) / (40 * DEG));
-      if (w > 0) { tgt.addScaledVector(p, w); sum += w; }
+      if (w > 0) sum += w;
+      if (w > best) { best = w; tgt.copy(p); }
     };
     for (const [other, p] of Object.entries(placedAt)) {
-      if (other !== id && p) consider(new THREE.Vector3(p.at[0], p.seated ? this.bodies[other].eye.sit : this.bodies[other].eye.stand, p.at[2]), 1.4);
+      if (other !== id && p) {
+        // their real eye, as their own head last aimed it, so two people meet eye to eye
+        const them = this.bodies[other], e = them.aim && them.aimedAt && Math.abs(them.aimedAt - this.now) < 0.25 ? them.aim.eye : null;
+        consider(e ? new THREE.Vector3(e.x, e.y, e.z) : new THREE.Vector3(p.at[0], p.seated ? them.eye.sit : them.eye.stand, p.at[2]), 1.4);
+      }
     }
     for (const P of Object.values(this.screenAnchors)) {
       consider(P[0].clone().add(P[1]).add(P[2]).add(P[3]).multiplyScalar(0.25), 1);
@@ -706,7 +721,7 @@ export class People3D {
       if (l && A && l.intensity > 0.05) consider(A.p, 1.6);
     }
     if (sum < 1e-3) return null;
-    return { eye, target: tgt.multiplyScalar(1 / sum), amount: Math.min(1, sum) };
+    return { eye, target: tgt, amount: Math.min(1, sum) };
   }
 
   poseKind(pose, state) {
@@ -723,9 +738,9 @@ export class People3D {
     const at = this.floorOf(id, a, a.pose.v);
     // Reaching for something further than an arm (the intercom at the back of the desk):
     // a seated person rolls the chair in toward it first, as far as the desk allows.
-    const press = (a.gestures || []).find((g) => g.name === "press" && this.targetOf(g));
+    const press = (a.gestures || []).find((g) => (g.name === "press" || g.name === "tap") && this.targetOf(g));
     if (press && seated) {
-      const T = this.targetOf(press), w = pressWeight(press);
+      const T = this.targetOf(press), w = press.name === "press" ? pressWeight(press) : envelope(press.u, 0.3);
       const dx = T.x - at[0], dz = T.z - at[2], dist = Math.hypot(dx, dz), want = 0.58;
       if (dist > want) {
         const k = ((dist - want) / dist) * w;
@@ -734,7 +749,41 @@ export class People3D {
         this.clampAisle(at, CHAIR.baseRadius + CHAIR.casterRadius + 0.03);
       }
     }
-    return { at, yaw: this.facingAt(a, t), seated };
+    // At the keys: how far into the hold, for the chair to be pulled in (pullChairsIn).
+    const keys = seated && !press && a.state.v !== "asleep" && (a.gestures || []).find((g) => g.name === "keys" || g.name === "type");
+    const pull = keys ? envelope(keys.u, Math.min(0.3, 0.6 / Math.max(0.6, (keys.opts && keys.opts.dur) || 1))) : 0;
+    return { at, yaw: this.facingAt(a, t), seated, pull };
+  }
+
+  // AT THE KEYS, the chair is pulled in until the keyboard is a comfortable reach in front of
+  // the hips (Joshua, 2026-09-30, on Jack's stiff straight arms: the keyboard sat 0.62 m off,
+  // past the end of his 0.60 m arm, and TRADDOMIUM's reach solver will not hold a grip past
+  // 90% of the arm). A chair base rolls under a desk's edge; the clamp keeps the seat itself
+  // out from under it. Eased by the hold's own envelope: he pulls himself in when his hands
+  // go to the keys and pushes back when they leave. EACH KEYBOARD IS ONE PERSON'S -- the
+  // seated one nearest it -- or two people at the keys would be pulled into one chair.
+  pullChairsIn(places) {
+    const claims = [];
+    for (const [id, P] of Object.entries(places)) {
+      if (!P || !(P.pull > 0)) continue;
+      const fwd = [Math.sin(P.yaw), Math.cos(P.yaw)];
+      let kb = null, best = KEYBOARD_HOLD_REACH;
+      for (const K of this.keyboards) {
+        const dx = K.c.x - P.at[0], dz = K.c.z - P.at[2], d = Math.hypot(dx, dz);
+        if (d < best && dx * fwd[0] + dz * fwd[1] > 0.6 * d) { best = d; kb = K; }
+      }
+      if (kb) claims.push({ id, P, kb, d: best });
+    }
+    for (const c of claims) {
+      if (claims.some((o) => o !== c && o.kb === c.kb && o.d < c.d)) continue;
+      // to the spot square in front of the keyboard along the way the body faces, so the two
+      // hands come to it evenly rather than from off to one side
+      const fx = Math.sin(c.P.yaw), fz = Math.cos(c.P.yaw);
+      const wantX = c.kb.c.x - fx * CHAIR_TO_KEYS_M, wantZ = c.kb.c.z - fz * CHAIR_TO_KEYS_M;
+      c.P.at[0] += (wantX - c.P.at[0]) * c.P.pull;
+      c.P.at[2] += (wantZ - c.P.at[2]) * c.P.pull;
+      this.clampAisle(c.P.at, CHAIR_UNDER_DESK_M);
+    }
   }
 
   // No two bodies closer than KEEP_APART_M: whoever is standing gives way, along the line
@@ -834,16 +883,6 @@ export class People3D {
     }
     const add = (joint, q) => map.set(joint, qMul(q, map.get(joint) || IDENTITY));
     for (const [joint, q] of this.extras(body, a, t, seated)) add(joint, q);
-    if (look) {
-      // the target in the body's own frame (it faces +z; its left is +x when leftSign is +1)
-      const v = look.target.clone().sub(look.eye);
-      const c = Math.cos(-yaw), sn = Math.sin(-yaw);
-      const x = v.x * c + v.z * sn, z = -v.x * sn + v.z * c;
-      const turn = Math.max(-75 * DEG, Math.min(75 * DEG, Math.atan2(x, z))) * look.amount;
-      const down = Math.max(-25 * DEG, Math.min(35 * DEG, -Math.atan2(v.y, Math.hypot(x, z)))) * look.amount;
-      add(j.neck, qMul(ry(turn * 0.45), rx(down * 0.4)));
-      add(body.head, qMul(ry(turn * 0.55), rx(down * 0.6)));
-    }
     // THE SHOULDERS (Joshua, 2026-09-29: "Jack's shoulders look weird"). The poses lower
     // each arm from the T at the upper arm alone, and the skin there folds into a hard
     // square shoulder. A real shoulder drops the collarbone too: it takes part of the
@@ -895,12 +934,49 @@ export class People3D {
       for (let i = 0; i < 8; i++) THREE.groundFeet(body.feet, body.measure, body.rig.bind, posed, { ...footing, dt: 0.05 }, feetTurns);
     }
     const grounded = THREE.groundFeet(body.feet, body.measure, body.rig.bind, posed, footing, feetTurns);
-    body.rig.apply(grounded.turns);
     const hop = a.jolt ? 0.015 * a.jolt : 0;
-    body.model.position.set(r[0], r[1] + hop - grounded.rootDrop, r[2]);
+    const rootY = r[1] + hop - grounded.rootDrop;
+
+    // THE HEAD AND THE HANDS (TRADDOMIUM's humanAim and humanReach, the game's own): the
+    // head is aimed at the one thing it looks at, eased; the hands go to their targets and
+    // let go by REACH -- a hand holds while its grip is within 90% of its own arm -- and a
+    // free seated hand rests on its thigh. Both run on the scene's clock, and after a seek
+    // they are settled at once, as the feet are.
+    if (!body.aim) {
+      body.aim = THREE.createAim(body.measure, body.rig.bind, -1);
+      body.reach = THREE.createReach(body.measure, body.rig.bind, -1);
+      body.aimTurns = [];
+      body.reachTurns = [];
+    }
+    const frame = { rootX: r[0], rootY, rootZ: r[2], rootYaw: yaw, unitsPerMetre: body.rig.bindScale };
+    const target = look ? { x: look.target.x, y: look.target.y, z: look.target.z } : null;
+    const hands = this.handTargets(body, reaches);
+    const solve = (dt) => {
+      const aimed = THREE.aimBody(body.aim, body.measure, body.rig.bind, grounded.turns,
+        { ...frame, dt, target, bodyFree: false, weight: look ? look.amount : 1 }, body.aimTurns);
+      return THREE.reachHands(body.reach, body.measure, body.rig.bind, aimed.turns,
+        { ...frame, dt, seated, hands }, body.reachTurns);
+    };
+    if (!steady) for (let i = 0; i < 12; i++) solve(0.05);
+    const reached = solve(steady ? t - was.t : 0);
+    body.aimedAt = t;
+    body.hands = reached;
+    // An arm the pose is animating (a gesture) keeps the pose's turns, eased in and out by the
+    // gesture's own envelope: seated, the solver would otherwise rest that hand on its thigh.
+    let finalTurns = reached.turns;
+    const anim = reaches.filter((R) => R.anim && R.weight > 0);
+    if (anim.length) {
+      const mR = toMap(reached.turns), mA = toMap(body.aimTurns);
+      for (const R of anim) {
+        const arm = R.side === "L" ? [j.shoulderL, j.elbowL, j.wristL] : [j.shoulderR, j.elbowR, j.wristR];
+        for (const joint of arm) mR.set(joint, qSlerp(mR.get(joint) || IDENTITY, mA.get(joint) || IDENTITY, Math.min(1, R.weight)));
+      }
+      finalTurns = toTurns(mR);
+    }
+    body.rig.apply(finalTurns);
+    body.model.position.set(r[0], rootY, r[2]);
     body.model.rotation.set(0, yaw, 0);
     body.model.updateMatrixWorld(true);
-    for (const R of reaches) this.reachArm(body, R);
 
     body.shadow.position.set(now.p[0], 0.004, now.p[2]);
     const size = seated ? 0.62 : 0.5;
@@ -950,13 +1026,15 @@ export class People3D {
       const side = g.opts && g.opts.arm === "left" ? "L" : "R";
       const w = g.name === "press" ? pressWeight(g) : envelope(g.u, 0.3);
       const push = taps.reduce((m, tp) => Math.max(m, Math.sin(Math.PI * tp.u)), 0);
-      out.push({ side, target: T.clone().add(new THREE.Vector3(0, 0.012 - 0.02 * push, 0)), weight: w, palm: new THREE.Vector3(0, -1, 0), finger: 0.15, pressing: w });
+      out.push({ side, target: T.clone().add(new THREE.Vector3(0, 0.006 - 0.012 * push, 0)), weight: w, palm: new THREE.Vector3(0, -1, 0), pressing: w });
       busy.add(side);
     }
     for (const g of gest) {
       if (g.name === "type" && kb && g.opts && g.opts.arm) busy.add(g.opts.arm === "left" ? "L" : "R");
       else if ((g.name === "type" || g.name === "reach") && kb) { busy.add("L"); busy.add("R"); }
       if (["point", "small-hand-gesture", "wave", "hand-on-belly"].includes(g.name)) busy.add(g.opts && g.opts.arm === "left" ? "L" : "R");
+      // an arm the pose animates (a point, a wave, a small gesture): the solver must not rest it
+      if (["point", "small-hand-gesture", "wave"].includes(g.name)) out.push({ side: g.opts && g.opts.arm === "left" ? "L" : "R", anim: true, weight: envelope(g.u, 0.25) });
     }
     // HANDS ON THE KEYS ("keys", over a stretch of the chapter): both hands -- or the one
     // the event names -- rest on the nearest keyboard, the fingers never quite still, for as
@@ -973,8 +1051,8 @@ export class People3D {
       for (const [side, off, ph] of [["L", 0.1 * sgn, 0], ["R", -0.1 * sgn, 2.1]]) {
         if (!sides.includes(side) || busy.has(side)) continue;
         const target = holdKb.c.clone().addScaledVector(holdKb.axis, off);
-        target.y += 0.045 + 0.004 * Math.sin(t * 2 * Math.PI * 0.9 + ph + body.seed);
-        out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true, finger: 0.07 });
+        target.y += KEY_TOP + 0.004 * Math.sin(t * 2 * Math.PI * 0.9 + ph + body.seed);
+        out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true, axis: holdKb.axis });
         busy.add(side);
       }
     }
@@ -996,14 +1074,14 @@ export class People3D {
         for (const [side, off, ph] of [["L", 0.1 * sgn, 0], ["R", -0.1 * sgn, Math.PI]]) {
           if (only && side !== only) continue;
           const target = kb.c.clone().addScaledVector(kb.axis, off);
-          target.y += 0.045 + 0.012 * Math.max(0, Math.sin(t * 2 * Math.PI * 5.5 + ph));
-          out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true, finger: 0.07 });
+          target.y += KEY_TOP + 0.012 * Math.max(0, Math.sin(t * 2 * Math.PI * 5.5 + ph));
+          out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true, axis: kb.axis });
         }
       } else if (g.name === "reach" && kb) {
         const e = envelope(g.u, 0.3), side = g.opts && g.opts.arm === "left" ? "L" : "R";
         const target = kb.c.clone().addScaledVector(kb.axis, (side === "L" ? 1 : -1) * (kb.axis.dot(left) > 0 ? 0.08 : -0.08));
-        target.y += 0.05;
-        out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true, finger: 0.08 });
+        target.y += KEY_TOP + 0.01;
+        out.push({ side, target, weight: e, palm: new THREE.Vector3(0, -1, 0), typing: true, axis: kb.axis });
       } else if (g.name === "hand-on-belly") {
         const e = envelope(g.u, 0.25), side = g.opts && g.opts.arm === "left" ? "L" : "R";
         out.push({ side, belly: true, weight: e }); // the spot is read off the placed body (reachArm)
@@ -1012,68 +1090,41 @@ export class People3D {
     return out;
   }
 
-  // Two-bone reach: the upper arm and the forearm turned so the wrist lands on the target
-  // (the elbow falls down and out), then the forearm and hand rolled so the palm faces the
-  // way the work wants. Written straight onto the bones, after the pose.
-  reachArm(body, R) {
+  // The reaches as the solver's hand targets: where each FINGERTIP goes, in the world. A
+  // free seated hand is not listed -- the solver rests it on its thigh. A talking hand and a
+  // hand on Sarah's stomach are placed off the body as it stood last frame.
+  handTargets(body, reaches) {
+    const out = [];
     const j = body.measure.joints, B = body.bones;
-    const [sh, el, wr] = R.side === "L" ? [j.shoulderL, j.elbowL, j.wristL] : [j.shoulderR, j.elbowR, j.wristR];
     const pos = (b) => b.getWorldPosition(new THREE.Vector3());
-    const S = pos(B[sh]), E = pos(B[el]), W = pos(B[wr]);
     const yaw = body.model.rotation.y, fwd = new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw));
-    let target = R.target;
-    let palm = R.palm;
-    if (R.rest) {
-      // on the thigh, two thirds of the way to the knee, palm down; or up, talking
-      const [hip, knee] = R.side === "L" ? [j.hipL, j.kneeL] : [j.hipR, j.kneeR];
-      const H = pos(B[hip]), K = pos(B[knee]);
-      target = H.lerp(K, 0.6).add(new THREE.Vector3(0, 0.09, 0));
-      palm = new THREE.Vector3(0, -1, 0);
-      if (R.lift > 0) {
-        const chest = pos(B[j.chest]);
-        const up = chest.clone().addScaledVector(fwd, 0.34).add(new THREE.Vector3(0, -0.12, 0)).addScaledVector(S.clone().sub(chest).setY(0).normalize(), 0.12);
-        target.lerp(up, R.lift);
-        palm = palm.lerp(S.clone().sub(chest).setY(0).normalize().negate().add(new THREE.Vector3(0, 0.6, 0)), R.lift).normalize();
+    const put = (side, p, kind, palm, axis) => out.push({
+      side, x: p.x, y: p.y, z: p.z, kind,
+      ...(palm ? { palm: { x: palm.x, y: palm.y, z: palm.z } } : {}),
+      ...(axis ? { slideAxis: { x: axis.x, y: axis.y, z: axis.z } } : {}),
+    });
+    for (const R of reaches) {
+      if (R.anim) continue;
+      if (R.rest) {
+        if (!(R.lift > 0.35 && R.weight > 0.5)) continue;
+        // up in front of the chest, palm turned in and up: a hand that talks
+        const [sh] = R.side === "L" ? [j.shoulderL] : [j.shoulderR];
+        const S = pos(B[sh]), chest = pos(B[j.chest]), out2 = S.clone().sub(chest).setY(0).normalize();
+        const up = chest.clone().addScaledVector(fwd, 0.34).add(new THREE.Vector3(0, -0.12, 0)).addScaledVector(out2, 0.12);
+        put(R.side, up, "hold", out2.clone().negate().add(new THREE.Vector3(0, 0.6, 0)).normalize());
+        continue;
       }
+      if (!(R.weight > 0.5)) continue;
+      if (R.belly) {
+        const [sh] = R.side === "L" ? [j.shoulderL] : [j.shoulderR];
+        const spine = pos(B[j.spine]), pelvis = pos(B[j.pelvis]);
+        const p = spine.clone().lerp(pelvis, 0.35).addScaledVector(fwd, 0.26).addScaledVector(pos(B[sh]).sub(spine).setY(0).normalize(), 0.03);
+        put(R.side, p, "hold", fwd.clone().negate());
+        continue;
+      }
+      put(R.side, R.target, R.pressing ? "press" : "hold", R.palm, R.axis);
     }
-    if (R.belly) {
-      const spine = pos(B[j.spine]), pelvis = pos(B[j.pelvis]);
-      target = spine.clone().lerp(pelvis, 0.35).addScaledVector(fwd, 0.26);
-      const side = S.clone().sub(spine).setY(0).normalize();
-      target.addScaledVector(side, 0.03);
-      palm = fwd.clone().negate();
-    }
-    if (R.finger) {
-      // the wrist stops a hand's length short, so the fingers (not the wrist) arrive
-      const dirH = target.clone().sub(S).setY(0).normalize();
-      target = target.clone().addScaledVector(dirH, -R.finger).add(new THREE.Vector3(0, 0.02, 0));
-    }
-    const T = W.clone().lerp(target, R.weight);
-    const a = S.distanceTo(E), b = E.distanceTo(W);
-    const dir = T.clone().sub(S);
-    let d = dir.length();
-    dir.normalize();
-    const maxd = (a + b) * 0.995;
-    if (d > maxd) { T.copy(S).addScaledVector(dir, maxd); d = maxd; }
-    const cosA = Math.max(-1, Math.min(1, (a * a + d * d - b * b) / (2 * a * d)));
-    const out = S.clone().sub(pos(B[j.chest])).setY(0).normalize();
-    const pole = new THREE.Vector3(0, -1, 0).addScaledVector(out, 0.8).addScaledVector(fwd, -0.3);
-    const perp = pole.addScaledVector(dir, -pole.dot(dir)).normalize();
-    const E2 = S.clone().addScaledVector(dir, a * cosA).addScaledVector(perp, a * Math.sqrt(1 - cosA * cosA));
-    turnBone(B[sh], E.clone().sub(S), E2.sub(S));
-    const E3 = pos(B[el]), W3 = pos(B[wr]);
-    turnBone(B[el], W3.clone().sub(E3), T.clone().sub(E3));
-    if (palm) {
-      // the palm faces down in the bind's T; roll forearm and hand together to face `palm`
-      const f = pos(B[wr]).sub(E3).normalize();
-      const q = B[wr].getWorldQuaternion(new THREE.Quaternion()).multiply(body.handBindInv[R.side]);
-      const n = new THREE.Vector3(0, -1, 0).applyQuaternion(q);
-      const flat = (v) => v.clone().addScaledVector(f, -v.dot(f)).normalize();
-      const n1 = flat(n), w1 = flat(palm);
-      const ang = Math.atan2(n1.clone().cross(w1).dot(f), n1.dot(w1)) * R.weight;
-      spinBone(B[el], f, ang * 0.6);
-      spinBone(B[wr], f, ang * 0.4);
-    }
+    return out;
   }
 
   drawChairs(state, t, placed) {
@@ -1115,6 +1166,7 @@ export class People3D {
   render(state, cam, view) {
     if (!this.active) return;
     const t = state.t, W = view.w, H = view.h, z = cam.zoom;
+    this.now = t;
     for (const c of [this.peopleCanvas, this.roomCanvas]) {
       Object.assign(c.style, { left: -cam.tx / z + "px", top: -cam.ty / z + "px", width: W / z + "px", height: H / z + "px" });
     }
@@ -1152,6 +1204,7 @@ export class People3D {
     this.lights = state.lights;
     const places = {}, placed = {};
     for (const id of Object.keys(this.bodies)) if (state.actors[id]) places[id] = this.placeBody(id, state.actors[id], t);
+    this.pullChairsIn(places);
     this.keepApart(places);
     for (const id of Object.keys(places)) placed[id] = this.drawBody(id, state.actors[id], t, places[id], places);
     this.drawChairs(state, t, placed);
