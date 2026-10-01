@@ -1,0 +1,149 @@
+{
+  "chapter": 8,
+  "_comment": [
+    "Sound cues for Chapter 8 (Joshua's 07-09 manuscript, imported 2026-10-01).",
+    "Built entirely from assets already in audio/sfx-registry.json: no ElevenLabs credits are spent on sound.",
+    "Gains here are a starting point; `audio.py retune-cues` re-derives them from each asset's measured loudness and the cue's emphasisDb."
+  ],
+  "cues": [
+    {
+      "cueId": "ch08-005-control-room",
+      "asset": "amb_computer_lab",
+      "anchor": {
+        "clipId": "narrator-cb5a10ce029a",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "fadeInMs": 1500,
+      "fadeOutMs": 3000,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-7f69f700027d",
+          "occurrence": 1
+        },
+        "timing": "before"
+      },
+      "gain": 0.117,
+      "why": "Still the control room, until Jack and Mark go outside."
+    },
+    {
+      "cueId": "ch08-010-facilities-map",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-366b87f75e75",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 2400,
+      "gain": 0.029,
+      "why": "The red marker appearing on the facilities map."
+    },
+    {
+      "cueId": "ch08-020-checkout-log",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-fdcd5179af78",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "gain": 0.234,
+      "why": "Pulling the checkout log; names scroll past."
+    },
+    {
+      "cueId": "ch08-030-badge-overlay",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-fb72fda7f2ce",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "gain": 0.029,
+      "why": "The badge-tracking overlay coming up across the facility map."
+    },
+    {
+      "cueId": "ch08-040-perimeter-sensors",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-d326d0468ffc",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.166,
+      "emphasisDb": -3.0,
+      "why": "Lena pulling every perimeter sensor from the last hour."
+    },
+    {
+      "cueId": "ch08-041-second-impact",
+      "asset": "sfx_alert_warning_hit",
+      "anchor": {
+        "clipId": "narrator-9e795e3e048c",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1200,
+      "gain": 0.008,
+      "emphasisDb": -6.0,
+      "why": "The second impact on the eastern array, twelve minutes before the first: a flag on the sensor log, kept low."
+    },
+    {
+      "cueId": "ch08-050-door-seals",
+      "asset": "sfx_lab_door_slide",
+      "anchor": {
+        "clipId": "narrator-7f69f700027d",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "gain": 0.018,
+      "why": "'A soft hydraulic hiss that sounded, tonight, uncomfortably final.'"
+    },
+    {
+      "cueId": "ch08-060-outside",
+      "asset": "amb_night_outside",
+      "anchor": {
+        "clipId": "narrator-ba32b73ab4ac",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "fadeInMs": 2000,
+      "fadeOutMs": 5000,
+      "sustain": {
+        "until": "chapterEnd",
+        "timing": "after"
+      },
+      "gain": 0.16,
+      "why": "Out of the building and into the night, as Chapter 5 went out: an ordinary night, which is the horror of it."
+    },
+    {
+      "cueId": "ch08-070-radio-crackle",
+      "asset": "sfx_intercom_static",
+      "anchor": {
+        "clipId": "narrator-a950a7a4e5e6",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.011,
+      "emphasisDb": -2.0,
+      "why": "Sarah on the radio from the control room."
+    },
+    {
+      "cueId": "ch08-071-radio-channel",
+      "asset": "amb_intercom_channel_open",
+      "anchor": {
+        "clipId": "sarah-bennett-e733c7074fd8",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "fadeInMs": 200,
+      "fadeOutMs": 600,
+      "sustain": {
+        "until": {
+          "clipId": "sarah-bennett-6e3f30ca5121",
+          "occurrence": 1
+        },
+        "timing": "before"
+      },
+      "gain": 0.007,
+      "why": "The open channel under Sarah's last lines."
+    }
+  ]
+}
