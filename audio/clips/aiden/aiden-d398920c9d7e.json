@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-d398920c9d7e",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9da6bc4861f9bb980b9e30acdada12f6f09429917aa3637cdcbfb8de227de144",
+  "text": "This is Aiden, over at the greenhouse. I don't, I need someone to tell me I'm not losing my mind, because there's a spider out here the size of a delivery truck and it is not moving, and I really need somebody to explain that to me right now.",
+  "bytes": 244968,
+  "generated": "2026-10-01T19:08:51Z"
+}

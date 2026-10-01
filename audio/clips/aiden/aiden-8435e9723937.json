@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-8435e9723937",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "544ac41ba509a9ae281f8c404e0e0cbfa06f68b94ff64932638cc735605c0d11",
+  "text": "On your way to do what, exactly?",
+  "bytes": 27629,
+  "generated": "2026-10-01T19:08:49Z"
+}
