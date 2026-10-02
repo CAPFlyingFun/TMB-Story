@@ -254,7 +254,8 @@ async function boot() {
       return;
     }
     if (fromMenu && !ccOn) setCC(true);
-    langNote = L.isCurated(code) ? "Memuat terjemahan…" : "Translating on this device…";
+    const U = L.ui(code);
+    langNote = L.isCurated(code) ? U.loading : "Translating on this device…";
     showMenuPosition();
     L.forSegments(manifest.chapter, inRange, code, (f, translating) => {
       if (capLang !== code) return;
@@ -264,7 +265,7 @@ async function boot() {
       if (capLang !== code) return;
       captions = buildCaptions(anchors.segments, start, end, res.text);
       langNote = res.source === "curated"
-        ? "Terjemahan buatan tangan · ketuk teks untuk bahasa Inggris." + (res.stale.length ? ` ${res.stale.length} baris dalam bahasa Inggris.` : "")
+        ? U.handCap + (res.stale.length ? " " + U.stale(res.stale.length) : "")
         : "Machine translation by this device · tap a caption for the English.";
       capShown = null;
       dirty = true;
@@ -272,7 +273,7 @@ async function boot() {
     }).catch(() => {
       if (capLang !== code) return;
       captions = buildCaptions(anchors.segments, start, end);
-      langNote = L.isCurated(code) ? "Terjemahan belum tersedia untuk bab ini. Showing English."
+      langNote = L.isCurated(code) ? U.none
         : `This browser can't translate to ${L.name(code)} on the device. Showing English.`;
       capShown = null;
       dirty = true;
@@ -415,7 +416,7 @@ async function boot() {
   if (L) {
     const sel = $("m-lang");
     sel.innerHTML = `<option value="en">Captions in English</option>` +
-      Object.keys(L.curated).map((k) => `<option value="${k}">Teks: ${esc(L.curated[k])}</option>`).join("") +
+      `<optgroup label="Captions translated by hand">` + Object.keys(L.curated).map((k) => `<option value="${k}">${esc(L.curated[k])}</option>`).join("") + `</optgroup>` +
       `<optgroup label="Translated on this device">` + L.auto.map(([k, n]) => `<option value="${k}">${esc(n)}</option>`).join("") + `</optgroup>`;
     sel.hidden = false;
     sel.onchange = () => setLang(sel.value, true);

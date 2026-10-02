@@ -23,12 +23,14 @@
 (function () {
   var BASE = (document.currentScript && document.currentScript.src) ? new URL(".", document.currentScript.src).href : "./lang/";
   var KEY = "tmb.lang";
-  var CURATED = { id: "Bahasa Indonesia" };
+  // Translated by hand, in lang/<code>/ (Joshua, 2026-10-02: friends in Indonesia, Brazil,
+  // the Philippines and Burundi).
+  var CURATED = { id: "Bahasa Indonesia", "pt-BR": "Português (Brasil)", es: "Español", fil: "Filipino", fr: "Français" };
   // Offered for the automatic translator; the browser decides which it can actually do.
   var AUTO = [
-    ["es", "Español"], ["pt", "Português"], ["fr", "Français"], ["de", "Deutsch"], ["it", "Italiano"],
+    ["de", "Deutsch"], ["it", "Italiano"],
     ["nl", "Nederlands"], ["pl", "Polski"], ["ru", "Русский"], ["uk", "Українська"], ["tr", "Türkçe"],
-    ["ar", "العربية"], ["hi", "हिन्दी"], ["bn", "বাংলা"], ["ms", "Bahasa Melayu"], ["tl", "Filipino"],
+    ["ar", "العربية"], ["hi", "हिन्दी"], ["bn", "বাংলা"], ["ms", "Bahasa Melayu"], ["sw", "Kiswahili"],
     ["vi", "Tiếng Việt"], ["th", "ไทย"], ["ja", "日本語"], ["ko", "한국어"], ["zh", "中文"]
   ];
 
@@ -45,6 +47,41 @@
     return code;
   }
   function isCurated(code) { return !!CURATED[code]; }
+
+  // The few words the reader and the captions say about a translation, in its own language
+  // (a reader who needs the story translated needs this translated too).
+  var UI = {
+    en: { loading: "Loading the translation…", hand: "Translated by hand · tap a paragraph to see the English.",
+      handCap: "Translated by hand · tap a caption for the English.",
+      stale: function (n) { return n + (n === 1 ? " line has" : " lines have") + " changed since and show in English."; },
+      none: "This chapter isn't translated yet, so it shows in English." },
+    id: { loading: "Memuat terjemahan…", hand: "Terjemahan buatan tangan · ketuk paragraf untuk melihat bahasa Inggris.",
+      handCap: "Terjemahan buatan tangan · ketuk teks untuk bahasa Inggris.",
+      stale: function (n) { return n + " baris belum diterjemahkan ulang dan tampil dalam bahasa Inggris."; },
+      none: "Terjemahan bab ini belum tersedia, jadi ditampilkan dalam bahasa Inggris." },
+    "pt-BR": { loading: "Carregando a tradução…", hand: "Tradução feita à mão · toque num parágrafo para ver o inglês.",
+      handCap: "Tradução feita à mão · toque na legenda para ver o inglês.",
+      stale: function (n) { return n + (n === 1 ? " linha mudou" : " linhas mudaram") + " desde então e aparece" + (n === 1 ? "" : "m") + " em inglês."; },
+      none: "Este capítulo ainda não foi traduzido, então aparece em inglês." },
+    es: { loading: "Cargando la traducción…", hand: "Traducido a mano · toca un párrafo para ver el inglés.",
+      handCap: "Traducido a mano · toca un subtítulo para ver el inglés.",
+      stale: function (n) { return n + (n === 1 ? " línea cambió" : " líneas cambiaron") + " desde entonces y se muestra" + (n === 1 ? "" : "n") + " en inglés."; },
+      none: "Este capítulo aún no está traducido, así que se muestra en inglés." },
+    fil: { loading: "Nilo-load ang salin…", hand: "Isinalin nang mano-mano · i-tap ang talata para makita ang Ingles.",
+      handCap: "Isinalin nang mano-mano · i-tap ang caption para sa Ingles.",
+      stale: function (n) { return n + " linya ang nagbago at nasa Ingles muna."; },
+      none: "Hindi pa naisasalin ang kabanatang ito, kaya nasa Ingles ito." },
+    fr: { loading: "Chargement de la traduction…", hand: "Traduit à la main · touchez un paragraphe pour voir l'anglais.",
+      handCap: "Traduit à la main · touchez un sous-titre pour voir l'anglais.",
+      stale: function (n) { return n + (n === 1 ? " ligne a changé" : " lignes ont changé") + " depuis et s'affiche" + (n === 1 ? "" : "nt") + " en anglais."; },
+      none: "Ce chapitre n'est pas encore traduit, il s'affiche donc en anglais." }
+  };
+  function ui(code) {
+    var out = {}, k;
+    for (k in UI.en) out[k] = UI.en[k];
+    for (k in (UI[code] || {})) out[k] = UI[code][k];
+    return out;
+  }
   function hasAuto() { return typeof self !== "undefined" && "Translator" in self; }
 
   var curatedCache = {};
@@ -91,6 +128,7 @@
           if (e && e.en === s.displayText && e[code]) text[s.order] = e[code];
           else stale.push(s.order);
         });
+        if (!Object.keys(text).length) throw new Error("not-translated"); // a file begun but not yet filled
         return { source: "curated", title: f.title, text: text, stale: stale };
       });
     }
@@ -120,6 +158,6 @@
     return out.map(function (p) { return { paragraph: p.paragraph, en: p.en.join(" "), tr: p.tr.join(" "), missing: p.missing }; });
   }
 
-  window.TMBLang = { get: get, set: set, name: name, isCurated: isCurated, hasAuto: hasAuto, curated: CURATED, auto: AUTO,
+  window.TMBLang = { get: get, set: set, name: name, isCurated: isCurated, hasAuto: hasAuto, curated: CURATED, auto: AUTO, ui: ui,
     forSegments: forSegments, paragraphs: paragraphs, autoTranslator: autoTranslator };
 })();

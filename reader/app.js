@@ -420,13 +420,15 @@
     var btn = function (code, label) {
       return '<button type="button" class="lang-btn' + (cur === code ? " on" : "") + '" data-lang="' + code + '">' + esc(label) + "</button>";
     };
-    var opts = '<option value="">Other language…</option>' + L.auto.map(function (a) {
-      return '<option value="' + a[0] + '"' + (cur === a[0] ? " selected" : "") + ">" + esc(a[1]) + "</option>";
-    }).join("");
-    var autoOn = cur !== "en" && !L.isCurated(cur);
+    var opt = function (code, label) {
+      return '<option value="' + code + '"' + (cur === code ? " selected" : "") + ">" + esc(label) + "</option>";
+    };
+    // English is a button; every other language is one menu, the hand-made ones first
+    var opts = '<option value="">Language…</option>' +
+      '<optgroup label="Translated by hand">' + Object.keys(L.curated).map(function (k) { return opt(k, L.curated[k]); }).join("") + "</optgroup>" +
+      '<optgroup label="Translated by this device">' + L.auto.map(function (a) { return opt(a[0], a[1]); }).join("") + "</optgroup>";
     return '<div class="lang-bar" translate="no">' + btn("en", "English") +
-      Object.keys(L.curated).map(function (k) { return btn(k, L.curated[k]); }).join("") +
-      '<select class="lang-sel' + (autoOn ? " on" : "") + '" aria-label="Translate automatically">' + opts + "</select></div>" +
+      '<select class="lang-sel' + (cur !== "en" ? " on" : "") + '" aria-label="Language">' + opts + "</select></div>" +
       '<p class="lang-note" id="lang-note" hidden></p>';
   }
 
@@ -454,7 +456,8 @@
     if (code === "en") return;
     var host = document.getElementById("prose-host");
     var manifest = "audio/manifests/chapter-" + (c.number < 10 ? "0" : "") + c.number + ".json";
-    langNote(L.isCurated(code) ? "Memuat terjemahan…" : "Translating on this device…");
+    var U = L.ui(code);
+    langNote(L.isCurated(code) ? U.loading : "Translating on this device…");
     return fetch(manifest, { cache: "no-cache" }).then(function (r) {
       if (!r.ok) throw new Error("no-lines");
       return r.json();
@@ -482,8 +485,7 @@
           if (t) t.innerHTML = esc(res.title) + ' <span class="tr-orig" lang="en">' + esc(c.title || "") + "</span>";
         }
         if (res.source === "curated") {
-          langNote("Terjemahan buatan tangan · ketuk paragraf untuk melihat bahasa Inggris." +
-            (res.stale.length ? " " + res.stale.length + " baris belum diterjemahkan ulang dan tampil dalam bahasa Inggris." : ""));
+          langNote(esc(U.hand) + (res.stale.length ? " " + esc(U.stale(res.stale.length)) : ""));
         } else {
           langNote("Machine translation by this device · tap a paragraph to see the English.");
         }
@@ -491,7 +493,7 @@
     }).catch(function (err) {
       var msg = String(err && err.message);
       if (msg === "no-lines") langNote("This chapter has no line list yet, so it can only be shown in English.");
-      else if (L.isCurated(code)) langNote("Terjemahan bab ini belum tersedia. Showing English.");
+      else if (L.isCurated(code)) langNote(esc(U.none));
       else langNote("This browser can't translate to " + esc(L.name(code)) + " on the device. Your browser's own translate can (in Chrome: ⋮ → Translate…). Showing English.");
     });
   }
