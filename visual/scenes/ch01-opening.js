@@ -60,7 +60,7 @@ const REST = [
   { at: { cue: "ch01-040-second-alarm" }, action: "screen", target: J, state: "warning", text: L("Security protocol violation."), params: { tone: "red" }, flash: 1, label: "red: security protocol violation" },
   { at: { cue: "ch01-040-second-alarm" }, action: "light", target: "alarm", color: "rgba(255,50,40,0.6)", pulse: 0.6 },
   { at: { cue: "ch01-040-second-alarm" }, action: "jolt", actor: "jack", amount: 0.5, duration: 0.5 },
-  { at: { cue: "ch01-040-second-alarm" }, action: "camera", shot: "close", duration: 1.6, ease: "out" },
+  { at: { cue: "ch01-040-second-alarm" }, action: "camera", shot: "alarm", duration: 1.6, ease: "out" },
   // "Jack entered a command and pulled up the laboratory access logs. Nothing looked unusual.
   //  He tried another search and got the same result."
   { at: L("Jack entered a command"), action: "scene", name: "Access logs" },
@@ -75,7 +75,7 @@ const REST = [
   //  recognized the folder." / "Tombs project."
   { at: { cue: "ch01-050-directory-opens" }, action: "scene", name: "The TOMBS directory" },
   { at: { cue: "ch01-050-directory-opens" }, action: "screen", target: J, state: "directory", text: L("Tombs project."), flash: 0.5, label: "a directory opens by itself" },
-  { at: { cue: "ch01-050-directory-opens" }, action: "camera", shot: "screen", duration: 3, ease: "inOut" },
+  { at: { cue: "ch01-050-directory-opens" }, action: "camera", shot: "shoulder", duration: 3, ease: "inOut" },
   { at: L("The system beeped", { phrase: "Jack stopped typing" }), action: "state", actor: "jack", state: "still" },
   { at: L("Tombs project."), action: "screen", target: J, flash: 0.5 },
   // "He immediately locked the terminal. The screen went black for three seconds, then came
@@ -85,7 +85,8 @@ const REST = [
   { at: { cue: "ch01-060-terminal-lock" }, action: "jolt", actor: "jack", amount: 0.4, duration: 0.4 },
   { at: { cue: "ch01-061-terminal-returns" }, action: "screen", target: J, state: "directory", text: L("Tombs project."), flash: 0.6, label: "…and it comes back" },
   { at: { cue: "ch01-061-terminal-returns" }, action: "light", target: "monitor", intensity: 0.32, duration: 0.3 },
-  { at: L("Jack stared at it."), action: "camera", shot: "medium", duration: 2.5, ease: "inOut" },
+  // "Jack stared at it." stays over his shoulder: a pull back here only to push straight in
+  // to the intercom a line later was the pumping Joshua saw (2026-10-02).
 
   // The intercom. "He reached for the intercom." / "Sarah?" / "Static answered him."
   { at: L("He reached for the intercom."), action: "scene", name: "The intercom" },
@@ -108,7 +109,7 @@ const REST = [
   //  still open." / "Who are you?"
   { at: { cue: "ch01-080-intercom-close" }, action: "light", target: "intercom", intensity: 0, duration: 0.3, label: "intercom closed" },
   { at: L("Jack released the intercom"), action: "screen", target: J, state: "directory", text: L("Tombs project.") },
-  { at: L("Jack released the intercom"), action: "camera", shot: "screen", duration: 5, ease: "inOut" },
+  { at: L("Jack released the intercom"), action: "camera", shot: "shoulder", duration: 5, ease: "inOut" },
   { at: L("Jack released the intercom"), action: "state", actor: "jack", state: "leaning" },
   // "The cursor moved without him touching anything." / "Jack froze as a file opened."
   { at: L("The cursor moved"), action: "scene", name: "The cursor moves" },
@@ -118,7 +119,7 @@ const REST = [
   { at: { cue: "ch01-090-file-opens" }, action: "light", target: "monitor", color: AMBER, intensity: 0.4, duration: 0.4 },
   // "He reached for the keyboard just as the laboratory door slid open behind him."
   { at: L("He reached for the keyboard"), action: "move", actor: "jack", x: 745, y: 1178, duration: 0.5, ease: "out" },
-  { at: { cue: "ch01-100-door-slides" }, action: "camera", shot: "doorway", duration: 2.6, ease: "inOut", label: "the door, behind him" },
+  { at: { cue: "ch01-100-door-slides" }, action: "camera", shot: "doorway", duration: 0, label: "cut: the door, behind him" },
   { at: { cue: "ch01-100-door-slides" }, action: "jolt", actor: "jack", amount: 0.5, duration: 0.5 },
 
   // "Sarah Bennett walked straight in, tablet tucked beneath one arm, already crossing
@@ -221,9 +222,9 @@ const REST = [
   { at: L("Jack shook his head."), action: "jolt", actor: "jack", amount: 0.2, duration: 0.8 },
   // "Jack pulled up the TOMBS directory again, tracing back through what had changed."
   { at: L("Jack pulled up the TOMBS directory again"), action: "screen", target: J, state: "directory", text: L("Tombs project.") },
-  { at: L("Jack pulled up the TOMBS directory again"), action: "camera", shot: "screen", duration: 2.4, ease: "inOut" },
+  { at: L("Jack pulled up the TOMBS directory again"), action: "camera", shot: "insert", duration: 0 },
   { at: L("These are clean,"), action: "screen", target: S, state: "history", params: { clean: true } },
-  { at: L("These are clean,"), action: "camera", shot: "pair", duration: 2.4, ease: "inOut" },
+  { at: L("These are clean,"), action: "camera", shot: "pair", duration: 0 },
   { at: L("Jack pointed at his own screen."), action: "jolt", actor: "jack", amount: 0.25, duration: 0.5 },
   { at: L("Jack nodded.", { nth: 1 }), action: "jolt", actor: "jack", amount: 0.25, duration: 0.5 },
   { at: L("Sarah looked sideways at him."), action: "face", actor: "sarah", direction: "northwest" },
@@ -258,28 +259,28 @@ const REST = [
   { at: L("Tombs array remote initialization request."), action: "screen", target: J, state: "request", text: L("Tombs array remote initialization request."), flash: 1, label: "TOMBS ARRAY: REMOTE INITIALIZATION REQUEST" },
   { at: L("Tombs array remote initialization request."), action: "light", target: "monitor", color: AMBER, intensity: 0.45, duration: 0.4 },
   { at: L("Tombs array remote initialization request."), action: "light", target: "alarm", intensity: 0.25, throb: 1.2, duration: 0.4 },
-  { at: L("Tombs array remote initialization request."), action: "camera", shot: "screen", duration: 2.2, ease: "inOut" },
+  { at: L("Tombs array remote initialization request."), action: "camera", shot: "insert", duration: 0 },
   { at: L("Sarah sat upright."), action: "jolt", actor: "sarah", amount: 0.4, duration: 0.5 },
   { at: L("Sarah sat upright."), action: "state", actor: "sarah", state: "awake" },
-  { at: L("Sarah sat upright."), action: "camera", shot: "pair", duration: 2, ease: "inOut" },
+  { at: L("Sarah sat upright."), action: "camera", shot: "pair", duration: 0 },
   { at: L("Jack reached for the console."), action: "move", actor: "jack", x: 750, y: 1176, duration: 0.6, ease: "out" },
   { at: L("Sarah pointed at the request."), action: "jolt", actor: "sarah", amount: 0.25, duration: 0.5 },
   // "Jack reached across the console and rejected the request." / "Request denied." x2
-  { at: L("Jack reached across the console"), action: "camera", shot: "screen", duration: 2, ease: "inOut" },
+  { at: L("Jack reached across the console"), action: "camera", shot: "insert", duration: 0 },
   { at: { cue: "ch01-160-denied-first" }, action: "screen", target: J, state: "request", text: L("Tombs array remote initialization request."), params: { denied: 1 }, flash: 0.8, label: "request denied" },
   { at: { cue: "ch01-160-denied-first" }, action: "light", target: "alarm", pulse: 0.4 },
   { at: { cue: "ch01-161-denied-second" }, action: "screen", target: J, state: "request", text: L("Tombs array remote initialization request."), params: { denied: 2 }, flash: 0.8, label: "denied again" },
   { at: { cue: "ch01-161-denied-second" }, action: "light", target: "alarm", pulse: 0.5 },
-  { at: L("Jack's expression hardened."), action: "camera", shot: "pairClose", duration: 2.2, ease: "inOut" },
+  { at: L("Jack's expression hardened."), action: "camera", shot: "pairClose", duration: 0 },
   { at: L("Jack's expression hardened."), action: "state", actor: "jack", state: "still" },
   // "He entered his administrator credentials, but a new message appeared..." / "Access revoked."
   { at: L("He entered his administrator credentials"), action: "screen", target: J, state: "request", text: L("Tombs array remote initialization request."), params: { denied: 2, creds: true } },
-  { at: L("He entered his administrator credentials"), action: "camera", shot: "screen", duration: 3, ease: "inOut" },
+  { at: L("He entered his administrator credentials"), action: "camera", shot: "insert", duration: 0 },
   { at: { cue: "ch01-170-revoked" }, action: "screen", target: J, state: "request", text: L("Tombs array remote initialization request."), params: { denied: 2, revoked: true }, flash: 1, label: "ACCESS REVOKED" },
   { at: { cue: "ch01-170-revoked" }, action: "light", target: "monitor", color: "rgba(255,50,40,0.6)", intensity: 0.5, duration: 0.3 },
   { at: { cue: "ch01-170-revoked" }, action: "light", target: "alarm", color: "rgba(255,50,40,0.6)", pulse: 0.7 },
   { at: L("Sarah looked from the message to him."), action: "face", actor: "sarah", direction: "west" },
-  { at: L("Sarah looked from the message to him."), action: "camera", shot: "pair", duration: 2.4, ease: "inOut" },
+  { at: L("Sarah looked from the message to him."), action: "camera", shot: "pair", duration: 0 },
   { at: L("Jack stared at the warning."), action: "face", actor: "jack", direction: "northeast" },
   { at: L("Sarah turned toward him."), action: "face", actor: "sarah", direction: "west" },
   { at: L("Jack tried his credentials again."), action: "jolt", actor: "jack", amount: 0.3, duration: 0.5 },
@@ -502,12 +503,23 @@ export default {
         asleep: { x: 420, y: 430, w: 900, h: 700, focus: [820, 800], cam3: { at: [0.3, 1.45, -1.55], look: [-0.05, 1.1, -3.1], hfov: 50 } },
         chirp: { x: 500, y: 470, w: 760, h: 600, focus: [880, 760], cam3: { at: [0.28, 1.42, -2.0], look: [0.02, 1.12, -3.3], hfov: 47 } },
         close: { x: 560, y: 510, w: 640, h: 520, focus: [900, 740], cam3: { at: [0.5, 1.42, -2.1], look: [0.18, 1.14, -3.6], hfov: 50 } },
-        rollback: { x: 340, y: 400, w: 1000, h: 752, focus: [760, 820] },
-        medium: { x: 520, y: 470, w: 760, h: 640, focus: [860, 760] },
-        screen: { x: 700, y: 540, w: 560, h: 420, focus: [960, 690] },
-        // From Jack's right side when the people are in 3D, so he is not in front of the
-        // intercom he is talking to (Joshua, 2026-09-29).
-        intercom: { x: 560, y: 560, w: 560, h: 440, focus: [800, 780], cam3: { at: [0.78, 1.32, -3.42], look: [-0.22, 1.0, -3.78], hfov: 56 } },
+        // From the alarm to the door every shot near Jack is a real camera behind his right
+        // shoulder, all turned within a few degrees of each other, so a move between two of
+        // them is a short glide (Joshua, 2026-10-02: his head was "blocking the screen", and
+        // the move to the intercom "wasn't smooth and jumping around" -- it swung the lens 75
+        // degrees and carried it three and a half metres in two and a half seconds, through
+        // the picture's own camera at the far end of the room).
+        alarm: { x: 560, y: 510, w: 640, h: 520, focus: [900, 740], cam3: { at: [0.95, 1.5, -2.5], look: [0.25, 1.12, -3.8], hfov: 40 } },
+        rollback: { x: 340, y: 400, w: 1000, h: 752, focus: [760, 820], cam3: { at: [1.2, 1.6, -1.3], look: [-0.1, 1.0, -3.3], hfov: 58 } },
+        medium: { x: 520, y: 470, w: 760, h: 640, focus: [860, 760], cam3: { at: [1.05, 1.55, -1.9], look: [0.1, 1.1, -3.5], hfov: 50 } },
+        shoulder: { x: 700, y: 540, w: 560, h: 420, focus: [960, 690], cam3: { at: [1.0, 1.55, -2.6], look: [0.22, 1.1, -3.8], hfov: 42 } },
+        // Once Sarah sits at his right there is no room over his shoulder: the screen is seen
+        // from above both of them, and cut to and from (a move from the flat two-shots would
+        // be the same long swoop).
+        insert: { x: 700, y: 540, w: 560, h: 420, focus: [960, 690], cam3: { at: [0.5, 2.0, -2.6], look: [0.22, 1.1, -3.8], hfov: 42 } },
+        // High behind his right shoulder, looking down at the intercom, so his head, leaning
+        // in to talk, is never between the lens and the box (Joshua, 2026-09-29 and 2026-10-02).
+        intercom: { x: 560, y: 560, w: 560, h: 440, focus: [800, 780], cam3: { at: [0.4, 1.7, -2.6], look: [-0.2, 1.0, -3.75], hfov: 50 } },
         doorway: { x: 400, y: 250, w: 1648, h: 902, focus: [1660, 820] }, // a phone held upright keeps the door side
         twoshot: { x: 420, y: 380, w: 1180, h: 772, focus: [930, 820] },
         leanover: { x: 540, y: 440, w: 760, h: 660, focus: [880, 820] },
@@ -605,7 +617,7 @@ export default {
     //  opened the network monitor."
     { at: { line: "Several windows were opening" }, action: "scene", name: "Intrusion" },
     { at: { line: "Several windows were opening" }, action: "screen", target: "jack-monitor", state: "intrusion", params: { networkMonitorAt: 10.2 }, label: "windows open and close on their own" },
-    { at: { line: "Several windows were opening", offset: 0.6 }, action: "camera", shot: "screen", duration: 7, ease: "inOut", label: "push in over Jack's shoulder" },
+    { at: { line: "Several windows were opening", offset: 0.6 }, action: "camera", shot: "shoulder", duration: 7, ease: "inOut", label: "push in over Jack's shoulder" },
     { at: { line: "Several windows were opening", offset: 8.4 }, action: "move", actor: "jack", dy: -8, duration: 0.5, ease: "out", label: "grabs the keyboard" },
     { at: { line: "Several windows were opening", offset: 10.2 }, action: "scene", name: "Network monitor" },
 
