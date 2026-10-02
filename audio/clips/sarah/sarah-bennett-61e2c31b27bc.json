@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-61e2c31b27bc",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5f7c6b3f2db5c1b0c9319bf4ee246db9a8623cd329dacdc83c012826d6130326",
+  "text": "So we're both going.",
+  "bytes": 20942,
+  "generated": "2026-10-02T03:48:25Z"
+}
