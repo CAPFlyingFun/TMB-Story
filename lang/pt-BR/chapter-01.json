@@ -1,0 +1,1100 @@
+{
+ "chapter": 1,
+ "lang": "pt-BR",
+ "title_en": "The Alarm",
+ "title": "O Alarme",
+ "segments": {
+  "0": {
+   "who": "Narrator",
+   "p": 0,
+   "en": "It was March fifth, in the year twenty-one ten.",
+   "pt-BR": "Era cinco de março do ano de dois mil cento e dez."
+  },
+  "1": {
+   "who": "Narrator",
+   "p": 1,
+   "en": "It was almost eleven at night on a remote island somewhere in the Atlantic Ocean. The island stretched roughly fifty-six kilometers across, about thirty-five miles from one side to the other, but most of it remained undeveloped wilderness. Near its center sat a research settlement of laboratories, homes, workshops, medical facilities, and other buildings supporting the nearly five hundred people who lived there.",
+   "pt-BR": "Eram quase onze da noite numa ilha remota, em algum lugar do Oceano Atlântico. A ilha tinha cerca de cinquenta e seis quilômetros de largura, umas trinta e cinco milhas de um lado a outro, mas a maior parte dela continuava sendo mata intocada. Perto do centro ficava uma vila de pesquisa, com laboratórios, casas, oficinas, instalações médicas e outros prédios que davam suporte às quase quinhentas pessoas que moravam ali."
+  },
+  "2": {
+   "who": "Narrator",
+   "p": 2,
+   "en": "Deep inside one of those laboratories, Dr. Jack Bennett was hard at work. Technically.",
+   "pt-BR": "No fundo de um desses laboratórios, o Dr. Jack Bennett trabalhava duro. Tecnicamente."
+  },
+  "3": {
+   "who": "Narrator",
+   "p": 3,
+   "en": "Jack sat slumped in his chair with his arms folded across his chest, his head tilted toward one shoulder, and several pages of diagnostic data glowing on the monitor in front of him. His eyes were closed.",
+   "pt-BR": "Jack estava largado na cadeira, de braços cruzados sobre o peito, a cabeça tombada para um dos ombros e várias páginas de dados de diagnóstico brilhando no monitor à sua frente. Seus olhos estavam fechados."
+  },
+  "4": {
+   "who": "Narrator",
+   "p": 4,
+   "en": "A warning tone chirped from Jack's console. He shifted but did not wake. A second tone followed, louder than the first, and the diagnostic display flashed amber.",
+   "pt-BR": "Um tom de alerta apitou no console de Jack. Ele se mexeu, mas não acordou. Um segundo tom veio em seguida, mais alto que o primeiro, e a tela de diagnóstico piscou em âmbar."
+  },
+  "5": {
+   "who": "TOMBS / settlement systems",
+   "p": 5,
+   "en": "Warning. Unauthorized system access.",
+   "pt-BR": "Alerta. Acesso não autorizado ao sistema."
+  },
+  "6": {
+   "who": "Narrator",
+   "p": 5,
+   "en": "Jack jerked awake so quickly that his chair rolled backward and nearly struck another workstation.",
+   "pt-BR": "Jack acordou com um tranco tão brusco que a cadeira rolou para trás e quase bateu em outra estação de trabalho."
+  },
+  "7": {
+   "who": "Jack Bennett",
+   "p": 5,
+   "en": "What? Okay, I'm awake.",
+   "pt-BR": "Quê? Tá bom, tô acordado."
+  },
+  "8": {
+   "who": "Narrator",
+   "p": 6,
+   "en": "The warning repeated while Jack rubbed his eyes and leaned toward the monitor.",
+   "pt-BR": "O alerta se repetiu enquanto Jack esfregava os olhos e se inclinava para o monitor."
+  },
+  "9": {
+   "who": "Jack Bennett",
+   "p": 6,
+   "en": "That's not good.",
+   "pt-BR": "Isso não é bom."
+  },
+  "10": {
+   "who": "Narrator",
+   "p": 7,
+   "en": "Several windows were opening and closing on their own. Lines of commands streamed across one side of the display faster than he could read them. Jack grabbed the keyboard and opened the network monitor.",
+   "pt-BR": "Várias janelas abriam e fechavam sozinhas. Linhas de comando corriam por um lado da tela mais rápido do que ele conseguia ler. Jack agarrou o teclado e abriu o monitor de rede."
+  },
+  "11": {
+   "who": "Jack Bennett",
+   "p": 7,
+   "en": "Come on. What are you doing?",
+   "pt-BR": "Vamos lá. O que você está fazendo?"
+  },
+  "12": {
+   "who": "Narrator",
+   "p": 8,
+   "en": "An unfamiliar connection appeared for half a second and vanished.",
+   "pt-BR": "Uma conexão desconhecida apareceu por meio segundo e sumiu."
+  },
+  "13": {
+   "who": "Narrator",
+   "p": 9,
+   "en": "Jack frowned.",
+   "pt-BR": "Jack franziu a testa."
+  },
+  "14": {
+   "who": "Jack Bennett",
+   "p": 9,
+   "en": "No. Where'd you go?",
+   "pt-BR": "Não. Pra onde você foi?"
+  },
+  "15": {
+   "who": "Narrator",
+   "p": 9,
+   "en": "He refreshed the display, but the connection was gone. Another warning tone sounded from the console and a red message filled the center of his screen.",
+   "pt-BR": "Ele atualizou a tela, mas a conexão tinha desaparecido. Outro tom de alerta soou no console, e uma mensagem vermelha ocupou o centro da tela."
+  },
+  "16": {
+   "who": "TOMBS / settlement systems",
+   "p": 10,
+   "en": "Security protocol violation.",
+   "pt-BR": "Violação do protocolo de segurança."
+  },
+  "17": {
+   "who": "Jack Bennett",
+   "p": 10,
+   "en": "Okay. Definitely awake now.",
+   "pt-BR": "Tá bom. Agora com certeza estou acordado."
+  },
+  "18": {
+   "who": "Narrator",
+   "p": 10,
+   "en": "Jack entered a command and pulled up the laboratory access logs. Nothing looked unusual. He tried another search and got the same result.",
+   "pt-BR": "Jack digitou um comando e abriu os registros de acesso do laboratório. Nada parecia fora do comum. Ele tentou outra busca e teve o mesmo resultado."
+  },
+  "19": {
+   "who": "Jack Bennett",
+   "p": 10,
+   "en": "That's impossible.",
+   "pt-BR": "Isso é impossível."
+  },
+  "20": {
+   "who": "Narrator",
+   "p": 11,
+   "en": "The system beeped, and a directory opened by itself. Jack stopped typing when he recognized the folder.",
+   "pt-BR": "O sistema apitou, e um diretório se abriu sozinho. Jack parou de digitar ao reconhecer a pasta."
+  },
+  "21": {
+   "who": "TOMBS / settlement systems",
+   "p": 12,
+   "en": "Tombs project.",
+   "pt-BR": "Projeto Tombs."
+  },
+  "22": {
+   "who": "Jack Bennett",
+   "p": 12,
+   "en": "Oh, no you don't.",
+   "pt-BR": "Ah, não, nem pensar."
+  },
+  "23": {
+   "who": "Narrator",
+   "p": 12,
+   "en": "He immediately locked the terminal. The screen went black for three seconds, then came back on and reopened the same directory.",
+   "pt-BR": "Ele bloqueou o terminal na mesma hora. A tela ficou preta por três segundos, depois voltou a acender e reabriu o mesmo diretório."
+  },
+  "24": {
+   "who": "Narrator",
+   "p": 13,
+   "en": "Jack stared at it.",
+   "pt-BR": "Jack ficou olhando para ela."
+  },
+  "25": {
+   "who": "Jack Bennett",
+   "p": 13,
+   "en": "Well, that's new.",
+   "pt-BR": "Bom, isso é novidade."
+  },
+  "26": {
+   "who": "Narrator",
+   "p": 14,
+   "en": "He reached for the intercom.",
+   "pt-BR": "Ele estendeu a mão para o interfone."
+  },
+  "27": {
+   "who": "Jack Bennett",
+   "p": 14,
+   "en": "Sarah?",
+   "pt-BR": "Sarah?"
+  },
+  "28": {
+   "who": "Narrator",
+   "p": 15,
+   "en": "Static answered him.",
+   "pt-BR": "Só estática respondeu."
+  },
+  "29": {
+   "who": "Narrator",
+   "p": 16,
+   "en": "Jack tapped the button again.",
+   "pt-BR": "Jack apertou o botão de novo."
+  },
+  "30": {
+   "who": "Jack Bennett",
+   "p": 16,
+   "en": "Sarah, you there?",
+   "pt-BR": "Sarah, você tá aí?"
+  },
+  "31": {
+   "who": "Narrator",
+   "p": 17,
+   "en": "Sarah answered through the speaker.",
+   "pt-BR": "Sarah respondeu pelo alto-falante."
+  },
+  "32": {
+   "who": "Sarah Bennett",
+   "p": 17,
+   "en": "I'm here. What's wrong?",
+   "pt-BR": "Tô aqui. O que houve?"
+  },
+  "33": {
+   "who": "Jack Bennett",
+   "p": 18,
+   "en": "I've got something weird on my computer. It tripped a security alarm.",
+   "pt-BR": "Tem uma coisa estranha no meu computador. Disparou um alarme de segurança."
+  },
+  "34": {
+   "who": "Narrator",
+   "p": 19,
+   "en": "Sarah leaned closer to the intercom.",
+   "pt-BR": "Sarah se aproximou do interfone."
+  },
+  "35": {
+   "who": "Sarah Bennett",
+   "p": 19,
+   "en": "Define weird.",
+   "pt-BR": "Estranha como?"
+  },
+  "36": {
+   "who": "Narrator",
+   "p": 20,
+   "en": "Jack reopened the network monitor.",
+   "pt-BR": "Jack reabriu o monitor de rede."
+  },
+  "37": {
+   "who": "Jack Bennett",
+   "p": 20,
+   "en": "I think somebody's in the system.",
+   "pt-BR": "Acho que tem alguém no sistema."
+  },
+  "38": {
+   "who": "Narrator",
+   "p": 21,
+   "en": "There was a brief pause before Sarah asked,",
+   "pt-BR": "Houve uma breve pausa antes de Sarah perguntar:"
+  },
+  "39": {
+   "who": "Sarah Bennett",
+   "p": 21,
+   "en": "Are you sure?",
+   "pt-BR": "Tem certeza?"
+  },
+  "40": {
+   "who": "Narrator",
+   "p": 22,
+   "en": "Jack scanned the empty connection list.",
+   "pt-BR": "Jack percorreu com os olhos a lista de conexões vazia."
+  },
+  "41": {
+   "who": "Jack Bennett",
+   "p": 22,
+   "en": "No. That's why I'm calling the smarter scientist.",
+   "pt-BR": "Não. É por isso que estou chamando a cientista mais inteligente."
+  },
+  "42": {
+   "who": "Narrator",
+   "p": 23,
+   "en": "Sarah laughed softly through the speaker.",
+   "pt-BR": "Sarah riu baixinho pelo alto-falante."
+  },
+  "43": {
+   "who": "Sarah Bennett",
+   "p": 23,
+   "en": "Good answer.",
+   "pt-BR": "Boa resposta."
+  },
+  "44": {
+   "who": "Narrator",
+   "p": 24,
+   "en": "Jack smiled despite himself.",
+   "pt-BR": "Jack sorriu, mesmo sem querer."
+  },
+  "45": {
+   "who": "Jack Bennett",
+   "p": 24,
+   "en": "Can you come take a look?",
+   "pt-BR": "Pode vir dar uma olhada?"
+  },
+  "46": {
+   "who": "Sarah Bennett",
+   "p": 25,
+   "en": "I'm on my way,",
+   "pt-BR": "Tô indo,"
+  },
+  "47": {
+   "who": "Narrator",
+   "p": 25,
+   "en": "Sarah replied.",
+   "pt-BR": "Sarah respondeu."
+  },
+  "48": {
+   "who": "Narrator",
+   "p": 26,
+   "en": "Jack released the intercom and looked back at the monitor. The TOMBS directory was still open.",
+   "pt-BR": "Jack soltou o interfone e voltou a olhar para o monitor. O diretório do TOMBS continuava aberto."
+  },
+  "49": {
+   "who": "Jack Bennett",
+   "p": 26,
+   "en": "Who are you?",
+   "pt-BR": "Quem é você?"
+  },
+  "50": {
+   "who": "Narrator",
+   "p": 27,
+   "en": "The cursor moved without him touching anything.",
+   "pt-BR": "O cursor se moveu sem que ele tocasse em nada."
+  },
+  "51": {
+   "who": "Narrator",
+   "p": 28,
+   "en": "Jack froze as a file opened.",
+   "pt-BR": "Jack congelou quando um arquivo se abriu."
+  },
+  "52": {
+   "who": "TOMBS / settlement systems",
+   "p": 29,
+   "en": "Boundary control.",
+   "pt-BR": "Controle de limite."
+  },
+  "53": {
+   "who": "Jack Bennett",
+   "p": 29,
+   "en": "No, no, no.",
+   "pt-BR": "Não, não, não."
+  },
+  "54": {
+   "who": "Narrator",
+   "p": 29,
+   "en": "He reached for the keyboard just as the laboratory door slid open behind him.",
+   "pt-BR": "Ele estendeu a mão para o teclado no exato momento em que a porta do laboratório deslizou e se abriu atrás dele."
+  },
+  "55": {
+   "who": "Narrator",
+   "p": 30,
+   "en": "Sarah Bennett walked straight in, tablet tucked beneath one arm, already crossing toward him. She glanced from Jack to the computer.",
+   "pt-BR": "Sarah Bennett entrou direto, com o tablet debaixo do braço, já atravessando a sala na direção dele. Ela olhou de Jack para o computador."
+  },
+  "56": {
+   "who": "Sarah Bennett",
+   "p": 30,
+   "en": "Please tell me you didn't break something.",
+   "pt-BR": "Por favor, me diz que você não quebrou nada."
+  },
+  "57": {
+   "who": "Jack Bennett",
+   "p": 31,
+   "en": "I was asleep,",
+   "pt-BR": "Eu estava dormindo,"
+  },
+  "58": {
+   "who": "Narrator",
+   "p": 31,
+   "en": "Jack replied.",
+   "pt-BR": "Jack respondeu."
+  },
+  "59": {
+   "who": "Narrator",
+   "p": 32,
+   "en": "Sarah closed the distance between them.",
+   "pt-BR": "Sarah chegou até ele."
+  },
+  "60": {
+   "who": "Sarah Bennett",
+   "p": 32,
+   "en": "You called me in here to admit that?",
+   "pt-BR": "Você me chamou aqui pra confessar isso?"
+  },
+  "61": {
+   "who": "Narrator",
+   "p": 33,
+   "en": "Jack gestured toward the console.",
+   "pt-BR": "Jack fez um gesto para o console."
+  },
+  "62": {
+   "who": "Jack Bennett",
+   "p": 33,
+   "en": "No. That was my defense.",
+   "pt-BR": "Não. Essa foi a minha defesa."
+  },
+  "63": {
+   "who": "Narrator",
+   "p": 34,
+   "en": "Sarah raised an eyebrow.",
+   "pt-BR": "Sarah ergueu uma sobrancelha."
+  },
+  "64": {
+   "who": "Sarah Bennett",
+   "p": 34,
+   "en": "Against what?",
+   "pt-BR": "Contra o quê?"
+  },
+  "65": {
+   "who": "Narrator",
+   "p": 35,
+   "en": "Jack pointed toward the monitor.",
+   "pt-BR": "Jack apontou para o monitor."
+  },
+  "66": {
+   "who": "Jack Bennett",
+   "p": 35,
+   "en": "Whatever this is. I was reviewing yesterday's test results.",
+   "pt-BR": "Contra isso aí, seja lá o que for. Eu estava revisando os resultados do teste de ontem."
+  },
+  "67": {
+   "who": "Sarah Bennett",
+   "p": 36,
+   "en": "You were sleeping,",
+   "pt-BR": "Você estava dormindo,"
+  },
+  "68": {
+   "who": "Narrator",
+   "p": 36,
+   "en": "Sarah corrected him.",
+   "pt-BR": "Sarah o corrigiu."
+  },
+  "69": {
+   "who": "Narrator",
+   "p": 37,
+   "en": "Jack sat a little straighter.",
+   "pt-BR": "Jack se endireitou um pouco na cadeira."
+  },
+  "70": {
+   "who": "Jack Bennett",
+   "p": 37,
+   "en": "I was reviewing them internally.",
+   "pt-BR": "Eu estava revisando mentalmente."
+  },
+  "71": {
+   "who": "Narrator",
+   "p": 38,
+   "en": "Sarah glanced at him.",
+   "pt-BR": "Sarah olhou para ele."
+  },
+  "72": {
+   "who": "Sarah Bennett",
+   "p": 38,
+   "en": "With your eyes closed?",
+   "pt-BR": "De olhos fechados?"
+  },
+  "73": {
+   "who": "Narrator",
+   "p": 39,
+   "en": "Jack nodded solemnly.",
+   "pt-BR": "Jack assentiu, solene."
+  },
+  "74": {
+   "who": "Jack Bennett",
+   "p": 39,
+   "en": "It's an advanced technique.",
+   "pt-BR": "É uma técnica avançada."
+  },
+  "75": {
+   "who": "Narrator",
+   "p": 40,
+   "en": "She leaned over his shoulder and studied the screen.",
+   "pt-BR": "Ela se inclinou por cima do ombro dele e examinou a tela."
+  },
+  "76": {
+   "who": "Sarah Bennett",
+   "p": 40,
+   "en": "Jack.",
+   "pt-BR": "Jack."
+  },
+  "77": {
+   "who": "Narrator",
+   "p": 41,
+   "en": "Jack straightened in his chair while Sarah placed her tablet beside the keyboard.",
+   "pt-BR": "Jack se ajeitou na cadeira enquanto Sarah colocava o tablet ao lado do teclado."
+  },
+  "78": {
+   "who": "Jack Bennett",
+   "p": 41,
+   "en": "Right. Problem. I got an unauthorized access warning. I checked the network monitor and saw a connection I didn't recognize, but it disappeared before I could trace it.",
+   "pt-BR": "Certo. Problema. Recebi um alerta de acesso não autorizado. Olhei o monitor de rede e vi uma conexão que eu não reconheci, mas ela sumiu antes que eu conseguisse rastrear."
+  },
+  "79": {
+   "who": "Narrator",
+   "p": 42,
+   "en": "Sarah tapped the edge of the keyboard.",
+   "pt-BR": "Sarah tamborilou na borda do teclado."
+  },
+  "80": {
+   "who": "Sarah Bennett",
+   "p": 42,
+   "en": "And then?",
+   "pt-BR": "E aí?"
+  },
+  "81": {
+   "who": "Narrator",
+   "p": 43,
+   "en": "Jack pointed to the open directory.",
+   "pt-BR": "Jack apontou para o diretório aberto."
+  },
+  "82": {
+   "who": "Jack Bennett",
+   "p": 43,
+   "en": "It opened the TOMBS directory.",
+   "pt-BR": "Abriu o diretório do TOMBS."
+  },
+  "83": {
+   "who": "Narrator",
+   "p": 44,
+   "en": "Sarah's attention sharpened.",
+   "pt-BR": "A atenção de Sarah se aguçou."
+  },
+  "84": {
+   "who": "Sarah Bennett",
+   "p": 44,
+   "en": "By itself?",
+   "pt-BR": "Sozinho?"
+  },
+  "85": {
+   "who": "Jack Bennett",
+   "p": 45,
+   "en": "Yep.",
+   "pt-BR": "Aham."
+  },
+  "86": {
+   "who": "Narrator",
+   "p": 46,
+   "en": "Sarah looked at the terminal lock indicator.",
+   "pt-BR": "Sarah olhou para o indicador de bloqueio do terminal."
+  },
+  "87": {
+   "who": "Sarah Bennett",
+   "p": 46,
+   "en": "You locked the terminal?",
+   "pt-BR": "Você bloqueou o terminal?"
+  },
+  "88": {
+   "who": "Narrator",
+   "p": 47,
+   "en": "Jack nodded.",
+   "pt-BR": "Jack assentiu."
+  },
+  "89": {
+   "who": "Jack Bennett",
+   "p": 47,
+   "en": "Yep.",
+   "pt-BR": "Aham."
+  },
+  "90": {
+   "who": "Narrator",
+   "p": 48,
+   "en": "Sarah waited.",
+   "pt-BR": "Sarah esperou."
+  },
+  "91": {
+   "who": "Sarah Bennett",
+   "p": 48,
+   "en": "And?",
+   "pt-BR": "E?"
+  },
+  "92": {
+   "who": "Narrator",
+   "p": 49,
+   "en": "Jack leaned back.",
+   "pt-BR": "Jack se recostou."
+  },
+  "93": {
+   "who": "Jack Bennett",
+   "p": 49,
+   "en": "It unlocked itself.",
+   "pt-BR": "Desbloqueou sozinho."
+  },
+  "94": {
+   "who": "Narrator",
+   "p": 50,
+   "en": "Sarah stared at him for a moment before looking back at the monitor. Jack pointed at the screen.",
+   "pt-BR": "Sarah ficou olhando para ele por um instante antes de voltar a olhar para o monitor. Jack apontou para a tela."
+  },
+  "95": {
+   "who": "Jack Bennett",
+   "p": 50,
+   "en": "I know.",
+   "pt-BR": "Eu sei."
+  },
+  "96": {
+   "who": "Narrator",
+   "p": 51,
+   "en": "Sarah started powering up the other console next to Jack.",
+   "pt-BR": "Sarah começou a ligar o outro console, ao lado de Jack."
+  },
+  "97": {
+   "who": "Sarah Bennett",
+   "p": 51,
+   "en": "Can I take your chair?",
+   "pt-BR": "Posso ficar com a sua cadeira?"
+  },
+  "98": {
+   "who": "Narrator",
+   "p": 52,
+   "en": "Jack kept one hand on the keyboard.",
+   "pt-BR": "Jack manteve uma das mãos no teclado."
+  },
+  "99": {
+   "who": "Jack Bennett",
+   "p": 52,
+   "en": "I'm sitting here.",
+   "pt-BR": "Eu tô sentado aqui."
+  },
+  "100": {
+   "who": "Narrator",
+   "p": 53,
+   "en": "Sarah nudged the arm of his chair, looking slightly annoyed, but sympathetic.",
+   "pt-BR": "Sarah cutucou o braço da cadeira dele, com cara de quem estava meio irritada, mas compreensiva."
+  },
+  "101": {
+   "who": "Sarah Bennett",
+   "p": 53,
+   "en": "Let me have your chair and get another chair.",
+   "pt-BR": "Me dá a sua cadeira e pega outra."
+  },
+  "102": {
+   "who": "Jack Bennett",
+   "p": 54,
+   "en": "Oh. Of course. Anything for you.",
+   "pt-BR": "Ah. Claro. Tudo por você."
+  },
+  "103": {
+   "who": "Narrator",
+   "p": 54,
+   "en": "Jack gave Sarah his chair, crossed to the next workstation, and dragged its chair back, wheels squeaking against the floor, before pulling himself up to his own screen.",
+   "pt-BR": "Jack deu a cadeira para Sarah, foi até a estação de trabalho ao lado e puxou a cadeira de lá, com as rodinhas rangendo no chão, antes de se acomodar diante da sua própria tela."
+  },
+  "104": {
+   "who": "Narrator",
+   "p": 55,
+   "en": "Sarah was already typing.",
+   "pt-BR": "Sarah já estava digitando."
+  },
+  "105": {
+   "who": "Sarah Bennett",
+   "p": 55,
+   "en": "You said the connection disappeared?",
+   "pt-BR": "Você disse que a conexão sumiu?"
+  },
+  "106": {
+   "who": "Narrator",
+   "p": 56,
+   "en": "Jack watched his own log scroll.",
+   "pt-BR": "Jack observava o próprio registro rolar na tela."
+  },
+  "107": {
+   "who": "Jack Bennett",
+   "p": 56,
+   "en": "Almost immediately.",
+   "pt-BR": "Quase na hora."
+  },
+  "108": {
+   "who": "Narrator",
+   "p": 57,
+   "en": "Sarah opened the connection history on her screen.",
+   "pt-BR": "Sarah abriu o histórico de conexões na tela dela."
+  },
+  "109": {
+   "who": "Sarah Bennett",
+   "p": 57,
+   "en": "External?",
+   "pt-BR": "Externa?"
+  },
+  "110": {
+   "who": "Narrator",
+   "p": 58,
+   "en": "Jack shook his head.",
+   "pt-BR": "Jack balançou a cabeça."
+  },
+  "111": {
+   "who": "Jack Bennett",
+   "p": 58,
+   "en": "I couldn't tell.",
+   "pt-BR": "Não deu pra saber."
+  },
+  "112": {
+   "who": "Narrator",
+   "p": 59,
+   "en": "Sarah exhaled through her nose.",
+   "pt-BR": "Sarah soltou o ar pelo nariz."
+  },
+  "113": {
+   "who": "Sarah Bennett",
+   "p": 59,
+   "en": "That's reassuring.",
+   "pt-BR": "Que tranquilizador."
+  },
+  "114": {
+   "who": "Jack Bennett",
+   "p": 60,
+   "en": "I thought so.",
+   "pt-BR": "Também achei."
+  },
+  "115": {
+   "who": "Narrator",
+   "p": 60,
+   "en": "Jack pulled up the TOMBS directory again, tracing back through what had changed.",
+   "pt-BR": "Jack abriu de novo o diretório do TOMBS, refazendo o caminho do que tinha mudado."
+  },
+  "116": {
+   "who": "Sarah Bennett",
+   "p": 61,
+   "en": "These are clean,",
+   "pt-BR": "Estes estão limpos,"
+  },
+  "117": {
+   "who": "Narrator",
+   "p": 61,
+   "en": "Sarah murmured after a few seconds, still scanning her own feed.",
+   "pt-BR": "Sarah murmurou depois de alguns segundos, ainda examinando os próprios dados."
+  },
+  "118": {
+   "who": "Narrator",
+   "p": 62,
+   "en": "Jack pointed at his own screen.",
+   "pt-BR": "Jack apontou para a tela dele."
+  },
+  "119": {
+   "who": "Jack Bennett",
+   "p": 62,
+   "en": "Mine too. Whoever it was covered both trails.",
+   "pt-BR": "Os meus também. Quem quer que tenha sido apagou os dois rastros."
+  },
+  "120": {
+   "who": "Narrator",
+   "p": 63,
+   "en": "Sarah narrowed her eyes at the display.",
+   "pt-BR": "Sarah estreitou os olhos para a tela."
+  },
+  "121": {
+   "who": "Sarah Bennett",
+   "p": 63,
+   "en": "Too clean.",
+   "pt-BR": "Limpos demais."
+  },
+  "122": {
+   "who": "Narrator",
+   "p": 64,
+   "en": "Jack nodded.",
+   "pt-BR": "Jack assentiu."
+  },
+  "123": {
+   "who": "Jack Bennett",
+   "p": 64,
+   "en": "That's what I was thinking.",
+   "pt-BR": "Era o que eu estava pensando."
+  },
+  "124": {
+   "who": "Narrator",
+   "p": 65,
+   "en": "Sarah looked sideways at him.",
+   "pt-BR": "Sarah olhou para ele de canto de olho."
+  },
+  "125": {
+   "who": "Sarah Bennett",
+   "p": 65,
+   "en": "No, you were sleeping.",
+   "pt-BR": "Não, você estava dormindo."
+  },
+  "126": {
+   "who": "Jack Bennett",
+   "p": 66,
+   "en": "I was thinking eventually.",
+   "pt-BR": "Eu ia acabar pensando nisso."
+  },
+  "127": {
+   "who": "Narrator",
+   "p": 67,
+   "en": "Sarah shook her head, but Jack caught the beginning of a smile. He glanced at the time and then at her.",
+   "pt-BR": "Sarah balançou a cabeça, mas Jack percebeu o começo de um sorriso. Ele olhou a hora e depois para ela."
+  },
+  "128": {
+   "who": "Jack Bennett",
+   "p": 67,
+   "en": "You know, you're supposed to be resting.",
+   "pt-BR": "Sabe, você devia estar descansando."
+  },
+  "129": {
+   "who": "Narrator",
+   "p": 68,
+   "en": "Sarah kept typing.",
+   "pt-BR": "Sarah continuou digitando."
+  },
+  "130": {
+   "who": "Sarah Bennett",
+   "p": 68,
+   "en": "So are you.",
+   "pt-BR": "Você também."
+  },
+  "131": {
+   "who": "Narrator",
+   "p": 69,
+   "en": "Jack glanced at her stomach.",
+   "pt-BR": "Jack olhou de relance para a barriga dela."
+  },
+  "132": {
+   "who": "Jack Bennett",
+   "p": 69,
+   "en": "I'm not the pregnant one.",
+   "pt-BR": "Não sou eu que estou grávido."
+  },
+  "133": {
+   "who": "Narrator",
+   "p": 70,
+   "en": "Sarah looked over at him.",
+   "pt-BR": "Sarah olhou para ele."
+  },
+  "134": {
+   "who": "Sarah Bennett",
+   "p": 70,
+   "en": "No. You're the one I found asleep at a laboratory terminal.",
+   "pt-BR": "Não. Você é quem eu encontrei dormindo num terminal de laboratório."
+  },
+  "135": {
+   "who": "Narrator",
+   "p": 71,
+   "en": "Jack spread his hands.",
+   "pt-BR": "Jack abriu as mãos."
+  },
+  "136": {
+   "who": "Jack Bennett",
+   "p": 71,
+   "en": "That's different.",
+   "pt-BR": "É diferente."
+  },
+  "137": {
+   "who": "Narrator",
+   "p": 72,
+   "en": "Sarah stopped typing long enough to look at him.",
+   "pt-BR": "Sarah parou de digitar o tempo suficiente para olhar para ele."
+  },
+  "138": {
+   "who": "Sarah Bennett",
+   "p": 72,
+   "en": "How?",
+   "pt-BR": "Diferente como?"
+  },
+  "139": {
+   "who": "Narrator",
+   "p": 73,
+   "en": "Jack considered it.",
+   "pt-BR": "Jack pensou no assunto."
+  },
+  "140": {
+   "who": "Jack Bennett",
+   "p": 73,
+   "en": "I wasn't uncomfortable?",
+   "pt-BR": "Eu não estava desconfortável?"
+  },
+  "141": {
+   "who": "Narrator",
+   "p": 74,
+   "en": "Sarah gave him a look that answered the question for him.",
+   "pt-BR": "O olhar que Sarah lançou respondeu à pergunta por ele."
+  },
+  "142": {
+   "who": "Narrator",
+   "p": 75,
+   "en": "Jack surrendered with a small nod.",
+   "pt-BR": "Jack se rendeu com um leve aceno de cabeça."
+  },
+  "143": {
+   "who": "Jack Bennett",
+   "p": 75,
+   "en": "Fair.",
+   "pt-BR": "Justo."
+  },
+  "144": {
+   "who": "Sarah Bennett",
+   "p": 76,
+   "en": "Lately the baby seems to think eleven at night is morning.",
+   "pt-BR": "Ultimamente o bebê parece achar que onze da noite é de manhã."
+  },
+  "145": {
+   "who": "Narrator",
+   "p": 76,
+   "en": "Sarah rested a hand briefly against her stomach, then returned to typing.",
+   "pt-BR": "Sarah apoiou a mão por um instante na barriga e depois voltou a digitar."
+  },
+  "146": {
+   "who": "Narrator",
+   "p": 77,
+   "en": "Jack smiled at the movement beneath her hand.",
+   "pt-BR": "Jack sorriu ao ver o movimento sob a mão dela."
+  },
+  "147": {
+   "who": "Jack Bennett",
+   "p": 77,
+   "en": "Already takes after me.",
+   "pt-BR": "Já puxou a mim."
+  },
+  "148": {
+   "who": "Narrator",
+   "p": 78,
+   "en": "Sarah's hands went still.",
+   "pt-BR": "As mãos de Sarah ficaram imóveis."
+  },
+  "149": {
+   "who": "Sarah Bennett",
+   "p": 78,
+   "en": "That's what I'm afraid of.",
+   "pt-BR": "É disso que eu tenho medo."
+  },
+  "150": {
+   "who": "Narrator",
+   "p": 79,
+   "en": "A new warning tone interrupted them. Both turned toward the main console as another message appeared.",
+   "pt-BR": "Um novo tom de alerta os interrompeu. Os dois se viraram para o console principal quando outra mensagem apareceu."
+  },
+  "151": {
+   "who": "TOMBS / settlement systems",
+   "p": 80,
+   "en": "Tombs array remote initialization request.",
+   "pt-BR": "Solicitação de inicialização remota do Array Tombs."
+  },
+  "152": {
+   "who": "Narrator",
+   "p": 80,
+   "en": "Sarah sat upright.",
+   "pt-BR": "Sarah se endireitou na cadeira."
+  },
+  "153": {
+   "who": "Sarah Bennett",
+   "p": 80,
+   "en": "Did you do that?",
+   "pt-BR": "Foi você que fez isso?"
+  },
+  "154": {
+   "who": "Narrator",
+   "p": 81,
+   "en": "Jack reached for the console.",
+   "pt-BR": "Jack estendeu a mão para o console."
+  },
+  "155": {
+   "who": "Jack Bennett",
+   "p": 81,
+   "en": "No.",
+   "pt-BR": "Não."
+  },
+  "156": {
+   "who": "Narrator",
+   "p": 82,
+   "en": "Sarah pointed at the request.",
+   "pt-BR": "Sarah apontou para a solicitação."
+  },
+  "157": {
+   "who": "Sarah Bennett",
+   "p": 82,
+   "en": "Cancel it.",
+   "pt-BR": "Cancela."
+  },
+  "158": {
+   "who": "Narrator",
+   "p": 83,
+   "en": "Jack reached across the console and rejected the request.",
+   "pt-BR": "Jack estendeu o braço por cima do console e rejeitou a solicitação."
+  },
+  "159": {
+   "who": "TOMBS / settlement systems",
+   "p": 84,
+   "en": "Request denied.",
+   "pt-BR": "Solicitação negada."
+  },
+  "160": {
+   "who": "Narrator",
+   "p": 84,
+   "en": "He tried again.",
+   "pt-BR": "Ele tentou de novo."
+  },
+  "161": {
+   "who": "TOMBS / settlement systems",
+   "p": 85,
+   "en": "Request denied.",
+   "pt-BR": "Solicitação negada."
+  },
+  "162": {
+   "who": "Narrator",
+   "p": 85,
+   "en": "Jack's expression hardened.",
+   "pt-BR": "A expressão de Jack endureceu."
+  },
+  "163": {
+   "who": "Jack Bennett",
+   "p": 85,
+   "en": "That's not supposed to happen.",
+   "pt-BR": "Isso não devia acontecer."
+  },
+  "164": {
+   "who": "Narrator",
+   "p": 85,
+   "en": "He entered his administrator credentials, but a new message appeared before he could issue another command.",
+   "pt-BR": "Ele digitou suas credenciais de administrador, mas uma nova mensagem apareceu antes que ele pudesse dar outro comando."
+  },
+  "165": {
+   "who": "TOMBS / settlement systems",
+   "p": 86,
+   "en": "Access revoked.",
+   "pt-BR": "Acesso revogado."
+  },
+  "166": {
+   "who": "Narrator",
+   "p": 86,
+   "en": "Sarah looked from the message to him.",
+   "pt-BR": "Sarah olhou da mensagem para ele."
+  },
+  "167": {
+   "who": "Sarah Bennett",
+   "p": 86,
+   "en": "Your credentials?",
+   "pt-BR": "Suas credenciais?"
+  },
+  "168": {
+   "who": "Narrator",
+   "p": 87,
+   "en": "Jack stared at the warning.",
+   "pt-BR": "Jack encarou o aviso."
+  },
+  "169": {
+   "who": "Jack Bennett",
+   "p": 87,
+   "en": "Revoked.",
+   "pt-BR": "Revogadas."
+  },
+  "170": {
+   "who": "Narrator",
+   "p": 88,
+   "en": "Sarah turned toward him.",
+   "pt-BR": "Sarah se virou para ele."
+  },
+  "171": {
+   "who": "Sarah Bennett",
+   "p": 88,
+   "en": "You're the project administrator.",
+   "pt-BR": "Você é o administrador do projeto."
+  },
+  "172": {
+   "who": "Narrator",
+   "p": 89,
+   "en": "Jack tried his credentials again.",
+   "pt-BR": "Jack tentou suas credenciais de novo."
+  },
+  "173": {
+   "who": "Jack Bennett",
+   "p": 89,
+   "en": "I know.",
+   "pt-BR": "Eu sei."
+  },
+  "174": {
+   "who": "Narrator",
+   "p": 90,
+   "en": "Sarah leaned toward the screen.",
+   "pt-BR": "Sarah se inclinou na direção da tela."
+  },
+  "175": {
+   "who": "Sarah Bennett",
+   "p": 90,
+   "en": "Who can revoke you?",
+   "pt-BR": "Quem pode revogar o seu acesso?"
+  },
+  "176": {
+   "who": "Narrator",
+   "p": 91,
+   "en": "Jack stopped typing.",
+   "pt-BR": "Jack parou de digitar."
+  },
+  "177": {
+   "who": "Jack Bennett",
+   "p": 91,
+   "en": "Me.",
+   "pt-BR": "Eu."
+  },
+  "178": {
+   "who": "Narrator",
+   "p": 92,
+   "en": "Sarah slowly turned toward him.",
+   "pt-BR": "Sarah se virou lentamente para ele."
+  },
+  "179": {
+   "who": "Sarah Bennett",
+   "p": 92,
+   "en": "Jack.",
+   "pt-BR": "Jack."
+  },
+  "180": {
+   "who": "Narrator",
+   "p": 93,
+   "en": "Jack met her eyes.",
+   "pt-BR": "Jack sustentou o olhar dela."
+  },
+  "181": {
+   "who": "Jack Bennett",
+   "p": 93,
+   "en": "I didn't.",
+   "pt-BR": "Não fui eu."
+  }
+ }
+}
