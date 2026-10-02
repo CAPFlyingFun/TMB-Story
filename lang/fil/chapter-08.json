@@ -1,0 +1,650 @@
+{
+ "chapter": 8,
+ "lang": "fil",
+ "title_en": "Three Weeks",
+ "title": "Tatlong Linggo",
+ "segments": {
+  "0": {
+   "who": "Narrator",
+   "p": 0,
+   "en": "The file opened onto a short list of coordinates and a single line of metadata: a device signature Jack didn't recognize.",
+   "fil": "Bumukas ang file sa isang maikling listahan ng mga coordinate at iisang linya ng metadata: isang device signature na hindi kilala ni Jack."
+  },
+  "1": {
+   "who": "Sarah Bennett",
+   "p": 1,
+   "en": "That's not a TOMBS component,",
+   "fil": "Hindi 'yan component ng TOMBS,"
+  },
+  "2": {
+   "who": "Narrator",
+   "p": 1,
+   "en": "Sarah said, reading over his shoulder.",
+   "fil": "sabi ni Sarah, binabasa ito mula sa likod ng balikat niya."
+  },
+  "3": {
+   "who": "Jack Bennett",
+   "p": 2,
+   "en": "No.",
+   "fil": "Hindi nga."
+  },
+  "4": {
+   "who": "Sarah Bennett",
+   "p": 3,
+   "en": "Then what is it?",
+   "fil": "E ano 'yan?"
+  },
+  "5": {
+   "who": "Narrator",
+   "p": 4,
+   "en": "Jack expanded the record.",
+   "fil": "Pinalawak ni Jack ang record."
+  },
+  "6": {
+   "who": "Jack Bennett",
+   "p": 4,
+   "en": "A maintenance tablet. Logged into the network for six minutes, three weeks ago. Same day as the boundary file.",
+   "fil": "Isang maintenance tablet. Naka-log in sa network nang anim na minuto, tatlong linggo na ang nakalipas. Kaparehong araw ng boundary file."
+  },
+  "7": {
+   "who": "Narrator",
+   "p": 5,
+   "en": "Lena crossed her arms.",
+   "fil": "Humalukipkip si Lena."
+  },
+  "8": {
+   "who": "Lena Ortiz",
+   "p": 5,
+   "en": "The same day you and Sarah were at the community center.",
+   "fil": "'Yong araw ding nasa community center kayo ni Sarah."
+  },
+  "9": {
+   "who": "Jack Bennett",
+   "p": 6,
+   "en": "Yes.",
+   "fil": "Oo."
+  },
+  "10": {
+   "who": "Lena Ortiz",
+   "p": 7,
+   "en": "So somebody used a maintenance tablet to plant a boundary file while wearing your credentials.",
+   "fil": "Kung gano'n, may gumamit ng maintenance tablet para itanim ang isang boundary file habang suot ang credentials mo."
+  },
+  "11": {
+   "who": "Jack Bennett",
+   "p": 8,
+   "en": "That's what it looks like.",
+   "fil": "Gano'n ang mukhang nangyari."
+  },
+  "12": {
+   "who": "Narrator",
+   "p": 9,
+   "en": "Sarah frowned at the coordinates.",
+   "fil": "Kumunot ang noo ni Sarah habang nakatingin sa mga coordinate."
+  },
+  "13": {
+   "who": "Sarah Bennett",
+   "p": 9,
+   "en": "Where was the tablet?",
+   "fil": "Nasaan ang tablet?"
+  },
+  "14": {
+   "who": "Narrator",
+   "p": 10,
+   "en": "Jack cross-referenced the device ID against the facilities map. A red marker appeared near the edge of the developed zone.",
+   "fil": "Itinapat ni Jack ang device ID sa facilities map. Lumitaw ang isang pulang marker malapit sa gilid ng developed zone."
+  },
+  "15": {
+   "who": "Jack Bennett",
+   "p": 11,
+   "en": "The equipment shed by the north pumping station.",
+   "fil": "Sa equipment shed sa tabi ng pumping station sa hilaga."
+  },
+  "16": {
+   "who": "Narrator",
+   "p": 12,
+   "en": "Mark straightened.",
+   "fil": "Napatuwid ng tayo si Mark."
+  },
+  "17": {
+   "who": "Settlement security",
+   "p": 12,
+   "en": "That's inside the boundary.",
+   "fil": "Nasa loob 'yan ng hangganan."
+  },
+  "18": {
+   "who": "Jack Bennett",
+   "p": 13,
+   "en": "I know.",
+   "fil": "Alam ko."
+  },
+  "19": {
+   "who": "Settlement security",
+   "p": 14,
+   "en": "Somebody who works here did this.",
+   "fil": "Taga-rito ang gumawa nito."
+  },
+  "20": {
+   "who": "Narrator",
+   "p": 15,
+   "en": "Nobody said anything for a moment.",
+   "fil": "Walang nagsalita nang ilang sandali."
+  },
+  "21": {
+   "who": "Narrator",
+   "p": 16,
+   "en": "Sarah's voice stayed steady, but quiet.",
+   "fil": "Nanatiling matatag ang boses ni Sarah, pero mahina."
+  },
+  "22": {
+   "who": "Sarah Bennett",
+   "p": 16,
+   "en": "Or somebody used a tablet that belongs here. That's not the same thing.",
+   "fil": "O may gumamit ng tablet na pag-aari ng lugar na 'to. Hindi 'yon pareho."
+  },
+  "23": {
+   "who": "Lena Ortiz",
+   "p": 17,
+   "en": "It's close enough to keep me up at night,",
+   "fil": "Sapat nang malapit 'yon para hindi ako makatulog sa gabi,"
+  },
+  "24": {
+   "who": "Narrator",
+   "p": 17,
+   "en": "Lena muttered.",
+   "fil": "bulong ni Lena."
+  },
+  "25": {
+   "who": "Narrator",
+   "p": 18,
+   "en": "Jack pulled the tablet's checkout log. Dozens of names scrolled past. Anyone with basic facilities access could have signed one out that week. No single entry stood apart.",
+   "fil": "Binuksan ni Jack ang checkout log ng tablet. Dose-dosenang pangalan ang dumaan sa screen. Kahit sino na may basic facilities access ay puwedeng humiram ng isa noong linggong iyon. Walang entry na namumukod-tangi."
+  },
+  "26": {
+   "who": "Jack Bennett",
+   "p": 19,
+   "en": "This isn't going to give us a name.",
+   "fil": "Hindi tayo bibigyan nito ng pangalan."
+  },
+  "27": {
+   "who": "Narrator",
+   "p": 20,
+   "en": "Lena scrolled through the list herself, slower.",
+   "fil": "Si Lena mismo ang nag-scroll sa listahan, mas mabagal."
+  },
+  "28": {
+   "who": "Lena Ortiz",
+   "p": 20,
+   "en": "Half these people I know. The other half I've waved at in the hallway and never learned their name.",
+   "fil": "Kilala ko ang kalahati ng mga 'to. 'Yong kalahati, kinakawayan ko lang sa hallway at hindi ko na nalaman ang pangalan."
+  },
+  "29": {
+   "who": "Jack Bennett",
+   "p": 21,
+   "en": "That's not helpful.",
+   "fil": "Hindi 'yan nakakatulong."
+  },
+  "30": {
+   "who": "Lena Ortiz",
+   "p": 22,
+   "en": "I know. I'm hoping it becomes helpful if I keep looking.",
+   "fil": "Alam ko. Umaasa ako na makakatulong 'yan kung titingin pa ako."
+  },
+  "31": {
+   "who": "Narrator",
+   "p": 23,
+   "en": "Sarah moved to the second console and pulled up the personnel access system.",
+   "fil": "Lumipat si Sarah sa pangalawang console at binuksan ang personnel access system."
+  },
+  "32": {
+   "who": "Sarah Bennett",
+   "p": 23,
+   "en": "Then we need something that will. If someone used that tablet without checking it out properly, there might be a badge location ping from whoever was closest at the time.",
+   "fil": "E di kailangan natin ng bagay na makakapagbigay. Kung may gumamit ng tablet na 'yon nang hindi ito nai-checkout nang maayos, baka may location ping ang badge ng kung sino man ang pinakamalapit noong oras na 'yon."
+  },
+  "33": {
+   "who": "Jack Bennett",
+   "p": 24,
+   "en": "You can do that?",
+   "fil": "Kaya mo 'yon?"
+  },
+  "34": {
+   "who": "Sarah Bennett",
+   "p": 25,
+   "en": "I can try.",
+   "fil": "Susubukan ko."
+  },
+  "35": {
+   "who": "Narrator",
+   "p": 26,
+   "en": "Sarah pulled up a badge-tracking overlay across the facility map.",
+   "fil": "Naglatag si Sarah ng badge-tracking overlay sa ibabaw ng facility map."
+  },
+  "36": {
+   "who": "Sarah Bennett",
+   "p": 26,
+   "en": "Every door in this building logs an entry. If someone walked in without using the tablet's own credentials, their badge still would have opened something along the way.",
+   "fil": "Bawat pinto sa gusaling 'to ay naglo-log ng entry. Kung may pumasok nang hindi ginagamit ang sariling credentials ng tablet, may nabuksan pa rin sana ang badge niya sa daan."
+  },
+  "37": {
+   "who": "Jack Bennett",
+   "p": 27,
+   "en": "Unless they didn't need a badge.",
+   "fil": "Maliban kung hindi niya kailangan ng badge."
+  },
+  "38": {
+   "who": "Sarah Bennett",
+   "p": 28,
+   "en": "Everyone needs a badge for this building.",
+   "fil": "Lahat ay nangangailangan ng badge para sa gusaling 'to."
+  },
+  "39": {
+   "who": "Jack Bennett",
+   "p": 29,
+   "en": "Everyone who's supposed to be here.",
+   "fil": "Lahat ng dapat na nandito."
+  },
+  "40": {
+   "who": "Narrator",
+   "p": 30,
+   "en": "Sarah looked up at him. Neither of them said anything else.",
+   "fil": "Tumingala si Sarah sa kanya. Wala nang ibang sinabi ang alinman sa kanila."
+  },
+  "41": {
+   "who": "Narrator",
+   "p": 31,
+   "en": "Mark cleared his throat.",
+   "fil": "Tumikhim si Mark."
+  },
+  "42": {
+   "who": "Settlement security",
+   "p": 31,
+   "en": "For what it's worth, the door logs would still catch a tailgater. Somebody walking in right behind a badge that already opened it.",
+   "fil": "Para sa kaalaman n'yo, mahuhuli pa rin ng door logs ang isang tailgater. 'Yong taong pumapasok kasunod mismo ng badge na nakapagbukas na ng pinto."
+  },
+  "43": {
+   "who": "Sarah Bennett",
+   "p": 32,
+   "en": "Would they?",
+   "fil": "Talaga?"
+  },
+  "44": {
+   "who": "Narrator",
+   "p": 32,
+   "en": "Sarah asked.",
+   "fil": "tanong ni Sarah."
+  },
+  "45": {
+   "who": "Settlement security",
+   "p": 33,
+   "en": "Camera catches the door, not just the badge reader. I can pull that footage too, if it helps.",
+   "fil": "Kita sa camera ang pinto, hindi lang ang badge reader. Kaya ko ring kunin ang footage na 'yon, kung makakatulong."
+  },
+  "46": {
+   "who": "Jack Bennett",
+   "p": 34,
+   "en": "It might. Add it to the list.",
+   "fil": "Baka nga. Idagdag mo sa listahan."
+  },
+  "47": {
+   "who": "Lena Ortiz",
+   "p": 35,
+   "en": "The list is getting long,",
+   "fil": "Humahaba na ang listahan,"
+  },
+  "48": {
+   "who": "Narrator",
+   "p": 35,
+   "en": "Lena said, not looking up from the checkout names.",
+   "fil": "sabi ni Lena, hindi inaalis ang tingin sa mga pangalan sa checkout."
+  },
+  "49": {
+   "who": "Jack Bennett",
+   "p": 36,
+   "en": "The night's getting long too. They're keeping pace.",
+   "fil": "Humahaba rin ang gabi. Nagsasabayan sila."
+  },
+  "50": {
+   "who": "Narrator",
+   "p": 37,
+   "en": "Jack watched her work for a moment before returning to his own screen. The maintenance record wasn't the only thing bothering him. He opened the boundary definition again and looked past the false calm of the settlement's edge, toward the dark shape of the forest beyond it.",
+   "fil": "Pinanood siya ni Jack sandali bago bumalik sa sarili niyang screen. Hindi lang ang maintenance record ang bumabagabag sa kanya. Binuksan niya ulit ang boundary definition at tumingin lampas sa huwad na katahimikan ng gilid ng settlement, patungo sa madilim na hugis ng kagubatan sa kabila nito."
+  },
+  "51": {
+   "who": "Narrator",
+   "p": 38,
+   "en": "Something out there had a footprint the size of a dinner plate and no trail.",
+   "fil": "May bagay sa labas na nag-iwan ng bakas na sinlaki ng plato, at walang mga yapak."
+  },
+  "52": {
+   "who": "Narrator",
+   "p": 39,
+   "en": "He kept coming back to that. A person leaving no trail made sense. Careful people didn't leave trails. But something with legs, heavy enough to press a dinner-plate mark into the ground, should have left dozens.",
+   "fil": "Paulit-ulit niyang binabalikan iyon. Makatwiran kung tao ang hindi nag-iwan ng mga yapak. Hindi nag-iiwan ng mga yapak ang mga taong maingat. Pero isang bagay na may mga paa, na sapat ang bigat para ibaon sa lupa ang bakas na sinlaki ng plato, ay dapat sanang nag-iwan ng dose-dosena."
+  },
+  "53": {
+   "who": "Narrator",
+   "p": 40,
+   "en": "Unless it hadn't walked there at all.",
+   "fil": "Maliban kung hindi ito naglakad papunta roon."
+  },
+  "54": {
+   "who": "Narrator",
+   "p": 41,
+   "en": "He turned to Lena.",
+   "fil": "Hinarap niya si Lena."
+  },
+  "55": {
+   "who": "Jack Bennett",
+   "p": 41,
+   "en": "Pull up every perimeter sensor from the last hour. Not just south.",
+   "fil": "Ilabas mo ang bawat perimeter sensor mula sa nakaraang oras. Hindi lang sa timog."
+  },
+  "56": {
+   "who": "Lena Ortiz",
+   "p": 42,
+   "en": "Looking for what?",
+   "fil": "Ano'ng hahanapin ko?"
+  },
+  "57": {
+   "who": "Jack Bennett",
+   "p": 43,
+   "en": "Anything that moved and shouldn't have.",
+   "fil": "Kahit anong gumalaw na hindi dapat gumalaw."
+  },
+  "58": {
+   "who": "Narrator",
+   "p": 44,
+   "en": "She worked in silence for a minute before letting out a slow breath.",
+   "fil": "Tahimik siyang nagtrabaho nang isang minuto bago dahan-dahang bumuga ng hininga."
+  },
+  "59": {
+   "who": "Lena Ortiz",
+   "p": 44,
+   "en": "You're going to want to see this.",
+   "fil": "Gugustuhin mong makita 'to."
+  },
+  "60": {
+   "who": "Narrator",
+   "p": 45,
+   "en": "Jack crossed to her console. A second impact had registered on the eastern sensor array, twelve minutes before the one that shook the window. Smaller. Further out.",
+   "fil": "Lumapit si Jack sa console niya. Isang pangalawang impact ang naitala ng sensor array sa silangan, labindalawang minuto bago ang tumamang yumanig sa bintana. Mas maliit. Mas malayo."
+  },
+  "61": {
+   "who": "Narrator",
+   "p": 46,
+   "en": "Sarah didn't look up from her own screen.",
+   "fil": "Hindi inalis ni Sarah ang tingin sa sarili niyang screen."
+  },
+  "62": {
+   "who": "Sarah Bennett",
+   "p": 46,
+   "en": "Two impacts. Different locations.",
+   "fil": "Dalawang impact. Magkaibang lokasyon."
+  },
+  "63": {
+   "who": "Jack Bennett",
+   "p": 47,
+   "en": "Or the same thing, moving.",
+   "fil": "O iisang bagay, na gumagalaw."
+  },
+  "64": {
+   "who": "Narrator",
+   "p": 48,
+   "en": "Mark shifted his weight.",
+   "fil": "Inilipat ni Mark ang bigat niya sa kabilang paa."
+  },
+  "65": {
+   "who": "Settlement security",
+   "p": 48,
+   "en": "Moving how fast?",
+   "fil": "Gumagalaw nang gaano kabilis?"
+  },
+  "66": {
+   "who": "Narrator",
+   "p": 49,
+   "en": "Jack did the math out loud, more for himself than anyone else.",
+   "fil": "Kinuwenta ni Jack nang malakas, higit para sa sarili niya kaysa para sa iba."
+  },
+  "67": {
+   "who": "Jack Bennett",
+   "p": 49,
+   "en": "If those are the same source, it covered that distance in under fifteen minutes.",
+   "fil": "Kung iisa ang pinagmulan ng mga 'yan, natawid nito ang layong 'yon sa loob ng wala pang labinlimang minuto."
+  },
+  "68": {
+   "who": "Narrator",
+   "p": 50,
+   "en": "The room absorbed that in silence.",
+   "fil": "Tahimik na tinanggap iyon ng silid."
+  },
+  "69": {
+   "who": "Settlement security",
+   "p": 51,
+   "en": "I'm going back out.",
+   "fil": "Lalabas ulit ako."
+  },
+  "70": {
+   "who": "Jack Bennett",
+   "p": 52,
+   "en": "Not alone.",
+   "fil": "Huwag kang mag-isa."
+  },
+  "71": {
+   "who": "Settlement security",
+   "p": 53,
+   "en": "I wasn't planning to be alone. I was planning to take you.",
+   "fil": "Hindi ko balak mag-isa. Balak kitang isama."
+  },
+  "72": {
+   "who": "Narrator",
+   "p": 54,
+   "en": "Jack looked at Sarah. She didn't argue, which somehow worried him more than if she had.",
+   "fil": "Tumingin si Jack kay Sarah. Hindi ito kumontra, at kahit papaano'y mas ikinabahala niya iyon kaysa kung kumontra ito."
+  },
+  "73": {
+   "who": "Sarah Bennett",
+   "p": 55,
+   "en": "Ten minutes. Cameras stay up the whole time, and you check in every two.",
+   "fil": "Sampung minuto. Bukas ang mga camera sa buong oras, at mag-check in kayo tuwing dalawang minuto."
+  },
+  "74": {
+   "who": "Settlement security",
+   "p": 56,
+   "en": "Understood.",
+   "fil": "Copy."
+  },
+  "75": {
+   "who": "Narrator",
+   "p": 57,
+   "en": "Jack grabbed a handheld light from the equipment rack and followed Mark toward the door. He paused at the threshold and looked back at Sarah.",
+   "fil": "Kumuha si Jack ng handheld light mula sa equipment rack at sumunod kay Mark papunta sa pinto. Huminto siya sa may hamba at lumingon kay Sarah."
+  },
+  "76": {
+   "who": "Jack Bennett",
+   "p": 58,
+   "en": "Find that badge ping.",
+   "fil": "Hanapin mo ang badge ping na 'yon."
+  },
+  "77": {
+   "who": "Sarah Bennett",
+   "p": 59,
+   "en": "Go.",
+   "fil": "Sige na."
+  },
+  "78": {
+   "who": "Narrator",
+   "p": 60,
+   "en": "The door sealed behind them with a soft hydraulic hiss that sounded, tonight, uncomfortably final.",
+   "fil": "Sumara ang pinto sa likuran nila sa mahinang sitsit ng hydraulics, na sa gabing iyon ay tunog na nakakabahalang pinal."
+  },
+  "79": {
+   "who": "Narrator",
+   "p": 61,
+   "en": "Outside, the air had shifted. Not warmer exactly, but less still. Somewhere above the tree line, the darkest part of the sky had started to soften at its edges.",
+   "fil": "Sa labas, nag-iba na ang hangin. Hindi naman talaga mas mainit, pero hindi na kasimpirmi. Sa kung saan sa itaas ng hanay ng mga puno, nagsisimula nang lumambot ang mga gilid ng pinakamadilim na bahagi ng langit."
+  },
+  "80": {
+   "who": "Settlement security",
+   "p": 62,
+   "en": "Dawn's not far,",
+   "fil": "Malapit nang mag-umaga,"
+  },
+  "81": {
+   "who": "Narrator",
+   "p": 62,
+   "en": "Mark said, following the beam of Jack's light along the tree line.",
+   "fil": "sabi ni Mark, sinusundan ang sinag ng ilaw ni Jack sa hanay ng mga puno."
+  },
+  "82": {
+   "who": "Jack Bennett",
+   "p": 63,
+   "en": "I noticed.",
+   "fil": "Napansin ko."
+  },
+  "83": {
+   "who": "Settlement security",
+   "p": 64,
+   "en": "That mean anything to you? Scientifically?",
+   "fil": "May ibig sabihin ba 'yon sa 'yo? Sa siyentipikong paraan?"
+  },
+  "84": {
+   "who": "Narrator",
+   "p": 65,
+   "en": "Jack kept walking.",
+   "fil": "Nagpatuloy sa paglalakad si Jack."
+  },
+  "85": {
+   "who": "Jack Bennett",
+   "p": 65,
+   "en": "It means we're running out of dark to hide in.",
+   "fil": "Ibig sabihin, nauubusan na tayo ng dilim na mapagtataguan."
+  },
+  "86": {
+   "who": "Narrator",
+   "p": 66,
+   "en": "Mark didn't respond right away. When he did, his voice had lost its usual dry edge.",
+   "fil": "Hindi agad sumagot si Mark. Nang sumagot siya, nawala na sa boses niya ang karaniwan nitong tuyong pagbibiro."
+  },
+  "87": {
+   "who": "Settlement security",
+   "p": 66,
+   "en": "You scared, Jack?",
+   "fil": "Natatakot ka ba, Jack?"
+  },
+  "88": {
+   "who": "Jack Bennett",
+   "p": 67,
+   "en": "Yes.",
+   "fil": "Oo."
+  },
+  "89": {
+   "who": "Settlement security",
+   "p": 68,
+   "en": "Good. Means you're paying attention.",
+   "fil": "Mabuti. Ibig sabihin, nakikiramdam ka."
+  },
+  "90": {
+   "who": "Narrator",
+   "p": 69,
+   "en": "They walked in silence for a while after that, the beam of Jack's light sweeping low across a ground that felt endless in a way it never used to. What had been a short walk to the maintenance shed a week ago now stretched into a real hike, blades of grass rising on either side of them like a colonnade with no ceiling. Dew hung from the tips in slow, trembling beads, each one large enough to swallow a person whole if it ever let go.",
+   "fil": "Tahimik silang naglakad nang ilang sandali pagkatapos noon, ang sinag ng ilaw ni Jack ay mababang humahagod sa lupang tila walang katapusan sa paraang hindi ganoon dati. Ang dating maikling lakad papunta sa maintenance shed isang linggo na ang nakalipas ay naging isang tunay na lakbay, ang mga dahon ng damo ay umaangat sa magkabilang gilid nila na parang hanay ng mga haligi na walang bubong. Nakabitin ang hamog sa mga dulo nito bilang mabagal at nanginginig na mga butil, bawat isa ay sapat ang laki para lunukin nang buo ang isang tao kung sakaling bumitaw ito."
+  },
+  "91": {
+   "who": "Narrator",
+   "p": 70,
+   "en": "They reached the eastern sensor marker without incident. The ground here was undisturbed. No crater. No mark. Nothing to suggest an impact at all.",
+   "fil": "Narating nila ang eastern sensor marker nang walang aberya. Hindi nagagalaw ang lupa rito. Walang uka. Walang marka. Walang anumang palatandaan ng impact."
+  },
+  "92": {
+   "who": "Settlement security",
+   "p": 71,
+   "en": "Sensor error?",
+   "fil": "Sensor error?"
+  },
+  "93": {
+   "who": "Narrator",
+   "p": 71,
+   "en": "Mark asked.",
+   "fil": "tanong ni Mark."
+  },
+  "94": {
+   "who": "Narrator",
+   "p": 72,
+   "en": "Jack knelt and examined the soil anyway. Then he saw it: a single blade of grass, bent flat and pressed into the dirt, far heavier than wind alone could manage.",
+   "fil": "Lumuhod pa rin si Jack at sinuri ang lupa. Saka niya iyon nakita: isang dahon ng damo, nakatiklop nang patag at nakadiin sa lupa, sa bigat na hindi kakayanin ng hangin lamang."
+  },
+  "95": {
+   "who": "Jack Bennett",
+   "p": 73,
+   "en": "No. Just a lighter touch than the other one,",
+   "fil": "Hindi. Mas magaan lang ang pagdampi kaysa sa isa pa,"
+  },
+  "96": {
+   "who": "Narrator",
+   "p": 73,
+   "en": "he said quietly.",
+   "fil": "mahina niyang sabi."
+  },
+  "97": {
+   "who": "Narrator",
+   "p": 74,
+   "en": "Mark crouched beside him.",
+   "fil": "Tumingkayad si Mark sa tabi niya."
+  },
+  "98": {
+   "who": "Settlement security",
+   "p": 74,
+   "en": "Lighter how?",
+   "fil": "Mas magaan paano?"
+  },
+  "99": {
+   "who": "Jack Bennett",
+   "p": 75,
+   "en": "I don't know yet.",
+   "fil": "Hindi ko pa alam."
+  },
+  "100": {
+   "who": "Narrator",
+   "p": 76,
+   "en": "He photographed the mark from three angles before standing, knees protesting after a night with no sleep behind them. Somewhere close by, something rustled through the grass and went still. Neither of them moved until the sound didn't repeat.",
+   "fil": "Kinunan niya ng litrato ang marka mula sa tatlong anggulo bago tumayo, umaangal ang mga tuhod pagkatapos ng isang gabing walang tulog. Sa kung saan sa malapit, may kumaluskos sa damuhan at saka tumahimik. Walang gumalaw sa kanilang dalawa hanggang sa hindi na naulit ang tunog."
+  },
+  "101": {
+   "who": "Narrator",
+   "p": 77,
+   "en": "Overhead, a bird called somewhere beyond the true boundary of the island, ordinary and distant, unconcerned with anything happening on a scale it would never register. Jack looked up at the lightening sky and felt smaller than the number on his screen had already told him he was.",
+   "fil": "Sa itaas, may ibong humuni sa kung saan lampas sa tunay na hangganan ng isla, karaniwan at malayo, walang pakialam sa anumang nangyayari sa isang scale na hinding-hindi nito mapapansin. Tumingala si Jack sa lumiliwanag na langit at naramdamang mas maliit pa siya kaysa sa sinabi na sa kanya ng numero sa kanyang screen."
+  },
+  "102": {
+   "who": "Narrator",
+   "p": 78,
+   "en": "His radio crackled. Sarah's voice, tight with urgency.",
+   "fil": "Kumaluskos ang radyo niya. Boses ni Sarah, tensiyonado at nagmamadali."
+  },
+  "103": {
+   "who": "Sarah Bennett",
+   "p": 78,
+   "en": "Jack. I found the badge.",
+   "fil": "Jack. Nahanap ko ang badge."
+  },
+  "104": {
+   "who": "Jack Bennett",
+   "p": 79,
+   "en": "Whose?",
+   "fil": "Kanino?"
+  },
+  "105": {
+   "who": "Narrator",
+   "p": 80,
+   "en": "A pause, longer than he liked.",
+   "fil": "Isang paghinto, mas matagal kaysa gusto niya."
+  },
+  "106": {
+   "who": "Sarah Bennett",
+   "p": 81,
+   "en": "I need you back here first.",
+   "fil": "Bumalik ka muna rito."
+  }
+ }
+}
