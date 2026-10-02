@@ -74,12 +74,33 @@ the captions.
 | access logs / connection history | log akses / riwayat koneksi | |
 | project administrator / administrator credentials | administrator proyek / kredensial administrator | |
 | "Access revoked." / "Request denied." | "Akses dicabut." / "Permintaan ditolak." | |
-| file (a computer file) | file | one word everywhere |
+| file (a computer file) | file | "the boundary file" → *file batas*; a person's paper or personnel file may be *berkas* |
 | trigger (noun) | pemicu | |
 | camera feed | tayangan kamera | |
 | security officer | petugas keamanan | |
 | ridge | punggungan | |
 | the dinner-plate mark | bekas seukuran piring makan | Chapters 7 to 9 |
+| vibration / tremor | getaran | |
+| perimeter cameras / perimeter security | kamera perimeter / keamanan perimeter | |
+| environmental sensor | sensor lingkungan | |
+| fingernail clipping | potongan kuku | Chapters 5 to 7 |
+| blade of grass / grass stems | bilah rumput / batang rumput | |
+| reservoir | waduk | |
+| research district | distrik riset | |
+| developed area | area terbangun | matches *zona terbangun* |
+| sensor grid / sensor array | jaringan sensor / rangkaian sensor | |
+| communications building | gedung komunikasi | |
+| satellite link / emergency frequencies | tautan satelit / frekuensi darurat | |
+| Camera One, Two, Three | Kamera Satu, Dua, Tiga | |
+| field (TOMBS's) | medan | |
+| timestamp | stempel waktu | |
+| maintenance snapshots | cuplikan pemeliharaan | matches *cuplikan diagnostik* |
+| intruder | penyusup | |
+| groundskeeper | petugas pertamanan | |
+| badge ping / badge-tracking overlay | sinyal lencana / lapisan pelacakan lencana | |
+| tree line | garis pepohonan | |
+| decoy | umpan | |
+| "Negative." / "Understood." (radio) | "Nihil." / "Dimengerti." | |
 | Temporal Object Manipulation and Boundary System | (unchanged) | the name TOMBS stands for |
 
 ## Voice
