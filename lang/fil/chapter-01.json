@@ -1,0 +1,1100 @@
+{
+ "chapter": 1,
+ "lang": "fil",
+ "title_en": "The Alarm",
+ "title": "Ang Alarma",
+ "segments": {
+  "0": {
+   "who": "Narrator",
+   "p": 0,
+   "en": "It was March fifth, in the year twenty-one ten.",
+   "fil": "Ika-lima ng Marso noon, sa taong twenty-one ten."
+  },
+  "1": {
+   "who": "Narrator",
+   "p": 1,
+   "en": "It was almost eleven at night on a remote island somewhere in the Atlantic Ocean. The island stretched roughly fifty-six kilometers across, about thirty-five miles from one side to the other, but most of it remained undeveloped wilderness. Near its center sat a research settlement of laboratories, homes, workshops, medical facilities, and other buildings supporting the nearly five hundred people who lived there.",
+   "fil": "Halos alas-onse na ng gabi sa isang liblib na isla sa kung saang bahagi ng Karagatang Atlantiko. Humigit-kumulang limampu't anim na kilometro ang lapad ng isla, mga tatlumpu't limang milya mula sa isang dulo hanggang sa kabila, pero halos kabuuan nito ay nanatiling kagubatang hindi pa nadedebelop. Malapit sa gitna nito nakatayo ang isang research settlement na binubuo ng mga laboratoryo, bahay, workshop, pasilidad medikal, at iba pang gusaling bumubuhay sa halos limandaang taong nakatira roon."
+  },
+  "2": {
+   "who": "Narrator",
+   "p": 2,
+   "en": "Deep inside one of those laboratories, Dr. Jack Bennett was hard at work. Technically.",
+   "fil": "Sa kaloob-looban ng isa sa mga laboratoryong iyon, abalang-abala sa trabaho si Dr. Jack Bennett. Sa teorya."
+  },
+  "3": {
+   "who": "Narrator",
+   "p": 3,
+   "en": "Jack sat slumped in his chair with his arms folded across his chest, his head tilted toward one shoulder, and several pages of diagnostic data glowing on the monitor in front of him. His eyes were closed.",
+   "fil": "Nakalugmok si Jack sa kanyang upuan, nakahalukipkip, nakahilig ang ulo sa isang balikat, habang ilang pahina ng diagnostic data ang nakailaw sa monitor sa harap niya. Nakapikit ang kanyang mga mata."
+  },
+  "4": {
+   "who": "Narrator",
+   "p": 4,
+   "en": "A warning tone chirped from Jack's console. He shifted but did not wake. A second tone followed, louder than the first, and the diagnostic display flashed amber.",
+   "fil": "Isang matinis na warning tone ang tumunog mula sa console ni Jack. Gumalaw siya pero hindi nagising. Sumunod ang ikalawang tunog, mas malakas kaysa sa una, at kumislap nang kulay amber ang diagnostic display."
+  },
+  "5": {
+   "who": "TOMBS / settlement systems",
+   "p": 5,
+   "en": "Warning. Unauthorized system access.",
+   "fil": "Warning. Unauthorized system access."
+  },
+  "6": {
+   "who": "Narrator",
+   "p": 5,
+   "en": "Jack jerked awake so quickly that his chair rolled backward and nearly struck another workstation.",
+   "fil": "Napabalikwas si Jack sa sobrang bilis ng pagkagising na gumulong paatras ang kanyang upuan at muntik nang tumama sa isa pang workstation."
+  },
+  "7": {
+   "who": "Jack Bennett",
+   "p": 5,
+   "en": "What? Okay, I'm awake.",
+   "fil": "Ha? Okay, gising na ako."
+  },
+  "8": {
+   "who": "Narrator",
+   "p": 6,
+   "en": "The warning repeated while Jack rubbed his eyes and leaned toward the monitor.",
+   "fil": "Umulit ang babala habang kinukusot ni Jack ang kanyang mga mata at inilalapit ang mukha sa monitor."
+  },
+  "9": {
+   "who": "Jack Bennett",
+   "p": 6,
+   "en": "That's not good.",
+   "fil": "Hindi maganda 'yan."
+  },
+  "10": {
+   "who": "Narrator",
+   "p": 7,
+   "en": "Several windows were opening and closing on their own. Lines of commands streamed across one side of the display faster than he could read them. Jack grabbed the keyboard and opened the network monitor.",
+   "fil": "Kusang nagbubukas at nagsasara ang ilang window. Sunud-sunod na linya ng command ang dumadaloy sa isang gilid ng display, mas mabilis kaysa kaya niyang basahin. Hinila ni Jack ang keyboard at binuksan ang network monitor."
+  },
+  "11": {
+   "who": "Jack Bennett",
+   "p": 7,
+   "en": "Come on. What are you doing?",
+   "fil": "Ano ba. Ano'ng ginagawa mo?"
+  },
+  "12": {
+   "who": "Narrator",
+   "p": 8,
+   "en": "An unfamiliar connection appeared for half a second and vanished.",
+   "fil": "Isang hindi pamilyar na connection ang lumitaw nang kalahating segundo at saka naglaho."
+  },
+  "13": {
+   "who": "Narrator",
+   "p": 9,
+   "en": "Jack frowned.",
+   "fil": "Kumunot ang noo ni Jack."
+  },
+  "14": {
+   "who": "Jack Bennett",
+   "p": 9,
+   "en": "No. Where'd you go?",
+   "fil": "Hindi. Saan ka napunta?"
+  },
+  "15": {
+   "who": "Narrator",
+   "p": 9,
+   "en": "He refreshed the display, but the connection was gone. Another warning tone sounded from the console and a red message filled the center of his screen.",
+   "fil": "Ni-refresh niya ang display, pero wala na ang connection. Isa pang warning tone ang tumunog mula sa console, at isang pulang mensahe ang pumuno sa gitna ng kanyang screen."
+  },
+  "16": {
+   "who": "TOMBS / settlement systems",
+   "p": 10,
+   "en": "Security protocol violation.",
+   "fil": "Security protocol violation."
+  },
+  "17": {
+   "who": "Jack Bennett",
+   "p": 10,
+   "en": "Okay. Definitely awake now.",
+   "fil": "Okay. Gising na gising na talaga ako."
+  },
+  "18": {
+   "who": "Narrator",
+   "p": 10,
+   "en": "Jack entered a command and pulled up the laboratory access logs. Nothing looked unusual. He tried another search and got the same result.",
+   "fil": "Nagpasok si Jack ng isang command at binuksan ang access logs ng laboratoryo. Walang mukhang kakaiba. Sinubukan niya ang isa pang search at pareho ang lumabas."
+  },
+  "19": {
+   "who": "Jack Bennett",
+   "p": 10,
+   "en": "That's impossible.",
+   "fil": "Imposible 'yan."
+  },
+  "20": {
+   "who": "Narrator",
+   "p": 11,
+   "en": "The system beeped, and a directory opened by itself. Jack stopped typing when he recognized the folder.",
+   "fil": "Tumunog nang maikli ang system, at kusang bumukas ang isang directory. Natigil sa pagta-type si Jack nang makilala niya ang folder."
+  },
+  "21": {
+   "who": "TOMBS / settlement systems",
+   "p": 12,
+   "en": "Tombs project.",
+   "fil": "TOMBS project."
+  },
+  "22": {
+   "who": "Jack Bennett",
+   "p": 12,
+   "en": "Oh, no you don't.",
+   "fil": "Aba, hindi puwede 'yan."
+  },
+  "23": {
+   "who": "Narrator",
+   "p": 12,
+   "en": "He immediately locked the terminal. The screen went black for three seconds, then came back on and reopened the same directory.",
+   "fil": "Agad niyang ni-lock ang terminal. Nagdilim ang screen nang tatlong segundo, saka muling bumukas at binuksan ulit ang parehong directory."
+  },
+  "24": {
+   "who": "Narrator",
+   "p": 13,
+   "en": "Jack stared at it.",
+   "fil": "Tinitigan iyon ni Jack."
+  },
+  "25": {
+   "who": "Jack Bennett",
+   "p": 13,
+   "en": "Well, that's new.",
+   "fil": "Aba, bago 'yan."
+  },
+  "26": {
+   "who": "Narrator",
+   "p": 14,
+   "en": "He reached for the intercom.",
+   "fil": "Inabot niya ang intercom."
+  },
+  "27": {
+   "who": "Jack Bennett",
+   "p": 14,
+   "en": "Sarah?",
+   "fil": "Sarah?"
+  },
+  "28": {
+   "who": "Narrator",
+   "p": 15,
+   "en": "Static answered him.",
+   "fil": "Static ang sumagot sa kanya."
+  },
+  "29": {
+   "who": "Narrator",
+   "p": 16,
+   "en": "Jack tapped the button again.",
+   "fil": "Pinindot ulit ni Jack ang button."
+  },
+  "30": {
+   "who": "Jack Bennett",
+   "p": 16,
+   "en": "Sarah, you there?",
+   "fil": "Sarah, nandiyan ka ba?"
+  },
+  "31": {
+   "who": "Narrator",
+   "p": 17,
+   "en": "Sarah answered through the speaker.",
+   "fil": "Sumagot si Sarah sa speaker."
+  },
+  "32": {
+   "who": "Sarah Bennett",
+   "p": 17,
+   "en": "I'm here. What's wrong?",
+   "fil": "Nandito ako. Ano'ng problema?"
+  },
+  "33": {
+   "who": "Jack Bennett",
+   "p": 18,
+   "en": "I've got something weird on my computer. It tripped a security alarm.",
+   "fil": "May kakaiba sa computer ko. Napatunog nito ang security alarm."
+  },
+  "34": {
+   "who": "Narrator",
+   "p": 19,
+   "en": "Sarah leaned closer to the intercom.",
+   "fil": "Lumapit si Sarah sa intercom."
+  },
+  "35": {
+   "who": "Sarah Bennett",
+   "p": 19,
+   "en": "Define weird.",
+   "fil": "Anong klaseng kakaiba?"
+  },
+  "36": {
+   "who": "Narrator",
+   "p": 20,
+   "en": "Jack reopened the network monitor.",
+   "fil": "Muling binuksan ni Jack ang network monitor."
+  },
+  "37": {
+   "who": "Jack Bennett",
+   "p": 20,
+   "en": "I think somebody's in the system.",
+   "fil": "Sa tingin ko, may nakapasok sa system."
+  },
+  "38": {
+   "who": "Narrator",
+   "p": 21,
+   "en": "There was a brief pause before Sarah asked,",
+   "fil": "Saglit na natahimik bago nagtanong si Sarah,"
+  },
+  "39": {
+   "who": "Sarah Bennett",
+   "p": 21,
+   "en": "Are you sure?",
+   "fil": "Sigurado ka ba?"
+  },
+  "40": {
+   "who": "Narrator",
+   "p": 22,
+   "en": "Jack scanned the empty connection list.",
+   "fil": "Sinuyod ng tingin ni Jack ang walang lamang listahan ng mga connection."
+  },
+  "41": {
+   "who": "Jack Bennett",
+   "p": 22,
+   "en": "No. That's why I'm calling the smarter scientist.",
+   "fil": "Hindi. Kaya nga tinatawagan ko ang mas matalinong scientist."
+  },
+  "42": {
+   "who": "Narrator",
+   "p": 23,
+   "en": "Sarah laughed softly through the speaker.",
+   "fil": "Mahinang tumawa si Sarah sa speaker."
+  },
+  "43": {
+   "who": "Sarah Bennett",
+   "p": 23,
+   "en": "Good answer.",
+   "fil": "Tamang sagot."
+  },
+  "44": {
+   "who": "Narrator",
+   "p": 24,
+   "en": "Jack smiled despite himself.",
+   "fil": "Napangiti si Jack sa kabila ng lahat."
+  },
+  "45": {
+   "who": "Jack Bennett",
+   "p": 24,
+   "en": "Can you come take a look?",
+   "fil": "Puwede ka bang pumunta rito para tingnan?"
+  },
+  "46": {
+   "who": "Sarah Bennett",
+   "p": 25,
+   "en": "I'm on my way,",
+   "fil": "Papunta na ako,"
+  },
+  "47": {
+   "who": "Narrator",
+   "p": 25,
+   "en": "Sarah replied.",
+   "fil": "sagot ni Sarah."
+  },
+  "48": {
+   "who": "Narrator",
+   "p": 26,
+   "en": "Jack released the intercom and looked back at the monitor. The TOMBS directory was still open.",
+   "fil": "Binitiwan ni Jack ang intercom at muling tumingin sa monitor. Bukas pa rin ang TOMBS directory."
+  },
+  "49": {
+   "who": "Jack Bennett",
+   "p": 26,
+   "en": "Who are you?",
+   "fil": "Sino ka?"
+  },
+  "50": {
+   "who": "Narrator",
+   "p": 27,
+   "en": "The cursor moved without him touching anything.",
+   "fil": "Gumalaw ang cursor kahit wala siyang hinahawakan."
+  },
+  "51": {
+   "who": "Narrator",
+   "p": 28,
+   "en": "Jack froze as a file opened.",
+   "fil": "Natigilan si Jack nang may bumukas na file."
+  },
+  "52": {
+   "who": "TOMBS / settlement systems",
+   "p": 29,
+   "en": "Boundary control.",
+   "fil": "Boundary control."
+  },
+  "53": {
+   "who": "Jack Bennett",
+   "p": 29,
+   "en": "No, no, no.",
+   "fil": "Hindi, hindi, hindi."
+  },
+  "54": {
+   "who": "Narrator",
+   "p": 29,
+   "en": "He reached for the keyboard just as the laboratory door slid open behind him.",
+   "fil": "Aabutin na sana niya ang keyboard nang dumausdos pabukas ang pinto ng laboratoryo sa likuran niya."
+  },
+  "55": {
+   "who": "Narrator",
+   "p": 30,
+   "en": "Sarah Bennett walked straight in, tablet tucked beneath one arm, already crossing toward him. She glanced from Jack to the computer.",
+   "fil": "Diretsong pumasok si Sarah Bennett, nakaipit ang tablet sa ilalim ng isang braso, at papalapit na sa kanya. Sumulyap siya kay Jack, saka sa computer."
+  },
+  "56": {
+   "who": "Sarah Bennett",
+   "p": 30,
+   "en": "Please tell me you didn't break something.",
+   "fil": "Pakisabi namang wala kang sinira."
+  },
+  "57": {
+   "who": "Jack Bennett",
+   "p": 31,
+   "en": "I was asleep,",
+   "fil": "Tulog ako,"
+  },
+  "58": {
+   "who": "Narrator",
+   "p": 31,
+   "en": "Jack replied.",
+   "fil": "sagot ni Jack."
+  },
+  "59": {
+   "who": "Narrator",
+   "p": 32,
+   "en": "Sarah closed the distance between them.",
+   "fil": "Tuluyang lumapit si Sarah sa kanya."
+  },
+  "60": {
+   "who": "Sarah Bennett",
+   "p": 32,
+   "en": "You called me in here to admit that?",
+   "fil": "Pinapunta mo ako rito para lang aminin 'yan?"
+  },
+  "61": {
+   "who": "Narrator",
+   "p": 33,
+   "en": "Jack gestured toward the console.",
+   "fil": "Kumumpas si Jack patungo sa console."
+  },
+  "62": {
+   "who": "Jack Bennett",
+   "p": 33,
+   "en": "No. That was my defense.",
+   "fil": "Hindi. Depensa ko 'yon."
+  },
+  "63": {
+   "who": "Narrator",
+   "p": 34,
+   "en": "Sarah raised an eyebrow.",
+   "fil": "Tumaas ang isang kilay ni Sarah."
+  },
+  "64": {
+   "who": "Sarah Bennett",
+   "p": 34,
+   "en": "Against what?",
+   "fil": "Laban saan?"
+  },
+  "65": {
+   "who": "Narrator",
+   "p": 35,
+   "en": "Jack pointed toward the monitor.",
+   "fil": "Itinuro ni Jack ang monitor."
+  },
+  "66": {
+   "who": "Jack Bennett",
+   "p": 35,
+   "en": "Whatever this is. I was reviewing yesterday's test results.",
+   "fil": "Kung ano man 'to. Nire-review ko ang test results kahapon."
+  },
+  "67": {
+   "who": "Sarah Bennett",
+   "p": 36,
+   "en": "You were sleeping,",
+   "fil": "Natutulog ka,"
+  },
+  "68": {
+   "who": "Narrator",
+   "p": 36,
+   "en": "Sarah corrected him.",
+   "fil": "pagtatama sa kanya ni Sarah."
+  },
+  "69": {
+   "who": "Narrator",
+   "p": 37,
+   "en": "Jack sat a little straighter.",
+   "fil": "Umayos nang kaunti ng upo si Jack."
+  },
+  "70": {
+   "who": "Jack Bennett",
+   "p": 37,
+   "en": "I was reviewing them internally.",
+   "fil": "Nire-review ko sa loob-loob ko."
+  },
+  "71": {
+   "who": "Narrator",
+   "p": 38,
+   "en": "Sarah glanced at him.",
+   "fil": "Sumulyap sa kanya si Sarah."
+  },
+  "72": {
+   "who": "Sarah Bennett",
+   "p": 38,
+   "en": "With your eyes closed?",
+   "fil": "Nang nakapikit?"
+  },
+  "73": {
+   "who": "Narrator",
+   "p": 39,
+   "en": "Jack nodded solemnly.",
+   "fil": "Seryosong tumango si Jack."
+  },
+  "74": {
+   "who": "Jack Bennett",
+   "p": 39,
+   "en": "It's an advanced technique.",
+   "fil": "Advanced technique 'yon."
+  },
+  "75": {
+   "who": "Narrator",
+   "p": 40,
+   "en": "She leaned over his shoulder and studied the screen.",
+   "fil": "Dumukwang siya sa ibabaw ng balikat ni Jack at sinuri ang screen."
+  },
+  "76": {
+   "who": "Sarah Bennett",
+   "p": 40,
+   "en": "Jack.",
+   "fil": "Jack."
+  },
+  "77": {
+   "who": "Narrator",
+   "p": 41,
+   "en": "Jack straightened in his chair while Sarah placed her tablet beside the keyboard.",
+   "fil": "Umayos ng upo si Jack habang inilalapag ni Sarah ang kanyang tablet sa tabi ng keyboard."
+  },
+  "78": {
+   "who": "Jack Bennett",
+   "p": 41,
+   "en": "Right. Problem. I got an unauthorized access warning. I checked the network monitor and saw a connection I didn't recognize, but it disappeared before I could trace it.",
+   "fil": "Oo nga. Ang problema. Nakakuha ako ng unauthorized access warning. Tiningnan ko ang network monitor at may nakita akong connection na hindi ko kilala, pero nawala ito bago ko pa ma-trace."
+  },
+  "79": {
+   "who": "Narrator",
+   "p": 42,
+   "en": "Sarah tapped the edge of the keyboard.",
+   "fil": "Tinapik ni Sarah ang gilid ng keyboard."
+  },
+  "80": {
+   "who": "Sarah Bennett",
+   "p": 42,
+   "en": "And then?",
+   "fil": "Tapos?"
+  },
+  "81": {
+   "who": "Narrator",
+   "p": 43,
+   "en": "Jack pointed to the open directory.",
+   "fil": "Itinuro ni Jack ang nakabukas na directory."
+  },
+  "82": {
+   "who": "Jack Bennett",
+   "p": 43,
+   "en": "It opened the TOMBS directory.",
+   "fil": "Binuksan nito ang TOMBS directory."
+  },
+  "83": {
+   "who": "Narrator",
+   "p": 44,
+   "en": "Sarah's attention sharpened.",
+   "fil": "Biglang naging alisto si Sarah."
+  },
+  "84": {
+   "who": "Sarah Bennett",
+   "p": 44,
+   "en": "By itself?",
+   "fil": "Nang kusa?"
+  },
+  "85": {
+   "who": "Jack Bennett",
+   "p": 45,
+   "en": "Yep.",
+   "fil": "Oo."
+  },
+  "86": {
+   "who": "Narrator",
+   "p": 46,
+   "en": "Sarah looked at the terminal lock indicator.",
+   "fil": "Tiningnan ni Sarah ang terminal lock indicator."
+  },
+  "87": {
+   "who": "Sarah Bennett",
+   "p": 46,
+   "en": "You locked the terminal?",
+   "fil": "Ni-lock mo ang terminal?"
+  },
+  "88": {
+   "who": "Narrator",
+   "p": 47,
+   "en": "Jack nodded.",
+   "fil": "Tumango si Jack."
+  },
+  "89": {
+   "who": "Jack Bennett",
+   "p": 47,
+   "en": "Yep.",
+   "fil": "Oo."
+  },
+  "90": {
+   "who": "Narrator",
+   "p": 48,
+   "en": "Sarah waited.",
+   "fil": "Naghintay si Sarah."
+  },
+  "91": {
+   "who": "Sarah Bennett",
+   "p": 48,
+   "en": "And?",
+   "fil": "At?"
+  },
+  "92": {
+   "who": "Narrator",
+   "p": 49,
+   "en": "Jack leaned back.",
+   "fil": "Sumandal si Jack."
+  },
+  "93": {
+   "who": "Jack Bennett",
+   "p": 49,
+   "en": "It unlocked itself.",
+   "fil": "Kusa itong nag-unlock."
+  },
+  "94": {
+   "who": "Narrator",
+   "p": 50,
+   "en": "Sarah stared at him for a moment before looking back at the monitor. Jack pointed at the screen.",
+   "fil": "Ilang sandaling tinitigan siya ni Sarah bago muling tumingin sa monitor. Itinuro ni Jack ang screen."
+  },
+  "95": {
+   "who": "Jack Bennett",
+   "p": 50,
+   "en": "I know.",
+   "fil": "Alam ko."
+  },
+  "96": {
+   "who": "Narrator",
+   "p": 51,
+   "en": "Sarah started powering up the other console next to Jack.",
+   "fil": "Sinimulang buhayin ni Sarah ang isa pang console sa tabi ni Jack."
+  },
+  "97": {
+   "who": "Sarah Bennett",
+   "p": 51,
+   "en": "Can I take your chair?",
+   "fil": "Puwedeng akin na lang ang upuan mo?"
+  },
+  "98": {
+   "who": "Narrator",
+   "p": 52,
+   "en": "Jack kept one hand on the keyboard.",
+   "fil": "Nanatili ang isang kamay ni Jack sa keyboard."
+  },
+  "99": {
+   "who": "Jack Bennett",
+   "p": 52,
+   "en": "I'm sitting here.",
+   "fil": "Nakaupo ako rito."
+  },
+  "100": {
+   "who": "Narrator",
+   "p": 53,
+   "en": "Sarah nudged the arm of his chair, looking slightly annoyed, but sympathetic.",
+   "fil": "Bahagyang itinulak ni Sarah ang braso ng upuan niya, mukhang medyo naiinis, pero nakauunawa."
+  },
+  "101": {
+   "who": "Sarah Bennett",
+   "p": 53,
+   "en": "Let me have your chair and get another chair.",
+   "fil": "Ibigay mo na sa akin ang upuan mo at kumuha ka ng ibang upuan."
+  },
+  "102": {
+   "who": "Jack Bennett",
+   "p": 54,
+   "en": "Oh. Of course. Anything for you.",
+   "fil": "Ay. Siyempre. Kahit ano para sa 'yo."
+  },
+  "103": {
+   "who": "Narrator",
+   "p": 54,
+   "en": "Jack gave Sarah his chair, crossed to the next workstation, and dragged its chair back, wheels squeaking against the floor, before pulling himself up to his own screen.",
+   "fil": "Ibinigay ni Jack kay Sarah ang kanyang upuan, tumawid sa katabing workstation, at hinila pabalik ang upuan doon, lumalangitngit ang mga gulong sa sahig, bago siya umupo at lumapit sa sarili niyang screen."
+  },
+  "104": {
+   "who": "Narrator",
+   "p": 55,
+   "en": "Sarah was already typing.",
+   "fil": "Nagta-type na si Sarah."
+  },
+  "105": {
+   "who": "Sarah Bennett",
+   "p": 55,
+   "en": "You said the connection disappeared?",
+   "fil": "Sabi mo, nawala ang connection?"
+  },
+  "106": {
+   "who": "Narrator",
+   "p": 56,
+   "en": "Jack watched his own log scroll.",
+   "fil": "Pinanood ni Jack ang pag-scroll ng sarili niyang log."
+  },
+  "107": {
+   "who": "Jack Bennett",
+   "p": 56,
+   "en": "Almost immediately.",
+   "fil": "Halos agad-agad."
+  },
+  "108": {
+   "who": "Narrator",
+   "p": 57,
+   "en": "Sarah opened the connection history on her screen.",
+   "fil": "Binuksan ni Sarah ang connection history sa kanyang screen."
+  },
+  "109": {
+   "who": "Sarah Bennett",
+   "p": 57,
+   "en": "External?",
+   "fil": "External?"
+  },
+  "110": {
+   "who": "Narrator",
+   "p": 58,
+   "en": "Jack shook his head.",
+   "fil": "Umiling si Jack."
+  },
+  "111": {
+   "who": "Jack Bennett",
+   "p": 58,
+   "en": "I couldn't tell.",
+   "fil": "Hindi ko matukoy."
+  },
+  "112": {
+   "who": "Narrator",
+   "p": 59,
+   "en": "Sarah exhaled through her nose.",
+   "fil": "Napabuga ng hangin sa ilong si Sarah."
+  },
+  "113": {
+   "who": "Sarah Bennett",
+   "p": 59,
+   "en": "That's reassuring.",
+   "fil": "Nakakapanatag naman."
+  },
+  "114": {
+   "who": "Jack Bennett",
+   "p": 60,
+   "en": "I thought so.",
+   "fil": "Sa tingin ko rin."
+  },
+  "115": {
+   "who": "Narrator",
+   "p": 60,
+   "en": "Jack pulled up the TOMBS directory again, tracing back through what had changed.",
+   "fil": "Muling binuksan ni Jack ang TOMBS directory, binabalikan ang lahat ng nagbago."
+  },
+  "116": {
+   "who": "Sarah Bennett",
+   "p": 61,
+   "en": "These are clean,",
+   "fil": "Malinis ang mga 'to,"
+  },
+  "117": {
+   "who": "Narrator",
+   "p": 61,
+   "en": "Sarah murmured after a few seconds, still scanning her own feed.",
+   "fil": "bulong ni Sarah makalipas ang ilang segundo, habang patuloy na sinusuyod ang sarili niyang feed."
+  },
+  "118": {
+   "who": "Narrator",
+   "p": 62,
+   "en": "Jack pointed at his own screen.",
+   "fil": "Itinuro ni Jack ang sarili niyang screen."
+  },
+  "119": {
+   "who": "Jack Bennett",
+   "p": 62,
+   "en": "Mine too. Whoever it was covered both trails.",
+   "fil": "Pati sa akin. Kung sino man 'yon, tinakpan niya ang bakas sa dalawa."
+  },
+  "120": {
+   "who": "Narrator",
+   "p": 63,
+   "en": "Sarah narrowed her eyes at the display.",
+   "fil": "Pinaningkitan ni Sarah ng mata ang display."
+  },
+  "121": {
+   "who": "Sarah Bennett",
+   "p": 63,
+   "en": "Too clean.",
+   "fil": "Masyadong malinis."
+  },
+  "122": {
+   "who": "Narrator",
+   "p": 64,
+   "en": "Jack nodded.",
+   "fil": "Tumango si Jack."
+  },
+  "123": {
+   "who": "Jack Bennett",
+   "p": 64,
+   "en": "That's what I was thinking.",
+   "fil": "'Yan din ang iniisip ko."
+  },
+  "124": {
+   "who": "Narrator",
+   "p": 65,
+   "en": "Sarah looked sideways at him.",
+   "fil": "Patagilid siyang tiningnan ni Sarah."
+  },
+  "125": {
+   "who": "Sarah Bennett",
+   "p": 65,
+   "en": "No, you were sleeping.",
+   "fil": "Hindi, natutulog ka."
+  },
+  "126": {
+   "who": "Jack Bennett",
+   "p": 66,
+   "en": "I was thinking eventually.",
+   "fil": "Maiisip ko rin naman. Kalaunan."
+  },
+  "127": {
+   "who": "Narrator",
+   "p": 67,
+   "en": "Sarah shook her head, but Jack caught the beginning of a smile. He glanced at the time and then at her.",
+   "fil": "Umiling si Sarah, pero nahuli ni Jack ang pagsilay ng isang ngiti. Sumulyap siya sa oras, saka kay Sarah."
+  },
+  "128": {
+   "who": "Jack Bennett",
+   "p": 67,
+   "en": "You know, you're supposed to be resting.",
+   "fil": "Alam mo, dapat nagpapahinga ka."
+  },
+  "129": {
+   "who": "Narrator",
+   "p": 68,
+   "en": "Sarah kept typing.",
+   "fil": "Patuloy sa pagta-type si Sarah."
+  },
+  "130": {
+   "who": "Sarah Bennett",
+   "p": 68,
+   "en": "So are you.",
+   "fil": "Ikaw rin naman."
+  },
+  "131": {
+   "who": "Narrator",
+   "p": 69,
+   "en": "Jack glanced at her stomach.",
+   "fil": "Sumulyap si Jack sa kanyang tiyan."
+  },
+  "132": {
+   "who": "Jack Bennett",
+   "p": 69,
+   "en": "I'm not the pregnant one.",
+   "fil": "Hindi naman ako ang buntis."
+  },
+  "133": {
+   "who": "Narrator",
+   "p": 70,
+   "en": "Sarah looked over at him.",
+   "fil": "Tumingin sa kanya si Sarah."
+  },
+  "134": {
+   "who": "Sarah Bennett",
+   "p": 70,
+   "en": "No. You're the one I found asleep at a laboratory terminal.",
+   "fil": "Hindi nga. Ikaw ang nadatnan kong tulog sa isang terminal ng laboratoryo."
+  },
+  "135": {
+   "who": "Narrator",
+   "p": 71,
+   "en": "Jack spread his hands.",
+   "fil": "Ibinuka ni Jack ang kanyang mga palad."
+  },
+  "136": {
+   "who": "Jack Bennett",
+   "p": 71,
+   "en": "That's different.",
+   "fil": "Iba 'yon."
+  },
+  "137": {
+   "who": "Narrator",
+   "p": 72,
+   "en": "Sarah stopped typing long enough to look at him.",
+   "fil": "Tumigil sa pagta-type si Sarah nang sapat lang para tingnan siya."
+  },
+  "138": {
+   "who": "Sarah Bennett",
+   "p": 72,
+   "en": "How?",
+   "fil": "Paano?"
+  },
+  "139": {
+   "who": "Narrator",
+   "p": 73,
+   "en": "Jack considered it.",
+   "fil": "Pinag-isipan iyon ni Jack."
+  },
+  "140": {
+   "who": "Jack Bennett",
+   "p": 73,
+   "en": "I wasn't uncomfortable?",
+   "fil": "Hindi naman ako nahihirapan?"
+  },
+  "141": {
+   "who": "Narrator",
+   "p": 74,
+   "en": "Sarah gave him a look that answered the question for him.",
+   "fil": "Binigyan siya ni Sarah ng tingin na siya na mismong sumagot sa tanong."
+  },
+  "142": {
+   "who": "Narrator",
+   "p": 75,
+   "en": "Jack surrendered with a small nod.",
+   "fil": "Bahagyang tumango si Jack, sumusuko."
+  },
+  "143": {
+   "who": "Jack Bennett",
+   "p": 75,
+   "en": "Fair.",
+   "fil": "Sige na nga."
+  },
+  "144": {
+   "who": "Sarah Bennett",
+   "p": 76,
+   "en": "Lately the baby seems to think eleven at night is morning.",
+   "fil": "Nitong mga nakaraan, parang akala ng baby, umaga na kapag alas-onse ng gabi."
+  },
+  "145": {
+   "who": "Narrator",
+   "p": 76,
+   "en": "Sarah rested a hand briefly against her stomach, then returned to typing.",
+   "fil": "Saglit na ipinatong ni Sarah ang isang kamay sa kanyang tiyan, saka bumalik sa pagta-type."
+  },
+  "146": {
+   "who": "Narrator",
+   "p": 77,
+   "en": "Jack smiled at the movement beneath her hand.",
+   "fil": "Napangiti si Jack sa paggalaw sa ilalim ng palad ni Sarah."
+  },
+  "147": {
+   "who": "Jack Bennett",
+   "p": 77,
+   "en": "Already takes after me.",
+   "fil": "Mana na agad sa akin."
+  },
+  "148": {
+   "who": "Narrator",
+   "p": 78,
+   "en": "Sarah's hands went still.",
+   "fil": "Natigilan ang mga kamay ni Sarah."
+  },
+  "149": {
+   "who": "Sarah Bennett",
+   "p": 78,
+   "en": "That's what I'm afraid of.",
+   "fil": "'Yan nga ang kinatatakutan ko."
+  },
+  "150": {
+   "who": "Narrator",
+   "p": 79,
+   "en": "A new warning tone interrupted them. Both turned toward the main console as another message appeared.",
+   "fil": "Isang bagong warning tone ang pumutol sa kanila. Sabay silang lumingon sa pangunahing console nang lumitaw ang isa pang mensahe."
+  },
+  "151": {
+   "who": "TOMBS / settlement systems",
+   "p": 80,
+   "en": "Tombs array remote initialization request.",
+   "fil": "TOMBS Array remote initialization request."
+  },
+  "152": {
+   "who": "Narrator",
+   "p": 80,
+   "en": "Sarah sat upright.",
+   "fil": "Napaupo nang tuwid si Sarah."
+  },
+  "153": {
+   "who": "Sarah Bennett",
+   "p": 80,
+   "en": "Did you do that?",
+   "fil": "Ikaw ba ang gumawa niyan?"
+  },
+  "154": {
+   "who": "Narrator",
+   "p": 81,
+   "en": "Jack reached for the console.",
+   "fil": "Inabot ni Jack ang console."
+  },
+  "155": {
+   "who": "Jack Bennett",
+   "p": 81,
+   "en": "No.",
+   "fil": "Hindi."
+  },
+  "156": {
+   "who": "Narrator",
+   "p": 82,
+   "en": "Sarah pointed at the request.",
+   "fil": "Itinuro ni Sarah ang request."
+  },
+  "157": {
+   "who": "Sarah Bennett",
+   "p": 82,
+   "en": "Cancel it.",
+   "fil": "I-cancel mo."
+  },
+  "158": {
+   "who": "Narrator",
+   "p": 83,
+   "en": "Jack reached across the console and rejected the request.",
+   "fil": "Inabot ni Jack ang console at tinanggihan ang request."
+  },
+  "159": {
+   "who": "TOMBS / settlement systems",
+   "p": 84,
+   "en": "Request denied.",
+   "fil": "Request denied."
+  },
+  "160": {
+   "who": "Narrator",
+   "p": 84,
+   "en": "He tried again.",
+   "fil": "Sinubukan niya ulit."
+  },
+  "161": {
+   "who": "TOMBS / settlement systems",
+   "p": 85,
+   "en": "Request denied.",
+   "fil": "Request denied."
+  },
+  "162": {
+   "who": "Narrator",
+   "p": 85,
+   "en": "Jack's expression hardened.",
+   "fil": "Tumigas ang mukha ni Jack."
+  },
+  "163": {
+   "who": "Jack Bennett",
+   "p": 85,
+   "en": "That's not supposed to happen.",
+   "fil": "Hindi dapat nangyayari 'yan."
+  },
+  "164": {
+   "who": "Narrator",
+   "p": 85,
+   "en": "He entered his administrator credentials, but a new message appeared before he could issue another command.",
+   "fil": "Ipinasok niya ang kanyang administrator credentials, pero may bagong mensaheng lumitaw bago pa siya makapagbigay ng isa pang command."
+  },
+  "165": {
+   "who": "TOMBS / settlement systems",
+   "p": 86,
+   "en": "Access revoked.",
+   "fil": "Access revoked."
+  },
+  "166": {
+   "who": "Narrator",
+   "p": 86,
+   "en": "Sarah looked from the message to him.",
+   "fil": "Tumingin si Sarah sa mensahe, saka sa kanya."
+  },
+  "167": {
+   "who": "Sarah Bennett",
+   "p": 86,
+   "en": "Your credentials?",
+   "fil": "Ang credentials mo?"
+  },
+  "168": {
+   "who": "Narrator",
+   "p": 87,
+   "en": "Jack stared at the warning.",
+   "fil": "Tinitigan ni Jack ang babala."
+  },
+  "169": {
+   "who": "Jack Bennett",
+   "p": 87,
+   "en": "Revoked.",
+   "fil": "Binawi."
+  },
+  "170": {
+   "who": "Narrator",
+   "p": 88,
+   "en": "Sarah turned toward him.",
+   "fil": "Humarap sa kanya si Sarah."
+  },
+  "171": {
+   "who": "Sarah Bennett",
+   "p": 88,
+   "en": "You're the project administrator.",
+   "fil": "Ikaw ang project administrator."
+  },
+  "172": {
+   "who": "Narrator",
+   "p": 89,
+   "en": "Jack tried his credentials again.",
+   "fil": "Sinubukan ulit ni Jack ang kanyang credentials."
+  },
+  "173": {
+   "who": "Jack Bennett",
+   "p": 89,
+   "en": "I know.",
+   "fil": "Alam ko."
+  },
+  "174": {
+   "who": "Narrator",
+   "p": 90,
+   "en": "Sarah leaned toward the screen.",
+   "fil": "Lumapit si Sarah sa screen."
+  },
+  "175": {
+   "who": "Sarah Bennett",
+   "p": 90,
+   "en": "Who can revoke you?",
+   "fil": "Sino'ng puwedeng magbawi ng access mo?"
+  },
+  "176": {
+   "who": "Narrator",
+   "p": 91,
+   "en": "Jack stopped typing.",
+   "fil": "Tumigil sa pagta-type si Jack."
+  },
+  "177": {
+   "who": "Jack Bennett",
+   "p": 91,
+   "en": "Me.",
+   "fil": "Ako."
+  },
+  "178": {
+   "who": "Narrator",
+   "p": 92,
+   "en": "Sarah slowly turned toward him.",
+   "fil": "Dahan-dahang humarap sa kanya si Sarah."
+  },
+  "179": {
+   "who": "Sarah Bennett",
+   "p": 92,
+   "en": "Jack.",
+   "fil": "Jack."
+  },
+  "180": {
+   "who": "Narrator",
+   "p": 93,
+   "en": "Jack met her eyes.",
+   "fil": "Sinalubong ni Jack ang kanyang tingin."
+  },
+  "181": {
+   "who": "Jack Bennett",
+   "p": 93,
+   "en": "I didn't.",
+   "fil": "Hindi ko ginawa 'yon."
+  }
+ }
+}
