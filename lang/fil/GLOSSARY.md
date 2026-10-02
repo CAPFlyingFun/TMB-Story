@@ -12,54 +12,54 @@ says what the English says and nothing more: it never explains, adds or reveals.
 
 | English | Filipino | Note |
 |---|---|---|
-| Doctor Bennett / Doctor Mercer | docteur Bennett / docteure Mercer | titles; names never change |
-| Doctor (alone, Mark to Jack) | Docteur |  |
-| TOMBS / the TOMBS Array / the Array | TOMBS / l'Array TOMBS / l'Array | TOMBS and Array are names, never translated |
+| Doctor Bennett / Doctor Mercer | Doktor Bennett / Doktora Mercer | titles; names never change |
+| Doctor (alone, Mark to Jack) | Dok |  |
+| TOMBS / the TOMBS Array / the Array | TOMBS / ang Array ng TOMBS / ang Array | TOMBS and Array are names, never translated |
 | Temporal Object Manipulation and Boundary System | (unchanged) | what TOMBS stands for |
-| the boundary | la limite |  |
-| boundary event | événement de limite | Filipino keeps the English technical term |
-| boundary control / boundary file | contrôle de limite / fichier de limite |  |
-| boundary acquisition (in progress) / boundary acquired | acquisition de limite (en cours) / limite acquise | screen readouts |
-| scale factor / target scale | facteur d'échelle / échelle cible |  |
-| the developed zone / developed area | la zone aménagée / zone aménagée |  |
-| the settlement | la colonie | the research town |
-| the wilderness | la nature sauvage |  |
-| wrist terminal | terminal de poignet |  |
-| control room / main control room | salle de contrôle / salle de contrôle principale |  |
-| the lab / laboratory | le labo / laboratoire |  |
-| chamber (where the Array stands) | chambre de l'Array |  |
-| emitter(s) | émetteur(s) |  |
+| the boundary | ang hangganan |  |
+| boundary event | boundary event | Filipino keeps the English technical term |
+| boundary control / boundary file | boundary control / boundary file |  |
+| boundary acquisition (in progress) / boundary acquired | boundary acquisition (in progress) / boundary acquired | screen readouts |
+| scale factor / target scale | scale factor / target scale |  |
+| the developed zone / developed area | ang developed zone / developed area |  |
+| the settlement | ang settlement | the research town |
+| the wilderness | ang kagubatan |  |
+| wrist terminal | wrist terminal |  |
+| control room / main control room | control room / main control room |  |
+| the lab / laboratory | ang lab / laboratoryo |  |
+| chamber (where the Array stands) | chamber ng Array |  |
+| emitter(s) | emitter |  |
 | console | console |  |
-| event log | journal des événements |  |
-| diagnostic snapshot / maintenance snapshots | instantané de diagnostic / instantanés de maintenance |  |
-| credentials / administrator credentials | identifiants / identifiants administrateur |  |
-| utility station / utility control / "Control" (call sign) | station technique / contrôle technique / « Contrôle » |  |
-| utility vehicle | véhicule utilitaire |  |
-| perimeter / perimeter cameras / perimeter security | périmètre / caméras du périmètre / sécurité du périmètre |  |
-| security channel / facilities channel | canal de sécurité / canal des services techniques |  |
-| Unit Twelve | Unité Douze |  |
-| medical center / community center | centre médical / centre communautaire |  |
-| pumping station / reservoir | station de pompage / réservoir |  |
-| maintenance tablet | tablette de maintenance |  |
-| badge / badge ping | badge / signal du badge |  |
-| greenhouse | serre |  |
-| intercom | interphone |  |
-| shutdown lever | levier d'arrêt |  |
-| PHASE ONE READY / phase two | PHASE UN PRÊTE / phase deux | screen words stay in capitals |
-| file (computer) | fichier |  |
-| trigger (noun) | déclencheur |  |
-| camera feed | flux de la caméra |  |
-| security officer | agent de sécurité |  |
-| vibration / tremor | vibration / tremblement |  |
-| fingernail clipping | rognure d'ongle | the giant one, Chapters 5 to 7 |
-| the dinner-plate mark | la marque grande comme une assiette | Chapters 7 to 9 |
-| blade of grass / grass stems | brin d'herbe / tiges d'herbe |  |
-| ridge | crête |  |
-| groundskeeper | jardinier |  |
-| intruder | intrus |  |
-| timestamp | horodatage |  |
-| "Access revoked." / "Request denied." / "Access denied." | "Accès révoqué." / "Demande refusée." / "Accès refusé." |  |
-| "Negative." / "Understood." (radio) | "Négatif." / "Compris." |  |
+| event log | event log |  |
+| diagnostic snapshot / maintenance snapshots | diagnostic snapshot / maintenance snapshots |  |
+| credentials / administrator credentials | credentials / administrator credentials |  |
+| utility station / utility control / "Control" (call sign) | utility station / utility control / "Control" |  |
+| utility vehicle | utility vehicle |  |
+| perimeter / perimeter cameras / perimeter security | perimeter / perimeter cameras / perimeter security |  |
+| security channel / facilities channel | security channel / facilities channel |  |
+| Unit Twelve | Unit Twelve |  |
+| medical center / community center | medical center / community center |  |
+| pumping station / reservoir | pumping station / reservoir |  |
+| maintenance tablet | maintenance tablet |  |
+| badge / badge ping | badge / badge ping |  |
+| greenhouse | greenhouse |  |
+| intercom | intercom |  |
+| shutdown lever | shutdown lever |  |
+| PHASE ONE READY / phase two | PHASE ONE READY / phase two | screen words stay in capitals |
+| file (computer) | file |  |
+| trigger (noun) | trigger |  |
+| camera feed | camera feed |  |
+| security officer | security officer |  |
+| vibration / tremor | yanig / pagyanig |  |
+| fingernail clipping | pinutol na kuko | the giant one, Chapters 5 to 7 |
+| the dinner-plate mark | ang bakas na sinlaki ng plato | Chapters 7 to 9 |
+| blade of grass / grass stems | dahon ng damo / tangkay ng damo |  |
+| ridge | gulod |  |
+| groundskeeper | hardinero |  |
+| intruder | nanghimasok |  |
+| timestamp | timestamp |  |
+| "Access revoked." / "Request denied." / "Access denied." | "Access revoked." / "Request denied." / "Access denied." |  |
+| "Negative." / "Understood." (radio) | "Negative." / "Copy." |  |
 
 ## Voice
 

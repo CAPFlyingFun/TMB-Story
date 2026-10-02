@@ -12,54 +12,54 @@ says what the English says and nothing more: it never explains, adds or reveals.
 
 | English | Português (Brasil) | Note |
 |---|---|---|
-| Doctor Bennett / Doctor Mercer | Doktor Bennett / Doktora Mercer | titles; names never change |
-| Doctor (alone, Mark to Jack) | Dok |  |
-| TOMBS / the TOMBS Array / the Array | TOMBS / ang Array ng TOMBS / ang Array | TOMBS and Array are names, never translated |
+| Doctor Bennett / Doctor Mercer | Doutor Bennett / Doutora Mercer | titles; names never change |
+| Doctor (alone, Mark to Jack) | Doutor |  |
+| TOMBS / the TOMBS Array / the Array | TOMBS / o Array TOMBS / o Array | TOMBS and Array are names, never translated |
 | Temporal Object Manipulation and Boundary System | (unchanged) | what TOMBS stands for |
-| the boundary | ang hangganan |  |
-| boundary event | boundary event | Filipino keeps the English technical term |
-| boundary control / boundary file | boundary control / boundary file |  |
-| boundary acquisition (in progress) / boundary acquired | boundary acquisition (in progress) / boundary acquired | screen readouts |
-| scale factor / target scale | scale factor / target scale |  |
-| the developed zone / developed area | ang developed zone / developed area |  |
-| the settlement | ang settlement | the research town |
-| the wilderness | ang kagubatan |  |
-| wrist terminal | wrist terminal |  |
-| control room / main control room | control room / main control room |  |
-| the lab / laboratory | ang lab / laboratoryo |  |
-| chamber (where the Array stands) | chamber ng Array |  |
-| emitter(s) | emitter |  |
-| console | console |  |
-| event log | event log |  |
-| diagnostic snapshot / maintenance snapshots | diagnostic snapshot / maintenance snapshots |  |
-| credentials / administrator credentials | credentials / administrator credentials |  |
-| utility station / utility control / "Control" (call sign) | utility station / utility control / "Control" |  |
-| utility vehicle | utility vehicle |  |
-| perimeter / perimeter cameras / perimeter security | perimeter / perimeter cameras / perimeter security |  |
-| security channel / facilities channel | security channel / facilities channel |  |
-| Unit Twelve | Unit Twelve |  |
-| medical center / community center | medical center / community center |  |
-| pumping station / reservoir | pumping station / reservoir |  |
-| maintenance tablet | maintenance tablet |  |
-| badge / badge ping | badge / badge ping |  |
-| greenhouse | greenhouse |  |
-| intercom | intercom |  |
-| shutdown lever | shutdown lever |  |
-| PHASE ONE READY / phase two | PHASE ONE READY / phase two | screen words stay in capitals |
-| file (computer) | file |  |
-| trigger (noun) | trigger |  |
-| camera feed | camera feed |  |
-| security officer | security officer |  |
-| vibration / tremor | yanig / pagyanig |  |
-| fingernail clipping | pinutol na kuko | the giant one, Chapters 5 to 7 |
-| the dinner-plate mark | ang bakas na sinlaki ng plato | Chapters 7 to 9 |
-| blade of grass / grass stems | dahon ng damo / tangkay ng damo |  |
-| ridge | gulod |  |
-| groundskeeper | hardinero |  |
-| intruder | nanghimasok |  |
-| timestamp | timestamp |  |
-| "Access revoked." / "Request denied." / "Access denied." | "Access revoked." / "Request denied." / "Access denied." |  |
-| "Negative." / "Understood." (radio) | "Negative." / "Copy." |  |
+| the boundary | o limite |  |
+| boundary event | evento de limite | Filipino keeps the English technical term |
+| boundary control / boundary file | controle de limite / arquivo de limite |  |
+| boundary acquisition (in progress) / boundary acquired | aquisição de limite (em andamento) / limite adquirido | screen readouts |
+| scale factor / target scale | fator de escala / escala-alvo |  |
+| the developed zone / developed area | a zona urbanizada / área urbanizada |  |
+| the settlement | a vila | the research town |
+| the wilderness | a mata |  |
+| wrist terminal | terminal de pulso |  |
+| control room / main control room | sala de controle / sala de controle principal |  |
+| the lab / laboratory | o laboratório |  |
+| chamber (where the Array stands) | câmara do Array |  |
+| emitter(s) | emissor(es) |  |
+| console | o console |  |
+| event log | registro de eventos |  |
+| diagnostic snapshot / maintenance snapshots | snapshot de diagnóstico / snapshots de manutenção |  |
+| credentials / administrator credentials | credenciais / credenciais de administrador |  |
+| utility station / utility control / "Control" (call sign) | estação de serviços / controle de serviços / "Controle" |  |
+| utility vehicle | veículo utilitário |  |
+| perimeter / perimeter cameras / perimeter security | perímetro / câmeras do perímetro / segurança do perímetro |  |
+| security channel / facilities channel | canal de segurança / canal de manutenção predial |  |
+| Unit Twelve | Unidade Doze |  |
+| medical center / community center | centro médico / centro comunitário |  |
+| pumping station / reservoir | estação de bombeamento / reservatório |  |
+| maintenance tablet | tablet de manutenção |  |
+| badge / badge ping | crachá / sinal do crachá |  |
+| greenhouse | estufa |  |
+| intercom | interfone |  |
+| shutdown lever | alavanca de desligamento |  |
+| PHASE ONE READY / phase two | FASE UM PRONTA / fase dois | screen words stay in capitals |
+| file (computer) | arquivo |  |
+| trigger (noun) | gatilho |  |
+| camera feed | imagem da câmera |  |
+| security officer | agente de segurança |  |
+| vibration / tremor | vibração / tremor |  |
+| fingernail clipping | pedaço de unha cortada | the giant one, Chapters 5 to 7 |
+| the dinner-plate mark | a marca do tamanho de um prato | Chapters 7 to 9 |
+| blade of grass / grass stems | folha de grama / talos de grama |  |
+| ridge | crista (de terra) |  |
+| groundskeeper | zelador dos jardins |  |
+| intruder | invasor |  |
+| timestamp | carimbo de data e hora |  |
+| "Access revoked." / "Request denied." / "Access denied." | "Acesso revogado." / "Solicitação negada." / "Acesso negado." |  |
+| "Negative." / "Understood." (radio) | "Negativo." / "Entendido." |  |
 
 ## Voice
 

@@ -12,54 +12,54 @@ says what the English says and nothing more: it never explains, adds or reveals.
 
 | English | Français | Note |
 |---|---|---|
-| Doctor Bennett / Doctor Mercer | titles; names never change | titles; names never change |
-| Doctor (alone, Mark to Jack) |  |  |
-| TOMBS / the TOMBS Array / the Array | TOMBS and Array are names, never translated | TOMBS and Array are names, never translated |
-| Temporal Object Manipulation and Boundary System | what TOMBS stands for | what TOMBS stands for |
-| the boundary |  |  |
-| boundary event | Filipino keeps the English technical term | Filipino keeps the English technical term |
-| boundary control / boundary file |  |  |
-| boundary acquisition (in progress) / boundary acquired | screen readouts | screen readouts |
-| scale factor / target scale |  |  |
-| the developed zone / developed area |  |  |
-| the settlement | the research town | the research town |
-| the wilderness |  |  |
-| wrist terminal |  |  |
-| control room / main control room |  |  |
-| the lab / laboratory |  |  |
-| chamber (where the Array stands) |  |  |
-| emitter(s) |  |  |
-| console |  |  |
-| event log |  |  |
-| diagnostic snapshot / maintenance snapshots |  |  |
-| credentials / administrator credentials |  |  |
-| utility station / utility control / "Control" (call sign) |  |  |
-| utility vehicle |  |  |
-| perimeter / perimeter cameras / perimeter security |  |  |
-| security channel / facilities channel |  |  |
-| Unit Twelve |  |  |
-| medical center / community center |  |  |
-| pumping station / reservoir |  |  |
-| maintenance tablet |  |  |
-| badge / badge ping |  |  |
-| greenhouse |  |  |
-| intercom |  |  |
-| shutdown lever |  |  |
-| PHASE ONE READY / phase two | screen words stay in capitals | screen words stay in capitals |
-| file (computer) |  |  |
-| trigger (noun) |  |  |
-| camera feed |  |  |
-| security officer |  |  |
-| vibration / tremor |  |  |
-| fingernail clipping | the giant one, Chapters 5 to 7 | the giant one, Chapters 5 to 7 |
-| the dinner-plate mark | Chapters 7 to 9 | Chapters 7 to 9 |
-| blade of grass / grass stems |  |  |
-| ridge |  |  |
-| groundskeeper |  |  |
-| intruder |  |  |
-| timestamp |  |  |
-| "Access revoked." / "Request denied." / "Access denied." |  |  |
-| "Negative." / "Understood." (radio) |  |  |
+| Doctor Bennett / Doctor Mercer | docteur Bennett / docteure Mercer | titles; names never change |
+| Doctor (alone, Mark to Jack) | Docteur |  |
+| TOMBS / the TOMBS Array / the Array | TOMBS / l'Array TOMBS / l'Array | TOMBS and Array are names, never translated |
+| Temporal Object Manipulation and Boundary System | (unchanged) | what TOMBS stands for |
+| the boundary | la limite |  |
+| boundary event | événement de limite | Filipino keeps the English technical term |
+| boundary control / boundary file | contrôle de limite / fichier de limite |  |
+| boundary acquisition (in progress) / boundary acquired | acquisition de limite (en cours) / limite acquise | screen readouts |
+| scale factor / target scale | facteur d'échelle / échelle cible |  |
+| the developed zone / developed area | la zone aménagée / zone aménagée |  |
+| the settlement | la colonie | the research town |
+| the wilderness | la nature sauvage |  |
+| wrist terminal | terminal de poignet |  |
+| control room / main control room | salle de contrôle / salle de contrôle principale |  |
+| the lab / laboratory | le labo / laboratoire |  |
+| chamber (where the Array stands) | chambre de l'Array |  |
+| emitter(s) | émetteur(s) |  |
+| console | console |  |
+| event log | journal des événements |  |
+| diagnostic snapshot / maintenance snapshots | instantané de diagnostic / instantanés de maintenance |  |
+| credentials / administrator credentials | identifiants / identifiants administrateur |  |
+| utility station / utility control / "Control" (call sign) | station technique / contrôle technique / « Contrôle » |  |
+| utility vehicle | véhicule utilitaire |  |
+| perimeter / perimeter cameras / perimeter security | périmètre / caméras du périmètre / sécurité du périmètre |  |
+| security channel / facilities channel | canal de sécurité / canal des services techniques |  |
+| Unit Twelve | Unité Douze |  |
+| medical center / community center | centre médical / centre communautaire |  |
+| pumping station / reservoir | station de pompage / réservoir |  |
+| maintenance tablet | tablette de maintenance |  |
+| badge / badge ping | badge / signal du badge |  |
+| greenhouse | serre |  |
+| intercom | interphone |  |
+| shutdown lever | levier d'arrêt |  |
+| PHASE ONE READY / phase two | PHASE UN PRÊTE / phase deux | screen words stay in capitals |
+| file (computer) | fichier |  |
+| trigger (noun) | déclencheur |  |
+| camera feed | flux de la caméra |  |
+| security officer | agent de sécurité |  |
+| vibration / tremor | vibration / tremblement |  |
+| fingernail clipping | rognure d'ongle | the giant one, Chapters 5 to 7 |
+| the dinner-plate mark | la marque grande comme une assiette | Chapters 7 to 9 |
+| blade of grass / grass stems | brin d'herbe / tiges d'herbe |  |
+| ridge | crête |  |
+| groundskeeper | jardinier |  |
+| intruder | intrus |  |
+| timestamp | horodatage |  |
+| "Access revoked." / "Request denied." / "Access denied." | "Accès révoqué." / "Demande refusée." / "Accès refusé." |  |
+| "Negative." / "Understood." (radio) | "Négatif." / "Compris." |  |
 
 ## Voice
 
