@@ -607,3 +607,19 @@ button {
 .audio-credits ul { margin: 0; padding-left: 1.1em; }
 .audio-credits li { margin: 2px 0; }
 .audio-credits a { color: inherit; text-decoration: underline; }
+
+/* ---------- Other languages (lang/lang.js) ---------- */
+.lang-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 4px 0 10px; }
+.lang-btn, .lang-sel {
+  font: inherit; font-size: 13px; color: var(--text-secondary);
+  background: var(--bg-surface); border: 1px solid var(--border-subtle);
+  border-radius: 999px; padding: 6px 12px; cursor: pointer;
+}
+.lang-sel { padding-right: 8px; max-width: 12rem; }
+.lang-btn.on, .lang-sel.on { color: var(--bg-deep); background: var(--accent-gold); border-color: var(--accent-gold); }
+.lang-note { font-size: 13px; color: var(--text-muted); margin: 0 0 14px; }
+.tr-p { cursor: pointer; }
+.tr-p.open { border-left: 2px solid var(--border-accent); padding-left: 10px; }
+.tr-en { display: block; margin-top: 6px; font-size: 0.9em; color: var(--text-muted); }
+.tr-en[hidden] { display: none; }
+.tr-orig { display: block; font-size: 0.5em; color: var(--text-muted); font-family: var(--font-body); margin-top: 4px; }

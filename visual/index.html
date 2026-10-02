@@ -70,12 +70,15 @@
         <button id="m-resume" type="button" class="primary level">&#9654; Resume</button>
         <button id="m-restart" type="button">&#8634; Start over</button>
         <button id="m-cc" type="button">Captions: Off</button>
+        <select id="m-lang" aria-label="Caption language" translate="no" hidden></select>
+        <p class="menu-hint" id="m-lang-note" hidden></p>
         <button id="m-people" type="button" hidden>People: 3D</button>
         <a id="m-home" class="btn" href="../">Main menu</a>
       </div>
     </div>
   </div>
   <audio id="audio" preload="auto" playsinline></audio>
+  <script src="../lang/lang.js"></script>
   <script type="module" src="engine/app.js"></script>
 </body>
 </html>

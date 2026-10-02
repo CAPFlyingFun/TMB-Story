@@ -138,7 +138,10 @@ every second, so if the phone reloads the page the card offers "Resume at 0:12" 
 The player is movie-style: the controls hide while it plays and a tap on the picture
 brings them back. **CC** turns closed captions on and off (remembered per device); they
 come from the manifest, so they are always the manuscript's words, with characters
-named and the narrator not.
+named and the narrator not. The menu's language picker shows them in Indonesian (made by
+hand, `lang/id/`) or in any language the browser can translate on the device
+(`lang/lang.js`, decision 0028); the voices stay English, and a tap on a translated caption
+shows the English line. The choice is shared with the reader.
 
 Debug: `?debug=1` shows the state panel (or press D), `?t=62.5` opens at a time,
 `?silent=1` runs without audio, `?nogate` skips the play card. Space plays and pauses, the arrow keys step line by

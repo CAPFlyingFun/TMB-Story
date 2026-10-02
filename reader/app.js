@@ -395,14 +395,104 @@
         var details = '<details class="details"><summary>Chapter details</summary><div class="details-body">' +
           frontmatterHtml(parts.fm) + "</div></details>";
         var prose = renderMd(parts.body).replace('class="md"', 'class="md prose"');
-        view.innerHTML = '<article class="reader">' + navTop + head + details + prose + navBottom + "</article>";
+        view.innerHTML = '<article class="reader">' + navTop + head + langBar() + details +
+          '<div id="prose-host">' + prose + "</div>" + navBottom + "</article>";
         storageSet(LAST_READ_KEY, pad4(c.number));   // remembered only once the chapter actually loaded
         window.scrollTo(0, 0);
+        wireLangBar(function () { viewChapter(numArg); });
+        return translateChapter(c);
       }).catch(function (err) {
         view.innerHTML = '<div class="reader">' + navTop + errorBlock(err, c.path) + "</div>";
       });
     }).catch(function (err) {
       view.innerHTML = errorBlock(err, "reader/manifest.json");
+    });
+  }
+
+  /* ---- Other languages (lang/lang.js) --------------------------------------------
+     English is the chapter file, rendered as ever. Another language is rebuilt from the
+     audio manifest's lines, one translation a line, a paragraph at a time; a tap on a
+     paragraph shows its English underneath. */
+  function langBar() {
+    var L = window.TMBLang;
+    if (!L) return "";
+    var cur = L.get();
+    var btn = function (code, label) {
+      return '<button type="button" class="lang-btn' + (cur === code ? " on" : "") + '" data-lang="' + code + '">' + esc(label) + "</button>";
+    };
+    var opts = '<option value="">Other language…</option>' + L.auto.map(function (a) {
+      return '<option value="' + a[0] + '"' + (cur === a[0] ? " selected" : "") + ">" + esc(a[1]) + "</option>";
+    }).join("");
+    var autoOn = cur !== "en" && !L.isCurated(cur);
+    return '<div class="lang-bar" translate="no">' + btn("en", "English") +
+      Object.keys(L.curated).map(function (k) { return btn(k, L.curated[k]); }).join("") +
+      '<select class="lang-sel' + (autoOn ? " on" : "") + '" aria-label="Translate automatically">' + opts + "</select></div>" +
+      '<p class="lang-note" id="lang-note" hidden></p>';
+  }
+
+  function wireLangBar(rerender) {
+    var L = window.TMBLang;
+    if (!L) return;
+    Array.prototype.forEach.call(view.querySelectorAll(".lang-btn"), function (b) {
+      b.addEventListener("click", function () { L.set(b.getAttribute("data-lang")); rerender(); });
+    });
+    var sel = view.querySelector(".lang-sel");
+    if (sel) sel.addEventListener("change", function () { if (sel.value) { L.set(sel.value); rerender(); } });
+  }
+
+  function langNote(html) {
+    var n = document.getElementById("lang-note");
+    if (!n) return;
+    n.innerHTML = html;
+    n.hidden = !html;
+  }
+
+  function translateChapter(c) {
+    var L = window.TMBLang;
+    if (!L) return;
+    var code = L.get();
+    if (code === "en") return;
+    var host = document.getElementById("prose-host");
+    var manifest = "audio/manifests/chapter-" + (c.number < 10 ? "0" : "") + c.number + ".json";
+    langNote(L.isCurated(code) ? "Memuat terjemahan…" : "Translating on this device…");
+    return fetch(manifest, { cache: "no-cache" }).then(function (r) {
+      if (!r.ok) throw new Error("no-lines");
+      return r.json();
+    }).then(function (m) {
+      var segs = (m.segments || []).slice().sort(function (a, b) { return a.order - b.order; });
+      return L.forSegments(c.number, segs, code, function (f, translating) {
+        if (!document.getElementById("prose-host")) return;
+        langNote(translating ? "Translating on this device… " + Math.round(f * 100) + "%" : "Downloading the " + esc(L.name(code)) + " model… " + Math.round(f * 100) + "%");
+      }).then(function (res) {
+        if (!document.getElementById("prose-host")) return;   // the reader moved on
+        var paras = L.paragraphs(segs, res.text);
+        host.innerHTML = '<div class="md prose tr-prose" lang="' + esc(code) + '" translate="no">' + paras.map(function (p) {
+          return '<p class="tr-p' + (p.missing ? " partial" : "") + '"><span class="tr">' + esc(p.tr) + '</span>' +
+            '<span class="tr-en" lang="en" hidden>' + esc(p.en) + "</span></p>";
+        }).join("") + "</div>";
+        Array.prototype.forEach.call(host.querySelectorAll(".tr-p"), function (p) {
+          p.addEventListener("click", function () {
+            var en = p.querySelector(".tr-en");
+            en.hidden = !en.hidden;
+            p.classList.toggle("open", !en.hidden);
+          });
+        });
+        if (res.title) {
+          var t = view.querySelector(".reader-title");
+          if (t) t.innerHTML = esc(res.title) + ' <span class="tr-orig" lang="en">' + esc(c.title || "") + "</span>";
+        }
+        if (res.source === "curated") {
+          langNote("Terjemahan buatan tangan · ketuk paragraf untuk melihat bahasa Inggris." +
+            (res.stale.length ? " " + res.stale.length + " baris belum diterjemahkan ulang dan tampil dalam bahasa Inggris." : ""));
+        } else {
+          langNote("Machine translation by this device · tap a paragraph to see the English.");
+        }
+      });
+    }).catch(function (err) {
+      var msg = String(err && err.message);
+      if (msg === "no-lines") langNote("This chapter has no line list yet, so it can only be shown in English.");
+      else if (L.isCurated(code)) langNote("Terjemahan bab ini belum tersedia. Showing English.");
+      else langNote("This browser can't translate to " + esc(L.name(code)) + " on the device. Your browser's own translate can (in Chrome: ⋮ → Translate…). Showing English.");
     });
   }
 

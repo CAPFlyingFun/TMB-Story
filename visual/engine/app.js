@@ -43,20 +43,22 @@ const store = {
 
 // Closed captions from the manifest: a long line is split into sentences, each given a
 // share of the line's time in proportion to its length. Characters are named; the
-// narrator is not.
-function buildCaptions(segments, start, end) {
+// narrator is not. `tr` is a translation per line (lang/lang.js, by the line's order): the
+// translated line is the caption and the English rides along for a tap.
+function buildCaptions(segments, start, end, tr) {
   const out = [];
   for (const s of segments) {
     const a = s.startMs / 1000, b = s.endMs / 1000;
     if (b < start || a > end) continue;
     const label = s.speaker === "narrator" ? "" : String(s.speakerName || s.speaker).split(" / ")[0].split(" ")[0];
     // A short line shows whole; only long narration is split, so "What?" never flashes alone.
-    const parts = s.displayText.length <= 100 ? [s.displayText] : s.displayText.match(/[^.!?\u2026]+[.!?\u2026]+["\u201d\u2019)]*\s*|[^.!?\u2026]+$/g) || [s.displayText];
+    const line = tr && tr[s.order] !== undefined ? tr[s.order] : s.displayText;
+    const parts = line.length <= 100 ? [line] : line.match(/[^.!?\u2026]+[.!?\u2026]+["\u201d\u2019)]*\s*|[^.!?\u2026]+$/g) || [line];
     const total = parts.reduce((n, p) => n + p.length, 0);
     let t = a;
     for (const p of parts) {
       const d = ((b - a) * p.length) / total;
-      out.push({ start: t, end: t + d, text: p.trim(), label, speaker: s.speaker });
+      out.push({ start: t, end: t + d, text: p.trim(), label, speaker: s.speaker, en: tr ? s.displayText : "" });
       t += d;
     }
   }
@@ -200,7 +202,7 @@ async function boot() {
     if (clock.playing) uiTimer = setTimeout(() => clock.playing && document.body.classList.add("ui-hidden"), ms);
   }
   $("stage").addEventListener("click", (e) => {
-    if (e.target.closest("button, a, input")) return;
+    if (e.target.closest("button, a, input, select, #captions.tr")) return;
     if (document.body.classList.contains("ui-hidden") || !clock.playing) showUI();
     else {
       clearTimeout(uiTimer);
@@ -210,7 +212,7 @@ async function boot() {
   $("controls").addEventListener("pointerdown", () => showUI());
 
   // Captions: off unless turned on, and remembered.
-  const captions = buildCaptions(anchors.segments, start, end);
+  let captions = buildCaptions(anchors.segments, start, end);
   // With captions on, whoever is speaking has their small portrait beside the line
   // (assets/portraits, scripts/make-portraits.py): the 3D one when the people are in 3D.
   const PORTRAITS = new Set(["jack", "sarah", "mark", "lena", "system"]), PORTRAITS_3D = new Set(["jack", "sarah"]);
@@ -232,6 +234,57 @@ async function boot() {
   }
   setCC(ccOn);
   $("cc").onclick = () => setCC(!ccOn);
+  // The captions' language (lang/lang.js): English, the hand-made Indonesian, or the
+  // browser's own on-device translator. A tap on a translated caption shows its English.
+  const L = window.TMBLang;
+  let capLang = "en", capEn = false, langNote = "";
+  const inRange = anchors.segments.filter((s) => s.endMs / 1000 >= start && s.startMs / 1000 <= end);
+  function setLang(code, fromMenu) {
+    capLang = code;
+    capEn = false;
+    if (L) L.set(code);
+    capEl.lang = code;
+    capEl.classList.toggle("tr", code !== "en");
+    capShown = null;
+    dirty = true;
+    if (code === "en" || !L) {
+      captions = buildCaptions(anchors.segments, start, end);
+      langNote = "";
+      showMenuPosition();
+      return;
+    }
+    if (fromMenu && !ccOn) setCC(true);
+    langNote = L.isCurated(code) ? "Memuat terjemahan…" : "Translating on this device…";
+    showMenuPosition();
+    L.forSegments(manifest.chapter, inRange, code, (f, translating) => {
+      if (capLang !== code) return;
+      langNote = (translating ? "Translating… " : "Downloading " + L.name(code) + "… ") + Math.round(f * 100) + "%";
+      showMenuPosition();
+    }).then((res) => {
+      if (capLang !== code) return;
+      captions = buildCaptions(anchors.segments, start, end, res.text);
+      langNote = res.source === "curated"
+        ? "Terjemahan buatan tangan · ketuk teks untuk bahasa Inggris." + (res.stale.length ? ` ${res.stale.length} baris dalam bahasa Inggris.` : "")
+        : "Machine translation by this device · tap a caption for the English.";
+      capShown = null;
+      dirty = true;
+      showMenuPosition();
+    }).catch(() => {
+      if (capLang !== code) return;
+      captions = buildCaptions(anchors.segments, start, end);
+      langNote = L.isCurated(code) ? "Terjemahan belum tersedia untuk bab ini. Showing English."
+        : `This browser can't translate to ${L.name(code)} on the device. Showing English.`;
+      capShown = null;
+      dirty = true;
+      showMenuPosition();
+    });
+  }
+  capEl.addEventListener("click", () => {
+    if (capLang === "en") return;
+    capEn = !capEn;
+    capShown = null;
+    dirty = true;
+  });
   function drawCaption(t) {
     let c = null;
     for (const k of captions) {
@@ -240,7 +293,7 @@ async function boot() {
     }
     if (c && t > c.end + 0.6) c = null;
     const face = ccOn && c ? faceOf(c.speaker) : "";
-    const text = ccOn && c ? (c.label ? `<b>${esc(c.label)}:</b> ` : "") + esc(c.text) : "";
+    const text = ccOn && c ? (c.label ? `<b>${esc(c.label)}:</b> ` : "") + esc(c.text) + (capEn && c.en ? `<i class="cap-en" lang="en">${esc(c.en)}</i>` : "") : "";
     const html = text && face ? `<img class="cap-face" src="${face}" alt=""><span>${text}</span>` : text;
     if (html !== capShown) {
       capShown = html;
@@ -316,6 +369,11 @@ async function boot() {
   function showMenuPosition() {
     $("menu-at").textContent = `${fmt(clock.now() - start)} of ${fmt(end - start)}`;
     $("m-cc").textContent = "Captions: " + (ccOn ? "On" : "Off");
+    if (L) {
+      $("m-lang").value = capLang;
+      $("m-lang-note").textContent = langNote;
+      $("m-lang-note").hidden = !langNote;
+    }
     $("m-people").hidden = !has3d;
     $("m-people").textContent = "People: " + (want3d ? "3D" : "Drawn");
   }
@@ -354,6 +412,15 @@ async function boot() {
       showMenuPosition();
     } else play();
   };
+  if (L) {
+    const sel = $("m-lang");
+    sel.innerHTML = `<option value="en">Captions in English</option>` +
+      Object.keys(L.curated).map((k) => `<option value="${k}">Teks: ${esc(L.curated[k])}</option>`).join("") +
+      `<optgroup label="Translated on this device">` + L.auto.map(([k, n]) => `<option value="${k}">${esc(n)}</option>`).join("") + `</optgroup>`;
+    sel.hidden = false;
+    sel.onchange = () => setLang(sel.value, true);
+    if (L.get() !== "en") setLang(L.get(), false);
+  }
   $("m-cc").onclick = () => {
     setCC(!ccOn);
     showMenuPosition();

@@ -1,0 +1,1100 @@
+{
+ "chapter": 1,
+ "lang": "id",
+ "title_en": "The Alarm",
+ "title": "Alarm",
+ "segments": {
+  "0": {
+   "who": "Narrator",
+   "p": 0,
+   "en": "It was March fifth, in the year twenty-one ten.",
+   "id": "Hari itu tanggal lima Maret, tahun dua ribu seratus sepuluh."
+  },
+  "1": {
+   "who": "Narrator",
+   "p": 1,
+   "en": "It was almost eleven at night on a remote island somewhere in the Atlantic Ocean. The island stretched roughly fifty-six kilometers across, about thirty-five miles from one side to the other, but most of it remained undeveloped wilderness. Near its center sat a research settlement of laboratories, homes, workshops, medical facilities, and other buildings supporting the nearly five hundred people who lived there.",
+   "id": "Saat itu hampir pukul sebelas malam di sebuah pulau terpencil di suatu tempat di Samudra Atlantik. Pulau itu membentang kira-kira lima puluh enam kilometer, sekitar tiga puluh lima mil dari satu sisi ke sisi lainnya, tetapi sebagian besar wilayahnya masih berupa alam liar yang belum terjamah. Di dekat pusatnya berdiri sebuah permukiman riset berisi laboratorium, rumah, bengkel, fasilitas medis, dan bangunan-bangunan lain yang menopang hidup hampir lima ratus orang yang tinggal di sana."
+  },
+  "2": {
+   "who": "Narrator",
+   "p": 2,
+   "en": "Deep inside one of those laboratories, Dr. Jack Bennett was hard at work. Technically.",
+   "id": "Jauh di dalam salah satu laboratorium itu, Dr. Jack Bennett sedang bekerja keras. Secara teknis."
+  },
+  "3": {
+   "who": "Narrator",
+   "p": 3,
+   "en": "Jack sat slumped in his chair with his arms folded across his chest, his head tilted toward one shoulder, and several pages of diagnostic data glowing on the monitor in front of him. His eyes were closed.",
+   "id": "Jack duduk merosot di kursinya dengan kedua lengan terlipat di dada dan kepala miring ke satu bahu, sementara beberapa halaman data diagnostik menyala di monitor di hadapannya. Matanya terpejam."
+  },
+  "4": {
+   "who": "Narrator",
+   "p": 4,
+   "en": "A warning tone chirped from Jack's console. He shifted but did not wake. A second tone followed, louder than the first, and the diagnostic display flashed amber.",
+   "id": "Sebuah nada peringatan berbunyi dari konsol Jack. Ia bergeser sedikit, tetapi tidak terbangun. Nada kedua menyusul, lebih keras dari yang pertama, dan layar diagnostik berkedip kuning."
+  },
+  "5": {
+   "who": "TOMBS / settlement systems",
+   "p": 5,
+   "en": "Warning. Unauthorized system access.",
+   "id": "Peringatan. Akses sistem tanpa izin."
+  },
+  "6": {
+   "who": "Narrator",
+   "p": 5,
+   "en": "Jack jerked awake so quickly that his chair rolled backward and nearly struck another workstation.",
+   "id": "Jack tersentak bangun begitu cepat sampai kursinya meluncur mundur dan nyaris menabrak meja kerja lain."
+  },
+  "7": {
+   "who": "Jack Bennett",
+   "p": 5,
+   "en": "What? Okay, I'm awake.",
+   "id": "Apa? Oke, aku sudah bangun."
+  },
+  "8": {
+   "who": "Narrator",
+   "p": 6,
+   "en": "The warning repeated while Jack rubbed his eyes and leaned toward the monitor.",
+   "id": "Peringatan itu terulang, sementara Jack mengucek mata dan mencondongkan badan ke arah monitor."
+  },
+  "9": {
+   "who": "Jack Bennett",
+   "p": 6,
+   "en": "That's not good.",
+   "id": "Ini tidak bagus."
+  },
+  "10": {
+   "who": "Narrator",
+   "p": 7,
+   "en": "Several windows were opening and closing on their own. Lines of commands streamed across one side of the display faster than he could read them. Jack grabbed the keyboard and opened the network monitor.",
+   "id": "Beberapa jendela membuka dan menutup dengan sendirinya. Baris-baris perintah mengalir di satu sisi layar, lebih cepat daripada yang sanggup ia baca. Jack meraih keyboard dan membuka monitor jaringan."
+  },
+  "11": {
+   "who": "Jack Bennett",
+   "p": 7,
+   "en": "Come on. What are you doing?",
+   "id": "Ayolah. Apa yang kamu lakukan?"
+  },
+  "12": {
+   "who": "Narrator",
+   "p": 8,
+   "en": "An unfamiliar connection appeared for half a second and vanished.",
+   "id": "Sebuah koneksi asing muncul selama setengah detik, lalu lenyap."
+  },
+  "13": {
+   "who": "Narrator",
+   "p": 9,
+   "en": "Jack frowned.",
+   "id": "Jack mengernyit."
+  },
+  "14": {
+   "who": "Jack Bennett",
+   "p": 9,
+   "en": "No. Where'd you go?",
+   "id": "Jangan. Kamu ke mana?"
+  },
+  "15": {
+   "who": "Narrator",
+   "p": 9,
+   "en": "He refreshed the display, but the connection was gone. Another warning tone sounded from the console and a red message filled the center of his screen.",
+   "id": "Ia memuat ulang tampilan, tetapi koneksi itu sudah hilang. Nada peringatan lain berbunyi dari konsol, dan sebuah pesan merah memenuhi bagian tengah layarnya."
+  },
+  "16": {
+   "who": "TOMBS / settlement systems",
+   "p": 10,
+   "en": "Security protocol violation.",
+   "id": "Pelanggaran protokol keamanan."
+  },
+  "17": {
+   "who": "Jack Bennett",
+   "p": 10,
+   "en": "Okay. Definitely awake now.",
+   "id": "Oke. Sekarang aku benar-benar sudah bangun."
+  },
+  "18": {
+   "who": "Narrator",
+   "p": 10,
+   "en": "Jack entered a command and pulled up the laboratory access logs. Nothing looked unusual. He tried another search and got the same result.",
+   "id": "Jack memasukkan sebuah perintah dan membuka log akses laboratorium. Tidak ada yang tampak janggal. Ia mencoba pencarian lain, dan hasilnya tetap sama."
+  },
+  "19": {
+   "who": "Jack Bennett",
+   "p": 10,
+   "en": "That's impossible.",
+   "id": "Tidak mungkin."
+  },
+  "20": {
+   "who": "Narrator",
+   "p": 11,
+   "en": "The system beeped, and a directory opened by itself. Jack stopped typing when he recognized the folder.",
+   "id": "Sistem berbunyi bip, dan sebuah direktori terbuka dengan sendirinya. Jack berhenti mengetik begitu mengenali folder itu."
+  },
+  "21": {
+   "who": "TOMBS / settlement systems",
+   "p": 12,
+   "en": "Tombs project.",
+   "id": "Proyek TOMBS."
+  },
+  "22": {
+   "who": "Jack Bennett",
+   "p": 12,
+   "en": "Oh, no you don't.",
+   "id": "Oh, jangan coba-coba."
+  },
+  "23": {
+   "who": "Narrator",
+   "p": 12,
+   "en": "He immediately locked the terminal. The screen went black for three seconds, then came back on and reopened the same directory.",
+   "id": "Ia langsung mengunci terminal. Layar menghitam selama tiga detik, lalu menyala kembali dan membuka direktori yang sama."
+  },
+  "24": {
+   "who": "Narrator",
+   "p": 13,
+   "en": "Jack stared at it.",
+   "id": "Jack menatapnya."
+  },
+  "25": {
+   "who": "Jack Bennett",
+   "p": 13,
+   "en": "Well, that's new.",
+   "id": "Nah, ini baru."
+  },
+  "26": {
+   "who": "Narrator",
+   "p": 14,
+   "en": "He reached for the intercom.",
+   "id": "Ia meraih interkom."
+  },
+  "27": {
+   "who": "Jack Bennett",
+   "p": 14,
+   "en": "Sarah?",
+   "id": "Sarah?"
+  },
+  "28": {
+   "who": "Narrator",
+   "p": 15,
+   "en": "Static answered him.",
+   "id": "Hanya desis statis yang menjawabnya."
+  },
+  "29": {
+   "who": "Narrator",
+   "p": 16,
+   "en": "Jack tapped the button again.",
+   "id": "Jack menekan tombolnya lagi."
+  },
+  "30": {
+   "who": "Jack Bennett",
+   "p": 16,
+   "en": "Sarah, you there?",
+   "id": "Sarah, kamu di sana?"
+  },
+  "31": {
+   "who": "Narrator",
+   "p": 17,
+   "en": "Sarah answered through the speaker.",
+   "id": "Sarah menjawab lewat pengeras suara."
+  },
+  "32": {
+   "who": "Sarah Bennett",
+   "p": 17,
+   "en": "I'm here. What's wrong?",
+   "id": "Aku di sini. Ada apa?"
+  },
+  "33": {
+   "who": "Jack Bennett",
+   "p": 18,
+   "en": "I've got something weird on my computer. It tripped a security alarm.",
+   "id": "Ada yang aneh di komputerku. Sampai memicu alarm keamanan."
+  },
+  "34": {
+   "who": "Narrator",
+   "p": 19,
+   "en": "Sarah leaned closer to the intercom.",
+   "id": "Sarah mendekat ke interkom."
+  },
+  "35": {
+   "who": "Sarah Bennett",
+   "p": 19,
+   "en": "Define weird.",
+   "id": "Aneh seperti apa?"
+  },
+  "36": {
+   "who": "Narrator",
+   "p": 20,
+   "en": "Jack reopened the network monitor.",
+   "id": "Jack membuka lagi monitor jaringan."
+  },
+  "37": {
+   "who": "Jack Bennett",
+   "p": 20,
+   "en": "I think somebody's in the system.",
+   "id": "Sepertinya ada yang masuk ke sistem."
+  },
+  "38": {
+   "who": "Narrator",
+   "p": 21,
+   "en": "There was a brief pause before Sarah asked,",
+   "id": "Ada jeda singkat sebelum Sarah bertanya,"
+  },
+  "39": {
+   "who": "Sarah Bennett",
+   "p": 21,
+   "en": "Are you sure?",
+   "id": "Kamu yakin?"
+  },
+  "40": {
+   "who": "Narrator",
+   "p": 22,
+   "en": "Jack scanned the empty connection list.",
+   "id": "Jack memindai daftar koneksi yang kosong."
+  },
+  "41": {
+   "who": "Jack Bennett",
+   "p": 22,
+   "en": "No. That's why I'm calling the smarter scientist.",
+   "id": "Tidak. Makanya aku memanggil ilmuwan yang lebih pintar."
+  },
+  "42": {
+   "who": "Narrator",
+   "p": 23,
+   "en": "Sarah laughed softly through the speaker.",
+   "id": "Sarah tertawa pelan lewat pengeras suara."
+  },
+  "43": {
+   "who": "Sarah Bennett",
+   "p": 23,
+   "en": "Good answer.",
+   "id": "Jawaban bagus."
+  },
+  "44": {
+   "who": "Narrator",
+   "p": 24,
+   "en": "Jack smiled despite himself.",
+   "id": "Mau tak mau Jack tersenyum."
+  },
+  "45": {
+   "who": "Jack Bennett",
+   "p": 24,
+   "en": "Can you come take a look?",
+   "id": "Bisa ke sini dan lihat sebentar?"
+  },
+  "46": {
+   "who": "Sarah Bennett",
+   "p": 25,
+   "en": "I'm on my way,",
+   "id": "Aku ke sana sekarang,"
+  },
+  "47": {
+   "who": "Narrator",
+   "p": 25,
+   "en": "Sarah replied.",
+   "id": "Sarah menjawab."
+  },
+  "48": {
+   "who": "Narrator",
+   "p": 26,
+   "en": "Jack released the intercom and looked back at the monitor. The TOMBS directory was still open.",
+   "id": "Jack melepaskan tombol interkom dan kembali menatap monitor. Direktori TOMBS masih terbuka."
+  },
+  "49": {
+   "who": "Jack Bennett",
+   "p": 26,
+   "en": "Who are you?",
+   "id": "Siapa kamu?"
+  },
+  "50": {
+   "who": "Narrator",
+   "p": 27,
+   "en": "The cursor moved without him touching anything.",
+   "id": "Kursor bergerak padahal ia tidak menyentuh apa pun."
+  },
+  "51": {
+   "who": "Narrator",
+   "p": 28,
+   "en": "Jack froze as a file opened.",
+   "id": "Jack membeku saat sebuah berkas terbuka."
+  },
+  "52": {
+   "who": "TOMBS / settlement systems",
+   "p": 29,
+   "en": "Boundary control.",
+   "id": "Kendali batas."
+  },
+  "53": {
+   "who": "Jack Bennett",
+   "p": 29,
+   "en": "No, no, no.",
+   "id": "Jangan, jangan, jangan."
+  },
+  "54": {
+   "who": "Narrator",
+   "p": 29,
+   "en": "He reached for the keyboard just as the laboratory door slid open behind him.",
+   "id": "Ia meraih keyboard tepat ketika pintu laboratorium bergeser terbuka di belakangnya."
+  },
+  "55": {
+   "who": "Narrator",
+   "p": 30,
+   "en": "Sarah Bennett walked straight in, tablet tucked beneath one arm, already crossing toward him. She glanced from Jack to the computer.",
+   "id": "Sarah Bennett langsung masuk dengan tablet terselip di bawah satu lengan, dan sudah melangkah ke arahnya. Pandangannya beralih dari Jack ke komputer."
+  },
+  "56": {
+   "who": "Sarah Bennett",
+   "p": 30,
+   "en": "Please tell me you didn't break something.",
+   "id": "Tolong bilang kamu tidak merusak apa-apa."
+  },
+  "57": {
+   "who": "Jack Bennett",
+   "p": 31,
+   "en": "I was asleep,",
+   "id": "Aku tadi ketiduran,"
+  },
+  "58": {
+   "who": "Narrator",
+   "p": 31,
+   "en": "Jack replied.",
+   "id": "Jack menjawab."
+  },
+  "59": {
+   "who": "Narrator",
+   "p": 32,
+   "en": "Sarah closed the distance between them.",
+   "id": "Sarah menghampirinya."
+  },
+  "60": {
+   "who": "Sarah Bennett",
+   "p": 32,
+   "en": "You called me in here to admit that?",
+   "id": "Kamu memanggilku ke sini cuma untuk mengaku itu?"
+  },
+  "61": {
+   "who": "Narrator",
+   "p": 33,
+   "en": "Jack gestured toward the console.",
+   "id": "Jack memberi isyarat ke arah konsol."
+  },
+  "62": {
+   "who": "Jack Bennett",
+   "p": 33,
+   "en": "No. That was my defense.",
+   "id": "Bukan. Itu pembelaanku."
+  },
+  "63": {
+   "who": "Narrator",
+   "p": 34,
+   "en": "Sarah raised an eyebrow.",
+   "id": "Sarah mengangkat sebelah alis."
+  },
+  "64": {
+   "who": "Sarah Bennett",
+   "p": 34,
+   "en": "Against what?",
+   "id": "Pembelaan atas apa?"
+  },
+  "65": {
+   "who": "Narrator",
+   "p": 35,
+   "en": "Jack pointed toward the monitor.",
+   "id": "Jack menunjuk ke arah monitor."
+  },
+  "66": {
+   "who": "Jack Bennett",
+   "p": 35,
+   "en": "Whatever this is. I was reviewing yesterday's test results.",
+   "id": "Atas apa pun ini. Aku sedang meninjau hasil uji kemarin."
+  },
+  "67": {
+   "who": "Sarah Bennett",
+   "p": 36,
+   "en": "You were sleeping,",
+   "id": "Kamu tidur,"
+  },
+  "68": {
+   "who": "Narrator",
+   "p": 36,
+   "en": "Sarah corrected him.",
+   "id": "Sarah mengoreksinya."
+  },
+  "69": {
+   "who": "Narrator",
+   "p": 37,
+   "en": "Jack sat a little straighter.",
+   "id": "Jack duduk sedikit lebih tegak."
+  },
+  "70": {
+   "who": "Jack Bennett",
+   "p": 37,
+   "en": "I was reviewing them internally.",
+   "id": "Aku meninjaunya secara internal."
+  },
+  "71": {
+   "who": "Narrator",
+   "p": 38,
+   "en": "Sarah glanced at him.",
+   "id": "Sarah meliriknya."
+  },
+  "72": {
+   "who": "Sarah Bennett",
+   "p": 38,
+   "en": "With your eyes closed?",
+   "id": "Dengan mata terpejam?"
+  },
+  "73": {
+   "who": "Narrator",
+   "p": 39,
+   "en": "Jack nodded solemnly.",
+   "id": "Jack mengangguk dengan sungguh-sungguh."
+  },
+  "74": {
+   "who": "Jack Bennett",
+   "p": 39,
+   "en": "It's an advanced technique.",
+   "id": "Itu teknik tingkat lanjut."
+  },
+  "75": {
+   "who": "Narrator",
+   "p": 40,
+   "en": "She leaned over his shoulder and studied the screen.",
+   "id": "Sarah membungkuk di atas bahu Jack dan mengamati layar."
+  },
+  "76": {
+   "who": "Sarah Bennett",
+   "p": 40,
+   "en": "Jack.",
+   "id": "Jack."
+  },
+  "77": {
+   "who": "Narrator",
+   "p": 41,
+   "en": "Jack straightened in his chair while Sarah placed her tablet beside the keyboard.",
+   "id": "Jack menegakkan duduknya sementara Sarah meletakkan tabletnya di samping keyboard."
+  },
+  "78": {
+   "who": "Jack Bennett",
+   "p": 41,
+   "en": "Right. Problem. I got an unauthorized access warning. I checked the network monitor and saw a connection I didn't recognize, but it disappeared before I could trace it.",
+   "id": "Oke. Masalahnya. Aku dapat peringatan akses tanpa izin. Aku cek monitor jaringan dan melihat koneksi yang tidak kukenali, tapi koneksi itu hilang sebelum sempat kulacak."
+  },
+  "79": {
+   "who": "Narrator",
+   "p": 42,
+   "en": "Sarah tapped the edge of the keyboard.",
+   "id": "Sarah mengetuk tepi keyboard."
+  },
+  "80": {
+   "who": "Sarah Bennett",
+   "p": 42,
+   "en": "And then?",
+   "id": "Lalu?"
+  },
+  "81": {
+   "who": "Narrator",
+   "p": 43,
+   "en": "Jack pointed to the open directory.",
+   "id": "Jack menunjuk direktori yang terbuka."
+  },
+  "82": {
+   "who": "Jack Bennett",
+   "p": 43,
+   "en": "It opened the TOMBS directory.",
+   "id": "Lalu dia membuka direktori TOMBS."
+  },
+  "83": {
+   "who": "Narrator",
+   "p": 44,
+   "en": "Sarah's attention sharpened.",
+   "id": "Sarah langsung memusatkan perhatian."
+  },
+  "84": {
+   "who": "Sarah Bennett",
+   "p": 44,
+   "en": "By itself?",
+   "id": "Dengan sendirinya?"
+  },
+  "85": {
+   "who": "Jack Bennett",
+   "p": 45,
+   "en": "Yep.",
+   "id": "Yap."
+  },
+  "86": {
+   "who": "Narrator",
+   "p": 46,
+   "en": "Sarah looked at the terminal lock indicator.",
+   "id": "Sarah melihat indikator kunci terminal."
+  },
+  "87": {
+   "who": "Sarah Bennett",
+   "p": 46,
+   "en": "You locked the terminal?",
+   "id": "Kamu sudah mengunci terminalnya?"
+  },
+  "88": {
+   "who": "Narrator",
+   "p": 47,
+   "en": "Jack nodded.",
+   "id": "Jack mengangguk."
+  },
+  "89": {
+   "who": "Jack Bennett",
+   "p": 47,
+   "en": "Yep.",
+   "id": "Yap."
+  },
+  "90": {
+   "who": "Narrator",
+   "p": 48,
+   "en": "Sarah waited.",
+   "id": "Sarah menunggu."
+  },
+  "91": {
+   "who": "Sarah Bennett",
+   "p": 48,
+   "en": "And?",
+   "id": "Terus?"
+  },
+  "92": {
+   "who": "Narrator",
+   "p": 49,
+   "en": "Jack leaned back.",
+   "id": "Jack bersandar."
+  },
+  "93": {
+   "who": "Jack Bennett",
+   "p": 49,
+   "en": "It unlocked itself.",
+   "id": "Kuncinya terbuka sendiri."
+  },
+  "94": {
+   "who": "Narrator",
+   "p": 50,
+   "en": "Sarah stared at him for a moment before looking back at the monitor. Jack pointed at the screen.",
+   "id": "Sarah menatapnya sejenak sebelum kembali melihat monitor. Jack menunjuk layar."
+  },
+  "95": {
+   "who": "Jack Bennett",
+   "p": 50,
+   "en": "I know.",
+   "id": "Aku tahu."
+  },
+  "96": {
+   "who": "Narrator",
+   "p": 51,
+   "en": "Sarah started powering up the other console next to Jack.",
+   "id": "Sarah mulai menyalakan konsol lain di samping Jack."
+  },
+  "97": {
+   "who": "Sarah Bennett",
+   "p": 51,
+   "en": "Can I take your chair?",
+   "id": "Boleh aku pakai kursimu?"
+  },
+  "98": {
+   "who": "Narrator",
+   "p": 52,
+   "en": "Jack kept one hand on the keyboard.",
+   "id": "Satu tangan Jack tetap di atas keyboard."
+  },
+  "99": {
+   "who": "Jack Bennett",
+   "p": 52,
+   "en": "I'm sitting here.",
+   "id": "Aku sedang duduk di sini."
+  },
+  "100": {
+   "who": "Narrator",
+   "p": 53,
+   "en": "Sarah nudged the arm of his chair, looking slightly annoyed, but sympathetic.",
+   "id": "Sarah menyenggol sandaran lengan kursinya, tampak agak kesal, tetapi tetap maklum."
+  },
+  "101": {
+   "who": "Sarah Bennett",
+   "p": 53,
+   "en": "Let me have your chair and get another chair.",
+   "id": "Biar aku pakai kursimu, kamu ambil kursi lain."
+  },
+  "102": {
+   "who": "Jack Bennett",
+   "p": 54,
+   "en": "Oh. Of course. Anything for you.",
+   "id": "Oh. Tentu saja. Apa pun untukmu."
+  },
+  "103": {
+   "who": "Narrator",
+   "p": 54,
+   "en": "Jack gave Sarah his chair, crossed to the next workstation, and dragged its chair back, wheels squeaking against the floor, before pulling himself up to his own screen.",
+   "id": "Jack menyerahkan kursinya kepada Sarah, menyeberang ke meja kerja sebelah, lalu menyeret kursi dari sana, rodanya berdecit di lantai, sebelum merapat ke layarnya sendiri."
+  },
+  "104": {
+   "who": "Narrator",
+   "p": 55,
+   "en": "Sarah was already typing.",
+   "id": "Sarah sudah mulai mengetik."
+  },
+  "105": {
+   "who": "Sarah Bennett",
+   "p": 55,
+   "en": "You said the connection disappeared?",
+   "id": "Katamu koneksinya hilang?"
+  },
+  "106": {
+   "who": "Narrator",
+   "p": 56,
+   "en": "Jack watched his own log scroll.",
+   "id": "Jack memperhatikan log di layarnya bergulir."
+  },
+  "107": {
+   "who": "Jack Bennett",
+   "p": 56,
+   "en": "Almost immediately.",
+   "id": "Hampir seketika."
+  },
+  "108": {
+   "who": "Narrator",
+   "p": 57,
+   "en": "Sarah opened the connection history on her screen.",
+   "id": "Sarah membuka riwayat koneksi di layarnya."
+  },
+  "109": {
+   "who": "Sarah Bennett",
+   "p": 57,
+   "en": "External?",
+   "id": "Dari luar?"
+  },
+  "110": {
+   "who": "Narrator",
+   "p": 58,
+   "en": "Jack shook his head.",
+   "id": "Jack menggeleng."
+  },
+  "111": {
+   "who": "Jack Bennett",
+   "p": 58,
+   "en": "I couldn't tell.",
+   "id": "Aku tidak bisa memastikan."
+  },
+  "112": {
+   "who": "Narrator",
+   "p": 59,
+   "en": "Sarah exhaled through her nose.",
+   "id": "Sarah mengembuskan napas lewat hidung."
+  },
+  "113": {
+   "who": "Sarah Bennett",
+   "p": 59,
+   "en": "That's reassuring.",
+   "id": "Menenangkan sekali."
+  },
+  "114": {
+   "who": "Jack Bennett",
+   "p": 60,
+   "en": "I thought so.",
+   "id": "Menurutku juga begitu."
+  },
+  "115": {
+   "who": "Narrator",
+   "p": 60,
+   "en": "Jack pulled up the TOMBS directory again, tracing back through what had changed.",
+   "id": "Jack membuka direktori TOMBS lagi, menelusuri balik apa saja yang telah berubah."
+  },
+  "116": {
+   "who": "Sarah Bennett",
+   "p": 61,
+   "en": "These are clean,",
+   "id": "Yang ini bersih,"
+  },
+  "117": {
+   "who": "Narrator",
+   "p": 61,
+   "en": "Sarah murmured after a few seconds, still scanning her own feed.",
+   "id": "Sarah bergumam beberapa detik kemudian, matanya masih memindai aliran datanya sendiri."
+  },
+  "118": {
+   "who": "Narrator",
+   "p": 62,
+   "en": "Jack pointed at his own screen.",
+   "id": "Jack menunjuk layarnya sendiri."
+  },
+  "119": {
+   "who": "Jack Bennett",
+   "p": 62,
+   "en": "Mine too. Whoever it was covered both trails.",
+   "id": "Punyaku juga. Siapa pun itu, dia menghapus jejak di keduanya."
+  },
+  "120": {
+   "who": "Narrator",
+   "p": 63,
+   "en": "Sarah narrowed her eyes at the display.",
+   "id": "Sarah menyipitkan mata ke layar."
+  },
+  "121": {
+   "who": "Sarah Bennett",
+   "p": 63,
+   "en": "Too clean.",
+   "id": "Terlalu bersih."
+  },
+  "122": {
+   "who": "Narrator",
+   "p": 64,
+   "en": "Jack nodded.",
+   "id": "Jack mengangguk."
+  },
+  "123": {
+   "who": "Jack Bennett",
+   "p": 64,
+   "en": "That's what I was thinking.",
+   "id": "Itu juga yang kupikirkan."
+  },
+  "124": {
+   "who": "Narrator",
+   "p": 65,
+   "en": "Sarah looked sideways at him.",
+   "id": "Sarah meliriknya dari samping."
+  },
+  "125": {
+   "who": "Sarah Bennett",
+   "p": 65,
+   "en": "No, you were sleeping.",
+   "id": "Bukan, kamu tadi tidur."
+  },
+  "126": {
+   "who": "Jack Bennett",
+   "p": 66,
+   "en": "I was thinking eventually.",
+   "id": "Akhirnya aku berpikir juga, kok."
+  },
+  "127": {
+   "who": "Narrator",
+   "p": 67,
+   "en": "Sarah shook her head, but Jack caught the beginning of a smile. He glanced at the time and then at her.",
+   "id": "Sarah menggeleng, tetapi Jack sempat menangkap senyum yang mulai muncul di wajahnya. Ia melirik jam, lalu menatap Sarah."
+  },
+  "128": {
+   "who": "Jack Bennett",
+   "p": 67,
+   "en": "You know, you're supposed to be resting.",
+   "id": "Kamu kan seharusnya istirahat."
+  },
+  "129": {
+   "who": "Narrator",
+   "p": 68,
+   "en": "Sarah kept typing.",
+   "id": "Sarah terus mengetik."
+  },
+  "130": {
+   "who": "Sarah Bennett",
+   "p": 68,
+   "en": "So are you.",
+   "id": "Kamu juga."
+  },
+  "131": {
+   "who": "Narrator",
+   "p": 69,
+   "en": "Jack glanced at her stomach.",
+   "id": "Jack melirik perut Sarah."
+  },
+  "132": {
+   "who": "Jack Bennett",
+   "p": 69,
+   "en": "I'm not the pregnant one.",
+   "id": "Aku kan bukan yang sedang hamil."
+  },
+  "133": {
+   "who": "Narrator",
+   "p": 70,
+   "en": "Sarah looked over at him.",
+   "id": "Sarah menoleh ke arahnya."
+  },
+  "134": {
+   "who": "Sarah Bennett",
+   "p": 70,
+   "en": "No. You're the one I found asleep at a laboratory terminal.",
+   "id": "Memang bukan. Kamu yang kudapati tertidur di depan terminal laboratorium."
+  },
+  "135": {
+   "who": "Narrator",
+   "p": 71,
+   "en": "Jack spread his hands.",
+   "id": "Jack membuka kedua tangannya."
+  },
+  "136": {
+   "who": "Jack Bennett",
+   "p": 71,
+   "en": "That's different.",
+   "id": "Itu beda."
+  },
+  "137": {
+   "who": "Narrator",
+   "p": 72,
+   "en": "Sarah stopped typing long enough to look at him.",
+   "id": "Sarah berhenti mengetik sejenak untuk menatapnya."
+  },
+  "138": {
+   "who": "Sarah Bennett",
+   "p": 72,
+   "en": "How?",
+   "id": "Bedanya apa?"
+  },
+  "139": {
+   "who": "Narrator",
+   "p": 73,
+   "en": "Jack considered it.",
+   "id": "Jack menimbang-nimbang."
+  },
+  "140": {
+   "who": "Jack Bennett",
+   "p": 73,
+   "en": "I wasn't uncomfortable?",
+   "id": "Aku nyaman-nyaman saja?"
+  },
+  "141": {
+   "who": "Narrator",
+   "p": 74,
+   "en": "Sarah gave him a look that answered the question for him.",
+   "id": "Sarah memberinya tatapan yang sudah menjawab pertanyaan itu."
+  },
+  "142": {
+   "who": "Narrator",
+   "p": 75,
+   "en": "Jack surrendered with a small nod.",
+   "id": "Jack menyerah dengan anggukan kecil."
+  },
+  "143": {
+   "who": "Jack Bennett",
+   "p": 75,
+   "en": "Fair.",
+   "id": "Iya, deh."
+  },
+  "144": {
+   "who": "Sarah Bennett",
+   "p": 76,
+   "en": "Lately the baby seems to think eleven at night is morning.",
+   "id": "Belakangan ini si bayi sepertinya mengira jam sebelas malam itu pagi."
+  },
+  "145": {
+   "who": "Narrator",
+   "p": 76,
+   "en": "Sarah rested a hand briefly against her stomach, then returned to typing.",
+   "id": "Sarah menyentuhkan tangan sebentar ke perutnya, lalu kembali mengetik."
+  },
+  "146": {
+   "who": "Narrator",
+   "p": 77,
+   "en": "Jack smiled at the movement beneath her hand.",
+   "id": "Jack tersenyum melihat gerakan di bawah telapak tangan Sarah."
+  },
+  "147": {
+   "who": "Jack Bennett",
+   "p": 77,
+   "en": "Already takes after me.",
+   "id": "Sudah mirip aku saja."
+  },
+  "148": {
+   "who": "Narrator",
+   "p": 78,
+   "en": "Sarah's hands went still.",
+   "id": "Tangan Sarah berhenti bergerak."
+  },
+  "149": {
+   "who": "Sarah Bennett",
+   "p": 78,
+   "en": "That's what I'm afraid of.",
+   "id": "Justru itu yang kutakutkan."
+  },
+  "150": {
+   "who": "Narrator",
+   "p": 79,
+   "en": "A new warning tone interrupted them. Both turned toward the main console as another message appeared.",
+   "id": "Sebuah nada peringatan baru menyela mereka. Keduanya menoleh ke konsol utama saat pesan lain muncul."
+  },
+  "151": {
+   "who": "TOMBS / settlement systems",
+   "p": 80,
+   "en": "Tombs array remote initialization request.",
+   "id": "Permintaan inisialisasi jarak jauh Array TOMBS."
+  },
+  "152": {
+   "who": "Narrator",
+   "p": 80,
+   "en": "Sarah sat upright.",
+   "id": "Sarah langsung duduk tegak."
+  },
+  "153": {
+   "who": "Sarah Bennett",
+   "p": 80,
+   "en": "Did you do that?",
+   "id": "Kamu yang melakukan itu?"
+  },
+  "154": {
+   "who": "Narrator",
+   "p": 81,
+   "en": "Jack reached for the console.",
+   "id": "Jack meraih konsol."
+  },
+  "155": {
+   "who": "Jack Bennett",
+   "p": 81,
+   "en": "No.",
+   "id": "Bukan."
+  },
+  "156": {
+   "who": "Narrator",
+   "p": 82,
+   "en": "Sarah pointed at the request.",
+   "id": "Sarah menunjuk permintaan itu."
+  },
+  "157": {
+   "who": "Sarah Bennett",
+   "p": 82,
+   "en": "Cancel it.",
+   "id": "Batalkan."
+  },
+  "158": {
+   "who": "Narrator",
+   "p": 83,
+   "en": "Jack reached across the console and rejected the request.",
+   "id": "Jack menjangkau ke seberang konsol dan menolak permintaan itu."
+  },
+  "159": {
+   "who": "TOMBS / settlement systems",
+   "p": 84,
+   "en": "Request denied.",
+   "id": "Permintaan ditolak."
+  },
+  "160": {
+   "who": "Narrator",
+   "p": 84,
+   "en": "He tried again.",
+   "id": "Ia mencoba lagi."
+  },
+  "161": {
+   "who": "TOMBS / settlement systems",
+   "p": 85,
+   "en": "Request denied.",
+   "id": "Permintaan ditolak."
+  },
+  "162": {
+   "who": "Narrator",
+   "p": 85,
+   "en": "Jack's expression hardened.",
+   "id": "Raut wajah Jack mengeras."
+  },
+  "163": {
+   "who": "Jack Bennett",
+   "p": 85,
+   "en": "That's not supposed to happen.",
+   "id": "Harusnya tidak begini."
+  },
+  "164": {
+   "who": "Narrator",
+   "p": 85,
+   "en": "He entered his administrator credentials, but a new message appeared before he could issue another command.",
+   "id": "Ia memasukkan kredensial administratornya, tetapi sebuah pesan baru muncul sebelum ia sempat memberikan perintah lain."
+  },
+  "165": {
+   "who": "TOMBS / settlement systems",
+   "p": 86,
+   "en": "Access revoked.",
+   "id": "Akses dicabut."
+  },
+  "166": {
+   "who": "Narrator",
+   "p": 86,
+   "en": "Sarah looked from the message to him.",
+   "id": "Pandangan Sarah beralih dari pesan itu ke Jack."
+  },
+  "167": {
+   "who": "Sarah Bennett",
+   "p": 86,
+   "en": "Your credentials?",
+   "id": "Kredensialmu?"
+  },
+  "168": {
+   "who": "Narrator",
+   "p": 87,
+   "en": "Jack stared at the warning.",
+   "id": "Jack menatap peringatan itu."
+  },
+  "169": {
+   "who": "Jack Bennett",
+   "p": 87,
+   "en": "Revoked.",
+   "id": "Dicabut."
+  },
+  "170": {
+   "who": "Narrator",
+   "p": 88,
+   "en": "Sarah turned toward him.",
+   "id": "Sarah berbalik menghadapnya."
+  },
+  "171": {
+   "who": "Sarah Bennett",
+   "p": 88,
+   "en": "You're the project administrator.",
+   "id": "Kamu kan administrator proyeknya."
+  },
+  "172": {
+   "who": "Narrator",
+   "p": 89,
+   "en": "Jack tried his credentials again.",
+   "id": "Jack mencoba kredensialnya lagi."
+  },
+  "173": {
+   "who": "Jack Bennett",
+   "p": 89,
+   "en": "I know.",
+   "id": "Aku tahu."
+  },
+  "174": {
+   "who": "Narrator",
+   "p": 90,
+   "en": "Sarah leaned toward the screen.",
+   "id": "Sarah mencondongkan badan ke layar."
+  },
+  "175": {
+   "who": "Sarah Bennett",
+   "p": 90,
+   "en": "Who can revoke you?",
+   "id": "Siapa yang bisa mencabut aksesmu?"
+  },
+  "176": {
+   "who": "Narrator",
+   "p": 91,
+   "en": "Jack stopped typing.",
+   "id": "Jack berhenti mengetik."
+  },
+  "177": {
+   "who": "Jack Bennett",
+   "p": 91,
+   "en": "Me.",
+   "id": "Aku."
+  },
+  "178": {
+   "who": "Narrator",
+   "p": 92,
+   "en": "Sarah slowly turned toward him.",
+   "id": "Sarah perlahan menoleh ke arahnya."
+  },
+  "179": {
+   "who": "Sarah Bennett",
+   "p": 92,
+   "en": "Jack.",
+   "id": "Jack."
+  },
+  "180": {
+   "who": "Narrator",
+   "p": 93,
+   "en": "Jack met her eyes.",
+   "id": "Jack menatap matanya."
+  },
+  "181": {
+   "who": "Jack Bennett",
+   "p": 93,
+   "en": "I didn't.",
+   "id": "Aku tidak melakukannya."
+  }
+ }
+}
