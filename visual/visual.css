@@ -1,4 +1,8 @@
 html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+/* iPhone Safari enlarges the text of a long block on its own ("text autosizing"), so a
+   two-line caption came out bigger than a one-line one (Joshua, 2026-10-03). Off: every
+   caption is the size the stylesheet says. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   touch-action: manipulation; -webkit-user-select: none; user-select: none;
   -webkit-tap-highlight-color: transparent;

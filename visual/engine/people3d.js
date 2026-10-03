@@ -868,8 +868,12 @@ export class People3D {
         this.clampAisle(at, CHAIR.baseRadius + CHAIR.casterRadius + 0.03);
       }
     }
-    // At the keys: how far into the hold, for the chair to be pulled in (pullChairsIn).
-    const keys = seated && !press && a.state.v !== "asleep" && (a.gestures || []).find((g) => g.name === "keys" || g.name === "type");
+    // At the keys: how far into the hold, for the chair to be pulled in (pullChairsIn). A tap
+    // on something else while typing (the intercom) is one hand reaching out: the chair stays
+    // at the keyboard. It used to let go for the tap, so the chair dropped back and rolled to
+    // the intercom and then snapped back to the keys, every tap (Joshua, 2026-10-03: "Jack can
+    // stay in front of the computer and his left hand should reach").
+    const keys = seated && a.state.v !== "asleep" && (a.gestures || []).find((g) => g.name === "keys" || g.name === "type");
     const pull = keys ? envelope(keys.u, Math.min(0.3, 0.6 / Math.max(0.6, (keys.opts && keys.opts.dur) || 1))) : 0;
     return { at, yaw: this.facingAt(a, t), seated, pull };
   }
