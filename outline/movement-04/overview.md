@@ -50,3 +50,21 @@ them both to medical, Mark and Aiden at the door, Paul Harlan standing with arms
 The question "who was it?" is hanging. Jack must decide, in front of everyone, how much
 of the sabotage to reveal: the stolen credentials, the three-week-old boundary file, the
 tablet used inside the town, PHASE ONE READY.
+
+## Pacing note for the next run (Joshua, from ChatGPT's review of 1–12, 2026-10-06)
+
+Too many threads are open at once: the sabotage and Phase Two, the night impacts, the
+spider and the wider fauna, water, the badge and tablet, Sarah's pregnancy, the public
+reaction, and what else lives outside. **From Chapter 13, advance or pay off a few of
+these rather than adding new ones.**
+
+- **Finish B2 first.** Chapter 12 ends mid-B2, on Paul Harlan's "So who was it?" Jack's
+  answer and the town's reaction are next.
+- **Then B3, the Water Clock**: a concrete deadline that forces B4 (the first wilderness
+  team), which forces B5 (learning the food chain).
+- **Let Phase Two simmer.** No new sabotage clues for a while; the mystery stays in the
+  walls. The night impacts can stay open until exploration reaches them naturally.
+- Mercer's order to examine Sarah (Chapter 12) is the natural thread to B7 when the pace
+  allows.
+- Keep the "animal, not monster" principle and the accumulating survival rules ("Slow is
+  invisible. Fast is food."), which are the earliest seeds of what later becomes TRACKS.
