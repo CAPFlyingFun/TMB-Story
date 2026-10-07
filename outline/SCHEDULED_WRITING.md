@@ -22,16 +22,18 @@ game: never put story writing there.
    draft over them. If he changed a pending chapter, check whether later pending chapters
    are affected and fix or flag them.
 3. Read the previous chapter in full and the last three at least.
-4. **Read ChatGPT's Monday review first.** Every Monday ChatGPT reads the current
-   TMB-Story manuscript, checks continuity, reconciles Trello with what was actually
-   written, and refines the next one or two events. Look for that handoff on the Trello
-   board (cards and comments changed since the last Tuesday run, especially in Upcoming
-   and Writing) and wherever else Joshua points to it. It is planning guidance from
-   Joshua's planning partner, approved by him to plan: follow its direction for the next
-   events, but it never outranks the manuscript, Joshua's own edits or approved canon, and
-   it never sets how many chapters an event takes. If it conflicts with the manuscript,
-   follow the manuscript and flag the conflict in the report. If no Monday handoff is
-   found, carry on from Trello and the latest pacing note, and say so in the report.
+4. **Read ChatGPT's Monday handoff first:** the Trello card
+   **"🧭 Weekly ChatGPT → Claude Handoff"** in the list **🔎 STORY EVENTS — ChatGPT
+   Reviewed** (https://trello.com/c/89ui5937), its description and newest comments. Every
+   Monday ChatGPT reads the current TMB-Story manuscript, reconciles Trello with it, and
+   updates that card with the date, manuscript state, event progress, continuity and
+   consequence notes, approval states, unresolved threads, the recommended next one or two
+   event directions, and any Trello changes it made. **Then verify it against the newest
+   manuscript and Joshua's edits.** It is planning and coordination, not canon and not
+   approval: follow its event direction, but the manuscript, Joshua's newest edits and
+   approved canon always win, and it never sets how many chapters an event takes. Flag any
+   conflict in the report. If the card was not updated since the last Tuesday run, carry on
+   from Trello and the latest pacing note, and say so in the report.
 5. Read the Trello board **"TRADDOMIUM: Micro Battle! - Typescript"**, lists
    🧭 STORY EVENTS — Upcoming, ✍️ STORY EVENTS — Writing, ✅ STORY EVENTS — Complete
    (= WRITING complete, not approved). Trello is the event plan; the Master Event Roadmap
