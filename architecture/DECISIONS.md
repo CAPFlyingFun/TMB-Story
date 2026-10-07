@@ -301,3 +301,12 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 - **Chapter length:** 7 to 11 minutes of audio, with 7 to 10 the sweet spot (`TMB_STORY_RULES.md`, Length).
 **Also fixed while checking the Watch tab:** eleven Watch anchors in Chapters 1, 2, 3, 5, 8, 9 and 10 still pointed at wording that decision 0030 had removed ("Lena asked, leaning over his shoulder." and similar), so those scenes refused to load. They now point at the current lines, and all ten scenes load.
 **Status:** Accepted, 2026-10-07. The split itself is pending Joshua's script review.
+
+### 0034 — Jack and Sarah become Pixar-style toon models; the TOMBS badge is its own swinging model
+**Context:** Joshua, 2026-10-07, release `New-Jack-and-Sarah-Pixar-Models` on TRADDOMIUM: "a new version and cartoonish/Pixar style characters for Jack and Sarah and I separated the badges from the body, so the badge could be like a soft body or something to hang and move more freely." Asked where, he chose both the game and the story, replacing the realistic pair; restyling the rooms "more cartoonish/Pixar style with bright and simple objects and textures" comes after.
+**Decision:**
+- `assets/models/jack.glb` and `sarah.glb` are the toon masters as TRADDOMIUM bakes them (alpha.70): no skin prune (it tore Sarah's seat), and bone weights smoothed across the hips so a hem and the cloth under it fold together when seated (Joshua: "make sure Jack and Sarah when sitting that their legs and body looks good").
+- `assets/models/badge.glb`: the card and clip only, 62 mm wide. The lanyard is drawn round each wearer's own neck, and the card swings as a damped pendulum from the chest that never passes into it (Sarah's rests tilted out on her bump). It comes from TRADDOMIUM's own code, re-bundled into `visual/vendor/three-human.js`.
+- Reader and Listen speaker chips use the toon faces (`assets/portraits/jack-3d.png`, `sarah-3d.png`). The drawn portraits stay for the Watch tab's 2D mode.
+- Lena and Mark are still drawn cards in 3D scenes until they have models.
+**Status:** Accepted, 2026-10-07. Presentation only (decision 0031): no chapter text or audio changes.

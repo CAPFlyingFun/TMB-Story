@@ -4,7 +4,8 @@
    A speaker with no portrait yet gets their initial; the narrator gets a small
    microphone rather than a face, because the narrator is not a person in the scene. */
 (function () {
-  var FACES = { "jack-bennett": ["jack", "Jack"], "sarah-bennett": ["sarah", "Sarah"], "lena-ortiz": ["lena", "Lena"],
+  // Jack and Sarah are their Pixar-style 3D faces (Joshua, 2026-10-07: the toon models replace the old look).
+  var FACES = { "jack-bennett": ["jack-3d", "Jack"], "sarah-bennett": ["sarah-3d", "Sarah"], "lena-ortiz": ["lena", "Lena"],
     "security-officer": ["mark", "Mark"], "system": ["system", "TOMBS"] };
   var NAMES = { "narrator": "Narrator", "doctor-mercer": "Dr. Mercer", "aiden": "Aiden", "paul-harlan": "Paul",
     "unit-four": "Unit Four", "resident": "Resident" };

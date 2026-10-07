@@ -40,7 +40,7 @@ line; the voice-only export is not indexable.
 | `screens/control.js` | the control room's screens: the Array, the emitters, boundary acquisition, the hidden target parameters, the scale factor (never readable), access denied, the sensor grid, communications, the perimeter cameras, the structural monitor, the event log and the settlement map |
 | `engine/labRoom.js` | the lab built as a 3D room after ChatGPT's procedural lab: shell, desks, racks, monitors, keyboards, the intercom, the props |
 | `vendor/three-human.js` | three.js r185, its glTF loader and meshopt decoder, and TRADDOMIUM's human rig and poses (`src/actor/human*.ts`, `src/view/HumanRig.ts`), bundled into one module |
-| `../assets/models/` | `jack.glb` and `sarah.glb` (TRADDOMIUM: Micro Battle's rigged pair, the ones the sprites were drawn from); `black-widow.glb` and `jumping-spider.glb` (Joshua's Meshy releases on TRADDOMIUM, 2026-10-01) |
+| `../assets/models/` | `jack.glb` and `sarah.glb` (TRADDOMIUM: Micro Battle's rigged pair; since 2026-10-07 Joshua's Pixar-style toon masters, baked by that game's `bake:humans`), `badge.glb` (the TOMBS card, hung from the chest and swung by `attachBadge`/`swingBadge` in `vendor/three-human.js`); `black-widow.glb` and `jumping-spider.glb` (Joshua's Meshy releases on TRADDOMIUM, 2026-10-01) |
 | `../scripts/make-portraits.py` | the caption portraits (`assets/portraits/`): cut from each character's front sprite, and the systems' terminal icon |
 | `portraits.html` | dev-only: renders Jack's and Sarah's 3D caption portraits (`<name>-3d.png`) from their models |
 | `engine/rig.js` | the optional cutout rig: cuts a sprite into body parts along polygons and turns them about pivots |

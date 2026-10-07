@@ -388,6 +388,7 @@ export class People3D {
     this.anchorSetPieces();
 
     ids.forEach((id, i) => this.addBody(id, people[i].scene));
+    await this.hangBadges(loader);
     await this.addBoards();
     // the set's animals (engine/creatures.js), drawn with the room so the grass hides them
     this.creatures = new Creatures(this.roomScene, this.spec.creatures, this.url, this.lab.groundAt);
@@ -473,6 +474,30 @@ export class People3D {
     this.scene.add(model, shadow);
     const eye = { stand: standEye, sit: seatTop + 0.1 + headAboveHips + 0.04 };
     this.bodies[id] = { id, model, rig, measure, materials, shadow, seatTop, hips, head, bones, handBindInv, eye, seed: Object.keys(this.bodies).length, opacity: 1 };
+  }
+
+  // THE TOMBS BADGE (Joshua, 2026-10-07: "I separated the badges from the body, so the badge
+  // could be like a soft body or something to hang and move more freely"). One card, baked in
+  // TRADDOMIUM (scripts/bakeBadge.mjs), hung from each body's chest bone by that game's own
+  // view code (vendor/three-human.js: attachBadge measures the wearer and draws the lanyard;
+  // swingBadge is the pendulum). A missing file costs the badge, never the body.
+  async hangBadges(loader) {
+    if (this.spec.badge === false) return;
+    let template = null;
+    try {
+      template = (await loader.loadAsync(this.url(this.spec.badge || "../assets/models/badge.glb"))).scene;
+    } catch (e) {
+      console.warn("[people3d] the badge did not load; everyone goes without", e);
+      return;
+    }
+    for (const body of Object.values(this.bodies)) {
+      try {
+        body.badge = THREE.attachBadge(body.model, body.measure, body.rig.bind, template, { rest: () => body.rig.rest(), label: body.id });
+      } catch (e) {
+        console.warn(`[people3d] ${body.id}: the badge could not be hung`, e);
+        body.badge = null;
+      }
+    }
   }
 
   // Where a character is on the floor, in metres: the stage's own rule first (the floor
@@ -1103,6 +1128,13 @@ export class People3D {
     body.model.position.set(r[0], rootY, r[2]);
     body.model.rotation.set(0, yaw, 0);
     body.model.updateMatrixWorld(true);
+    // The badge swings on the story's own clock: a seek or a pause starts it from rest.
+    if (body.badge) {
+      const dt = body.badgeT !== undefined ? t - body.badgeT : 0;
+      if (dt > 0 && dt < 0.5) THREE.swingBadge(body.badge, dt);
+      else if (dt !== 0) body.badge.reset();
+      body.badgeT = t;
+    }
 
     body.shadow.position.set(now.p[0], 0.004, now.p[2]);
     const size = seated ? 0.62 : 0.5;
