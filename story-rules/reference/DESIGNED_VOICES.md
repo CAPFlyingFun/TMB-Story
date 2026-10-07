@@ -26,3 +26,19 @@ generated_voice_id. Unsaved previews may expire on ElevenLabs' side.
 | Baffled man, forties (Resident round) | B | ql6PP4tkHiACzoNbzJ42 |
 | Worried mother, forties (Resident round) | B | 0TL12FALMKBSgZS26Ktx |
 | Worried mother, forties (Resident round) | C | sPhnSl1SosF9ktmvecZs |
+
+## Future characters (saved, NOT assigned to any speaker yet)
+
+Joshua, 2026-10-06. Designed for characters who have not yet appeared in the story. These
+voices are recorded here only; they are not in `voice-registry.json` and are used for no
+audio until the character appears in current story material or Joshua asks. Audition
+passages were non-canon. Names and details here are Joshua's planning, not story canon.
+
+| Character | Pick | ElevenLabs voice_id | Library name |
+|---|---|---|---|
+| Elena Reyes (future TRACKS Academy teacher) | A | xpy281EQu4HkJJxCoN5n | TMB - Elena Reyes |
+| Maya (future TRACKS Academy field instructor) | A | 0xPLUrRsSW7FgMlQPT5F | TMB - Maya |
+| Andrew "Andy" Bennett (Jack and Sarah's son; NAME TENTATIVE) | A | IDSGBfEkkLGMr3YDWSbv | TMB - Andy Bennett (tentative) |
+| The professor (older academic) | round 2 pending | | |
+
+Custom voice slots in use after these: 9 of 10 (Starter plan).
