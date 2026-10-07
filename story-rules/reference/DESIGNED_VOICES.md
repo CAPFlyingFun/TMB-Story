@@ -1,8 +1,8 @@
 # Designed voices (ElevenLabs Voice Design)
 
 Joshua, 2026-10-06. Voices designed from a description for minor TMB characters. A designed
-voice can only be used once it is SAVED to the ElevenLabs library, and the plan allows
-three custom voices, so a preview that is not yet saved is listed here with its
+voice can only be used once it is SAVED to the ElevenLabs library, and the plan (Starter since 2026-10-06) allows ten custom
+voices, so a preview that is not yet saved is listed here with its
 generated_voice_id. Unsaved previews may expire on ElevenLabs' side.
 
 ## Chosen by Joshua
@@ -10,9 +10,9 @@ generated_voice_id. Unsaved previews may expire on ElevenLabs' side.
 | Character | Preview | generated_voice_id | Saved? |
 |---|---|---|---|
 | Paul Harlan | A | fkqaihpXt1gFOvhEuJhK | yes, "TMB - Paul Harlan" (in voice-registry.json) |
-| Unit Four | B | yma1Cyfr4WlmuZqGGPr9 | no, custom-voice limit (3/3) |
-| Resident (man) | C | e317QCfEVBBL9PMh9wgN | no, custom-voice limit (3/3) |
-| Resident (woman) | A | qKNqiMISX9qUCPifDjBS | no, custom-voice limit (3/3) |
+| Unit Four | B | yma1Cyfr4WlmuZqGGPr9 | yes, "TMB - Unit Four" |
+| Resident (man) | C | e317QCfEVBBL9PMh9wgN | yes, "TMB - Resident (man)" |
+| Resident (woman) | A | qKNqiMISX9qUCPifDjBS | yes, "TMB - Resident (woman)" (speaker `resident-woman`) |
 
 ## Spares Joshua wants kept for future characters (not saved)
 
