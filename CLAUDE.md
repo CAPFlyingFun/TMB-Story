@@ -72,8 +72,9 @@ not a fifty-chapter arc. Full version: `outline/WORKFLOW.md`. In short:
    story-rules updates, move the tracker line, and commit.
 
 Chapters 1 to 6 are canon and the foundation; they are not rewritten or restructured
-unasked. Since decision 0029, a scheduled daily run drafts the next three chapters; every new
-chapter is pending until Joshua approves it, and no audio is made before approval. When Joshua hands over a
+unasked. A WEEKLY scheduled run (Tuesdays, decision 0032) writes one or two story events, 3 to 6
+chapters, following `outline/SCHEDULED_WRITING.md`; every new chapter is pending until
+Joshua approves it, and audio is generated only when he asks. When Joshua hands over a
 ChatGPT-drafted block, it is a proposal to review, not canon: the steps are in
 `outline/WORKFLOW.md`.
 `outline/STORY_DIRECTION.md` says what the stretch after Chapter 3 is about --

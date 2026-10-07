@@ -28,7 +28,7 @@ new_canon:
 playable_beat_flow: ["ride to the greenhouse with Mark", "wave residents back indoors", "enter the greenhouse quietly", "talk Aiden out of using the fogger", "observe the spider through the glass", "check the grow lights and the insects on the glass", "hear the roof vents start to open"]
 ending_type: approaching danger
 review_status: in-review
-audio_status: not-started
+audio_status: pending-review
 approved_on: ""
 source: "Drafted by Claude on Joshua's scheduled TMB-Story writing workflow, 2026-10-06. PENDING APPROVAL. Event B1, Lock Down the Greenhouse, begins."
 ---

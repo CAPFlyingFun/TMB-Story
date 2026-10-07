@@ -227,7 +227,9 @@
 
   function audioBadge(status) {
     var s = String(status || "not-started");
-    var cls = s === "published" ? "badge-sky" : s === "recorded" ? "badge-violet" : s === "outdated" ? "badge-rose" : "";
+    var cls = s === "published" ? "badge-sky" : s === "recorded" ? "badge-violet" : s === "outdated" ? "badge-rose" :
+      s === "pending-review" ? "badge-gold" : "";
+    if (s === "pending-review") s = "pending review";
     return '<span class="badge ' + cls + '" title="Audio">audio: ' + esc(s) + "</span>";
   }
 

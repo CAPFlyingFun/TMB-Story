@@ -17,7 +17,7 @@ new_canon: []              # facts established here that did not exist before
 playable_beat_flow: []     # what a future player could DO here, in order
 ending_type: ""            # rotating type; must differ from the previous chapter
 review_status: draft       # draft | in-review | revision-pending | approved  (story/script layer, decision 0031)
-audio_status: not-started  # not-started | recorded | outdated | published  (audio layer: tied to one script revision)
+audio_status: not-started  # not-started | pending-review | recorded | outdated | published  (pending-review = generated, awaiting Joshua's audio review)  (audio layer: tied to one script revision)
 approved_on: ""            # YYYY-MM-DD, set only when review_status becomes approved
 last_approved_revision: "" # git revision of the last approved story text, kept when a revision is pending
 ---

@@ -29,7 +29,7 @@ new_canon:
 playable_beat_flow: ["send Aiden slowly to the vent panel", "learn three vents are dead on the isolated feeder", "climb to the roof catwalk", "crank each open vent closed, slowly", "freeze when the spider jumps onto the roof", "hold still under its gaze", "close the last vent", "talk through the first creature rules", "answer Mark's radio about the crowd"]
 ending_type: complication
 review_status: in-review
-audio_status: not-started
+audio_status: pending-review
 approved_on: ""
 source: "Drafted by Claude on Joshua's scheduled TMB-Story writing workflow, 2026-10-06. PENDING APPROVAL. Event B1 completes; the handoff to B2."
 ---

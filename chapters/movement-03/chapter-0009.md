@@ -27,7 +27,7 @@ new_canon:
 playable_beat_flow: ["read the badge record", "open the lost-badge ticket", "pull the retired groundskeeper's file", "watch the dawn from the window", "answer the facilities channel", "send Mark to the department heads", "pull every camera for the briefing"]
 ending_type: turning point
 review_status: in-review
-audio_status: outdated
+audio_status: pending-review
 approved_on: ""
 last_approved_revision: ""   # never approved; pending first script review
 source: "Joshua's Word manuscript, ba62e566-07-09_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-10-01. For the audio, following Decision 0024 as applied to his two earlier documents: 4 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first."

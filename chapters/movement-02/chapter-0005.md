@@ -27,7 +27,7 @@ new_canon:
 playable_beat_flow: ["map the vibration reports", "search the event sequence for a source address", "answer the door", "ride to the southern perimeter with Mark", "take readings at the boundary", "examine the pale object in the soil", "get back in the vehicle"]
 ending_type: cliffhanger
 review_status: revision-pending
-audio_status: outdated
+audio_status: pending-review
 approved_on: ""
 last_approved_revision: "93ac65a (story text approved 2026-09-21; the 2026-10-06 dialogue-attribution revision is pending Joshua's script review)"
 source: "Joshua's revised Word manuscript, 80a85a2b-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 11 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first."

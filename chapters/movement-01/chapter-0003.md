@@ -22,7 +22,7 @@ new_canon:
 playable_beat_flow: ["attempt manual control", "interrupt the scale calculation", "brace through the activation", "check on Sarah and the baby", "read the sensor grid", "take the call from island utility control", "look out the window", "cycle the perimeter cameras", "open the TOMBS event log", "overlay the boundary on the settlement map"]
 ending_type: revelation
 review_status: revision-pending
-audio_status: outdated
+audio_status: pending-review
 approved_on: ""
 last_approved_revision: "93ac65a (story text approved 2026-09-21; the 2026-10-06 dialogue-attribution revision is pending Joshua's script review)"
 source: "Joshua's revised Word manuscript, 3e9a1f9b-01-03_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 0 bare said-tag(s) removed, and 3 quote(s) split by a beat joined into one line with the beat first."

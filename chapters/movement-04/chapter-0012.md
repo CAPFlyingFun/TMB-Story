@@ -29,7 +29,7 @@ new_canon:
 playable_beat_flow: ["drive to the community center", "push through the crowd", "take the microphone", "give the settlement-wide instructions", "show the greenhouse footage", "answer questions from residents", "face Paul Harlan's question"]
 ending_type: unanswered question
 review_status: in-review
-audio_status: not-started
+audio_status: pending-review
 approved_on: ""
 source: "Drafted by Claude on Joshua's scheduled TMB-Story writing workflow, 2026-10-06. PENDING APPROVAL. Event B2, Tell Five Hundred People, begins and is still in progress."
 ---
