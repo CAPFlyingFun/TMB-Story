@@ -106,13 +106,20 @@ async function boot() {
   let dl3d = null;
   if (want3d) {
     const spec = Object.values(sets).find((s) => s.world.people3d).world.people3d;
-    const three = downloads.fetch(url("vendor/three-human.js"));
-    const models = Object.fromEntries(Object.entries(spec.models).map(([id, p]) => [id, downloads.fetch(url(p))]));
+    // Every file's real size, so the bar's maximum is right before a byte arrives
+    // (engine/download.js). A tiny file; without it the bar falls back to the headers.
+    const sizes = await fetch(url("download-sizes.json")).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
+    const get = (p) => downloads.fetch(url(p), sizes[new URL(p, document.baseURI).pathname.replace(/^.*?\/(assets|visual)\//, "$1/")] || 0);
+    const three = get("vendor/three-human.js");
+    const models = Object.fromEntries(Object.entries(spec.models).map(([id, p]) => [id, get(p)]));
+    // The badge is hung by people3d with its own loader; fetching it here counts it in the
+    // bar and leaves it in the browser's cache for that load.
+    if (spec.badge !== false) get(spec.badge || "../assets/models/badge.glb").catch(() => {});
     // the sets' animals (engine/creatures.js), each file once however many sets use it
     for (const s of Object.values(sets)) {
       for (const c of Object.values((s.world.people3d && s.world.people3d.creatures) || {})) {
         const key = "creature:" + c.model;
-        if (!models[key]) models[key] = downloads.fetch(url(c.model));
+        if (!models[key]) models[key] = get(c.model);
       }
     }
     // the module is imported once its bytes are in the browser's cache

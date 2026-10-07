@@ -304,7 +304,11 @@ export class Stage {
   drawScreen(node, s, t) {
     const tpl = node.spec.templates[s.state];
     if (!tpl) return;
-    const out = tpl({ t, local: Math.max(0, t - s.since), params: s.params });
+    // A screen's starting state has held "forever" (since -Infinity), so local is Infinity, and
+    // anything a template turns with it -- an angle, a pulse -- comes out NaN ("RING 1 00NaN°").
+    // Such a screen is drawn as though it had settled a minute ago, for every template.
+    const local = Math.max(0, t - s.since);
+    const out = tpl({ t, local: Number.isFinite(local) ? local : 60, params: s.params });
     const cls = "screen-inner " + (out.className || "");
     if (out.html !== node.html || cls !== node.cls) {
       node.host.innerHTML = `<div class="${cls}">${out.html}</div>`;

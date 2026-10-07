@@ -19,6 +19,7 @@
 // Units are metres in the ROOM FRAME: x right, y up, z toward the picture's camera, the
 // floor at y = 0 and that camera at (0, height, 0).
 
+import { BODY_RADIUS_M, circleOutOfBox, circleOutOfChair, chairBox, handOut } from "./collide.js";
 import * as THREE from "../vendor/three-human.js";
 import { envelope } from "./gestures.js";
 import { quadMatrix3d } from "./homography.js";
@@ -327,6 +328,12 @@ export class People3D {
     this.maskPairs = a.map((n, i) => [n, b[i]]).filter(([n]) => n.isMesh || n.isGroup);
     this.props = { anchors: this.lab.anchors, lamps: this.lab.lamps };
     this.keyboards = this.lab.keyboards;
+    // what the people may not walk or reach through (engine/collide.js)
+    // (?collide=0 turns it off, to compare)
+    const off = typeof location !== "undefined" && /[?&]collide=0\b/.test(location.search);
+    this.solids = off ? [] : this.room.userData.solids || [];
+    this.collideChairs = !off;
+    this.cameFromCache = new Map();
     // The room's light, ChatGPT's: a cool sky fill, a warm key from the ceiling panels, a
     // teal fill off the racks. The set's glows join it in anchorSetPieces.
     const hemiR = new THREE.HemisphereLight(0xd5e9f4, 0x40505b, 2.3);
@@ -421,6 +428,19 @@ export class People3D {
     const headAboveHips = w(head).y - hips.y;
     rig.rest();
     model.updateMatrixWorld(true);
+    // THE FINGERTIPS, for keeping a free hand out of the furniture (engine/collide.js): each
+    // wrist's descendant furthest from it in the bind -- a finger's end where the rig has
+    // fingers, the hand bone's end where it has not (TRADDOMIUM's humanReach does the same).
+    const tipOf = (wrist) => {
+      let best = bones[wrist], far = 0;
+      bones[wrist].traverse((b) => {
+        if (!b.isBone) return;
+        const d = w(wrist).distanceTo(b.getWorldPosition(new THREE.Vector3()));
+        if (d > far) { far = d; best = b; }
+      });
+      return best;
+    };
+    const tips = { L: tipOf(j.wristL), R: tipOf(j.wristR) };
     const standEye = w(head).y - Math.min(w(j.ankleL).y, w(j.ankleR).y) + 0.08 + 0.06;
     // a sole and a heel put the ankle ~8 cm off the floor; the hip joint sits ~10 cm above the pad
     const seatTop = Math.min(0.55, Math.max(0.4, hips.y - ankle + 0.08 - 0.1));
@@ -435,7 +455,7 @@ export class People3D {
     shadow.rotation.x = -Math.PI / 2;
     this.scene.add(model, shadow);
     const eye = { stand: standEye, sit: seatTop + 0.1 + headAboveHips + 0.04 };
-    this.bodies[id] = { id, model, rig, measure, materials, shadow, seatTop, hips, head, bones, handBindInv, eye, seed: Object.keys(this.bodies).length, opacity: 1 };
+    this.bodies[id] = { id, model, rig, measure, materials, shadow, seatTop, hips, head, bones, tips, handBindInv, eye, seed: Object.keys(this.bodies).length, opacity: 1 };
   }
 
   // THE TOMBS BADGE (Joshua, 2026-10-07: "I separated the badges from the body, so the badge
@@ -916,6 +936,101 @@ export class People3D {
     }
   }
 
+  // ------------------------------------------------------------------- collisions
+  // The chairs where they stand at t (drawChairs puts the meshes there): a parked chair at
+  // its spot, a chair in use under whoever sits in it.
+  chairsAt(t, places) {
+    const out = [];
+    for (const c of this.chairs || []) {
+      const seg = c.segs.find((sg) => sg.t0 <= t && t < sg.t1);
+      if (!seg || seg.hidden) continue;
+      if (seg.owner) {
+        const p = places[seg.owner];
+        if (p && p.seated) out.push({ at: p.at, yaw: p.yaw, seatTop: this.bodies[seg.owner].seatTop, owner: seg.owner });
+      } else out.push({ at: seg.at, yaw: seg.yaw, seatTop: seg.seatTop });
+    }
+    return out;
+  }
+
+  // Where body `id` was, most recently before t, OUTSIDE what `clear` tests -- the side it
+  // came in from, so it leaves a console by that side (engine/collide.js). Read off the
+  // timeline, so a seek gets the same answer as playing up to it. Null when it has always
+  // been inside (a mark placed in the furniture at a cut): then the nearest side.
+  cameFrom(id, t, setId, key, clear) {
+    if (!this.timeline) return null;
+    if (this.cameFromCache.has(key)) return this.cameFromCache.get(key);
+    let found = null;
+    for (let k = 1; k <= 80; k++) {
+      const st = this.timeline.evaluate(t - 0.25 * k);
+      if (st.set !== setId) break;
+      const s = st.actors[id];
+      if (!s || !s.visible) break;
+      const p = this.floorOf(id, s, s.pose.v);
+      if (clear(p)) { found = p; break; }
+    }
+    if (this.cameFromCache.size > 400) this.cameFromCache.clear();
+    this.cameFromCache.set(key, found);
+    return found;
+  }
+
+  // A standing body is kept out of the room's solids and out of the chairs it is not
+  // sitting in (Joshua, 2026-10-07: "Jack and Sarah's hands and body end up going through
+  // objects"). A walk that runs into a console stops at it.
+  keepClear(places, t, state) {
+    const R = BODY_RADIUS_M, chairs = this.frameChairs || [];
+    for (const [id, P] of Object.entries(places)) {
+      if (!P || P.seated) continue;
+      const a = state.actors[id], mark = `${id}|${a.x}|${a.y}|`;
+      for (let pass = 0; pass < 2; pass++) {
+        for (let i = 0; i < this.solids.length; i++) {
+          const b = this.solids[i];
+          if (P.at[0] <= b.min[0] - R || P.at[0] >= b.max[0] + R || P.at[2] <= b.min[2] - R || P.at[2] >= b.max[2] + R) continue;
+          const from = this.cameFrom(id, t, state.set, mark + "s" + i, (p) => {
+            const q = p.slice();
+            return !circleOutOfBox(q, R, b, null);
+          });
+          circleOutOfBox(P.at, R, b, from);
+        }
+        for (let i = 0; i < chairs.length; i++) {
+          const c = chairs[i];
+          if (Math.hypot(P.at[0] - c.at[0], P.at[2] - c.at[2]) > R + 0.45) continue;
+          const from = this.cameFrom(id, t, state.set, mark + "c" + i + "|" + c.at[0].toFixed(2) + c.at[2].toFixed(2), (p) => {
+            const q = p.slice();
+            return !circleOutOfChair(q, R, c, null);
+          });
+          circleOutOfChair(P.at, R, c, from);
+        }
+      }
+      this.clampAisle(P.at, 0.2);
+    }
+  }
+
+  // A free hand that the pose would put inside the furniture is given the surface instead
+  // (engine/collide.js). `turns` is the body's pose before the reach; returns hand targets.
+  freeHandsClear(body, turns, root, yaw, hands, reaches) {
+    if (!this.solids.length && !(this.frameChairs || []).length) return [];
+    const out = [];
+    const busy = new Set(hands.map((h) => h.side));
+    for (const R of reaches) if (R.anim && R.weight > 0) busy.add(R.side);
+    if (busy.has("L") && busy.has("R")) return out;
+    body.rig.apply(turns);
+    body.model.position.set(root[0], root[1], root[2]);
+    body.model.rotation.set(0, yaw, 0);
+    body.model.updateMatrixWorld(true);
+    const v = new THREE.Vector3();
+    for (const side of ["L", "R"]) {
+      if (busy.has(side)) continue;
+      body.tips[side].getWorldPosition(v);
+      const tip = [v.x, v.y, v.z];
+      const q = handOut(tip, this.solids, (this.frameChairs || []).filter((c) => c.owner !== body.id));
+      if (!q) continue;
+      // the palm toward the surface it rests against
+      const n = [tip[0] - q[0], tip[1] - q[1], tip[2] - q[2]], l = Math.hypot(...n) || 1;
+      out.push({ side, x: q[0], y: q[1], z: q[2], kind: "hold", palm: { x: n[0] / l, y: n[1] / l, z: n[2] / l } });
+    }
+    return out;
+  }
+
   targetOf(g) {
     const name = g.opts && g.opts.target;
     return name && this.props ? this.props.anchors[name + ".button"] || this.props.anchors[name] || null : null;
@@ -1064,6 +1179,7 @@ export class People3D {
     const frame = { rootX: r[0], rootY, rootZ: r[2], rootYaw: yaw, unitsPerMetre: body.rig.bindScale };
     const target = look ? { x: look.target.x, y: look.target.y, z: look.target.z } : null;
     const hands = this.handTargets(body, reaches);
+    if (!seated) hands.push(...this.freeHandsClear(body, grounded.turns, [r[0], rootY, r[2]], yaw, hands, reaches));
     const solve = (dt) => {
       const aimed = THREE.aimBody(body.aim, body.measure, body.rig.bind, grounded.turns,
         { ...frame, dt, target, bodyFree: false, weight: look ? look.amount : 1 }, body.aimTurns);
@@ -1334,6 +1450,8 @@ export class People3D {
     for (const id of Object.keys(this.bodies)) if (state.actors[id]) places[id] = this.placeBody(id, state.actors[id], t);
     this.pullChairsIn(places);
     this.keepApart(places);
+    this.frameChairs = this.collideChairs ? this.chairsAt(t, places) : [];
+    this.keepClear(places, t, state);
     const boardPlaces = {};
     for (const id of Object.keys(this.boards || {})) if (state.actors[id]) boardPlaces[id] = this.placeBoard(id, state.actors[id], t);
     for (const id of Object.keys(places)) placed[id] = this.drawBody(id, state.actors[id], t, places[id], { ...places, ...boardPlaces });

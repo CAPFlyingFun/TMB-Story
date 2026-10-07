@@ -1,10 +1,15 @@
 // Downloads that can say how far along they are: "Loading… 1.2MB/6.5MB (18.5%)".
 //
 // Each file is fetched as a stream and counted as its bytes arrive. The total is the sum of
-// every file's Content-Length (when the server sends one and the body is not compressed,
-// where Content-Length would be the compressed size), else what has arrived so far, so the
-// fraction never passes 1. Everything fetched is started at once, so the total is known
-// almost immediately.
+// every file's size, and it has to be right from the first frame, not grow as the bytes
+// do (Joshua, 2026-10-07: "the size amount rising as it downloads and max is not the actual
+// max size"). GitHub Pages gzips the JavaScript, and a gzipped response's Content-Length is
+// the COMPRESSED size while the stream counts the decoded bytes, so the header cannot be
+// used for it; the old fallback, "what has arrived so far", is exactly the rising maximum.
+// So each file's real size comes from visual/download-sizes.json (written by
+// scripts/build-manifest.py, pinned by scripts/tests/test_download_sizes.py), passed in as
+// `expected`; Content-Length is only the fallback for a file that list does not name.
+// Every file is registered the moment its fetch is called, before any byte arrives.
 
 export class Downloads {
   constructor(onChange = () => {}) {
@@ -13,15 +18,15 @@ export class Downloads {
     this.failed = false;
   }
 
-  async fetch(url) {
-    const f = { loaded: 0, total: 0, done: false };
+  async fetch(url, expected = 0) {
+    const f = { loaded: 0, total: expected || 0, done: false };
     this.files.set(url, f);
     this.onChange(this);
     try {
       const r = await fetch(url);
       if (!r.ok) throw new Error(`${r.status} for ${url}`);
       const len = Number(r.headers.get("content-length")) || 0;
-      if (len && !r.headers.get("content-encoding")) f.total = len;
+      if (!f.total && len && !r.headers.get("content-encoding")) f.total = len;
       if (!r.body || !r.body.getReader) {
         const b = await r.arrayBuffer();
         f.loaded = f.total = b.byteLength;

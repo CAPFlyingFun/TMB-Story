@@ -12,6 +12,7 @@ chapters/CHAPTER_TEMPLATE.md: `key: value`, nested maps (indentation),
 inline `[a, b]` lists, `- item` block lists, `# comments`, and quoted strings.
 """
 
+import glob
 import json
 import os
 import re
@@ -290,7 +291,27 @@ def scan_architecture():
     return out
 
 
+SIZES_OUT = os.path.join(ROOT, "visual", "download-sizes.json")
+
+
+def download_sizes():
+    """The real byte size of every file the Watch tab downloads with a progress bar.
+
+    GitHub Pages gzips JavaScript, so a response's Content-Length is not the size the
+    browser counts as it decodes; visual/engine/download.js reads these instead, so the
+    bar's maximum is right before the first byte arrives.
+    """
+    out = {}
+    for pattern in ("visual/vendor/*.js", "assets/models/*.glb"):
+        for p in sorted(glob.glob(os.path.join(ROOT, pattern))):
+            out[rel(p)] = os.path.getsize(p)
+    return out
+
+
 def main():
+    with open(SIZES_OUT, "w", encoding="utf-8") as fh:
+        json.dump(download_sizes(), fh, indent=2)
+        fh.write("\n")
     manifest = {
         "generated": date.today().isoformat(),
         "movements": scan_movements(),

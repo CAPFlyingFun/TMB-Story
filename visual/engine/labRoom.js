@@ -14,6 +14,7 @@
 // Metres, the room frame people3d.js uses: x right, y up, z toward the picture's camera,
 // the floor at y = 0 and that camera at (0, 1.43, 0), looking down the aisle (-z).
 
+import { solidsOf } from "./collide.js";
 import * as THREE from "../vendor/three-human.js";
 
 const DEG = Math.PI / 180;
@@ -300,6 +301,10 @@ export function buildLabRoom() {
 // Hundreds of boxes are hundreds of draw calls, drawn twice (the room, and its depth among
 // the people): on a phone that is the frame. Everything that never moves is merged into one
 // mesh per material. Instanced keys, live lamps and the doors stay as they are.
+//
+// The pieces are boxes until this merge, so this is also where the room's SOLIDS are taken
+// (engine/collide.js): each static piece's world box, before it is merged away, kept on
+// group.userData.solids for the people to stay out of.
 export function mergeStatic(group, keep) {
   const byMat = new Map(), gone = [];
   group.updateMatrixWorld(true);
@@ -309,6 +314,7 @@ export function mergeStatic(group, keep) {
     byMat.get(m.material).push(m);
     gone.push(m);
   });
+  group.userData.solids = solidsOf(gone);
   for (const m of gone) m.parent.remove(m);
   for (const [mat, list] of byMat) {
     const pos = [], nor = [], uv = [], idx = [];
