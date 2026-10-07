@@ -1,0 +1,18 @@
+{
+  "clipId": "paul-harlan-c636cec3b975",
+  "speaker": "paul-harlan",
+  "voiceId": "fkqaihpXt1gFOvhEuJhK",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "64f0f43acc5f4f40f1cea95871a02d4a48f8dcab20865fa11b1d62cce53fc94f",
+  "text": "Machines like that don't switch themselves on. Somebody switched it on.",
+  "bytes": 60648,
+  "generated": "2026-10-07T03:57:34Z"
+}

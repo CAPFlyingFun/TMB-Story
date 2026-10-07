@@ -1,0 +1,18 @@
+{
+  "clipId": "paul-harlan-320303aafc5f",
+  "speaker": "paul-harlan",
+  "voiceId": "fkqaihpXt1gFOvhEuJhK",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a0285ea13b67ab2cc2568693aa709c83a0e885b3fd47750c75da01771a1c81f5",
+  "text": "So who was it?",
+  "bytes": 15090,
+  "generated": "2026-10-07T03:57:34Z"
+}

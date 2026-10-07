@@ -1,0 +1,18 @@
+{
+  "clipId": "paul-harlan-88e4703fd34d",
+  "speaker": "paul-harlan",
+  "voiceId": "fkqaihpXt1gFOvhEuJhK",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b93808e22de0d8f95d1cd6d799231274c5f3fccacd6b1cbdcc50aee2afc326d3",
+  "text": "So let me ask you something you should know. You said it activated without authorization.",
+  "bytes": 74022,
+  "generated": "2026-10-07T03:57:34Z"
+}
