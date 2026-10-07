@@ -1,16 +1,18 @@
-# Movement 4 — The Greenhouse (Chapters 10 to 12)
+# Movement 4 — The Greenhouse (Chapters 11 to 13)
+
+> **Renumbered 2026-10-07 (decision 0033):** the original Chapter 6 was split into Chapters 6 and 7, so the chapters in this movement moved up by one. Numbers below are the new ones.
 
 Status: **🟡 PENDING APPROVAL. Drafted by Claude on 2026-10-06** under Joshua's scheduled
 TMB-Story writing workflow (Decision 0029). Not canon until Joshua explicitly approves.
-No audio generated. Word document: `manuscripts/10-12 Chapters - TRADDOMIUM Micro Battle.docx`.
+Audio generated 2026-10-07 for Joshua's listening review. Word documents: `manuscripts/10-12 Chapters - TRADDOMIUM Micro Battle.docx` (Chapters 10 to 12) and `manuscripts/13-15 Chapters - TRADDOMIUM Micro Battle.docx` (Chapter 13 for now; 14 and 15 join it when written), regrouped after the split.
 
-Straight out of Chapter 9's sunrise, March sixth, from just after sunrise to about half
+Straight out of Chapter 10's sunrise, March sixth, from just after sunrise to about half
 past seven. Jack Bennett's point of view throughout.
 
-**Events:** B1, Lock Down the Greenhouse — **writing complete** in Chapter 11.
-B2, Tell Five Hundred People — **started** in Chapter 12, **in progress**.
+**Events:** B1, Lock Down the Greenhouse — **writing complete** in Chapter 12.
+B2, Tell Five Hundred People — **started** in Chapter 13, **in progress**.
 
-## Chapter 10 — The Greenhouse
+## Chapter 11 — The Greenhouse
 
 Mark drives Jack across a waking settlement, sending residents back indoors and briefing
 Doctor Mercer by radio. At the greenhouse, Aiden is alone with a pesticide fogger; Jack
@@ -20,7 +22,7 @@ than a delivery truck, cold and waiting for the sun. Sarah sees why it is there:
 lights ran all night and the glass is covered in moths and flies. Ends at seven o'clock,
 as the roof vents open on their timer and the spider's eyes tilt toward the sound.
 
-## Chapter 11 — Slow Is Invisible
+## Chapter 12 — Slow Is Invisible
 
 Aiden's override closes most vents; three on the west feeder Lena isolated last night
 stay open. Jack climbs to the catwalk and cranks them shut by hand, slowly ("Slow is
@@ -31,7 +33,7 @@ not hunt in the dark, so the marks stay open. Sarah speaks the settlement's firs
 creature rules. Ends on Unit Four: a crowd at the community center asking for Jack by
 name.
 
-## Chapter 12 — One Clear Message
+## Chapter 13 — One Clear Message
 
 Aiden comes with them; Sarah insists on joining. Doctor Mercer meets them in person and
 orders both Bennetts to medical afterward. Lena routes the hall microphone to every
@@ -51,20 +53,20 @@ The question "who was it?" is hanging. Jack must decide, in front of everyone, h
 of the sabotage to reveal: the stolen credentials, the three-week-old boundary file, the
 tablet used inside the town, PHASE ONE READY.
 
-## Pacing note for the next run (Joshua, from ChatGPT's review of 1–12, 2026-10-06)
+## Pacing note for the next run (Joshua, from ChatGPT's review of the old 1–12, now 1–13, 2026-10-06)
 
 Too many threads are open at once: the sabotage and Phase Two, the night impacts, the
 spider and the wider fauna, water, the badge and tablet, Sarah's pregnancy, the public
-reaction, and what else lives outside. **From Chapter 13, advance or pay off a few of
+reaction, and what else lives outside. **From Chapter 14, advance or pay off a few of
 these rather than adding new ones.**
 
-- **Finish B2 first.** Chapter 12 ends mid-B2, on Paul Harlan's "So who was it?" Jack's
+- **Finish B2 first.** Chapter 13 ends mid-B2, on Paul Harlan's "So who was it?" Jack's
   answer and the town's reaction are next.
 - **Then B3, the Water Clock**: a concrete deadline that forces B4 (the first wilderness
   team), which forces B5 (learning the food chain).
 - **Let Phase Two simmer.** No new sabotage clues for a while; the mystery stays in the
   walls. The night impacts can stay open until exploration reaches them naturally.
-- Mercer's order to examine Sarah (Chapter 12) is the natural thread to B7 when the pace
+- Mercer's order to examine Sarah (Chapter 13) is the natural thread to B7 when the pace
   allows.
 - Keep the "animal, not monster" principle and the accumulating survival rules ("Slow is
   invisible. Fast is food."), which are the earliest seeds of what later becomes TRACKS.

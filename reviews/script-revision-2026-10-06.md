@@ -1,5 +1,7 @@
 # Script revision for review — Chapters 1 to 9, 2026-10-06
 
+> **Renumbered 2026-10-07 (decision 0033).** This record keeps the chapter numbers it was written with. The original Chapter 6 has since been split into Chapter 6 (Several Millimeters) and Chapter 7 (Someone Knew), so the old Chapters 7 to 12 named below are now Chapters 8 to 13.
+
 The dialogue-attribution revision (decision 0030) changed the prose of these chapters. Per
 decision 0031 each one is **pending script review** until Joshua approves the new text.
 Chapters 1 to 6 were approved canon at `93ac65a`; that text is kept in git as the last

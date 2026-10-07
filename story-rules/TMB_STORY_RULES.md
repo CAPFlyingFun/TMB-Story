@@ -33,8 +33,9 @@ The catastrophe happens immediately. It is not fifty chapters away.
 - **Chapters 1 to 3** cover the TOMBS catastrophe, on one night. The Alarm, The
   Boundary, The Activation. By the end of Chapter 3 the story is already in the
   miniature setting.
-- **Chapters 4 to 6** cover the first hours of the aftermath and end on "PHASE ONE
-  READY." They are canon. Chapters 1 to 6 are the foundation and are not rewritten or
+- **Chapters 4 to 7** cover the first hours of the aftermath and end on "PHASE ONE
+  READY." They are canon (Chapters 6 and 7 are Joshua's original Chapter 6, split in two on
+  2026-10-07, decision 0033). Chapters 1 to 7 are the foundation and are not rewritten or
   restructured without Joshua's instruction for that chapter (Decision 0025).
 - **Next,** the story continues from "PHASE ONE READY", with the settlement still in
   the overnight emergency and dawn approaching. It stays in twenty-one ten through
@@ -131,6 +132,12 @@ was preserved on import. If Joshua wants it normalized, that is a decision.
   space.
 - Never add filler to reach a count, and never cut useful material to stay under one.
 - Record the real count in the frontmatter.
+- **Listening length (Joshua, 2026-10-07): 7 to 11 minutes of audio per chapter**, like
+  Pocket FM episodes; 7 to 10 is the sweet spot. At the current narration pace that is
+  roughly 1,000 to 1,600 words, fewer when the chapter is quick back-and-forth dialogue
+  (every short line adds a pause). A chapter heading well past 11 minutes ends at a
+  natural break instead, the way the original Chapter 6 (15 minutes) was split into 6
+  and 7 (decision 0033).
 
 Chapters 1 to 3 as approved run 1,160, 1,083 and 1,384 words.
 

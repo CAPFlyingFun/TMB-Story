@@ -1,464 +1,632 @@
 {
  "chapter": 9,
  "lang": "id",
- "title_en": "First Light",
- "title": "Cahaya Pertama",
+ "title_en": "Three Weeks",
+ "title": "Tiga Minggu",
  "segments": {
   "0": {
    "who": "Narrator",
    "p": 0,
-   "en": "Jack and Mark made it back to the control room just as the sky outside had gone from black to a deep, uncertain gray.",
-   "id": "Jack dan Mark tiba kembali di ruang kendali tepat ketika langit di luar sudah berubah dari hitam menjadi kelabu tua yang belum menentu."
+   "en": "The file opened onto a short list of coordinates and a single line of metadata: a device signature Jack didn't recognize.",
+   "id": "File itu terbuka, menampilkan daftar pendek koordinat dan satu baris metadata: tanda pengenal sebuah perangkat yang tidak Jack kenali."
   },
   "1": {
    "who": "Narrator",
    "p": 1,
-   "en": "Sarah was waiting, arms folded, her expression unreadable.",
-   "id": "Sarah sudah menunggu, bersedekap, raut wajahnya sulit dibaca."
+   "en": "Sarah read over his shoulder.",
+   "id": "Sarah membaca dari balik bahunya."
   },
   "2": {
    "who": "Sarah Bennett",
    "p": 1,
-   "en": "The badge belongs to a groundskeeper. Retired two years ago.",
-   "id": "Lencana itu milik seorang petugas pertamanan. Sudah pensiun dua tahun lalu."
+   "en": "That's not a TOMBS component.",
+   "id": "Itu bukan komponen TOMBS."
   },
   "3": {
-   "who": "Narrator",
-   "p": 2,
-   "en": "Jack frowned.",
-   "id": "Jack mengernyit."
-  },
-  "4": {
    "who": "Jack Bennett",
    "p": 2,
-   "en": "Retired?",
-   "id": "Pensiun?"
+   "en": "No.",
+   "id": "Bukan."
   },
-  "5": {
+  "4": {
    "who": "Sarah Bennett",
    "p": 3,
-   "en": "And the badge itself was reported lost eight days before the incident. Facilities has a ticket for it and everything.",
-   "id": "Dan lencananya sendiri sudah dilaporkan hilang delapan hari sebelum insiden. Bagian fasilitas sampai punya tiket laporannya segala."
+   "en": "Then what is it?",
+   "id": "Lalu itu apa?"
   },
-  "6": {
+  "5": {
    "who": "Narrator",
    "p": 4,
-   "en": "Jack pulled the ticket up himself, as though seeing it wouldn't be enough until his own eyes had confirmed it. The complaint was three lines long, filed by a woman he'd never met, closed out with a standard replacement order the same week.",
-   "id": "Jack membuka tiket itu sendiri, seolah kabar itu belum cukup sebelum ia memastikannya dengan mata kepala sendiri. Keluhannya hanya tiga baris, diajukan oleh seorang perempuan yang belum pernah ia temui, dan ditutup dengan pesanan penggantian standar pada minggu yang sama."
+   "en": "Jack expanded the record.",
+   "id": "Jack membuka rincian catatan itu."
+  },
+  "6": {
+   "who": "Jack Bennett",
+   "p": 4,
+   "en": "A maintenance tablet. Logged into the network for six minutes, three weeks ago. Same day as the boundary file.",
+   "id": "Tablet pemeliharaan. Masuk ke jaringan selama enam menit, tiga minggu lalu. Di hari yang sama dengan file batas itu."
   },
   "7": {
    "who": "Narrator",
    "p": 5,
-   "en": "Lena groaned from her console.",
-   "id": "Lena mengerang dari konsolnya."
+   "en": "Lena crossed her arms.",
+   "id": "Lena bersedekap."
   },
   "8": {
    "who": "Lena Ortiz",
    "p": 5,
-   "en": "So it's not a person. It's a decoy.",
-   "id": "Jadi ini bukan orang. Ini umpan."
+   "en": "The same day you and Sarah were at the community center.",
+   "id": "Hari yang sama waktu kamu dan Sarah ada di balai warga."
   },
   "9": {
-   "who": "Settlement security",
+   "who": "Jack Bennett",
    "p": 6,
-   "en": "Or somebody found it and never turned it back in.",
-   "id": "Atau ada yang menemukannya dan tidak pernah mengembalikannya."
+   "en": "Yes.",
+   "id": "Ya."
   },
   "10": {
-   "who": "Narrator",
+   "who": "Lena Ortiz",
    "p": 7,
-   "en": "Sarah shook her head slowly.",
-   "id": "Sarah menggeleng pelan."
+   "en": "So somebody used a maintenance tablet to plant a boundary file while wearing your credentials.",
+   "id": "Jadi ada orang yang memakai tablet pemeliharaan untuk menyusupkan file batas, dengan menyamar memakai kredensialmu."
   },
   "11": {
-   "who": "Sarah Bennett",
-   "p": 7,
-   "en": "Either way, it doesn't give us a name. It gives us proof that whoever's behind this thought two steps further ahead than we did.",
-   "id": "Yang mana pun, kita tetap tidak dapat nama. Yang kita dapat cuma bukti bahwa siapa pun dalangnya sudah berpikir dua langkah lebih jauh daripada kita."
+   "who": "Jack Bennett",
+   "p": 8,
+   "en": "That's what it looks like.",
+   "id": "Kelihatannya begitu."
   },
   "12": {
    "who": "Narrator",
-   "p": 8,
-   "en": "Lena pulled up the retired groundskeeper's file anyway, as if there might be something useful buried in a decade of routine maintenance requests. There wasn't. Just years of lawn schedules and equipment orders, ending eight days before someone else picked his lost badge up off the ground and put it to a very different use.",
-   "id": "Lena tetap membuka berkas pensiunan petugas pertamanan itu, seakan mungkin ada sesuatu yang berguna terkubur di antara permintaan perawatan rutin selama satu dekade. Tidak ada. Hanya bertahun-tahun jadwal memangkas rumput dan pesanan peralatan, yang berakhir delapan hari sebelum orang lain memungut lencananya yang hilang dari tanah dan memakainya untuk tujuan yang sama sekali berbeda."
+   "p": 9,
+   "en": "Sarah frowned at the coordinates.",
+   "id": "Sarah mengernyit menatap koordinat itu."
   },
   "13": {
-   "who": "Narrator",
+   "who": "Sarah Bennett",
    "p": 9,
-   "en": "Mark leaned against the doorframe, arms crossed.",
-   "id": "Mark bersandar di kusen pintu, bersedekap."
+   "en": "Where was the tablet?",
+   "id": "Tabletnya ada di mana?"
   },
   "14": {
-   "who": "Settlement security",
-   "p": 9,
-   "en": "So we're back to nothing.",
-   "id": "Jadi kita kembali ke nol."
+   "who": "Narrator",
+   "p": 10,
+   "en": "Jack cross-referenced the device ID against the facilities map. A red marker appeared near the edge of the developed zone.",
+   "id": "Jack mencocokkan ID perangkat itu dengan peta fasilitas. Sebuah penanda merah muncul di dekat tepi zona terbangun."
   },
   "15": {
-   "who": "Sarah Bennett",
-   "p": 10,
-   "en": "We're back to nothing with better questions. That's not the same as nothing.",
-   "id": "Kita kembali ke nol, tapi dengan pertanyaan yang lebih baik. Itu tidak sama dengan nol."
+   "who": "Jack Bennett",
+   "p": 11,
+   "en": "The equipment shed by the north pumping station.",
+   "id": "Gudang peralatan di dekat stasiun pompa utara."
   },
   "16": {
-   "who": "Settlement security",
-   "p": 11,
-   "en": "Feels close enough right now.",
-   "id": "Sekarang ini rasanya sama saja."
-  },
-  "17": {
    "who": "Narrator",
    "p": 12,
-   "en": "Nobody argued with him either.",
-   "id": "Kali ini pun tak ada yang membantahnya."
+   "en": "Mark straightened.",
+   "id": "Mark menegakkan badan."
+  },
+  "17": {
+   "who": "Settlement security",
+   "p": 12,
+   "en": "That's inside the boundary.",
+   "id": "Itu di dalam batas."
   },
   "18": {
-   "who": "Narrator",
+   "who": "Jack Bennett",
    "p": 13,
-   "en": "Jack looked at the frozen badge record, then at the still-glowing message on the other screen, and felt the two pieces settle into the same shape of dread.",
-   "id": "Jack menatap catatan lencana yang membeku di layar, lalu pesan yang masih menyala di layar lain, dan merasakan kedua kepingan itu menyatu menjadi bentuk kengerian yang sama."
+   "en": "I know.",
+   "id": "Aku tahu."
   },
   "19": {
-   "who": "Jack Bennett",
+   "who": "Settlement security",
    "p": 14,
-   "en": "They didn't just plan the boundary. They planned for us finding the trail.",
-   "id": "Mereka tidak cuma merencanakan batas itu. Mereka juga sudah memperhitungkan kita bakal menemukan jejaknya."
+   "en": "Somebody who works here did this.",
+   "id": "Berarti pelakunya orang yang bekerja di sini."
   },
   "20": {
    "who": "Narrator",
    "p": 15,
-   "en": "Nobody had an answer to that.",
-   "id": "Tak ada yang bisa menjawabnya."
+   "en": "Nobody said anything for a moment.",
+   "id": "Untuk sesaat, tak seorang pun bicara."
   },
   "21": {
    "who": "Narrator",
    "p": 16,
-   "en": "Jack realized, distantly, that he couldn't remember the last time he'd eaten. Or sat down. The adrenaline that had carried him since the first alarm had thinned into something closer to static, the kind of tiredness that stopped feeling like tiredness and started feeling like a low hum underneath everything else.",
-   "id": "Jack tersadar, samar-samar, bahwa ia tidak ingat kapan terakhir kali makan. Atau duduk. Adrenalin yang menopangnya sejak alarm pertama sudah menipis menjadi sesuatu yang lebih mirip derau statis, jenis kelelahan yang tak lagi terasa seperti lelah dan mulai terasa seperti dengung rendah di bawah segala hal lain."
+   "en": "Sarah's voice stayed steady, but quiet.",
+   "id": "Suara Sarah tetap tenang, tapi pelan."
   },
   "22": {
-   "who": "Narrator",
-   "p": 17,
-   "en": "Sarah touched his arm.",
-   "id": "Sarah menyentuh lengannya."
+   "who": "Sarah Bennett",
+   "p": 16,
+   "en": "Or somebody used a tablet that belongs here. That's not the same thing.",
+   "id": "Atau ada orang yang memakai tablet milik sini. Itu bukan hal yang sama."
   },
   "23": {
-   "who": "Sarah Bennett",
+   "who": "Lena Ortiz",
    "p": 17,
-   "en": "You're still standing. That's something.",
-   "id": "Kamu masih berdiri. Itu sudah lumayan."
+   "en": "It's close enough to keep me up at night.",
+   "id": "Cukup mirip sampai bikin aku tidak bisa tidur."
   },
   "24": {
-   "who": "Jack Bennett",
+   "who": "Narrator",
    "p": 18,
-   "en": "Barely.",
-   "id": "Nyaris."
+   "en": "Jack pulled the tablet's checkout log. Dozens of names scrolled past. Anyone with basic facilities access could have signed one out that week. No single entry stood apart.",
+   "id": "Jack membuka log peminjaman tablet itu. Puluhan nama bergulir lewat. Siapa pun yang punya akses fasilitas dasar bisa saja meminjamnya minggu itu. Tak ada satu entri pun yang menonjol."
   },
   "25": {
-   "who": "Sarah Bennett",
+   "who": "Jack Bennett",
    "p": 19,
-   "en": "Barely counts.",
-   "id": "Nyaris pun terhitung."
+   "en": "This isn't going to give us a name.",
+   "id": "Ini tidak bakal memberi kita satu nama pun."
   },
   "26": {
-   "who": "Jack Bennett",
+   "who": "Narrator",
    "p": 20,
-   "en": "Does it?",
-   "id": "Masa?"
+   "en": "Lena scrolled through the list herself, slower.",
+   "id": "Lena ikut menggulir daftar itu sendiri, lebih pelan."
   },
   "27": {
-   "who": "Sarah Bennett",
-   "p": 21,
-   "en": "Tonight it does.",
-   "id": "Malam ini, iya."
+   "who": "Lena Ortiz",
+   "p": 20,
+   "en": "Half these people I know. The other half I've waved at in the hallway and never learned their name.",
+   "id": "Separuh orang ini aku kenal. Separuh lagi cuma pernah kulambai di lorong, dan aku tidak pernah tahu namanya."
   },
   "28": {
-   "who": "Narrator",
-   "p": 22,
-   "en": "Outside, the gray had started pulling apart into color. Jack crossed to the window without deciding to and watched the first true light of morning reach the tops of the grass blades beyond the boundary, each one taller than the control room itself, each one catching the light like a tree catching fire, slow and gold from the top down.",
-   "id": "Di luar, kelabu mulai terurai menjadi warna. Tanpa sadar Jack sudah melangkah ke jendela, dan ia memandangi cahaya pagi pertama yang sesungguhnya menyentuh pucuk-pucuk helai rumput di balik batas, masing-masing lebih tinggi daripada ruang kendali itu sendiri, masing-masing menangkap cahaya seperti pohon yang terbakar, perlahan dan keemasan dari atas ke bawah."
+   "who": "Jack Bennett",
+   "p": 21,
+   "en": "That's not helpful.",
+   "id": "Itu tidak membantu."
   },
   "29": {
-   "who": "Narrator",
-   "p": 23,
-   "en": "Dew clung to individual blades in beads the size of boulders, each one glowing faintly as the light passed through it. Somewhere out past the tree line, birdsong started up, layered and enormous, utterly indifferent to the five hundred people rebuilding their understanding of the word small.",
-   "id": "Embun melekat di helai demi helai rumput dalam butiran sebesar bongkahan batu, masing-masing berpendar samar saat cahaya menembusnya. Di suatu tempat jauh di balik garis pepohonan, kicau burung mulai terdengar, berlapis-lapis dan begitu besar, sama sekali tak peduli pada lima ratus orang yang sedang menyusun ulang pemahaman mereka tentang kata kecil."
+   "who": "Lena Ortiz",
+   "p": 22,
+   "en": "I know. I'm hoping it becomes helpful if I keep looking.",
+   "id": "Aku tahu. Aku berharap lama-lama jadi membantu kalau aku terus mencari."
   },
   "30": {
    "who": "Narrator",
-   "p": 24,
-   "en": "Lena stood beside him.",
-   "id": "Lena berdiri di sampingnya."
+   "p": 23,
+   "en": "Sarah moved to the second console and pulled up the personnel access system.",
+   "id": "Sarah pindah ke konsol kedua dan membuka sistem akses personel."
   },
   "31": {
-   "who": "Lena Ortiz",
-   "p": 24,
-   "en": "That's...",
-   "id": "Itu..."
+   "who": "Sarah Bennett",
+   "p": 23,
+   "en": "Then we need something that will. If someone used that tablet without checking it out properly, there might be a badge location ping from whoever was closest at the time.",
+   "id": "Kalau begitu kita butuh sesuatu yang bisa. Kalau ada yang memakai tablet itu tanpa meminjamnya dengan benar, mungkin ada sinyal lokasi lencana dari siapa pun yang paling dekat saat itu."
   },
   "32": {
-   "who": "Narrator",
+   "who": "Jack Bennett",
    "p": 24,
-   "en": "She trailed off.",
-   "id": "Suaranya menghilang."
+   "en": "You can do that?",
+   "id": "Kamu bisa melakukannya?"
   },
   "33": {
-   "who": "Jack Bennett",
+   "who": "Sarah Bennett",
    "p": 25,
-   "en": "Yeah.",
-   "id": "Iya."
+   "en": "I can try.",
+   "id": "Bisa kucoba."
   },
   "34": {
    "who": "Narrator",
    "p": 26,
-   "en": "Mark stood in the doorway, radio still in hand, saying nothing at all. It was the first time all night Jack had seen him stop moving.",
-   "id": "Mark berdiri di ambang pintu, radio masih di tangan, tanpa berkata sepatah kata pun. Untuk pertama kalinya malam itu Jack melihatnya berhenti bergerak."
+   "en": "Sarah pulled up a badge-tracking overlay across the facility map.",
+   "id": "Sarah menampilkan lapisan pelacakan lencana di atas peta fasilitas."
   },
   "35": {
-   "who": "Narrator",
-   "p": 27,
-   "en": "Even the light seemed slower here than it should have been, spilling down through the grass like something poured rather than something arriving. Jack found himself thinking, absurdly, that it was the kind of view someone would pay to see on vacation, if it weren't currently their entire backyard.",
-   "id": "Bahkan cahaya pun seolah lebih lambat di sini daripada seharusnya, mengalir turun menembus rerumputan seperti sesuatu yang dituang, bukan sesuatu yang datang. Jack mendapati dirinya berpikir, dengan konyol, bahwa ini jenis pemandangan yang rela dibayar orang untuk dilihat saat berlibur, seandainya saja pemandangan itu bukan seluruh halaman belakang mereka sekarang."
+   "who": "Sarah Bennett",
+   "p": 26,
+   "en": "Every door in this building logs an entry. If someone walked in without using the tablet's own credentials, their badge still would have opened something along the way.",
+   "id": "Setiap pintu di gedung ini mencatat siapa yang masuk. Kalau ada yang masuk tanpa memakai kredensial tablet itu sendiri, lencananya pasti tetap sempat membuka sesuatu di sepanjang jalan."
   },
   "36": {
-   "who": "Narrator",
-   "p": 28,
-   "en": "For a moment, nobody spoke. The world outside the glass had never looked more beautiful, and it had never looked less like home.",
-   "id": "Sesaat, tak ada yang bicara. Dunia di balik kaca belum pernah tampak seindah itu, dan belum pernah terasa begitu jauh dari rumah."
+   "who": "Jack Bennett",
+   "p": 27,
+   "en": "Unless they didn't need a badge.",
+   "id": "Kecuali dia tidak butuh lencana."
   },
   "37": {
-   "who": "Narrator",
-   "p": 29,
-   "en": "Sarah joined them at the window. She didn't say anything about grass or scale or the size of what they were looking at. She just slid her hand into Jack's and held on.",
-   "id": "Sarah bergabung dengan mereka di jendela. Ia tidak berkata apa-apa soal rumput atau skala atau ukuran apa yang sedang mereka pandangi. Ia hanya menyelipkan tangannya ke tangan Jack dan menggenggamnya."
+   "who": "Sarah Bennett",
+   "p": 28,
+   "en": "Everyone needs a badge for this building.",
+   "id": "Semua orang butuh lencana untuk masuk gedung ini."
   },
   "38": {
-   "who": "Narrator",
-   "p": 30,
-   "en": "Somewhere below the grass line, out past the reach of the perimeter lights, something moved through the gold-lit stems and vanished again before any of them could get a clean look at it. Nobody mentioned it. Jack wasn't sure if that was because nobody else had seen it, or because everyone in the room had privately decided they'd had enough discoveries for one night.",
-   "id": "Di suatu tempat di bawah garis rumput, di luar jangkauan lampu perimeter, sesuatu bergerak di antara batang-batang yang bermandikan cahaya keemasan, lalu lenyap lagi sebelum ada yang sempat melihatnya dengan jelas. Tak ada yang menyinggungnya. Jack tidak yakin apakah itu karena tak ada orang lain yang melihatnya, atau karena semua orang di ruangan itu diam-diam sudah memutuskan bahwa penemuan mereka untuk satu malam sudah cukup."
+   "who": "Jack Bennett",
+   "p": 29,
+   "en": "Everyone who's supposed to be here.",
+   "id": "Semua orang yang memang seharusnya ada di sini."
   },
   "39": {
    "who": "Narrator",
-   "p": 31,
-   "en": "The stillness broke when Jack's wrist terminal chirped, a different tone than before, not the medical center this time, but the general facilities channel.",
-   "id": "Keheningan pecah ketika terminal pergelangan Jack berbunyi, nadanya berbeda dari sebelumnya; kali ini bukan pusat medis, melainkan kanal fasilitas umum."
+   "p": 30,
+   "en": "Sarah looked up at him. Neither of them said anything else.",
+   "id": "Sarah mendongak menatapnya. Tak satu pun dari mereka berkata apa-apa lagi."
   },
   "40": {
    "who": "Narrator",
-   "p": 32,
-   "en": "He answered without looking away from the window.",
-   "id": "Ia menjawab tanpa mengalihkan pandangan dari jendela."
+   "p": 31,
+   "en": "Mark cleared his throat.",
+   "id": "Mark berdeham."
   },
   "41": {
-   "who": "Jack Bennett",
-   "p": 32,
-   "en": "Bennett.",
-   "id": "Bennett."
+   "who": "Settlement security",
+   "p": 31,
+   "en": "For what it's worth, the door logs would still catch a tailgater. Somebody walking in right behind a badge that already opened it.",
+   "id": "Sekadar info, log pintu tetap bisa menangkap orang yang ikut menyelinap masuk. Orang yang masuk tepat di belakang lencana yang sudah membuka pintunya."
   },
   "42": {
-   "who": "Narrator",
-   "p": 33,
-   "en": "A man's voice, breathless.",
-   "id": "Suara seorang laki-laki, terengah-engah."
+   "who": "Sarah Bennett",
+   "p": 32,
+   "en": "Would they?",
+   "id": "Benarkah?"
   },
   "43": {
-   "who": "Aiden",
+   "who": "Settlement security",
    "p": 33,
-   "en": "This is Aiden, over at the greenhouse. I don't, I need someone to tell me I'm not losing my mind, because there's a spider out here the size of a delivery truck and it is not moving, and I really need somebody to explain that to me right now.",
-   "id": "Ini Aiden, dari rumah kaca. Aku tidak, aku butuh seseorang bilang kalau aku tidak sedang gila, soalnya di luar sini ada laba-laba sebesar truk pengiriman dan dia tidak bergerak, dan aku benar-benar butuh seseorang menjelaskan itu padaku sekarang juga."
+   "en": "Camera catches the door, not just the badge reader. I can pull that footage too, if it helps.",
+   "id": "Kameranya merekam pintu, bukan cuma pembaca lencana. Rekamannya juga bisa kuambil, kalau membantu."
   },
   "44": {
-   "who": "Narrator",
+   "who": "Jack Bennett",
    "p": 34,
-   "en": "Sarah's hand tightened around Jack's.",
-   "id": "Genggaman Sarah di tangan Jack mengencang."
+   "en": "It might. Add it to the list.",
+   "id": "Mungkin saja. Masukkan ke daftar."
   },
   "45": {
    "who": "Narrator",
    "p": 35,
-   "en": "Lena's hands froze over the keyboard.",
-   "id": "Tangan Lena membeku di atas papan ketik."
+   "en": "Lena didn't look up from the checkout names.",
+   "id": "Lena tidak mengangkat pandangan dari daftar nama peminjam."
   },
   "46": {
-   "who": "Narrator",
-   "p": 36,
-   "en": "Mark finally moved, pushing off the doorframe like the sound had physically shoved him.",
-   "id": "Mark akhirnya bergerak, beranjak dari kusen pintu seolah suara itu benar-benar mendorong tubuhnya."
+   "who": "Lena Ortiz",
+   "p": 35,
+   "en": "The list is getting long.",
+   "id": "Daftarnya makin panjang."
   },
   "47": {
-   "who": "Narrator",
-   "p": 37,
-   "en": "Jack keyed the channel, choosing his next words carefully.",
-   "id": "Jack menekan tombol kanal, memilih kata-katanya berikutnya dengan hati-hati."
+   "who": "Jack Bennett",
+   "p": 36,
+   "en": "The night's getting long too. They're keeping pace.",
+   "id": "Malamnya juga makin panjang. Dua-duanya sama-sama tidak mau kalah."
   },
   "48": {
-   "who": "Jack Bennett",
+   "who": "Narrator",
    "p": 37,
-   "en": "Aiden, stay where you are. Don't approach it. We're on our way.",
-   "id": "Aiden, tetap di tempatmu. Jangan dekati. Kami segera ke sana."
+   "en": "Jack watched her work for a moment before returning to his own screen. The maintenance record wasn't the only thing bothering him. He opened the boundary definition again and looked past the false calm of the settlement's edge, toward the dark shape of the forest beyond it.",
+   "id": "Jack memperhatikannya bekerja sejenak sebelum kembali ke layarnya sendiri. Catatan pemeliharaan itu bukan satu-satunya hal yang mengganggunya. Ia membuka lagi definisi batas dan memandang melewati ketenangan palsu di tepi permukiman, ke arah sosok gelap hutan di baliknya."
   },
   "49": {
-   "who": "Aiden",
+   "who": "Narrator",
    "p": 38,
-   "en": "On your way to do what, exactly?",
-   "id": "Ke sini mau apa, persisnya?"
+   "en": "Something out there had a footprint the size of a dinner plate and no trail.",
+   "id": "Sesuatu di luar sana punya tapak sebesar piring makan, tapi tidak meninggalkan jejak."
   },
   "50": {
-   "who": "Jack Bennett",
+   "who": "Narrator",
    "p": 39,
-   "en": "To explain. Just stay put.",
-   "id": "Menjelaskan. Pokoknya jangan ke mana-mana."
+   "en": "He kept coming back to that. A person leaving no trail made sense. Careful people didn't leave trails. But something with legs, heavy enough to press a dinner-plate mark into the ground, should have left dozens.",
+   "id": "Pikirannya terus kembali ke situ. Orang yang tidak meninggalkan jejak masih masuk akal. Orang yang berhati-hati memang tidak meninggalkan jejak. Tapi sesuatu yang berkaki, yang cukup berat untuk menekan bekas sebesar piring makan ke tanah, mestinya meninggalkan puluhan."
   },
   "51": {
-   "who": "Aiden",
+   "who": "Narrator",
    "p": 40,
-   "en": "That's not an answer!",
-   "id": "Itu bukan jawaban!"
+   "en": "Unless it hadn't walked there at all.",
+   "id": "Kecuali ia sama sekali tidak berjalan ke sana."
   },
   "52": {
-   "who": "Jack Bennett",
+   "who": "Narrator",
    "p": 41,
-   "en": "I know. It's the best one I've got right now.",
-   "id": "Aku tahu. Cuma itu jawaban terbaik yang kupunya sekarang."
+   "en": "He turned to Lena.",
+   "id": "Ia menoleh ke Lena."
   },
   "53": {
-   "who": "Narrator",
-   "p": 42,
-   "en": "Aiden didn't respond to that. Jack could hear him breathing on the other end, fast and shallow, the sound of someone trying to decide whether to believe what he was looking at.",
-   "id": "Aiden tidak menanggapi. Jack bisa mendengar napasnya di seberang sana, cepat dan pendek, bunyi seseorang yang sedang berusaha memutuskan apakah akan memercayai apa yang ada di depan matanya."
+   "who": "Jack Bennett",
+   "p": 41,
+   "en": "Pull up every perimeter sensor from the last hour. Not just south.",
+   "id": "Tampilkan semua sensor perimeter dari satu jam terakhir. Jangan cuma yang di selatan."
   },
   "54": {
-   "who": "Narrator",
-   "p": 43,
-   "en": "He ended the call and looked at Sarah.",
-   "id": "Jack menutup panggilan dan menatap Sarah."
+   "who": "Lena Ortiz",
+   "p": 42,
+   "en": "Looking for what?",
+   "id": "Cari apa?"
   },
   "55": {
-   "who": "Sarah Bennett",
-   "p": 44,
-   "en": "That's it. We can't wait for department heads anymore. People are already finding out on their own.",
-   "id": "Cukup. Kita tidak bisa menunggu kepala departemen lagi. Orang-orang sudah mulai tahu sendiri."
+   "who": "Jack Bennett",
+   "p": 43,
+   "en": "Anything that moved and shouldn't have.",
+   "id": "Apa saja yang bergerak padahal seharusnya tidak."
   },
   "56": {
    "who": "Narrator",
-   "p": 45,
-   "en": "It was almost funny, in the darkest possible way. They'd spent the whole night arguing about when to tell people. The island had just made the decision for them.",
-   "id": "Rasanya hampir lucu, dengan cara yang paling kelam. Semalaman mereka berdebat soal kapan harus memberi tahu orang-orang. Pulau itu baru saja memutuskannya untuk mereka."
+   "p": 44,
+   "en": "She worked in silence for a minute before letting out a slow breath.",
+   "id": "Lena bekerja dalam diam selama semenit, lalu mengembuskan napas panjang."
   },
   "57": {
-   "who": "Narrator",
-   "p": 46,
-   "en": "Jack nodded slowly, watching the light climb higher over the transformed settlement, gold fading into full morning blue. Somewhere out there, five hundred people were about to wake into a world that no longer matched the one they'd fallen asleep in.",
-   "id": "Jack mengangguk pelan, memperhatikan cahaya yang terus naik di atas permukiman yang telah berubah, keemasan memudar menjadi biru pagi yang penuh. Di luar sana, lima ratus orang sebentar lagi akan terbangun di dunia yang tak lagi sama dengan dunia tempat mereka tertidur."
+   "who": "Lena Ortiz",
+   "p": 44,
+   "en": "You're going to want to see this.",
+   "id": "Kamu pasti mau lihat ini."
   },
   "58": {
-   "who": "Jack Bennett",
-   "p": 47,
-   "en": "Then we stop trying to control when they find out, and start deciding what we tell them once they do.",
-   "id": "Kalau begitu, kita berhenti mencoba mengatur kapan mereka tahu, dan mulai memutuskan apa yang akan kita katakan begitu mereka tahu."
+   "who": "Narrator",
+   "p": 45,
+   "en": "Jack crossed to her console. A second impact had registered on the eastern sensor array, twelve minutes before the one that shook the window. Smaller. Further out.",
+   "id": "Jack menghampiri konsolnya. Benturan kedua tercatat di rangkaian sensor timur, dua belas menit sebelum benturan yang mengguncang jendela. Lebih kecil. Lebih jauh."
   },
   "59": {
    "who": "Narrator",
-   "p": 48,
-   "en": "It wasn't a plan. Not really. But it was the first thing all night that had felt like moving forward instead of just reacting to whatever happened next.",
-   "id": "Itu bukan rencana. Belum benar-benar. Tapi itu hal pertama sepanjang malam yang terasa seperti melangkah maju, bukan sekadar bereaksi terhadap apa pun yang terjadi berikutnya."
+   "p": 46,
+   "en": "Sarah didn't look up from her own screen.",
+   "id": "Sarah tidak mengangkat mata dari layarnya sendiri."
   },
   "60": {
-   "who": "Narrator",
-   "p": 49,
-   "en": "Mark reached for his radio.",
-   "id": "Mark meraih radionya."
+   "who": "Sarah Bennett",
+   "p": 46,
+   "en": "Two impacts. Different locations.",
+   "id": "Dua benturan. Lokasinya berbeda."
   },
   "61": {
-   "who": "Settlement security",
-   "p": 49,
-   "en": "I'll get the department heads moving.",
-   "id": "Aku akan mulai menghubungi para kepala departemen."
+   "who": "Jack Bennett",
+   "p": 47,
+   "en": "Or the same thing, moving.",
+   "id": "Atau satu hal yang sama, yang sedang bergerak."
   },
   "62": {
-   "who": "Jack Bennett",
-   "p": 50,
-   "en": "Start with medical. Mercer's earned that much.",
-   "id": "Mulai dari bagian medis. Mercer sudah pantas mendapatkannya."
+   "who": "Narrator",
+   "p": 48,
+   "en": "Mark shifted his weight.",
+   "id": "Mark memindahkan tumpuan badannya."
   },
   "63": {
    "who": "Settlement security",
-   "p": 51,
-   "en": "Already planned on it.",
-   "id": "Memang sudah kurencanakan begitu."
+   "p": 48,
+   "en": "Moving how fast?",
+   "id": "Bergerak secepat apa?"
   },
   "64": {
    "who": "Narrator",
-   "p": 52,
-   "en": "Lena was already typing.",
-   "id": "Lena sudah mengetik."
+   "p": 49,
+   "en": "Jack did the math out loud, more for himself than anyone else.",
+   "id": "Jack menghitungnya keras-keras, lebih untuk dirinya sendiri daripada untuk orang lain."
   },
   "65": {
-   "who": "Lena Ortiz",
-   "p": 52,
-   "en": "I'll pull every camera we've got. If people are going to see this, they should see it clearly instead of piecing it together out of panic.",
-   "id": "Aku akan menarik rekaman dari semua kamera yang kita punya. Kalau orang-orang memang akan melihat ini, mereka harus melihatnya dengan jelas, bukan merangkainya sendiri sambil panik."
+   "who": "Jack Bennett",
+   "p": 49,
+   "en": "If those are the same source, it covered that distance in under fifteen minutes.",
+   "id": "Kalau sumbernya sama, ia menempuh jarak itu dalam waktu kurang dari lima belas menit."
   },
   "66": {
-   "who": "Sarah Bennett",
-   "p": 53,
-   "en": "How long to put together something people can actually understand?",
-   "id": "Butuh berapa lama untuk menyusun sesuatu yang benar-benar bisa dipahami orang?"
+   "who": "Narrator",
+   "p": 50,
+   "en": "The room absorbed that in silence.",
+   "id": "Ruangan itu mencerna kabar itu dalam diam."
   },
   "67": {
-   "who": "Lena Ortiz",
-   "p": 54,
-   "en": "Depends how much you want to tell them the truth versus how much you want them to stay calm.",
-   "id": "Tergantung, seberapa banyak kamu mau mereka tahu yang sebenarnya, dibanding seberapa besar kamu mau mereka tetap tenang."
+   "who": "Settlement security",
+   "p": 51,
+   "en": "I'm going back out.",
+   "id": "Aku mau keluar lagi."
   },
   "68": {
-   "who": "Sarah Bennett",
-   "p": 55,
-   "en": "Both. In that order.",
-   "id": "Dua-duanya. Dengan urutan itu."
+   "who": "Jack Bennett",
+   "p": 52,
+   "en": "Not alone.",
+   "id": "Jangan sendirian."
   },
   "69": {
-   "who": "Lena Ortiz",
-   "p": 56,
-   "en": "Then twenty minutes. Maybe less.",
-   "id": "Kalau begitu dua puluh menit. Mungkin kurang."
+   "who": "Settlement security",
+   "p": 53,
+   "en": "I wasn't planning to be alone. I was planning to take you.",
+   "id": "Memang aku tidak berniat sendirian. Aku berniat mengajakmu."
   },
   "70": {
    "who": "Narrator",
-   "p": 57,
-   "en": "Jack looked around the control room, at the cold coffee and the frozen frame of the shape in the grass and the three words still glowing at the edge of the display, and understood that nothing about the next few hours was going to be simple.",
-   "id": "Jack memandang sekeliling ruang kendali, ke kopi yang sudah dingin, ke gambar beku sosok di rerumputan, dan ke tiga kata yang masih menyala di tepi layar, lalu mengerti bahwa tak ada satu hal pun dalam beberapa jam ke depan yang akan sederhana."
+   "p": 54,
+   "en": "Jack looked at Sarah. She didn't argue, which somehow worried him more than if she had.",
+   "id": "Jack menatap Sarah. Sarah tidak membantah, dan entah kenapa itu lebih mencemaskannya daripada kalau ia membantah."
   },
   "71": {
-   "who": "Narrator",
-   "p": 58,
-   "en": "Sarah looked at Jack.",
-   "id": "Sarah menatap Jack."
+   "who": "Sarah Bennett",
+   "p": 55,
+   "en": "Ten minutes. Cameras stay up the whole time, and you check in every two.",
+   "id": "Sepuluh menit. Kamera tetap menyala sepanjang waktu, dan kalian melapor tiap dua menit."
   },
   "72": {
-   "who": "Sarah Bennett",
-   "p": 58,
-   "en": "Ready?",
-   "id": "Siap?"
+   "who": "Settlement security",
+   "p": 56,
+   "en": "Understood.",
+   "id": "Mengerti."
   },
   "73": {
    "who": "Narrator",
-   "p": 59,
-   "en": "He wasn't. He said it anyway.",
-   "id": "Ia belum siap. Tapi ia tetap mengatakannya."
+   "p": 57,
+   "en": "Jack grabbed a handheld light from the equipment rack and followed Mark toward the door. He paused at the threshold and looked back at Sarah.",
+   "id": "Jack menyambar lampu genggam dari rak peralatan dan mengikuti Mark ke pintu. Di ambang pintu ia berhenti dan menoleh ke Sarah."
   },
   "74": {
    "who": "Jack Bennett",
-   "p": 59,
-   "en": "Yeah.",
-   "id": "Siap."
+   "p": 58,
+   "en": "Find that badge ping.",
+   "id": "Temukan sinyal lencana itu."
   },
   "75": {
+   "who": "Sarah Bennett",
+   "p": 59,
+   "en": "Go.",
+   "id": "Pergilah."
+  },
+  "76": {
    "who": "Narrator",
    "p": 60,
-   "en": "Outside, the sun cleared the horizon, and the first full day of the smallest version of their world began.",
-   "id": "Di luar, matahari naik melewati cakrawala, dan hari penuh pertama dari versi terkecil dunia mereka pun dimulai."
+   "en": "The door sealed behind them with a soft hydraulic hiss that sounded, tonight, uncomfortably final.",
+   "id": "Pintu menutup rapat di belakang mereka dengan desis hidrolik yang lembut, yang malam ini terdengar final dengan cara yang tidak mengenakkan."
+  },
+  "77": {
+   "who": "Narrator",
+   "p": 61,
+   "en": "Outside, the air had shifted. Not warmer exactly, but less still. Somewhere above the tree line, the darkest part of the sky had started to soften at its edges.",
+   "id": "Di luar, udara sudah berubah. Tidak lebih hangat, tepatnya, tapi tidak lagi sediam tadi. Di suatu tempat di atas garis pepohonan, bagian langit yang paling gelap mulai melunak di tepi-tepinya."
+  },
+  "78": {
+   "who": "Narrator",
+   "p": 62,
+   "en": "Mark followed the beam of Jack's light along the tree line.",
+   "id": "Mark mengikuti sorot lampu Jack di sepanjang garis pepohonan."
+  },
+  "79": {
+   "who": "Settlement security",
+   "p": 62,
+   "en": "Dawn's not far.",
+   "id": "Fajar sudah dekat."
+  },
+  "80": {
+   "who": "Jack Bennett",
+   "p": 63,
+   "en": "I noticed.",
+   "id": "Aku sudah lihat."
+  },
+  "81": {
+   "who": "Settlement security",
+   "p": 64,
+   "en": "That mean anything to you? Scientifically?",
+   "id": "Itu ada artinya buatmu? Secara ilmiah?"
+  },
+  "82": {
+   "who": "Narrator",
+   "p": 65,
+   "en": "Jack kept walking.",
+   "id": "Jack terus berjalan."
+  },
+  "83": {
+   "who": "Jack Bennett",
+   "p": 65,
+   "en": "It means we're running out of dark to hide in.",
+   "id": "Artinya, kegelapan tempat kita bisa bersembunyi tinggal sedikit lagi."
+  },
+  "84": {
+   "who": "Narrator",
+   "p": 66,
+   "en": "Mark didn't respond right away. When he did, his voice had lost its usual dry edge.",
+   "id": "Mark tidak langsung menjawab. Ketika akhirnya bicara, suaranya tak lagi membawa nada humor kering yang biasanya."
+  },
+  "85": {
+   "who": "Settlement security",
+   "p": 66,
+   "en": "You scared, Jack?",
+   "id": "Kamu takut, Jack?"
+  },
+  "86": {
+   "who": "Jack Bennett",
+   "p": 67,
+   "en": "Yes.",
+   "id": "Ya."
+  },
+  "87": {
+   "who": "Settlement security",
+   "p": 68,
+   "en": "Good. Means you're paying attention.",
+   "id": "Bagus. Berarti kamu waspada."
+  },
+  "88": {
+   "who": "Narrator",
+   "p": 69,
+   "en": "They walked in silence for a while after that, the beam of Jack's light sweeping low across a ground that felt endless in a way it never used to. What had been a short walk to the maintenance shed a week ago now stretched into a real hike, blades of grass rising on either side of them like a colonnade with no ceiling. Dew hung from the tips in slow, trembling beads, each one large enough to swallow a person whole if it ever let go.",
+   "id": "Setelah itu mereka berjalan dalam diam cukup lama, sorot lampu Jack menyapu rendah di atas tanah yang kini terasa tak berujung, padahal dulu tidak pernah begitu. Yang seminggu lalu hanya jalan kaki singkat ke gudang pemeliharaan kini menjadi perjalanan jauh sungguhan, dengan helai-helai rumput menjulang di kedua sisi mereka seperti barisan pilar tanpa atap. Embun bergantung di ujung-ujungnya dalam butiran yang bergetar pelan, masing-masing cukup besar untuk menelan seorang manusia bulat-bulat kalau sampai jatuh."
+  },
+  "89": {
+   "who": "Narrator",
+   "p": 70,
+   "en": "They reached the eastern sensor marker without incident. The ground here was undisturbed. No crater. No mark. Nothing to suggest an impact at all.",
+   "id": "Mereka tiba di penanda sensor timur tanpa kejadian apa pun. Tanah di sini tidak terusik. Tidak ada kawah. Tidak ada bekas. Tidak ada apa pun yang menandakan pernah terjadi benturan."
+  },
+  "90": {
+   "who": "Settlement security",
+   "p": 71,
+   "en": "Sensor error?",
+   "id": "Sensornya keliru?"
+  },
+  "91": {
+   "who": "Narrator",
+   "p": 72,
+   "en": "Jack knelt and examined the soil anyway. Then he saw it: a single blade of grass, bent flat and pressed into the dirt, far heavier than wind alone could manage.",
+   "id": "Jack tetap berlutut dan memeriksa tanahnya. Lalu ia melihatnya: sehelai rumput, tertekuk rata dan tertekan ke dalam tanah, oleh beban yang jauh lebih berat daripada yang sanggup dihasilkan angin."
+  },
+  "92": {
+   "who": "Narrator",
+   "p": 73,
+   "en": "Jack's voice was quiet.",
+   "id": "Suara Jack pelan."
+  },
+  "93": {
+   "who": "Jack Bennett",
+   "p": 73,
+   "en": "No. Just a lighter touch than the other one.",
+   "id": "Tidak. Cuma sentuhannya lebih ringan daripada yang satunya."
+  },
+  "94": {
+   "who": "Narrator",
+   "p": 74,
+   "en": "Mark crouched beside him.",
+   "id": "Mark berjongkok di sampingnya."
+  },
+  "95": {
+   "who": "Settlement security",
+   "p": 74,
+   "en": "Lighter how?",
+   "id": "Lebih ringan bagaimana?"
+  },
+  "96": {
+   "who": "Jack Bennett",
+   "p": 75,
+   "en": "I don't know yet.",
+   "id": "Aku belum tahu."
+  },
+  "97": {
+   "who": "Narrator",
+   "p": 76,
+   "en": "He photographed the mark from three angles before standing, knees protesting after a night with no sleep behind them. Somewhere close by, something rustled through the grass and went still. Neither of them moved until the sound didn't repeat.",
+   "id": "Ia memotret bekas itu dari tiga sudut sebelum berdiri, lututnya protes setelah semalaman tanpa tidur. Di suatu tempat di dekat situ, sesuatu berdesir menembus rerumputan, lalu diam. Tak satu pun dari mereka bergerak sampai yakin suara itu tidak terulang."
+  },
+  "98": {
+   "who": "Narrator",
+   "p": 77,
+   "en": "Overhead, a bird called somewhere beyond the true boundary of the island, ordinary and distant, unconcerned with anything happening on a scale it would never register. Jack looked up at the lightening sky and felt smaller than the number on his screen had already told him he was.",
+   "id": "Di atas sana, seekor burung berkicau dari suatu tempat di luar batas pulau yang sesungguhnya, biasa saja dan jauh, tak peduli pada apa pun yang terjadi pada skala yang tak akan pernah ia sadari. Jack mendongak ke langit yang mulai terang dan merasa lebih kecil lagi daripada yang sudah dikatakan angka di layarnya."
+  },
+  "99": {
+   "who": "Narrator",
+   "p": 78,
+   "en": "His radio crackled. Sarah's voice, tight with urgency.",
+   "id": "Radionya berderak. Suara Sarah, tegang dan mendesak."
+  },
+  "100": {
+   "who": "Sarah Bennett",
+   "p": 78,
+   "en": "Jack. I found the badge.",
+   "id": "Jack. Aku sudah menemukan lencananya."
+  },
+  "101": {
+   "who": "Jack Bennett",
+   "p": 79,
+   "en": "Whose?",
+   "id": "Punya siapa?"
+  },
+  "102": {
+   "who": "Narrator",
+   "p": 80,
+   "en": "A pause, longer than he liked.",
+   "id": "Jeda, lebih lama daripada yang ia suka."
+  },
+  "103": {
+   "who": "Sarah Bennett",
+   "p": 81,
+   "en": "I need you back here first.",
+   "id": "Kamu kembali ke sini dulu."
   }
  }
 }

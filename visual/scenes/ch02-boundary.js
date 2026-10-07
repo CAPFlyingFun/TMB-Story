@@ -217,7 +217,7 @@ export default {
     // "Tonight, every ring was moving."
     { at: L("Tonight, every ring was moving."), action: "prop", target: "rings", to: 1.15, duration: 2 },
     // "Jack." / "Sarah's voice dropped as she stared through the reinforced window."
-    { at: L("Sarah's voice dropped"), action: "camera", shot: "pairWindow", duration: 2.2, ease: "inOut" },
+    { at: L("Sarah stared through the reinforced window"), action: "camera", shot: "pairWindow", duration: 2.2, ease: "inOut" },
     { at: L("Sarah turned from the rings to him."), action: "face", actor: "sarah", direction: "west" },
     // "Jack moved toward the primary console." / "No."
     ...walkM("jack", L("Jack moved toward the primary console."), [-0.75, -5.7], PRIMARY_SPOT, 1.8, "north", null, 3),

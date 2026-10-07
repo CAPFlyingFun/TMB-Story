@@ -154,9 +154,9 @@ export default {
     { at: L("A security officer stood just outside it"), action: "camera", shot: "doorClose", duration: 2.2, ease: "inOut" },
     { at: L("He nodded down the hallway behind him."), action: "face", actor: "mark", direction: "east" },
     { at: L("Mark Jones, perimeter security."), action: "face", actor: "mark", direction: "north" },
-    { at: L("Mark said, and stepped back"), action: "face", actor: "mark", direction: "east" },
-    ...walkM("mark", L("Mark said, and stepped back"), MARK_DOOR, SPOT.hallEast, 2.6, "east", null, 4),
-    { at: L("Mark said, and stepped back", { offset: 2.7 }), action: "hide", actor: "mark" },
+    { at: L("He stepped back from the doorway."), action: "face", actor: "mark", direction: "east" },
+    ...walkM("mark", L("He stepped back from the doorway."), MARK_DOOR, SPOT.hallEast, 2.6, "east", null, 4),
+    { at: L("He stepped back from the doorway.", { offset: 2.7 }), action: "hide", actor: "mark" },
     // "Jack looked at the camera feeds again." / "I need to go outside." / "No."
     { at: L("Jack looked at the camera feeds again."), action: "face", actor: "jack", direction: "north" },
     { at: L("Jack looked at the camera feeds again."), action: "screen", target: CM, state: "southcam", params: {} },
@@ -193,7 +193,7 @@ export default {
     { at: L("Jack glanced at her stomach."), action: "gesture", actor: "jack", animation: "look-down", duration: 1.4 },
     { at: L("Sarah rested a hand against it."), action: "gesture", actor: "sarah", animation: "hand-on-belly", arm: "left", duration: 4 },
     { at: L("Love you too."), action: "camera", shot: "doorClose", duration: 1.6, ease: "inOut" },
-    { at: L("she added, already turning back"), action: "face", actor: "sarah", direction: "north" },
+    { at: L("Sarah was already turning back"), action: "face", actor: "sarah", direction: "north" },
     { at: L("Going."), action: "face", actor: "jack", direction: "south" },
     ...walkM("jack", L("Going."), SPOT.doorIn, SPOT.doorOut, 1.4, "south", null, 3),
 

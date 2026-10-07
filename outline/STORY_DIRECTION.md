@@ -1,5 +1,7 @@
 # Story direction after Chapter 3
 
+> **2026-10-07:** Joshua's Chapter 6 has since been split into Chapters 6 and 7 (decision 0033), so "after Chapter 6" below now means after Chapter 7, and later numbers move up by one.
+
 ## Update, 2026-09-25: after Chapter 6
 
 Chapters 4 to 6 are written and canon, and end on "PHASE ONE READY." **The next

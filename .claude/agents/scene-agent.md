@@ -82,7 +82,7 @@ raised and then forgotten. Suggest the smallest fix for each. Do not rewrite.
 
 ## REBOOT NOTICE (2026-09-17)
 
-The story was rebooted. Canon is the manuscript in `chapters/` (Chapters 1 to 6: Jack
+The story was rebooted. Canon is the manuscript in `chapters/` (Chapters 1 to 7: Jack
 and Sarah Bennett, the TOMBS catastrophe and the first night after it, March fifth,
 twenty-one ten) plus `story-rules/`. **`story-rules/WORLD_RULES.md` holds the
 author-level rules for scale, geometry, power and signals, including what the
@@ -94,5 +94,5 @@ Alder Sound, Tern Island, Daniel Mercer, the fifty-chapter outline — is NOT ca
 must never be cited as such. If a current file seems to conflict with an archived one,
 the current file wins and the archived one is simply old.
 
-Chapters 1 to 6 are Joshua's approved Word manuscript, and are the foundation. Do not
+Chapters 1 to 7 are Joshua's approved Word manuscript (his Chapter 6 was split into 6 and 7 on 2026-10-07), and are the foundation. Do not
 propose prose changes to them. Review them only for information Joshua has asked for.

@@ -49,6 +49,10 @@ game: never put story writing there.
 - **If nine or more chapters are already waiting for Joshua's review, write only three
   this week,** and say so in the report. The point of the weekly gap is that reviews keep
   up with writing.
+- **Chapter length (Joshua, 2026-10-07):** aim for **7 to 11 minutes of audio**, like
+  Pocket FM episodes, which is roughly 1,000 to 1,600 words depending on how much quick
+  dialogue there is. A chapter that would run much past 11 minutes should end at a natural
+  break and continue in the next one.
 - Respect the current pacing note in the latest movement overview (as of 2026-10-06:
   finish B2, then B3 the Water Clock; let Phase Two simmer; advance existing threads
   rather than adding new ones).
@@ -56,7 +60,7 @@ game: never put story writing there.
 ## 3. Writing rules (all in `story-rules/TMB_STORY_RULES.md`; the essentials)
 
 - Audiobook-first, close third person, past tense, natural US English, dialogue-heavy,
-  about 1,200 to 1,800 words a chapter, spoken numbers written as they are said.
+  7 to 11 minutes of audio a chapter (roughly 1,000 to 1,600 words), spoken numbers written as they are said.
 - **DIALOGUE ATTRIBUTION RULE (8a):** no tags whose only job is naming the speaker. Keep
   every action, emotion, meaningful tone, pause, location and environmental detail. A
   line's beat comes BEFORE it, and one speaker's line stays one unbroken quote. Never
@@ -87,12 +91,24 @@ game: never put story writing there.
 
 ## 5. Word documents
 
-- At most **three chapters per Word document**. 4 to 6 chapters → two documents.
+- At most **three chapters per Word document**, grouped by chapter number: `01-03`,
+  `04-06`, `07-09`, `10-12`, `13-15`, `16-18`, `19-21`, and so on. A run that ends partway
+  through a group (say Chapter 14) writes the group's file with what exists so far and
+  completes it next week.
 - Name them like Joshua's: `13-15 Chapters - TRADDOMIUM Micro Battle.docx`.
 - Build them on Joshua's own template (the existing files in `manuscripts/`), title
   paragraph, `Chapters 13-15`, a status line `🟡 PENDING APPROVAL`, then `Heading 1`
-  chapter titles and the prose.
-- Save them in `manuscripts/` and send them to Joshua.
+  chapter titles and the prose. `python3 scripts/build-word-docs.py` rebuilds every group
+  from the chapter files.
+- Save them in `manuscripts/` and commit them. **Where they go (Joshua, 2026-10-07):**
+  - **Until the story reaches Chapter 21, do NOT send Word files each week.** They live on
+    GitHub in `manuscripts/`.
+  - **The run that completes Chapter 21 sends ONE zip** of all seven files
+    (`01-03` to `19-21`), named `TMB Chapters 01-21 - Word.zip`, so Joshua has the whole
+    updated story on his phone.
+  - **After that, send the new or changed Word file(s) every run, as they are written.**
+  - Whenever an earlier chapter changes (Joshua's edits, a split, a renumbering), rebuild
+    its group's file too, so `manuscripts/` always matches the chapters.
 
 ## 6. Approval and audio (decision 0031: three separate layers)
 
@@ -123,7 +139,7 @@ momentum for the next chapter.
 3. Report to Joshua in this shape:
 
 ```
-DOCUMENTS: 13-15 Chapters - TRADDOMIUM Micro Battle.docx (+ second file if any)
+DOCUMENTS: 13-15 Chapters - TRADDOMIUM Micro Battle.docx (+ second file if any) · saved on GitHub / sent (see section 5)
 CHAPTERS WRITTEN: 13, 14, 15
 TMB-STORY: where posted · STORY TAB: updated
 EVENTS: B2 — completed · B3 — started

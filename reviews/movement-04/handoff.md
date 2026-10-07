@@ -1,5 +1,7 @@
 # Movement 4 (Chapters 10 to 12) — draft handoff, 2026-10-06
 
+> **Renumbered 2026-10-07 (decision 0033).** This record keeps the chapter numbers it was written with. The original Chapter 6 has since been split into Chapter 6 (Several Millimeters) and Chapter 7 (Someone Knew), so the old Chapters 7 to 12 named below are now Chapters 8 to 13.
+
 Drafted by Claude under Joshua's scheduled TMB-Story workflow. **🟡 PENDING APPROVAL.**
 Audio: **not generated** (hard gate: approved canon only).
 

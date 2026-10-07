@@ -1,228 +1,248 @@
 ---
 chapter: 12
-title: "One Clear Message"
+title: "Slow Is Invisible"
 movement: 4
 pov: Jack
-word_count: 1818
+word_count: 1690
 story_time:
   clock: settlement
   date: "March sixth, twenty-one ten"
-  opens: "Leaving the greenhouse for the community center, a little after seven"
-  elapsed: "about half an hour"
-objective: "Tell the settlement what happened, in one clear message, without starting a stampede toward the edge."
-locations: ["The settlement streets", "The community center", "The main control room (by call)"]
-characters: [Jack, Sarah, "Mark Jones, perimeter security", Aiden, "Doctor Mercer", "Paul Harlan, machine shop foreman", "Lena Ortiz (by wrist terminal, running the public address)", "Residents of the settlement"]
+  opens: "Seven o'clock, inside the greenhouse, as the roof vents open"
+  elapsed: "about twenty minutes"
+objective: "Close the greenhouse roof before the spider, or anything it is hunting, comes inside."
+locations: ["The greenhouse, at the western edge of the developed zone", "The greenhouse roof catwalk", "The main control room (by call)"]
+characters: [Jack, "Mark Jones, perimeter security", Aiden, "Sarah (by wrist terminal)", "Lena Ortiz (by wrist terminal)"]
 status_changes:
-  - "About sixty residents gather inside the community center; Lena carries Jack's words to every speaker in the settlement"
-  - "Jack tells the settlement the truth: TOMBS activated without authorization and changed the size of everything inside the developed zone"
-  - "Settlement-wide instructions: stay indoors except for essential work, nobody past the end of any road, water restrictions, exterior lights off along the edge after dark, report insects and do not attack them"
-  - "Lena plays the greenhouse footage of the spider on the hall's screen; the room goes quiet"
-  - "Jack says publicly that he does not know whether TOMBS can reverse it, and will not try until he understands what it would do"
-  - "Doctor Mercer meets Jack and Sarah in person for the first time and tells Sarah she is coming to medical after this"
-  - "Paul Harlan asks, in front of everyone and over the public address, who authorized the activation"
+  - "Aiden's override closes most of the roof vents; the last three at the north end stay open because their circuit is on the west feeder Lena isolated during the night"
+  - "Jack climbs to the roof catwalk and cranks the three vents closed by hand, moving slowly"
+  - "The warmed spider jumps onto the greenhouse roof to take a fly; one roof pane cracks but holds"
+  - "Jack is a meter from the spider's face through the glass; it looks at him, takes the fly, and leaves into the grass"
+  - "Jack cuts the back of his left hand on the cracked pane; minor"
+  - "Sarah's first creature rules for the settlement, spoken and written down"
+  - "The boom of the landing carried across the west side; a crowd is forming at the community center and asking for Jack by name"
 new_canon:
-  - "Doctor Mercer in person: brisk, gray-haired, carries a medical bag, and does not take no from Sarah"
-  - "Paul Harlan, foreman of the machine shop, loud, practical, and not willing to take the lab's word for anything"
-  - "The community center has a main hall with a large screen; Lena can route its microphone to every public speaker in the settlement"
-  - "Some residents have family off the island; nobody can reach them"
-  - "Jack has not told anyone outside the core group that the activation was deliberate"
-playable_beat_flow: ["drive to the community center", "push through the crowd", "take the microphone", "give the settlement-wide instructions", "show the greenhouse footage", "answer questions from residents", "face Paul Harlan's question"]
-ending_type: unanswered question
+  - "Jumping spiders key on movement: slow movement goes unnoticed, fast movement looks like food (Aiden)"
+  - "Jumping spiders hunt in daylight; the impacts in the night happened in the dark, so something else may have made them (open)"
+  - "The settlement's first creature-response rules: it is an animal; nobody attacks; no light shines outward at the edge after dark; anything an insect fits through gets closed; move slowly near glass; nobody goes out alone"
+  - "An animal can walk out of the grass onto the settlement's own pavement; nothing at the edge stops it"
+  - "Blackout blinds go up on the greenhouse's western glass at night instead of turning the grow lights off"
+playable_beat_flow: ["send Aiden slowly to the vent panel", "learn three vents are dead on the isolated feeder", "climb to the roof catwalk", "crank each open vent closed, slowly", "freeze when the spider jumps onto the roof", "hold still under its gaze", "close the last vent", "talk through the first creature rules", "answer Mark's radio about the crowd"]
+ending_type: complication
 review_status: in-review
 audio_status: pending-review
 approved_on: ""
-source: "Drafted by Claude on Joshua's scheduled TMB-Story writing workflow, 2026-10-06. PENDING APPROVAL. Event B2, Tell Five Hundred People, begins and is still in progress."
+source: "Drafted by Claude on Joshua's scheduled TMB-Story writing workflow, 2026-10-06. PENDING APPROVAL. Event B1 completes; the handoff to B2."
 ---
-# Chapter 12: One Clear Message
+# Chapter 12: Slow Is Invisible
 
-Mark was already moving toward the service door. "Fifty people. Asking for you by name. That's either very good or very bad."
+Jack didn't take his eyes off the roof. "Aiden. The panel. Now. Slowly."
 
-Jack pulled the shop rag tighter around his hand. "Which one do you think?"
+Aiden didn't move. "Slowly or now?"
 
-"I think I'll drive fast and we'll find out."
+"Both."
 
-Aiden scrambled up from the floor. "Wait. You're leaving me here?"
+"Those are opposites."
 
-Jack stopped at the door and looked back at him. Young, pale, muddy, and alone in a glass building at the edge of the world.
+Mark set a hand on Aiden's shoulder, gently. "Walk like you're carrying a full cup of coffee across a room full of sleeping kids. I'll be right behind you."
 
-"No. You're coming with us."
+Aiden swallowed and started down the center aisle.
 
-"What about the seedlings?"
+Overhead, the vent motors kept humming. One by one, the long glass panels along the roof had lifted to the height of a man and stopped there, letting the morning in. Cooler air spilled down through the openings. So did sound: the whisper of the grass, the drone of wings, the dry tick of something walking on glass.
 
-"They'll survive an hour without you. I'm less sure about the reverse."
+Outside, the spider still hadn't moved its body. Only its head followed the sound, the two great front eyes tilted up toward the roof.
 
-Aiden thought about that for exactly one second, then grabbed his jacket.
+Then, slowly, they tilted back down, and found Aiden.
 
-Sarah's voice came through Jack's wrist as the vehicle pulled out. "I'm leaving now. Lena's staying with the cameras."
+Sarah's voice came through his wrist, low and tight. "Jack, it's watching him."
 
-"Sarah—"
+"I know. Aiden, keep going. Same speed. Don't look at it."
 
-"Don't."
+"How am I supposed to not look at it?"
 
-"I didn't say anything."
+"Look at the tomatoes."
 
-"You were about to tell me to stay in the control room. I'm thirty-two weeks pregnant, Jack, not thirty-two weeks fragile. And they need to see both of us."
+Aiden looked at the tomatoes. He kept walking. It took him forever, and Jack didn't breathe for most of it.
 
-Jack closed his eyes for a moment. She was right, and they both knew she was right, and that was the most annoying thing about her.
+When he reached the front door, he slid open a gray panel on the wall and pressed his palm flat against a switch. The vent motors changed pitch. All along the roof, the steel arms began to pull, and the glass panels began to lower.
 
-"Okay. Meet us at the front steps."
+Most of them.
 
-"I already planned on it."
+At the far north end, three vents stayed exactly where they were, wide open to the sky.
 
-Lena cut in. "If you two are finished, I have something useful. The community center has a microphone in the main hall. I can route it to every public speaker in the settlement. Streets, housing blocks, medical, the utility station. Everyone hears the same thing at the same time."
+Aiden pressed the switch again. Nothing. "Those three aren't answering."
 
-Jack opened his eyes. "One message."
+Lena's voice came through Jack's wrist, quick and certain. "They won't. Those three are on the west feeder. I isolated it last night. It was one of the three faults."
 
-"One message. No rumors, no versions, no 'my neighbor said.' Whatever you say in there, the whole town hears it."
+"Can you turn it back on?"
 
-Mark glanced over from the wheel. "No pressure."
+"Not from here, and not without knowing why it faulted in the first place. If I push power into a damaged line, I could start a fire in a building full of dry seedling trays."
 
-The streets were no longer empty.
+"Is there a manual override?"
 
-People stood in doorways and on porches and in the middle of the road, in coats thrown over pajamas, holding children, holding each other. Every face was turned up toward the green wall of grass rising above the rooftops. Nobody was screaming. That was almost worse. They looked like people standing at the edge of a flood, waiting to find out how high the water would go.
+Aiden pointed up. "There's a crank on each vent. From the catwalk."
 
-The community center was a low, wide building with glass doors and a flagpole out front. The crowd had spilled from its steps onto the lawn. Mark leaned on the horn once, briefly, and the people closest to the road turned, saw Jack in the passenger seat, and started talking all at once.
+Jack followed his finger. A narrow steel catwalk ran the length of the roof peak, reached by a ladder bolted to the north wall. Each vent had a small hand crank mounted beside its hinge.
 
-"That's him."
+The north wall was the one closest to the grass.
 
-"Doctor Bennett!"
+Mark had already noticed. "I'll go."
 
-"What's going on?"
+"No. I'll go."
 
-Jack stepped out of the vehicle into the noise.
+"Jack."
 
-Sarah was already on the steps. She came down to meet him, took one look at the rag around his hand, and raised an eyebrow.
+Jack nodded toward a red fire extinguisher hanging beside the irrigation valves. "You're the one who knows what to do down here if something comes through. That's carbon dioxide. Cold, loud, and it'll startle almost anything. If you have to use it, aim at the face, not the body."
 
-Jack held the hand a little behind his back. "It's small."
+Mark took the extinguisher off the wall and checked the pin. "You've thought about this."
 
-"You keep saying that about everything."
+"For about four seconds."
 
-Beside her stood a woman in her sixties with short gray hair, a medical bag over one shoulder, and the expression of someone who had been awake all night and intended to hold everyone personally responsible for it.
+"That's longer than I usually get."
 
-She held out her hand. "Doctor Mercer. We've met. Mostly by phone."
+Jack walked to the ladder. Slowly. Every step deliberate. He could feel the spider's attention follow him the way he would feel the sun on the side of his face.
 
-Jack shook it. "I'm sorry about the phone calls."
+Aiden whispered from the front door, just loud enough to carry. "Doctor Bennett. Slow is invisible. Fast is food."
 
-She glanced at his hand, then at Sarah, then back at him. "Don't be. You answered them. You're bleeding. She's pregnant. You've both been up all night. After this, you're both coming to medical."
+"Good to know."
 
-Sarah opened her mouth.
+"I'm serious. That's how they see. Anything that moves fast looks like something to eat."
 
-Doctor Mercer pointed at her. "You especially."
+Jack started climbing.
 
-"I'm fine."
+The ladder was cold under his hands. At the top, the catwalk swayed slightly under his weight. Through the open vents, the morning smelled green and enormous, like a forest after rain.
 
-"You were inside a building with a machine that just did this to a town. Humor me."
+He reached the first crank and began to turn it.
 
-Sarah closed her mouth. Jack had never seen anyone do that to her in one sentence before.
+It was stiff. The panel lowered by a few centimeters with every turn, the hinge creaking. Jack kept his shoulders still and moved only his wrists, one slow rotation at a time, until the glass met the frame with a soft click.
 
-Inside, the main hall was full. Rows of folding chairs had been dragged out of storage and most of them were already taken. People stood along the back wall and in the aisles. A large screen hung above a small raised stage, still showing a calendar of community events that had stopped meaning anything sometime around eleven o'clock last night.
+From his wrist, Sarah counted quietly. "One."
 
-Jack climbed onto the stage. Sarah stood at his side. Mark took the doorway, and Aiden stayed close to Mark, as though Mark were the only solid thing in the room.
+He moved to the second.
 
-The microphone stand was crooked. Jack straightened it. His hand left a faint smear of blood on the metal.
+Below him, the moths had begun to stir. The sun had reached the western glass now, and the insects clinging there were warming, their wings opening and closing in slow, lazy beats. A fly crawled up the outside of the roof, right beside the third vent, and sat there in a patch of sunlight, cleaning its face with its front legs.
 
-"Lena?"
+Halfway through the second crank, Sarah's voice changed. "Jack. It's moving."
 
-Her voice came quietly through his wrist. "You're live everywhere."
+He didn't look down. He kept turning.
 
-Jack looked out at the room. Sixty faces. Behind them, through the glass doors, more people on the lawn. And beyond them, invisible, nearly five hundred people in kitchens and bedrooms and hallways, all listening to the same speakers.
+"Tell me."
 
-He gripped the stand with his good hand. "Good morning. My name is Jack Bennett. I run the TOMBS project at the laboratory. Some of you know me. Most of you probably just know the building."
+"It's standing up. It's on the pavement now. It's… it's turning toward the roof."
 
-A few people nodded. Nobody smiled.
+"Toward me?"
 
-"Last night, around eleven o'clock, TOMBS activated without authorization. We tried to stop it, and we couldn't. When it finished, it had changed the size of everything inside the developed settlement. Every building. Every street. Every one of us."
+"Toward the fly."
 
-The room was completely silent.
+The second vent clicked shut. Jack slid one foot along the catwalk, then the other, until he was beside the third. The fly was less than an arm's length away on the far side of the open gap, glossy and enormous, its huge red eyes catching the light.
 
-Jack let that settle before he finished. "The grass outside didn't grow. We got smaller."
+He reached for the crank.
 
-The silence broke all at once. Questions came from every direction, layered over one another until none of them could be heard. Jack raised his good hand and waited. It took a long time. Sarah didn't move from his side.
+Sarah's voice dropped to almost nothing. "Jack, don't move."
 
-When the noise finally dropped, he kept going. "I'm going to tell you what we know, what we don't, and what we need you to do. Then I'll take questions. I promise I'll take questions."
+He didn't.
 
-He gave them the instructions plainly, one at a time. Stay indoors except for essential work. Nobody goes past the end of any road, for any reason. Water is restricted starting now, and the utility station will post the limits by noon. After dark, any light that faces outward along the edge of town gets turned off. If you see an insect near your home, report it. Do not attack it.
+Below, Mark said something he didn't catch. Then the whole greenhouse boomed like a drum.
 
-A man in the third row laughed, short and disbelieving. "Report it. To who? Pest control?"
+The roof shuddered. Dust and grit rained from the steel ribs. Directly above Jack's head, a pane of glass cracked into a white star with a sound like ice breaking on a lake.
 
-"To security. Mark Jones and his officers."
+And through that glass, a single meter away, was the spider.
 
-At the door, Mark lifted a hand. "Hi."
+It had landed on the roof as lightly and as heavily as a falling car. Its legs gripped the steel frame on either side. Its underside was pale and furred. And its face was right there, the two great eyes level with his own, dark and glossy and deep, and in each of them Jack could see a tiny curved reflection of a man standing perfectly still on a catwalk.
 
-The man didn't laugh again.
+It was looking at him.
 
-Someone called out from the back. "Why don't we attack it?"
+Not the way a camera looked. The way a person looked when they were trying to decide what something was.
 
-Jack looked at Sarah. She stepped up to the microphone. "Lena, play the greenhouse."
+Jack didn't breathe.
 
-The calendar disappeared from the big screen. In its place, the western glass of the greenhouse, the grass beyond it, and the spider, sitting in the sun.
+Then the spider's front legs moved, faster than he could follow, and the fly was simply gone from the glass.
 
-A woman near the front made a small sound and covered her mouth.
+The spider held it for a moment, as though considering. Then it turned, stepped across the roof with a slow rolling grace that sent faint vibrations through the catwalk under Jack's feet, and dropped off the far side.
 
-Lena let the footage run. The roof vents opening. The spider rising. The jump, so fast that half the room gasped after it had already happened. The boom of the landing, small and tinny through the hall speakers. Then a long, steady shot from the inside camera, looking up at the roof: a man standing perfectly still on a catwalk, and a spider the size of a car crouched on the glass a meter from his face, looking at him.
+When Jack finally looked down through the western glass, the grass was swaying where it had gone in. Then it was still.
 
-Somebody in the hall whispered, "Is that you?"
+Sarah's voice came through, not quite steady. "It's gone. Jack, it's gone. It went back into the grass."
 
-Jack leaned toward the microphone. "That's me."
+Jack let out a breath he felt all the way to his knees. He reached up and cranked the third vent closed, one slow rotation at a time, because it felt wrong to hurry now, and only when the glass clicked into the frame did he notice the blood running across the back of his left hand.
 
-"What did you do?"
+A sliver from the cracked pane. He hadn't even felt it.
 
-"I stood very still and tried not to look like a fly."
+Mark called up from below. "You're bleeding."
 
-A nervous ripple of laughter moved through the room and died away.
+"It's small."
 
-Sarah's voice carried over every speaker. "That's why we don't attack. Because it wasn't attacking us. It came for the insects on the glass, and it took one, and it left. We don't know yet what else is out there. Until we do, we don't start fights we can't finish."
+"Everything's small. That's the whole problem."
 
-Aiden spoke up suddenly from beside Mark, louder than he probably meant to. "It looked right at him. I was there. It looked at him and it left."
+Jack climbed down. Aiden was sitting on the floor beside the front door with the fogger in his lap and his back against the wall. He looked up at Jack the way people looked at someone who had just walked out of a car accident.
 
-Heads turned toward him. He went red and stepped half behind Mark.
+Aiden's voice was barely above a whisper. "It looked at you."
 
-The questions came again, but slower now, one at a time.
+"I noticed."
 
-"How small are we?"
+"They do that. When they're small. They look at you like they're thinking about it."
 
-"Small enough that a fingernail clipping at the edge of town is longer than I am tall."
+"What was it thinking?"
 
-"Can you put us back?"
+"That you weren't a fly, probably."
 
-Jack had known that one was coming since he stepped onto the stage. He still felt it land.
+"I'll take it."
 
-"I don't know. I haven't tried. And I'm not going to try until I understand exactly what it would do. If I get that wrong, I don't get a second chance, and neither do you."
+Sarah's voice came through his wrist again, steadier now, and quick, the way it got when an idea had already started. "Jack. It jumped. It didn't walk to the fly. It jumped onto the roof from the pavement."
 
-"Then call for help. Call the mainland."
+Mark looked up sharply. "Pressed straight down."
 
-"We've tried. Every outside channel is silent. Satellite, radio, everything. We're still working on why."
+Jack turned to him. "And no trail. Like the mark you found by the southern perimeter."
 
-A woman stood up in the middle of the room. She kept glancing at the terminal on her wrist, as if it might ring. "My daughter's in Boston. At school. She's going to call me tonight. What happens when she calls?"
+Aiden frowned. "What mark?"
 
-Jack didn't have an answer. He made himself say so. "I don't know that either. I'm sorry."
+"Something hit the ground outside the settlement last night. Twice. It left a print and no tracks."
 
-She sat back down slowly. The man beside her put an arm around her shoulders.
+Aiden shook his head slowly. "That wasn't this one. Or not because it was hunting. Jumpers don't hunt in the dark. They need light to see."
 
-Then someone near the front stood up, and the room shifted around him the way rooms do around people who are used to being listened to.
+For a moment, nobody said anything.
 
-He was broad and gray-bearded, in a canvas work jacket with grease worked permanently into the cuffs. Jack recognized him vaguely. The machine shop. Harlan, or Harland.
+"So something else out there jumps."
 
-He folded his arms and gave his name for the room's benefit rather than Jack's. "Paul Harlan. I run the machine shop. I've kept half the machinery in this town running since before most of you got here. You've been very honest up there, Doctor. I'll give you that. You don't know how small, you don't know how to fix it, you don't know why the radio's dead."
+"Or something else out there lands. We don't know yet. Write it down. Both."
 
-"That's right."
+Jack wrapped his hand in a clean shop rag from Aiden's bench and looked at the cracked pane in the roof, the white star spreading across it like frost.
 
-Paul tilted his head. "So let me ask you something you should know. You said it activated without authorization."
+"Sarah. What did we just learn?"
 
-"Yes."
+She didn't hesitate. "It's an animal. It came here for food, and it took food, and it left. It didn't break in because it didn't want to. It never cared about us. That's rule one. It's an animal. It does what animals do."
 
-Paul nodded, as though that settled something. "Machines like that don't switch themselves on. Somebody switched it on."
+"Rule two?"
 
-He let that sit for a long moment before he finished. "So who was it?"
+"Nobody attacks anything. Aiden, that includes you."
 
-The hall went silent again. Not the stunned silence from before. A sharper one. Jack could feel it pulling at every person in the room, and through Lena's speakers, at every person in every house beyond it.
+Aiden held up the fogger and set it carefully on the floor.
 
-He hadn't told them it was deliberate. He hadn't told them about the stolen credentials, or the boundary drawn three weeks ago, or the tablet that had been switched on inside their own town. He hadn't told them PHASE ONE READY.
+"Three. No lights shining outward along the edge after dark. The lights brought the insects, and the insects brought the spider."
 
-He hadn't decided whether he was going to.
+Aiden winced. "The seedlings need those lights."
 
-Jack looked at Sarah. She looked back at him, and for once, she didn't have the next question ready.
+"Then we put blackout blinds on the western glass at night. The plants get their light. The island doesn't see it."
 
-Nearly five hundred people were waiting for his answer.
+"Four. Anything an insect can fit through gets closed. Vents, cracks, drains. Doors."
 
-And one of them, maybe, already knew it.
+"Five. Move slowly near glass."
+
+Jack looked at Mark, then at Aiden. "Six. Nobody goes out alone."
+
+There was a pause on the line. "Are you writing that down?"
+
+"I've been writing since rule one."
+
+Mark's radio crackled before Jack could answer. A voice he didn't recognize, young and tense. "Jones, this is Unit Four. Are you near the west side?"
+
+Mark keyed it. "Go ahead."
+
+"Whatever that bang was, half the west side heard it. I've got people coming out of their houses. They're walking toward the community center. Forty, maybe fifty, and more behind them."
+
+Mark looked at Jack. Jack looked at the cracked glass, and the swaying grass beyond it, and the empty pavement where the spider had sat.
+
+"Unit Four, what are they saying?"
+
+A short pause on the channel.
+
+"They're asking for Doctor Bennett. By name."

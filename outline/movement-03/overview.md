@@ -1,4 +1,6 @@
-# Movement 3 — First Light (Chapters 7 to 9)
+# Movement 3 — First Light (Chapters 8 to 10)
+
+> **Renumbered 2026-10-07 (decision 0033):** the original Chapter 6 was split into Chapters 6 and 7, so the chapters in this movement moved up by one. Numbers below are the new ones.
 
 Status: **written by Joshua, imported 2026-10-01, in review.** Imported verbatim from
 his Word manuscript `ba62e566-07-09_Chapters - TRADDOMIUM Micro Battle.docx`. The
@@ -7,14 +9,14 @@ earlier documents also received for the audio (Decision 0024): twenty-one bare
 `"...," Name said.` tags removed. Approval, the `CHAPTER_INDEX.md` rows and the
 story-rules updates follow his audio pass, as `outline/WORKFLOW.md` step 7 says.
 
-The same night, straight out of Chapter 6's PHASE ONE READY: from half past three in the
+The same night, straight out of Chapter 7's PHASE ONE READY: from half past three in the
 morning to sunrise. Jack Bennett's point of view throughout.
 
 **The shape of it is the trail running out as the dark does.** Every lead the four of
 them pull on — the label, a tablet, a badge — turns out to have been anticipated, and
 the night ends not with an answer but with the settlement finding out on its own.
 
-## Chapter 7 — Phase Two
+## Chapter 8 — Phase Two
 
 An impact shakes the control-room window. Mark checks the southern perimeter and finds a
 mark the size of a dinner plate, pressed straight down, with no trail in or out. Jack,
@@ -24,7 +26,7 @@ more patients are awake and her patience is nearly gone. Sarah proposes telling 
 department heads. Ends on Jack's narrower search turning up one record, buried deeper
 than the last, loading line by line.
 
-## Chapter 8 — Three Weeks
+## Chapter 9 — Three Weeks
 
 The record is a maintenance tablet that was on the network for six minutes three weeks
 ago, the same day as the boundary file, at the equipment shed by the north pumping
@@ -34,7 +36,7 @@ eastern sensors, twelve minutes before the first. Jack and Mark walk out to the 
 marker through grass like a colonnade and find one blade pressed flat into the dirt.
 Ends on Sarah: "I found the badge." / "Whose?" / "I need you back here first."
 
-## Chapter 9 — First Light
+## Chapter 10 — First Light
 
 The badge belonged to a groundskeeper retired two years ago and was reported lost eight
 days before the incident: whoever did this planned for the trail being found. Dawn
@@ -44,14 +46,14 @@ channel about a spider the size of a delivery truck. The waiting is over: Mark s
 the department heads with medical, Lena builds a camera briefing, and the first full day
 begins.
 
-## Movement 4 — Chapters 10 onward
+## Movement 4 — Chapters 11 onward
 
 Not outlined, not written. Do not draft it unasked.
 
 ## Audio
 
 Not generated. The three chapters parse and validate (`python3 scripts/audio.py validate
---chapters 7-9`): 39 lines whose bare tags came out are pinned to their speakers in
+--chapters 8-10`): 39 lines whose bare tags came out are pinned to their speakers in
 `audio/speaker-overrides.json`, each checked against the tagged manuscript. Aiden is new
-in Chapter 9 and has no voice yet (`story-rules/voice-registry.json`): his three lines
+in Chapter 10 and has no voice yet (`story-rules/voice-registry.json`): his three lines
 wait for Joshua to choose one.

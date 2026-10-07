@@ -1,7 +1,7 @@
 {
   "chapter": 8,
   "_comment": [
-    "Sound cues for Chapter 8 (Joshua's 07-09 manuscript, imported 2026-10-01).",
+    "Sound cues for Chapter 7 (Joshua's 07-09 manuscript, imported 2026-10-01).",
     "Built entirely from assets already in audio/sfx-registry.json: no ElevenLabs credits are spent on sound.",
     "Gains here are a starting point; `audio.py retune-cues` re-derives them from each asset's measured loudness and the cue's emphasisDb."
   ],
@@ -10,140 +10,186 @@
       "cueId": "ch08-005-control-room",
       "asset": "amb_computer_lab",
       "anchor": {
-        "clipId": "narrator-cb5a10ce029a",
+        "clipId": "narrator-ca5016d733d8",
         "occurrence": 1
       },
       "timing": "before",
-      "fadeInMs": 1500,
-      "fadeOutMs": 3000,
-      "sustain": {
-        "until": {
-          "clipId": "narrator-7f69f700027d",
-          "occurrence": 1
-        },
-        "timing": "before"
-      },
-      "gain": 0.117,
-      "why": "Still the control room, until Jack and Mark go outside."
-    },
-    {
-      "cueId": "ch08-010-facilities-map",
-      "asset": "sfx_system_notify_soft",
-      "anchor": {
-        "clipId": "narrator-366b87f75e75",
-        "occurrence": 1
-      },
-      "timing": "during",
-      "offsetMs": 2400,
-      "gain": 0.029,
-      "why": "The red marker appearing on the facilities map."
-    },
-    {
-      "cueId": "ch08-020-checkout-log",
-      "asset": "sfx_keyboard_typing_short",
-      "anchor": {
-        "clipId": "narrator-fdcd5179af78",
-        "occurrence": 1
-      },
-      "timing": "during",
-      "gain": 0.234,
-      "why": "Pulling the checkout log; names scroll past."
-    },
-    {
-      "cueId": "ch08-030-badge-overlay",
-      "asset": "sfx_system_notify_soft",
-      "anchor": {
-        "clipId": "narrator-fb72fda7f2ce",
-        "occurrence": 1
-      },
-      "timing": "during",
-      "gain": 0.029,
-      "why": "The badge-tracking overlay coming up across the facility map."
-    },
-    {
-      "cueId": "ch08-040-perimeter-sensors",
-      "asset": "sfx_keyboard_typing_short",
-      "anchor": {
-        "clipId": "narrator-d326d0468ffc",
-        "occurrence": 1
-      },
-      "timing": "before",
-      "gain": 0.166,
-      "emphasisDb": -3.0,
-      "why": "Lena pulling every perimeter sensor from the last hour."
-    },
-    {
-      "cueId": "ch08-041-second-impact",
-      "asset": "sfx_alert_warning_hit",
-      "anchor": {
-        "clipId": "narrator-9e795e3e048c",
-        "occurrence": 1
-      },
-      "timing": "during",
-      "offsetMs": 1200,
-      "gain": 0.008,
-      "emphasisDb": -6.0,
-      "why": "The second impact on the eastern array, twelve minutes before the first: a flag on the sensor log, kept low."
-    },
-    {
-      "cueId": "ch08-050-door-seals",
-      "asset": "sfx_lab_door_slide",
-      "anchor": {
-        "clipId": "narrator-7f69f700027d",
-        "occurrence": 1
-      },
-      "timing": "during",
-      "gain": 0.018,
-      "why": "'A soft hydraulic hiss that sounded, tonight, uncomfortably final.'"
-    },
-    {
-      "cueId": "ch08-060-outside",
-      "asset": "amb_night_outside",
-      "anchor": {
-        "clipId": "narrator-ba32b73ab4ac",
-        "occurrence": 1
-      },
-      "timing": "before",
-      "fadeInMs": 2000,
+      "fadeInMs": 2500,
       "fadeOutMs": 5000,
       "sustain": {
         "until": "chapterEnd",
         "timing": "after"
       },
-      "gain": 0.16,
-      "why": "Out of the building and into the night, as Chapter 5 went out: an ordinary night, which is the horror of it."
+      "gain": 0.117,
+      "why": "The main control room at half past three, for the whole chapter: Movement 2's room, so the night is continuous."
     },
     {
-      "cueId": "ch08-070-radio-crackle",
+      "cueId": "ch08-010-southern-feed",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-4c30f29cf0db",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 300,
+      "gain": 0.234,
+      "why": "Jack pulling the southern camera feed onto the main display before he has decided to."
+    },
+    {
+      "cueId": "ch08-020-door-shuts",
+      "asset": "sfx_lab_door_slide",
+      "anchor": {
+        "clipId": "narrator-9eadd994d4ae",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "gain": 0.018,
+      "why": "Mark leaving to check the perimeter."
+    },
+    {
+      "cueId": "ch08-030-phase-search",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-1978127de56f",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "gain": 0.234,
+      "why": "The search across the diagnostic snapshot."
+    },
+    {
+      "cueId": "ch08-031-phase-nothing",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-1978127de56f",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 2600,
+      "gain": 0.021,
+      "emphasisDb": -3.0,
+      "why": "'The system returned nothing.' A soft, empty answer."
+    },
+    {
+      "cueId": "ch08-040-radio-crackle",
       "asset": "sfx_intercom_static",
       "anchor": {
-        "clipId": "narrator-a950a7a4e5e6",
+        "clipId": "narrator-aa0c6b3a38ac",
         "occurrence": 1
       },
       "timing": "before",
       "gain": 0.011,
       "emphasisDb": -2.0,
-      "why": "Sarah on the radio from the control room."
+      "why": "Mark's radio from the southern perimeter: a crackle, then his voice."
     },
     {
-      "cueId": "ch08-071-radio-channel",
+      "cueId": "ch08-041-radio-channel",
       "asset": "amb_intercom_channel_open",
       "anchor": {
-        "clipId": "sarah-bennett-e733c7074fd8",
+        "clipId": "security-officer-6d95e91e8f66",
         "occurrence": 1
       },
       "timing": "before",
       "fadeInMs": 200,
-      "fadeOutMs": 600,
+      "fadeOutMs": 400,
       "sustain": {
         "until": {
-          "clipId": "sarah-bennett-6e3f30ca5121",
+          "clipId": "narrator-c18df0a9fc65",
           "occurrence": 1
         },
         "timing": "before"
       },
       "gain": 0.007,
-      "why": "The open channel under Sarah's last lines."
+      "why": "The open radio under Mark's report, so his voice reads as coming from outside."
+    },
+    {
+      "cueId": "ch08-050-mark-returns",
+      "asset": "sfx_lab_door_slide",
+      "anchor": {
+        "clipId": "narrator-e48f67882860",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1800,
+      "gain": 0.018,
+      "why": "'Cold air followed him through the door before it sealed shut again.'"
+    },
+    {
+      "cueId": "ch08-060-medical-call",
+      "asset": "sfx_wrist_terminal_chirp",
+      "anchor": {
+        "clipId": "narrator-a8b713d13cf3",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.039,
+      "why": "Doctor Mercer calling again, the same chirp as her first call in Chapter 4."
+    },
+    {
+      "cueId": "ch08-061-medical-channel",
+      "asset": "amb_intercom_channel_open",
+      "anchor": {
+        "clipId": "narrator-92f11fc96caa",
+        "occurrence": 1
+      },
+      "timing": "after",
+      "fadeInMs": 200,
+      "fadeOutMs": 400,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-e3336da71c28",
+          "occurrence": 1
+        },
+        "timing": "before"
+      },
+      "gain": 0.007,
+      "why": "The line to the medical center, open under the call."
+    },
+    {
+      "cueId": "ch08-062-call-ends",
+      "asset": "sfx_intercom_close",
+      "anchor": {
+        "clipId": "narrator-e3336da71c28",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.031,
+      "why": "Mercer hangs up."
+    },
+    {
+      "cueId": "ch08-070-narrower-search",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-6d1676deea73",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "gain": 0.234,
+      "why": "The narrower search, and enter."
+    },
+    {
+      "cueId": "ch08-071-one-result",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-b6e9a4e8b3eb",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.029,
+      "why": "The one result, after a pause that lasted longer than it should have."
+    },
+    {
+      "cueId": "ch08-072-record-loads",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-7aef83ae7116",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1500,
+      "gain": 0.018,
+      "emphasisDb": -4.0,
+      "why": "The record arriving line by line; the chapter ends on it."
     }
   ]
 }

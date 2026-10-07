@@ -225,7 +225,7 @@ export default {
     ...walkM("sarah", L("Behind him, Sarah had walked", { offset: -0.6 }), BESIDE, WINDOW_SARAH, 3.4, "east", "east"),
     { at: L("Behind him, Sarah had walked toward a window."), action: "camera", shot: "toWindow", duration: 2.4, ease: "inOut" },
     { at: L("Jack kept his attention on the terminal."), action: "camera", shot: "primary", duration: 1.6, ease: "inOut" },
-    { at: L("Sarah called again from the window."), action: "camera", shot: "toWindow", duration: 1.4, ease: "inOut" },
+    { at: L("Sarah was still at the window."), action: "camera", shot: "toWindow", duration: 1.4, ease: "inOut" },
     { at: L("Jack cycled through another channel."), action: "gesture", actor: "jack", animation: "type", duration: 1.4 },
     // "Something in her voice made him lower his wrist." / "Jack walked over and stopped beside her."
     { at: L("Something in her voice"), action: "face", actor: "jack", direction: "east" },

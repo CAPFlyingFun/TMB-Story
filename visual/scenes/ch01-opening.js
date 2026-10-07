@@ -104,7 +104,7 @@ const REST = [
   says("Are you sure?"),
   says("Good answer."),
   { at: L("Jack smiled despite himself."), action: "state", actor: "jack", state: "awake" },
-  says("I'm on my way,"),
+  says("I'm on my way."),
   // "Jack released the intercom and looked back at the monitor. The TOMBS directory was
   //  still open." / "Who are you?"
   { at: { cue: "ch01-080-intercom-close" }, action: "light", target: "intercom", intensity: 0, duration: 0.3, label: "intercom closed" },
@@ -199,13 +199,13 @@ const REST = [
   { at: L("Jack gave Sarah his chair", { offset: 2.5 }), action: "sit", actor: "sarah" },
   { at: L("Jack gave Sarah his chair", { offset: 2.5 }), action: "face", actor: "sarah", direction: "north" },
   { at: L("Jack gave Sarah his chair", { offset: 2.8 }), action: "move", actor: "sarah", x: SARAH_SEAT[0], y: SARAH_SEAT[1], duration: 2.2, ease: "inOut", label: "Sarah rolls to her console" },
-  { at: L("Jack gave Sarah his chair", { phrase: "and dragged its chair back" }), action: "sit", actor: "jack" },
-  { at: L("Jack gave Sarah his chair", { phrase: "and dragged its chair back" }), action: "move", actor: "jack", x: 860, y: 2050, label: "(out of sight, with the other chair)" },
-  { at: L("Jack gave Sarah his chair", { phrase: "and dragged its chair back" }), action: "face", actor: "jack", direction: "north" },
+  { at: L("He crossed to the next workstation and dragged", { phrase: "and dragged its chair back" }), action: "sit", actor: "jack" },
+  { at: L("He crossed to the next workstation and dragged", { phrase: "and dragged its chair back" }), action: "move", actor: "jack", x: 860, y: 2050, label: "(out of sight, with the other chair)" },
+  { at: L("He crossed to the next workstation and dragged", { phrase: "and dragged its chair back" }), action: "face", actor: "jack", direction: "north" },
   // ...and comes back seated, rolling straight up the aisle from past the lens (within 2
   // degrees of straight up) and shrinking to his screen.
-  { at: L("Jack gave Sarah his chair", { phrase: "wheels squeaking" }), action: "opacity", target: "jack", to: 1, duration: 0.5, ease: "out" },
-  { at: L("Jack gave Sarah his chair", { phrase: "wheels squeaking" }), action: "move", actor: "jack", x: JACK_SEAT[0], y: JACK_SEAT[1], duration: 3.2, ease: "inOut", label: "Jack rolls the other chair back" },
+  { at: L("He crossed to the next workstation and dragged", { phrase: "wheels squeaking" }), action: "opacity", target: "jack", to: 1, duration: 0.5, ease: "out" },
+  { at: L("He crossed to the next workstation and dragged", { phrase: "wheels squeaking" }), action: "move", actor: "jack", x: JACK_SEAT[0], y: JACK_SEAT[1], duration: 3.2, ease: "inOut", label: "Jack rolls the other chair back" },
   { at: L("Jack gave Sarah his chair", { edge: "end", offset: -0.4 }), action: "face", actor: "jack", direction: "northeast" },
   { at: L("Jack gave Sarah his chair", { edge: "end", offset: -0.4 }), action: "state", actor: "jack", state: "leaning" },
 
@@ -221,10 +221,10 @@ const REST = [
   { at: L("Jack shook his head."), action: "camera", shot: "pair", duration: 2.2, ease: "inOut" },
   { at: L("Jack shook his head."), action: "jolt", actor: "jack", amount: 0.2, duration: 0.8 },
   // "Jack pulled up the TOMBS directory again, tracing back through what had changed."
-  { at: L("Jack pulled up the TOMBS directory again"), action: "screen", target: J, state: "directory", text: L("Tombs project.") },
-  { at: L("Jack pulled up the TOMBS directory again"), action: "camera", shot: "insert", duration: 0 },
-  { at: L("These are clean,"), action: "screen", target: S, state: "history", params: { clean: true } },
-  { at: L("These are clean,"), action: "camera", shot: "pair", duration: 0 },
+  { at: L("He pulled up the TOMBS directory again"), action: "screen", target: J, state: "directory", text: L("Tombs project.") },
+  { at: L("He pulled up the TOMBS directory again"), action: "camera", shot: "insert", duration: 0 },
+  { at: L("These are clean."), action: "screen", target: S, state: "history", params: { clean: true } },
+  { at: L("These are clean."), action: "camera", shot: "pair", duration: 0 },
   { at: L("Jack pointed at his own screen."), action: "jolt", actor: "jack", amount: 0.25, duration: 0.5 },
   { at: L("Jack nodded.", { nth: 1 }), action: "jolt", actor: "jack", amount: 0.25, duration: 0.5 },
   { at: L("Sarah looked sideways at him."), action: "face", actor: "sarah", direction: "northwest" },
@@ -242,8 +242,8 @@ const REST = [
   //  briefly against her stomach, then returned to typing."
   { at: L("Lately the baby"), action: "camera", shot: "onSarah", duration: 3.5, ease: "inOut" },
   { at: L("Sarah rested a hand briefly"), action: "state", actor: "sarah", state: "still" },
-  { at: L("Sarah rested a hand briefly", { phrase: "then returned to typing" }), action: "face", actor: "sarah", direction: "north" },
-  { at: L("Sarah rested a hand briefly", { phrase: "then returned to typing" }), action: "state", actor: "sarah", state: "leaning" },
+  { at: L("Then she returned to typing."), action: "face", actor: "sarah", direction: "north" },
+  { at: L("Then she returned to typing."), action: "state", actor: "sarah", state: "leaning" },
   { at: L("Jack smiled at the movement"), action: "camera", shot: "pairClose", duration: 3, ease: "inOut" },
   { at: L("Sarah's hands went still."), action: "state", actor: "sarah", state: "still" },
   { at: L("That's what I'm afraid of."), action: "face", actor: "sarah", direction: "west" },

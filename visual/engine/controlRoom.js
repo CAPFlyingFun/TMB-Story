@@ -25,7 +25,7 @@
 //   white     the activation's white light, 0 .. 1
 //   outside   0 the night as it was (hills), 1 the grass
 //   door      the door to the hallway, 0 shut .. 1 open (Chapters 5 to 9)
-//   dawn      Chapter 9's first light: 0 night, 1 deep grey, 2 gold down the blades, 3 morning
+//   dawn      Chapter 10's first light: 0 night, 1 deep grey, 2 gold down the blades, 3 morning
 //   cups      how many forgotten coffee cups stand on the consoles (0 .. 4, Chapters 4 and 7)
 //   case      the equipment case Sarah props her feet on (0/1, Chapter 4)
 //
@@ -199,7 +199,7 @@ export function buildControlRoom() {
   }
   const prim = console_(PRIMARY, "control-main", 0.92, 0.5);
   console_(SECONDARY, "control-second", 0.7, 0.42);
-  // "Four cold cups of coffee sat forgotten along the edge of the console." (Chapter 7)
+  // "Four cold cups of coffee sat forgotten along the edge of the console." (Chapter 8)
   const cupM = new THREE.MeshStandardMaterial({ color: 0xe8e4dc, roughness: 0.6 });
   const coffee = new THREE.MeshStandardMaterial({ color: 0x24140a, roughness: 0.2 });
   const cups = [[-2.3, PRIMARY.z1 - 0.05], [0.15, PRIMARY.z1 - 0.06], [1.2, SECONDARY.z1 - 0.05], [2.6, SECONDARY.z1 - 0.06]].map(([x, z]) => {
@@ -322,7 +322,7 @@ export function buildControlRoom() {
   const asphalt = new THREE.MeshStandardMaterial({ color: 0x15191c, roughness: 0.95 });
   const kerb = new THREE.MeshStandardMaterial({ color: 0x3c4246, roughness: 0.9 });
   const groundM = new THREE.MeshStandardMaterial({ color: 0x0d1410, roughness: 1 });
-  ospan(R.xr + 0.12, 420, -0.05, 0, -240, 240, groundM); // out under the grass, too (Chapter 9: something moves in the stems)
+  ospan(R.xr + 0.12, 420, -0.05, 0, -240, 240, groundM); // out under the grass, too (Chapter 10: something moves in the stems)
   ospan(R.xr + 2.5, R.xr + 10.5, 0, 0.01, -60, 40, asphalt);
   ospan(R.xr + 2.2, R.xr + 2.5, 0, 0.12, -60, 40, kerb);
   ospan(R.xr + 10.5, R.xr + 10.8, 0, 0.12, -60, 40, kerb);
@@ -387,7 +387,7 @@ export function buildControlRoom() {
   const grass = new THREE.Group();
   outside.add(grass);
   const bladeM = new THREE.MeshStandardMaterial({ color: 0x24402a, roughness: 0.85, side: THREE.DoubleSide, emissive: 0x081208, emissiveIntensity: 0.4 });
-  // FIRST LIGHT (Chapter 9): "the first true light of morning reach[ed] the tops of the grass
+  // FIRST LIGHT (Chapter 10): "the first true light of morning reach[ed] the tops of the grass
   // blades ... each one catching the light like a tree catching fire, slow and gold from the
   // top down." A line of gold that comes down each blade from its tip as `gold` rises.
   const goldU = { uGold: { value: 0 }, uGoldColor: { value: new THREE.Color(0xffb44a) } };

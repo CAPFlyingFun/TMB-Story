@@ -120,7 +120,7 @@ Do not establish the system, its owner or its link to Q07 without Joshua's appro
 
 ## 7. Questions the rules leave open (for Joshua, not for a chapter)
 
-These came up while recording the rules. Nothing in Chapters 1 to 6 needs to change
+These came up while recording the rules. Nothing in Chapters 1 to 7 needs to change
 for any of them, but the first chapter that goes beyond the edge will.
 
 - **Where the transition region starts.** Chapter 5 puts full island-scale material

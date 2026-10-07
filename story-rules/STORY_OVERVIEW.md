@@ -2,9 +2,12 @@
 
 Read this every chapter. Canon established by the approved manuscript only.
 
-**Currently at (2026-10-06): Chapters 1 to 6 were approved canon at revision `93ac65a`;
-their 2026-10-06 dialogue-attribution revision is PENDING SCRIPT REVIEW. Chapters 7 to 12
-are pending approval. Audio for 1 to 9 is outdated in 44 lines (decision 0031).**
+**Currently at (2026-10-07): Chapters 1 to 6 were approved canon at revision `93ac65a`;
+their 2026-10-06 dialogue-attribution revision is PENDING SCRIPT REVIEW. On 2026-10-07, at
+Joshua's instruction, his Chapter 6 was split into Chapter 6 (Several Millimeters) and
+Chapter 7 (Someone Knew), and the old Chapters 7 to 12 became 8 to 13 (decision 0033).
+Chapters 8 to 13 are pending approval. Audio for Chapters 1 to 13 is generated and pending
+Joshua's listening review.**
 
 **Author-level rules the characters do not know are in `WORLD_RULES.md`.** The premise
 below is written the way the characters and the reader currently understand it.

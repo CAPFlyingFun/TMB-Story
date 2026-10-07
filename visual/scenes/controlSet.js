@@ -33,8 +33,8 @@ export const SPOT = {
   doorOut: [-1.6, 2.1], // outside it, in the hallway
   hallEast: [2.2, 2.1], // along the hallway, out of sight
   lena: [0.6, -3.7], // Lena at the console, behind Jack's shoulder
-  lenaChair: [-0.45, -4.05], // "Lena pulled over a chair" (Chapter 6)
-  markDoor: [-1.15, 0.55], // "Mark leaned against the doorframe" (Chapter 9)
+  lenaChair: [-0.45, -4.05], // "Lena pulled over a chair" (Chapter 7)
+  markDoor: [-1.15, 0.55], // "Mark leaned against the doorframe" (Chapter 10)
   mark: [0.9, -2.9], // Mark in the room
 };
 

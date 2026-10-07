@@ -21,7 +21,7 @@
 
 ## Ahead
 
-- **Chapters 4 to 6:** the same night, to "PHASE ONE READY" before dawn. Written and
+- **Chapters 4 to 7:** the same night, to "PHASE ONE READY" before dawn. Written and
   canon.
 - **Next:** still overnight, dawn approaching. The story stays in twenty-one ten
   through Sarah giving birth (Joshua, 2026-09-25).

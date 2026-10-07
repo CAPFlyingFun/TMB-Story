@@ -1,4 +1,4 @@
-// Chapter 8, "Three Weeks", the whole chapter over its real audio (7 min). The buried record
+// Chapter 9, "Three Weeks", the whole chapter over its real audio (7 min). The buried record
 // opens: a maintenance tablet, six minutes on the network three weeks ago, at the equipment
 // shed by the north pumping station; the checkout log that will not give a name; Sarah's
 // badge-tracking overlay; a second impact on the eastern array, twelve minutes before the
@@ -7,7 +7,7 @@
 // to swallow a person whole", no crater -- only a blade of grass pressed flat into the dirt
 // -- a bird far off, and Sarah on the radio: "I found the badge."
 //
-// Every `at` is a line or a phrase in audio/manifests/chapter-08.json (`nth` from 0).
+// Every `at` is a line or a phrase in audio/manifests/chapter-09.json (`nth` from 0).
 // The checkout log and the badge are drawn unreadable: the chapter names nobody on them.
 
 import { L, plus, shot3 } from "./metric.js";
@@ -52,10 +52,10 @@ const east = {
 const PATH = { start: [0.4, -4.5], mid: [0.2, -24], jackMarker: [1.1, -44.6], markMarker: [-0.2, -44.0] };
 
 export default {
-  id: "ch08-three-weeks",
-  title: "Chapter 8 · Three Weeks",
-  audio: "../audio/exports/chapter-08-drama.mp3",
-  manifest: "../audio/manifests/chapter-08.json",
+  id: "ch09-three-weeks",
+  title: "Chapter 9 · Three Weeks",
+  audio: "../audio/exports/chapter-09-drama.mp3",
+  manifest: "../audio/manifests/chapter-09.json",
   range: { start: { seg: 0 }, end: { line: "I need you back here first.", edge: "end" } },
   fadeFromBlack: true,
   initialSet: "control",
@@ -66,7 +66,7 @@ export default {
     { at: { seg: 0 }, action: "scene", name: "The record" },
     { at: { seg: 0 }, action: "fade", to: 0, duration: 1.0, ease: "out" },
     { at: { seg: 0 }, action: "camera", shot: "screenMain", duration: 0 },
-    { at: L("Sarah said, reading over his shoulder."), action: "camera", shot: "consoles", duration: 1.6, ease: "inOut" },
+    { at: L("Sarah read over his shoulder."), action: "camera", shot: "consoles", duration: 1.6, ease: "inOut" },
     { at: L("Jack expanded the record."), action: "screen", target: CM, state: "tablet", params: {}, flash: 0.3 },
     { at: L("Jack expanded the record."), action: "gesture", actor: "jack", animation: "type", duration: 2 },
     { at: L("Jack expanded the record."), action: "camera", shot: "screenMain", duration: 1.4, ease: "inOut" },
@@ -143,7 +143,7 @@ export default {
     ...walkM("jack", L("Outside, the air had shifted.", { offset: 1.5 }), PATH.start, PATH.mid, 34, "north", null, 14),
     ...walkM("mark", L("Outside, the air had shifted.", { offset: 1.8 }), [PATH.start[0] - 1.1, PATH.start[1] - 0.6], [PATH.mid[0] - 1.1, PATH.mid[1] - 0.6], 34, "north", null, 14),
     { at: L("Outside, the air had shifted.", { offset: 1.5 }), action: "prop", target: "torchZ", to: -24, duration: 34, ease: "linear" },
-    { at: L("Mark said, following the beam"), action: "camera", shot: "follow1", duration: 6, ease: "slow" },
+    { at: L("Mark followed the beam"), action: "camera", shot: "follow1", duration: 6, ease: "slow" },
     { at: L("Mark didn't respond right away."), action: "camera", shot: "colonnade", duration: 4, ease: "slow" },
     // "They walked in silence for a while ... blades of grass rising on either side of them
     //  like a colonnade with no ceiling. Dew hung from the tips"

@@ -1,11 +1,11 @@
-// Chapter 7, "Phase Two", the whole chapter over its real audio (7 min): the main control room
-// at half past three, straight on from Chapter 6. The southern feed showing nothing, Mark out
+// Chapter 8, "Phase Two", the whole chapter over its real audio (7 min): the main control room
+// at half past three, straight on from Chapter 7. The southern feed showing nothing, Mark out
 // of the door to check the perimeter, the search for "phase" that finds nothing else, Sarah's
 // question -- could it target a person -- Mark by radio (a mark the size of a dinner plate,
 // pressed straight down), Doctor Mercer again, and a narrower search that takes too long and
 // finds one buried record, loading line by line.
 //
-// Every `at` is a line or a phrase in audio/manifests/chapter-07.json (`nth` from 0).
+// Every `at` is a line or a phrase in audio/manifests/chapter-08.json (`nth` from 0).
 // PHASE ONE READY stays on the main console all chapter; the clock on it reads half past
 // three because the chapter says so.
 
@@ -28,10 +28,10 @@ control.actors.lena.facing = "northwest";
 control.actors.mark.facing = "west";
 
 export default {
-  id: "ch07-phase-two",
-  title: "Chapter 7 · Phase Two",
-  audio: "../audio/exports/chapter-07-drama.mp3",
-  manifest: "../audio/manifests/chapter-07.json",
+  id: "ch08-phase-two",
+  title: "Chapter 8 · Phase Two",
+  audio: "../audio/exports/chapter-08-drama.mp3",
+  manifest: "../audio/manifests/chapter-08.json",
   range: { start: { seg: 0 }, end: { line: "On the screen, a new record began to load", edge: "end" } },
   fadeFromBlack: true,
   initialSet: "control",
@@ -73,10 +73,10 @@ export default {
     // the search for "phase": nothing
     { at: L("He typed a search for the word phase"), action: "gesture", actor: "jack", animation: "type", duration: 3 },
     { at: L("He typed a search for the word phase", { phrase: "The system returned nothing" }), action: "screen", target: CM, state: "phase", params: { clock: "03:31", search: "0 RESULTS" } },
-    { at: L("Lena asked, leaning over his shoulder."), action: "stand", actor: "lena" },
-    ...walkM("lena", L("Lena asked, leaning over his shoulder."), LENA_SEAT, [-0.6, -3.55], 1.4, "west", "north", 3),
-    { at: L("Lena asked, leaning over his shoulder."), action: "gesture", actor: "lena", animation: "lean-forward", duration: 4 },
-    { at: L("Lena asked, leaning over his shoulder."), action: "camera", shot: "consoles", duration: 1.6, ease: "inOut" },
+    { at: L("Lena leaned over his shoulder."), action: "stand", actor: "lena" },
+    ...walkM("lena", L("Lena leaned over his shoulder."), LENA_SEAT, [-0.6, -3.55], 1.4, "west", "north", 3),
+    { at: L("Lena leaned over his shoulder."), action: "gesture", actor: "lena", animation: "lean-forward", duration: 4 },
+    { at: L("Lena leaned over his shoulder."), action: "camera", shot: "consoles", duration: 1.6, ease: "inOut" },
     // "Sarah crossed her arms, eyes fixed on the message."
     ...walkM("sarah", L("Sarah crossed her arms"), SPOT.window, [0.3, -3.9], 2.6, "west", "north", 4),
     { at: L("Jack rubbed the back of his neck."), action: "gesture", actor: "jack", animation: "look-down", duration: 1.8 },

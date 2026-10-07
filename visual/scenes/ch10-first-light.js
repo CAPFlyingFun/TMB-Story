@@ -1,4 +1,4 @@
-// Chapter 9, "First Light", the whole chapter over its real audio (7 min): the main control
+// Chapter 10, "First Light", the whole chapter over its real audio (7 min): the main control
 // room as the sky goes from black to grey. The badge -- a retired groundskeeper's, reported
 // lost eight days before; the ticket; "They planned for us finding the trail." Then the
 // window: the first light reaching the tops of the blades, "slow and gold from the top down",
@@ -6,7 +6,7 @@
 // below the grass line something moving through the gold-lit stems and gone. Aiden at the
 // greenhouse, on the facilities channel. The waiting over. Morning.
 //
-// Every `at` is a line or a phrase in audio/manifests/chapter-09.json (`nth` from 0).
+// Every `at` is a line or a phrase in audio/manifests/chapter-10.json (`nth` from 0).
 //
 // THE THING IN THE STEMS is Joshua's jumping spider (TRADDOMIUM release "Jumping Spider Model
 // + Image", 2026-10-01; his call the same day: the black widow "for the legs in the shadows,
@@ -42,10 +42,10 @@ control.actors.lena.facing = "west";
 const W = { jack: SPOT.windowJack, lena: SPOT.windowLena, sarah: [2.85, -1.25] };
 
 export default {
-  id: "ch09-first-light",
-  title: "Chapter 9 · First Light",
-  audio: "../audio/exports/chapter-09-drama.mp3",
-  manifest: "../audio/manifests/chapter-09.json",
+  id: "ch10-first-light",
+  title: "Chapter 10 · First Light",
+  audio: "../audio/exports/chapter-10-drama.mp3",
+  manifest: "../audio/manifests/chapter-10.json",
   range: { start: { seg: 0 }, end: { line: "Outside, the sun cleared the horizon", edge: "end" } },
   fadeFromBlack: true,
   initialSet: "control",
@@ -102,7 +102,7 @@ export default {
     { at: L("Dew clung to individual blades"), action: "camera", shot: "beyond", duration: 0, ease: "inOut" },
     // "That's..." Lena trailed off, standing beside him.
     ...walkM("lena", L("Dew clung to individual blades", { offset: 8 }), [-1.35, -3.55], W.lena, 5.0, "east", "east", 7),
-    { at: L("Lena trailed off"), action: "camera", shot: "atWindow", duration: 1.6, ease: "inOut" },
+    { at: L("She trailed off."), action: "camera", shot: "atWindow", duration: 1.6, ease: "inOut" },
     { at: L("Mark stood in the doorway"), action: "camera", shot: "door", duration: 1.6, ease: "inOut" },
     { at: L("Even the light seemed slower here"), action: "camera", shot: "final", duration: 0, ease: "inOut" },
     { at: L("For a moment, nobody spoke."), action: "camera", shot: "windowGroup", duration: 3, ease: "inOut" },

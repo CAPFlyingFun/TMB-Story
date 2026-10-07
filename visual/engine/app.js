@@ -12,10 +12,11 @@ const SCENES = {
   "ch03-activation": () => import("../scenes/ch03-activation.js"),
   "ch04-calls": () => import("../scenes/ch04-calls.js"),
   "ch05-edge": () => import("../scenes/ch05-edge.js"),
-  "ch06-someone-knew": () => import("../scenes/ch06-someone-knew.js"),
-  "ch07-phase-two": () => import("../scenes/ch07-phase-two.js"),
-  "ch08-three-weeks": () => import("../scenes/ch08-three-weeks.js"),
-  "ch09-first-light": () => import("../scenes/ch09-first-light.js"),
+  "ch06-several-millimeters": () => import("../scenes/ch06-several-millimeters.js"),
+  "ch07-someone-knew": () => import("../scenes/ch07-someone-knew.js"),
+  "ch08-phase-two": () => import("../scenes/ch08-phase-two.js"),
+  "ch09-three-weeks": () => import("../scenes/ch09-three-weeks.js"),
+  "ch10-first-light": () => import("../scenes/ch10-first-light.js"),
 };
 // The chapter list on the start menu. Only a chapter with a scene can be watched; the rest
 // say so rather than looking playable.
@@ -25,10 +26,11 @@ const CHAPTERS = [
   { n: 3, title: "The Activation", scene: "ch03-activation" },
   { n: 4, title: "The First Calls", scene: "ch04-calls" },
   { n: 5, title: "The Edge", scene: "ch05-edge" },
-  { n: 6, title: "Someone Knew", scene: "ch06-someone-knew" },
-  { n: 7, title: "Phase Two", scene: "ch07-phase-two" },
-  { n: 8, title: "Three Weeks", scene: "ch08-three-weeks" },
-  { n: 9, title: "First Light", scene: "ch09-first-light" },
+  { n: 6, title: "Several Millimeters", scene: "ch06-several-millimeters" },
+  { n: 7, title: "Someone Knew", scene: "ch07-someone-knew" },
+  { n: 8, title: "Phase Two", scene: "ch08-phase-two" },
+  { n: 9, title: "Three Weeks", scene: "ch09-three-weeks" },
+  { n: 10, title: "First Light", scene: "ch10-first-light" },
 ];
 
 const q = new URLSearchParams(location.search);

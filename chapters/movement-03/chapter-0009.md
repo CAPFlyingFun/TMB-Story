@@ -1,157 +1,198 @@
 ---
 chapter: 9
-title: "First Light"
+title: "Three Weeks"
 movement: 3
 pov: Jack
-word_count: 1176
+word_count: 1143
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
-  opens: "Back at the main control room as the sky turns from black to gray"
-  elapsed: "dawn, until the sun clears the horizon"
-objective: "Find out whose badge it was, and decide what to tell five hundred people who are about to find out on their own."
-locations: ["The main control room", "The greenhouse (remote, by call)"]
-characters: [Jack, Sarah, "Lena Ortiz", "Mark Jones, perimeter security", "Aiden (remote, by wrist terminal)"]
+  opens: "Moments later, the main control room, as the buried record opens"
+  elapsed: "the last hour of darkness"
+objective: "Trace who planted the boundary file, and find what made the impacts."
+locations: ["The main control room", "The eastern sensor marker, outside the control room"]
+characters: [Jack, Sarah, "Lena Ortiz", "Mark Jones, perimeter security"]
 status_changes:
-  - "The badge belonged to a groundskeeper who retired two years ago, and it was reported lost eight days before the incident"
-  - "Whoever did this planned for the trail being found"
-  - "The first light of morning shows the grass beyond the boundary, each blade taller than the control room, and dew beads the size of boulders"
-  - "Something moves through the grass below the line of the perimeter lights and vanishes; nobody mentions it"
-  - "Aiden, at the greenhouse, calls the facilities channel: a spider the size of a delivery truck is outside and not moving"
-  - "Sarah ends the wait for department heads: people are already finding out"
-  - "Mark starts the department heads with medical; Lena builds a camera briefing in twenty minutes"
+  - "The record is a maintenance tablet that was on the network for six minutes three weeks ago, the same day as the boundary file, while Jack and Sarah were at the community center"
+  - "The tablet was at the equipment shed by the north pumping station, inside the boundary"
+  - "Its checkout log gives no name; Sarah starts a badge-location search and Mark offers the door camera footage"
+  - "A second, smaller impact registered on the eastern sensor array twelve minutes before the first"
+  - "Jack and Mark walk out to the eastern marker: no crater, but a blade of grass pressed flat into the dirt; Jack photographs it"
+  - "Sarah finds the badge and will not say whose over the radio"
 new_canon:
-  - "Aiden works at the greenhouse"
-  - "The settlement is about five hundred people"
-  - "The plan stops being when to tell people and becomes what to tell them"
-playable_beat_flow: ["read the badge record", "open the lost-badge ticket", "pull the retired groundskeeper's file", "watch the dawn from the window", "answer the facilities channel", "send Mark to the department heads", "pull every camera for the briefing"]
-ending_type: turning point
+  - "The boundary file was planted from a settlement maintenance tablet"
+  - "Two impacts, at different places, possibly the same source moving: the distance covered in under fifteen minutes"
+  - "Outside, grass blades rise around them like a colonnade, and dew beads are large enough to swallow a person"
+playable_beat_flow: ["open the buried record", "cross-reference the device on the facilities map", "read the tablet checkout log", "pull the badge-tracking overlay", "pull every perimeter sensor from the last hour", "walk to the eastern sensor marker", "photograph the pressed blade of grass", "take Sarah's call"]
+ending_type: cliffhanger
 review_status: in-review
 audio_status: pending-review
 approved_on: ""
 last_approved_revision: ""   # never approved; pending first script review
-source: "Joshua's Word manuscript, ba62e566-07-09_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-10-01. For the audio, following Decision 0024 as applied to his two earlier documents: 4 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first."
+source: "Joshua's Word manuscript, ba62e566-07-09_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-10-01. For the audio, following Decision 0024 as applied to his two earlier documents: 9 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first."
 ---
-# Chapter 9: First Light
+# Chapter 9: Three Weeks
 
-Jack and Mark made it back to the control room just as the sky outside had gone from black to a deep, uncertain gray.
+The file opened onto a short list of coordinates and a single line of metadata: a device signature Jack didn't recognize.
 
-Sarah was waiting, arms folded, her expression unreadable. "The badge belongs to a groundskeeper. Retired two years ago."
+Sarah read over his shoulder. "That's not a TOMBS component."
 
-Jack frowned. "Retired?"
+"No."
 
-"And the badge itself was reported lost eight days before the incident. Facilities has a ticket for it and everything."
+"Then what is it?"
 
-Jack pulled the ticket up himself, as though seeing it wouldn't be enough until his own eyes had confirmed it. The complaint was three lines long, filed by a woman he'd never met, closed out with a standard replacement order the same week.
+Jack expanded the record. "A maintenance tablet. Logged into the network for six minutes, three weeks ago. Same day as the boundary file."
 
-Lena groaned from her console. "So it's not a person. It's a decoy."
+Lena crossed her arms. "The same day you and Sarah were at the community center."
 
-"Or somebody found it and never turned it back in."
+"Yes."
 
-Sarah shook her head slowly. "Either way, it doesn't give us a name. It gives us proof that whoever's behind this thought two steps further ahead than we did."
+"So somebody used a maintenance tablet to plant a boundary file while wearing your credentials."
 
-Lena pulled up the retired groundskeeper's file anyway, as if there might be something useful buried in a decade of routine maintenance requests. There wasn't. Just years of lawn schedules and equipment orders, ending eight days before someone else picked his lost badge up off the ground and put it to a very different use.
+"That's what it looks like."
 
-Mark leaned against the doorframe, arms crossed. "So we're back to nothing."
+Sarah frowned at the coordinates. "Where was the tablet?"
 
-"We're back to nothing with better questions. That's not the same as nothing."
+Jack cross-referenced the device ID against the facilities map. A red marker appeared near the edge of the developed zone.
 
-"Feels close enough right now."
+"The equipment shed by the north pumping station."
 
-Nobody argued with him either.
+Mark straightened. "That's inside the boundary."
 
-Jack looked at the frozen badge record, then at the still-glowing message on the other screen, and felt the two pieces settle into the same shape of dread.
+"I know."
 
-"They didn't just plan the boundary. They planned for us finding the trail."
+"Somebody who works here did this."
 
-Nobody had an answer to that.
+Nobody said anything for a moment.
 
-Jack realized, distantly, that he couldn't remember the last time he'd eaten. Or sat down. The adrenaline that had carried him since the first alarm had thinned into something closer to static, the kind of tiredness that stopped feeling like tiredness and started feeling like a low hum underneath everything else.
+Sarah's voice stayed steady, but quiet. "Or somebody used a tablet that belongs here. That's not the same thing."
 
-Sarah touched his arm. "You're still standing. That's something."
+"It's close enough to keep me up at night."
 
-"Barely."
+Jack pulled the tablet's checkout log. Dozens of names scrolled past. Anyone with basic facilities access could have signed one out that week. No single entry stood apart.
 
-"Barely counts."
+"This isn't going to give us a name."
 
-"Does it?"
+Lena scrolled through the list herself, slower. "Half these people I know. The other half I've waved at in the hallway and never learned their name."
 
-"Tonight it does."
+"That's not helpful."
 
-Outside, the gray had started pulling apart into color. Jack crossed to the window without deciding to and watched the first true light of morning reach the tops of the grass blades beyond the boundary, each one taller than the control room itself, each one catching the light like a tree catching fire, slow and gold from the top down.
+"I know. I'm hoping it becomes helpful if I keep looking."
 
-Dew clung to individual blades in beads the size of boulders, each one glowing faintly as the light passed through it. Somewhere out past the tree line, birdsong started up, layered and enormous, utterly indifferent to the five hundred people rebuilding their understanding of the word small.
+Sarah moved to the second console and pulled up the personnel access system. "Then we need something that will. If someone used that tablet without checking it out properly, there might be a badge location ping from whoever was closest at the time."
 
-Lena stood beside him. "That's..." She trailed off.
+"You can do that?"
 
-"Yeah."
+"I can try."
 
-Mark stood in the doorway, radio still in hand, saying nothing at all. It was the first time all night Jack had seen him stop moving.
+Sarah pulled up a badge-tracking overlay across the facility map. "Every door in this building logs an entry. If someone walked in without using the tablet's own credentials, their badge still would have opened something along the way."
 
-Even the light seemed slower here than it should have been, spilling down through the grass like something poured rather than something arriving. Jack found himself thinking, absurdly, that it was the kind of view someone would pay to see on vacation, if it weren't currently their entire backyard.
+"Unless they didn't need a badge."
 
-For a moment, nobody spoke. The world outside the glass had never looked more beautiful, and it had never looked less like home.
+"Everyone needs a badge for this building."
 
-Sarah joined them at the window. She didn't say anything about grass or scale or the size of what they were looking at. She just slid her hand into Jack's and held on.
+"Everyone who's supposed to be here."
 
-Somewhere below the grass line, out past the reach of the perimeter lights, something moved through the gold-lit stems and vanished again before any of them could get a clean look at it. Nobody mentioned it. Jack wasn't sure if that was because nobody else had seen it, or because everyone in the room had privately decided they'd had enough discoveries for one night.
+Sarah looked up at him. Neither of them said anything else.
 
-The stillness broke when Jack's wrist terminal chirped, a different tone than before, not the medical center this time, but the general facilities channel.
+Mark cleared his throat. "For what it's worth, the door logs would still catch a tailgater. Somebody walking in right behind a badge that already opened it."
 
-He answered without looking away from the window. "Bennett."
+"Would they?"
 
-A man's voice, breathless. "This is Aiden, over at the greenhouse. I don't, I need someone to tell me I'm not losing my mind, because there's a spider out here the size of a delivery truck and it is not moving, and I really need somebody to explain that to me right now."
+"Camera catches the door, not just the badge reader. I can pull that footage too, if it helps."
 
-Sarah's hand tightened around Jack's.
+"It might. Add it to the list."
 
-Lena's hands froze over the keyboard.
+Lena didn't look up from the checkout names. "The list is getting long."
 
-Mark finally moved, pushing off the doorframe like the sound had physically shoved him.
+"The night's getting long too. They're keeping pace."
 
-Jack keyed the channel, choosing his next words carefully. "Aiden, stay where you are. Don't approach it. We're on our way."
+Jack watched her work for a moment before returning to his own screen. The maintenance record wasn't the only thing bothering him. He opened the boundary definition again and looked past the false calm of the settlement's edge, toward the dark shape of the forest beyond it.
 
-"On your way to do what, exactly?"
+Something out there had a footprint the size of a dinner plate and no trail.
 
-"To explain. Just stay put."
+He kept coming back to that. A person leaving no trail made sense. Careful people didn't leave trails. But something with legs, heavy enough to press a dinner-plate mark into the ground, should have left dozens.
 
-"That's not an answer!"
+Unless it hadn't walked there at all.
 
-"I know. It's the best one I've got right now."
+He turned to Lena. "Pull up every perimeter sensor from the last hour. Not just south."
 
-Aiden didn't respond to that. Jack could hear him breathing on the other end, fast and shallow, the sound of someone trying to decide whether to believe what he was looking at.
+"Looking for what?"
 
-He ended the call and looked at Sarah.
+"Anything that moved and shouldn't have."
 
-"That's it. We can't wait for department heads anymore. People are already finding out on their own."
+She worked in silence for a minute before letting out a slow breath. "You're going to want to see this."
 
-It was almost funny, in the darkest possible way. They'd spent the whole night arguing about when to tell people. The island had just made the decision for them.
+Jack crossed to her console. A second impact had registered on the eastern sensor array, twelve minutes before the one that shook the window. Smaller. Further out.
 
-Jack nodded slowly, watching the light climb higher over the transformed settlement, gold fading into full morning blue. Somewhere out there, five hundred people were about to wake into a world that no longer matched the one they'd fallen asleep in.
+Sarah didn't look up from her own screen. "Two impacts. Different locations."
 
-"Then we stop trying to control when they find out, and start deciding what we tell them once they do."
+"Or the same thing, moving."
 
-It wasn't a plan. Not really. But it was the first thing all night that had felt like moving forward instead of just reacting to whatever happened next.
+Mark shifted his weight. "Moving how fast?"
 
-Mark reached for his radio. "I'll get the department heads moving."
+Jack did the math out loud, more for himself than anyone else. "If those are the same source, it covered that distance in under fifteen minutes."
 
-"Start with medical. Mercer's earned that much."
+The room absorbed that in silence.
 
-"Already planned on it."
+"I'm going back out."
 
-Lena was already typing. "I'll pull every camera we've got. If people are going to see this, they should see it clearly instead of piecing it together out of panic."
+"Not alone."
 
-"How long to put together something people can actually understand?"
+"I wasn't planning to be alone. I was planning to take you."
 
-"Depends how much you want to tell them the truth versus how much you want them to stay calm."
+Jack looked at Sarah. She didn't argue, which somehow worried him more than if she had.
 
-"Both. In that order."
+"Ten minutes. Cameras stay up the whole time, and you check in every two."
 
-"Then twenty minutes. Maybe less."
+"Understood."
 
-Jack looked around the control room, at the cold coffee and the frozen frame of the shape in the grass and the three words still glowing at the edge of the display, and understood that nothing about the next few hours was going to be simple.
+Jack grabbed a handheld light from the equipment rack and followed Mark toward the door. He paused at the threshold and looked back at Sarah.
 
-Sarah looked at Jack. "Ready?"
+"Find that badge ping."
 
-He wasn't. He said it anyway. "Yeah."
+"Go."
 
-Outside, the sun cleared the horizon, and the first full day of the smallest version of their world began.
+The door sealed behind them with a soft hydraulic hiss that sounded, tonight, uncomfortably final.
+
+Outside, the air had shifted. Not warmer exactly, but less still. Somewhere above the tree line, the darkest part of the sky had started to soften at its edges.
+
+Mark followed the beam of Jack's light along the tree line. "Dawn's not far."
+
+"I noticed."
+
+"That mean anything to you? Scientifically?"
+
+Jack kept walking. "It means we're running out of dark to hide in."
+
+Mark didn't respond right away. When he did, his voice had lost its usual dry edge. "You scared, Jack?"
+
+"Yes."
+
+"Good. Means you're paying attention."
+
+They walked in silence for a while after that, the beam of Jack's light sweeping low across a ground that felt endless in a way it never used to. What had been a short walk to the maintenance shed a week ago now stretched into a real hike, blades of grass rising on either side of them like a colonnade with no ceiling. Dew hung from the tips in slow, trembling beads, each one large enough to swallow a person whole if it ever let go.
+
+They reached the eastern sensor marker without incident. The ground here was undisturbed. No crater. No mark. Nothing to suggest an impact at all.
+
+"Sensor error?"
+
+Jack knelt and examined the soil anyway. Then he saw it: a single blade of grass, bent flat and pressed into the dirt, far heavier than wind alone could manage.
+
+Jack's voice was quiet. "No. Just a lighter touch than the other one."
+
+Mark crouched beside him. "Lighter how?"
+
+"I don't know yet."
+
+He photographed the mark from three angles before standing, knees protesting after a night with no sleep behind them. Somewhere close by, something rustled through the grass and went still. Neither of them moved until the sound didn't repeat.
+
+Overhead, a bird called somewhere beyond the true boundary of the island, ordinary and distant, unconcerned with anything happening on a scale it would never register. Jack looked up at the lightening sky and felt smaller than the number on his screen had already told him he was.
+
+His radio crackled. Sarah's voice, tight with urgency. "Jack. I found the badge."
+
+"Whose?"
+
+A pause, longer than he liked.
+
+"I need you back here first."

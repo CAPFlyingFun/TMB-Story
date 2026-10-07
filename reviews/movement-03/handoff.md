@@ -1,5 +1,7 @@
 # Movement 3 (Chapters 7 to 9) — import handoff, 2026-10-01
 
+> **Renumbered 2026-10-07 (decision 0033).** This record keeps the chapter numbers it was written with. The original Chapter 6 has since been split into Chapter 6 (Several Millimeters) and Chapter 7 (Someone Knew), so the old Chapters 7 to 12 named below are now Chapters 8 to 13.
+
 Joshua's manuscript, not a draft: imported verbatim from
 `ba62e566-07-09_Chapters - TRADDOMIUM Micro Battle.docx` ("Here is Chapter's 7-9 to add
 to story"). One report for the three, because nothing here was written by us; the

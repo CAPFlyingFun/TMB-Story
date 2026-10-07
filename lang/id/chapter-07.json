@@ -1,686 +1,1064 @@
 {
  "chapter": 7,
  "lang": "id",
- "title_en": "Phase Two",
- "title": "Fase Dua",
+ "title_en": "Someone Knew",
+ "title": "Ada yang Tahu",
  "segments": {
   "0": {
    "who": "Narrator",
    "p": 0,
-   "en": "The window had stopped trembling, but nobody in the room had moved.",
-   "id": "Jendela itu sudah berhenti bergetar, tetapi belum ada seorang pun di ruangan yang bergerak."
+   "en": "Sarah broke the silence.",
+   "id": "Sarah memecah keheningan."
   },
   "1": {
-   "who": "Narrator",
-   "p": 1,
-   "en": "The clock in the corner of the display read half past three. It felt like it should have said something closer to dawn by now, though the sky outside still showed nothing but black.",
-   "id": "Jam di sudut layar menunjukkan pukul setengah empat. Rasanya jam itu mestinya sudah menunjukkan waktu yang lebih dekat ke fajar, meski langit di luar masih hitam pekat."
+   "who": "Sarah Bennett",
+   "p": 0,
+   "en": "Dawn's coming.",
+   "id": "Sebentar lagi fajar."
   },
   "2": {
-   "who": "Narrator",
-   "p": 2,
-   "en": "Four cold cups of coffee sat forgotten along the edge of the console. Nobody had touched them in over an hour.",
-   "id": "Empat cangkir kopi dingin terlupakan di sepanjang tepi konsol. Sudah lebih dari sejam tak ada yang menyentuhnya."
+   "who": "Jack Bennett",
+   "p": 1,
+   "en": "I know.",
+   "id": "Aku tahu."
   },
   "3": {
-   "who": "Narrator",
-   "p": 3,
-   "en": "Lena was the first to find her voice.",
-   "id": "Lena yang pertama kali bersuara."
+   "who": "Sarah Bennett",
+   "p": 2,
+   "en": "We can't keep this to Lena, security, and one very unimpressed doctor forever.",
+   "id": "Kita tidak bisa selamanya menyimpan ini hanya untuk Lena, petugas keamanan, dan satu dokter yang jelas-jelas tidak terkesan."
   },
   "4": {
-   "who": "Lena Ortiz",
+   "who": "Narrator",
    "p": 3,
-   "en": "Okay. That felt closer than the last one.",
-   "id": "Oke. Yang barusan terasa lebih dekat daripada yang sebelumnya."
+   "en": "Jack rubbed his eyes.",
+   "id": "Jack mengusap matanya."
   },
   "5": {
-   "who": "Narrator",
-   "p": 4,
-   "en": "Jack's hands were already moving across the console, pulling the southern camera feed onto the main display before he'd fully decided to do it. Grass swayed at the edge of the frame. Nothing else.",
-   "id": "Tangan Jack sudah bergerak di atas konsol, menarik tayangan kamera selatan ke layar utama sebelum ia benar-benar memutuskan untuk melakukannya. Rumput bergoyang di tepi bingkai. Selain itu, tidak ada apa-apa."
+   "who": "Jack Bennett",
+   "p": 3,
+   "en": "We just need a little more before we lose the choice.",
+   "id": "Kita cuma butuh sedikit lagi sebelum kita kehilangan pilihan."
   },
   "6": {
-   "who": "Jack Bennett",
-   "p": 5,
-   "en": "I don't see anything.",
-   "id": "Aku tidak melihat apa-apa."
+   "who": "Narrator",
+   "p": 4,
+   "en": "Lena, still watching the frozen frame of the shape in the grass, didn't look up.",
+   "id": "Lena, yang masih memandangi bingkai beku sosok di rerumputan itu, tidak mendongak."
   },
   "7": {
-   "who": "Narrator",
-   "p": 6,
-   "en": "Sarah stepped closer to the glass, scanning the dark tree line beyond the perimeter lights.",
-   "id": "Sarah melangkah mendekati kaca, menyapukan pandangan ke deretan pepohonan gelap di balik lampu-lampu perimeter."
+   "who": "Lena Ortiz",
+   "p": 4,
+   "en": "For what it's worth, I'd rather know what that is before we wake everyone up to look at it.",
+   "id": "Kalau boleh berpendapat, aku lebih suka tahu itu apa sebelum kita membangunkan semua orang untuk melihatnya."
   },
   "8": {
-   "who": "Sarah Bennett",
-   "p": 6,
-   "en": "Then what hit the ground?",
-   "id": "Lalu apa yang menghantam tanah?"
+   "who": "Jack Bennett",
+   "p": 5,
+   "en": "Same.",
+   "id": "Sama."
   },
   "9": {
-   "who": "Jack Bennett",
-   "p": 7,
-   "en": "I don't know.",
-   "id": "Aku tidak tahu."
+   "who": "Narrator",
+   "p": 6,
+   "en": "He turned back to the console.",
+   "id": "Jack kembali ke konsol."
   },
   "10": {
    "who": "Narrator",
-   "p": 8,
-   "en": "Mark was already moving toward the door.",
-   "id": "Mark sudah bergerak ke arah pintu."
+   "p": 7,
+   "en": "Lena stared at the scale factor.",
+   "id": "Lena memandangi faktor skala itu."
   },
   "11": {
-   "who": "Settlement security",
-   "p": 8,
-   "en": "I'll check the perimeter.",
-   "id": "Aku periksa perimeter."
+   "who": "Lena Ortiz",
+   "p": 7,
+   "en": "Could the system have picked that number randomly?",
+   "id": "Mungkinkah sistemnya memilih angka itu secara acak?"
   },
   "12": {
-   "who": "Narrator",
-   "p": 9,
-   "en": "Sarah's head snapped toward him.",
-   "id": "Sarah langsung menoleh ke arahnya."
+   "who": "Jack Bennett",
+   "p": 8,
+   "en": "No.",
+   "id": "Tidak."
   },
   "13": {
-   "who": "Sarah Bennett",
+   "who": "Lena Ortiz",
    "p": 9,
-   "en": "Not alone.",
-   "id": "Jangan sendirian."
+   "en": "Could it have been an accident?",
+   "id": "Mungkinkah itu tidak disengaja?"
   },
   "14": {
    "who": "Narrator",
    "p": 10,
-   "en": "Mark didn't slow down.",
-   "id": "Mark tidak memperlambat langkahnya."
+   "en": "Jack hesitated.",
+   "id": "Jack ragu."
   },
   "15": {
-   "who": "Settlement security",
-   "p": 10,
-   "en": "Wasn't planning to be.",
-   "id": "Memang tidak berniat sendirian."
-  },
-  "16": {
    "who": "Narrator",
    "p": 11,
-   "en": "The door slid shut behind him before she could argue further.",
-   "id": "Pintu bergeser menutup di belakangnya sebelum Sarah sempat membantah lagi."
+   "en": "Sarah chose her words more carefully.",
+   "id": "Sarah memilih kata-katanya dengan lebih hati-hati."
+  },
+  "16": {
+   "who": "Sarah Bennett",
+   "p": 11,
+   "en": "The activation itself could have resulted from corrupted commands. But a specific target scale is different.",
+   "id": "Aktivasinya sendiri bisa saja akibat perintah yang rusak. Tapi skala target yang spesifik, itu lain cerita."
   },
   "17": {
    "who": "Narrator",
    "p": 12,
-   "en": "Jack stared at the space where Mark had been standing, then back at the three words still glowing on the main screen.",
-   "id": "Jack menatap tempat Mark tadi berdiri, lalu kembali ke tiga kata yang masih menyala di layar utama."
+   "en": "Jack opened the boundary definition.",
+   "id": "Jack membuka definisi batas."
   },
   "18": {
    "who": "Narrator",
    "p": 13,
-   "en": "PHASE ONE READY.",
-   "id": "FASE SATU SIAP."
+   "en": "The red outline appeared around the developed settlement again.",
+   "id": "Garis merah itu muncul lagi, mengelilingi permukiman yang terbangun."
   },
   "19": {
    "who": "Narrator",
    "p": 14,
-   "en": "He typed a search for the word phase across the rest of the diagnostic snapshot. The system returned nothing.",
-   "id": "Ia mengetikkan pencarian kata fase di seluruh sisa cuplikan diagnostik. Sistem tidak menemukan apa pun."
+   "en": "Research buildings.",
+   "id": "Gedung-gedung riset."
   },
   "20": {
    "who": "Narrator",
    "p": 15,
-   "en": "Lena leaned over his shoulder.",
-   "id": "Lena mencondongkan badan dari balik bahunya."
+   "en": "Homes.",
+   "id": "Rumah-rumah."
   },
   "21": {
-   "who": "Lena Ortiz",
-   "p": 15,
-   "en": "Nothing else?",
-   "id": "Tidak ada yang lain?"
+   "who": "Narrator",
+   "p": 16,
+   "en": "Medical.",
+   "id": "Fasilitas medis."
   },
   "22": {
-   "who": "Jack Bennett",
-   "p": 16,
-   "en": "Not yet.",
-   "id": "Belum."
+   "who": "Narrator",
+   "p": 17,
+   "en": "Utilities.",
+   "id": "Utilitas."
   },
   "23": {
-   "who": "Lena Ortiz",
-   "p": 17,
-   "en": "That's not the reassuring answer I was hoping for.",
-   "id": "Itu bukan jawaban menenangkan yang kuharapkan."
+   "who": "Narrator",
+   "p": 18,
+   "en": "Workshops.",
+   "id": "Bengkel-bengkel."
   },
   "24": {
    "who": "Narrator",
-   "p": 18,
-   "en": "Sarah crossed her arms, eyes fixed on the message.",
-   "id": "Sarah bersedekap, matanya terpaku pada pesan itu."
+   "p": 19,
+   "en": "Roads.",
+   "id": "Jalan-jalan."
   },
   "25": {
-   "who": "Sarah Bennett",
-   "p": 18,
-   "en": "It doesn't mean there isn't a phase two. It only means whoever planted this only labeled the one file they thought nobody would find.",
-   "id": "Itu bukan berarti tidak ada fase dua. Artinya cuma, siapa pun yang menyelipkan ini hanya memberi label pada satu file yang mereka kira tidak akan ditemukan siapa pun."
+   "who": "Narrator",
+   "p": 20,
+   "en": "Almost nothing beyond them.",
+   "id": "Nyaris tidak ada apa-apa di luarnya."
   },
   "26": {
-   "who": "Lena Ortiz",
-   "p": 19,
-   "en": "Even more reassuring.",
-   "id": "Makin menenangkan saja."
+   "who": "Narrator",
+   "p": 21,
+   "en": "He overlaid the island development survey beneath it.",
+   "id": "Ia menampilkan survei pembangunan pulau sebagai lapisan di bawahnya."
   },
   "27": {
    "who": "Narrator",
-   "p": 20,
-   "en": "Jack rubbed the back of his neck.",
-   "id": "Jack mengusap tengkuknya."
+   "p": 22,
+   "en": "The match was nearly exact.",
+   "id": "Keduanya nyaris sama persis."
   },
   "28": {
-   "who": "Jack Bennett",
-   "p": 20,
-   "en": "If phase one was the boundary, choosing what to shrink and how much, what's left for a phase two?",
-   "id": "Kalau fase satu adalah batas itu, yang memilih apa yang dikecilkan dan seberapa kecil, apa lagi yang tersisa untuk fase dua?"
+   "who": "Narrator",
+   "p": 23,
+   "en": "Sarah folded her arms.",
+   "id": "Sarah melipat tangan."
   },
   "29": {
-   "who": "Narrator",
-   "p": 21,
-   "en": "Nobody answered right away.",
-   "id": "Tak ada yang langsung menjawab."
+   "who": "Sarah Bennett",
+   "p": 23,
+   "en": "The boundary wasn't centered on TOMBS.",
+   "id": "Batas itu tidak berpusat pada TOMBS."
   },
   "30": {
-   "who": "Narrator",
-   "p": 22,
-   "en": "Sarah spoke carefully, working through it out loud.",
-   "id": "Sarah berbicara hati-hati, menguraikannya sambil berpikir keras."
+   "who": "Jack Bennett",
+   "p": 24,
+   "en": "No.",
+   "id": "Tidak."
   },
   "31": {
    "who": "Sarah Bennett",
-   "p": 22,
-   "en": "Phase one already happened. It didn't need anything running afterward to keep working. The boundary's already set.",
-   "id": "Fase satu sudah terjadi. Tidak perlu ada apa pun yang terus berjalan sesudahnya supaya tetap bekerja. Batasnya sudah ditetapkan."
+   "p": 25,
+   "en": "It wasn't a radius.",
+   "id": "Juga tidak mengikuti radius."
   },
   "32": {
    "who": "Jack Bennett",
-   "p": 23,
-   "en": "So it's not a location. It's something that still has to trigger.",
-   "id": "Jadi itu bukan sebuah lokasi. Itu sesuatu yang masih harus terpicu."
+   "p": 26,
+   "en": "No.",
+   "id": "Memang tidak."
   },
   "33": {
-   "who": "Sarah Bennett",
-   "p": 24,
-   "en": "Or something waiting on a timer.",
-   "id": "Atau sesuatu yang tinggal menunggu pengatur waktunya."
+   "who": "Narrator",
+   "p": 27,
+   "en": "Lena studied the irregular shape.",
+   "id": "Lena mengamati bentuk yang tidak beraturan itu."
   },
   "34": {
-   "who": "Narrator",
-   "p": 25,
-   "en": "The room went quiet long enough that Jack could hear the console fans working underneath the desk.",
-   "id": "Ruangan itu hening cukup lama sampai Jack bisa mendengar kipas konsol berdengung di bawah meja."
+   "who": "Lena Ortiz",
+   "p": 27,
+   "en": "It follows the town.",
+   "id": "Batasnya mengikuti kota."
   },
   "35": {
    "who": "Narrator",
-   "p": 26,
-   "en": "Jack broke the silence first.",
-   "id": "Jack yang pertama memecah keheningan."
+   "p": 28,
+   "en": "Jack nodded.",
+   "id": "Jack mengangguk."
   },
   "36": {
-   "who": "Jack Bennett",
-   "p": 26,
-   "en": "A trigger needs two things. A condition, and a target.",
-   "id": "Pemicu butuh dua hal. Sebuah kondisi, dan sebuah sasaran."
+   "who": "Narrator",
+   "p": 29,
+   "en": "The room fell quiet.",
+   "id": "Ruangan menjadi hening."
   },
   "37": {
-   "who": "Sarah Bennett",
-   "p": 27,
-   "en": "The condition could be anything. Time. A command. Someone doing something specific without realizing it.",
-   "id": "Kondisinya bisa apa saja. Waktu. Sebuah perintah. Seseorang yang melakukan sesuatu yang spesifik tanpa menyadarinya."
+   "who": "Narrator",
+   "p": 30,
+   "en": "The boundary curved around a maintenance yard on the north side, extended outward to include a small pumping station, then pulled inward to avoid a stretch of undeveloped woodland.",
+   "id": "Batas itu melengkung mengitari lahan pemeliharaan di sisi utara, menjorok keluar untuk mencakup sebuah stasiun pompa kecil, lalu menarik ke dalam untuk menghindari sepetak hutan yang belum terbangun."
   },
   "38": {
-   "who": "Jack Bennett",
-   "p": 28,
-   "en": "That's not comforting.",
-   "id": "Itu tidak menenangkan."
+   "who": "Narrator",
+   "p": 31,
+   "en": "That was not how an uncontrolled field expanded.",
+   "id": "Medan yang tak terkendali tidak meluas seperti itu."
   },
   "39": {
-   "who": "Sarah Bennett",
-   "p": 29,
-   "en": "I didn't say it to comfort you.",
-   "id": "Aku memang tidak bilang begitu untuk menenangkanmu."
+   "who": "Narrator",
+   "p": 32,
+   "en": "It was how a person drew a selection.",
+   "id": "Begitulah cara seseorang menggambar area seleksi."
   },
   "40": {
    "who": "Narrator",
-   "p": 30,
-   "en": "Lena rubbed her eyes with the heel of her hand.",
-   "id": "Lena menggosok matanya dengan pangkal telapak tangan."
+   "p": 33,
+   "en": "Sarah pointed toward the pumping station.",
+   "id": "Sarah menunjuk stasiun pompa itu."
   },
   "41": {
-   "who": "Lena Ortiz",
-   "p": 30,
-   "en": "Can the target be something that already happened? Or does it have to be something we haven't done yet?",
-   "id": "Apa sasarannya bisa sesuatu yang sudah terjadi? Atau harus sesuatu yang belum kita lakukan?"
+   "who": "Sarah Bennett",
+   "p": 33,
+   "en": "Why include that?",
+   "id": "Kenapa itu ikut dimasukkan?"
   },
   "42": {
-   "who": "Jack Bennett",
-   "p": 31,
-   "en": "I don't know. That's the part I don't like.",
-   "id": "Aku tidak tahu. Justru bagian itu yang tidak kusukai."
-  },
-  "43": {
-   "who": "Lena Ortiz",
-   "p": 32,
-   "en": "There's a lot of parts you don't like tonight.",
-   "id": "Banyak sekali bagian yang tidak kamu sukai malam ini."
-  },
-  "44": {
-   "who": "Jack Bennett",
-   "p": 33,
-   "en": "Feels like a long list.",
-   "id": "Rasanya memang daftarnya panjang."
-  },
-  "45": {
    "who": "Narrator",
    "p": 34,
-   "en": "Sarah's hand drifted to her stomach and stayed there a moment before she caught herself and dropped it back to the console. If Jack noticed, he didn't say anything.",
-   "id": "Tangan Sarah bergeser ke perutnya dan berhenti di sana sejenak, sebelum ia tersadar dan mengembalikannya ke konsol. Kalau Jack memperhatikan, ia tidak berkata apa-apa."
+   "en": "Jack opened its infrastructure record.",
+   "id": "Jack membuka catatan infrastrukturnya."
   },
-  "46": {
+  "43": {
+   "who": "Jack Bennett",
+   "p": 34,
+   "en": "Wastewater processing.",
+   "id": "Pengolahan air limbah."
+  },
+  "44": {
    "who": "Narrator",
    "p": 35,
-   "en": "Instead, she asked,",
-   "id": "Sebagai gantinya, ia bertanya,"
+   "en": "Lena pointed to another narrow extension.",
+   "id": "Lena menunjuk satu tonjolan sempit lainnya."
+  },
+  "45": {
+   "who": "Lena Ortiz",
+   "p": 35,
+   "en": "And that?",
+   "id": "Kalau itu?"
+  },
+  "46": {
+   "who": "Jack Bennett",
+   "p": 36,
+   "en": "Backup substation.",
+   "id": "Gardu listrik cadangan."
   },
   "47": {
-   "who": "Sarah Bennett",
-   "p": 35,
-   "en": "Could it target a person?",
-   "id": "Mungkinkah itu menyasar seseorang?"
+   "who": "Narrator",
+   "p": 37,
+   "en": "Sarah looked at him.",
+   "id": "Sarah menatapnya."
   },
   "48": {
    "who": "Narrator",
-   "p": 36,
-   "en": "Jack looked up.",
-   "id": "Jack mendongak."
+   "p": 38,
+   "en": "Jack zoomed out.",
+   "id": "Jack memperkecil tampilan."
   },
   "49": {
-   "who": "Jack Bennett",
-   "p": 36,
-   "en": "Why would you ask that?",
-   "id": "Kenapa kamu tanya begitu?"
+   "who": "Narrator",
+   "p": 39,
+   "en": "The boundary had captured almost everything the settlement would need to remain alive for the first few hours.",
+   "id": "Batas itu telah mencakup hampir semua yang dibutuhkan permukiman untuk bertahan hidup selama beberapa jam pertama."
   },
   "50": {
-   "who": "Sarah Bennett",
-   "p": 37,
-   "en": "Because if I were planning something this careful, I wouldn't waste it on a building.",
-   "id": "Karena kalau aku yang merencanakan sesuatu secermat ini, aku tidak akan menyia-nyiakannya untuk sebuah gedung."
+   "who": "Narrator",
+   "p": 40,
+   "en": "But not everything it would need forever.",
+   "id": "Tetapi tidak semua yang akan dibutuhkannya selamanya."
   },
   "51": {
    "who": "Narrator",
-   "p": 38,
-   "en": "Nobody had a response to that either. Lena set down the tablet she'd been holding, a little too carefully, as though it might make a difference where it landed.",
-   "id": "Untuk itu pun, tak ada yang bisa menanggapi. Lena meletakkan tablet yang sejak tadi dipegangnya, sedikit terlalu hati-hati, seolah-olah di mana tablet itu mendarat bisa mengubah sesuatu."
+   "p": 41,
+   "en": "Water storage had come with them.",
+   "id": "Tangki penyimpanan air ikut terbawa bersama mereka."
   },
   "52": {
    "who": "Narrator",
-   "p": 39,
-   "en": "Jack's radio crackled. Mark's voice, low.",
-   "id": "Radio Jack berderak. Suara Mark, rendah."
+   "p": 42,
+   "en": "The reservoir had not.",
+   "id": "Waduknya tidak."
   },
   "53": {
-   "who": "Settlement security",
-   "p": 39,
-   "en": "Whatever hit the ground, it's gone. There's a mark out here the size of a dinner plate. Pressed straight down. No drag marks. No trail leading in or out.",
-   "id": "Apa pun yang menghantam tanah tadi, sudah pergi. Di sini ada bekas seukuran piring makan. Tertekan lurus ke bawah. Tidak ada bekas seretan. Tidak ada jejak yang masuk atau keluar."
+   "who": "Narrator",
+   "p": 43,
+   "en": "Power generation inside the developed zone had come with them.",
+   "id": "Pembangkit listrik di dalam zona terbangun ikut terbawa bersama mereka."
   },
   "54": {
    "who": "Narrator",
-   "p": 40,
-   "en": "Sarah's eyebrows lifted.",
-   "id": "Alis Sarah terangkat."
+   "p": 44,
+   "en": "Several external resources had not.",
+   "id": "Beberapa sumber daya di luar tidak."
   },
   "55": {
-   "who": "Sarah Bennett",
-   "p": 40,
-   "en": "Something landed and didn't walk away.",
-   "id": "Ada sesuatu yang mendarat, lalu tidak berjalan pergi."
+   "who": "Narrator",
+   "p": 45,
+   "en": "Medical had come with them.",
+   "id": "Fasilitas medis ikut terbawa bersama mereka."
   },
   "56": {
-   "who": "Jack Bennett",
-   "p": 41,
-   "en": "Or something big enough that one footstep doesn't leave much of a trail to follow.",
-   "id": "Atau sesuatu yang cukup besar sampai satu langkahnya saja tidak meninggalkan banyak jejak untuk diikuti."
+   "who": "Narrator",
+   "p": 46,
+   "en": "The wilderness had not.",
+   "id": "Alam liar tidak."
   },
   "57": {
    "who": "Narrator",
-   "p": 42,
-   "en": "Lena groaned.",
-   "id": "Lena mengerang."
+   "p": 47,
+   "en": "Jack felt a knot form in his stomach.",
+   "id": "Perut Jack terasa melilit."
   },
   "58": {
-   "who": "Lena Ortiz",
-   "p": 42,
-   "en": "I liked it better when the worst thing out there was a fingernail.",
-   "id": "Aku lebih suka waktu hal paling buruk di luar sana cuma sepotong kuku."
+   "who": "Narrator",
+   "p": 48,
+   "en": "Lena spoke first.",
+   "id": "Lena yang lebih dulu bicara."
   },
   "59": {
-   "who": "Jack Bennett",
-   "p": 43,
-   "en": "You didn't like that either.",
-   "id": "Waktu itu kamu juga tidak suka."
+   "who": "Lena Ortiz",
+   "p": 48,
+   "en": "Somebody knew the layout.",
+   "id": "Ada yang tahu tata letaknya."
   },
   "60": {
-   "who": "Lena Ortiz",
-   "p": 44,
-   "en": "No. But at least I understood it.",
-   "id": "Memang tidak. Tapi setidaknya aku mengerti."
+   "who": "Narrator",
+   "p": 49,
+   "en": "Sarah shook her head slowly.",
+   "id": "Sarah menggeleng perlahan."
   },
   "61": {
-   "who": "Narrator",
-   "p": 45,
-   "en": "Mark returned a few minutes later, boots echoing against the floor. Cold air followed him through the door before it sealed shut again. He set the radio down and looked at each of them in turn.",
-   "id": "Beberapa menit kemudian Mark kembali, langkah sepatu botnya bergema di lantai. Udara dingin ikut masuk lewat pintu sebelum pintu itu tertutup rapat lagi. Ia meletakkan radionya dan menatap mereka satu per satu."
+   "who": "Sarah Bennett",
+   "p": 49,
+   "en": "More than the layout.",
+   "id": "Lebih dari sekadar tata letak."
   },
   "62": {
-   "who": "Settlement security",
-   "p": 45,
-   "en": "Somebody want to catch me up?",
-   "id": "Ada yang mau menjelaskan apa yang kulewatkan?"
-  },
-  "63": {
-   "who": "Narrator",
-   "p": 46,
-   "en": "Jack gestured toward the screen without a word.",
-   "id": "Tanpa sepatah kata pun, Jack menunjuk ke layar."
-  },
-  "64": {
-   "who": "Narrator",
-   "p": 47,
-   "en": "Mark read it once. Then again.",
-   "id": "Mark membacanya sekali. Lalu sekali lagi."
-  },
-  "65": {
-   "who": "Settlement security",
-   "p": 47,
-   "en": "Phase one. As in, there's a two.",
-   "id": "Fase satu. Artinya, ada fase dua."
-  },
-  "66": {
-   "who": "Sarah Bennett",
-   "p": 48,
-   "en": "We don't know that yet.",
-   "id": "Kita belum tahu soal itu."
-  },
-  "67": {
-   "who": "Settlement security",
-   "p": 49,
-   "en": "You don't sound like you believe that.",
-   "id": "Kedengarannya kamu sendiri tidak percaya."
-  },
-  "68": {
    "who": "Narrator",
    "p": 50,
-   "en": "Nobody argued with him.",
-   "id": "Tak seorang pun membantahnya."
-  },
-  "69": {
-   "who": "Narrator",
-   "p": 51,
-   "en": "Jack's wrist terminal chirped. MEDICAL CENTER.",
-   "id": "Terminal pergelangan Jack berbunyi pendek. PUSAT MEDIS."
-  },
-  "70": {
-   "who": "Narrator",
-   "p": 52,
-   "en": "He hesitated a beat before answering.",
-   "id": "Ia ragu sejenak sebelum menjawab."
-  },
-  "71": {
-   "who": "Jack Bennett",
-   "p": 52,
-   "en": "Bennett.",
-   "id": "Bennett."
-  },
-  "72": {
-   "who": "Narrator",
-   "p": 53,
-   "en": "Doctor Mercer's voice was tighter than it had been the first time.",
-   "id": "Suara Dokter Mercer lebih tegang daripada saat pertama kali ia menelepon."
-  },
-  "73": {
-   "who": "Doctor Mercer",
-   "p": 53,
-   "en": "Jack. Two more patients are awake. One of them heard the tremor and won't stop asking what caused it.",
-   "id": "Jack. Dua pasien lagi sudah sadar. Salah satunya mendengar getaran tadi dan terus saja menanyakan apa penyebabnya."
-  },
-  "74": {
-   "who": "Jack Bennett",
-   "p": 54,
-   "en": "What did you tell her?",
-   "id": "Kamu bilang apa padanya?"
-  },
-  "75": {
-   "who": "Doctor Mercer",
-   "p": 55,
-   "en": "That we're looking into it. Which is what I told the last two people who asked, and it stopped working about twenty minutes ago. How much longer am I supposed to say nothing?",
-   "id": "Bahwa kami sedang menyelidikinya. Itu juga yang kukatakan pada dua orang terakhir yang bertanya, dan sejak sekitar dua puluh menit lalu jawaban itu sudah tidak mempan. Berapa lama lagi aku harus tutup mulut?"
-  },
-  "76": {
-   "who": "Narrator",
-   "p": 56,
-   "en": "Jack looked at Sarah. She held his gaze and didn't look away. Whatever answer he gave was going to be hers as much as his.",
-   "id": "Jack menatap Sarah. Sarah membalas tatapannya dan tidak berpaling. Apa pun jawaban yang ia berikan, jawaban itu akan sama-sama milik Sarah dan miliknya."
-  },
-  "77": {
-   "who": "Jack Bennett",
-   "p": 57,
-   "en": "Not much longer.",
-   "id": "Tidak lama lagi."
-  },
-  "78": {
-   "who": "Doctor Mercer",
-   "p": 58,
-   "en": "You said that an hour ago.",
-   "id": "Sejam yang lalu kamu juga bilang begitu."
-  },
-  "79": {
-   "who": "Jack Bennett",
-   "p": 59,
-   "en": "I know.",
-   "id": "Aku tahu."
-  },
-  "80": {
-   "who": "Narrator",
-   "p": 60,
-   "en": "Another pause, longer this time.",
-   "id": "Jeda lagi, kali ini lebih lama."
-  },
-  "81": {
-   "who": "Doctor Mercer",
-   "p": 60,
-   "en": "Jack, I trust you. That's the only reason I haven't paged the whole settlement myself. Don't make me regret it.",
-   "id": "Jack, aku percaya padamu. Cuma itu alasan aku belum mengumumkannya sendiri ke seluruh permukiman. Jangan bikin aku menyesal."
-  },
-  "82": {
-   "who": "Narrator",
-   "p": 61,
-   "en": "The call ended.",
-   "id": "Panggilan itu berakhir."
-  },
-  "83": {
-   "who": "Narrator",
-   "p": 62,
-   "en": "Lena exhaled slowly.",
-   "id": "Lena mengembuskan napas perlahan."
-  },
-  "84": {
-   "who": "Lena Ortiz",
-   "p": 62,
-   "en": "She's not wrong.",
-   "id": "Dia ada benarnya."
-  },
-  "85": {
-   "who": "Jack Bennett",
-   "p": 63,
-   "en": "I know that too.",
-   "id": "Itu juga aku tahu."
-  },
-  "86": {
-   "who": "Narrator",
-   "p": 64,
-   "en": "Sarah set both hands flat against the edge of the console.",
-   "id": "Sarah menempelkan kedua telapak tangannya rata di tepi konsol."
-  },
-  "87": {
-   "who": "Sarah Bennett",
-   "p": 64,
-   "en": "We tell three more people. Department heads. People who can help without starting a panic.",
-   "id": "Kita beri tahu tiga orang lagi. Kepala departemen. Orang-orang yang bisa membantu tanpa memicu kepanikan."
-  },
-  "88": {
-   "who": "Narrator",
-   "p": 65,
    "en": "Jack looked at her.",
    "id": "Jack menatapnya."
   },
-  "89": {
-   "who": "Jack Bennett",
-   "p": 65,
-   "en": "And if one of them panics anyway?",
-   "id": "Lalu kalau salah satu dari mereka tetap panik?"
-  },
-  "90": {
+  "63": {
    "who": "Sarah Bennett",
+   "p": 51,
+   "en": "They knew what counted as developed infrastructure.",
+   "id": "Mereka tahu apa saja yang terhitung infrastruktur terbangun."
+  },
+  "64": {
+   "who": "Narrator",
+   "p": 52,
+   "en": "He returned to the access records from before the activation. The unidentified connection had appeared and disappeared. Security history had been cleaned. His credentials had been revoked.",
+   "id": "Ia kembali ke catatan akses dari sebelum aktivasi. Koneksi tak dikenal itu muncul lalu menghilang. Riwayat keamanan sudah dibersihkan. Kredensialnya sudah dicabut."
+  },
+  "65": {
+   "who": "Narrator",
+   "p": 53,
+   "en": "Someone had entered TOMBS remotely.",
+   "id": "Seseorang telah masuk ke TOMBS dari jarak jauh."
+  },
+  "66": {
+   "who": "Narrator",
+   "p": 54,
+   "en": "Someone had selected the settlement.",
+   "id": "Seseorang telah memilih permukiman ini."
+  },
+  "67": {
+   "who": "Narrator",
+   "p": 55,
+   "en": "Someone had chosen a scale.",
+   "id": "Seseorang telah menentukan skalanya."
+  },
+  "68": {
+   "who": "Narrator",
+   "p": 56,
+   "en": "And whoever had done it had known enough about the island to draw the boundary around the systems keeping five hundred people alive.",
+   "id": "Dan siapa pun pelakunya cukup mengenal pulau ini untuk menarik batas di sekeliling sistem-sistem yang membuat lima ratus orang tetap hidup."
+  },
+  "69": {
+   "who": "Narrator",
+   "p": 57,
+   "en": "Jack opened the raw command archive.",
+   "id": "Jack membuka arsip perintah mentah."
+  },
+  "70": {
+   "who": "Jack Bennett",
+   "p": 58,
+   "en": "There's another copy.",
+   "id": "Ada salinan lain."
+  },
+  "71": {
+   "who": "Narrator",
+   "p": 59,
+   "en": "Sarah moved closer.",
+   "id": "Sarah mendekat."
+  },
+  "72": {
+   "who": "Sarah Bennett",
+   "p": 59,
+   "en": "Of what?",
+   "id": "Salinan apa?"
+  },
+  "73": {
+   "who": "Jack Bennett",
+   "p": 60,
+   "en": "The activation sequence.",
+   "id": "Urutan aktivasinya."
+  },
+  "74": {
+   "who": "Narrator",
+   "p": 61,
+   "en": "He pointed to a maintenance partition buried beneath the main event log. TOMBS automatically stored a low-level diagnostic trace during every field calculation. It was intended for hardware troubleshooting, not security review.",
+   "id": "Ia menunjuk sebuah partisi pemeliharaan yang terkubur di bawah log peristiwa utama. TOMBS secara otomatis menyimpan jejak diagnostik tingkat rendah setiap kali menghitung medan. Jejak itu dimaksudkan untuk pemecahan masalah perangkat keras, bukan untuk peninjauan keamanan."
+  },
+  "75": {
+   "who": "Narrator",
+   "p": 62,
+   "en": "The intruder had erased the normal logs.",
+   "id": "Si penyusup telah menghapus log-log biasa."
+  },
+  "76": {
+   "who": "Narrator",
+   "p": 63,
+   "en": "They had not erased this.",
+   "id": "Yang ini tidak mereka hapus."
+  },
+  "77": {
+   "who": "Narrator",
+   "p": 64,
+   "en": "Jack opened the file.",
+   "id": "Jack membuka file itu."
+  },
+  "78": {
+   "who": "Narrator",
+   "p": 65,
+   "en": "Lines of machine data filled the screen.",
+   "id": "Baris demi baris data mesin memenuhi layar."
+  },
+  "79": {
+   "who": "Narrator",
    "p": 66,
-   "en": "Then we handle that when it happens. We can't keep running this with four people and one extremely patient doctor.",
-   "id": "Kalau begitu, kita tangani saat itu terjadi. Kita tidak bisa terus menjalankan semua ini dengan empat orang dan satu dokter yang luar biasa sabar."
+   "en": "Lena pulled over a chair.",
+   "id": "Lena menarik sebuah kursi mendekat."
   },
-  "91": {
-   "who": "Settlement security",
+  "80": {
+   "who": "Lena Ortiz",
+   "p": 66,
+   "en": "Can you read that?",
+   "id": "Kamu bisa membacanya?"
+  },
+  "81": {
+   "who": "Jack Bennett",
    "p": 67,
-   "en": "Five. You're forgetting me.",
-   "id": "Lima. Kamu lupa menghitungku."
+   "en": "Eventually.",
+   "id": "Lama-lama bisa."
   },
-  "92": {
-   "who": "Lena Ortiz",
+  "82": {
+   "who": "Narrator",
    "p": 68,
-   "en": "Four people, one doctor, and a security officer who ran from a shadow.",
-   "id": "Empat orang, satu dokter, dan satu petugas keamanan yang kabur dari bayangan."
+   "en": "Sarah sat beside him.",
+   "id": "Sarah duduk di sampingnya."
   },
-  "93": {
-   "who": "Settlement security",
+  "83": {
+   "who": "Sarah Bennett",
+   "p": 68,
+   "en": "Search for the boundary coordinates.",
+   "id": "Cari koordinat batasnya."
+  },
+  "84": {
+   "who": "Narrator",
    "p": 69,
-   "en": "It had legs.",
-   "id": "Bayangan itu punya kaki."
+   "en": "Jack did.",
+   "id": "Jack melakukannya."
   },
-  "94": {
-   "who": "Lena Ortiz",
+  "85": {
+   "who": "Narrator",
    "p": 70,
-   "en": "So do horses. You don't see me running from those.",
-   "id": "Kuda juga punya. Tapi kamu tidak melihatku lari dari kuda, kan?"
+   "en": "The system found several matches.",
+   "id": "Sistem menemukan beberapa kecocokan."
   },
-  "95": {
-   "who": "Settlement security",
+  "86": {
+   "who": "Narrator",
    "p": 71,
-   "en": "Horses don't vanish behind a ridge in half a second.",
-   "id": "Kuda tidak lenyap di balik punggungan dalam setengah detik."
+   "en": "He narrowed the results to the earliest occurrence.",
+   "id": "Ia mempersempit hasilnya ke kemunculan paling awal."
   },
-  "96": {
-   "who": "Lena Ortiz",
+  "87": {
+   "who": "Narrator",
    "p": 72,
-   "en": "Neither do I, usually. Tonight made an exception.",
-   "id": "Biasanya aku juga tidak. Malam ini pengecualian."
+   "en": "A timestamp appeared.",
+   "id": "Sebuah stempel waktu muncul."
   },
-  "97": {
+  "88": {
    "who": "Narrator",
    "p": 73,
-   "en": "That got the first real laugh out of anyone in over an hour, short and tired as it was.",
-   "id": "Itu memancing tawa sungguhan pertama dalam lebih dari sejam, meski pendek dan lelah."
+   "en": "Jack stopped breathing.",
+   "id": "Napas Jack tertahan."
   },
-  "98": {
+  "89": {
    "who": "Narrator",
    "p": 74,
-   "en": "Jack didn't answer immediately. He turned back to the diagnostic snapshot instead, scrolling through file after file of routine hardware logs while the others kept talking behind him.",
-   "id": "Jack tidak langsung menjawab. Ia malah kembali ke cuplikan diagnostik, menggulir file demi file log perangkat keras rutin sementara yang lain terus bicara di belakangnya."
-  },
-  "99": {
-   "who": "Narrator",
-   "p": 75,
    "en": "Sarah noticed.",
    "id": "Sarah menyadarinya."
   },
-  "100": {
+  "90": {
    "who": "Sarah Bennett",
-   "p": 75,
-   "en": "What are you doing?",
-   "id": "Kamu sedang apa?"
-  },
-  "101": {
-   "who": "Jack Bennett",
-   "p": 76,
-   "en": "If they hid one file for three weeks, I don't think they stopped at one.",
-   "id": "Kalau mereka menyembunyikan satu file selama tiga minggu, kurasa mereka tidak berhenti di satu."
-  },
-  "102": {
-   "who": "Narrator",
-   "p": 77,
-   "en": "Lena leaned over his shoulder again.",
-   "id": "Lena kembali mencondongkan badan di atas bahunya."
-  },
-  "103": {
-   "who": "Lena Ortiz",
-   "p": 77,
-   "en": "You think there's more?",
-   "id": "Menurutmu masih ada lagi?"
-  },
-  "104": {
-   "who": "Jack Bennett",
-   "p": 78,
-   "en": "I think somebody patient enough to plant this three weeks in advance doesn't leave loose ends.",
-   "id": "Menurutku, orang yang cukup sabar untuk menyelipkan ini tiga minggu sebelumnya tidak akan meninggalkan urusan yang belum tuntas."
-  },
-  "105": {
-   "who": "Narrator",
-   "p": 79,
-   "en": "He typed a new search, narrower this time, and pressed enter.",
-   "id": "Ia mengetikkan pencarian baru, kali ini lebih sempit, lalu menekan enter."
-  },
-  "106": {
-   "who": "Narrator",
-   "p": 80,
-   "en": "The system took longer than it should have to respond. Long enough that Jack's hand hovered over the keyboard, ready to try again.",
-   "id": "Sistem butuh waktu lebih lama dari seharusnya untuk merespons. Cukup lama sampai tangan Jack melayang di atas papan ketik, siap mencoba lagi."
-  },
-  "107": {
-   "who": "Narrator",
-   "p": 81,
-   "en": "Then a single result appeared.",
-   "id": "Lalu muncul satu hasil."
-  },
-  "108": {
-   "who": "Narrator",
-   "p": 82,
-   "en": "Jack went still.",
-   "id": "Jack terpaku."
-  },
-  "109": {
-   "who": "Narrator",
-   "p": 83,
-   "en": "Sarah noticed immediately.",
-   "id": "Sarah langsung menyadarinya."
-  },
-  "110": {
-   "who": "Sarah Bennett",
-   "p": 83,
+   "p": 74,
    "en": "What?",
    "id": "Apa?"
   },
-  "111": {
+  "91": {
+   "who": "Narrator",
+   "p": 75,
+   "en": "He checked it again.",
+   "id": "Ia memeriksanya lagi."
+  },
+  "92": {
+   "who": "Narrator",
+   "p": 76,
+   "en": "The boundary definition had not been created during the attack.",
+   "id": "Definisi batas itu tidak dibuat saat serangan berlangsung."
+  },
+  "93": {
+   "who": "Narrator",
+   "p": 77,
+   "en": "It had been loaded.",
+   "id": "Definisi itu dimuat."
+  },
+  "94": {
+   "who": "Narrator",
+   "p": 78,
+   "en": "Lena leaned over the back of Jack's chair.",
+   "id": "Lena mencondongkan badan dari balik sandaran kursi Jack."
+  },
+  "95": {
+   "who": "Lena Ortiz",
+   "p": 78,
+   "en": "Loaded from where?",
+   "id": "Dimuat dari mana?"
+  },
+  "96": {
+   "who": "Narrator",
+   "p": 79,
+   "en": "Jack opened the file metadata.",
+   "id": "Jack membuka metadata file itu."
+  },
+  "97": {
+   "who": "Narrator",
+   "p": 80,
+   "en": "The creation time appeared.",
+   "id": "Waktu pembuatannya muncul."
+  },
+  "98": {
+   "who": "Narrator",
+   "p": 81,
+   "en": "Sarah read it aloud.",
+   "id": "Sarah membacakannya keras-keras."
+  },
+  "99": {
+   "who": "Sarah Bennett",
+   "p": 81,
+   "en": "Three weeks ago.",
+   "id": "Tiga minggu yang lalu."
+  },
+  "100": {
+   "who": "Narrator",
+   "p": 82,
+   "en": "Nobody moved.",
+   "id": "Tak seorang pun bergerak."
+  },
+  "101": {
+   "who": "Narrator",
+   "p": 83,
+   "en": "Jack checked the timestamp against the island clock, then against the TOMBS backup server.",
+   "id": "Jack mencocokkan stempel waktu itu dengan jam pulau, lalu dengan server cadangan TOMBS."
+  },
+  "102": {
    "who": "Narrator",
    "p": 84,
-   "en": "He didn't answer. He was already opening it.",
-   "id": "Ia tidak menjawab. Ia sudah membukanya."
+   "en": "Same date.",
+   "id": "Tanggalnya sama."
+  },
+  "103": {
+   "who": "Narrator",
+   "p": 85,
+   "en": "Same time.",
+   "id": "Jamnya sama."
+  },
+  "104": {
+   "who": "Narrator",
+   "p": 86,
+   "en": "Sarah's voice dropped.",
+   "id": "Suara Sarah merendah."
+  },
+  "105": {
+   "who": "Sarah Bennett",
+   "p": 86,
+   "en": "Could that be wrong?",
+   "id": "Mungkinkah itu keliru?"
+  },
+  "106": {
+   "who": "Jack Bennett",
+   "p": 87,
+   "en": "Not on both systems.",
+   "id": "Tidak di dua sistem sekaligus."
+  },
+  "107": {
+   "who": "Narrator",
+   "p": 88,
+   "en": "Lena looked at the boundary map and then back at the timestamp.",
+   "id": "Lena memandang peta batas, lalu kembali ke stempel waktu itu."
+  },
+  "108": {
+   "who": "Lena Ortiz",
+   "p": 88,
+   "en": "So someone prepared this three weeks ago?",
+   "id": "Jadi ada yang menyiapkan ini tiga minggu lalu?"
+  },
+  "109": {
+   "who": "Narrator",
+   "p": 89,
+   "en": "Jack didn't answer yet.",
+   "id": "Jack belum menjawab."
+  },
+  "110": {
+   "who": "Narrator",
+   "p": 90,
+   "en": "He searched the project directory for the file name.",
+   "id": "Ia mencari nama file itu di direktori proyek."
+  },
+  "111": {
+   "who": "Narrator",
+   "p": 91,
+   "en": "Nothing.",
+   "id": "Nihil."
   },
   "112": {
    "who": "Narrator",
-   "p": 85,
-   "en": "On the screen, a new record began to load, line by line, slower than the connection should have allowed. Whatever it was, it had been buried deeper than the last one.",
-   "id": "Di layar, sebuah catatan baru mulai dimuat, baris demi baris, lebih lambat daripada yang semestinya untuk koneksi itu. Apa pun isinya, catatan itu dikubur lebih dalam daripada yang terakhir."
+   "p": 92,
+   "en": "He searched the backup.",
+   "id": "Ia mencari di cadangan."
+  },
+  "113": {
+   "who": "Narrator",
+   "p": 93,
+   "en": "Nothing.",
+   "id": "Nihil."
+  },
+  "114": {
+   "who": "Narrator",
+   "p": 94,
+   "en": "Then he searched the archived maintenance snapshots.",
+   "id": "Lalu ia mencari di cuplikan pemeliharaan yang diarsipkan."
+  },
+  "115": {
+   "who": "Narrator",
+   "p": 95,
+   "en": "One result appeared.",
+   "id": "Satu hasil muncul."
+  },
+  "116": {
+   "who": "Narrator",
+   "p": 96,
+   "en": "Jack opened it.",
+   "id": "Jack membukanya."
+  },
+  "117": {
+   "who": "Narrator",
+   "p": 97,
+   "en": "The file existed for less than a minute in the snapshot before being deleted.",
+   "id": "Di cuplikan itu, file tersebut hanya ada kurang dari satu menit sebelum dihapus."
+  },
+  "118": {
+   "who": "Narrator",
+   "p": 98,
+   "en": "Sarah leaned closer.",
+   "id": "Sarah mencondongkan badan lebih dekat."
+  },
+  "119": {
+   "who": "Sarah Bennett",
+   "p": 98,
+   "en": "Can you see who created it?",
+   "id": "Bisa lihat siapa yang membuatnya?"
+  },
+  "120": {
+   "who": "Narrator",
+   "p": 99,
+   "en": "Jack opened the ownership field.",
+   "id": "Jack membuka kolom kepemilikan."
+  },
+  "121": {
+   "who": "Narrator",
+   "p": 100,
+   "en": "His name appeared.",
+   "id": "Namanya sendiri yang muncul."
+  },
+  "122": {
+   "who": "Narrator",
+   "p": 101,
+   "en": "He stared at the screen.",
+   "id": "Ia menatap layar."
+  },
+  "123": {
+   "who": "Narrator",
+   "p": 102,
+   "en": "Lena looked at him.",
+   "id": "Lena menoleh kepadanya."
+  },
+  "124": {
+   "who": "Lena Ortiz",
+   "p": 102,
+   "en": "Jack?",
+   "id": "Jack?"
+  },
+  "125": {
+   "who": "Narrator",
+   "p": 103,
+   "en": "Sarah immediately shook her head.",
+   "id": "Sarah langsung menggeleng."
+  },
+  "126": {
+   "who": "Sarah Bennett",
+   "p": 103,
+   "en": "He didn't.",
+   "id": "Bukan dia."
+  },
+  "127": {
+   "who": "Lena Ortiz",
+   "p": 104,
+   "en": "I know. I'm asking why the computer thinks he did.",
+   "id": "Aku tahu. Aku cuma tanya kenapa komputernya mengira dia pelakunya."
+  },
+  "128": {
+   "who": "Narrator",
+   "p": 105,
+   "en": "Jack opened the authentication signature.",
+   "id": "Jack membuka tanda tangan autentikasinya."
+  },
+  "129": {
+   "who": "Narrator",
+   "p": 106,
+   "en": "His administrator certificate.",
+   "id": "Sertifikat administratornya."
+  },
+  "130": {
+   "who": "Narrator",
+   "p": 107,
+   "en": "His credentials.",
+   "id": "Kredensialnya."
+  },
+  "131": {
+   "who": "Narrator",
+   "p": 108,
+   "en": "His project key.",
+   "id": "Kunci proyeknya."
+  },
+  "132": {
+   "who": "Narrator",
+   "p": 109,
+   "en": "All valid.",
+   "id": "Semuanya sah."
+  },
+  "133": {
+   "who": "Narrator",
+   "p": 110,
+   "en": "All recorded three weeks before the attack.",
+   "id": "Semuanya tercatat tiga minggu sebelum serangan."
+  },
+  "134": {
+   "who": "Narrator",
+   "p": 111,
+   "en": "Sarah moved her chair closer to him.",
+   "id": "Sarah menggeser kursinya lebih dekat ke Jack."
+  },
+  "135": {
+   "who": "Sarah Bennett",
+   "p": 111,
+   "en": "Where were you?",
+   "id": "Kamu di mana waktu itu?"
+  },
+  "136": {
+   "who": "Jack Bennett",
+   "p": 112,
+   "en": "Three weeks ago?",
+   "id": "Tiga minggu lalu?"
+  },
+  "137": {
+   "who": "Sarah Bennett",
+   "p": 113,
+   "en": "At that time.",
+   "id": "Tepat pada jam itu."
+  },
+  "138": {
+   "who": "Narrator",
+   "p": 114,
+   "en": "Jack searched his calendar, then stopped.",
+   "id": "Jack membuka kalendernya, lalu berhenti."
+  },
+  "139": {
+   "who": "Narrator",
+   "p": 115,
+   "en": "He remembered before the entry loaded.",
+   "id": "Ia sudah ingat sebelum entri itu selesai dimuat."
+  },
+  "140": {
+   "who": "Narrator",
+   "p": 116,
+   "en": "Sarah saw it in his face.",
+   "id": "Sarah melihatnya dari raut wajah Jack."
+  },
+  "141": {
+   "who": "Sarah Bennett",
+   "p": 116,
+   "en": "What?",
+   "id": "Apa?"
+  },
+  "142": {
+   "who": "Jack Bennett",
+   "p": 117,
+   "en": "I wasn't in the laboratory.",
+   "id": "Aku tidak sedang di laboratorium."
+  },
+  "143": {
+   "who": "Narrator",
+   "p": 118,
+   "en": "The calendar appeared.",
+   "id": "Kalendernya muncul."
+  },
+  "144": {
+   "who": "Narrator",
+   "p": 119,
+   "en": "Jack had been across the island at a settlement planning meeting.",
+   "id": "Saat itu Jack berada di seberang pulau, menghadiri rapat perencanaan permukiman."
+  },
+  "145": {
+   "who": "Narrator",
+   "p": 120,
+   "en": "Sarah had been there too.",
+   "id": "Sarah juga ada di sana."
+  },
+  "146": {
+   "who": "Narrator",
+   "p": 121,
+   "en": "Lena read the entry.",
+   "id": "Lena membaca entri itu."
+  },
+  "147": {
+   "who": "Lena Ortiz",
+   "p": 121,
+   "en": "You were both at the community center.",
+   "id": "Kalian berdua ada di balai warga."
+  },
+  "148": {
+   "who": "Sarah Bennett",
+   "p": 122,
+   "en": "For almost two hours.",
+   "id": "Hampir dua jam."
+  },
+  "149": {
+   "who": "Narrator",
+   "p": 123,
+   "en": "Jack looked back at the file.",
+   "id": "Jack kembali menatap file itu."
+  },
+  "150": {
+   "who": "Narrator",
+   "p": 124,
+   "en": "His credentials had created a boundary definition while he was nowhere near TOMBS.",
+   "id": "Kredensialnya telah membuat sebuah definisi batas sementara ia sama sekali tidak berada di dekat TOMBS."
+  },
+  "151": {
+   "who": "Narrator",
+   "p": 125,
+   "en": "He opened the access history from that day.",
+   "id": "Ia membuka riwayat akses dari hari itu."
+  },
+  "152": {
+   "who": "Narrator",
+   "p": 126,
+   "en": "Clean.",
+   "id": "Bersih."
+  },
+  "153": {
+   "who": "Narrator",
+   "p": 127,
+   "en": "Too clean.",
+   "id": "Terlalu bersih."
+  },
+  "154": {
+   "who": "Narrator",
+   "p": 128,
+   "en": "The same way tonight's records had been clean.",
+   "id": "Sama bersihnya dengan catatan malam ini."
+  },
+  "155": {
+   "who": "Narrator",
+   "p": 129,
+   "en": "Sarah placed her hand on the edge of the console.",
+   "id": "Sarah meletakkan tangannya di tepi konsol."
+  },
+  "156": {
+   "who": "Sarah Bennett",
+   "p": 129,
+   "en": "This didn't start tonight.",
+   "id": "Ini tidak dimulai malam ini."
+  },
+  "157": {
+   "who": "Jack Bennett",
+   "p": 130,
+   "en": "No.",
+   "id": "Tidak."
+  },
+  "158": {
+   "who": "Narrator",
+   "p": 131,
+   "en": "Jack searched the diagnostic snapshot for anything else associated with the file.",
+   "id": "Jack menelusuri cuplikan diagnostik itu, mencari apa pun yang berkaitan dengan file tersebut."
+  },
+  "159": {
+   "who": "Narrator",
+   "p": 132,
+   "en": "A short text field appeared beneath the boundary definition.",
+   "id": "Sebuah kolom teks pendek muncul di bawah definisi batas."
+  },
+  "160": {
+   "who": "Narrator",
+   "p": 133,
+   "en": "Not a command.",
+   "id": "Bukan perintah."
+  },
+  "161": {
+   "who": "Narrator",
+   "p": 134,
+   "en": "Not part of TOMBS's normal configuration.",
+   "id": "Bukan bagian dari konfigurasi normal TOMBS."
+  },
+  "162": {
+   "who": "Narrator",
+   "p": 135,
+   "en": "A label.",
+   "id": "Sebuah label."
+  },
+  "163": {
+   "who": "Narrator",
+   "p": 136,
+   "en": "Jack opened it.",
+   "id": "Jack membukanya."
+  },
+  "164": {
+   "who": "Narrator",
+   "p": 137,
+   "en": "Three words appeared on the screen.",
+   "id": "Tiga kata muncul di layar."
+  },
+  "165": {
+   "who": "Narrator",
+   "p": 138,
+   "en": "PHASE ONE READY.",
+   "id": "FASE SATU SIAP."
+  },
+  "166": {
+   "who": "Narrator",
+   "p": 139,
+   "en": "Lena went still.",
+   "id": "Lena terpaku."
+  },
+  "167": {
+   "who": "Narrator",
+   "p": 140,
+   "en": "Sarah stared at the message.",
+   "id": "Sarah menatap pesan itu."
+  },
+  "168": {
+   "who": "Sarah Bennett",
+   "p": 140,
+   "en": "Phase one?",
+   "id": "Fase satu?"
+  },
+  "169": {
+   "who": "Narrator",
+   "p": 141,
+   "en": "Jack read it again.",
+   "id": "Jack membacanya lagi."
+  },
+  "170": {
+   "who": "Narrator",
+   "p": 142,
+   "en": "Outside, something struck the distant ground.",
+   "id": "Di luar, sesuatu menghantam tanah di kejauhan."
+  },
+  "171": {
+   "who": "Narrator",
+   "p": 143,
+   "en": "The control-room window trembled.",
+   "id": "Jendela ruang kendali bergetar."
+  },
+  "172": {
+   "who": "Narrator",
+   "p": 144,
+   "en": "Nobody looked away from the screen.",
+   "id": "Tak seorang pun mengalihkan pandangan dari layar."
+  },
+  "173": {
+   "who": "Narrator",
+   "p": 145,
+   "en": "Jack had spent every minute since the activation trying to understand what had gone wrong with TOMBS.",
+   "id": "Sejak aktivasi, Jack menghabiskan setiap menit untuk berusaha memahami apa yang salah dengan TOMBS."
+  },
+  "174": {
+   "who": "Narrator",
+   "p": 146,
+   "en": "Now, for the first time, he understood something worse.",
+   "id": "Kini, untuk pertama kalinya, ia memahami sesuatu yang lebih buruk."
+  },
+  "175": {
+   "who": "Narrator",
+   "p": 147,
+   "en": "It had gone exactly the way someone planned.",
+   "id": "Semuanya berjalan persis seperti yang direncanakan seseorang."
   }
  }
 }

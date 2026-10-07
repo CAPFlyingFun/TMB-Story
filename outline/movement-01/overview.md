@@ -29,7 +29,7 @@ island remains normal size.
 
 Ends on "Their town had shrunk. And the island had not."
 
-## Movement 2 — Chapters 4 to 6
+## Movement 2 — Chapters 4 to 7
 
 Not outlined, not written. It will cover the immediate aftermath: survival, community
 response, adaptation, consequences. Do not draft it unasked.

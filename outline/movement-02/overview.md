@@ -1,4 +1,9 @@
-# Movement 2 — The Quiet Aftermath (Chapters 4 to 6)
+# Movement 2 — The Quiet Aftermath (Chapters 4 to 7)
+
+> **Split 2026-10-07 (decision 0033):** at Joshua's instruction the original Chapter 6
+> (about 15 minutes of audio) was divided at the end of Doctor Mercer's call into Chapter 6,
+> *Several Millimeters*, and Chapter 7, *Someone Knew*, with no sentence changed. The split
+> is pending his script review.
 
 Status: **written and approved.** Imported from Joshua's revised Word manuscript on
 2026-09-21, alongside the quiet-event revision of Chapters 1 to 3. The manuscript in
@@ -30,23 +35,29 @@ perimeter: pavement ending in a straight line, air that measures completely norm
 human fingernail clipping longer than his arm — and something with several thin legs
 moving through the grass toward the settlement. Ends on the vehicle accelerating away.
 
-## Chapter 6 — Someone Knew
+## Chapter 6 — Several Millimeters
 
-The scale is calculated: an average adult is now around several millimetres tall. The
-boundary turns out to follow the developed settlement rather than any radius, taking
+The scale is calculated: an average adult is now around several millimetres tall, and
+TOMBS was given that target: somebody chose how small. Doctor Mercer calls from the
+medical centre and is told the town got smaller. Ends as her call does: "Then don't wait
+too long to tell me what to do about it." Nobody speaks for a moment.
+
+## Chapter 7 — Someone Knew
+
+Straight on from the call. The boundary turns out to follow the developed settlement rather than any radius, taking
 what the town needs for hours and not what it needs to survive. A diagnostic trace the
 intruder did not erase shows the boundary definition was **loaded, not created** — made
 three weeks earlier with Jack's own credentials, while he was at a planning meeting
 across the island. It carries a label: PHASE ONE READY.
 
-## Movement 3 — Chapters 7 to 9
+## Movement 3 — Chapters 8 to 10
 
 Joshua's manuscript, imported 2026-10-01: `outline/movement-03/overview.md`.
 
 ## Audio
 
-All six chapters are generated, designed and mixed: about 63 minutes. Movement 2's
+All seven chapters are generated, designed and mixed: about 63 minutes. Movement 2's
 sound design is built entirely from assets the first movement already established,
 and its spine is one sound that escalates — a deep vibration arriving through a floor,
 louder every time it returns, from the control-room floor in Chapter 4 to whatever
-strikes the distant ground at the end of Chapter 6.
+strikes the distant ground at the end of Chapter 7.

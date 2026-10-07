@@ -207,7 +207,7 @@ function feed({ local, params }) {
   return { className: "ctl feed", html: `${bar("FIELD SENSOR · J. BENNETT", "LIVE")}<table>${rows.slice(0, n).map(([k, v]) => `<tr><td>${k}</td><td class="ok">${v}</td></tr>`).join("")}</table>${nail}` };
 }
 
-// ---------------------------------------------------------------------------- Chapter 6
+// ---------------------------------------------------------------------------- Chapters 6 and 7 (the original Chapter 6, split 2026-10-07)
 // The wrist-camera recording, replayed: the clipping, then the grass moving, the image
 // shaking, frame by frame, the leg, and the curved shape "faintly reflecting the security
 // lights" enlarged until the pixels break apart. `stage`: nail | grass | leg | curve | pixels.
@@ -311,7 +311,7 @@ function phase({ local, params }) {
   return { className: "ctl phase", html: `${bar("DIAGNOSTIC SNAPSHOT", "LABEL")}<div class="p1">PHASE ONE READY.</div>${search}${clock(params)}`, vars: { "--glow": g.toFixed(3) } };
 }
 
-// ---------------------------------------------------------------------------- Chapter 7
+// ---------------------------------------------------------------------------- Chapter 8
 // A search that takes too long, then one result loading line by line "slower than the
 // connection should have allowed". `from`: when the result appears (seconds into the state).
 function loading({ local, params }) {
@@ -322,7 +322,7 @@ function loading({ local, params }) {
   return { className: "ctl data", html: `${bar("DIAGNOSTIC SNAPSHOT", "1 RESULT")}<pre>${lines.slice(0, n).join("\n")}</pre>` };
 }
 
-// ---------------------------------------------------------------------------- Chapter 8
+// ---------------------------------------------------------------------------- Chapter 9
 // "A maintenance tablet. Logged into the network for six minutes, three weeks ago."
 function tablet() {
   const rows = [["DEVICE", "MAINTENANCE TABLET"], ["ON NETWORK", "6 MIN"], ["DATE", "FEB 12, 2110"], ["LOCATION", "EQUIPMENT SHED &middot; N PUMPING STN"]];
@@ -359,7 +359,7 @@ function perimeter({ local, params }) {
   return { className: "ctl sensors", html: `${bar("PERIMETER SENSORS", "LAST HOUR")}<table>${rows.map(([k, v, c]) => `<tr><td>${k}</td><td class="${c}">${v}</td></tr>`).join("")}</table>` };
 }
 
-// ---------------------------------------------------------------------------- Chapter 9
+// ---------------------------------------------------------------------------- Chapter 10
 // The badge: a groundskeeper, retired two years ago, reported lost eight days before. The
 // ticket: three lines, filed by someone Jack never met, closed with a replacement order.
 function badge({ params }) {

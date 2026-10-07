@@ -1,7 +1,7 @@
 {
   "chapter": 9,
   "_comment": [
-    "Sound cues for Chapter 9 (Joshua's 07-09 manuscript, imported 2026-10-01).",
+    "Sound cues for Chapter 8 (Joshua's 07-09 manuscript, imported 2026-10-01).",
     "Built entirely from assets already in audio/sfx-registry.json: no ElevenLabs credits are spent on sound.",
     "Gains here are a starting point; `audio.py retune-cues` re-derives them from each asset's measured loudness and the cue's emphasisDb."
   ],
@@ -10,128 +10,140 @@
       "cueId": "ch09-005-control-room",
       "asset": "amb_computer_lab",
       "anchor": {
-        "clipId": "narrator-030799acb1f0",
+        "clipId": "narrator-cb5a10ce029a",
         "occurrence": 1
       },
       "timing": "before",
-      "fadeInMs": 2500,
+      "fadeInMs": 1500,
+      "fadeOutMs": 3000,
+      "sustain": {
+        "until": {
+          "clipId": "narrator-7f69f700027d",
+          "occurrence": 1
+        },
+        "timing": "before"
+      },
+      "gain": 0.117,
+      "why": "Still the control room, until Jack and Mark go outside."
+    },
+    {
+      "cueId": "ch09-010-facilities-map",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-366b87f75e75",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 2400,
+      "gain": 0.029,
+      "why": "The red marker appearing on the facilities map."
+    },
+    {
+      "cueId": "ch09-020-checkout-log",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-fdcd5179af78",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "gain": 0.234,
+      "why": "Pulling the checkout log; names scroll past."
+    },
+    {
+      "cueId": "ch09-030-badge-overlay",
+      "asset": "sfx_system_notify_soft",
+      "anchor": {
+        "clipId": "narrator-fb72fda7f2ce",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "gain": 0.029,
+      "why": "The badge-tracking overlay coming up across the facility map."
+    },
+    {
+      "cueId": "ch09-040-perimeter-sensors",
+      "asset": "sfx_keyboard_typing_short",
+      "anchor": {
+        "clipId": "narrator-d326d0468ffc",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "gain": 0.166,
+      "emphasisDb": -3.0,
+      "why": "Lena pulling every perimeter sensor from the last hour."
+    },
+    {
+      "cueId": "ch09-041-second-impact",
+      "asset": "sfx_alert_warning_hit",
+      "anchor": {
+        "clipId": "narrator-9e795e3e048c",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1200,
+      "gain": 0.008,
+      "emphasisDb": -6.0,
+      "why": "The second impact on the eastern array, twelve minutes before the first: a flag on the sensor log, kept low."
+    },
+    {
+      "cueId": "ch09-050-door-seals",
+      "asset": "sfx_lab_door_slide",
+      "anchor": {
+        "clipId": "narrator-7f69f700027d",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "gain": 0.018,
+      "why": "'A soft hydraulic hiss that sounded, tonight, uncomfortably final.'"
+    },
+    {
+      "cueId": "ch09-060-outside",
+      "asset": "amb_night_outside",
+      "anchor": {
+        "clipId": "narrator-ba32b73ab4ac",
+        "occurrence": 1
+      },
+      "timing": "before",
+      "fadeInMs": 2000,
       "fadeOutMs": 5000,
       "sustain": {
         "until": "chapterEnd",
         "timing": "after"
       },
-      "gain": 0.117,
-      "why": "Back inside for the whole chapter, as the sky goes from black to gray."
+      "gain": 0.16,
+      "why": "Out of the building and into the night, as Chapter 5 went out: an ordinary night, which is the horror of it."
     },
     {
-      "cueId": "ch09-010-ticket",
-      "asset": "sfx_keyboard_typing_short",
+      "cueId": "ch09-070-radio-crackle",
+      "asset": "sfx_intercom_static",
       "anchor": {
-        "clipId": "narrator-f00e2284deba",
+        "clipId": "narrator-a950a7a4e5e6",
         "occurrence": 1
       },
-      "timing": "during",
-      "gain": 0.234,
-      "why": "Jack pulling up the lost-badge ticket himself."
+      "timing": "before",
+      "gain": 0.011,
+      "emphasisDb": -2.0,
+      "why": "Sarah on the radio from the control room."
     },
     {
-      "cueId": "ch09-020-groundskeeper-file",
-      "asset": "sfx_system_notify_soft",
-      "anchor": {
-        "clipId": "narrator-ab9a784355e5",
-        "occurrence": 1
-      },
-      "timing": "during",
-      "gain": 0.029,
-      "why": "The groundskeeper's file opening: years of lawn schedules."
-    },
-    {
-      "cueId": "ch09-030-dawn",
-      "asset": "amb_nature_outside",
-      "anchor": {
-        "clipId": "narrator-1c9e98f15597",
-        "occurrence": 1
-      },
-      "timing": "during",
-      "offsetMs": 2500,
-      "fadeInMs": 6000,
-      "fadeOutMs": 1500,
-      "sustain": {
-        "until": {
-          "clipId": "narrator-e6b453c064fe",
-          "occurrence": 1
-        },
-        "timing": "before"
-      },
-      "gain": 0.088,
-      "why": "'Somewhere out past the tree line, birdsong started up, layered and enormous.' The world outside the glass waking up, low behind the window, until the facilities channel breaks the stillness. Four dB under Chapter 3's window: here it is heard through closed glass behind a conversation.",
-      "emphasisDb": -4.0
-    },
-    {
-      "cueId": "ch09-040-facilities-channel",
-      "asset": "sfx_console_tone_soft",
-      "anchor": {
-        "clipId": "narrator-e6b453c064fe",
-        "occurrence": 1
-      },
-      "timing": "during",
-      "offsetMs": 1500,
-      "gain": 0.067,
-      "why": "'A different tone than before, not the medical center this time, but the general facilities channel.' Deliberately NOT the wrist chirp every other call has used."
-    },
-    {
-      "cueId": "ch09-041-aiden-channel",
+      "cueId": "ch09-071-radio-channel",
       "asset": "amb_intercom_channel_open",
       "anchor": {
-        "clipId": "narrator-56de3eeae289",
+        "clipId": "sarah-bennett-e733c7074fd8",
         "occurrence": 1
       },
-      "timing": "after",
+      "timing": "before",
       "fadeInMs": 200,
-      "fadeOutMs": 500,
+      "fadeOutMs": 600,
       "sustain": {
         "until": {
-          "clipId": "narrator-c2cc20bc72ad",
+          "clipId": "sarah-bennett-6e3f30ca5121",
           "occurrence": 1
         },
         "timing": "before"
       },
       "gain": 0.007,
-      "why": "The facilities channel open under Aiden's call."
-    },
-    {
-      "cueId": "ch09-042-call-ends",
-      "asset": "sfx_intercom_close",
-      "anchor": {
-        "clipId": "narrator-c2cc20bc72ad",
-        "occurrence": 1
-      },
-      "timing": "before",
-      "gain": 0.031,
-      "why": "Jack ending the call."
-    },
-    {
-      "cueId": "ch09-050-mark-radio",
-      "asset": "sfx_intercom_open",
-      "anchor": {
-        "clipId": "narrator-6fc45187449c",
-        "occurrence": 1
-      },
-      "timing": "after",
-      "gain": 0.037,
-      "emphasisDb": -3.0,
-      "why": "Mark keying his radio to get the department heads moving."
-    },
-    {
-      "cueId": "ch09-060-lena-typing",
-      "asset": "sfx_keyboard_typing_short",
-      "anchor": {
-        "clipId": "narrator-e416633c90d4",
-        "occurrence": 1
-      },
-      "timing": "before",
-      "gain": 0.234,
-      "why": "Lena pulling every camera for the briefing."
+      "why": "The open channel under Sarah's last lines."
     }
   ]
 }

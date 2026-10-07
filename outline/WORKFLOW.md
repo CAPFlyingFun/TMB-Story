@@ -30,7 +30,7 @@ he hands one over:
 
 1. **It is a proposed continuation, not canon.** Nothing in it is canon until he
    approves the reviewed version.
-2. **Review it** against Chapters 1 to 6, `story-rules/`, and
+2. **Review it** against Chapters 1 to 7, `story-rules/`, and
    `story-rules/WORLD_RULES.md` in particular. The five specialists in
    `.claude/agents/` and `scripts/style-check.py` do the same job they do on our own
    drafts.
@@ -64,7 +64,7 @@ he hands one over:
 
 A chapter whose frontmatter says `review_status: approved` is canon and must never be
 silently rewritten. `.claude/hooks/protect-approved-chapters.sh` blocks edits to such
-files as a backstop. Chapters 1 to 6 carry a `source:` line naming Joshua's Word
+files as a backstop. Chapters 1 to 7 carry a `source:` line naming Joshua's Word
 manuscript. They are the manuscript and the foundation, and are not rewritten or
 restructured without his instruction for that specific chapter. That holds even when
 a new rule would read more neatly if an old line changed. Decision 0025 is the example:

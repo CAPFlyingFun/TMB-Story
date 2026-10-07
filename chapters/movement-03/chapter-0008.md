@@ -1,198 +1,204 @@
 ---
 chapter: 8
-title: "Three Weeks"
+title: "Phase Two"
 movement: 3
 pov: Jack
-word_count: 1143
+word_count: 1155
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
-  opens: "Moments later, the main control room, as the buried record opens"
-  elapsed: "the last hour of darkness"
-objective: "Trace who planted the boundary file, and find what made the impacts."
-locations: ["The main control room", "The eastern sensor marker, outside the control room"]
-characters: [Jack, Sarah, "Lena Ortiz", "Mark Jones, perimeter security"]
+  opens: "Half past three in the morning, the main control room, just after the window stops trembling"
+  elapsed: "the rest of the hour before dawn begins"
+objective: "Work out what PHASE ONE READY means for what comes next, and keep the settlement from finding out in a panic."
+locations: ["The main control room", "The southern perimeter (by radio)", "The settlement medical center (remote, by call)"]
+characters: [Jack, Sarah, "Lena Ortiz", "Mark Jones, perimeter security", "Doctor Mercer (remote, by wrist terminal)"]
 status_changes:
-  - "The record is a maintenance tablet that was on the network for six minutes three weeks ago, the same day as the boundary file, while Jack and Sarah were at the community center"
-  - "The tablet was at the equipment shed by the north pumping station, inside the boundary"
-  - "Its checkout log gives no name; Sarah starts a badge-location search and Mark offers the door camera footage"
-  - "A second, smaller impact registered on the eastern sensor array twelve minutes before the first"
-  - "Jack and Mark walk out to the eastern marker: no crater, but a blade of grass pressed flat into the dirt; Jack photographs it"
-  - "Sarah finds the badge and will not say whose over the radio"
+  - "An impact shook the control room window; the southern camera shows nothing"
+  - "Mark checks the southern perimeter by radio: a mark the size of a dinner plate, pressed straight down, no drag marks and no trail"
+  - "Doctor Mercer calls again: two more patients are awake and asking about the tremor; she will not keep quiet much longer"
+  - "Sarah proposes telling three department heads"
+  - "Jack searches the diagnostic snapshot again and one buried record begins to load"
 new_canon:
-  - "The boundary file was planted from a settlement maintenance tablet"
-  - "Two impacts, at different places, possibly the same source moving: the distance covered in under fifteen minutes"
-  - "Outside, grass blades rise around them like a colonnade, and dew beads are large enough to swallow a person"
-playable_beat_flow: ["open the buried record", "cross-reference the device on the facilities map", "read the tablet checkout log", "pull the badge-tracking overlay", "pull every perimeter sensor from the last hour", "walk to the eastern sensor marker", "photograph the pressed blade of grass", "take Sarah's call"]
-ending_type: cliffhanger
+  - "Whatever made the dinner-plate mark landed and did not walk away, or is big enough that one step leaves little trail"
+  - "Sarah asks whether a phase two could target a person"
+playable_beat_flow: ["pull the southern camera feed", "search the snapshot for the word phase", "take Mark's perimeter report by radio", "take Doctor Mercer's call", "search the diagnostic snapshot again, narrower", "open the buried result"]
+ending_type: unanswered question
 review_status: in-review
 audio_status: pending-review
 approved_on: ""
 last_approved_revision: ""   # never approved; pending first script review
-source: "Joshua's Word manuscript, ba62e566-07-09_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-10-01. For the audio, following Decision 0024 as applied to his two earlier documents: 9 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first."
+source: "Joshua's Word manuscript, ba62e566-07-09_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-10-01. For the audio, following Decision 0024 as applied to his two earlier documents: 8 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first."
 ---
-# Chapter 8: Three Weeks
+# Chapter 8: Phase Two
 
-The file opened onto a short list of coordinates and a single line of metadata: a device signature Jack didn't recognize.
+The window had stopped trembling, but nobody in the room had moved.
 
-Sarah read over his shoulder. "That's not a TOMBS component."
+The clock in the corner of the display read half past three. It felt like it should have said something closer to dawn by now, though the sky outside still showed nothing but black.
 
-"No."
+Four cold cups of coffee sat forgotten along the edge of the console. Nobody had touched them in over an hour.
 
-"Then what is it?"
+Lena was the first to find her voice. "Okay. That felt closer than the last one."
 
-Jack expanded the record. "A maintenance tablet. Logged into the network for six minutes, three weeks ago. Same day as the boundary file."
+Jack's hands were already moving across the console, pulling the southern camera feed onto the main display before he'd fully decided to do it. Grass swayed at the edge of the frame. Nothing else.
 
-Lena crossed her arms. "The same day you and Sarah were at the community center."
+"I don't see anything."
 
-"Yes."
+Sarah stepped closer to the glass, scanning the dark tree line beyond the perimeter lights. "Then what hit the ground?"
 
-"So somebody used a maintenance tablet to plant a boundary file while wearing your credentials."
+"I don't know."
 
-"That's what it looks like."
+Mark was already moving toward the door. "I'll check the perimeter."
 
-Sarah frowned at the coordinates. "Where was the tablet?"
+Sarah's head snapped toward him. "Not alone."
 
-Jack cross-referenced the device ID against the facilities map. A red marker appeared near the edge of the developed zone.
+Mark didn't slow down. "Wasn't planning to be."
 
-"The equipment shed by the north pumping station."
+The door slid shut behind him before she could argue further.
 
-Mark straightened. "That's inside the boundary."
+Jack stared at the space where Mark had been standing, then back at the three words still glowing on the main screen.
+
+PHASE ONE READY.
+
+He typed a search for the word phase across the rest of the diagnostic snapshot. The system returned nothing.
+
+Lena leaned over his shoulder. "Nothing else?"
+
+"Not yet."
+
+"That's not the reassuring answer I was hoping for."
+
+Sarah crossed her arms, eyes fixed on the message. "It doesn't mean there isn't a phase two. It only means whoever planted this only labeled the one file they thought nobody would find."
+
+"Even more reassuring."
+
+Jack rubbed the back of his neck. "If phase one was the boundary, choosing what to shrink and how much, what's left for a phase two?"
+
+Nobody answered right away.
+
+Sarah spoke carefully, working through it out loud. "Phase one already happened. It didn't need anything running afterward to keep working. The boundary's already set."
+
+"So it's not a location. It's something that still has to trigger."
+
+"Or something waiting on a timer."
+
+The room went quiet long enough that Jack could hear the console fans working underneath the desk.
+
+Jack broke the silence first. "A trigger needs two things. A condition, and a target."
+
+"The condition could be anything. Time. A command. Someone doing something specific without realizing it."
+
+"That's not comforting."
+
+"I didn't say it to comfort you."
+
+Lena rubbed her eyes with the heel of her hand. "Can the target be something that already happened? Or does it have to be something we haven't done yet?"
+
+"I don't know. That's the part I don't like."
+
+"There's a lot of parts you don't like tonight."
+
+"Feels like a long list."
+
+Sarah's hand drifted to her stomach and stayed there a moment before she caught herself and dropped it back to the console. If Jack noticed, he didn't say anything.
+
+Instead, she asked, "Could it target a person?"
+
+Jack looked up. "Why would you ask that?"
+
+"Because if I were planning something this careful, I wouldn't waste it on a building."
+
+Nobody had a response to that either. Lena set down the tablet she'd been holding, a little too carefully, as though it might make a difference where it landed.
+
+Jack's radio crackled. Mark's voice, low. "Whatever hit the ground, it's gone. There's a mark out here the size of a dinner plate. Pressed straight down. No drag marks. No trail leading in or out."
+
+Sarah's eyebrows lifted. "Something landed and didn't walk away."
+
+"Or something big enough that one footstep doesn't leave much of a trail to follow."
+
+Lena groaned. "I liked it better when the worst thing out there was a fingernail."
+
+"You didn't like that either."
+
+"No. But at least I understood it."
+
+Mark returned a few minutes later, boots echoing against the floor. Cold air followed him through the door before it sealed shut again. He set the radio down and looked at each of them in turn. "Somebody want to catch me up?"
+
+Jack gestured toward the screen without a word.
+
+Mark read it once. Then again. "Phase one. As in, there's a two."
+
+"We don't know that yet."
+
+"You don't sound like you believe that."
+
+Nobody argued with him.
+
+Jack's wrist terminal chirped. MEDICAL CENTER.
+
+He hesitated a beat before answering. "Bennett."
+
+Doctor Mercer's voice was tighter than it had been the first time. "Jack. Two more patients are awake. One of them heard the tremor and won't stop asking what caused it."
+
+"What did you tell her?"
+
+"That we're looking into it. Which is what I told the last two people who asked, and it stopped working about twenty minutes ago. How much longer am I supposed to say nothing?"
+
+Jack looked at Sarah. She held his gaze and didn't look away. Whatever answer he gave was going to be hers as much as his.
+
+"Not much longer."
+
+"You said that an hour ago."
 
 "I know."
 
-"Somebody who works here did this."
+Another pause, longer this time. "Jack, I trust you. That's the only reason I haven't paged the whole settlement myself. Don't make me regret it."
 
-Nobody said anything for a moment.
+The call ended.
 
-Sarah's voice stayed steady, but quiet. "Or somebody used a tablet that belongs here. That's not the same thing."
+Lena exhaled slowly. "She's not wrong."
 
-"It's close enough to keep me up at night."
+"I know that too."
 
-Jack pulled the tablet's checkout log. Dozens of names scrolled past. Anyone with basic facilities access could have signed one out that week. No single entry stood apart.
+Sarah set both hands flat against the edge of the console. "We tell three more people. Department heads. People who can help without starting a panic."
 
-"This isn't going to give us a name."
+Jack looked at her. "And if one of them panics anyway?"
 
-Lena scrolled through the list herself, slower. "Half these people I know. The other half I've waved at in the hallway and never learned their name."
+"Then we handle that when it happens. We can't keep running this with four people and one extremely patient doctor."
 
-"That's not helpful."
+"Five. You're forgetting me."
 
-"I know. I'm hoping it becomes helpful if I keep looking."
+"Four people, one doctor, and a security officer who ran from a shadow."
 
-Sarah moved to the second console and pulled up the personnel access system. "Then we need something that will. If someone used that tablet without checking it out properly, there might be a badge location ping from whoever was closest at the time."
+"It had legs."
 
-"You can do that?"
+"So do horses. You don't see me running from those."
 
-"I can try."
+"Horses don't vanish behind a ridge in half a second."
 
-Sarah pulled up a badge-tracking overlay across the facility map. "Every door in this building logs an entry. If someone walked in without using the tablet's own credentials, their badge still would have opened something along the way."
+"Neither do I, usually. Tonight made an exception."
 
-"Unless they didn't need a badge."
+That got the first real laugh out of anyone in over an hour, short and tired as it was.
 
-"Everyone needs a badge for this building."
+Jack didn't answer immediately. He turned back to the diagnostic snapshot instead, scrolling through file after file of routine hardware logs while the others kept talking behind him.
 
-"Everyone who's supposed to be here."
+Sarah noticed. "What are you doing?"
 
-Sarah looked up at him. Neither of them said anything else.
+"If they hid one file for three weeks, I don't think they stopped at one."
 
-Mark cleared his throat. "For what it's worth, the door logs would still catch a tailgater. Somebody walking in right behind a badge that already opened it."
+Lena leaned over his shoulder again. "You think there's more?"
 
-"Would they?"
+"I think somebody patient enough to plant this three weeks in advance doesn't leave loose ends."
 
-"Camera catches the door, not just the badge reader. I can pull that footage too, if it helps."
+He typed a new search, narrower this time, and pressed enter.
 
-"It might. Add it to the list."
+The system took longer than it should have to respond. Long enough that Jack's hand hovered over the keyboard, ready to try again.
 
-Lena didn't look up from the checkout names. "The list is getting long."
+Then a single result appeared.
 
-"The night's getting long too. They're keeping pace."
+Jack went still.
 
-Jack watched her work for a moment before returning to his own screen. The maintenance record wasn't the only thing bothering him. He opened the boundary definition again and looked past the false calm of the settlement's edge, toward the dark shape of the forest beyond it.
+Sarah noticed immediately. "What?"
 
-Something out there had a footprint the size of a dinner plate and no trail.
+He didn't answer. He was already opening it.
 
-He kept coming back to that. A person leaving no trail made sense. Careful people didn't leave trails. But something with legs, heavy enough to press a dinner-plate mark into the ground, should have left dozens.
-
-Unless it hadn't walked there at all.
-
-He turned to Lena. "Pull up every perimeter sensor from the last hour. Not just south."
-
-"Looking for what?"
-
-"Anything that moved and shouldn't have."
-
-She worked in silence for a minute before letting out a slow breath. "You're going to want to see this."
-
-Jack crossed to her console. A second impact had registered on the eastern sensor array, twelve minutes before the one that shook the window. Smaller. Further out.
-
-Sarah didn't look up from her own screen. "Two impacts. Different locations."
-
-"Or the same thing, moving."
-
-Mark shifted his weight. "Moving how fast?"
-
-Jack did the math out loud, more for himself than anyone else. "If those are the same source, it covered that distance in under fifteen minutes."
-
-The room absorbed that in silence.
-
-"I'm going back out."
-
-"Not alone."
-
-"I wasn't planning to be alone. I was planning to take you."
-
-Jack looked at Sarah. She didn't argue, which somehow worried him more than if she had.
-
-"Ten minutes. Cameras stay up the whole time, and you check in every two."
-
-"Understood."
-
-Jack grabbed a handheld light from the equipment rack and followed Mark toward the door. He paused at the threshold and looked back at Sarah.
-
-"Find that badge ping."
-
-"Go."
-
-The door sealed behind them with a soft hydraulic hiss that sounded, tonight, uncomfortably final.
-
-Outside, the air had shifted. Not warmer exactly, but less still. Somewhere above the tree line, the darkest part of the sky had started to soften at its edges.
-
-Mark followed the beam of Jack's light along the tree line. "Dawn's not far."
-
-"I noticed."
-
-"That mean anything to you? Scientifically?"
-
-Jack kept walking. "It means we're running out of dark to hide in."
-
-Mark didn't respond right away. When he did, his voice had lost its usual dry edge. "You scared, Jack?"
-
-"Yes."
-
-"Good. Means you're paying attention."
-
-They walked in silence for a while after that, the beam of Jack's light sweeping low across a ground that felt endless in a way it never used to. What had been a short walk to the maintenance shed a week ago now stretched into a real hike, blades of grass rising on either side of them like a colonnade with no ceiling. Dew hung from the tips in slow, trembling beads, each one large enough to swallow a person whole if it ever let go.
-
-They reached the eastern sensor marker without incident. The ground here was undisturbed. No crater. No mark. Nothing to suggest an impact at all.
-
-"Sensor error?"
-
-Jack knelt and examined the soil anyway. Then he saw it: a single blade of grass, bent flat and pressed into the dirt, far heavier than wind alone could manage.
-
-Jack's voice was quiet. "No. Just a lighter touch than the other one."
-
-Mark crouched beside him. "Lighter how?"
-
-"I don't know yet."
-
-He photographed the mark from three angles before standing, knees protesting after a night with no sleep behind them. Somewhere close by, something rustled through the grass and went still. Neither of them moved until the sound didn't repeat.
-
-Overhead, a bird called somewhere beyond the true boundary of the island, ordinary and distant, unconcerned with anything happening on a scale it would never register. Jack looked up at the lightening sky and felt smaller than the number on his screen had already told him he was.
-
-His radio crackled. Sarah's voice, tight with urgency. "Jack. I found the badge."
-
-"Whose?"
-
-A pause, longer than he liked.
-
-"I need you back here first."
+On the screen, a new record began to load, line by line, slower than the connection should have allowed. Whatever it was, it had been buried deeper than the last one.
