@@ -28,9 +28,10 @@ new_canon:
   - "There is a phase two"
 playable_beat_flow: ["connect the environmental sensor", "replay the wrist-camera footage frame by frame", "calculate the scale from the TOMBS event log", "open the original calibration records", "compare the unauthorized command with the internal calculation", "take the medical center call", "overlay the boundary on the island development survey", "open the maintenance partition", "read the file metadata", "open the ownership field", "open the label"]
 ending_type: revelation
-review_status: approved
-audio_status: pending
-approved_on: "2026-09-21"
+review_status: revision-pending
+audio_status: outdated
+approved_on: ""
+last_approved_revision: "93ac65a (story text approved 2026-09-21; the 2026-10-06 dialogue-attribution revision is pending Joshua's script review)"
 source: "Joshua's revised Word manuscript, 80a85a2b-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 4 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first."
 ---
 # Chapter 6: Someone Knew

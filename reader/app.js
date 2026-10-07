@@ -219,14 +219,15 @@
 
   function reviewBadge(status) {
     var s = String(status || "draft");
-    var cls = s === "approved" ? "badge-sage" : s === "in-review" ? "badge-gold" : "";
-    var label = s === "approved" ? "approved canon" : s === "in-review" ? "pending approval" : s;
+    var cls = s === "approved" ? "badge-sage" : (s === "in-review" || s === "revision-pending") ? "badge-gold" : "";
+    var label = s === "approved" ? "approved canon" : s === "in-review" ? "pending approval" :
+      s === "revision-pending" ? "revision pending script review" : s;
     return '<span class="badge ' + cls + '">' + esc(label) + "</span>";
   }
 
   function audioBadge(status) {
     var s = String(status || "not-started");
-    var cls = s === "published" ? "badge-sky" : s === "recorded" ? "badge-violet" : "";
+    var cls = s === "published" ? "badge-sky" : s === "recorded" ? "badge-violet" : s === "outdated" ? "badge-rose" : "";
     return '<span class="badge ' + cls + '" title="Audio">audio: ' + esc(s) + "</span>";
   }
 

@@ -646,3 +646,4 @@ button {
 .spk-initial { display: inline-grid; place-items: center; color: var(--text-secondary); font-size: .95em; }
 .say-q { flex: 1; min-width: 0; padding-top: .2em; }
 @media (min-width: 600px) { .spk { min-width: 7.4em; } }
+.badge-rose { color: var(--accent-rose); border-color: var(--accent-rose); background: transparent; }

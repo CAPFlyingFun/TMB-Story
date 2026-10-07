@@ -2,9 +2,9 @@
 
 Read this every chapter. Canon established by the approved manuscript only.
 
-**Currently at: Movements 1 and 2 (Chapters 1 to 6) approved and canon, from Joshua's
-Word manuscripts. Next: continue from "PHASE ONE READY", still overnight with dawn
-approaching. Not to be drafted unasked.**
+**Currently at (2026-10-06): Chapters 1 to 6 were approved canon at revision `93ac65a`;
+their 2026-10-06 dialogue-attribution revision is PENDING SCRIPT REVIEW. Chapters 7 to 12
+are pending approval. Audio for 1 to 9 is outdated in 44 lines (decision 0031).**
 
 **Author-level rules the characters do not know are in `WORLD_RULES.md`.** The premise
 below is written the way the characters and the reader currently understand it.

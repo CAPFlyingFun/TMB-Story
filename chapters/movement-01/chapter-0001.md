@@ -20,9 +20,10 @@ new_canon:
   - "See story-rules/ for the canon this movement established. This file is the manuscript."
 playable_beat_flow: ["review diagnostic data", "read the access warning", "open the network monitor", "trace the unknown connection", "lock the terminal", "call Sarah on the intercom", "search the access logs", "attempt to cancel the initialization request", "re-enter administrator credentials"]
 ending_type: unanswered question
-review_status: approved
-audio_status: recorded
-approved_on: "2026-09-21"
+review_status: revision-pending
+audio_status: outdated
+approved_on: ""
+last_approved_revision: "93ac65a (story text approved 2026-09-21; the 2026-10-06 dialogue-attribution revision is pending Joshua's script review)"
 source: "Joshua's revised Word manuscript, 3c63298d-01-03_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-26 (three lines of Sarah's entrance changed; the rest identical to 3e9a1f9b, imported 2026-09-23). For the audio, at his instruction the same day (Decision 0024): 0 bare said-tag(s) removed, and 3 quote(s) split by a beat joined into one line with the beat first."
 revision_notes:
   - date: "2026-09-26"

@@ -48,6 +48,18 @@ he hands one over:
 9. **Return the polished version with a short summary of the meaningful changes,**
    then continue from step 5 above (the handoff report and the audio pass).
 
+## Approval has three layers (decision 0031)
+
+- **Presentation / UI** (how the Story tab shows the story) is approved on its own; it
+  never approves text or audio. The portrait-and-name dialogue style is approved.
+- **Story / script** (`review_status`): only Joshua's explicit approval of the CURRENT
+  revision makes a chapter canon. Changing an approved chapter's prose, for any reason,
+  makes it `revision-pending` with `last_approved_revision` set; never-approved
+  chapters are `in-review`.
+- **Audio** (`audio_status`): tied to one script revision. Changed spoken text makes
+  the affected audio `outdated`; new audio waits for script approval, generation, and
+  Joshua's review when he asks for one.
+
 ## Canon protection
 
 A chapter whose frontmatter says `review_status: approved` is canon and must never be

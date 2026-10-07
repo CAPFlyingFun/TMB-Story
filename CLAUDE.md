@@ -91,6 +91,11 @@ backstop; if it fires, that is the workflow working.
 Chapters 1 to 3 are Joshua's manuscript, verified byte-identical to his document on
 import. They get the strictest reading of this rule.
 
+**Approval has three layers** (decision 0031): presentation, story/script and audio are
+approved separately. Approving the Story tab's look approves no text; a prose change to an
+approved chapter makes it `revision-pending` until Joshua approves the new revision; and
+audio for changed spoken text is `outdated` until regenerated from an approved revision.
+
 ## Getting oriented without re-reading everything
 
 `story-rules/CHAPTER_INDEX.md` is one append-only table, one row per approved chapter.
