@@ -1,6 +1,8 @@
 # Weekly scheduled writing — TMB-Story
 
-**Joshua, 2026-10-06.** One writing run a week, on **Tuesday**. The week in between is for
+**Joshua, 2026-10-06.** The weekly rhythm: **Monday** ChatGPT reviews the manuscript and
+plans the next events · **Tuesday** Claude writes · **rest of the week** Joshua reads,
+listens, revises and approves. One writing run a week, on **Tuesday** (10:58 AM Central). The week in between is for
 Joshua's reading, listening, revisions, audio generation and approvals. Joshua plans the
 story events with ChatGPT and keeps them on Trello; Claude writes. This file is what the
 weekly scheduled task follows. Edit this file to change the rules; the task reads it fresh
@@ -20,7 +22,17 @@ game: never put story writing there.
    draft over them. If he changed a pending chapter, check whether later pending chapters
    are affected and fix or flag them.
 3. Read the previous chapter in full and the last three at least.
-4. Read the Trello board **"TRADDOMIUM: Micro Battle! - Typescript"**, lists
+4. **Read ChatGPT's Monday review first.** Every Monday ChatGPT reads the current
+   TMB-Story manuscript, checks continuity, reconciles Trello with what was actually
+   written, and refines the next one or two events. Look for that handoff on the Trello
+   board (cards and comments changed since the last Tuesday run, especially in Upcoming
+   and Writing) and wherever else Joshua points to it. It is planning guidance from
+   Joshua's planning partner, approved by him to plan: follow its direction for the next
+   events, but it never outranks the manuscript, Joshua's own edits or approved canon, and
+   it never sets how many chapters an event takes. If it conflicts with the manuscript,
+   follow the manuscript and flag the conflict in the report. If no Monday handoff is
+   found, carry on from Trello and the latest pacing note, and say so in the report.
+5. Read the Trello board **"TRADDOMIUM: Micro Battle! - Typescript"**, lists
    🧭 STORY EVENTS — Upcoming, ✍️ STORY EVENTS — Writing, ✅ STORY EVENTS — Complete
    (= WRITING complete, not approved). Trello is the event plan; the Master Event Roadmap
    is the background. Neither is canon until written and approved.
