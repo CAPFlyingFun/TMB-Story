@@ -39,7 +39,7 @@ passages were non-canon. Names and details here are Joshua's planning, not story
 | Elena Reyes (future TRACKS Academy teacher) | A | xpy281EQu4HkJJxCoN5n | TMB - Elena Reyes |
 | Maya (future TRACKS Academy field instructor) | A | 0xPLUrRsSW7FgMlQPT5F | TMB - Maya |
 | Andrew "Andy" Bennett (Jack and Sarah's son; NAME TENTATIVE) | A | IDSGBfEkkLGMr3YDWSbv | TMB - Andy Bennett (tentative) |
-| The professor (older academic; "Ben Stillwater" is the library label, name not decided) | Designed and saved by Joshua in the ElevenLabs app (late 60s, white-haired, baritone, upbeat but confident; Christopher Lloyd style) | boXhvijHwrZoEUN5Q1Ec | TMB - Professor Ben Stillwater |
+| Professor Ben Stillwater (older academic; name chosen by Joshua 2026-10-07; most characters call him "Professor Ben") | Designed and saved by Joshua in the ElevenLabs app (late 60s, white-haired, baritone, upbeat but confident; Christopher Lloyd style) | boXhvijHwrZoEUN5Q1Ec | TMB - Professor Ben Stillwater |
 
 Custom voice slots in use after these: 10 of 10 (Starter plan). A new custom voice needs a
 slot freed in the ElevenLabs app first (the connector cannot delete voices).
