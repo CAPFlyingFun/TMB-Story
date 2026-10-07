@@ -3,7 +3,7 @@ chapter: 11
 title: "Slow Is Invisible"
 movement: 4
 pov: Jack
-word_count: 1726
+word_count: 1690
 story_time:
   clock: settlement
   date: "March sixth, twenty-one ten"
@@ -201,9 +201,9 @@ Aiden shook his head slowly. "That wasn't this one. Or not because it was huntin
 
 For a moment, nobody said anything.
 
-Mark was the one who finally said it. "So something else out there jumps."
+"So something else out there jumps."
 
-Sarah's answer came straight back. "Or something else out there lands. We don't know yet. Write it down. Both."
+"Or something else out there lands. We don't know yet. Write it down. Both."
 
 Jack wrapped his hand in a clean shop rag from Aiden's bench and looked at the cracked pane in the roof, the white star spreading across it like frost.
 
@@ -217,19 +217,19 @@ She didn't hesitate. "It's an animal. It came here for food, and it took food, a
 
 Aiden held up the fogger and set it carefully on the floor.
 
-Sarah kept going. "Three. No lights shining outward along the edge after dark. The lights brought the insects, and the insects brought the spider."
+"Three. No lights shining outward along the edge after dark. The lights brought the insects, and the insects brought the spider."
 
 Aiden winced. "The seedlings need those lights."
 
-Sarah had the answer ready. "Then we put blackout blinds on the western glass at night. The plants get their light. The island doesn't see it."
+"Then we put blackout blinds on the western glass at night. The plants get their light. The island doesn't see it."
 
-Jack added the next one himself. "Four. Anything an insect can fit through gets closed. Vents, cracks, drains. Doors."
+"Four. Anything an insect can fit through gets closed. Vents, cracks, drains. Doors."
 
-Sarah came straight back with another. "Five. Move slowly near glass."
+"Five. Move slowly near glass."
 
 Jack looked at Mark, then at Aiden. "Six. Nobody goes out alone."
 
-There was a pause on the line, and Jack asked, "Are you writing that down?"
+There was a pause on the line. "Are you writing that down?"
 
 "I've been writing since rule one."
 

@@ -396,18 +396,90 @@
         var details = '<details class="details"><summary>Chapter details</summary><div class="details-body">' +
           frontmatterHtml(parts.fm) + "</div></details>";
         var prose = renderMd(parts.body).replace('class="md"', 'class="md prose"');
-        view.innerHTML = '<article class="reader">' + navTop + head + langBar() + details +
+        view.innerHTML = '<article class="reader">' + navTop + head + langBar() + speakerToggle() + details +
           '<div id="prose-host">' + prose + "</div>" + navBottom + "</article>";
         storageSet(LAST_READ_KEY, pad4(c.number));   // remembered only once the chapter actually loaded
         window.scrollTo(0, 0);
         wireLangBar(function () { viewChapter(numArg); });
-        return translateChapter(c);
+        wireSpeakerToggle(function () { viewChapter(numArg); });
+        return translateChapter(c) || tagSpeakers(c, parts.body);
       }).catch(function (err) {
         view.innerHTML = '<div class="reader">' + navTop + errorBlock(err, c.path) + "</div>";
       });
     }).catch(function (err) {
       view.innerHTML = errorBlock(err, "reader/manifest.json");
     });
+  }
+
+  /* ---- Who is speaking (Joshua, 2026-10-06) ------------------------------------------
+     Every character has their own voice, so the prose no longer says "Jack said" after a
+     line. The page shows it instead: a small portrait and a name in front of each spoken
+     line, read from the audio manifest's speaker for that line (the same attribution the
+     voices use, pinned in audio/speaker-overrides.json). A paragraph whose text no longer
+     matches its lines (the chapter was edited and not yet re-parsed) is shown plain rather
+     than tagged with a guess. English only; a translation keeps its own view. */
+  var FACES = { "jack-bennett": ["jack", "Jack"], "sarah-bennett": ["sarah", "Sarah"], "lena-ortiz": ["lena", "Lena"],
+    "security-officer": ["mark", "Mark"], "system": ["system", "TOMBS"] };
+  var SPEAKER_NAMES = { "doctor-mercer": "Dr. Mercer", "aiden": "Aiden", "paul-harlan": "Paul", "unit-four": "Unit Four", "resident": "Resident" };
+  var SPEAKERS_KEY = "tmb.speakers";
+
+  function speakersOn() { return storageGet(SPEAKERS_KEY) !== "0"; }
+
+  function speakerToggle() {
+    var on = speakersOn();
+    return '<div class="spk-bar"><button type="button" class="spk-toggle' + (on ? " on" : "") + '" aria-pressed="' + on + '">' +
+      "Speaker tags: " + (on ? "On" : "Off") + "</button></div>";
+  }
+
+  function wireSpeakerToggle(rerender) {
+    var b = view.querySelector(".spk-toggle");
+    if (b) b.addEventListener("click", function () { storageSet(SPEAKERS_KEY, speakersOn() ? "0" : "1"); rerender(); });
+  }
+
+  function speakerChip(id, fallback) {
+    var f = FACES[id], name = f ? f[1] : (SPEAKER_NAMES[id] || fallback || id);
+    var face = f ? '<img class="spk-face" src="assets/portraits/' + f[0] + '.png" alt="" loading="lazy">'
+      : '<span class="spk-face spk-initial" aria-hidden="true">' + esc(name.replace(/^Dr\. /, "").charAt(0)) + "</span>";
+    return '<span class="spk">' + face + '<span class="spk-name">' + esc(name) + ":</span></span>";
+  }
+
+  function samePara(a, b) {
+    var n = function (s) { return String(s).replace(/[“”]/g, '"').replace(/[‘’]/g, "'").replace(/\s+/g, " ").trim(); };
+    return n(a) === n(b);
+  }
+
+  function tagSpeakers(c, body) {
+    if (!speakersOn()) return;
+    var host = document.getElementById("prose-host");
+    if (!host) return;
+    var manifest = "audio/manifests/chapter-" + (c.number < 10 ? "0" : "") + c.number + ".json";
+    return fetch(manifest, { cache: "no-cache" }).then(function (r) {
+      if (!r.ok) throw new Error("no-lines");
+      return r.json();
+    }).then(function (m) {
+      if (document.getElementById("prose-host") !== host) return;   // the reader moved on
+      var groups = [];
+      (m.segments || []).slice().sort(function (a, b) { return a.order - b.order; }).forEach(function (s) {
+        (groups[s.paragraph] = groups[s.paragraph] || []).push(s);
+      });
+      var paras = body.split("\n").map(function (s) { return s.trim(); })
+        .filter(function (s) { return s && s.charAt(0) !== "#"; });
+      var tagged = 0;
+      var html = paras.map(function (p, i) {
+        var g = groups[i];
+        var joined = g ? g.map(function (s) { return s.speaker === "narrator" ? s.displayText : '"' + s.displayText + '"'; }).join(" ") : null;
+        if (!g || !samePara(joined, p)) return "<p>" + esc(p) + "</p>";
+        if (g.every(function (s) { return s.speaker === "narrator"; })) return "<p>" + esc(p) + "</p>";
+        tagged++;
+        return '<div class="say-p">' + g.map(function (s) {
+          if (s.speaker === "narrator") return '<span class="say-n">' + esc(s.displayText) + "</span>";
+          return '<div class="say">' + speakerChip(s.speaker, s.speakerName) +
+            '<span class="say-q">“' + esc(s.displayText) + "”</span></div>";
+        }).join(" ") + "</div>";
+      });
+      if (!tagged) return;   // nothing lines up: leave the chapter exactly as written
+      host.innerHTML = '<div class="md prose spk-prose">' + html.join("") + "</div>";
+    }).catch(function () { /* no line list yet: the chapter stays as written */ });
   }
 
   /* ---- Other languages (lang/lang.js) --------------------------------------------

@@ -3,7 +3,7 @@ chapter: 6
 title: "Someone Knew"
 movement: 2
 pov: Jack
-word_count: 2094
+word_count: 2089
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -135,7 +135,7 @@ A curved shape hung above the leg, faintly reflecting the security lights.
 
 Jack enlarged it until the pixels began breaking apart.
 
-Lena asked, "What is it?"
+"What is it?"
 
 Sarah's eyes stayed on the screen. "Could be an insect."
 
@@ -193,7 +193,7 @@ Jack nodded.
 
 Lena looked between them. "In normal-person language?"
 
-Sarah answered while Jack expanded the field. "TOMBS wasn't simply told to make the settlement smaller."
+Jack expanded the field. "TOMBS wasn't simply told to make the settlement smaller."
 
 "It was given a target scale."
 
@@ -303,7 +303,7 @@ Jack looked toward the dark residential map. "We're working on that."
 
 A pause. "Understood. Jack. How long before the rest of the settlement knows?"
 
-"Not long," he admitted.
+"Not long."
 
 "Then don't wait too long to tell me what to do about it."
 
@@ -333,7 +333,7 @@ Lena stared at the scale factor. "Could the system have picked that number rando
 
 Jack hesitated.
 
-Sarah answered more carefully. "The activation itself could have resulted from corrupted commands. But a specific target scale is different."
+Sarah chose her words more carefully. "The activation itself could have resulted from corrupted commands. But a specific target scale is different."
 
 Jack opened the boundary definition.
 

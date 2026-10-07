@@ -3,7 +3,7 @@ chapter: 10
 title: "The Greenhouse"
 movement: 4
 pov: Jack
-word_count: 1575
+word_count: 1567
 story_time:
   clock: settlement
   date: "March sixth, twenty-one ten"
@@ -186,13 +186,13 @@ At first he saw only smears of condensation. Then he saw what was clinging to th
 
 Dozens of them.
 
-Sarah had already put it together. "The grow lights. Aiden, do they run all night?"
+"The grow lights. Aiden, do they run all night?"
 
 "Every night. The seedlings need eighteen hours."
 
 Sarah's voice dropped. "Then every insect on this side of the island has been flying at your glass since dark. And that is breakfast. Lined up in a window."
 
-Mark muttered, "So it's not here for us."
+"So it's not here for us."
 
 Sarah didn't let him off that easily. "It's not here for us yet. It came for them. We just happen to be on the other side of the menu."
 

@@ -3,7 +3,7 @@ chapter: 9
 title: "First Light"
 movement: 3
 pov: Jack
-word_count: 1189
+word_count: 1176
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -53,7 +53,7 @@ Lena pulled up the retired groundskeeper's file anyway, as if there might be som
 
 Mark leaned against the doorframe, arms crossed. "So we're back to nothing."
 
-Sarah said, "We're back to nothing with better questions. That's not the same as nothing."
+"We're back to nothing with better questions. That's not the same as nothing."
 
 "Feels close enough right now."
 
@@ -81,7 +81,7 @@ Outside, the gray had started pulling apart into color. Jack crossed to the wind
 
 Dew clung to individual blades in beads the size of boulders, each one glowing faintly as the light passed through it. Somewhere out past the tree line, birdsong started up, layered and enormous, utterly indifferent to the five hundred people rebuilding their understanding of the word small.
 
-"That's..." Lena trailed off, standing beside him.
+Lena stood beside him. "That's..." She trailed off.
 
 "Yeah."
 
@@ -121,31 +121,31 @@ Aiden didn't respond to that. Jack could hear him breathing on the other end, fa
 
 He ended the call and looked at Sarah.
 
-She said, "That's it. We can't wait for department heads anymore. People are already finding out on their own."
+"That's it. We can't wait for department heads anymore. People are already finding out on their own."
 
 It was almost funny, in the darkest possible way. They'd spent the whole night arguing about when to tell people. The island had just made the decision for them.
 
 Jack nodded slowly, watching the light climb higher over the transformed settlement, gold fading into full morning blue. Somewhere out there, five hundred people were about to wake into a world that no longer matched the one they'd fallen asleep in.
 
-He said, "Then we stop trying to control when they find out, and start deciding what we tell them once they do."
+"Then we stop trying to control when they find out, and start deciding what we tell them once they do."
 
 It wasn't a plan. Not really. But it was the first thing all night that had felt like moving forward instead of just reacting to whatever happened next.
 
 Mark reached for his radio. "I'll get the department heads moving."
 
-Jack said, "Start with medical. Mercer's earned that much."
+"Start with medical. Mercer's earned that much."
 
 "Already planned on it."
 
 Lena was already typing. "I'll pull every camera we've got. If people are going to see this, they should see it clearly instead of piecing it together out of panic."
 
-"How long to put together something people can actually understand?" Sarah asked.
+"How long to put together something people can actually understand?"
 
 "Depends how much you want to tell them the truth versus how much you want them to stay calm."
 
 "Both. In that order."
 
-Lena said, "Then twenty minutes. Maybe less."
+"Then twenty minutes. Maybe less."
 
 Jack looked around the control room, at the cold coffee and the frozen frame of the shape in the grass and the three words still glowing at the edge of the display, and understood that nothing about the next few hours was going to be simple.
 

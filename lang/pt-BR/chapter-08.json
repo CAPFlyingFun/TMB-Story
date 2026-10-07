@@ -11,16 +11,16 @@
    "pt-BR": "O arquivo se abriu numa lista curta de coordenadas e uma única linha de metadados: uma assinatura de dispositivo que Jack não reconheceu."
   },
   "1": {
-   "who": "Sarah Bennett",
-   "p": 1,
-   "en": "That's not a TOMBS component,",
-   "pt-BR": "Isso não é um componente do TOMBS,"
-  },
-  "2": {
    "who": "Narrator",
    "p": 1,
-   "en": "Sarah said, reading over his shoulder.",
-   "pt-BR": "disse Sarah, lendo por cima do ombro dele."
+   "en": "Sarah read over his shoulder.",
+   "pt-BR": "Sarah leu por cima do ombro dele."
+  },
+  "2": {
+   "who": "Sarah Bennett",
+   "p": 1,
+   "en": "That's not a TOMBS component.",
+   "pt-BR": "Isso não é um componente do TOMBS."
   },
   "3": {
    "who": "Jack Bennett",
@@ -145,502 +145,484 @@
   "23": {
    "who": "Lena Ortiz",
    "p": 17,
-   "en": "It's close enough to keep me up at night,",
-   "pt-BR": "É parecido o bastante pra me tirar o sono,"
+   "en": "It's close enough to keep me up at night.",
+   "pt-BR": "É parecido o bastante pra me tirar o sono."
   },
   "24": {
-   "who": "Narrator",
-   "p": 17,
-   "en": "Lena muttered.",
-   "pt-BR": "murmurou Lena."
-  },
-  "25": {
    "who": "Narrator",
    "p": 18,
    "en": "Jack pulled the tablet's checkout log. Dozens of names scrolled past. Anyone with basic facilities access could have signed one out that week. No single entry stood apart.",
    "pt-BR": "Jack abriu o registro de retiradas do tablet. Dezenas de nomes passaram rolando. Qualquer pessoa com acesso básico à manutenção predial poderia ter retirado um naquela semana. Nenhuma entrada se destacava das outras."
   },
-  "26": {
+  "25": {
    "who": "Jack Bennett",
    "p": 19,
    "en": "This isn't going to give us a name.",
    "pt-BR": "Isso não vai dar um nome pra gente."
   },
-  "27": {
+  "26": {
    "who": "Narrator",
    "p": 20,
    "en": "Lena scrolled through the list herself, slower.",
    "pt-BR": "Lena percorreu a lista ela mesma, mais devagar."
   },
-  "28": {
+  "27": {
    "who": "Lena Ortiz",
    "p": 20,
    "en": "Half these people I know. The other half I've waved at in the hallway and never learned their name.",
    "pt-BR": "Metade dessas pessoas eu conheço. Pra outra metade eu já acenei no corredor e nunca cheguei a saber o nome."
   },
-  "29": {
+  "28": {
    "who": "Jack Bennett",
    "p": 21,
    "en": "That's not helpful.",
    "pt-BR": "Isso não ajuda."
   },
-  "30": {
+  "29": {
    "who": "Lena Ortiz",
    "p": 22,
    "en": "I know. I'm hoping it becomes helpful if I keep looking.",
    "pt-BR": "Eu sei. Tô torcendo pra começar a ajudar se eu continuar olhando."
   },
-  "31": {
+  "30": {
    "who": "Narrator",
    "p": 23,
    "en": "Sarah moved to the second console and pulled up the personnel access system.",
    "pt-BR": "Sarah foi para o segundo console e abriu o sistema de controle de acesso de pessoal."
   },
-  "32": {
+  "31": {
    "who": "Sarah Bennett",
    "p": 23,
    "en": "Then we need something that will. If someone used that tablet without checking it out properly, there might be a badge location ping from whoever was closest at the time.",
    "pt-BR": "Então a gente precisa de alguma coisa que dê. Se alguém usou aquele tablet sem fazer a retirada direito, pode ter um sinal de localização do crachá de quem estava mais perto na hora."
   },
-  "33": {
+  "32": {
    "who": "Jack Bennett",
    "p": 24,
    "en": "You can do that?",
    "pt-BR": "Você consegue fazer isso?"
   },
-  "34": {
+  "33": {
    "who": "Sarah Bennett",
    "p": 25,
    "en": "I can try.",
    "pt-BR": "Posso tentar."
   },
-  "35": {
+  "34": {
    "who": "Narrator",
    "p": 26,
    "en": "Sarah pulled up a badge-tracking overlay across the facility map.",
    "pt-BR": "Sarah abriu uma camada de rastreamento de crachás sobre o mapa das instalações."
   },
-  "36": {
+  "35": {
    "who": "Sarah Bennett",
    "p": 26,
    "en": "Every door in this building logs an entry. If someone walked in without using the tablet's own credentials, their badge still would have opened something along the way.",
    "pt-BR": "Toda porta deste prédio registra as entradas. Se alguém entrou sem usar as credenciais do próprio tablet, o crachá dessa pessoa ainda teria aberto alguma coisa no caminho."
   },
-  "37": {
+  "36": {
    "who": "Jack Bennett",
    "p": 27,
    "en": "Unless they didn't need a badge.",
    "pt-BR": "A não ser que a pessoa não precisasse de crachá."
   },
-  "38": {
+  "37": {
    "who": "Sarah Bennett",
    "p": 28,
    "en": "Everyone needs a badge for this building.",
    "pt-BR": "Todo mundo precisa de crachá pra entrar neste prédio."
   },
-  "39": {
+  "38": {
    "who": "Jack Bennett",
    "p": 29,
    "en": "Everyone who's supposed to be here.",
    "pt-BR": "Todo mundo que deveria estar aqui."
   },
-  "40": {
+  "39": {
    "who": "Narrator",
    "p": 30,
    "en": "Sarah looked up at him. Neither of them said anything else.",
    "pt-BR": "Sarah ergueu os olhos para ele. Nenhum dos dois disse mais nada."
   },
-  "41": {
+  "40": {
    "who": "Narrator",
    "p": 31,
    "en": "Mark cleared his throat.",
    "pt-BR": "Mark pigarreou."
   },
-  "42": {
+  "41": {
    "who": "Settlement security",
    "p": 31,
    "en": "For what it's worth, the door logs would still catch a tailgater. Somebody walking in right behind a badge that already opened it.",
    "pt-BR": "Se serve de alguma coisa, os registros das portas ainda pegariam alguém entrando de carona. Alguém que entra logo atrás de um crachá que já abriu a porta."
   },
-  "43": {
+  "42": {
    "who": "Sarah Bennett",
    "p": 32,
    "en": "Would they?",
    "pt-BR": "Pegariam?"
   },
-  "44": {
-   "who": "Narrator",
-   "p": 32,
-   "en": "Sarah asked.",
-   "pt-BR": "perguntou Sarah."
-  },
-  "45": {
+  "43": {
    "who": "Settlement security",
    "p": 33,
    "en": "Camera catches the door, not just the badge reader. I can pull that footage too, if it helps.",
    "pt-BR": "A câmera filma a porta, não só o leitor de crachá. Posso puxar essas imagens também, se ajudar."
   },
-  "46": {
+  "44": {
    "who": "Jack Bennett",
    "p": 34,
    "en": "It might. Add it to the list.",
    "pt-BR": "Pode ajudar. Coloca na lista."
   },
-  "47": {
-   "who": "Lena Ortiz",
-   "p": 35,
-   "en": "The list is getting long,",
-   "pt-BR": "A lista está ficando comprida,"
-  },
-  "48": {
+  "45": {
    "who": "Narrator",
    "p": 35,
-   "en": "Lena said, not looking up from the checkout names.",
-   "pt-BR": "disse Lena, sem tirar os olhos dos nomes das retiradas."
+   "en": "Lena didn't look up from the checkout names.",
+   "pt-BR": "Lena não tirou os olhos dos nomes do registro de retirada."
   },
-  "49": {
+  "46": {
+   "who": "Lena Ortiz",
+   "p": 35,
+   "en": "The list is getting long.",
+   "pt-BR": "A lista está ficando comprida."
+  },
+  "47": {
    "who": "Jack Bennett",
    "p": 36,
    "en": "The night's getting long too. They're keeping pace.",
    "pt-BR": "A noite também está ficando comprida. As duas estão no mesmo ritmo."
   },
-  "50": {
+  "48": {
    "who": "Narrator",
    "p": 37,
    "en": "Jack watched her work for a moment before returning to his own screen. The maintenance record wasn't the only thing bothering him. He opened the boundary definition again and looked past the false calm of the settlement's edge, toward the dark shape of the forest beyond it.",
    "pt-BR": "Jack a observou trabalhar por um momento antes de voltar para a própria tela. O registro de manutenção não era a única coisa que o incomodava. Ele abriu de novo a definição do limite e olhou além da falsa calma da borda da vila, na direção da forma escura da floresta mais adiante."
   },
-  "51": {
+  "49": {
    "who": "Narrator",
    "p": 38,
    "en": "Something out there had a footprint the size of a dinner plate and no trail.",
    "pt-BR": "Alguma coisa lá fora tinha uma pegada do tamanho de um prato e nenhum rastro."
   },
-  "52": {
+  "50": {
    "who": "Narrator",
    "p": 39,
    "en": "He kept coming back to that. A person leaving no trail made sense. Careful people didn't leave trails. But something with legs, heavy enough to press a dinner-plate mark into the ground, should have left dozens.",
    "pt-BR": "Ele não parava de voltar a isso. Uma pessoa não deixar rastro fazia sentido. Gente cuidadosa não deixava rastro. Mas uma coisa com pernas, pesada o bastante para afundar no chão uma marca do tamanho de um prato, deveria ter deixado dezenas."
   },
-  "53": {
+  "51": {
    "who": "Narrator",
    "p": 40,
    "en": "Unless it hadn't walked there at all.",
    "pt-BR": "A não ser que nem tivesse chegado lá andando."
   },
-  "54": {
+  "52": {
    "who": "Narrator",
    "p": 41,
    "en": "He turned to Lena.",
    "pt-BR": "Ele se virou para Lena."
   },
-  "55": {
+  "53": {
    "who": "Jack Bennett",
    "p": 41,
    "en": "Pull up every perimeter sensor from the last hour. Not just south.",
    "pt-BR": "Puxa todos os sensores do perímetro da última hora. Não só os do sul."
   },
-  "56": {
+  "54": {
    "who": "Lena Ortiz",
    "p": 42,
    "en": "Looking for what?",
    "pt-BR": "Procurando o quê?"
   },
-  "57": {
+  "55": {
    "who": "Jack Bennett",
    "p": 43,
    "en": "Anything that moved and shouldn't have.",
    "pt-BR": "Qualquer coisa que tenha se mexido e não devia."
   },
-  "58": {
+  "56": {
    "who": "Narrator",
    "p": 44,
    "en": "She worked in silence for a minute before letting out a slow breath.",
    "pt-BR": "Ela trabalhou em silêncio por um minuto antes de soltar o ar devagar."
   },
-  "59": {
+  "57": {
    "who": "Lena Ortiz",
    "p": 44,
    "en": "You're going to want to see this.",
    "pt-BR": "Você vai querer ver isso."
   },
-  "60": {
+  "58": {
    "who": "Narrator",
    "p": 45,
    "en": "Jack crossed to her console. A second impact had registered on the eastern sensor array, twelve minutes before the one that shook the window. Smaller. Further out.",
    "pt-BR": "Jack foi até o console dela. Um segundo impacto tinha sido registrado no conjunto de sensores do leste, doze minutos antes daquele que sacudira a janela. Menor. Mais distante."
   },
-  "61": {
+  "59": {
    "who": "Narrator",
    "p": 46,
    "en": "Sarah didn't look up from her own screen.",
    "pt-BR": "Sarah não tirou os olhos da própria tela."
   },
-  "62": {
+  "60": {
    "who": "Sarah Bennett",
    "p": 46,
    "en": "Two impacts. Different locations.",
    "pt-BR": "Dois impactos. Lugares diferentes."
   },
-  "63": {
+  "61": {
    "who": "Jack Bennett",
    "p": 47,
    "en": "Or the same thing, moving.",
    "pt-BR": "Ou a mesma coisa, se movendo."
   },
-  "64": {
+  "62": {
    "who": "Narrator",
    "p": 48,
    "en": "Mark shifted his weight.",
    "pt-BR": "Mark mudou o peso de uma perna para a outra."
   },
-  "65": {
+  "63": {
    "who": "Settlement security",
    "p": 48,
    "en": "Moving how fast?",
    "pt-BR": "Se movendo a que velocidade?"
   },
-  "66": {
+  "64": {
    "who": "Narrator",
    "p": 49,
    "en": "Jack did the math out loud, more for himself than anyone else.",
    "pt-BR": "Jack fez as contas em voz alta, mais para si mesmo do que para qualquer outra pessoa."
   },
-  "67": {
+  "65": {
    "who": "Jack Bennett",
    "p": 49,
    "en": "If those are the same source, it covered that distance in under fifteen minutes.",
    "pt-BR": "Se for a mesma fonte, ela percorreu essa distância em menos de quinze minutos."
   },
-  "68": {
+  "66": {
    "who": "Narrator",
    "p": 50,
    "en": "The room absorbed that in silence.",
    "pt-BR": "A sala absorveu aquilo em silêncio."
   },
-  "69": {
+  "67": {
    "who": "Settlement security",
    "p": 51,
    "en": "I'm going back out.",
    "pt-BR": "Vou sair de novo."
   },
-  "70": {
+  "68": {
    "who": "Jack Bennett",
    "p": 52,
    "en": "Not alone.",
    "pt-BR": "Sozinho, não."
   },
-  "71": {
+  "69": {
    "who": "Settlement security",
    "p": 53,
    "en": "I wasn't planning to be alone. I was planning to take you.",
    "pt-BR": "Eu não estava pensando em ir sozinho. Estava pensando em levar você."
   },
-  "72": {
+  "70": {
    "who": "Narrator",
    "p": 54,
    "en": "Jack looked at Sarah. She didn't argue, which somehow worried him more than if she had.",
    "pt-BR": "Jack olhou para Sarah. Ela não discutiu, o que, de algum modo, o preocupou mais do que se tivesse discutido."
   },
-  "73": {
+  "71": {
    "who": "Sarah Bennett",
    "p": 55,
    "en": "Ten minutes. Cameras stay up the whole time, and you check in every two.",
    "pt-BR": "Dez minutos. As câmeras ficam ligadas o tempo todo, e vocês dão notícia a cada dois."
   },
-  "74": {
+  "72": {
    "who": "Settlement security",
    "p": 56,
    "en": "Understood.",
    "pt-BR": "Entendido."
   },
-  "75": {
+  "73": {
    "who": "Narrator",
    "p": 57,
    "en": "Jack grabbed a handheld light from the equipment rack and followed Mark toward the door. He paused at the threshold and looked back at Sarah.",
    "pt-BR": "Jack pegou uma lanterna no rack de equipamentos e seguiu Mark até a porta. Parou na soleira e olhou para trás, para Sarah."
   },
-  "76": {
+  "74": {
    "who": "Jack Bennett",
    "p": 58,
    "en": "Find that badge ping.",
    "pt-BR": "Encontra esse sinal do crachá."
   },
-  "77": {
+  "75": {
    "who": "Sarah Bennett",
    "p": 59,
    "en": "Go.",
    "pt-BR": "Vai."
   },
-  "78": {
+  "76": {
    "who": "Narrator",
    "p": 60,
    "en": "The door sealed behind them with a soft hydraulic hiss that sounded, tonight, uncomfortably final.",
    "pt-BR": "A porta se vedou atrás deles com um chiado hidráulico suave que, naquela noite, soou desconfortavelmente definitivo."
   },
-  "79": {
+  "77": {
    "who": "Narrator",
    "p": 61,
    "en": "Outside, the air had shifted. Not warmer exactly, but less still. Somewhere above the tree line, the darkest part of the sky had started to soften at its edges.",
    "pt-BR": "Lá fora, o ar tinha mudado. Não exatamente mais quente, mas menos parado. Em algum ponto acima da linha das árvores, a parte mais escura do céu começava a se suavizar nas bordas."
   },
-  "80": {
-   "who": "Settlement security",
-   "p": 62,
-   "en": "Dawn's not far,",
-   "pt-BR": "Já está quase amanhecendo,"
-  },
-  "81": {
+  "78": {
    "who": "Narrator",
    "p": 62,
-   "en": "Mark said, following the beam of Jack's light along the tree line.",
-   "pt-BR": "disse Mark, acompanhando o facho da lanterna de Jack ao longo da linha das árvores."
+   "en": "Mark followed the beam of Jack's light along the tree line.",
+   "pt-BR": "Mark acompanhou o facho da lanterna de Jack ao longo da linha das árvores."
   },
-  "82": {
+  "79": {
+   "who": "Settlement security",
+   "p": 62,
+   "en": "Dawn's not far.",
+   "pt-BR": "Já está quase amanhecendo."
+  },
+  "80": {
    "who": "Jack Bennett",
    "p": 63,
    "en": "I noticed.",
    "pt-BR": "Eu percebi."
   },
-  "83": {
+  "81": {
    "who": "Settlement security",
    "p": 64,
    "en": "That mean anything to you? Scientifically?",
    "pt-BR": "Isso quer dizer alguma coisa pra você? Cientificamente?"
   },
-  "84": {
+  "82": {
    "who": "Narrator",
    "p": 65,
    "en": "Jack kept walking.",
    "pt-BR": "Jack continuou andando."
   },
-  "85": {
+  "83": {
    "who": "Jack Bennett",
    "p": 65,
    "en": "It means we're running out of dark to hide in.",
    "pt-BR": "Quer dizer que está acabando o escuro pra gente se esconder."
   },
-  "86": {
+  "84": {
    "who": "Narrator",
    "p": 66,
    "en": "Mark didn't respond right away. When he did, his voice had lost its usual dry edge.",
    "pt-BR": "Mark não respondeu de imediato. Quando respondeu, a voz tinha perdido o tom seco de sempre."
   },
-  "87": {
+  "85": {
    "who": "Settlement security",
    "p": 66,
    "en": "You scared, Jack?",
    "pt-BR": "Tá com medo, Jack?"
   },
-  "88": {
+  "86": {
    "who": "Jack Bennett",
    "p": 67,
    "en": "Yes.",
    "pt-BR": "Estou."
   },
-  "89": {
+  "87": {
    "who": "Settlement security",
    "p": 68,
    "en": "Good. Means you're paying attention.",
    "pt-BR": "Ótimo. Quer dizer que você está prestando atenção."
   },
-  "90": {
+  "88": {
    "who": "Narrator",
    "p": 69,
    "en": "They walked in silence for a while after that, the beam of Jack's light sweeping low across a ground that felt endless in a way it never used to. What had been a short walk to the maintenance shed a week ago now stretched into a real hike, blades of grass rising on either side of them like a colonnade with no ceiling. Dew hung from the tips in slow, trembling beads, each one large enough to swallow a person whole if it ever let go.",
    "pt-BR": "Depois disso, caminharam em silêncio por um tempo, o facho da lanterna de Jack varrendo baixo um chão que parecia interminável de um jeito que nunca tinha parecido antes. O que uma semana antes era uma caminhada curta até o galpão de manutenção agora tinha virado uma trilha de verdade, com folhas de grama se erguendo dos dois lados como uma colunata sem teto. O orvalho pendia das pontas em gotas lentas e trêmulas, cada uma grande o bastante para engolir uma pessoa inteira se algum dia se soltasse."
   },
-  "91": {
+  "89": {
    "who": "Narrator",
    "p": 70,
    "en": "They reached the eastern sensor marker without incident. The ground here was undisturbed. No crater. No mark. Nothing to suggest an impact at all.",
    "pt-BR": "Chegaram ao marcador do sensor leste sem nenhum incidente. Ali o chão estava intacto. Nenhuma cratera. Nenhuma marca. Nada que sugerisse um impacto."
   },
-  "92": {
+  "90": {
    "who": "Settlement security",
    "p": 71,
    "en": "Sensor error?",
    "pt-BR": "Erro do sensor?"
   },
-  "93": {
-   "who": "Narrator",
-   "p": 71,
-   "en": "Mark asked.",
-   "pt-BR": "perguntou Mark."
-  },
-  "94": {
+  "91": {
    "who": "Narrator",
    "p": 72,
    "en": "Jack knelt and examined the soil anyway. Then he saw it: a single blade of grass, bent flat and pressed into the dirt, far heavier than wind alone could manage.",
    "pt-BR": "Jack se ajoelhou e examinou o solo mesmo assim. Então ele viu: uma única folha de grama, dobrada rente e pressionada contra a terra, com muito mais peso do que o vento sozinho conseguiria."
   },
-  "95": {
-   "who": "Jack Bennett",
-   "p": 73,
-   "en": "No. Just a lighter touch than the other one,",
-   "pt-BR": "Não. Só um toque mais leve que o outro,"
-  },
-  "96": {
+  "92": {
    "who": "Narrator",
    "p": 73,
-   "en": "he said quietly.",
-   "pt-BR": "disse ele baixinho."
+   "en": "Jack's voice was quiet.",
+   "pt-BR": "A voz de Jack saiu baixa."
   },
-  "97": {
+  "93": {
+   "who": "Jack Bennett",
+   "p": 73,
+   "en": "No. Just a lighter touch than the other one.",
+   "pt-BR": "Não. Só um toque mais leve que o outro."
+  },
+  "94": {
    "who": "Narrator",
    "p": 74,
    "en": "Mark crouched beside him.",
    "pt-BR": "Mark se agachou ao lado dele."
   },
-  "98": {
+  "95": {
    "who": "Settlement security",
    "p": 74,
    "en": "Lighter how?",
    "pt-BR": "Mais leve como?"
   },
-  "99": {
+  "96": {
    "who": "Jack Bennett",
    "p": 75,
    "en": "I don't know yet.",
    "pt-BR": "Ainda não sei."
   },
-  "100": {
+  "97": {
    "who": "Narrator",
    "p": 76,
    "en": "He photographed the mark from three angles before standing, knees protesting after a night with no sleep behind them. Somewhere close by, something rustled through the grass and went still. Neither of them moved until the sound didn't repeat.",
    "pt-BR": "Ele fotografou a marca de três ângulos antes de se levantar, os joelhos reclamando depois de uma noite inteira sem dormir. Em algum lugar ali perto, alguma coisa farfalhou pela grama e ficou imóvel. Nenhum dos dois se mexeu até ficar claro que o som não ia se repetir."
   },
-  "101": {
+  "98": {
    "who": "Narrator",
    "p": 77,
    "en": "Overhead, a bird called somewhere beyond the true boundary of the island, ordinary and distant, unconcerned with anything happening on a scale it would never register. Jack looked up at the lightening sky and felt smaller than the number on his screen had already told him he was.",
    "pt-BR": "Lá no alto, um pássaro cantou em algum lugar além do verdadeiro limite da ilha, comum e distante, alheio a qualquer coisa que acontecesse numa escala que ele jamais perceberia. Jack ergueu os olhos para o céu que clareava e se sentiu menor do que o número na tela já tinha dito que ele era."
   },
-  "102": {
+  "99": {
    "who": "Narrator",
    "p": 78,
    "en": "His radio crackled. Sarah's voice, tight with urgency.",
    "pt-BR": "O rádio dele chiou. A voz de Sarah, tensa de urgência."
   },
-  "103": {
+  "100": {
    "who": "Sarah Bennett",
    "p": 78,
    "en": "Jack. I found the badge.",
    "pt-BR": "Jack. Achei o crachá."
   },
-  "104": {
+  "101": {
    "who": "Jack Bennett",
    "p": 79,
    "en": "Whose?",
    "pt-BR": "De quem?"
   },
-  "105": {
+  "102": {
    "who": "Narrator",
    "p": 80,
    "en": "A pause, longer than he liked.",
    "pt-BR": "Uma pausa, mais longa do que ele gostaria."
   },
-  "106": {
+  "103": {
    "who": "Sarah Bennett",
    "p": 81,
    "en": "I need you back here first.",

@@ -3,7 +3,7 @@ chapter: 1
 title: "The Alarm"
 movement: 1
 pov: Jack
-word_count: 1214
+word_count: 1208
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -70,7 +70,7 @@ Static answered him.
 
 Jack tapped the button again. "Sarah, you there?"
 
-Sarah answered through the speaker. "I'm here. What's wrong?"
+Sarah's voice came through the speaker. "I'm here. What's wrong?"
 
 "I've got something weird on my computer. It tripped a security alarm."
 
@@ -78,7 +78,7 @@ Sarah leaned closer to the intercom. "Define weird."
 
 Jack reopened the network monitor. "I think somebody's in the system."
 
-There was a brief pause before Sarah asked, "Are you sure?"
+There was a brief pause. "Are you sure?"
 
 Jack scanned the empty connection list. "No. That's why I'm calling the smarter scientist."
 
@@ -86,7 +86,7 @@ Sarah laughed softly through the speaker. "Good answer."
 
 Jack smiled despite himself. "Can you come take a look?"
 
-"I'm on my way," Sarah replied.
+"I'm on my way."
 
 Jack released the intercom and looked back at the monitor. The TOMBS directory was still open. "Who are you?"
 
@@ -98,7 +98,7 @@ Jack froze as a file opened.
 
 Sarah Bennett walked straight in, tablet tucked beneath one arm, already crossing toward him. She glanced from Jack to the computer. "Please tell me you didn't break something."
 
-"I was asleep," Jack replied.
+"I was asleep."
 
 Sarah closed the distance between them. "You called me in here to admit that?"
 
@@ -108,7 +108,7 @@ Sarah raised an eyebrow. "Against what?"
 
 Jack pointed toward the monitor. "Whatever this is. I was reviewing yesterday's test results."
 
-"You were sleeping," Sarah corrected him.
+"You were sleeping."
 
 Jack sat a little straighter. "I was reviewing them internally."
 
@@ -144,7 +144,7 @@ Jack kept one hand on the keyboard. "I'm sitting here."
 
 Sarah nudged the arm of his chair, looking slightly annoyed, but sympathetic. "Let me have your chair and get another chair."
 
-"Oh. Of course. Anything for you." Jack gave Sarah his chair, crossed to the next workstation, and dragged its chair back, wheels squeaking against the floor, before pulling himself up to his own screen.
+Jack gave Sarah his chair right away. "Oh. Of course. Anything for you." He crossed to the next workstation and dragged its chair back, wheels squeaking against the floor, before pulling himself up to his own screen.
 
 Sarah was already typing. "You said the connection disappeared?"
 
@@ -156,9 +156,9 @@ Jack shook his head. "I couldn't tell."
 
 Sarah exhaled through her nose. "That's reassuring."
 
-"I thought so." Jack pulled up the TOMBS directory again, tracing back through what had changed.
+Jack didn't look up. "I thought so." He pulled up the TOMBS directory again, tracing back through what had changed.
 
-"These are clean," Sarah murmured after a few seconds, still scanning her own feed.
+Sarah kept scanning her own feed. "These are clean."
 
 Jack pointed at his own screen. "Mine too. Whoever it was covered both trails."
 
@@ -188,7 +188,7 @@ Sarah gave him a look that answered the question for him.
 
 Jack surrendered with a small nod. "Fair."
 
-"Lately the baby seems to think eleven at night is morning." Sarah rested a hand briefly against her stomach, then returned to typing.
+Sarah rested a hand briefly against her stomach. "Lately the baby seems to think eleven at night is morning." Then she returned to typing.
 
 Jack smiled at the movement beneath her hand. "Already takes after me."
 

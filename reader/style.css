@@ -623,3 +623,26 @@ button {
 .tr-en { display: block; margin-top: 6px; font-size: 0.9em; color: var(--text-muted); }
 .tr-en[hidden] { display: none; }
 .tr-orig { display: block; font-size: 0.5em; color: var(--text-muted); font-family: var(--font-body); margin-top: 4px; }
+
+/* Who is speaking: a portrait and a name in front of each spoken line (app.js, tagSpeakers) */
+.spk-bar { max-width: var(--prose-max); margin: 0 auto 10px; }
+.spk-toggle {
+  font: 600 .78rem var(--font-body); color: var(--text-muted); background: transparent;
+  border: 1px solid var(--border-subtle); border-radius: 999px; padding: 5px 12px; cursor: pointer;
+}
+.spk-toggle.on { color: var(--accent-gold); border-color: var(--border-accent); }
+.say-p { margin: 0 0 1.15em; }
+.say { display: flex; align-items: flex-start; gap: .6em; margin: .4em 0; }
+.say-p > .say:first-child { margin-top: 0; }
+.say-p > .say:last-child { margin-bottom: 0; }
+.spk {
+  flex: none; display: inline-flex; align-items: center; gap: .45em; padding-top: .05em;
+  font: 600 .8em var(--font-body); color: var(--accent-gold); letter-spacing: .02em; white-space: nowrap;
+}
+.spk-face {
+  width: 2em; height: 2em; border-radius: 50%; object-fit: cover; flex: none;
+  background: var(--bg-elevated); border: 1px solid var(--border-subtle);
+}
+.spk-initial { display: inline-grid; place-items: center; color: var(--text-secondary); font-size: .95em; }
+.say-q { flex: 1; min-width: 0; padding-top: .2em; }
+@media (min-width: 600px) { .spk { min-width: 7.4em; } }

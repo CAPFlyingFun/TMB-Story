@@ -3,7 +3,7 @@ chapter: 2
 title: "The Boundary"
 movement: 1
 pov: Jack
-word_count: 1004
+word_count: 1001
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -100,7 +100,7 @@ They reached the main control room, where a reinforced window looked into the ch
 
 Tonight, every ring was moving.
 
-"Jack." Sarah's voice dropped as she stared through the reinforced window.
+Sarah stared through the reinforced window, and her voice dropped. "Jack."
 
 "I see it."
 
@@ -164,7 +164,7 @@ Sarah looked toward the array chamber. "Boundary around what?"
 
 "That's what I want to know." Jack keyed his wrist terminal. "Lena, keep the laboratory isolated. Don't sound a settlement alarm yet."
 
-Lena answered immediately. "You sure?"
+"You sure?"
 
 "No. But I don't know what we'd be telling people to do, and I don't want anyone running toward whatever this is."
 

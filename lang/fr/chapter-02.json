@@ -407,16 +407,16 @@
    "fr": "Ce soir, tous les anneaux bougeaient."
   },
   "67": {
+   "who": "Narrator",
+   "p": 36,
+   "en": "Sarah stared through the reinforced window, and her voice dropped.",
+   "fr": "Sarah fixait la vitre renforcée, et sa voix baissa."
+  },
+  "68": {
    "who": "Sarah Bennett",
    "p": 36,
    "en": "Jack.",
    "fr": "Jack."
-  },
-  "68": {
-   "who": "Narrator",
-   "p": 36,
-   "en": "Sarah's voice dropped as she stared through the reinforced window.",
-   "fr": "La voix de Sarah baissa d’un ton tandis qu’elle regardait à travers la vitre renforcée."
   },
   "69": {
    "who": "Jack Bennett",
@@ -761,240 +761,234 @@
    "fr": "Lena, garde le laboratoire isolé. Ne déclenche pas encore l’alarme de la colonie."
   },
   "126": {
-   "who": "Narrator",
-   "p": 68,
-   "en": "Lena answered immediately.",
-   "fr": "Lena répondit aussitôt."
-  },
-  "127": {
    "who": "Lena Ortiz",
    "p": 68,
    "en": "You sure?",
    "fr": "Tu es sûr ?"
   },
-  "128": {
+  "127": {
    "who": "Jack Bennett",
    "p": 69,
    "en": "No. But I don't know what we'd be telling people to do, and I don't want anyone running toward whatever this is.",
    "fr": "Non. Mais je ne sais pas ce qu’on dirait aux gens de faire, et je ne veux voir personne courir droit vers ce truc, quoi que ce soit."
   },
-  "129": {
+  "128": {
    "who": "Narrator",
    "p": 70,
    "en": "Sarah nodded.",
    "fr": "Sarah hocha la tête."
   },
-  "130": {
+  "129": {
    "who": "Sarah Bennett",
    "p": 70,
    "en": "Quiet containment until we know the boundary.",
    "fr": "Confinement discret jusqu’à ce qu’on connaisse la limite."
   },
-  "131": {
+  "130": {
    "who": "Narrator",
    "p": 71,
    "en": "Jack looked back at the screen.",
    "fr": "Jack reporta les yeux sur l’écran."
   },
-  "132": {
+  "131": {
    "who": "Jack Bennett",
    "p": 71,
    "en": "Exactly. If anything changes outside this building, call us.",
    "fr": "Exactement. Si quoi que ce soit change à l’extérieur de ce bâtiment, appelle-nous."
   },
-  "133": {
+  "132": {
    "who": "Lena Ortiz",
    "p": 72,
    "en": "Understood.",
    "fr": "Compris."
   },
-  "134": {
+  "133": {
    "who": "Narrator",
    "p": 73,
    "en": "The laboratory remained quiet beyond the muted warning tones at their consoles. Somewhere outside, nearly five hundred people slept through an emergency they did not know existed.",
    "fr": "Le laboratoire restait silencieux, hormis les signaux d’alerte assourdis de leurs consoles. Quelque part dehors, près de cinq cents personnes dormaient au milieu d’une urgence dont elles ignoraient l’existence."
   },
-  "135": {
+  "134": {
    "who": "Narrator",
    "p": 74,
    "en": "Sarah opened the emitter controls.",
    "fr": "Sarah ouvrit les commandes des émetteurs."
   },
-  "136": {
+  "135": {
    "who": "Sarah Bennett",
    "p": 74,
    "en": "Can we interrupt the boundary?",
    "fr": "On peut interrompre la limite ?"
   },
-  "137": {
+  "136": {
    "who": "Narrator",
    "p": 75,
    "en": "Jack searched through the manual overrides.",
    "fr": "Jack passait en revue les commandes de forçage manuel."
   },
-  "138": {
+  "137": {
    "who": "Jack Bennett",
    "p": 75,
    "en": "I'm trying.",
    "fr": "J’essaie."
   },
-  "139": {
+  "138": {
    "who": "Narrator",
    "p": 76,
    "en": "Sarah pulled up the emitter load.",
    "fr": "Sarah afficha la charge des émetteurs."
   },
-  "140": {
+  "139": {
    "who": "Sarah Bennett",
    "p": 76,
    "en": "Could we overload the emitters?",
    "fr": "On pourrait surcharger les émetteurs ?"
   },
-  "141": {
+  "140": {
    "who": "Narrator",
    "p": 77,
    "en": "Jack studied the numbers.",
    "fr": "Jack étudia les chiffres."
   },
-  "142": {
+  "141": {
    "who": "Jack Bennett",
    "p": 77,
    "en": "Maybe.",
    "fr": "Peut-être."
   },
-  "143": {
+  "142": {
    "who": "Narrator",
    "p": 78,
    "en": "Sarah glanced at him.",
    "fr": "Sarah lui jeta un coup d’œil."
   },
-  "144": {
+  "143": {
    "who": "Sarah Bennett",
    "p": 78,
    "en": "Maybe good, or maybe everyone-inside-the-field-dies bad?",
    "fr": "Un bon peut-être, ou un peut-être du genre tout-le-monde-dans-le-champ-y-reste ?"
   },
-  "145": {
+  "144": {
    "who": "Jack Bennett",
    "p": 79,
    "en": "The second one.",
    "fr": "Le deuxième."
   },
-  "146": {
+  "145": {
    "who": "Narrator",
    "p": 80,
    "en": "Sarah closed the overload control.",
    "fr": "Sarah referma la commande de surcharge."
   },
-  "147": {
+  "146": {
    "who": "Sarah Bennett",
    "p": 80,
    "en": "Then let's not.",
    "fr": "Alors, on oublie."
   },
-  "148": {
+  "147": {
    "who": "Narrator",
    "p": 81,
    "en": "Jack opened another diagnostic window and searched for a route into the controls.",
    "fr": "Jack ouvrit une autre fenêtre de diagnostic et chercha un chemin vers les commandes."
   },
-  "149": {
+  "148": {
    "who": "Jack Bennett",
    "p": 81,
    "en": "Come on. Give me something.",
    "fr": "Allez. Donne-moi quelque chose."
   },
-  "150": {
+  "149": {
    "who": "Narrator",
    "p": 82,
    "en": "The display changed.",
    "fr": "L’affichage changea."
   },
-  "151": {
+  "150": {
    "who": "TOMBS / settlement systems",
    "p": 83,
    "en": "Boundary acquired.",
    "fr": "Limite acquise."
   },
-  "152": {
+  "151": {
    "who": "Narrator",
    "p": 83,
    "en": "Jack's hands stopped.",
    "fr": "Les mains de Jack s’arrêtèrent."
   },
-  "153": {
+  "152": {
    "who": "Jack Bennett",
    "p": 83,
    "en": "No.",
    "fr": "Non."
   },
-  "154": {
+  "153": {
    "who": "Narrator",
    "p": 84,
    "en": "A second line appeared.",
    "fr": "Une deuxième ligne apparut."
   },
-  "155": {
+  "154": {
    "who": "TOMBS / settlement systems",
    "p": 85,
    "en": "Scale factor calculating.",
    "fr": "Calcul du facteur d’échelle."
   },
-  "156": {
+  "155": {
    "who": "Narrator",
    "p": 85,
    "en": "Sarah pointed to it.",
    "fr": "Sarah la montra du doigt."
   },
-  "157": {
+  "156": {
    "who": "Sarah Bennett",
    "p": 85,
    "en": "Jack.",
    "fr": "Jack."
   },
-  "158": {
+  "157": {
    "who": "Narrator",
    "p": 86,
    "en": "Jack kept typing.",
    "fr": "Jack continua de taper."
   },
-  "159": {
+  "158": {
    "who": "Jack Bennett",
    "p": 86,
    "en": "I see it.",
    "fr": "Je vois."
   },
-  "160": {
+  "159": {
    "who": "Narrator",
    "p": 87,
    "en": "Sarah studied the command sequence.",
    "fr": "Sarah étudia la séquence de commandes."
   },
-  "161": {
+  "160": {
    "who": "Sarah Bennett",
    "p": 87,
    "en": "Someone isn't just activating TOMBS.",
    "fr": "Quelqu’un ne se contente pas d’activer TOMBS."
   },
-  "162": {
+  "161": {
    "who": "Narrator",
    "p": 88,
    "en": "Jack opened another control route.",
    "fr": "Jack ouvrit une autre voie de contrôle."
   },
-  "163": {
+  "162": {
    "who": "Jack Bennett",
    "p": 88,
    "en": "No.",
    "fr": "Non."
   },
-  "164": {
+  "163": {
    "who": "Narrator",
    "p": 89,
    "en": "Sarah looked at him.",
    "fr": "Sarah le regarda."
   },
-  "165": {
+  "164": {
    "who": "Sarah Bennett",
    "p": 89,
    "en": "They're running it.",

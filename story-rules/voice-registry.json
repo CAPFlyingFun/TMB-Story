@@ -160,6 +160,63 @@
         "his"
       ],
       "voiceApproved": "2026-10-01"
+    },
+    "paul-harlan": {
+      "id": "paul-harlan",
+      "name": "Paul Harlan",
+      "audioKey": "harlan",
+      "kind": "character",
+      "elevenLabsVoiceId": null,
+      "voiceVersion": 1,
+      "gameExport": true,
+      "aliases": [
+        "Paul Harlan",
+        "Paul",
+        "Harlan"
+      ],
+      "notes": "Introduced in Chapter 12 (pending approval, drafted 2026-10-06): machine-shop foreman, broad and gray-bearded, loud and practical. No voice yet: Joshua chooses one after approving the chapter.",
+      "pronouns": [
+        "he",
+        "him",
+        "his"
+      ]
+    },
+    "unit-four": {
+      "id": "unit-four",
+      "name": "Security, Unit Four",
+      "audioKey": "unitfour",
+      "kind": "character",
+      "elevenLabsVoiceId": null,
+      "voiceVersion": 1,
+      "gameExport": true,
+      "aliases": [
+        "Unit Four"
+      ],
+      "notes": "Introduced in Chapter 11 (pending approval, drafted 2026-10-06): a security officer on the radio, 'young and tense'. A second officer, so not the security-officer entry, which is Mark. No voice yet.",
+      "pronouns": [
+        "they",
+        "them",
+        "theirs"
+      ]
+    },
+    "resident": {
+      "id": "resident",
+      "name": "Resident",
+      "audioKey": "resident",
+      "kind": "character",
+      "elevenLabsVoiceId": null,
+      "voiceVersion": 1,
+      "gameExport": true,
+      "aliases": [
+        "a resident",
+        "the man in the bathrobe"
+      ],
+      "notes": "ONE PLACEHOLDER VOICE for unnamed settlement residents who speak a line or two (Chapters 10 and 12, drafted 2026-10-06, pending approval): the man in the bathrobe, the man in the third row, a voice from the back of the hall, a whisper. No voice yet; Joshua chooses one, or splits this into named speakers if any of them returns.",
+      "pronouns": [
+        "they",
+        "them",
+        "theirs"
+      ]
     }
   }
 }

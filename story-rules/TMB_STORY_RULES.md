@@ -63,7 +63,8 @@ breaks, no character portraits, no subtitles and no game screen.
     `WORLD_RULES.md`.
 3b. **Characters stay funny under pressure.** Natural Jack and Sarah dialogue, humor
     that comes from the relationships, even in the worst hour of the night.
-4. **Speaker identity must be understandable by ear.** The listener has to know who
+4. **Speaker identity must be understandable by ear** (by voice and portrait since
+   decision 0030; rules 5 to 8 now apply to narration that carries story, see 8a). The listener has to know who
    is speaking without seeing the text.
 5. **The two-turn anchor guideline.** After roughly two unanchored dialogue turns,
    identify a speaker again, using an action beat, a reaction, a name, or a natural
@@ -73,15 +74,29 @@ breaks, no character portraits, no subtitles and no game screen.
    naturally exists. A plain tag is perfectly acceptable when it is needed for
    clarity. Do not invent gestures to avoid the word "said".
 7. **With three or more speakers, identify speakers more often.**
-8a. **Beat first, then the whole line** (Joshua, 2026-10-06). Every character has their
-    own voice, so a line split by narration becomes two clips with the narrator between
-    them, and a tag after a line names a speaker the listener has already heard. Put the
-    speaker's action or identification BEFORE the quote, and keep one speaker's line in
-    one unbroken quote: `Aiden swallowed. "Because it's cold. They hunt by sight."`, not
-    `"Because it's cold," Aiden said. "They hunt by sight."` A paragraph is narration,
-    then one quote. When a real pause or event belongs between two lines, give it its own
-    paragraph. Vary how a speaker is anchored (an action, a role, a pronoun) so the same
-    name is not repeated line after line.
+8a. **DIALOGUE ATTRIBUTION RULE** (Joshua, 2026-10-06; decision 0030). TMB-Story identifies
+    speakers structurally: every spoken line carries its speaker in the story data (the
+    audio manifest's `speaker`, pinned in `audio/speaker-overrides.json` wherever the
+    parser cannot see it), the reader shows a portrait and name in front of the line, and
+    the audio plays it in that character's voice. So:
+    - **Do not write tags whose only job is naming the speaker**: "Jack said", "Sarah
+      replied", "Lena asked", "he added", "she murmured". Rapid back-and-forth can be
+      almost entirely bare lines.
+    - **Keep every piece of narration that carries story**: physical action, gestures,
+      expressions, body language, movement, emotional reactions, tone when it materially
+      changes meaning ("Sarah's voice dropped to a whisper."), objects, environment, scene
+      transitions, meaningful pauses and silence, where a voice comes from (a wrist
+      terminal, a speaker, the back of the hall), and anything the visuals and audio cannot
+      carry alone. Not "Sarah murmured, …" but "Sarah kept scanning her own feed." then
+      the line.
+    - **Beat first, then the whole line.** A beat that belongs to a line comes before it,
+      and one speaker's line stays one unbroken quote, so it plays as one clip. A real
+      pause between two lines is its own paragraph.
+    - **Do not invent actions to break up dialogue.**
+    - **Every bare line must be pinned.** After writing, run `python3 scripts/audio.py
+      parse` and read the speaker of every dialogue line; alternation guesses wrong in
+      fast exchanges, so pin each wrong one. A line the page leaves unattributed is only
+      clear because the data says who it is.
 8. **No ambiguous standalone name exchanges.** "Sarah." / "Jack." on their own is out
    unless the surrounding narration makes the speaker unmistakable by ear alone.
 9. **System and computer readouts are story content, not headings.** A line such as

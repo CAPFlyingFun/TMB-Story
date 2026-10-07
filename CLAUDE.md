@@ -48,9 +48,11 @@ action, the two-turn speaker-anchor guideline, spoken numbers written the way th
 pronounced, system readouts as story content rather than headings, the length band,
 and the game-adaptation relationship. Do not restate them here and let the two drift.
 
-The short version, because it governs every line: **one narrator will read every
-character.** The listener has no quotation marks and no paragraph breaks, so the prose
-has to carry who is speaking, at the moment the line is heard.
+The short version, because it governs every line: **every character has their own
+voice, and every spoken line carries its speaker in the story data** (decision 0030).
+The prose does not name speakers just to name them; it keeps every action, emotion and
+pause that tells the story, puts a line's beat before it, and every bare line is pinned
+to its speaker in `audio/speaker-overrides.json`. The reader shows a portrait and name.
 
 ## How we work now
 
@@ -70,7 +72,8 @@ not a fifty-chapter arc. Full version: `outline/WORKFLOW.md`. In short:
    story-rules updates, move the tracker line, and commit.
 
 Chapters 1 to 6 are canon and the foundation; they are not rewritten or restructured
-unasked. Nothing past Chapter 6 is drafted unasked. When Joshua hands over a
+unasked. Since decision 0029, a scheduled daily run drafts the next three chapters; every new
+chapter is pending until Joshua approves it, and no audio is made before approval. When Joshua hands over a
 ChatGPT-drafted block, it is a proposal to review, not canon: the steps are in
 `outline/WORKFLOW.md`.
 `outline/STORY_DIRECTION.md` says what the stretch after Chapter 3 is about --

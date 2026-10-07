@@ -3,7 +3,7 @@ chapter: 8
 title: "Three Weeks"
 movement: 3
 pov: Jack
-word_count: 1154
+word_count: 1143
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -34,7 +34,7 @@ source: "Joshua's Word manuscript, ba62e566-07-09_Chapters - TRADDOMIUM Micro Ba
 
 The file opened onto a short list of coordinates and a single line of metadata: a device signature Jack didn't recognize.
 
-"That's not a TOMBS component," Sarah said, reading over his shoulder.
+Sarah read over his shoulder. "That's not a TOMBS component."
 
 "No."
 
@@ -66,7 +66,7 @@ Nobody said anything for a moment.
 
 Sarah's voice stayed steady, but quiet. "Or somebody used a tablet that belongs here. That's not the same thing."
 
-"It's close enough to keep me up at night," Lena muttered.
+"It's close enough to keep me up at night."
 
 Jack pulled the tablet's checkout log. Dozens of names scrolled past. Anyone with basic facilities access could have signed one out that week. No single entry stood apart.
 
@@ -96,13 +96,13 @@ Sarah looked up at him. Neither of them said anything else.
 
 Mark cleared his throat. "For what it's worth, the door logs would still catch a tailgater. Somebody walking in right behind a badge that already opened it."
 
-"Would they?" Sarah asked.
+"Would they?"
 
 "Camera catches the door, not just the badge reader. I can pull that footage too, if it helps."
 
 "It might. Add it to the list."
 
-"The list is getting long," Lena said, not looking up from the checkout names.
+Lena didn't look up from the checkout names. "The list is getting long."
 
 "The night's getting long too. They're keeping pace."
 
@@ -156,7 +156,7 @@ The door sealed behind them with a soft hydraulic hiss that sounded, tonight, un
 
 Outside, the air had shifted. Not warmer exactly, but less still. Somewhere above the tree line, the darkest part of the sky had started to soften at its edges.
 
-"Dawn's not far," Mark said, following the beam of Jack's light along the tree line.
+Mark followed the beam of Jack's light along the tree line. "Dawn's not far."
 
 "I noticed."
 
@@ -174,11 +174,11 @@ They walked in silence for a while after that, the beam of Jack's light sweeping
 
 They reached the eastern sensor marker without incident. The ground here was undisturbed. No crater. No mark. Nothing to suggest an impact at all.
 
-"Sensor error?" Mark asked.
+"Sensor error?"
 
 Jack knelt and examined the soil anyway. Then he saw it: a single blade of grass, bent flat and pressed into the dirt, far heavier than wind alone could manage.
 
-"No. Just a lighter touch than the other one," he said quietly.
+Jack's voice was quiet. "No. Just a lighter touch than the other one."
 
 Mark crouched beside him. "Lighter how?"
 

@@ -95,100 +95,100 @@
    "pt-BR": "Então voltamos à estaca zero."
   },
   "15": {
-   "who": "Narrator",
-   "p": 10,
-   "en": "Sarah said,",
-   "pt-BR": "Sarah disse:"
-  },
-  "16": {
    "who": "Sarah Bennett",
    "p": 10,
    "en": "We're back to nothing with better questions. That's not the same as nothing.",
    "pt-BR": "Voltamos à estaca zero com perguntas melhores. Não é a mesma coisa que estaca zero."
   },
-  "17": {
+  "16": {
    "who": "Settlement security",
    "p": 11,
    "en": "Feels close enough right now.",
    "pt-BR": "Agora parece bem perto disso."
   },
-  "18": {
+  "17": {
    "who": "Narrator",
    "p": 12,
    "en": "Nobody argued with him either.",
    "pt-BR": "Ninguém discutiu com ele dessa vez também."
   },
-  "19": {
+  "18": {
    "who": "Narrator",
    "p": 13,
    "en": "Jack looked at the frozen badge record, then at the still-glowing message on the other screen, and felt the two pieces settle into the same shape of dread.",
    "pt-BR": "Jack olhou para o registro congelado do crachá, depois para a mensagem que ainda brilhava na outra tela, e sentiu as duas peças se encaixarem na mesma forma de pavor."
   },
-  "20": {
+  "19": {
    "who": "Jack Bennett",
    "p": 14,
    "en": "They didn't just plan the boundary. They planned for us finding the trail.",
    "pt-BR": "Eles não planejaram só o limite. Planejaram a gente encontrar o rastro."
   },
-  "21": {
+  "20": {
    "who": "Narrator",
    "p": 15,
    "en": "Nobody had an answer to that.",
    "pt-BR": "Ninguém teve resposta para aquilo."
   },
-  "22": {
+  "21": {
    "who": "Narrator",
    "p": 16,
    "en": "Jack realized, distantly, that he couldn't remember the last time he'd eaten. Or sat down. The adrenaline that had carried him since the first alarm had thinned into something closer to static, the kind of tiredness that stopped feeling like tiredness and started feeling like a low hum underneath everything else.",
    "pt-BR": "Jack percebeu, de longe, que não conseguia lembrar a última vez que tinha comido. Ou se sentado. A adrenalina que o carregara desde o primeiro alarme tinha se diluído em algo mais próximo de estática, o tipo de cansaço que deixava de parecer cansaço e passava a parecer um zumbido grave sob todo o resto."
   },
-  "23": {
+  "22": {
    "who": "Narrator",
    "p": 17,
    "en": "Sarah touched his arm.",
    "pt-BR": "Sarah tocou o braço dele."
   },
-  "24": {
+  "23": {
    "who": "Sarah Bennett",
    "p": 17,
    "en": "You're still standing. That's something.",
    "pt-BR": "Você ainda está de pé. Já é alguma coisa."
   },
-  "25": {
+  "24": {
    "who": "Jack Bennett",
    "p": 18,
    "en": "Barely.",
    "pt-BR": "Por pouco."
   },
-  "26": {
+  "25": {
    "who": "Sarah Bennett",
    "p": 19,
    "en": "Barely counts.",
    "pt-BR": "Por pouco conta."
   },
-  "27": {
+  "26": {
    "who": "Jack Bennett",
    "p": 20,
    "en": "Does it?",
    "pt-BR": "Conta?"
   },
-  "28": {
+  "27": {
    "who": "Sarah Bennett",
    "p": 21,
    "en": "Tonight it does.",
    "pt-BR": "Hoje conta."
   },
-  "29": {
+  "28": {
    "who": "Narrator",
    "p": 22,
    "en": "Outside, the gray had started pulling apart into color. Jack crossed to the window without deciding to and watched the first true light of morning reach the tops of the grass blades beyond the boundary, each one taller than the control room itself, each one catching the light like a tree catching fire, slow and gold from the top down.",
    "pt-BR": "Lá fora, o cinza tinha começado a se desfazer em cor. Jack foi até a janela sem decidir ir e viu a primeira luz verdadeira da manhã alcançar as pontas das folhas de grama além do limite, cada uma mais alta que a própria sala de controle, cada uma pegando a luz como uma árvore pegando fogo, devagar e dourada, de cima para baixo."
   },
-  "30": {
+  "29": {
    "who": "Narrator",
    "p": 23,
    "en": "Dew clung to individual blades in beads the size of boulders, each one glowing faintly as the light passed through it. Somewhere out past the tree line, birdsong started up, layered and enormous, utterly indifferent to the five hundred people rebuilding their understanding of the word small.",
    "pt-BR": "O orvalho se agarrava a cada folha em gotas do tamanho de rochedos, cada uma brilhando de leve conforme a luz a atravessava. Em algum lugar além da linha das árvores, o canto dos pássaros começou, em camadas e enorme, totalmente indiferente às quinhentas pessoas que estavam reconstruindo o que entendiam pela palavra pequeno."
+  },
+  "30": {
+   "who": "Narrator",
+   "p": 24,
+   "en": "Lena stood beside him.",
+   "pt-BR": "Lena estava ao lado dele."
   },
   "31": {
    "who": "Lena Ortiz",
@@ -199,8 +199,8 @@
   "32": {
    "who": "Narrator",
    "p": 24,
-   "en": "Lena trailed off, standing beside him.",
-   "pt-BR": "Lena não terminou a frase, de pé ao lado dele."
+   "en": "She trailed off.",
+   "pt-BR": "A voz dela foi sumindo."
   },
   "33": {
    "who": "Jack Bennett",
@@ -335,156 +335,126 @@
    "pt-BR": "Ele encerrou a chamada e olhou para Sarah."
   },
   "55": {
-   "who": "Narrator",
-   "p": 44,
-   "en": "She said,",
-   "pt-BR": "Ela disse:"
-  },
-  "56": {
    "who": "Sarah Bennett",
    "p": 44,
    "en": "That's it. We can't wait for department heads anymore. People are already finding out on their own.",
    "pt-BR": "Pronto. A gente não pode mais esperar os chefes de departamento. As pessoas já estão descobrindo sozinhas."
   },
-  "57": {
+  "56": {
    "who": "Narrator",
    "p": 45,
    "en": "It was almost funny, in the darkest possible way. They'd spent the whole night arguing about when to tell people. The island had just made the decision for them.",
    "pt-BR": "Era quase engraçado, do jeito mais sombrio possível. Eles tinham passado a noite inteira discutindo quando contar para as pessoas. A ilha acabara de tomar a decisão por eles."
   },
-  "58": {
+  "57": {
    "who": "Narrator",
    "p": 46,
    "en": "Jack nodded slowly, watching the light climb higher over the transformed settlement, gold fading into full morning blue. Somewhere out there, five hundred people were about to wake into a world that no longer matched the one they'd fallen asleep in.",
    "pt-BR": "Jack assentiu devagar, observando a luz subir mais alto sobre a vila transformada, o dourado se desfazendo no azul pleno da manhã. Em algum lugar lá fora, quinhentas pessoas estavam prestes a acordar num mundo que já não correspondia àquele em que tinham adormecido."
   },
-  "59": {
-   "who": "Narrator",
-   "p": 47,
-   "en": "He said,",
-   "pt-BR": "Ele disse:"
-  },
-  "60": {
+  "58": {
    "who": "Jack Bennett",
    "p": 47,
    "en": "Then we stop trying to control when they find out, and start deciding what we tell them once they do.",
    "pt-BR": "Então a gente para de tentar controlar quando eles vão descobrir e começa a decidir o que vamos contar quando descobrirem."
   },
-  "61": {
+  "59": {
    "who": "Narrator",
    "p": 48,
    "en": "It wasn't a plan. Not really. But it was the first thing all night that had felt like moving forward instead of just reacting to whatever happened next.",
    "pt-BR": "Não era um plano. Não de verdade. Mas era a primeira coisa, a noite inteira, que dava a sensação de seguir em frente em vez de só reagir ao que quer que acontecesse a seguir."
   },
-  "62": {
+  "60": {
    "who": "Narrator",
    "p": 49,
    "en": "Mark reached for his radio.",
    "pt-BR": "Mark pegou o rádio."
   },
-  "63": {
+  "61": {
    "who": "Settlement security",
    "p": 49,
    "en": "I'll get the department heads moving.",
    "pt-BR": "Vou colocar os chefes de departamento em movimento."
   },
-  "64": {
-   "who": "Narrator",
-   "p": 50,
-   "en": "Jack said,",
-   "pt-BR": "Jack disse:"
-  },
-  "65": {
+  "62": {
    "who": "Jack Bennett",
    "p": 50,
    "en": "Start with medical. Mercer's earned that much.",
    "pt-BR": "Começa pelo setor médico. A Mercer merece pelo menos isso."
   },
-  "66": {
+  "63": {
    "who": "Settlement security",
    "p": 51,
    "en": "Already planned on it.",
    "pt-BR": "Já estava nos meus planos."
   },
-  "67": {
+  "64": {
    "who": "Narrator",
    "p": 52,
    "en": "Lena was already typing.",
    "pt-BR": "Lena já estava digitando."
   },
-  "68": {
+  "65": {
    "who": "Lena Ortiz",
    "p": 52,
    "en": "I'll pull every camera we've got. If people are going to see this, they should see it clearly instead of piecing it together out of panic.",
    "pt-BR": "Vou puxar todas as câmeras que a gente tem. Se as pessoas vão ver isso, que vejam com clareza, em vez de montar o quebra-cabeça no meio do pânico."
   },
-  "69": {
+  "66": {
    "who": "Sarah Bennett",
    "p": 53,
    "en": "How long to put together something people can actually understand?",
    "pt-BR": "Quanto tempo pra montar alguma coisa que as pessoas consigam entender de verdade?"
   },
-  "70": {
-   "who": "Narrator",
-   "p": 53,
-   "en": "Sarah asked.",
-   "pt-BR": "perguntou Sarah."
-  },
-  "71": {
+  "67": {
    "who": "Lena Ortiz",
    "p": 54,
    "en": "Depends how much you want to tell them the truth versus how much you want them to stay calm.",
    "pt-BR": "Depende de quanto você quer contar a verdade pra elas e de quanto você quer que elas fiquem calmas."
   },
-  "72": {
+  "68": {
    "who": "Sarah Bennett",
    "p": 55,
    "en": "Both. In that order.",
    "pt-BR": "As duas coisas. Nessa ordem."
   },
-  "73": {
-   "who": "Narrator",
-   "p": 56,
-   "en": "Lena said,",
-   "pt-BR": "Lena disse:"
-  },
-  "74": {
+  "69": {
    "who": "Lena Ortiz",
    "p": 56,
    "en": "Then twenty minutes. Maybe less.",
    "pt-BR": "Então vinte minutos. Talvez menos."
   },
-  "75": {
+  "70": {
    "who": "Narrator",
    "p": 57,
    "en": "Jack looked around the control room, at the cold coffee and the frozen frame of the shape in the grass and the three words still glowing at the edge of the display, and understood that nothing about the next few hours was going to be simple.",
    "pt-BR": "Jack olhou em volta da sala de controle, para o café frio, para o quadro congelado da forma na grama e para as três palavras que ainda brilhavam no canto da tela, e entendeu que nada nas próximas horas ia ser simples."
   },
-  "76": {
+  "71": {
    "who": "Narrator",
    "p": 58,
    "en": "Sarah looked at Jack.",
    "pt-BR": "Sarah olhou para Jack."
   },
-  "77": {
+  "72": {
    "who": "Sarah Bennett",
    "p": 58,
    "en": "Ready?",
    "pt-BR": "Pronto?"
   },
-  "78": {
+  "73": {
    "who": "Narrator",
    "p": 59,
    "en": "He wasn't. He said it anyway.",
    "pt-BR": "Ele não estava. Disse mesmo assim."
   },
-  "79": {
+  "74": {
    "who": "Jack Bennett",
    "p": 59,
    "en": "Yeah.",
    "pt-BR": "Tô."
   },
-  "80": {
+  "75": {
    "who": "Narrator",
    "p": 60,
    "en": "Outside, the sun cleared the horizon, and the first full day of the smallest version of their world began.",

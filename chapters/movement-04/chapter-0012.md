@@ -3,7 +3,7 @@ chapter: 12
 title: "One Clear Message"
 movement: 4
 pov: Jack
-word_count: 1821
+word_count: 1818
 story_time:
   clock: settlement
   date: "March sixth, twenty-one ten"
@@ -187,7 +187,7 @@ The questions came again, but slower now, one at a time.
 
 Jack had known that one was coming since he stepped onto the stage. He still felt it land.
 
-Jack answered slowly. "I don't know. I haven't tried. And I'm not going to try until I understand exactly what it would do. If I get that wrong, I don't get a second chance, and neither do you."
+"I don't know. I haven't tried. And I'm not going to try until I understand exactly what it would do. If I get that wrong, I don't get a second chance, and neither do you."
 
 "Then call for help. Call the mainland."
 

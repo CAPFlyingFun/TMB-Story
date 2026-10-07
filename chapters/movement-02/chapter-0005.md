@@ -3,7 +3,7 @@ chapter: 5
 title: "The Edge"
 movement: 2
 pov: Jack
-word_count: 1562
+word_count: 1557
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -121,7 +121,7 @@ A security officer stood just outside it, radio clipped to his shoulder, careful
 
 He nodded down the hallway behind him. "Mark Jones, perimeter security. I'm headed to the southern boundary for a visual check, inside the developed zone. Wanted you to know before I go."
 
-"I'll be at the vehicle," Mark said, and stepped back from the doorway.
+Mark gave a quick nod. "I'll be at the vehicle." He stepped back from the doorway.
 
 Jack looked at the camera feeds again. The same still grass. The same dark, unreadable line where the settlement stopped.
 
@@ -137,7 +137,7 @@ The answer came so fast that Jack looked up.
 
 "I didn't need to. It's dangerous."
 
-"I know. But the cameras aren't enough. I've watched that boundary since this started and it hasn't told me anything the sensors couldn't already give me as a number," Jack said, keeping his voice even.
+Jack kept his voice even. "I know. But the cameras aren't enough. I've watched that boundary since this started and it hasn't told me anything the sensors couldn't already give me as a number."
 
 "So now you want to go stand next to it."
 
@@ -169,7 +169,7 @@ Sarah crossed to him and handed him a small environmental sensor from the consol
 
 She raised an eyebrow.
 
-"Intentionally," he added.
+"Intentionally."
 
 "Jack."
 
@@ -195,7 +195,7 @@ Sarah rested a hand against it. "Both of us."
 
 "Love you too. Now go, before I change my mind."
 
-"Stay on our side," she added, already turning back to the console.
+Sarah was already turning back to the console. "Stay on our side."
 
 "I'll stay on our side. I promise not to make friends with the grass."
 
@@ -235,7 +235,7 @@ Jack stepped out of the vehicle.
 
 The nearest blade of grass towered over him. Its base was wider than his torso, and fine hairs along its surface looked like stiff branches. A ridge of soil beyond the pavement rose several stories above the road.
 
-Mark whispered, "That's grass."
+Mark's voice dropped to a whisper. "That's grass."
 
 Jack lifted the sensor. "Apparently."
 
@@ -243,7 +243,7 @@ Sarah's voice came through his wrist. "Readings?"
 
 He held the device toward the boundary. "Air is normal. Temperature difference is negligible. Pressure is normal."
 
-Lena asked, "Radiation?"
+"Radiation?"
 
 "Background."
 
@@ -281,7 +281,7 @@ Sarah's voice came through his wrist. "Don't touch it."
 
 "I wasn't going to."
 
-Lena added, "For once, I believe him."
+"For once, I believe him."
 
 Jack stood and swept his light farther along the boundary.
 
@@ -303,7 +303,7 @@ Jack studied the shape through his wrist camera. "Fair. It's long. Curved. Kind 
 
 Jack zoomed in further. The pale object curved upward from the dirt, smooth and translucent at one end.
 
-"Is that plastic?" Mark asked.
+"Is that plastic?"
 
 Jack increased the magnification.
 
@@ -319,7 +319,7 @@ Jack went still. "Yeah. Actually — yeah."
 
 Sarah confirmed it a second later, over the feed. "Jack, that's a fingernail."
 
-"Toenail or thumbnail?" Mark asked.
+"Toenail or thumbnail?"
 
 "Does it matter?"
 

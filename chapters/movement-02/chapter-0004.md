@@ -3,7 +3,7 @@ chapter: 4
 title: "The First Calls"
 movement: 2
 pov: Jack
-word_count: 1558
+word_count: 1556
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -91,7 +91,7 @@ Lena let out a quiet breath. "I was hoping you wouldn't say that."
 
 "Already locking the exterior doors."
 
-Lena continued, steadier now. "Most of the developed zone still has power. Three localized faults, nothing catastrophic."
+Lena sounded steadier now. "Most of the developed zone still has power. Three localized faults, nothing catastrophic."
 
 "That's good."
 
@@ -289,7 +289,7 @@ Sarah's mouth twitched, but she didn't look up from her tablet.
 
 A call came through on the console. Lena's name.
 
-"We have a water estimate," she said, before Jack could even greet her.
+Lena didn't wait for a greeting. "We have a water estimate."
 
 Jack straightened. "How bad?"
 

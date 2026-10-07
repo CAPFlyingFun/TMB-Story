@@ -3,7 +3,7 @@ chapter: 3
 title: "The Activation"
 movement: 1
 pov: Jack
-word_count: 1395
+word_count: 1390
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -128,21 +128,21 @@ Lena checked the system report from the utility station. "We've got power. Most 
 
 Jack opened the communications panel. "Internal?"
 
-Lena answered, "External. We can't reach anything beyond the settlement."
+"External. We can't reach anything beyond the settlement."
 
 Jack selected the satellite link. "Satellite?"
 
-Lena replied, "Nothing."
+"Nothing."
 
 Jack switched to radio. "Radio?"
 
-Lena answered again. "Nothing."
+"Nothing."
 
 Behind him, Sarah had walked toward a window. "Jack."
 
 Jack kept his attention on the terminal. "Try the emergency frequencies."
 
-Sarah called again from the window. "Jack."
+Sarah was still at the window. "Jack."
 
 Jack cycled through another channel. "One second."
 
@@ -190,13 +190,13 @@ She looked at him, then back at the image.
 
 Jack changed cameras again. A security light near the southern boundary illuminated what looked like a curved glass wall. For a moment he could not place it. Then a bead of water slid down the surface, trembling in the light.
 
-Sarah whispered, "That's a drop of water."
+Sarah's voice dropped to a whisper. "That's a drop of water."
 
 Jack said nothing. The droplet was enormous compared with the nearby road.
 
 A faint vibration passed through the building. It was softer than the TOMBS Array had been, but deeper, almost like distant thunder. Both of them froze.
 
-"Was that us?" Sarah asked.
+"Was that us?"
 
 Jack checked the structural monitor. "No seismic event."
 

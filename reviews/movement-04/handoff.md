@@ -78,3 +78,12 @@ and keeps the line whole. One deliberate pause stays as its own paragraph: Paul 
 "Somebody switched it on." / He let that sit for a long moment before he finished. / "So
 who was it?" The rule is now `TMB_STORY_RULES.md` 8a. Word counts 1,575 / 1,726 / 1,821;
 Chapter 12 is twenty-one words over the 1,800 guide, left as is rather than cut.
+
+## Speaker attribution pass, 2026-10-06 (decision 0030)
+
+Joshua's DIALOGUE ATTRIBUTION RULE applied to Chapters 1 to 12: speaker-only tags out,
+story-carrying narration kept, every bare line pinned in `audio/speaker-overrides.json`,
+and the reader now shows a portrait and name before every spoken line. In these three
+chapters, 67 parser guesses were wrong and are pinned; every dialogue line in 10 to 12
+was read against the scene. New speakers without voices: Paul Harlan, Unit Four, and a
+placeholder "Resident" for the unnamed townspeople.

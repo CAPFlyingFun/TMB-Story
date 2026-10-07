@@ -407,16 +407,16 @@
    "id": "Malam ini, semua cincin bergerak."
   },
   "67": {
+   "who": "Narrator",
+   "p": 36,
+   "en": "Sarah stared through the reinforced window, and her voice dropped.",
+   "id": "Sarah menatap lewat jendela yang diperkuat, dan suaranya merendah."
+  },
+  "68": {
    "who": "Sarah Bennett",
    "p": 36,
    "en": "Jack.",
    "id": "Jack."
-  },
-  "68": {
-   "who": "Narrator",
-   "p": 36,
-   "en": "Sarah's voice dropped as she stared through the reinforced window.",
-   "id": "Suara Sarah merendah ketika ia menatap lewat jendela yang diperkuat itu."
   },
   "69": {
    "who": "Jack Bennett",
@@ -761,240 +761,234 @@
    "id": "Lena, biarkan laboratorium tetap terisolasi. Jangan bunyikan alarm permukiman dulu."
   },
   "126": {
-   "who": "Narrator",
-   "p": 68,
-   "en": "Lena answered immediately.",
-   "id": "Lena langsung menjawab."
-  },
-  "127": {
    "who": "Lena Ortiz",
    "p": 68,
    "en": "You sure?",
    "id": "Kamu yakin?"
   },
-  "128": {
+  "127": {
    "who": "Jack Bennett",
    "p": 69,
    "en": "No. But I don't know what we'd be telling people to do, and I don't want anyone running toward whatever this is.",
    "id": "Tidak. Tapi aku tidak tahu apa yang harus kita suruh orang-orang lakukan, dan aku tidak mau ada yang malah berlari mendekati entah apa ini."
   },
-  "129": {
+  "128": {
    "who": "Narrator",
    "p": 70,
    "en": "Sarah nodded.",
    "id": "Sarah mengangguk."
   },
-  "130": {
+  "129": {
    "who": "Sarah Bennett",
    "p": 70,
    "en": "Quiet containment until we know the boundary.",
    "id": "Penahanan senyap sampai batas itu jelas."
   },
-  "131": {
+  "130": {
    "who": "Narrator",
    "p": 71,
    "en": "Jack looked back at the screen.",
    "id": "Jack kembali menatap layar."
   },
-  "132": {
+  "131": {
    "who": "Jack Bennett",
    "p": 71,
    "en": "Exactly. If anything changes outside this building, call us.",
    "id": "Tepat. Kalau ada yang berubah di luar gedung ini, hubungi kami."
   },
-  "133": {
+  "132": {
    "who": "Lena Ortiz",
    "p": 72,
    "en": "Understood.",
    "id": "Dimengerti."
   },
-  "134": {
+  "133": {
    "who": "Narrator",
    "p": 73,
    "en": "The laboratory remained quiet beyond the muted warning tones at their consoles. Somewhere outside, nearly five hundred people slept through an emergency they did not know existed.",
    "id": "Laboratorium tetap sunyi, kecuali nada peringatan yang teredam di konsol-konsol mereka. Di suatu tempat di luar sana, hampir lima ratus orang tidur lelap di tengah keadaan darurat yang bahkan tidak mereka ketahui."
   },
-  "135": {
+  "134": {
    "who": "Narrator",
    "p": 74,
    "en": "Sarah opened the emitter controls.",
    "id": "Sarah membuka kendali emitor."
   },
-  "136": {
+  "135": {
    "who": "Sarah Bennett",
    "p": 74,
    "en": "Can we interrupt the boundary?",
    "id": "Bisa kita putus batas itu?"
   },
-  "137": {
+  "136": {
    "who": "Narrator",
    "p": 75,
    "en": "Jack searched through the manual overrides.",
    "id": "Jack menelusuri berbagai override manual."
   },
-  "138": {
+  "137": {
    "who": "Jack Bennett",
    "p": 75,
    "en": "I'm trying.",
    "id": "Sedang kucoba."
   },
-  "139": {
+  "138": {
    "who": "Narrator",
    "p": 76,
    "en": "Sarah pulled up the emitter load.",
    "id": "Sarah memunculkan beban emitor di layar."
   },
-  "140": {
+  "139": {
    "who": "Sarah Bennett",
    "p": 76,
    "en": "Could we overload the emitters?",
    "id": "Bisa kita buat emitornya kelebihan beban?"
   },
-  "141": {
+  "140": {
    "who": "Narrator",
    "p": 77,
    "en": "Jack studied the numbers.",
    "id": "Jack mencermati angka-angkanya."
   },
-  "142": {
+  "141": {
    "who": "Jack Bennett",
    "p": 77,
    "en": "Maybe.",
    "id": "Mungkin."
   },
-  "143": {
+  "142": {
    "who": "Narrator",
    "p": 78,
    "en": "Sarah glanced at him.",
    "id": "Sarah meliriknya."
   },
-  "144": {
+  "143": {
    "who": "Sarah Bennett",
    "p": 78,
    "en": "Maybe good, or maybe everyone-inside-the-field-dies bad?",
    "id": "Mungkin dalam arti bagus, atau mungkin dalam arti semua-orang-di-dalam-medan-tewas?"
   },
-  "145": {
+  "144": {
    "who": "Jack Bennett",
    "p": 79,
    "en": "The second one.",
    "id": "Yang kedua."
   },
-  "146": {
+  "145": {
    "who": "Narrator",
    "p": 80,
    "en": "Sarah closed the overload control.",
    "id": "Sarah menutup kendali kelebihan beban."
   },
-  "147": {
+  "146": {
    "who": "Sarah Bennett",
    "p": 80,
    "en": "Then let's not.",
    "id": "Kalau begitu, jangan."
   },
-  "148": {
+  "147": {
    "who": "Narrator",
    "p": 81,
    "en": "Jack opened another diagnostic window and searched for a route into the controls.",
    "id": "Jack membuka jendela diagnostik lain dan mencari jalan masuk ke kendali."
   },
-  "149": {
+  "148": {
    "who": "Jack Bennett",
    "p": 81,
    "en": "Come on. Give me something.",
    "id": "Ayolah. Kasih aku sesuatu."
   },
-  "150": {
+  "149": {
    "who": "Narrator",
    "p": 82,
    "en": "The display changed.",
    "id": "Tampilan di layar berubah."
   },
-  "151": {
+  "150": {
    "who": "TOMBS / settlement systems",
    "p": 83,
    "en": "Boundary acquired.",
    "id": "Batas terakuisisi."
   },
-  "152": {
+  "151": {
    "who": "Narrator",
    "p": 83,
    "en": "Jack's hands stopped.",
    "id": "Tangan Jack terhenti."
   },
-  "153": {
+  "152": {
    "who": "Jack Bennett",
    "p": 83,
    "en": "No.",
    "id": "Tidak."
   },
-  "154": {
+  "153": {
    "who": "Narrator",
    "p": 84,
    "en": "A second line appeared.",
    "id": "Baris kedua muncul."
   },
-  "155": {
+  "154": {
    "who": "TOMBS / settlement systems",
    "p": 85,
    "en": "Scale factor calculating.",
    "id": "Menghitung faktor skala."
   },
-  "156": {
+  "155": {
    "who": "Narrator",
    "p": 85,
    "en": "Sarah pointed to it.",
    "id": "Sarah menunjuk baris itu."
   },
-  "157": {
+  "156": {
    "who": "Sarah Bennett",
    "p": 85,
    "en": "Jack.",
    "id": "Jack."
   },
-  "158": {
+  "157": {
    "who": "Narrator",
    "p": 86,
    "en": "Jack kept typing.",
    "id": "Jack terus mengetik."
   },
-  "159": {
+  "158": {
    "who": "Jack Bennett",
    "p": 86,
    "en": "I see it.",
    "id": "Aku lihat."
   },
-  "160": {
+  "159": {
    "who": "Narrator",
    "p": 87,
    "en": "Sarah studied the command sequence.",
    "id": "Sarah mencermati urutan perintah itu."
   },
-  "161": {
+  "160": {
    "who": "Sarah Bennett",
    "p": 87,
    "en": "Someone isn't just activating TOMBS.",
    "id": "Ada orang yang bukan sekadar mengaktifkan TOMBS."
   },
-  "162": {
+  "161": {
    "who": "Narrator",
    "p": 88,
    "en": "Jack opened another control route.",
    "id": "Jack membuka jalur kendali lain."
   },
-  "163": {
+  "162": {
    "who": "Jack Bennett",
    "p": 88,
    "en": "No.",
    "id": "Memang bukan."
   },
-  "164": {
+  "163": {
    "who": "Narrator",
    "p": 89,
    "en": "Sarah looked at him.",
    "id": "Sarah menatapnya."
   },
-  "165": {
+  "164": {
    "who": "Sarah Bennett",
    "p": 89,
    "en": "They're running it.",

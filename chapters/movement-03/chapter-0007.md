@@ -3,7 +3,7 @@ chapter: 7
 title: "Phase Two"
 movement: 3
 pov: Jack
-word_count: 1166
+word_count: 1155
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -60,7 +60,7 @@ PHASE ONE READY.
 
 He typed a search for the word phase across the rest of the diagnostic snapshot. The system returned nothing.
 
-"Nothing else?" Lena asked, leaning over his shoulder.
+Lena leaned over his shoulder. "Nothing else?"
 
 "Not yet."
 
@@ -76,7 +76,7 @@ Nobody answered right away.
 
 Sarah spoke carefully, working through it out loud. "Phase one already happened. It didn't need anything running afterward to keep working. The boundary's already set."
 
-Jack said slowly, "So it's not a location. It's something that still has to trigger."
+"So it's not a location. It's something that still has to trigger."
 
 "Or something waiting on a timer."
 
@@ -84,7 +84,7 @@ The room went quiet long enough that Jack could hear the console fans working un
 
 Jack broke the silence first. "A trigger needs two things. A condition, and a target."
 
-Sarah said, "The condition could be anything. Time. A command. Someone doing something specific without realizing it."
+"The condition could be anything. Time. A command. Someone doing something specific without realizing it."
 
 "That's not comforting."
 
@@ -92,7 +92,7 @@ Sarah said, "The condition could be anything. Time. A command. Someone doing som
 
 Lena rubbed her eyes with the heel of her hand. "Can the target be something that already happened? Or does it have to be something we haven't done yet?"
 
-Jack admitted, "I don't know. That's the part I don't like."
+"I don't know. That's the part I don't like."
 
 "There's a lot of parts you don't like tonight."
 
@@ -100,7 +100,7 @@ Jack admitted, "I don't know. That's the part I don't like."
 
 Sarah's hand drifted to her stomach and stayed there a moment before she caught herself and dropped it back to the console. If Jack noticed, he didn't say anything.
 
-"Could it target a person?" she asked instead.
+Instead, she asked, "Could it target a person?"
 
 Jack looked up. "Why would you ask that?"
 
@@ -164,7 +164,7 @@ Jack looked at her. "And if one of them panics anyway?"
 
 "Then we handle that when it happens. We can't keep running this with four people and one extremely patient doctor."
 
-Mark said, "Five. You're forgetting me."
+"Five. You're forgetting me."
 
 "Four people, one doctor, and a security officer who ran from a shadow."
 
@@ -180,7 +180,7 @@ That got the first real laugh out of anyone in over an hour, short and tired as 
 
 Jack didn't answer immediately. He turned back to the diagnostic snapshot instead, scrolling through file after file of routine hardware logs while the others kept talking behind him.
 
-"What are you doing?" Sarah asked, noticing.
+Sarah noticed. "What are you doing?"
 
 "If they hid one file for three weeks, I don't think they stopped at one."
 
