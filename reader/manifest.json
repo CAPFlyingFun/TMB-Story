@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02",
+  "generated": "2026-10-06",
   "movements": [
     {
       "number": 1,
@@ -17,6 +17,12 @@
       "number": 3,
       "dir": "outline/movement-03",
       "overview": "outline/movement-03/overview.md",
+      "miniArcs": []
+    },
+    {
+      "number": 4,
+      "dir": "outline/movement-04",
+      "overview": "outline/movement-04/overview.md",
       "miniArcs": []
     }
   ],
@@ -119,6 +125,39 @@
       "review_status": "in-review",
       "audio_status": "recorded",
       "ending_type": "turning point"
+    },
+    {
+      "number": 10,
+      "path": "chapters/movement-04/chapter-0010.md",
+      "movement": 4,
+      "title": "The Greenhouse",
+      "pov": "Jack",
+      "word_count": 1544,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "approaching danger"
+    },
+    {
+      "number": 11,
+      "path": "chapters/movement-04/chapter-0011.md",
+      "movement": 4,
+      "title": "Slow Is Invisible",
+      "pov": "Jack",
+      "word_count": 1685,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "complication"
+    },
+    {
+      "number": 12,
+      "path": "chapters/movement-04/chapter-0012.md",
+      "movement": 4,
+      "title": "One Clear Message",
+      "pov": "Jack",
+      "word_count": 1791,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "unanswered question"
     }
   ],
   "storyRules": [

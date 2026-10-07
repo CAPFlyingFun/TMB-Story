@@ -220,7 +220,8 @@
   function reviewBadge(status) {
     var s = String(status || "draft");
     var cls = s === "approved" ? "badge-sage" : s === "in-review" ? "badge-gold" : "";
-    return '<span class="badge ' + cls + '">' + esc(s) + "</span>";
+    var label = s === "approved" ? "approved canon" : s === "in-review" ? "pending approval" : s;
+    return '<span class="badge ' + cls + '">' + esc(label) + "</span>";
   }
 
   function audioBadge(status) {
