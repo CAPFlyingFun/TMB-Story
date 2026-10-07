@@ -87,48 +87,11 @@ function blendMaps(a, b, k) {
   for (const j of new Set([...a.keys(), ...b.keys()])) out.set(j, qSlerp(a.get(j) || IDENTITY, b.get(j) || IDENTITY, k));
   return out;
 }
-// A SKIRT THAT SITS DOWN. Sarah's skirt is weighted to whichever leg bone is nearest, so
-// when her thighs come level it tears between them into points at the knees. This is
-// ChatGPT's correction (TMB-Interactive-Story, app/game/three/seated-skin.ts), by joint
-// rather than by bone name: below the hips, each vertex's weights are blended toward bands
-// down the leg on its own side -- the pelvis at the top, then thigh, shin and foot -- so the
-// cloth follows the legs smoothly. The GLB is untouched; the rest shape is unchanged, and
-// nothing above 0.98 m is.
-function smoothSkirt(root, j) {
-  const sm = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
-  root.updateMatrixWorld(true);
-  root.traverse((o) => {
-    if (!o.isSkinnedMesh) return;
-    o.skeleton.update();
-    const g = o.geometry, P = g.getAttribute("position"), J0 = g.getAttribute("skinIndex"), W0 = g.getAttribute("skinWeight");
-    const J = new Uint16Array(P.count * 4), Wt = new Float32Array(P.count * 4), v = new THREE.Vector3();
-    for (let i = 0; i < P.count; i++) {
-      v.fromBufferAttribute(P, i);
-      o.applyBoneTransform(i, v);
-      v.applyMatrix4(o.matrixWorld);
-      const y = v.y, amount = 1 - sm(0.86, 0.98, y), sum = new Map();
-      const add = (b, w) => { if (b >= 0 && w > 0) sum.set(b, (sum.get(b) || 0) + w); };
-      for (let k = 0; k < 4; k++) add(J0.getComponent(i, k), W0.getComponent(i, k) * (1 - amount));
-      if (amount > 0) {
-        const hip = sm(0.79, 0.94, y), knee = sm(0.38, 0.57, y), ankle = sm(0.065, 0.17, y), right = sm(-0.045, 0.045, v.x);
-        add(j.pelvis, amount * hip);
-        for (const [legs, f] of [[[j.hipR, j.kneeR, j.ankleR], 1 - right], [[j.hipL, j.kneeL, j.ankleL], right]]) {
-          const w = amount * (1 - hip) * f;
-          add(legs[0], w * knee);
-          add(legs[1], w * (1 - knee) * ankle);
-          add(legs[2], w * (1 - knee) * (1 - ankle));
-        }
-      }
-      const best = [...sum].sort((a, b) => b[1] - a[1]).slice(0, 4), total = best.reduce((t, x) => t + x[1], 0) || 1;
-      for (let k = 0; k < 4; k++) {
-        J[i * 4 + k] = best[k] ? best[k][0] : 0;
-        Wt[i * 4 + k] = best[k] ? best[k][1] / total : 0;
-      }
-    }
-    g.setAttribute("skinIndex", new THREE.Uint16BufferAttribute(J, 4));
-    g.setAttribute("skinWeight", new THREE.Float32BufferAttribute(Wt, 4));
-  });
-}
+// No skirt pass. The scan Sarah's skirt needed its weights blended down the legs at load
+// (ChatGPT's seated-skin correction); toon Sarah wears leggings, and the same pass on her
+// dragged the front of her torso -- her bump -- with the thighs. Her bump's weights are fixed
+// where they belong, in the model's bake (TRADDOMIUM scripts/protectBumpWeights.mjs), and
+// scripts/tests/test_people3d.py keeps a load-time skirt pass from coming back.
 
 // Gestures that give an arm a job, so a talking hand leaves it alone.
 const HANDS_BUSY = new Set(["type", "keys", "reach", "point", "hand-on-belly", "small-hand-gesture", "wave", "press", "tap"]);
@@ -433,7 +396,6 @@ export class People3D {
   addBody(id, model) {
     const rig = new THREE.HumanRig(model);
     const measure = THREE.measureHuman(rig.bind);
-    if ((this.spec.skirted || []).includes(id)) smoothSkirt(model, measure.joints);
     // Seat geometry, measured once: pose the doze at the origin and read where it put the
     // hips and the ankles. A pose never moves the hips, so this holds for every pose.
     model.position.set(0, 0, 0);
@@ -667,7 +629,7 @@ export class People3D {
   basePose(body, kind, t, a) {
     const { measure, rig } = body;
     let turns;
-    if (kind === "doze" || kind === "sit") turns = THREE.poseSeated(measure, rig.bind, { style: kind, seconds: t + body.seed * 1.7, headSide: 1, arms: (this.spec.cradle || []).includes(body.id) ? "cradle" : "fold" }, []);
+    if (kind === "doze" || kind === "sit") turns = THREE.poseSeated(measure, rig.bind, { style: kind, seconds: t + body.seed * 1.7, headSide: 1, arms: (this.spec.cradle || []).includes(body.id) ? "cradle" : "fold", posture: (this.spec.pregnant || []).includes(body.id) ? "pregnant" : undefined }, []);
     else {
       const walking = kind === "walk";
       const phase = walking ? ((body.walked * rig.bindScale) / THREE.humanStride(measure, "walk")) % 1 : 0;

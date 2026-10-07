@@ -454,9 +454,10 @@ export default {
           aisle: { left: -0.5, right: 1.2, deskFront: -3.65, rightRunEnds: -1.46, rightNear: 1.08 },
           // Lights that draw a person's eye while they are on.
           lookAtLights: ["intercom"],
-          // skirts that need their weights smoothed to sit down
-          // Toon Sarah wears leggings, no skirt (2026-10-07), so no skirt pass; she is
-          // pregnant, so a doze cradles the bump instead of folding the arms over it.
+          // Sarah is 32 weeks pregnant: seated, she sits upright with her hips a little more
+          // open and her hands resting on her thighs (posture "pregnant"); a doze, if a scene
+          // ever gives her one, cradles the bump rather than folding arms over it.
+          pregnant: ["sarah"],
           cradle: ["sarah"],
         },
       },

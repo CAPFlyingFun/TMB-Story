@@ -45,9 +45,11 @@ export function makeMetric(z0 = 0) {
         models: { jack: "../assets/models/jack.glb", sarah: "../assets/models/sarah.glb" },
         camera: CAM,
         room,
-        // Toon Sarah wears leggings, no skirt (2026-10-07), so no skirt pass; she is
-          // pregnant, so a doze cradles the bump instead of folding the arms over it.
-          cradle: ["sarah"],
+        // Sarah is 32 weeks pregnant: seated, she sits upright with her hips a little more
+        // open and her hands resting on her thighs (posture "pregnant"); a doze, if a scene
+        // ever gives her one, cradles the bump rather than folding arms over it.
+        pregnant: ["sarah"],
+        cradle: ["sarah"],
         ...extra,
       },
     };
