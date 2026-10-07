@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-96cbcfe1bd0a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "54e0806040f7e4a461275a9d28235c01cc8f296963cea32ff77bfc5353f38f5f",
+  "text": "Jack's voice was quiet.",
+  "bytes": 27629,
+  "generated": "2026-10-07T03:27:16Z"
+}

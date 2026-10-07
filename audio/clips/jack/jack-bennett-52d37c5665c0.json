@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-52d37c5665c0",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ba607aedc5170ae1650d2b83142c97656ce347a5118576dbb5f9a3982ce19e91",
+  "text": "I stood very still and tried not to look like a fly.",
+  "bytes": 47273,
+  "generated": "2026-10-07T03:29:47Z"
+}

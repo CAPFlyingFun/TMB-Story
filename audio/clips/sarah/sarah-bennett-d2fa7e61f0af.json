@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-d2fa7e61f0af",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4e7e8c18f15b67fe88f3a84d8a7fe45331cf514da8b6865ae360e89a8c1d2de3",
+  "text": "Jack. It jumped. It didn't walk to the fly. It jumped onto the roof from the pavement.",
+  "bytes": 88651,
+  "generated": "2026-10-07T03:28:57Z"
+}

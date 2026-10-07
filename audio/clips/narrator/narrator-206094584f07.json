@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-206094584f07",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "67d059f1e77a6557af5c6d63ce60c88ffb2a269635a51a79e8e144b9f8bdf41c",
+  "text": "Mark parked behind the building, out of sight of the western glass, and killed the motor. For a moment they both sat there, listening.",
+  "bytes": 143822,
+  "generated": "2026-10-07T03:27:33Z"
+}

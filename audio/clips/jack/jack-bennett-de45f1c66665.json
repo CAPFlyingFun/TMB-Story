@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-de45f1c66665",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "29cdf55ced8cc0bff004521e87238151f097234ea47067e9d58d562d649d7e8b",
+  "text": "Aiden, I'm Jack Bennett. We talked on the radio.",
+  "bytes": 38914,
+  "generated": "2026-10-07T03:27:38Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a702889834fa",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3743b9f2403e9239d5378975f61d37698969dabc2ac18df81bfd3e3d429b2435",
+  "text": "Aiden winced.",
+  "bytes": 20524,
+  "generated": "2026-10-07T03:29:05Z"
+}

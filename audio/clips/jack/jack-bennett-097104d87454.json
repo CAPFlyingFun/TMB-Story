@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-097104d87454",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e08ff645c83ad072b07caf5d7ce4daa36dcebe19a7d5fbe9e5ff3e7ca58b8510",
+  "text": "We've tried. Every outside channel is silent. Satellite, radio, everything. We're still working on why.",
+  "bytes": 99100,
+  "generated": "2026-10-07T03:29:53Z"
+}

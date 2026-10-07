@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a1b426e0314f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "389b7afcd409a723bc643b951ee1c83ac6408b27de2a18f496d3108cea76fbe9",
+  "text": "Lena sounded steadier now.",
+  "bytes": 33898,
+  "generated": "2026-10-07T03:27:07Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7117ba11428e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0f4b61bb11fd0c8e00bcea2a6290d7f91362ca88b0b19b98a808e3d3a7c2f62a",
+  "text": "A few meters past its outer wall, the road simply stopped, and the wilderness began.",
+  "bytes": 83635,
+  "generated": "2026-10-07T03:27:32Z"
+}

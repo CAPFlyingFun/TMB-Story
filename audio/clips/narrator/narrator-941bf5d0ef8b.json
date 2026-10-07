@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-941bf5d0ef8b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f13501110ccc07a6836956de9fcc60dac949d5a2aec1c7f6f0c4a04a7d8f81c6",
+  "text": "Sarah's voice came through the speaker.",
+  "bytes": 36824,
+  "generated": "2026-10-07T03:27:01Z"
+}

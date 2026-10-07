@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b0db57d4ef6e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "6e9dd29665ec1538e5b761c9bf9d0c592bc194c7a1cc2f8d0947381217e9ff61",
+  "text": "A man in the third row laughed, short and disbelieving.",
+  "bytes": 56050,
+  "generated": "2026-10-07T03:29:41Z"
+}

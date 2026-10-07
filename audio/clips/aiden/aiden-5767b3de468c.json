@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-5767b3de468c",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a3571076c923e25158d9998852f7b6f8e095337c566616fa1aaa7ff455e5679d",
+  "text": "Are you serious?",
+  "bytes": 20524,
+  "generated": "2026-10-07T03:27:47Z"
+}

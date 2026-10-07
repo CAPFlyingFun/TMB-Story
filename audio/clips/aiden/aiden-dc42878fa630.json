@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-dc42878fa630",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "26aebae5abf00a200f4be09aa30f37ec80b6473956e774ffa24f3c67dd7c0912",
+  "text": "They do that. When they're small. They look at you like they're thinking about it.",
+  "bytes": 61066,
+  "generated": "2026-10-07T03:28:55Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-a7d3c7bfd771",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c67d862c9d7bd0b81fd89aaf29978a4ec87251c9f3b4ec87e53922b8882b515e",
+  "text": "What was it thinking?",
+  "bytes": 18852,
+  "generated": "2026-10-07T03:28:55Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-80be3114a1e9",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "84bfdd2a8296ab77a6ba5312acac14d12be31d61bcf0639cca5afa852a658cae",
+  "text": "Four. Anything an insect can fit through gets closed. Vents, cracks, drains. Doors.",
+  "bytes": 85725,
+  "generated": "2026-10-07T03:29:06Z"
+}

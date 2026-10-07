@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-3862fd675264",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f698e45ca9d4130079bb6f28330a5b0ccdc6fcda3581ac7121954f187a395647",
+  "text": "You've thought about this.",
+  "bytes": 22613,
+  "generated": "2026-10-07T03:28:31Z"
+}

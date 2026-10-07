@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-995a4ab32038",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "06cd4208c130b6696320be66ba4e44fd1654ee184d6a1f3d397600bb28e200d0",
+  "text": "Then consider this the official version.",
+  "bytes": 38914,
+  "generated": "2026-10-07T03:27:19Z"
+}

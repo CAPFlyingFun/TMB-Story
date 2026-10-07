@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-8ee1f5e2f4ef",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "aa6c6b0c2c2e8ac165d9da0ff4b6e2f477ea79c585ee10c5c055132d0abd7a7d",
+  "text": "A man in a bathrobe stood in his front yard holding a coffee mug he had forgotten to drink, his head tipped all the way back. Two houses down, a woman had stepped onto her porch with a toddler on her hip. The child was pointing up and laughing.",
+  "bytes": 227831,
+  "generated": "2026-10-07T03:27:22Z"
+}

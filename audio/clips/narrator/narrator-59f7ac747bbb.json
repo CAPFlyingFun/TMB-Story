@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-59f7ac747bbb",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "dd0cd5e9a504c6b24f16acabac7a574370d4549fda7276cfa9c9a008b01a9f0d",
+  "text": "He reached for the crank.",
+  "bytes": 24703,
+  "generated": "2026-10-07T03:28:42Z"
+}

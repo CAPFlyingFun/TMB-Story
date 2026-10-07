@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4b334aae4ba3",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "77e80d6aecadfa49170d3150fd2522101bd50ec6be28b47f29ce1b6dc697bc45",
+  "text": "He stepped back from the doorway.",
+  "bytes": 33898,
+  "generated": "2026-10-07T03:27:09Z"
+}

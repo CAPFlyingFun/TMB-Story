@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-8cdcb74e6d6a",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a03310cef2e539534eee6cdbc989846f2e4ab186cb587d6f27a8b51d4b7594cb",
+  "text": "Wonderful. I'll put the coffee on.",
+  "bytes": 32226,
+  "generated": "2026-10-07T03:27:20Z"
+}

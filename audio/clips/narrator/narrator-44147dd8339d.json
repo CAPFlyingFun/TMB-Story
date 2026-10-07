@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-44147dd8339d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ae2701f9da6e202d9695f065359ab11daef9adaf5e378ea9a5079bc0028de34a",
+  "text": "Jack checked his wrist.",
+  "bytes": 25539,
+  "generated": "2026-10-07T03:28:07Z"
+}

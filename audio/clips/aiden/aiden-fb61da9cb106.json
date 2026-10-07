@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-fb61da9cb106",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4a8cc0f0ca16bcba50c0e6d71de677e0480e85b803c57534968a1ec0d947e43a",
+  "text": "What about the seedlings?",
+  "bytes": 24285,
+  "generated": "2026-10-07T03:29:15Z"
+}

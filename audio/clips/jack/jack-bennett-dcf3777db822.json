@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-dcf3777db822",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c61262af4707cea1e5731c4707d708cb4738ae531448fee27a6bbf4914ddb898",
+  "text": "Small enough that a fingernail clipping at the edge of town is longer than I am tall.",
+  "bytes": 67753,
+  "generated": "2026-10-07T03:29:52Z"
+}

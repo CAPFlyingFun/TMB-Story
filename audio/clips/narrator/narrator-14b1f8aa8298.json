@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-14b1f8aa8298",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b3f31a9af8cb836a2fd03ff5a2fa95d2675bdfbe7232d45e8fb3b1e5ec72644f",
+  "text": "Aiden stared at him.",
+  "bytes": 24285,
+  "generated": "2026-10-07T03:27:47Z"
+}

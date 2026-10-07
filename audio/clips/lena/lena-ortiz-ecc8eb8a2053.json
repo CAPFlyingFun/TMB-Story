@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-ecc8eb8a2053",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a51d80d34f8965d555f6b6b2615805ff62a286692a166bd916e61aa1888660ec",
+  "text": "The list is getting long.",
+  "bytes": 24703,
+  "generated": "2026-10-07T03:27:15Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-31bd5ca93723",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "876709e5855a5780711c259d542de43721e5099649d53fe63cc8d2db9e9b6972",
+  "text": "No.",
+  "bytes": 14254,
+  "generated": "2026-10-07T03:27:39Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-1a3256b109c2",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5d39ca3fb88428f807045080f654829f03e761f7995bb0dc09918ac32706f567",
+  "text": "The front door was at the far end of the building. The western glass was between here and there, the whole way.",
+  "bytes": 102026,
+  "generated": "2026-10-07T03:28:13Z"
+}

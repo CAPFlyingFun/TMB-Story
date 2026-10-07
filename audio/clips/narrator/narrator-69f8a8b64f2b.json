@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-69f8a8b64f2b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cdddb324d1da6256270a6dbc20b61ac5f760dd564f1877c514f844c0dc1ccfd2",
+  "text": "Mark set a hand on Aiden's shoulder, gently.",
+  "bytes": 45601,
+  "generated": "2026-10-07T03:28:16Z"
+}

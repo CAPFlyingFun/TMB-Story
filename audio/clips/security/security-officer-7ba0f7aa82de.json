@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-7ba0f7aa82de",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2c74d5203018173d15e7039f21137512abe512ba3d4bcc3083b5621d44765253",
+  "text": "So something else out there jumps.",
+  "bytes": 31391,
+  "generated": "2026-10-07T03:29:01Z"
+}

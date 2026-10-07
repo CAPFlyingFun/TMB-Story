@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c69a4981663e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2bf2392957e6ad84e852e0a8598ed5fada769a543356615adbdcad98983b493f",
+  "text": "He moved to the second.",
+  "bytes": 24703,
+  "generated": "2026-10-07T03:28:37Z"
+}

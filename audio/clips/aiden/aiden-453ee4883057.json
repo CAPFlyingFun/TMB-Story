@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-453ee4883057",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "454f277c7f4f5452cd15caf30b40ab33c3f761606d9bca16d2346f50bf491480",
+  "text": "It's a jumping spider.",
+  "bytes": 24285,
+  "generated": "2026-10-07T03:27:52Z"
+}

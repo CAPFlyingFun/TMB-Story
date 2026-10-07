@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c65a3489b59f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "719bbb76b3db18dfbc02066212e0fb59f9ed9cb59ec4ae4aefc2776b36b2e3d2",
+  "text": "Mark had already noticed.",
+  "bytes": 28465,
+  "generated": "2026-10-07T03:28:28Z"
+}

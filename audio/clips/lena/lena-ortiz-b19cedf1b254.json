@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-b19cedf1b254",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b79a0203a09ae510633dea255706566bfca31147fb5f4d2ea8ff66f8e83e48ea",
+  "text": "We have a water estimate.",
+  "bytes": 25539,
+  "generated": "2026-10-07T03:27:08Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d3a4da7a90ea",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "aa044c3657eb0dc4e4b630ae8d5f1e39deeeff73456d4c2dba73189a3fcea1c6",
+  "text": "A woman stood up in the middle of the room. She kept glancing at the terminal on her wrist, as if it might ring.",
+  "bytes": 100772,
+  "generated": "2026-10-07T03:29:54Z"
+}

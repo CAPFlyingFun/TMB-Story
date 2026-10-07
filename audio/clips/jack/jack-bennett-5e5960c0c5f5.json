@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-5e5960c0c5f5",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7cb6e77ab11b5a5f186f542cd0d73c20c20afd4eddb70cb5113425219ea214a2",
+  "text": "No. I'll go.",
+  "bytes": 14254,
+  "generated": "2026-10-07T03:28:28Z"
+}

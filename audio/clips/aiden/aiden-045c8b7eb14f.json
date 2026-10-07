@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-045c8b7eb14f",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5403ed9c4f2061127ee0a30fbfb2a696bfaf140b220afdf867916bf21a14cd08",
+  "text": "That wasn't this one. Or not because it was hunting. Jumpers don't hunt in the dark. They need light to see.",
+  "bytes": 131283,
+  "generated": "2026-10-07T03:29:00Z"
+}

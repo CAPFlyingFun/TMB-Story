@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-cf4d8b8d5c17",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "06dfa8f35d7b48f6be324b05d2ed8d90dcd1aea2128c1a608256609bf415f529",
+  "text": "Dawn's not far.",
+  "bytes": 20942,
+  "generated": "2026-10-07T03:27:16Z"
+}

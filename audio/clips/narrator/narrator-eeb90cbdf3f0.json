@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-eeb90cbdf3f0",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "194f12a0d559dab3a287e3a3004fa48c0a2e60c847ed4f69181d646eb0a9b7af",
+  "text": "Jack looked at Sarah. She looked back at him, and for once, she didn't have the next question ready.",
+  "bytes": 104951,
+  "generated": "2026-10-07T03:30:00Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-46b1a768fc10",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e5372489cfb61190124eca688ecd92e325bb1b0114908c5d073eb3179d109721",
+  "text": "Thank you.",
+  "bytes": 13000,
+  "generated": "2026-10-07T03:27:41Z"
+}

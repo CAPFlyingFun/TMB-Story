@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-1cf27da16082",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "303da9bf4ef4d7f5778711b7a191b23bf2cd69711113a2258ca2a7dbbe220c2f",
+  "text": "Believe me, I had the same conversation with myself last night. Inside, please. There'll be an announcement soon.",
+  "bytes": 110385,
+  "generated": "2026-10-07T03:27:25Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-34e5087a0c36",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c36c9f61263356fb840254950f2aa567786dab1ff711d7aba5f8105c20c2d7a1",
+  "text": "Morning, sir. Inside, please. Doors closed.",
+  "bytes": 44765,
+  "generated": "2026-10-07T03:27:23Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d1d75b5359c2",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0d4c19da9dc8d84b29075ba392ca6909f0a0dbdf0fe9afe11f1a091d4cc0e4af",
+  "text": "The calendar disappeared from the big screen. In its place, the western glass of the greenhouse, the grass beyond it, and the spider, sitting in the sun.",
+  "bytes": 156360,
+  "generated": "2026-10-07T03:29:46Z"
+}

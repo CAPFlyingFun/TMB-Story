@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-302e90a06b26",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "cc3a75ceda2e1bf74e8f58051f6d2edb88d1c57d2d91876cb4cb445b1e04d706",
+  "text": "What vents?",
+  "bytes": 16762,
+  "generated": "2026-10-07T03:28:08Z"
+}

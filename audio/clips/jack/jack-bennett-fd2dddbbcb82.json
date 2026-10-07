@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-fd2dddbbcb82",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8db0fbe78e9ec34a1697c7d4339b31eedfb98b1e47fb749fffb3a91a477226ea",
+  "text": "I know. Aiden, keep going. Same speed. Don't look at it.",
+  "bytes": 47691,
+  "generated": "2026-10-07T03:28:20Z"
+}

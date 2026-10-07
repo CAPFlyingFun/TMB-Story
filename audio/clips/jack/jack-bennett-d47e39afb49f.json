@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-d47e39afb49f",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ea29be063e5e395707091008f7b99a58ce1cc09a8e8ebca3ad1140fe453c2c3c",
+  "text": "You're both exaggerating.",
+  "bytes": 24285,
+  "generated": "2026-10-07T03:27:29Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-1db12ede3123",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fe823e90b1ed7985d1677d67a68e0bfc346be98fd70aa3b790a345361d2e1a4a",
+  "text": "Jack gave Sarah his chair right away.",
+  "bytes": 38078,
+  "generated": "2026-10-07T03:27:02Z"
+}

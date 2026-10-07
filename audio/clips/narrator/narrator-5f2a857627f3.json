@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5f2a857627f3",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5feba93853da4946acab20710fcc96dc780f1f3998c903d77f16ff4397711d0e",
+  "text": "Dozens of them.",
+  "bytes": 21777,
+  "generated": "2026-10-07T03:28:00Z"
+}

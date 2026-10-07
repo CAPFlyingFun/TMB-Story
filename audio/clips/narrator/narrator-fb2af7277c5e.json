@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-fb2af7277c5e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "73166895afad89d16bff40fb229949929ac21da753c198348f87d5a5a429d607",
+  "text": "Sarah didn't let him off that easily.",
+  "bytes": 39750,
+  "generated": "2026-10-07T03:28:03Z"
+}

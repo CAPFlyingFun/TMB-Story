@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-734fd4559f69",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d72ac3e757c8b3a06f39d7f595a3fa1d0b69e2b695f61c13755fb9f905535049",
+  "text": "That fogger is meant for aphids. If you sprayed that thing with it, it might not even notice. And if you fill this building with insecticide, you're the one who has to breathe it.",
+  "bytes": 150509,
+  "generated": "2026-10-07T03:27:41Z"
+}

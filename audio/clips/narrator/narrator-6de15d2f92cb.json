@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6de15d2f92cb",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "368fc420c33c749a65b6c57e3524445df9ca1dba4282ba265e2b6db8dff43c24",
+  "text": "At the far north end, three vents stayed exactly where they were, wide open to the sky.",
+  "bytes": 91577,
+  "generated": "2026-10-07T03:28:23Z"
+}

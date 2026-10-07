@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-2014c56b99a1",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7a2e892b744f00db17ab9c9f9c286d8277e22448fd7a68bfdf5cbca19d40524d",
+  "text": "Sarah's voice came through Jack's wrist.",
+  "bytes": 40586,
+  "generated": "2026-10-07T03:27:59Z"
+}

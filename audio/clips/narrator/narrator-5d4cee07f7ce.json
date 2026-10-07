@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5d4cee07f7ce",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "483c4d473ba258725a2e224e528b7dca700c57f27db27e30762e264745008025",
+  "text": "Beside her stood a woman in her sixties with short gray hair, a medical bag over one shoulder, and the expression of someone who had been awake all night and intended to hold everyone personally responsible for it.",
+  "bytes": 186871,
+  "generated": "2026-10-07T03:29:27Z"
+}

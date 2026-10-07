@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-26b4447ba797",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bd384ece06c59545a28fbdba2b35fc5c76bf0e7b42604d7d09e038810ec8ff71",
+  "text": "The seedlings need those lights.",
+  "bytes": 33898,
+  "generated": "2026-10-07T03:29:05Z"
+}

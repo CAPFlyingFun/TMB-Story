@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a6628c689c4e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d728ab1043399700a3802fba8698585705613123e1e6c6c74760274a7e74c5c9",
+  "text": "Aiden looked from Jack to the glass and back again.",
+  "bytes": 45601,
+  "generated": "2026-10-07T03:28:06Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-4496c64e03a6",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1f5de5ba71c0c13a6a32d213d3c4ca8bcc6b66c928ccc863ecb1af2e9fbf493e",
+  "text": "Aiden didn't move.",
+  "bytes": 23449,
+  "generated": "2026-10-07T03:28:14Z"
+}

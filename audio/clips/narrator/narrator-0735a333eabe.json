@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0735a333eabe",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d930b96407a9e9a3add714b2fa79bcd32c8e16441347041a4918cfce974f4d7c",
+  "text": "Mark gave a quick nod.",
+  "bytes": 30137,
+  "generated": "2026-10-07T03:27:08Z"
+}

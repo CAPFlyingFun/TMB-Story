@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-f4ad35aeea61",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "435a8f2051b554df2cc933194080b00c53a86097bae98a0c66715209d27746b1",
+  "text": "Thank you, Officer, that's very helpful.",
+  "bytes": 33898,
+  "generated": "2026-10-07T03:27:49Z"
+}

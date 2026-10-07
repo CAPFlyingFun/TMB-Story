@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-926b58a1e47f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7999007fe40e02dd086dfaca8c1fe1a8c11e8bb33038eb1368d4cabe3a130c17",
+  "text": "Aiden spoke up suddenly from beside Mark, louder than he probably meant to.",
+  "bytes": 77784,
+  "generated": "2026-10-07T03:29:50Z"
+}

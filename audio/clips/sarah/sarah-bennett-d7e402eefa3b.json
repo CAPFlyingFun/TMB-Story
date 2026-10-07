@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-d7e402eefa3b",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "97441239f3af476bf996de842d89937d8475e808b3a56e633a66af8f7b763609",
+  "text": "It hasn't moved since he called.",
+  "bytes": 24703,
+  "generated": "2026-10-07T03:27:27Z"
+}

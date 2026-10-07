@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-85e5dbbe6ecd",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4ebe6783f2fe5fd8d8914016428fda3a1c442c5aedfe62d6d6f200abf2766578",
+  "text": "One message. No rumors, no versions, no 'my neighbor said.' Whatever you say in there, the whole town hears it.",
+  "bytes": 140060,
+  "generated": "2026-10-07T03:29:21Z"
+}

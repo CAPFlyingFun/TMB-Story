@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-274835294e6f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a2d3afeb6e2d10fa923746934d9101ebb72fd7f7cabf40b30ba959311cfa6de8",
+  "text": "Then the spider's front legs moved, faster than he could follow, and the fly was simply gone from the glass.",
+  "bytes": 100772,
+  "generated": "2026-10-07T03:28:49Z"
+}

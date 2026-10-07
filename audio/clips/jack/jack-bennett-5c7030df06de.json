@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-5c7030df06de",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c5ed5d50052b11c5206ba43bf4cfc4e12c123715b5fa266070d723cfffe3c6d1",
+  "text": "I don't know that either. I'm sorry.",
+  "bytes": 27211,
+  "generated": "2026-10-07T03:29:54Z"
+}

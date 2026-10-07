@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-906d6fd8e750",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8805b32c5371cec431c21bc4d279e78446c18567e6223df758e9e5f30aae12ce",
+  "text": "I was asleep.",
+  "bytes": 17598,
+  "generated": "2026-10-07T03:27:02Z"
+}

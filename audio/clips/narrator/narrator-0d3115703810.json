@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0d3115703810",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e74d628656e7d04b7559130499285262d7626c260921e27ca9de7b8dd10e5dfa",
+  "text": "Sarah was already on the steps. She came down to meet him, took one look at the rag around his hand, and raised an eyebrow.",
+  "bytes": 117072,
+  "generated": "2026-10-07T03:29:25Z"
+}

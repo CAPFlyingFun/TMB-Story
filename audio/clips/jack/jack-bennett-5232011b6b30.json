@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-5232011b6b30",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c1ab734f7149d2d13278b4332367c25293d406a2c6b77531fa73ac4558a93dff",
+  "text": "Six fifty-eight. Why?",
+  "bytes": 23449,
+  "generated": "2026-10-07T03:28:08Z"
+}

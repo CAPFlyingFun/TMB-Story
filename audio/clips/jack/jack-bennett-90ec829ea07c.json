@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-90ec829ea07c",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b0deb5b149769aff0fb7d9dab437ae6e47f279388c96af0e6aad69b37d0aba42",
+  "text": "That's the plan for the next ten minutes.",
+  "bytes": 33898,
+  "generated": "2026-10-07T03:28:06Z"
+}

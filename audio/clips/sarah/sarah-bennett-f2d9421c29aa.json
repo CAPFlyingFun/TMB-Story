@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-f2d9421c29aa",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7c99d84fd3bef9b6f281f1823a03fb1016d3432131bdd813e99a263559c61a08",
+  "text": "Jack, don't move.",
+  "bytes": 20942,
+  "generated": "2026-10-07T03:28:43Z"
+}

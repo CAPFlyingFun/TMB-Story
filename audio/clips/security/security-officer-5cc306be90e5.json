@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-5cc306be90e5",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "df80e450834a8a31364fab1bc02e412c8a90e95ea9ea9bd1fd4d4139e2cfeec2",
+  "text": "Medical first. Doctor Mercer, this is Jones. Doctor Bennett wants you briefed in person. I'll have someone at your door in ten minutes.",
+  "bytes": 108713,
+  "generated": "2026-10-07T03:27:18Z"
+}

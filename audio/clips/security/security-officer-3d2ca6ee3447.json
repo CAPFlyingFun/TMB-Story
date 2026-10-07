@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-3d2ca6ee3447",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1440d15144f1243372fe6b760ce6d649371b1f9db1c62f0869253607f1777fba",
+  "text": "I think I'll drive fast and we'll find out.",
+  "bytes": 37660,
+  "generated": "2026-10-07T03:29:13Z"
+}

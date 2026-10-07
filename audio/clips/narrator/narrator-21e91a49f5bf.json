@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-21e91a49f5bf",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7d7c588b13bc465cdde37b14839a5d97e4047f7054b53303376156d24460cf4c",
+  "text": "Jack climbed onto the stage. Sarah stood at his side. Mark took the doorway, and Aiden stayed close to Mark, as though Mark were the only solid thing in the room.",
+  "bytes": 163884,
+  "generated": "2026-10-07T03:29:32Z"
+}

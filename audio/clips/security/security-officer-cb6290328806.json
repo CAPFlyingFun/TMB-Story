@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-cb6290328806",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "11e7aa5d6447e0c2f96470c8edc916005857f9af12de0a87e8e4eadcb8ad26f8",
+  "text": "You want me to go first?",
+  "bytes": 25539,
+  "generated": "2026-10-07T03:27:34Z"
+}

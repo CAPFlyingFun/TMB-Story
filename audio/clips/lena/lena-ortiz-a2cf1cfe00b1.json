@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-a2cf1cfe00b1",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1c1917982c8968eaf15a78adc74224838461512a0dc3fb5bf3352e8d83411b1f",
+  "text": "Not from here, and not without knowing why it faulted in the first place. If I push power into a damaged line, I could start a fire in a building full of dry seedling trays.",
+  "bytes": 173497,
+  "generated": "2026-10-07T03:28:27Z"
+}

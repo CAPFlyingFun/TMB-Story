@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-561d6d258e90",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f7bed74b0268b3baf393d2ca892ece301b890ff315057b19bc3bc928243d258e",
+  "text": "Jack's wrist terminal chirped. Sarah's voice came through, steady and close.",
+  "bytes": 76948,
+  "generated": "2026-10-07T03:27:26Z"
+}

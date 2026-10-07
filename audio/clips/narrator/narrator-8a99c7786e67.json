@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-8a99c7786e67",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e6c9ef7910f3791fa44741982ca591bc5d40d972e94d2d00923e666f0a279460",
+  "text": "From his wrist, Sarah counted quietly.",
+  "bytes": 41004,
+  "generated": "2026-10-07T03:28:36Z"
+}

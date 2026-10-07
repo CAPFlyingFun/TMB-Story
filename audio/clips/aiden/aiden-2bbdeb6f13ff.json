@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-2bbdeb6f13ff",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7bc6fb9797c112b5bce8e8899d9d12b4154174f4138ff582e7171649aa0332c1",
+  "text": "There's a crank on each vent. From the catwalk.",
+  "bytes": 44765,
+  "generated": "2026-10-07T03:28:27Z"
+}

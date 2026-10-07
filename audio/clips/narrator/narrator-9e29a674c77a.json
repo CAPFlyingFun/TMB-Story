@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-9e29a674c77a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ca7d9f6af13aa7deae15348b091d007c5556fe0584ea2155895b7d84c411a222",
+  "text": "He was younger than Jack had expected from his voice, maybe twenty-five, in muddy boots and a green work apron. He was holding a pesticide fogger in both hands, the nozzle aimed at the far wall like a rifle, and he was shaking.",
+  "bytes": 222398,
+  "generated": "2026-10-07T03:27:37Z"
+}

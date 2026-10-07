@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-967afb2b865c",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "50a6cba00ab56d7c62eb0639daddd14d3c13c5cbcac33e71cd46d0afad34c888",
+  "text": "To security. Mark Jones and his officers.",
+  "bytes": 38078,
+  "generated": "2026-10-07T03:29:41Z"
+}

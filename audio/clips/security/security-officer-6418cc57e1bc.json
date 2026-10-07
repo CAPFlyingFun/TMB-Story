@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-6418cc57e1bc",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "652e6f3444e699f7c46826ede5ba566a383c8a7baef6f640b17fbb46cef5e2ac",
+  "text": "You're bleeding.",
+  "bytes": 17598,
+  "generated": "2026-10-07T03:28:52Z"
+}

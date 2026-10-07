@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-5286f9223aa1",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "979193896494bbafaba56535b518dfb5c4534c1e808efd4e5cd4f5c63c588f3a",
+  "text": "That's longer than I usually get.",
+  "bytes": 32226,
+  "generated": "2026-10-07T03:28:32Z"
+}

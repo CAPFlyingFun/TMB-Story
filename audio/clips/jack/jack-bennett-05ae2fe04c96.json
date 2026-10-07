@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-05ae2fe04c96",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "547c0da97564590ba1fc0513380a449f62a43d5c5f0cbd38a37b531eb7217ed3",
+  "text": "I'm sorry about the phone calls.",
+  "bytes": 26375,
+  "generated": "2026-10-07T03:29:28Z"
+}

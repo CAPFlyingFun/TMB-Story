@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-950b63b9475f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "716c805281830694e4d9423f349be7d5c0c19e3501fd30ede7120c89b122e2e9",
+  "text": "The room was completely silent.",
+  "bytes": 33062,
+  "generated": "2026-10-07T03:29:37Z"
+}

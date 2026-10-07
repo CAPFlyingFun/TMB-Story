@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-b33164fc449b",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2b9c6fac422474bad138aedb68e747c8259eafb9fb5ff75c720e5f46270a2bf6",
+  "text": "When they're the size of a pea.",
+  "bytes": 30137,
+  "generated": "2026-10-07T03:27:54Z"
+}

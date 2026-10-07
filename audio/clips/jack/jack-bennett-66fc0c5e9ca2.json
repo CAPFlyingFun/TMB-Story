@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-66fc0c5e9ca2",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e987b64896c7f695d08a31de928aa62b2ba7e6ee20c50b0ffe0760aaba7cea7b",
+  "text": "For about four seconds.",
+  "bytes": 21777,
+  "generated": "2026-10-07T03:28:31Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-44a1b891d7fb",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2e32c276d757e11ce5281d1b83aed528a8a0ce622598c7c7c12fa6caba82affd",
+  "text": "Six. Nobody goes out alone.",
+  "bytes": 26375,
+  "generated": "2026-10-07T03:29:07Z"
+}

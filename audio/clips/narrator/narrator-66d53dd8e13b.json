@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-66d53dd8e13b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e069b748c93b99f60db2b609405b883ca6e2055a8d42dc1c3b4d7ec38b4467aa",
+  "text": "Aiden wiped his forehead on his sleeve, the fogger still dangling from one hand.",
+  "bytes": 77784,
+  "generated": "2026-10-07T03:27:53Z"
+}

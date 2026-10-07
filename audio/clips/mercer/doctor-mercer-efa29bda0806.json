@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-efa29bda0806",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4e5cc938668ddc5fc76c46797431e93b6925dbe962e4cedf41ed98cda48d4f2b",
+  "text": "Doctor Mercer. We've met. Mostly by phone.",
+  "bytes": 40586,
+  "generated": "2026-10-07T03:29:27Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-a151ea98b064",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f958819db22025bb932880141af36391c16f62c14ea5563cfbbc2174f73186fa",
+  "text": "Grass.",
+  "bytes": 13000,
+  "generated": "2026-10-07T03:27:24Z"
+}

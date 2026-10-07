@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-3eaa318329fa",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "edf0d07feac3b355d3e73a54d1ded7be31e22074e84e40a8aaf703a41def4144",
+  "text": "Black. Thickly furred, like a coat of short dark velvet, with bands of white across its back. Its legs were folded close beneath it. And on the front of its head, set side by side, were two enormous dark eyes, round and glossy as the headlights of a parked car, staring straight at the glass.",
+  "bytes": 336083,
+  "generated": "2026-10-07T03:27:47Z"
+}

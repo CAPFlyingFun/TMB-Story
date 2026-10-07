@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0a55726ebc6f",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "920c6f0e0bd1637c55c5a611ebd996ed4c36f8a6bf82fee7dcd6d4c4c07b3a2d",
+  "text": "Aiden opened his mouth. Then he closed it again and looked up at the roof, and Jack watched the color drain out of his face.",
+  "bytes": 115400,
+  "generated": "2026-10-07T03:28:07Z"
+}

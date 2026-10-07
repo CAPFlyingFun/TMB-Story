@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0680f4362beb",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "27b7b97379ef4b87b69dce2041f9ce6df9e145f6e23d7196dad6a7109bf0bf7a",
+  "text": "Jack let that settle before he finished.",
+  "bytes": 39750,
+  "generated": "2026-10-07T03:29:38Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-6f01260c906e",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c5b0d3445f3b5ea4c83cbda4d0af5112554f17465f6a7ab89c2c248f2043ec39",
+  "text": "Jack followed his finger. A narrow steel catwalk ran the length of the roof peak, reached by a ladder bolted to the north wall. Each vent had a small hand crank mounted beside its hinge.",
+  "bytes": 205262,
+  "generated": "2026-10-07T03:28:28Z"
+}

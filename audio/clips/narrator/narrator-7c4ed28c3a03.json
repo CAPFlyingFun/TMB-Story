@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-7c4ed28c3a03",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ad74e71185b57565fb3a4963ddf059df4b819ebaeb1733cc27d5a78b2d44fc0c",
+  "text": "Aiden thought about that for exactly one second, then grabbed his jacket.",
+  "bytes": 71515,
+  "generated": "2026-10-07T03:29:16Z"
+}

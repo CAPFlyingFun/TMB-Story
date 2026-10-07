@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-01be900d49f6",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3d5ba3d2c9a879b424a20927d8e362670e885e86f821806f739b373dadd3f7a5",
+  "text": "He didn't look down. He kept turning.",
+  "bytes": 40586,
+  "generated": "2026-10-07T03:28:39Z"
+}

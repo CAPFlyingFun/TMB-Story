@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-6200d1eb975e",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "727a2d4d025cd224c927939c09e00c7e38400f6c9e21b7cbeee088375e042e36",
+  "text": "I'm going to tell you what we know, what we don't, and what we need you to do. Then I'll take questions. I promise I'll take questions.",
+  "bytes": 102862,
+  "generated": "2026-10-07T03:29:39Z"
+}

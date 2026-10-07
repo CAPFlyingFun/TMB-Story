@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-bd3359b86d2a",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bda89bed34dac14bdb35cf9170cd2c230d7b530dde05fc7257fbc0f8e9696193",
+  "text": "It bears repeating.",
+  "bytes": 21777,
+  "generated": "2026-10-07T03:27:55Z"
+}

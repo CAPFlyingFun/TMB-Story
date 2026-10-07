@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-4571cc26c2bc",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "203058811686cd97e170d33b65d06d337f8270d2aaa25efebf9025d0ac418c85",
+  "text": "Fifty people. Asking for you by name. That's either very good or very bad.",
+  "bytes": 88651,
+  "generated": "2026-10-07T03:29:12Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-580baaddfe6d",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "70d1b58fd7fc91862b60986a6eec4aa75f5e06ab7caa2beea4d21d5e00f9fa26",
+  "text": "Mark looked over at him.",
+  "bytes": 27211,
+  "generated": "2026-10-07T03:27:33Z"
+}

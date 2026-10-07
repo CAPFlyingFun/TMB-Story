@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-3a9187f5f69c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "836c0912ee5ae444b0fe45e771d58340b3d69fa462a0860bb40c8a3c9ce250f3",
+  "text": "People stood in doorways and on porches and in the middle of the road, in coats thrown over pajamas, holding children, holding each other. Every face was turned up toward the green wall of grass rising above the rooftops. Nobody was screaming. That was almost worse. They looked like people standing at the edge of a flood, waiting to find out how high the water would go.",
+  "bytes": 361996,
+  "generated": "2026-10-07T03:29:25Z"
+}

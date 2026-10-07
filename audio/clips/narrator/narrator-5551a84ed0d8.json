@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5551a84ed0d8",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "17ead63c7e74a6e3f7f40bdf72890e1bab00b9efe5a468ccfc7966a1da458cdd",
+  "text": "Mark keyed it.",
+  "bytes": 23449,
+  "generated": "2026-10-07T03:29:09Z"
+}

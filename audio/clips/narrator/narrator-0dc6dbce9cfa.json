@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0dc6dbce9cfa",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "dde1d8b8f8d9cbd7be6d7fe6d755b5018c108120a2c763665096ee3c17fd66ac",
+  "text": "Doctor Mercer's reply crackled back, dry as ever.",
+  "bytes": 56886,
+  "generated": "2026-10-07T03:27:18Z"
+}

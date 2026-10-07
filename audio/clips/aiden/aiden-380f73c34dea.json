@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-380f73c34dea",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "ce72b0e549b606ae0dbe4e832f4cf5a45aee6436085607761deb66d9f0526952",
+  "text": "Every night. The seedlings need eighteen hours.",
+  "bytes": 48527,
+  "generated": "2026-10-07T03:28:02Z"
+}

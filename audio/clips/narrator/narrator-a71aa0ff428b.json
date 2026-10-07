@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a71aa0ff428b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c742fc50c3b86bbbbbec8223530c0ddaa7218a75dd7891f6efba806d8a30609e",
+  "text": "The greenhouse sat at the far western edge of the developed zone, a long glass building with a peaked roof and white steel ribs, rows of seedlings and vegetable beds glowing green behind the panes. Jack had walked past it a hundred times without thinking about it.",
+  "bytes": 257506,
+  "generated": "2026-10-07T03:27:32Z"
+}

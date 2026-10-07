@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-091b6a4075d0",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f0010388c93a804ddc1587b65ecdae4237861d5c93f0b41517fdad42b93211a0",
+  "text": "And no trail. Like the mark you found by the southern perimeter.",
+  "bytes": 53960,
+  "generated": "2026-10-07T03:28:58Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-f3df9537d513",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8979e7788138183843930c3b5318f5df35c89d1b342831505929a50f56ab67d0",
+  "text": "How am I supposed to not look at it?",
+  "bytes": 30973,
+  "generated": "2026-10-07T03:28:21Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-3fdb3090dfba",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5bf38c4794d13b76918412f9643d5537d49488ec283fb56b2cd6fe7b8c3f8852",
+  "text": "The ladder was cold under his hands. At the top, the catwalk swayed slightly under his weight. Through the open vents, the morning smelled green and enormous, like a forest after rain.",
+  "bytes": 193559,
+  "generated": "2026-10-07T03:28:36Z"
+}

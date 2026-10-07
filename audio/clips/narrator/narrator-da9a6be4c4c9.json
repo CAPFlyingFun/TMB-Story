@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-da9a6be4c4c9",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5c0d3b2deca2f78402d8bfb622b8cb332efbb32e9173e568e76af27700e3905e",
+  "text": "Someone called out from the back.",
+  "bytes": 33062,
+  "generated": "2026-10-07T03:29:43Z"
+}

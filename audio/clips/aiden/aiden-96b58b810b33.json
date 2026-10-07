@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-96b58b810b33",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5dc40439d7c2245c4add74a679e578f2b28ddc5bdd2b387d47dabd427417ee76",
+  "text": "If it comes through the glass, I spray it.",
+  "bytes": 35152,
+  "generated": "2026-10-07T03:27:40Z"
+}

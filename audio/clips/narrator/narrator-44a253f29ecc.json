@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-44a253f29ecc",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "976e4e0ea0b28cbbc00c865b9a9233a1521fdb5dc1474924b8f2de269b4056f8",
+  "text": "Birdsong. The tick of the cooling engine. Somewhere far off, the low rush of wind moving through grass the size of trees.",
+  "bytes": 134208,
+  "generated": "2026-10-07T03:27:33Z"
+}

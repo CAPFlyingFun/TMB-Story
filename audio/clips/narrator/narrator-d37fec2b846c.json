@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-d37fec2b846c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2bee220915a7564d41b59307f98f0b58fe6161b4fc72654a41ceadde84abb1f9",
+  "text": "The north wall was the one closest to the grass.",
+  "bytes": 48527,
+  "generated": "2026-10-07T03:28:28Z"
+}

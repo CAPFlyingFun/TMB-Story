@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-6a8205fe4191",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "224ad097c73480cbfa361649bb694b1231e4c2b0ce6db28f6ea3189c9bc8984f",
+  "text": "I've been briefed. I looked out the window.",
+  "bytes": 38078,
+  "generated": "2026-10-07T03:27:19Z"
+}

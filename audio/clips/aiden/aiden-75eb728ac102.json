@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-75eb728ac102",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "34e7c88260cb8d0ea2fbba8ee47b57bfdeb8cde3efd978a1c884a5d38f5b12f3",
+  "text": "Because it's cold. They hunt by sight, in daylight. Mornings like this, they sit in the sun and warm up before they do anything. It hasn't moved since I called you because it's waiting.",
+  "bytes": 198574,
+  "generated": "2026-10-07T03:27:58Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-ef2242207cb0",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "89b0b768d63d89360a05174b52a51b493f9f98f6101872826216238dfb3eec34",
+  "text": "It's still looking at you.",
+  "bytes": 26375,
+  "generated": "2026-10-07T03:27:48Z"
+}

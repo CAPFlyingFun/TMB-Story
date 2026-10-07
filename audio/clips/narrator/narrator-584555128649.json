@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-584555128649",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "3c50833edc4ef74bfc7097e4360270bf0f3652a9436e99398495b879ffab4a29",
+  "text": "Sarah opened her mouth.",
+  "bytes": 27629,
+  "generated": "2026-10-07T03:29:29Z"
+}

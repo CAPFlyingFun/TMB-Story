@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-f13bbdbf3fcf",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "eefccf23c3f03ab7106d8d7b353ce33bbe38715531904795bc3972134a9ddcb5",
+  "text": "The spider held it for a moment, as though considering. Then it turned, stepped across the roof with a slow rolling grace that sent faint vibrations through the catwalk under Jack's feet, and dropped off the far side.",
+  "bytes": 201082,
+  "generated": "2026-10-07T03:28:49Z"
+}

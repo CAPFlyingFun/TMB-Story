@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-5fdc20080599",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8242b43db6f72d95bbd7d1d94d55b8f0453768c8099abbb39de0690e742c7843",
+  "text": "What mark?",
+  "bytes": 16762,
+  "generated": "2026-10-07T03:28:59Z"
+}

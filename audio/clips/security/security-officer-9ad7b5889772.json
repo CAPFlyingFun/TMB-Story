@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-9ad7b5889772",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f09cc56d1ace673e964ad6e57be9ebdb7abf6f7894009200b66e28baeae6e9ac",
+  "text": "Unit Four, what are they saying?",
+  "bytes": 35988,
+  "generated": "2026-10-07T03:29:11Z"
+}

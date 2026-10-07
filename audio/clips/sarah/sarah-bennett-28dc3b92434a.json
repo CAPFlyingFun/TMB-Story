@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-28dc3b92434a",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "e32623b4fb5399a8220f0f0b4306d321c78b6d7f9f0d67acf3af337bd26655ca",
+  "text": "You keep saying that about everything.",
+  "bytes": 29301,
+  "generated": "2026-10-07T03:29:26Z"
+}

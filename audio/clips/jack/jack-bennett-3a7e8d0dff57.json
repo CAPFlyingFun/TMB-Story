@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-3a7e8d0dff57",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "db0a50e7cca7c0e4a02594b3f7a32ee03692c38c97e6934e27abf3030680f6f4",
+  "text": "The grass outside didn't grow. We got smaller.",
+  "bytes": 44347,
+  "generated": "2026-10-07T03:29:38Z"
+}

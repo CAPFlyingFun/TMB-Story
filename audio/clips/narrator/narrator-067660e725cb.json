@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-067660e725cb",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "791d3aa1adcf8d4bea4888d04abe3493b892a92f00bb589486c06d9a46db567c",
+  "text": "Doctor Mercer pointed at her.",
+  "bytes": 32226,
+  "generated": "2026-10-07T03:29:29Z"
+}

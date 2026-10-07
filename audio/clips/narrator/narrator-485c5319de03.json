@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-485c5319de03",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "fdab0eb5e60e349cf40b27e3f477b3646d7fb6a33e7b19b70d4584f050a1ecfd",
+  "text": "Jack had known that one was coming since he stepped onto the stage. He still felt it land.",
+  "bytes": 87815,
+  "generated": "2026-10-07T03:29:53Z"
+}

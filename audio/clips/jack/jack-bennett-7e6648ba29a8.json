@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-7e6648ba29a8",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "14a5be11ddc78bc87b32a40a8c341613121b900ff52fffbb49620a0297f5d42f",
+  "text": "Sarah. What did we just learn?",
+  "bytes": 28465,
+  "generated": "2026-10-07T03:29:01Z"
+}

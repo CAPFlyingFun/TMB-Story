@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-ecf2df02a429",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "db317690f79d04b52af1479c2b43b5c0e579d9128819b4d0b96812f8e04a60e9",
+  "text": "Can you see it clearly?",
+  "bytes": 20942,
+  "generated": "2026-10-07T03:27:27Z"
+}

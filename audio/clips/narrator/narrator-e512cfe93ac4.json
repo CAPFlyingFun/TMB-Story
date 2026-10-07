@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e512cfe93ac4",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "965f72cbae46b8b5c53b543de5df8e1c89675bae0a53aea01d32d6e2cc3cfc92",
+  "text": "Jack kept his voice quiet.",
+  "bytes": 33062,
+  "generated": "2026-10-07T03:27:37Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-b47b9e4cdd8c",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "8b61ea6ccef403d7c0923676c2cf190fa27f63f8c593f9913e28564f77a2d681",
+  "text": "If you two are finished, I have something useful. The community center has a microphone in the main hall. I can route it to every public speaker in the settlement. Streets, housing blocks, medical, the utility station. Everyone hears the same thing at the same time.",
+  "bytes": 299720,
+  "generated": "2026-10-07T03:29:22Z"
+}

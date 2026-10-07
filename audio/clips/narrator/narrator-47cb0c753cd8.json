@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-47cb0c753cd8",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "9a43c63fab9e230c3b07c267d489ceda5846b11bfcb6f828cb831be24020f963",
+  "text": "Aiden whispered from the front door, just loud enough to carry.",
+  "bytes": 58976,
+  "generated": "2026-10-07T03:28:33Z"
+}

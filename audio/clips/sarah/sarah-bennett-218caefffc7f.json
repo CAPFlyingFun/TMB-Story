@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-218caefffc7f",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "178bda3dd7c2e150ecf3b08e83c550e9a59dbdfe436e3d069e4cb24c4d27fb78",
+  "text": "You were sleeping.",
+  "bytes": 20942,
+  "generated": "2026-10-07T03:27:02Z"
+}

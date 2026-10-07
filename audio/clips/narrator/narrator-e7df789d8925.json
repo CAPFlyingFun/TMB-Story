@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-e7df789d8925",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a7c18cf5bf9390482ce0522e7c8d206b6cf79792a81fcb5a38fe0d8780199def",
+  "text": "Jack shook it.",
+  "bytes": 20524,
+  "generated": "2026-10-07T03:29:28Z"
+}

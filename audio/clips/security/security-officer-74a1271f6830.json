@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-74a1271f6830",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4111aaf2e23683cbd5842711d763f3f493b50a187a53b835bab48d6146e6f8a0",
+  "text": "Walk like you're carrying a full cup of coffee across a room full of sleeping kids. I'll be right behind you.",
+  "bytes": 92413,
+  "generated": "2026-10-07T03:28:17Z"
+}

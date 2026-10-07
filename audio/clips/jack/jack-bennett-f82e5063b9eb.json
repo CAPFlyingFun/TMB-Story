@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-f82e5063b9eb",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a2e5ed06d98413336b981b272f36dedd19e109cd305f3c825b65344fc1cca2fe",
+  "text": "That's a start.",
+  "bytes": 17598,
+  "generated": "2026-10-07T03:27:42Z"
+}

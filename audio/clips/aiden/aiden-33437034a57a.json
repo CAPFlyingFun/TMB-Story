@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-33437034a57a",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "42b7c46a96c797fd6a9da41c60913819f67bd7314f531c49005d622c18e4a624",
+  "text": "I'm serious. That's how they see. Anything that moves fast looks like something to eat.",
+  "bytes": 79874,
+  "generated": "2026-10-07T03:28:34Z"
+}

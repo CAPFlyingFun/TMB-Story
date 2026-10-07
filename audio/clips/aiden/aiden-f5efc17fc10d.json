@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-f5efc17fc10d",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "39e3045d91cb913f2ca0e899130e989fc520d43db9c9c50a28f37dcb7671718d",
+  "text": "I know what it is when it's the size of a pea. We like them in here. They eat aphids, whiteflies, all the stuff that gets into the seedlings. We never spray when we see one. They're friendly.",
+  "bytes": 220308,
+  "generated": "2026-10-07T03:27:55Z"
+}

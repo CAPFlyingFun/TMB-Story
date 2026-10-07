@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-5f65109dc97b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0370f730e994030f2e0e3e60987e76fbdafd95492bc6cb7e8d73542dd347c60a",
+  "text": "He pulled up the TOMBS directory again, tracing back through what had changed.",
+  "bytes": 71097,
+  "generated": "2026-10-07T03:27:04Z"
+}

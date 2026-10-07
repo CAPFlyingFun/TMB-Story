@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-66cb4cead414",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "579b634446fb50121d16977b67fcaed0cea97ee7241df198502d7c05c64c72d2",
+  "text": "Those are opposites.",
+  "bytes": 20942,
+  "generated": "2026-10-07T03:28:15Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-2803473a3d93",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "1349b9409fb9c9428af8c1468e82440f878da8ff1f2ba132326634a314884cbf",
+  "text": "Those three aren't answering.",
+  "bytes": 24703,
+  "generated": "2026-10-07T03:28:24Z"
+}

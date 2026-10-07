@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-763ca4b82c8f",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "d07ad2c0ec1c5e4e30251f7f50e415d8905da5e595a9fb3addeb9e275da1db96",
+  "text": "You said that.",
+  "bytes": 18852,
+  "generated": "2026-10-07T03:27:55Z"
+}

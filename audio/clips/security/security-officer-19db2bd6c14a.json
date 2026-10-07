@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-19db2bd6c14a",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "5071da1236bbfa8c9e5154b236cc303d649ef74c75189e651e4b47170e37361f",
+  "text": "Everything's small. That's the whole problem.",
+  "bytes": 43511,
+  "generated": "2026-10-07T03:28:53Z"
+}

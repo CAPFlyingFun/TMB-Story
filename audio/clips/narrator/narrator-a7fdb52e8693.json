@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a7fdb52e8693",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "07ebc6e3489e68ace86591bf1e21db0543cd4461b9f5273db2ffe04522ed7c29",
+  "text": "The community center was a low, wide building with glass doors and a flagpole out front. The crowd had spilled from its steps onto the lawn. Mark leaned on the horn once, briefly, and the people closest to the road turned, saw Jack in the passenger seat, and started talking all at once.",
+  "bytes": 293033,
+  "generated": "2026-10-07T03:29:25Z"
+}

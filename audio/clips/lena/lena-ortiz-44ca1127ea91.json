@@ -1,0 +1,18 @@
+{
+  "clipId": "lena-ortiz-44ca1127ea91",
+  "speaker": "lena-ortiz",
+  "voiceId": "4O1sYUnmtThcBoSBrri7",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2d11025639bee33fe8908049ac7548560f7e5cf37109a5e0e7332b5ec3e1b1f3",
+  "text": "They won't. Those three are on the west feeder. I isolated it last night. It was one of the three faults.",
+  "bytes": 111639,
+  "generated": "2026-10-07T03:28:25Z"
+}

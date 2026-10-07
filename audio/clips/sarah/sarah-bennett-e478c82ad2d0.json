@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-e478c82ad2d0",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "44a99760bffeb026f9fa401fa90227c3c7ce51269a868beca75d188256e02c04",
+  "text": "It's an animal. It came here for food, and it took food, and it left. It didn't break in because it didn't want to. It never cared about us. That's rule one. It's an animal. It does what animals do.",
+  "bytes": 237444,
+  "generated": "2026-10-07T03:29:04Z"
+}

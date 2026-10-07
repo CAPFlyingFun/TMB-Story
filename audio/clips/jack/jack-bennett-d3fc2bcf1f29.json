@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-d3fc2bcf1f29",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b93809bbda93e20032d2fd32e957f32346e0ddb2e675e8397737673078b44be9",
+  "text": "No. You're coming with us.",
+  "bytes": 21777,
+  "generated": "2026-10-07T03:29:14Z"
+}

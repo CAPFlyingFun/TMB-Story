@@ -1,0 +1,18 @@
+{
+  "clipId": "doctor-mercer-f5d4b7a55e9d",
+  "speaker": "doctor-mercer",
+  "voiceId": "EXAVITQu4vr4xnSDxMaL",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "abb5b59ce520b6d84450b44f981ea7039fc1ee9be22d13cc1ea9278e8e2f8102",
+  "text": "Don't be. You answered them. You're bleeding. She's pregnant. You've both been up all night. After this, you're both coming to medical.",
+  "bytes": 126685,
+  "generated": "2026-10-07T03:29:29Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-b8be4c755cc2",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "470da4460c9b63f2403213bbcc961359a3a90def714f250507fc7b538408991c",
+  "text": "He was broad and gray-bearded, in a canvas work jacket with grease worked permanently into the cuffs. Jack recognized him vaguely. The machine shop. Harlan, or Harland.",
+  "bytes": 191469,
+  "generated": "2026-10-07T03:29:56Z"
+}

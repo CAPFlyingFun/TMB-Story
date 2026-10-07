@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-c2730d0b70be",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b63641522f7a38f4f6c2b40093ed56bdb678333f161f1637067af89eb55db3aa",
+  "text": "He gave them the instructions plainly, one at a time. Stay indoors except for essential work. Nobody goes past the end of any road, for any reason. Water is restricted starting now, and the utility station will post the limits by noon. After dark, any light that faces outward along the edge of town gets turned off. If you see an insect near your home, report it. Do not attack it.",
+  "bytes": 408390,
+  "generated": "2026-10-07T03:29:44Z"
+}

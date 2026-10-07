@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-16a2e39b6b5f",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "7b02f663cff242243810f4481f9e98b4cb5c05e9295360afe0ca1c418179d437",
+  "text": "It looked bigger when it was looking at me.",
+  "bytes": 35152,
+  "generated": "2026-10-07T03:27:48Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-a2c081204fcd",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "4455784a81c1e6b436d12c621142f9300fbad703b302e55025c3b9244df3320b",
+  "text": "Above them, a motor whirred to life.",
+  "bytes": 40586,
+  "generated": "2026-10-07T03:28:12Z"
+}

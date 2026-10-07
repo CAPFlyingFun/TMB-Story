@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-667d51697f5b",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "a5a96375019acdc182b12b490e5d579c1426ebd9ac9cf9b5c14184ff586b6e18",
+  "text": "Jack started climbing.",
+  "bytes": 27211,
+  "generated": "2026-10-07T03:28:34Z"
+}

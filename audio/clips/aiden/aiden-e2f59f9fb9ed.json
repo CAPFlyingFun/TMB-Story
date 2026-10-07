@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-e2f59f9fb9ed",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "833d5da33962874ea9ea9d1758d9bb7f932d7f9f7ed49d7f750fd41adb0f506c",
+  "text": "Wait. You're leaving me here?",
+  "bytes": 24703,
+  "generated": "2026-10-07T03:29:14Z"
+}

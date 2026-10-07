@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-ea719a0bcd5c",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "92e8673dfe0d5e066bcb94610335b9dbf1bef757934eb0da6fc5846097c02756",
+  "text": "For what?",
+  "bytes": 13836,
+  "generated": "2026-10-07T03:27:57Z"
+}

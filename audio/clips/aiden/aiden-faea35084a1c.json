@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-faea35084a1c",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "82180d795c49472b05def892b3e513405cda26b79955f2064d01d7032a466854",
+  "text": "The panel's by the front door.",
+  "bytes": 28465,
+  "generated": "2026-10-07T03:28:11Z"
+}

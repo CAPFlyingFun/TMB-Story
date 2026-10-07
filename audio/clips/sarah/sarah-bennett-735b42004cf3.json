@@ -1,0 +1,18 @@
+{
+  "clipId": "sarah-bennett-735b42004cf3",
+  "speaker": "sarah-bennett",
+  "voiceId": "MClEFoImJXBTgLwdLI5n",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "07d645f1d70ab0ed87aef5c9ea2afbcdeb7ed75e9328b2d6c678f3a6ac9284e7",
+  "text": "Then we put blackout blinds on the western glass at night. The plants get their light. The island doesn't see it.",
+  "bytes": 102862,
+  "generated": "2026-10-07T03:29:07Z"
+}

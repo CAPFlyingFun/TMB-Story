@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-4100eeaee88a",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "310a9dc437bfcf96a93218f2349ac7c078c46a904e3800a6710c671cea5a4e6d",
+  "text": "Can you stop them?",
+  "bytes": 18016,
+  "generated": "2026-10-07T03:28:10Z"
+}

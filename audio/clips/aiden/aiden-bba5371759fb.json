@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-bba5371759fb",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "653a8306cadf78dda8e93ec29830fd7827fa3a906c746983bb08e43310afa7b2",
+  "text": "It looked at you.",
+  "bytes": 18852,
+  "generated": "2026-10-07T03:28:54Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-f896fdad4971",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "03b5eec151d379667290f196850073b30c3ac9c6f61c2429de28afc53cc93c9e",
+  "text": "Good morning. My name is Jack Bennett. I run the TOMBS project at the laboratory. Some of you know me. Most of you probably just know the building.",
+  "bytes": 129611,
+  "generated": "2026-10-07T03:29:35Z"
+}

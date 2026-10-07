@@ -1,0 +1,18 @@
+{
+  "clipId": "jack-bennett-dd8e752e40d3",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "bf522b527d003ece48c7310df6140ba82fea2cc18013103ec1a65a84d9d9191d",
+  "text": "Last night, around eleven o'clock, TOMBS activated without authorization. We tried to stop it, and we couldn't. When it finished, it had changed the size of everything inside the developed settlement. Every building. Every street. Every one of us.",
+  "bytes": 284256,
+  "generated": "2026-10-07T03:29:38Z"
+}

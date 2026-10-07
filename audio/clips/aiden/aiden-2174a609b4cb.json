@@ -1,0 +1,18 @@
+{
+  "clipId": "aiden-2174a609b4cb",
+  "speaker": "aiden",
+  "voiceId": "qA5SHJ9UjGlW2QwXWR7w",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "2c3694ed03c398b57eb1cd6e2bb77f5d40a4c2c68b050b25782fdc05c2d0fa6f",
+  "text": "That's the plan?",
+  "bytes": 19688,
+  "generated": "2026-10-07T03:28:06Z"
+}

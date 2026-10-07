@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-c7c60280500e",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "adb20fcec1042e2f67a22def2580d2cd2c6d1460bbc4c6cfd76e96b8a81ce72b",
+  "text": "It's more like a car. A small car.",
+  "bytes": 41839,
+  "generated": "2026-10-07T03:27:48Z"
+}

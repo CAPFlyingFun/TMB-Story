@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-af9675bd5aff",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "40bed9d3bcb2e6ebbde08c25dba8b5964a54e5e02558c622415c23ce67d9ee16",
+  "text": "They went in through the service door at the back. Warm, damp air wrapped around them, heavy with the smell of soil and tomato leaves. Long rows of grow lights hung from the steel frame overhead, still burning a soft violet white, though the sun had already risen outside.",
+  "bytes": 278822,
+  "generated": "2026-10-07T03:27:37Z"
+}

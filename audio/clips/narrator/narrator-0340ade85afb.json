@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-0340ade85afb",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "826f7a7897b7fd3d06b773280657dd6f8f80911f8fa9e646ae65e240e7e857eb",
+  "text": "Jack leaned toward the microphone.",
+  "bytes": 35988,
+  "generated": "2026-10-07T03:29:47Z"
+}

@@ -1,0 +1,18 @@
+{
+  "clipId": "security-officer-ba594b9d02ad",
+  "speaker": "security-officer",
+  "voiceId": "TX3LPaxmHKxFdv7VOQHJ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "b940617863bc8ff7929386f8d747cdb6458c3b657fae317d14774dc1d0086d08",
+  "text": "I'll go.",
+  "bytes": 13836,
+  "generated": "2026-10-07T03:28:29Z"
+}

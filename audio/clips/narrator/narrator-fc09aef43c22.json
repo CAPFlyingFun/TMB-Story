@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-fc09aef43c22",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "f2dbc93ea623b6a32e7ba9227d1636cbc15c74e75e91412f74d3e6860f6b9ec4",
+  "text": "A short pause on the channel.",
+  "bytes": 30973,
+  "generated": "2026-10-07T03:29:11Z"
+}

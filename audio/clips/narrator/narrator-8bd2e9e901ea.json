@@ -1,0 +1,18 @@
+{
+  "clipId": "narrator-8bd2e9e901ea",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "df44ccfd4189e3887c7c4194adeccacdc21ef2e6cd3bbb33ad65c4a95a0c2166",
+  "text": "She held out her hand.",
+  "bytes": 23449,
+  "generated": "2026-10-07T03:29:27Z"
+}
