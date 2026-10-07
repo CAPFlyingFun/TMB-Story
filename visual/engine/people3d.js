@@ -438,7 +438,7 @@ export class People3D {
     // hips and the ankles. A pose never moves the hips, so this holds for every pose.
     model.position.set(0, 0, 0);
     model.rotation.set(0, 0, 0);
-    rig.apply(THREE.poseSeated(measure, rig.bind, { style: "doze", seconds: 0, headSide: 1 }, []));
+    rig.apply(THREE.poseSeated(measure, rig.bind, { style: "doze", seconds: 0, headSide: 1, arms: (this.spec.cradle || []).includes(id) ? "cradle" : "fold" }, []));
     model.updateMatrixWorld(true);
     const skin = THREE.findSkinnedMesh(model), bones = skin.skeleton.bones, j = measure.joints;
     const w = (i) => bones[i].getWorldPosition(new THREE.Vector3());
@@ -667,7 +667,7 @@ export class People3D {
   basePose(body, kind, t, a) {
     const { measure, rig } = body;
     let turns;
-    if (kind === "doze" || kind === "sit") turns = THREE.poseSeated(measure, rig.bind, { style: kind, seconds: t + body.seed * 1.7, headSide: 1 }, []);
+    if (kind === "doze" || kind === "sit") turns = THREE.poseSeated(measure, rig.bind, { style: kind, seconds: t + body.seed * 1.7, headSide: 1, arms: (this.spec.cradle || []).includes(body.id) ? "cradle" : "fold" }, []);
     else {
       const walking = kind === "walk";
       const phase = walking ? ((body.walked * rig.bindScale) / THREE.humanStride(measure, "walk")) % 1 : 0;

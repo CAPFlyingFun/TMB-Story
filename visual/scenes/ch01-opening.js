@@ -455,7 +455,9 @@ export default {
           // Lights that draw a person's eye while they are on.
           lookAtLights: ["intercom"],
           // skirts that need their weights smoothed to sit down
-          skirted: ["sarah"],
+          // Toon Sarah wears leggings, no skirt (2026-10-07), so no skirt pass; she is
+          // pregnant, so a doze cradles the bump instead of folding the arms over it.
+          cradle: ["sarah"],
         },
       },
 

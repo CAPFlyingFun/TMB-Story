@@ -45,7 +45,9 @@ export function makeMetric(z0 = 0) {
         models: { jack: "../assets/models/jack.glb", sarah: "../assets/models/sarah.glb" },
         camera: CAM,
         room,
-        skirted: ["sarah"],
+        // Toon Sarah wears leggings, no skirt (2026-10-07), so no skirt pass; she is
+          // pregnant, so a doze cradles the bump instead of folding the arms over it.
+          cradle: ["sarah"],
         ...extra,
       },
     };
