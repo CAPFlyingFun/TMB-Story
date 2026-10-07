@@ -7120,7 +7120,7 @@
     {
       "lineId": "resident-7cac83a25018",
       "character": "resident",
-      "characterName": "Resident",
+      "characterName": "Resident (man)",
       "kind": "character",
       "text": "What is that?",
       "audio": "audio/clips/resident/resident-7cac83a25018.mp3",
@@ -7142,7 +7142,7 @@
     {
       "lineId": "resident-9b2d839281fe",
       "character": "resident",
-      "characterName": "Resident",
+      "characterName": "Resident (man)",
       "kind": "character",
       "text": "That's not grass.",
       "audio": "audio/clips/resident/resident-9b2d839281fe.mp3",
@@ -8694,7 +8694,7 @@
     {
       "lineId": "resident-d86f26be5854",
       "character": "resident",
-      "characterName": "Resident",
+      "characterName": "Resident (man)",
       "kind": "character",
       "text": "That's him.",
       "audio": "audio/clips/resident/resident-d86f26be5854.mp3",
@@ -8705,7 +8705,7 @@
     {
       "lineId": "resident-f9c83c882873",
       "character": "resident",
-      "characterName": "Resident",
+      "characterName": "Resident (man)",
       "kind": "character",
       "text": "Doctor Bennett!",
       "audio": "audio/clips/resident/resident-f9c83c882873.mp3",
@@ -8716,7 +8716,7 @@
     {
       "lineId": "resident-b599a09c2c48",
       "character": "resident",
-      "characterName": "Resident",
+      "characterName": "Resident (man)",
       "kind": "character",
       "text": "What's going on?",
       "audio": "audio/clips/resident/resident-b599a09c2c48.mp3",
@@ -8859,7 +8859,7 @@
     {
       "lineId": "resident-b50675ab6213",
       "character": "resident",
-      "characterName": "Resident",
+      "characterName": "Resident (man)",
       "kind": "character",
       "text": "Report it. To who? Pest control?",
       "audio": "audio/clips/resident/resident-b50675ab6213.mp3",
@@ -8892,7 +8892,7 @@
     {
       "lineId": "resident-eeb39c8d4284",
       "character": "resident",
-      "characterName": "Resident",
+      "characterName": "Resident (man)",
       "kind": "character",
       "text": "Why don't we attack it?",
       "audio": "audio/clips/resident/resident-eeb39c8d4284.mp3",
@@ -8914,7 +8914,7 @@
     {
       "lineId": "resident-7bee6475312f",
       "character": "resident",
-      "characterName": "Resident",
+      "characterName": "Resident (man)",
       "kind": "character",
       "text": "Is that you?",
       "audio": "audio/clips/resident/resident-7bee6475312f.mp3",
@@ -8925,7 +8925,7 @@
     {
       "lineId": "resident-2194adfe7192",
       "character": "resident",
-      "characterName": "Resident",
+      "characterName": "Resident (man)",
       "kind": "character",
       "text": "What did you do?",
       "audio": "audio/clips/resident/resident-2194adfe7192.mp3",
@@ -8969,7 +8969,7 @@
     {
       "lineId": "resident-de80be73288b",
       "character": "resident",
-      "characterName": "Resident",
+      "characterName": "Resident (man)",
       "kind": "character",
       "text": "How small are we?",
       "audio": "audio/clips/resident/resident-de80be73288b.mp3",
@@ -8991,7 +8991,7 @@
     {
       "lineId": "resident-ec5afcc52d6e",
       "character": "resident",
-      "characterName": "Resident",
+      "characterName": "Resident (man)",
       "kind": "character",
       "text": "Can you put us back?",
       "audio": "audio/clips/resident/resident-ec5afcc52d6e.mp3",
@@ -9013,7 +9013,7 @@
     {
       "lineId": "resident-6b59e3eae9b3",
       "character": "resident",
-      "characterName": "Resident",
+      "characterName": "Resident (man)",
       "kind": "character",
       "text": "Then call for help. Call the mainland.",
       "audio": "audio/clips/resident/resident-6b59e3eae9b3.mp3",
@@ -9033,12 +9033,12 @@
       ]
     },
     {
-      "lineId": "resident-870b6385cf59",
-      "character": "resident",
-      "characterName": "Resident",
+      "lineId": "resident-woman-21333589af91",
+      "character": "resident-woman",
+      "characterName": "Resident (woman)",
       "kind": "character",
       "text": "My daughter's in Boston. At school. She's going to call me tonight. What happens when she calls?",
-      "audio": "audio/clips/resident/resident-870b6385cf59.mp3",
+      "audio": "audio/clips/residentwoman/resident-woman-21333589af91.mp3",
       "chapters": [
         12
       ]

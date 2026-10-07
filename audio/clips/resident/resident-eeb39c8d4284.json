@@ -1,0 +1,18 @@
+{
+  "clipId": "resident-eeb39c8d4284",
+  "speaker": "resident",
+  "voiceId": "e317QCfEVBBL9PMh9wgN",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "0b4dd1eaf4a81a831e23bfebf3f9bc2aad1e925773c4e79d7e5976d475b4c8c0",
+  "text": "Why don't we attack it?",
+  "bytes": 20524,
+  "generated": "2026-10-07T04:09:34Z"
+}

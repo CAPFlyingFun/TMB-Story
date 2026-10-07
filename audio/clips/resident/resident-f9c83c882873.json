@@ -1,0 +1,18 @@
+{
+  "clipId": "resident-f9c83c882873",
+  "speaker": "resident",
+  "voiceId": "e317QCfEVBBL9PMh9wgN",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "fingerprint": "c85fa3bb87aaf4dac49dc79ae748a6dc0919b84cac9ad3400c39d4d99a385782",
+  "text": "Doctor Bennett!",
+  "bytes": 17598,
+  "generated": "2026-10-07T04:09:34Z"
+}
