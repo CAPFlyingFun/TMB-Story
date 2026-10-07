@@ -3,7 +3,7 @@ chapter: 10
 title: "The Greenhouse"
 movement: 4
 pov: Jack
-word_count: 1544
+word_count: 1575
 story_time:
   clock: settlement
   date: "March sixth, twenty-one ten"
@@ -34,9 +34,7 @@ source: "Drafted by Claude on Joshua's scheduled TMB-Story writing workflow, 202
 ---
 # Chapter 10: The Greenhouse
 
-Mark had the utility vehicle moving before Jack's door was fully shut.
-
-"Medical first," Mark said into his radio, steering one-handed out of the laboratory lot. "Doctor Mercer, this is Jones. Doctor Bennett wants you briefed in person. I'll have someone at your door in ten minutes."
+Mark had the utility vehicle rolling out of the laboratory lot before Jack's door was fully shut, steering one-handed with the radio already at his mouth. "Medical first. Doctor Mercer, this is Jones. Doctor Bennett wants you briefed in person. I'll have someone at your door in ten minutes."
 
 Doctor Mercer's reply crackled back, dry as ever. "I've been briefed. I looked out the window."
 
@@ -94,7 +92,7 @@ Mark parked behind the building, out of sight of the western glass, and killed t
 
 Birdsong. The tick of the cooling engine. Somewhere far off, the low rush of wind moving through grass the size of trees.
 
-"You want me to go first?" Mark asked.
+Mark looked over at him. "You want me to go first?"
 
 "I want neither of us to go first."
 
@@ -106,7 +104,7 @@ Aiden stood exactly where Sarah had said, halfway down the center aisle.
 
 He was younger than Jack had expected from his voice, maybe twenty-five, in muddy boots and a green work apron. He was holding a pesticide fogger in both hands, the nozzle aimed at the far wall like a rifle, and he was shaking.
 
-"Aiden," Jack said quietly. "I'm Jack Bennett. We talked on the radio."
+Jack kept his voice quiet. "Aiden, I'm Jack Bennett. We talked on the radio."
 
 Aiden didn't turn his head. "You said you'd explain."
 
@@ -152,9 +150,9 @@ Aiden stared at him. "Are you serious?"
 
 Jack didn't move. Neither did the spider. Only its eyes seemed alive, two black mirrors with the whole greenhouse reflected in them.
 
-"Sarah," he said softly. "Are you seeing this?"
+He spoke softly into his wrist. "Sarah, are you seeing this?"
 
-"I'm seeing it." Her voice had gone very calm, which meant she was working. "Jack, it's tracking you. Every time you move, the front of its body turns a little."
+Her voice had gone very calm, which meant she was working. "I'm seeing it. Jack, it's tracking you. Every time you move, the front of its body turns a little."
 
 "Wonderful."
 
@@ -162,7 +160,7 @@ Aiden made a small, strangled sound that might have been a laugh. "It's a jumpin
 
 Jack looked at him. "You know what it is?"
 
-"I know what it is when it's the size of a pea." Aiden wiped his forehead on his sleeve, the fogger still dangling from one hand. "We like them in here. They eat aphids, whiteflies, all the stuff that gets into the seedlings. We never spray when we see one. They're friendly."
+Aiden wiped his forehead on his sleeve, the fogger still dangling from one hand. "I know what it is when it's the size of a pea. We like them in here. They eat aphids, whiteflies, all the stuff that gets into the seedlings. We never spray when we see one. They're friendly."
 
 Mark kept his eyes on the glass. "Friendly."
 
@@ -174,7 +172,7 @@ Mark kept his eyes on the glass. "Friendly."
 
 Jack crouched slightly, slowly, watching the spider's head follow him down by a fraction. "If they're hunters, why isn't it hunting?"
 
-"Because it's cold," Aiden said. "They hunt by sight, in daylight. Mornings like this, they sit in the sun and warm up before they do anything." He swallowed. "It hasn't moved since I called you because it's waiting."
+Aiden swallowed. "Because it's cold. They hunt by sight, in daylight. Mornings like this, they sit in the sun and warm up before they do anything. It hasn't moved since I called you because it's waiting."
 
 "For what?"
 
@@ -188,21 +186,21 @@ At first he saw only smears of condensation. Then he saw what was clinging to th
 
 Dozens of them.
 
-"The grow lights," Sarah said. "Aiden, do they run all night?"
+Sarah had already put it together. "The grow lights. Aiden, do they run all night?"
 
 "Every night. The seedlings need eighteen hours."
 
-"Then every insect on this side of the island has been flying at your glass since dark. And that," she said quietly, "is breakfast. Lined up in a window."
+Sarah's voice dropped. "Then every insect on this side of the island has been flying at your glass since dark. And that is breakfast. Lined up in a window."
 
 Mark muttered, "So it's not here for us."
 
-"It's not here for us yet," Sarah said. "It came for them. We just happen to be on the other side of the menu."
+Sarah didn't let him off that easily. "It's not here for us yet. It came for them. We just happen to be on the other side of the menu."
 
 Jack felt something in his chest loosen slightly. Not much. Enough. An animal that wanted flies was a problem. A monster that wanted people was a different kind of problem entirely.
 
-"Okay," he said. "So we stay inside, we stay still, we wait for it to eat and leave."
+Jack nodded slowly. "Okay. So we stay inside, we stay still, and we wait for it to eat and leave."
 
-"That's the plan?" Aiden asked.
+Aiden looked from Jack to the glass and back again. "That's the plan?"
 
 "That's the plan for the next ten minutes."
 
@@ -218,7 +216,7 @@ Jack checked his wrist. "Six fifty-eight. Why?"
 
 Aiden pointed up. Jack followed the line of his finger to the peak of the roof, where a long row of glass panels sat closed along both sides, each one hinged at the top and connected to a thin steel arm.
 
-"The roof vents open on a timer," Aiden whispered. "Every morning. Seven o'clock. To let the heat out."
+Aiden's voice dropped to a whisper. "The roof vents open on a timer. Every morning. Seven o'clock. To let the heat out."
 
 "Can you stop them?"
 

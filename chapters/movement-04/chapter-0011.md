@@ -3,7 +3,7 @@ chapter: 11
 title: "Slow Is Invisible"
 movement: 4
 pov: Jack
-word_count: 1685
+word_count: 1726
 story_time:
   clock: settlement
   date: "March sixth, twenty-one ten"
@@ -35,7 +35,7 @@ source: "Drafted by Claude on Joshua's scheduled TMB-Story writing workflow, 202
 ---
 # Chapter 11: Slow Is Invisible
 
-"Aiden," Jack said, without taking his eyes off the roof. "The panel. Now. Slowly."
+Jack didn't take his eyes off the roof. "Aiden. The panel. Now. Slowly."
 
 Aiden didn't move. "Slowly or now?"
 
@@ -53,7 +53,7 @@ Outside, the spider still hadn't moved its body. Only its head followed the soun
 
 Then, slowly, they tilted back down, and found Aiden.
 
-"Jack," Sarah said through his wrist. "It's watching him."
+Sarah's voice came through his wrist, low and tight. "Jack, it's watching him."
 
 "I know. Aiden, keep going. Same speed. Don't look at it."
 
@@ -91,7 +91,7 @@ Mark had already noticed. "I'll go."
 
 "Jack."
 
-"You're the one who knows what to do down here if something comes through." Jack nodded toward a red fire extinguisher hanging beside the irrigation valves. "That's carbon dioxide. Cold, loud, and it'll startle almost anything. If you have to use it, aim at the face, not the body."
+Jack nodded toward a red fire extinguisher hanging beside the irrigation valves. "You're the one who knows what to do down here if something comes through. That's carbon dioxide. Cold, loud, and it'll startle almost anything. If you have to use it, aim at the face, not the body."
 
 Mark took the extinguisher off the wall and checked the pin. "You've thought about this."
 
@@ -115,7 +115,7 @@ He reached the first crank and began to turn it.
 
 It was stiff. The panel lowered by a few centimeters with every turn, the hinge creaking. Jack kept his shoulders still and moved only his wrists, one slow rotation at a time, until the glass met the frame with a soft click.
 
-"One," Sarah said quietly.
+From his wrist, Sarah counted quietly. "One."
 
 He moved to the second.
 
@@ -161,13 +161,13 @@ The spider held it for a moment, as though considering. Then it turned, stepped 
 
 When Jack finally looked down through the western glass, the grass was swaying where it had gone in. Then it was still.
 
-"It's gone," Sarah said. Her voice was not quite steady. "Jack, it's gone. It went back into the grass."
+Sarah's voice came through, not quite steady. "It's gone. Jack, it's gone. It went back into the grass."
 
 Jack let out a breath he felt all the way to his knees. He reached up and cranked the third vent closed, one slow rotation at a time, because it felt wrong to hurry now, and only when the glass clicked into the frame did he notice the blood running across the back of his left hand.
 
 A sliver from the cracked pane. He hadn't even felt it.
 
-"You're bleeding," Mark called up.
+Mark called up from below. "You're bleeding."
 
 "It's small."
 
@@ -175,7 +175,7 @@ A sliver from the cracked pane. He hadn't even felt it.
 
 Jack climbed down. Aiden was sitting on the floor beside the front door with the fogger in his lap and his back against the wall. He looked up at Jack the way people looked at someone who had just walked out of a car accident.
 
-"It looked at you." Aiden's voice was barely above a whisper.
+Aiden's voice was barely above a whisper. "It looked at you."
 
 "I noticed."
 
@@ -191,7 +191,7 @@ Sarah's voice came through his wrist again, steadier now, and quick, the way it 
 
 Mark looked up sharply. "Pressed straight down."
 
-"And no trail," Jack said. "Like the mark you found by the southern perimeter."
+Jack turned to him. "And no trail. Like the mark you found by the southern perimeter."
 
 Aiden frowned. "What mark?"
 
@@ -201,15 +201,15 @@ Aiden shook his head slowly. "That wasn't this one. Or not because it was huntin
 
 For a moment, nobody said anything.
 
-"So something else out there jumps," Mark said finally.
+Mark was the one who finally said it. "So something else out there jumps."
 
-"Or something else out there lands," Sarah said. "We don't know yet. Write it down. Both."
+Sarah's answer came straight back. "Or something else out there lands. We don't know yet. Write it down. Both."
 
 Jack wrapped his hand in a clean shop rag from Aiden's bench and looked at the cracked pane in the roof, the white star spreading across it like frost.
 
 "Sarah. What did we just learn?"
 
-She didn't hesitate. "It's an animal. It came here for food, and it took food, and it left. It didn't break in because it didn't want to. It never cared about us." A pause. "That's rule one. It's an animal. It does what animals do."
+She didn't hesitate. "It's an animal. It came here for food, and it took food, and it left. It didn't break in because it didn't want to. It never cared about us. That's rule one. It's an animal. It does what animals do."
 
 "Rule two?"
 
@@ -217,19 +217,19 @@ She didn't hesitate. "It's an animal. It came here for food, and it took food, a
 
 Aiden held up the fogger and set it carefully on the floor.
 
-"Three. No lights shining outward along the edge after dark. The lights brought the insects, and the insects brought the spider."
+Sarah kept going. "Three. No lights shining outward along the edge after dark. The lights brought the insects, and the insects brought the spider."
 
 Aiden winced. "The seedlings need those lights."
 
-"Then we put blackout blinds on the western glass at night. The plants get their light. The island doesn't see it."
+Sarah had the answer ready. "Then we put blackout blinds on the western glass at night. The plants get their light. The island doesn't see it."
 
-"Four," Jack said. "Anything an insect can fit through gets closed. Vents, cracks, drains. Doors."
+Jack added the next one himself. "Four. Anything an insect can fit through gets closed. Vents, cracks, drains. Doors."
 
-"Five. Move slowly near glass."
+Sarah came straight back with another. "Five. Move slowly near glass."
 
-"Six. Nobody goes out alone."
+Jack looked at Mark, then at Aiden. "Six. Nobody goes out alone."
 
-There was a pause on the line. "Are you writing that down?" Jack asked.
+There was a pause on the line, and Jack asked, "Are you writing that down?"
 
 "I've been writing since rule one."
 

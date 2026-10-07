@@ -68,3 +68,13 @@ handoff is the review.
    was followed; Decision 0029 records it.
 4. **Aiden's voice** is still unassigned in `voice-registry.json`; Paul Harlan, Doctor
    Mercer and Unit Four's officer will need voices too, after approval.
+
+## Audio pass, 2026-10-06 (Joshua's request)
+
+Joshua: lines split by narration, or tagged after the line, sound wrong now that each
+character has their own voice. Every paragraph in Chapters 10 to 12 was checked: 50 had a
+tag after the quote or narration inside one speaker's line. Each now puts the beat first
+and keeps the line whole. One deliberate pause stays as its own paragraph: Paul Harlan's
+"Somebody switched it on." / He let that sit for a long moment before he finished. / "So
+who was it?" The rule is now `TMB_STORY_RULES.md` 8a. Word counts 1,575 / 1,726 / 1,821;
+Chapter 12 is twenty-one words over the 1,800 guide, left as is rather than cut.

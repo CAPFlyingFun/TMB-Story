@@ -3,7 +3,7 @@ chapter: 12
 title: "One Clear Message"
 movement: 4
 pov: Jack
-word_count: 1791
+word_count: 1821
 story_time:
   clock: settlement
   date: "March sixth, twenty-one ten"
@@ -35,7 +35,7 @@ source: "Drafted by Claude on Joshua's scheduled TMB-Story writing workflow, 202
 ---
 # Chapter 12: One Clear Message
 
-"Fifty people," Mark said, already moving toward the service door. "Asking for you by name. That's either very good or very bad."
+Mark was already moving toward the service door. "Fifty people. Asking for you by name. That's either very good or very bad."
 
 Jack pulled the shop rag tighter around his hand. "Which one do you think?"
 
@@ -99,11 +99,11 @@ Jack held the hand a little behind his back. "It's small."
 
 Beside her stood a woman in her sixties with short gray hair, a medical bag over one shoulder, and the expression of someone who had been awake all night and intended to hold everyone personally responsible for it.
 
-"Doctor Mercer," she said, holding out her hand. "We've met. Mostly by phone."
+She held out her hand. "Doctor Mercer. We've met. Mostly by phone."
 
 Jack shook it. "I'm sorry about the phone calls."
 
-"Don't be. You answered them." She glanced at his hand, then at Sarah, then back at him. "You're bleeding. She's pregnant. You've both been up all night. After this, you're both coming to medical."
+She glanced at his hand, then at Sarah, then back at him. "Don't be. You answered them. You're bleeding. She's pregnant. You've both been up all night. After this, you're both coming to medical."
 
 Sarah opened her mouth.
 
@@ -127,7 +127,7 @@ Her voice came quietly through his wrist. "You're live everywhere."
 
 Jack looked out at the room. Sixty faces. Behind them, through the glass doors, more people on the lawn. And beyond them, invisible, nearly five hundred people in kitchens and bedrooms and hallways, all listening to the same speakers.
 
-"Good morning," he said. "My name is Jack Bennett. I run the TOMBS project at the laboratory. Some of you know me. Most of you probably just know the building."
+He gripped the stand with his good hand. "Good morning. My name is Jack Bennett. I run the TOMBS project at the laboratory. Some of you know me. Most of you probably just know the building."
 
 A few people nodded. Nobody smiled.
 
@@ -135,7 +135,7 @@ A few people nodded. Nobody smiled.
 
 The room was completely silent.
 
-"The grass outside didn't grow," Jack said. "We got smaller."
+Jack let that settle before he finished. "The grass outside didn't grow. We got smaller."
 
 The silence broke all at once. Questions came from every direction, layered over one another until none of them could be heard. Jack raised his good hand and waited. It took a long time. Sarah didn't move from his side.
 
@@ -151,11 +151,9 @@ At the door, Mark lifted a hand. "Hi."
 
 The man didn't laugh again.
 
-"Why don't we attack it?" someone called from the back.
+Someone called out from the back. "Why don't we attack it?"
 
-Jack looked at Sarah. She stepped toward the microphone.
-
-"Lena," she said. "Play the greenhouse."
+Jack looked at Sarah. She stepped up to the microphone. "Lena, play the greenhouse."
 
 The calendar disappeared from the big screen. In its place, the western glass of the greenhouse, the grass beyond it, and the spider, sitting in the sun.
 
@@ -173,7 +171,7 @@ Jack leaned toward the microphone. "That's me."
 
 A nervous ripple of laughter moved through the room and died away.
 
-"That's why we don't attack," Sarah said. "Because it wasn't attacking us. It came for the insects on the glass, and it took one, and it left. We don't know yet what else is out there. Until we do, we don't start fights we can't finish."
+Sarah's voice carried over every speaker. "That's why we don't attack. Because it wasn't attacking us. It came for the insects on the glass, and it took one, and it left. We don't know yet what else is out there. Until we do, we don't start fights we can't finish."
 
 Aiden spoke up suddenly from beside Mark, louder than he probably meant to. "It looked right at him. I was there. It looked at him and it left."
 
@@ -189,7 +187,7 @@ The questions came again, but slower now, one at a time.
 
 Jack had known that one was coming since he stepped onto the stage. He still felt it land.
 
-"I don't know," he said. "I haven't tried. And I'm not going to try until I understand exactly what it would do. If I get that wrong, I don't get a second chance, and neither do you."
+Jack answered slowly. "I don't know. I haven't tried. And I'm not going to try until I understand exactly what it would do. If I get that wrong, I don't get a second chance, and neither do you."
 
 "Then call for help. Call the mainland."
 
@@ -205,15 +203,17 @@ Then someone near the front stood up, and the room shifted around him the way ro
 
 He was broad and gray-bearded, in a canvas work jacket with grease worked permanently into the cuffs. Jack recognized him vaguely. The machine shop. Harlan, or Harland.
 
-"Paul Harlan," the man said, for the room's benefit rather than Jack's. "I run the machine shop. I've kept half the machinery in this town running since before most of you got here." He folded his arms. "You've been very honest up there, Doctor. I'll give you that. You don't know how small, you don't know how to fix it, you don't know why the radio's dead."
+He folded his arms and gave his name for the room's benefit rather than Jack's. "Paul Harlan. I run the machine shop. I've kept half the machinery in this town running since before most of you got here. You've been very honest up there, Doctor. I'll give you that. You don't know how small, you don't know how to fix it, you don't know why the radio's dead."
 
 "That's right."
 
-"So let me ask you something you should know." Paul tilted his head. "You said it activated without authorization."
+Paul tilted his head. "So let me ask you something you should know. You said it activated without authorization."
 
 "Yes."
 
-"Machines like that don't switch themselves on. Somebody switched it on." He let that sit. "So who was it?"
+Paul nodded, as though that settled something. "Machines like that don't switch themselves on. Somebody switched it on."
+
+He let that sit for a long moment before he finished. "So who was it?"
 
 The hall went silent again. Not the stunned silence from before. A sharper one. Jack could feel it pulling at every person in the room, and through Lena's speakers, at every person in every house beyond it.
 

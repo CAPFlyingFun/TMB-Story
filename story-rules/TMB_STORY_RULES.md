@@ -73,6 +73,15 @@ breaks, no character portraits, no subtitles and no game screen.
    naturally exists. A plain tag is perfectly acceptable when it is needed for
    clarity. Do not invent gestures to avoid the word "said".
 7. **With three or more speakers, identify speakers more often.**
+8a. **Beat first, then the whole line** (Joshua, 2026-10-06). Every character has their
+    own voice, so a line split by narration becomes two clips with the narrator between
+    them, and a tag after a line names a speaker the listener has already heard. Put the
+    speaker's action or identification BEFORE the quote, and keep one speaker's line in
+    one unbroken quote: `Aiden swallowed. "Because it's cold. They hunt by sight."`, not
+    `"Because it's cold," Aiden said. "They hunt by sight."` A paragraph is narration,
+    then one quote. When a real pause or event belongs between two lines, give it its own
+    paragraph. Vary how a speaker is anchored (an action, a role, a pronoun) so the same
+    name is not repeated line after line.
 8. **No ambiguous standalone name exchanges.** "Sarah." / "Jack." on their own is out
    unless the surrounding narration makes the speaker unmistakable by ear alone.
 9. **System and computer readouts are story content, not headings.** A line such as
