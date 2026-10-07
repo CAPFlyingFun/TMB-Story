@@ -647,3 +647,25 @@ button {
 .say-q { flex: 1; min-width: 0; padding-top: .2em; }
 @media (min-width: 600px) { .spk { min-width: 7.4em; } }
 .badge-rose { color: var(--accent-rose); border-color: var(--accent-rose); background: transparent; }
+
+/* Listen: the line being read, with the one before and after dimmed (player.js nowHtml).
+   The portrait supports the line; it never dominates it. The narrator is quieter: a
+   small microphone instead of a face, and a muted name. */
+.listen-now { display: flex; flex-direction: column; gap: .55rem; min-height: 0; }
+.now-line { display: grid; grid-template-columns: auto 1fr; column-gap: .55rem; align-items: start; transition: opacity .25s; }
+.now-line .spk { grid-column: 1 / -1; min-width: 0; font-size: .74rem; }
+.now-line .spk-face { width: 1.7em; height: 1.7em; }
+.now-text { grid-column: 1 / -1; margin: .2rem 0 0; line-height: 1.5; }
+.now-prev, .now-next { opacity: .42; }
+.now-prev .now-text, .now-next .now-text {
+  font-size: .9rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.now-cur { opacity: 1; padding: .55rem .7rem; border-radius: .5rem; background: var(--bg-surface, #262220);
+  border-left: 3px solid var(--accent-gold, #D4A853); }
+.now-cur .now-text { font-size: 1.1rem; color: var(--text-primary, #F5EDE4); }
+.now-cur .spk-face { width: 2.3em; height: 2.3em; }
+.now-narr .spk-name { color: var(--text-muted, #8B7E6E); }
+.now-cur.now-narr { border-left-color: var(--border-accent, #8B7355); }
+.spk-mic { border: none; background: transparent; display: inline-grid; place-items: center; font-size: 1em; }
+.spk-narrator .spk-name { color: var(--text-muted, #8B7E6E); font-weight: 500; }
+.now-empty { display: none; }

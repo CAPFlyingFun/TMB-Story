@@ -419,9 +419,6 @@
      voices use, pinned in audio/speaker-overrides.json). A paragraph whose text no longer
      matches its lines (the chapter was edited and not yet re-parsed) is shown plain rather
      than tagged with a guess. English only; a translation keeps its own view. */
-  var FACES = { "jack-bennett": ["jack", "Jack"], "sarah-bennett": ["sarah", "Sarah"], "lena-ortiz": ["lena", "Lena"],
-    "security-officer": ["mark", "Mark"], "system": ["system", "TOMBS"] };
-  var SPEAKER_NAMES = { "doctor-mercer": "Dr. Mercer", "aiden": "Aiden", "paul-harlan": "Paul", "unit-four": "Unit Four", "resident": "Resident" };
   var SPEAKERS_KEY = "tmb.speakers";
 
   function speakersOn() { return storageGet(SPEAKERS_KEY) !== "0"; }
@@ -438,10 +435,7 @@
   }
 
   function speakerChip(id, fallback) {
-    var f = FACES[id], name = f ? f[1] : (SPEAKER_NAMES[id] || fallback || id);
-    var face = f ? '<img class="spk-face" src="assets/portraits/' + f[0] + '.png" alt="" loading="lazy">'
-      : '<span class="spk-face spk-initial" aria-hidden="true">' + esc(name.replace(/^Dr\. /, "").charAt(0)) + "</span>";
-    return '<span class="spk">' + face + '<span class="spk-name">' + esc(name) + ":</span></span>";
+    return window.TMBSpeakers ? window.TMBSpeakers.chip(id, fallback, true) : "<b>" + esc(fallback || id) + ":</b> ";
   }
 
   function samePara(a, b) {

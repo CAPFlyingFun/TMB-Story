@@ -551,11 +551,27 @@
      four times a second would fight every control on it -- which is exactly how the
      volume sliders were destroyed between one segment and the next. */
   function renderNow() {
-    var seg = current() || {};
-    var who = document.getElementById("listen-speaker");
-    var text = document.getElementById("listen-text");
-    if (who) who.textContent = seg.speakerName || "";
-    if (text) text.textContent = seg.displayText || "";
+    var box = document.getElementById("listen-now");
+    if (box) box.innerHTML = nowHtml();
+  }
+
+  /* The line being read, with the one before and the one after dimmed either side, so a
+     line that sounds wrong is sitting there in text the moment it is heard. Each line
+     carries its speaker's portrait and name (reader/speakers.js); the narrator gets the
+     microphone. Spoken lines are quoted, narration is not. */
+  function lineHtml(seg, cls) {
+    if (!seg) return '<div class="now-line ' + cls + ' now-empty"></div>';
+    var S = window.TMBSpeakers, narr = seg.speaker === "narrator";
+    var who = S ? S.chip(seg.speaker, seg.speakerName, false) : '<span class="spk-name">' + esc(seg.speakerName || "") + "</span>";
+    var text = narr ? esc(seg.displayText) : "\u201C" + esc(seg.displayText) + "\u201D";
+    return '<div class="now-line ' + cls + (narr ? " now-narr" : "") + '">' + who +
+      (cls === "now-cur" && seg._have === false ? '<span class="listen-missing">(no audio yet)</span>' : "") +
+      '<p class="now-text">' + text + "</p></div>";
+  }
+
+  function nowHtml() {
+    var segs = segments(), i = state.index;
+    return lineHtml(segs[i - 1], "now-prev") + lineHtml(segs[i], "now-cur") + lineHtml(segs[i + 1], "now-next");
   }
 
   function render() {
@@ -579,10 +595,7 @@
       '<div class="listen-head"><h2>' + esc(m.title || ("Chapter " + m.chapter)) + '</h2>' +
       '<p class="listen-sub">' + esc(sourceLine(m, total)) + '</p></div>' +
       stalled + warn +
-      '<div class="listen-now"><p class="listen-speaker" id="listen-speaker">' +
-        esc(seg.speakerName || "") + '</p>' +
-      (seg._have === false ? '<p class="listen-missing">(no audio yet)</p>' : '') +
-      '<p class="listen-text" id="listen-text">' + esc(seg.displayText || "") + '</p></div>' +
+      '<div class="listen-now" id="listen-now" aria-live="polite">' + nowHtml() + '</div>' +
       '<div class="listen-controls">' +
       '<button id="listen-prev" type="button" aria-label="Previous segment">&#9664;&#9664;</button>' +
       '<button id="listen-toggle" type="button">' + (state.playing ? "Pause" : "Play") + '</button>' +
