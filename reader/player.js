@@ -527,12 +527,49 @@
     return Math.floor(t / 60) + ":" + ("0" + (t % 60)).slice(-2);
   }
 
+  /* WHERE WE ARE IN THE CHAPTER, IN TIME. The percentage and the bar both come from
+     this, never from the segment count: segments are wildly uneven (a two-word "Jack."
+     next to a paragraph of narration), so counting them made the bar lurch and the
+     percentage sit still. In the mixed file the element knows the answer. Clip by clip,
+     the chapter clock is the current clip's start on the chapter timeline plus how far
+     into the clip the element is. */
+  function chapterTotal() {
+    var a = state.audio;
+    if (mixedMode() && a && a.duration && isFinite(a.duration)) return a.duration;
+    if (state.mixed && state.mixed.seconds) return state.mixed.seconds;
+    var segs = segments(), last = segs[segs.length - 1];
+    return last && last.endMs ? last.endMs / 1000 : 0;
+  }
+
+  function chapterNow() {
+    var a = state.audio;
+    if (mixedMode()) return a ? a.currentTime : 0;
+    var seg = current();
+    var base = seg ? ((starts()[state.index] != null ? starts()[state.index] : seg.startMs) || 0) / 1000 : 0;
+    var into = (a && seg && a.getAttribute("data-src") === "./" + seg.audio) ? a.currentTime : 0;
+    return base + into;
+  }
+
+  function seekChapter(seconds) {
+    var a = state.audio;
+    if (mixedMode()) {
+      if (a && a.getAttribute("data-src") === mixedSrc()) {
+        try { a.currentTime = seconds; } catch (e) {}
+        renderProgress();
+      } else {
+        state.index = indexAt(seconds * 1000);
+        if (state.playing) play(); else render();
+      }
+      return;
+    }
+    /* Clip by clip: jump to the line that is sounding at that moment. */
+    var ms = seconds * 1000, segs = segments(), i = 0;
+    while (i + 1 < segs.length && ((starts()[i + 1] != null ? starts()[i + 1] : segs[i + 1].startMs) || 0) <= ms) i += 1;
+    if (i !== state.index) go(i - state.index);
+  }
+
   function renderProgress() {
     var a = state.audio;
-    var bar = document.getElementById("listen-seg-bar");
-    if (bar && a && a.duration) {
-      bar.value = String((a.currentTime / a.duration) * 100);
-    }
     if (mixedMode() && a) {
       /* THE FILE IS IN CHARGE. The page does not count segments as it plays them; it
          asks the element where it is and looks the answer up. That is what makes
@@ -540,11 +577,28 @@
       var i = indexAt(a.currentTime * 1000);
       if (i !== state.index) { state.index = i; renderNow(); }
     }
+    var total = chapterTotal(), now = Math.min(chapterNow(), total || 0);
+    var frac = total ? now / total : 0;
+    var bar = document.getElementById("listen-seg-bar");
+    if (bar && !state.dragging) bar.value = String(frac * 1000);
     var pos = document.getElementById("listen-position");
     if (pos) {
       pos.textContent = "Segment " + (state.index + 1) + " of " + segments().length +
-        (a && a.duration ? " · " + clock(a.currentTime) + " of " + clock(a.duration) : "");
+        (total ? " · " + clock(now) + " of " + clock(total) : "") +
+        " · " + (frac * 100).toFixed(1) + "% through";
     }
+  }
+
+  /* timeupdate only fires about four times a second, which makes a bar visibly step.
+     While audio is playing, the bar and clock follow the animation frame instead. */
+  function tick() {
+    state.raf = null;
+    if (!state.playing) return;
+    renderProgress();
+    state.raf = requestAnimationFrame(tick);
+  }
+  function startTicking() {
+    if (!state.raf && state.playing && window.requestAnimationFrame) state.raf = requestAnimationFrame(tick);
   }
 
   /* Just the line being read. render() rebuilds the whole panel, and rebuilding it
@@ -581,7 +635,6 @@
     if (!m) return;
     var seg = current() || {};
     var total = segments().length;
-    var pct = total ? Math.round(((state.index) / total) * 100) : 0;
     var stalled = state.stalled
       ? '<p class="listen-warn">' + esc(state.stalled) + '</p>'
       : "";
@@ -607,10 +660,10 @@
       }).join("") + '</select></label></div>' +
       sourceControlHtml() +
       layerControlsHtml() +
-      '<input id="listen-seg-bar" class="listen-bar" type="range" min="0" max="100" value="0" ' +
+      '<input id="listen-seg-bar" class="listen-bar" type="range" min="0" max="1000" step="any" value="0" ' +
         'aria-label="Position in the chapter">' +
       '<p class="listen-meta"><span id="listen-position">Segment ' + (state.index + 1) +
-        ' of ' + total + '</span> · chapter ' + pct + '% through</p>';
+        ' of ' + total + '</span></p>';
 
     document.getElementById("listen-prev").onclick = function () { go(-1); };
     document.getElementById("listen-next").onclick = function () { go(1); };
@@ -620,13 +673,24 @@
     document.getElementById("listen-rate").onchange = function (e) {
       setRate(parseFloat(e.target.value));
     };
-    document.getElementById("listen-seg-bar").oninput = function (e) {
-      var a = state.audio;
-      if (a && a.duration) a.currentTime = (parseFloat(e.target.value) / 100) * a.duration;
+    /* Dragging previews the time; letting go seeks. Seeking on every pixel of a drag
+       reloaded a clip per pixel in clip mode. The mixed file can follow the finger. */
+    var segBar = document.getElementById("listen-seg-bar");
+    segBar.oninput = function (e) {
+      state.dragging = true;
+      var t = (parseFloat(e.target.value) / 1000) * chapterTotal();
+      if (mixedMode()) { seekChapter(t); state.dragging = true; return; }
+      var pos = document.getElementById("listen-position");
+      if (pos) pos.textContent = "Go to " + clock(t) + " of " + clock(chapterTotal());
+    };
+    segBar.onchange = function (e) {
+      state.dragging = false;
+      seekChapter((parseFloat(e.target.value) / 1000) * chapterTotal());
     };
     bindSourceControl();
     bindLayerControls();
     renderProgress();
+    startTicking();
   }
 
   // ---- public entry --------------------------------------------------------
