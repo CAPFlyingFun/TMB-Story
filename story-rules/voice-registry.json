@@ -166,7 +166,7 @@
       "name": "Paul Harlan",
       "audioKey": "harlan",
       "kind": "character",
-      "elevenLabsVoiceId": null,
+      "elevenLabsVoiceId": "fkqaihpXt1gFOvhEuJhK",
       "voiceVersion": 1,
       "gameExport": true,
       "aliases": [
@@ -174,12 +174,13 @@
         "Paul",
         "Harlan"
       ],
-      "notes": "Introduced in Chapter 12 (pending approval, drafted 2026-10-06): machine-shop foreman, broad and gray-bearded, loud and practical. No voice yet: Joshua chooses one after approving the chapter.",
+      "notes": "Introduced in Chapter 12 (pending approval, drafted 2026-10-06): machine-shop foreman, broad and gray-bearded, loud and practical. No voice yet: Joshua chooses one after approving the chapter. Voice designed with ElevenLabs Voice Design 2026-10-06 (\"TMB - Paul Harlan\", preview A of three) and chosen by Joshua.",
       "pronouns": [
         "he",
         "him",
         "his"
-      ]
+      ],
+      "voiceApproved": "2026-10-06"
     },
     "unit-four": {
       "id": "unit-four",
