@@ -6,7 +6,7 @@ pov: Jack
 word_count: 1155
 story_time:
   clock: settlement
-  date: "March fifth, twenty-one ten"
+  date: "Early on March sixth, twenty-one ten (the night of the fifth)"
   opens: "Half past three in the morning, the main control room, just after the window stops trembling"
   elapsed: "the rest of the hour before dawn begins"
 objective: "Work out what PHASE ONE READY means for what comes next, and keep the settlement from finding out in a panic."

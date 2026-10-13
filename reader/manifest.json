@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07",
+  "generated": "2026-10-13",
   "movements": [
     {
       "number": 1,
@@ -24,6 +24,12 @@
       "dir": "outline/movement-04",
       "overview": "outline/movement-04/overview.md",
       "miniArcs": []
+    },
+    {
+      "number": 5,
+      "dir": "outline/movement-05",
+      "overview": "outline/movement-05/overview.md",
+      "miniArcs": []
     }
   ],
   "chapters": [
@@ -34,7 +40,7 @@
       "title": "The Alarm",
       "pov": "Jack",
       "word_count": 1208,
-      "review_status": "revision-pending",
+      "review_status": "approved",
       "audio_status": "pending-review",
       "ending_type": "unanswered question"
     },
@@ -45,7 +51,7 @@
       "title": "The Boundary",
       "pov": "Jack",
       "word_count": 1001,
-      "review_status": "revision-pending",
+      "review_status": "approved",
       "audio_status": "pending-review",
       "ending_type": "revelation"
     },
@@ -56,7 +62,7 @@
       "title": "The Activation",
       "pov": "Jack",
       "word_count": 1390,
-      "review_status": "revision-pending",
+      "review_status": "approved",
       "audio_status": "pending-review",
       "ending_type": "revelation"
     },
@@ -67,7 +73,7 @@
       "title": "The First Calls",
       "pov": "Jack",
       "word_count": 1556,
-      "review_status": "revision-pending",
+      "review_status": "approved",
       "audio_status": "pending-review",
       "ending_type": "quiet beat"
     },
@@ -78,7 +84,7 @@
       "title": "The Edge",
       "pov": "Jack",
       "word_count": 1557,
-      "review_status": "revision-pending",
+      "review_status": "approved",
       "audio_status": "pending-review",
       "ending_type": "cliffhanger"
     },
@@ -89,7 +95,7 @@
       "title": "Several Millimeters",
       "pov": "Jack",
       "word_count": 1104,
-      "review_status": "revision-pending",
+      "review_status": "approved",
       "audio_status": "pending-review",
       "ending_type": "warning"
     },
@@ -169,6 +175,50 @@
       "review_status": "in-review",
       "audio_status": "pending-review",
       "ending_type": "unanswered question"
+    },
+    {
+      "number": 14,
+      "path": "chapters/movement-05/chapter-0014.md",
+      "movement": 5,
+      "title": "Who Was It",
+      "pov": "Jack",
+      "word_count": 1568,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "warning"
+    },
+    {
+      "number": 15,
+      "path": "chapters/movement-05/chapter-0015.md",
+      "movement": 5,
+      "title": "Bathtubs",
+      "pov": "Jack",
+      "word_count": 1356,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "confrontation"
+    },
+    {
+      "number": 16,
+      "path": "chapters/movement-05/chapter-0016.md",
+      "movement": 5,
+      "title": "The Water Clock",
+      "pov": "Jack",
+      "word_count": 1556,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "realization"
+    },
+    {
+      "number": 17,
+      "path": "chapters/movement-05/chapter-0017.md",
+      "movement": 5,
+      "title": "Dew",
+      "pov": "Jack",
+      "word_count": 1497,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "quiet beat"
     }
   ],
   "storyRules": [

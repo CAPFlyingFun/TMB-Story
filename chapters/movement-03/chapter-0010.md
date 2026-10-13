@@ -6,7 +6,7 @@ pov: Jack
 word_count: 1176
 story_time:
   clock: settlement
-  date: "March fifth, twenty-one ten"
+  date: "March sixth, twenty-one ten"
   opens: "Back at the main control room as the sky turns from black to gray"
   elapsed: "dawn, until the sun clears the horizon"
 objective: "Find out whose badge it was, and decide what to tell five hundred people who are about to find out on their own."

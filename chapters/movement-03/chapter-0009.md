@@ -6,7 +6,7 @@ pov: Jack
 word_count: 1143
 story_time:
   clock: settlement
-  date: "March fifth, twenty-one ten"
+  date: "Early on March sixth, twenty-one ten (the night of the fifth)"
   opens: "Moments later, the main control room, as the buried record opens"
   elapsed: "the last hour of darkness"
 objective: "Trace who planted the boundary file, and find what made the impacts."

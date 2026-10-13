@@ -21,7 +21,7 @@ status_changes:
 new_canon:
   - "The event was prepared three weeks in advance and executed with Jack's own administrator certificate"
   - "Whoever did it knew which infrastructure counted as developed"
-  - "There is a phase two"
+  - "The label PHASE ONE READY implies a later phase; whether a phase two exists, and what it is, is unknown"
 playable_beat_flow: ["overlay the boundary on the island development survey", "open the maintenance partition", "read the file metadata", "open the ownership field", "open the label"]
 ending_type: revelation
 review_status: revision-pending
