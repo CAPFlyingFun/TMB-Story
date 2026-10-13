@@ -310,3 +310,9 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 - Reader and Listen speaker chips use the toon faces (`assets/portraits/jack-3d.png`, `sarah-3d.png`). The drawn portraits stay for the Watch tab's 2D mode.
 - Lena and Mark are still drawn cards in 3D scenes until they have models.
 **Status:** Accepted, 2026-10-07. Presentation only (decision 0031): no chapter text or audio changes.
+
+### 0035 — Chapters 1 to 6 approved at their current revision
+**Context:** Joshua, 2026-10-13: "I approve chapters 1-6 as of now."
+**Decision:** Chapters 1 to 6 are `approved` (`approved_on: 2026-10-13`) at their current text, which includes the 2026-10-06 dialogue-attribution revision (decision 0030) and, for Chapter 6, the 2026-10-07 split (decision 0033). `last_approved_revision` is cleared, and their `CHAPTER_INDEX.md` rows now describe the current text. Chapter 7, the second half of the split, is not in his list and stays `revision-pending`; Chapters 8 to 13 stay `in-review`. Audio is a separate layer (decision 0031) and stays `pending-review`.
+**Consequences:** `.claude/hooks/protect-approved-chapters.sh` protects Chapters 1 to 6 again.
+**Status:** Accepted, 2026-10-13.
