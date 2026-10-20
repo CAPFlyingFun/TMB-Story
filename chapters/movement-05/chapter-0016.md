@@ -138,6 +138,12 @@ Lena was already scribbling. "That would take the greenhouse off the drinking wa
 
 "Give me my night shift and a day."
 
+Jack looked at Paul for a long moment. It was the same man who, earlier that morning, had stood up in front of the whole town and asked who had done this to them.
+
+"You'll have them. And your coolant goes on the list."
+
+Paul nodded once, and didn't say thank you, and didn't need to.
+
 Sarah did the last of it in her head faster than anyone. "Fifteen thousand a day. Twenty-three days."
 
 "A little over three weeks. If nothing leaks. If nothing breaks. If nobody cheats."
@@ -147,12 +153,6 @@ Mark grunted from the doorway. "Somebody always cheats."
 "Then a little less than three weeks."
 
 Jack turned it over. Three weeks was not forever. But three weeks was not three days, either. It was time to think. Time to try things.
-
-Jack looked at him for a long moment. It was the same man who, less than two hours ago, had stood up in front of the whole town and asked who had done this to them.
-
-"You'll have them. And your coolant goes on the list."
-
-Paul nodded once, and didn't say thank you, and didn't need to.
 
 Sarah tapped the arm of her chair. "That leaves Paul's night shift. And everyone else who didn't fill a bathtub."
 

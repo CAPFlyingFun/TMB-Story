@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13",
+  "generated": "2026-10-20",
   "movements": [
     {
       "number": 1,
@@ -29,6 +29,12 @@
       "number": 5,
       "dir": "outline/movement-05",
       "overview": "outline/movement-05/overview.md",
+      "miniArcs": []
+    },
+    {
+      "number": 6,
+      "dir": "outline/movement-06",
+      "overview": "outline/movement-06/overview.md",
       "miniArcs": []
     }
   ],
@@ -219,6 +225,39 @@
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "quiet beat"
+    },
+    {
+      "number": 18,
+      "path": "chapters/movement-06/chapter-0018.md",
+      "movement": 6,
+      "title": "Nothing Bare Touches Water",
+      "pov": "Jack",
+      "word_count": 1631,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "warning"
+    },
+    {
+      "number": 19,
+      "path": "chapters/movement-06/chapter-0019.md",
+      "movement": 6,
+      "title": "No Lights",
+      "pov": "Jack",
+      "word_count": 1631,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "threshold"
+    },
+    {
+      "number": 20,
+      "path": "chapters/movement-06/chapter-0020.md",
+      "movement": 6,
+      "title": "Twelve Liters",
+      "pov": "Jack",
+      "word_count": 1746,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "realization"
     }
   ],
   "storyRules": [

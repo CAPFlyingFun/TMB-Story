@@ -8,7 +8,7 @@ story_time:
   clock: settlement
   date: "March sixth, twenty-one ten"
   opens: "The utility station, just after noon"
-  elapsed: "the afternoon and the evening, to about ten at night"
+  elapsed: "the afternoon and the evening, to near midnight"
 objective: "Work out whether the water outside the edge can be reached, and what it would take to reach it without losing anyone."
 locations: ["The utility station", "Jack and Sarah's home"]
 characters: [Jack, Sarah, "Lena Ortiz", "Mark Jones, perimeter security", Aiden, "Paul Harlan, machine shop foreman (by radio)", "Doctor Mercer"]
