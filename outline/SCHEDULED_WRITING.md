@@ -41,12 +41,13 @@ game: never put story writing there.
 
 ## 2. How much to write
 
-- **Target: one or two story events, which normally comes to 3 to 6 chapters.**
+- **Target: one or two story events, which normally comes to 2 to 6 chapters** (Joshua,
+  2026-10-20: "depending on the natural story progression, not a fixed chapter quota").
 - Events decide pacing. Never compress an event to finish it, never pad one to fill a
   quota. If an event naturally needs more than six chapters, stop at six on a natural
   break and continue next week.
-- **Minimum three chapters, maximum six.**
-- **If nine or more chapters are already waiting for Joshua's review, write only three
+- **Two to six chapters.** An event that needs two is two; one that needs five or six gets them.
+- **If nine or more chapters are already waiting for Joshua's review, write no more than three
   this week,** and say so in the report. The point of the weekly gap is that reviews keep
   up with writing.
 - **Chapter length (Joshua, 2026-10-07):** aim for **7 to 11 minutes of audio**, like

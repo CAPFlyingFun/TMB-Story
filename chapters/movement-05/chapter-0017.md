@@ -3,7 +3,7 @@ chapter: 17
 title: "Dew"
 movement: 5
 pov: Jack
-word_count: 1497
+word_count: 1501
 story_time:
   clock: settlement
   date: "March sixth, twenty-one ten"
@@ -86,7 +86,7 @@ Lena looked up sharply. "One drop?"
 
 Sarah had her hand pressed flat against her stomach, the way she did when she was thinking hard. "So we have three weeks of water in the tanks, and more water than we could ever use sitting just past the end of the road every morning."
 
-Mark pushed himself off the doorframe. "Sitting past the end of the road, inside a forest full of things the size of cars. Nobody walks past the end of the road. I said it this morning. So did you, on every speaker in town. Now you're going to stand there and tell me we're going out?"
+Mark pushed himself off the doorframe. "Sitting past the end of the road, inside a forest full of things the size of cars. This morning I told that kid nobody even walks to the end of the road. You told the whole town nobody goes past it. Now you're going to stand there and tell me we're going out?"
 
 "Not today."
 

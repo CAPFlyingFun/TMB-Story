@@ -47,9 +47,10 @@ All five specialists advised before drafting and reviewed the draft. What change
   shift and a day.", reads "Jack looked at Paul" and "earlier that morning" (was "less than two
   hours ago"). No other words changed. Its speaker pin was re-keyed. Chapter 16's audio had not
   been generated.
-- **Noticed, not changed:** Chapter 14 has Mark say "Nobody walks to the end of the road", and
-  Chapter 17 has him recall it as "past the end of the road". Changing 14 would weaken his reply
-  to the young man, so it is left for Joshua.
+- **Resolved 2026-10-20 at Joshua's request (decision 0036):** Chapter 14's "Nobody walks to the
+  end of the road" stays (Mark's order to a resident). Chapter 17's recall now reads "This morning
+  I told that kid nobody even walks to the end of the road. You told the whole town nobody goes
+  past it." 
 
 ## Style and speaker data
 
