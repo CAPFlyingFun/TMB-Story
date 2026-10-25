@@ -83,14 +83,51 @@ export function makeMetric(z0 = 0) {
     return ev;
   }
 
+  // A walk through waypoints, in metres, at one even pace: each leg faces the way it goes, and
+  // the last facing is `then` (or the last leg's). For a way AROUND furniture -- a straight
+  // walkM through a console is stopped at it in 3D (engine/collide.js), and the person stands a
+  // metre off their mark for the rest of the scene.
+  function routeM(actor, at, points, dur, then) {
+    const legs = [];
+    let total = 0;
+    for (let i = 1; i < points.length; i++) {
+      const d = Math.hypot(points[i][0] - points[i - 1][0], points[i][1] - points[i - 1][1]);
+      legs.push(d);
+      total += d;
+    }
+    const ev = [{ at, action: "state", actor, state: "walking" }];
+    let t = 0;
+    for (let i = 1; i < points.length; i++) {
+      const [x0, z0] = points[i - 1], [x1, z1] = points[i], legDur = (dur * legs[i - 1]) / total;
+      ev.push({ at: plus(at, t), action: "face", actor, direction: compass(x1 - x0, z1 - z0) });
+      const steps = Math.max(2, Math.round(legs[i - 1] / 0.6));
+      for (let k = 1; k <= steps; k++) {
+        const [x, y] = P(x0 + ((x1 - x0) * k) / steps, z0 + ((z1 - z0) * k) / steps);
+        const first = i === 1 && k === 1, last = i === points.length - 1 && k === steps;
+        ev.push({ at: plus(at, t + (legDur * (k - 1)) / steps), action: "move", actor, x, y, duration: legDur / steps, ease: first ? "in" : last ? "out" : "linear" });
+      }
+      t += legDur;
+    }
+    ev.push({ at: plus(at, dur), action: "state", actor, state: "idle" });
+    if (then) ev.push({ at: plus(at, dur), action: "face", actor, direction: then });
+    return ev;
+  }
+
   // Put someone somewhere at once (behind a cut).
   function placeM(actor, at, x, z) {
     const [px, py] = P(x, z);
     return { at, action: "move", actor, x: px, y: py, duration: 0 };
   }
 
-  return { CAM, P, PERSPECTIVE, builtWorld, walkM, placeM, shot3, L, plus };
+  return { CAM, P, PERSPECTIVE, builtWorld, walkM, routeM, placeM, shot3, L, plus };
+}
+
+// The scene's compass for a step on the floor: north is into the picture (-z), east is +x.
+const COMPASS = ["north", "northeast", "east", "southeast", "south", "southwest", "west", "northwest"];
+function compass(dx, dz) {
+  const a = Math.atan2(dx, -dz);
+  return COMPASS[((Math.round(a / (Math.PI / 4)) % 8) + 8) % 8];
 }
 
 // Chapters 2 and 3: the camera at the origin.
-export const { CAM, P, PERSPECTIVE, builtWorld, walkM, placeM } = makeMetric(0);
+export const { CAM, P, PERSPECTIVE, builtWorld, walkM, routeM, placeM } = makeMetric(0);

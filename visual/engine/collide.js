@@ -21,6 +21,8 @@ export const BODY_RADIUS_M = 0.2;
 // A solid counts for a standing body when it reaches between these heights (a step or a
 // cable on the floor is walked over; a shelf above the head is walked under).
 const BODY_LOW_M = 0.3, BODY_HIGH_M = 1.75;
+// A box wider or deeper than this is the setting, not something standing in it (solidsOf).
+const SETTING_M = 20;
 // A hand is pushed this far clear of a surface.
 export const HAND_CLEAR_M = 0.015;
 
@@ -44,6 +46,10 @@ export function solidsOf(meshes) {
     if (b.max.y < 0.05 || b.min.y > 2.4) continue;
     const thin = Math.min(...size), big = size.filter((s) => s > 1.5).length;
     if (thin < 0.12 && big >= 2) continue;
+    // the setting's own extent -- the ground and hills outdoors, a sky, a road -- is no piece
+    // of furniture: counted, its box held everyone in the outdoor sets out of the whole island,
+    // and Jack stood 50 m behind the camera, out of every shot (2026-10-25)
+    if (Math.max(size[0], size[2]) > SETTING_M) continue;
     if (Math.max(...size) < 0.03) continue;
     out.push({ min: [b.min.x, b.min.y, b.min.z], max: [b.max.x, b.max.y, b.max.z] });
   }

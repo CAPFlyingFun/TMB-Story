@@ -44,6 +44,9 @@ const BLEND_SECONDS = 0.55; // a change of pose or state (asleep to awake, sitti
 // metre), so the foot on the floor stays where it was put.
 const FLOOR = { y: 0, grip: 1 }; // the lab's floor, level and dry, under every foot
 const CHAIR_CLAIM_M = 0.7; // someone sitting down this close to a parked chair takes it
+// How much of a look up or down a face that has moving eyes leaves to them (headShare).
+// BIOLOGICAL SHAPE, eased: eyes take the first 15-20 degrees of a gaze shift on their own.
+const EYES_PITCH = 15 * DEG;
 
 // ------------------------------------------------------------------ small quaternion kit
 // [x, y, z, w]; the rig's turns are axis-angle in the bind pose's world frame.
@@ -108,6 +111,13 @@ const KEYBOARD_REACH = 0.95, KEYBOARD_HOLD_REACH = 1.2;
 // the middle, so the keys are 0.30 m in front of them: about 65% of Jack's arm, elbows bent),
 // and how near the desk's front edge that middle may come, its base rolled under it.
 const CHAIR_TO_KEYS_M = 0.26, CHAIR_UNDER_DESK_M = 0.16;
+// How far off square to its keyboard a chair at the keys may stand, following the way its
+// person faces (pullChairsIn). GAME TUNING: the opening's Jack, turned 45 degrees to his
+// monitor, keeps the place he was approved in.
+const KEYS_CONE = 50 * DEG;
+// Turned further than this from their own keyboard, a seated person's hands leave the keys
+// (reachesFor). GAME TUNING: past it a typist is typing sideways across their own lap.
+const KEYS_TURNED = 55 * DEG;
 // Holding a button: in over this long, out over this long, whatever the gesture's length.
 const PRESS_IN = 0.8, PRESS_OUT = 0.6;
 // A fingertip resting on a keyboard sits this far above its anchor (the keys' tops): the
@@ -509,6 +519,18 @@ export class People3D {
     };
   }
 
+  // WHERE HER HEAD AIMS, when she has eyes that move (bodies from a story bake): her eyes take
+  // the first part of a look up or down, as a person's do, and her head the rest -- so looking
+  // down at someone seated beside her she lowers her eyes and tips her head, rather than
+  // pointing her face at his. The target keeps its bearing; only its height eases toward the
+  // eye's, by up to EYES_PITCH. Her face rig still aims her eyes at the real point (drawFace).
+  headShare(look) {
+    const e = look.eye, T = look.target;
+    const h = Math.hypot(T.x - e.x, T.z - e.z), pitch = Math.atan2(T.y - e.y, h);
+    const eased = Math.sign(pitch) * Math.max(0, Math.abs(pitch) - EYES_PITCH);
+    return { x: T.x, y: e.y + h * Math.tan(eased), z: T.z };
+  }
+
   // HER FACE, each frame (bodies from a story bake): where her eyes look -- the same thing her
   // head is aimed at (gaze), eye to eye with the other person, or idly about when there is
   // nothing to look at -- her blinks, shut while she sleeps, and her jaw moving while one of
@@ -775,11 +797,18 @@ export class People3D {
       const s = body.seed;
       add(j.head, rx(3.5 * DEG * talk * Math.sin(t * 2 * Math.PI * 1.6 + s)));
       add(j.neck, ry(L * 3 * DEG * talk * Math.sin(t * 2 * Math.PI * 0.55 + 2 * s)));
-      if (!seated && !(a.gestures || []).some((g) => HANDS_BUSY.has(g.name))) {
+      // Seated, the hand is placed by the reach solver (handTargets); Sarah v2's is lifted here,
+      // off her thigh by her own elbow: carried up in front of her chest, her upper arm swung
+      // forward and across it, and the fitted tee's armhole opened on her skin.
+      if ((!seated || body.settled) && !(a.gestures || []).some((g) => HANDS_BUSY.has(g.name))) {
         const g = talk * (0.55 + 0.45 * Math.sin(t * 2 * Math.PI * 0.42 + 3 * s));
         const [sh, el, sg] = s % 2 ? [j.shoulderL, j.elbowL, L] : [j.shoulderR, j.elbowR, -L];
+        // A palm that faces down in the T (Sarah v2's, carried up from her hanging bind) is turned
+        // up as the hand comes up, the way the toon's forward palm turns with these same turns:
+        // a roll about the forearm, first, so the bend after it is still a bend.
+        if (body.settled) add(el, rx(-60 * DEG * g));
         add(sh, rx(-(seated ? 10 : 18) * DEG * g));
-        add(el, ry(-sg * (seated ? 22 : 45) * DEG * g));
+        add(el, ry(-sg * (seated ? 30 : 45) * DEG * g));
       }
     }
     // The arm a gesture uses: the right unless the scene says otherwise. `s` is the way the
@@ -936,6 +965,8 @@ export class People3D {
     if (!shown) return null;
     const seated = a.pose.v === "sitting";
     const at = this.floorOf(id, a, a.pose.v);
+    // where the scene puts this person, before the room moves them (ownKeyboard)
+    const mark = at.slice();
     // Reaching for something further than an arm (the intercom at the back of the desk):
     // a seated person rolls the chair in toward it first, as far as the desk allows.
     const press = (a.gestures || []).find((g) => (g.name === "press" || g.name === "tap") && this.targetOf(g));
@@ -956,7 +987,29 @@ export class People3D {
     // stay in front of the computer and his left hand should reach").
     const keys = seated && a.state.v !== "asleep" && (a.gestures || []).find((g) => g.name === "keys" || g.name === "type");
     const pull = keys ? envelope(keys.u, Math.min(0.3, 0.6 / Math.max(0.6, (keys.opts && keys.opts.dur) || 1))) : 0;
-    return { at, yaw: this.facingAt(a, t), seated, pull };
+    return { at, mark, yaw: this.facingAt(a, t), seated, pull };
+  }
+
+  // A SEATED PERSON'S OWN KEYBOARD: the one nearest the place the scene seats them, never the
+  // one they happen to face. It used to be the nearest one IN FRONT of them, so a person at
+  // the keys who turned to talk to the person beside them took THAT person's keyboard: their
+  // chair rolled across in front of the other's screen and the two changed places (Joshua,
+  // 2026-10-25: "check that Jack and Sarah's position doesn't randomly change places and that
+  // it matches the scene... Jack shouldn't be crossing in front of her and the right computer
+  // screen"). With it, `side` is the way from the keyboard to where its user sits: across its
+  // length, toward the mark. Null when no keyboard is within `reach` of the mark.
+  ownKeyboard(mark, reach) {
+    let K = null, best = reach;
+    for (const k of this.keyboards) {
+      const d = Math.hypot(k.c.x - mark[0], k.c.z - mark[2]);
+      if (d < best) { best = d; K = k; }
+    }
+    if (!K) return null;
+    let nx = -K.axis.z, nz = K.axis.x;
+    const l = Math.hypot(nx, nz) || 1;
+    nx /= l; nz /= l;
+    if ((mark[0] - K.c.x) * nx + (mark[2] - K.c.z) * nz < 0) { nx = -nx; nz = -nz; }
+    return { K, d: best, side: [nx, nz] };
   }
 
   // AT THE KEYS, the chair is pulled in until the keyboard is a comfortable reach in front of
@@ -970,20 +1023,20 @@ export class People3D {
     const claims = [];
     for (const [id, P] of Object.entries(places)) {
       if (!P || !(P.pull > 0)) continue;
-      const fwd = [Math.sin(P.yaw), Math.cos(P.yaw)];
-      let kb = null, best = KEYBOARD_HOLD_REACH;
-      for (const K of this.keyboards) {
-        const dx = K.c.x - P.at[0], dz = K.c.z - P.at[2], d = Math.hypot(dx, dz);
-        if (d < best && dx * fwd[0] + dz * fwd[1] > 0.6 * d) { best = d; kb = K; }
-      }
-      if (kb) claims.push({ id, P, kb, d: best });
+      // their own keyboard (ownKeyboard), whichever way they are turned
+      const own = this.ownKeyboard(P.mark || P.at, KEYBOARD_HOLD_REACH);
+      if (own) claims.push({ id, P, kb: own.K, d: own.d, side: own.side });
     }
     for (const c of claims) {
       if (claims.some((o) => o !== c && o.kb === c.kb && o.d < c.d)) continue;
-      // to the spot square in front of the keyboard along the way the body faces, so the two
-      // hands come to it evenly rather than from off to one side
-      const fx = Math.sin(c.P.yaw), fz = Math.cos(c.P.yaw);
-      const wantX = c.kb.c.x - fx * CHAIR_TO_KEYS_M, wantZ = c.kb.c.z - fz * CHAIR_TO_KEYS_M;
+      // to the spot in front of the keyboard along the way the body faces, so the two hands
+      // come to it evenly rather than from off to one side -- but never more than KEYS_CONE
+      // off square, on the keyboard's own user side: turned to talk to someone, a person
+      // swivels at their keys rather than rolling their chair round to face the keys anew.
+      const ax = -c.side[0], az = -c.side[1], fx = Math.sin(c.P.yaw), fz = Math.cos(c.P.yaw);
+      const off = Math.max(-KEYS_CONE, Math.min(KEYS_CONE, Math.atan2(ax * fz - az * fx, ax * fx + az * fz)));
+      const dx = ax * Math.cos(off) - az * Math.sin(off), dz = ax * Math.sin(off) + az * Math.cos(off);
+      const wantX = c.kb.c.x - dx * CHAIR_TO_KEYS_M, wantZ = c.kb.c.z - dz * CHAIR_TO_KEYS_M;
       c.P.at[0] += (wantX - c.P.at[0]) * c.P.pull;
       c.P.at[2] += (wantZ - c.P.at[2]) * c.P.pull;
       this.clampAisle(c.P.at, CHAIR_UNDER_DESK_M);
@@ -1257,7 +1310,7 @@ export class People3D {
       body.reachTurns = [];
     }
     const frame = { rootX: r[0], rootY, rootZ: r[2], rootYaw: yaw, unitsPerMetre: body.rig.bindScale };
-    const target = look ? { x: look.target.x, y: look.target.y, z: look.target.z } : null;
+    const target = look ? (body.face ? this.headShare(look) : { x: look.target.x, y: look.target.y, z: look.target.z }) : null;
     const hands = this.handTargets(body, reaches);
     if (!seated) hands.push(...this.freeHandsClear(body, grounded.turns, [r[0], rootY, r[2]], yaw, hands, reaches));
     const solve = (dt) => {
@@ -1320,8 +1373,16 @@ export class People3D {
     const left = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw)).multiplyScalar(L);
     const shoulderY = place.seated ? body.eye.sit - 0.22 : body.eye.stand - 0.22;
     const chest = new THREE.Vector3(place.at[0], shoulderY, place.at[2]);
-    // the nearest keyboard in front, within an arm and a lean
+    // the nearest keyboard in front, within an arm and a lean -- seated, their own (ownKeyboard)
     const nearestKeyboard = (reach) => {
+      if (place.seated && place.mark) {
+        // and only while they are turned toward it: turned to the person beside them, they take
+        // their hands off the keys rather than type sideways across their own lap
+        const own = this.ownKeyboard(place.mark, Math.max(reach, KEYBOARD_HOLD_REACH));
+        if (!own) return null;
+        const v = own.K.c.clone().sub(chest), d = Math.hypot(v.x, v.z);
+        return d > 1e-6 && (v.x * fwd.x + v.z * fwd.z) / d > Math.cos(KEYS_TURNED) ? own.K : null;
+      }
       let found = null, best = reach;
       for (const K of this.keyboards) {
         const v = K.c.clone().sub(chest);
@@ -1380,7 +1441,8 @@ export class People3D {
       const talker = s % 2 ? "L" : "R";
       for (const side of ["L", "R"]) {
         if (busy.has(side)) continue;
-        out.push({ side, rest: true, weight: wake, lift: side === talker ? lift : 0 });
+        // (Sarah v2's talking hand is a turn of her own arm instead -- see extras)
+        out.push({ side, rest: true, weight: wake, lift: side === talker && !body.settled ? lift : 0 });
       }
     }
     for (const g of gest) {

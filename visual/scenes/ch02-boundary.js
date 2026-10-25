@@ -14,7 +14,7 @@
 
 import ch1 from "./ch01-opening.js";
 import { controlTemplates, mapTemplates } from "../screens/control.js";
-import { L, plus, P, walkM, placeM, shot3, builtWorld } from "./metric.js";
+import { L, plus, P, walkM, routeM, placeM, shot3, builtWorld } from "./metric.js";
 
 const DIAG_BLUE = "rgba(80,160,255,0.55)";
 const AMBER = "rgba(255,160,50,0.62)";
@@ -72,6 +72,14 @@ const corridor = {
 // left half, the secondary in front of its right; the emergency panel on the west wall at
 // z -2.5; the mapping display on the west wall at z -4.2; the door behind the camera.
 const PRIMARY_SPOT = [-1.15, -4.45], SECOND_SPOT = [1.9, -4.45], BESIDE = [-0.35, -4.4], LEVER_SPOT = [-2.85, -2.5];
+// The two consoles stand in front of the window with a walkway between them (x 0.37 to
+// 0.93): the only way from the room to the window and back. A straight walk through a console
+// is stopped at it in 3D, and Jack and Sarah stood in front of it, a metre off their marks,
+// while the camera looked for them at the window (2026-10-25).
+// Behind the consoles the floor is 0.9 m deep: Sarah stands up at the window, so that
+// Jack, going back the way he came, passes behind her back rather than through her.
+const GAP_FRONT = [0.65, -4.4], GAP_BACK = [0.65, -5.95];
+const JACK_AT_WINDOW = [-0.75, -6.3], SARAH_AT_WINDOW = [0.1, -6.7], JACK_PASSING = [-0.2, -5.92];
 const control = {
   world: builtWorld("control", { lookAtLights: ["chamber", "map"] }),
   props: { rings: 1, chamber: 0.7, panel: 0, lever: 0, lighting: 0, white: 0, outside: 0 },
@@ -210,8 +218,8 @@ export default {
     { at: L("They reached the main control room"), action: "scene", name: "Control room · the Array" },
     ...arrive("jack", L("They reached the main control room"), -1.5, -0.4, "north"),
     ...arrive("sarah", L("They reached the main control room"), -0.9, -0.2, "north"),
-    ...walkM("jack", L("They reached the main control room"), [-1.5, -0.4], [-0.75, -5.7], 5.5, "north"),
-    ...walkM("sarah", L("They reached the main control room", { offset: 0.4 }), [-0.9, -0.2], [0.1, -5.75], 5.5, "north"),
+    ...routeM("jack", L("They reached the main control room"), [[-1.5, -0.4], GAP_FRONT, GAP_BACK, JACK_AT_WINDOW], 7.0, "north"),
+    ...routeM("sarah", L("They reached the main control room", { offset: 1.8 }), [[-0.9, -0.2], GAP_FRONT, GAP_BACK, SARAH_AT_WINDOW], 6.0, "north"),
     { at: L("They reached the main control room", { offset: 1.5 }), action: "camera", shot: "window", duration: 9, ease: "inOut", label: "toward the window" },
     { at: L("They reached the main control room", { phrase: "At its center" }), action: "camera", shot: "rings", duration: 7, ease: "inOut", label: "the Array" },
     // "Tonight, every ring was moving."
@@ -220,12 +228,12 @@ export default {
     { at: L("Sarah stared through the reinforced window"), action: "camera", shot: "pairWindow", duration: 2.2, ease: "inOut" },
     { at: L("Sarah turned from the rings to him."), action: "face", actor: "sarah", direction: "west" },
     // "Jack moved toward the primary console." / "No."
-    ...walkM("jack", L("Jack moved toward the primary console."), [-0.75, -5.7], PRIMARY_SPOT, 1.8, "north", null, 3),
+    ...routeM("jack", L("Jack moved toward the primary console."), [JACK_AT_WINDOW, JACK_PASSING, GAP_BACK, GAP_FRONT, PRIMARY_SPOT], 3.9, "north"),
     // "The largest ring rotated into position while another slid sideways. Sarah moved to the
     //  console."
     { at: L("The largest ring rotated"), action: "prop", target: "rings", to: 1.5, duration: 2.5 },
     { at: L("The largest ring rotated"), action: "camera", shot: "rings", duration: 2.0, ease: "inOut" },
-    ...walkM("sarah", L("The largest ring rotated", { phrase: "Sarah moved" }), [0.1, -5.75], SECOND_SPOT, 2.2, "north", null, 3),
+    ...routeM("sarah", L("The largest ring rotated", { phrase: "Sarah moved" }), [SARAH_AT_WINDOW, GAP_BACK, GAP_FRONT, SECOND_SPOT], 3.4, "north"),
     { at: L("Boundary emitters are active."), action: "screen", target: CS, state: "emitters", params: {}, flash: 0.7 },
     { at: L("Boundary emitters are active."), action: "camera", shot: "consoles", duration: 1.8, ease: "inOut" },
     // "Jack pointed to the emitter controls." / "Kill them."

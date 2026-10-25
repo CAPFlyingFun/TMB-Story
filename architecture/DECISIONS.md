@@ -340,3 +340,18 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 - **Not in the Watch:** the Lab's cloth simulation. She wears the fitted tee, skinned.
 **Consequences:** The 3D download grows from about 7.6 MB to about 9.3 MB. The re-bundled rig also carries TRADDOMIUM's later seated-arm and pregnancy-gait changes.
 **Status:** Accepted pending Joshua's look at the rendered Watch, 2026-10-25. Presentation only (decision 0031): no chapter text or audio changes.
+
+### 0038 — The Watch keeps Jack and Sarah on their marks
+**Context:** Joshua, 2026-10-25, looking at Sarah v2 in Chapter 1: "Something looks off with the scene… maybe how the scene code does it", then: "check that Jack and Sarah's position doesn't randomly change places and that it matches the scene… Jack shouldn't be crossing in front of her and the right computer screen… I think the other agent accidentally had positions change per scene." Every 3D chapter was audited frame by frame (every quarter second): where the 3D layer puts each person against where the scene marks them.
+**Found, and fixed:**
+- **Chapter 1, the keyboards.** A seated person at the keys was pulled in to the nearest keyboard *in front of them*. Turned to talk, they took the other person's keyboard. Jack rolled across in front of Sarah's screen, and the two were in each other's places for 89 audited frames (about 90 seconds).
+  - Each seated person now has their own keyboard: the one nearest the scene's mark.
+  - Their chair stays at it within 50° of square while they swivel.
+  - Turned more than 55° from it, their hands come off the keys.
+- **Chapters 5 and 9, outdoors.** The ground's own box counted as furniture, so Jack was pushed 50 m behind the camera and was out of every shot. A box over 20 m across is now the setting, not a solid.
+- **Chapter 2, the control room.** The walk to the window went straight through the primary console. The 3D stopped them at it, a metre off their marks, while the camera looked for them at the window. The walks now go through the walkway between the two consoles (`scenes/metric.js` `routeM`, slightly longer walks), and Sarah stands up at the glass so Jack passes behind her.
+- **Sarah v2's arms.** TRADDOMIUM 4ee00d5: a hanging arm reads its palm from its fingers, not the T-pose's "down", which had rolled her held hands at random.
+  - Seated, her talking hand comes up by her own elbow. Reached for by the solver, her upper arm swung across her chest and opened the fitted tee's armhole.
+  - Her eyes take the first 15° of a look up or down.
+**After:** across all ten 3D chapters, Jack and Sarah are never in each other's left-to-right places except the single frame where she walks past him (Chapter 1, 321.5 s). The moves off a mark that remain are each person pulled in to their own keys (up to about 0.5 m toward the desk) and a standing person kept clear of a chair or a console (under 0.45 m).
+**Status:** Accepted pending Joshua's look at the rendered Watch, 2026-10-25. Presentation only (decision 0031): no chapter text or audio changes.

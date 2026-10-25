@@ -170,6 +170,22 @@ The rig's `head` joint is the crown, so turns go to its parent, the base of the 
 and a lowered arm shares its drop with the collarbone so the shoulder does not square off. A seated person has a chair; a person who
 stands leaves it where it was, and the next person to sit down there takes it.
 
+**People stay on their marks** (Joshua, 2026-10-25: "check that Jack and Sarah's position
+doesn't randomly change places and that it matches the scene"). The 3D layer moves a person
+off the scene's mark for three reasons only, and each is kept small:
+- **Their own keys.** A seated person at the keys is pulled in to their OWN keyboard: the one
+  nearest where the scene seats them, never the one they happen to face. It used to be the
+  one they faced, so a person who turned to talk took the other's keyboard. Jack rolled
+  across in front of Sarah's screen, and the two were in each other's places for a minute
+  and a half of Chapter 1. Their chair stays at their keys within 50 degrees of square while
+  they swivel to talk. Turned more than 55 degrees away, their hands come off the keys.
+- **Furniture.** A standing person is kept out of the furniture. The setting's own extent
+  (the ground and hills outdoors, a sky, a road; anything over 20 m) is not furniture: it
+  was, and outdoors Jack was pushed 50 m behind the camera.
+- **The way round.** A walk that would pass through a console is written around it
+  (`scenes/metric.js` `routeM`): Chapter 2's walk to the window goes through the walkway
+  between the two consoles.
+
 **Sarah v2** (Joshua, 2026-10-24: "add this new Sarah into the TMB-Story so I can watch
 Sarah and see how it looks"). Sarah is the one he saved in TRADDOMIUM's Sarah Lab: the v2
 body at 73%, her navel at +20, the red light spandex tee over the painted charcoal
@@ -189,7 +205,10 @@ baked at (`storySarah` extras), and `engine/people3d.js` reads it:
 
 Her master is rigged with the arms DOWN, where Jack's stands in a T, so the scenes' elbow
 and wrist moves (a talking hand, a point, a wave) are carried into a hanging arm's frame
-for her, as TRADDOMIUM's seated poses do. `?sarah=toon` brings back the toon Sarah to
+for her, as TRADDOMIUM's seated poses do. Her palm is read from her fingers when a hand
+holds something (TRADDOMIUM's humanReach), her talking hand comes up off her thigh by her
+own elbow when she is seated, and her eyes take the first 15 degrees of a look up or down
+so her head does not point her face at someone seated beside her. `?sarah=toon` brings back the toon Sarah to
 compare (`scenes/metric.js`, `PEOPLE_MODELS`). The cloth simulation the Lab runs on her
 tee is not in the Watch: she wears the fitted tee, skinned.
 
