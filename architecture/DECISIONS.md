@@ -322,3 +322,21 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 **Decision:** `outline/SCHEDULED_WRITING.md` §2 now reads two to six chapters (was three to six). The backlog rule stays: with nine or more chapters awaiting review, no more than three. Cleanup: Chapter 16's moved paragraph was verified and left as is. In Chapter 14, Mark tells a resident "Nobody walks to the end of the road." That stays, because it is an on-the-spot order to a civilian who wants to walk there and look. The public rule (Chapter 13) is "nobody goes past the end of any road." Chapter 17 had Mark misquote himself ("Nobody walks past the end of the road. I said it this morning. So did you"). It now separates the two: "This morning I told that kid nobody even walks to the end of the road. You told the whole town nobody goes past it." The team in Chapters 18 to 20 goes to the end and not past it, which is consistent with both.
 **Consequences:** Chapter 17's line, its audio manifest and `16-18 Chapters` Word file were updated. No approval state changed.
 **Status:** Accepted, 2026-10-20.
+
+### 0037 — The Watch tab's Sarah is Sarah v2 as Joshua saved her in TRADDOMIUM's Sarah Lab
+**Context:** Joshua, 2026-10-24: "add this new Sarah into the TMB-Story so I can watch Sarah and see how it looks." The Sarah he means is the one he saved in TRADDOMIUM's Sarah Lab:
+- the v2 body at 73%, navel +20;
+- the red light spandex tee over painted charcoal leggings;
+- her face rig and her hair.
+**Decision:**
+- **The model.** `assets/models/sarah-v2.glb` is that Sarah, baked from the running Lab by TRADDOMIUM's `scripts/sarahV2Recovery/story-sarah.mjs` (4.7 MB). The 3D sets name it through `scenes/metric.js` `PEOPLE_MODELS`.
+- **The player.** `engine/people3d.js` reads the file's `storySarah` extras:
+  - her walk and her settled pregnant sit are posed for her bump, and her seat corrective blends in as she sits;
+  - her face rig is driven by the story: eyes where her head is aimed, blinks, eyes shut asleep, jaw moving while her own line is heard;
+  - her hair is lit from the side its cards face.
+- **Her arms.** Her rig hangs its arms down, so the scenes' elbow and wrist moves are carried into a hanging arm's frame for her. Jack's arms are unchanged.
+- **The bundle.** `visual/vendor/three-human.js` is re-bundled from TRADDOMIUM 8780b44 with the face rig, face animator and hair patch added.
+- **The toon Sarah.** `sarah.glb` is kept: `?sarah=toon` brings her back to compare, and the caption portraits still use her.
+- **Not in the Watch:** the Lab's cloth simulation. She wears the fitted tee, skinned.
+**Consequences:** The 3D download grows from about 7.6 MB to about 9.3 MB. The re-bundled rig also carries TRADDOMIUM's later seated-arm and pregnancy-gait changes.
+**Status:** Accepted pending Joshua's look at the rendered Watch, 2026-10-25. Presentation only (decision 0031): no chapter text or audio changes.

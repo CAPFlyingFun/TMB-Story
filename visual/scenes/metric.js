@@ -10,6 +10,17 @@
 // floor, and from Chapter 4 people arrive at the control room's door, behind the origin.
 
 export const FRAME = { width: 2048, height: 1152 };
+
+// THE PEOPLE'S MODELS, for every set with 3D people (engine/people3d.js). Sarah is Sarah v2
+// as Joshua saved her in TRADDOMIUM's Sarah Lab (2026-10-24: "add this new Sarah into the
+// TMB-Story so I can watch Sarah and see how it looks"), baked for the story by that game's
+// scripts/sarahV2Recovery/story-sarah.mjs. `?sarah=toon` brings back the toon Sarah of
+// 2026-10-07, to compare the two in the same scene.
+const TOON_SARAH = typeof location !== "undefined" && new URLSearchParams(location.search).get("sarah") === "toon";
+export const PEOPLE_MODELS = Object.freeze({
+  jack: "../assets/models/jack.glb",
+  sarah: TOON_SARAH ? "../assets/models/sarah.glb" : "../assets/models/sarah-v2.glb",
+});
 export const L = (line, o = {}) => ({ line, ...o });
 export const plus = (a, s) => ({ ...a, offset: (a.offset || 0) + s });
 
@@ -42,7 +53,7 @@ export function makeMetric(z0 = 0) {
       perspective: PERSPECTIVE,
       layers: [{ id: "room", parallax: 1 }],
       people3d: {
-        models: { jack: "../assets/models/jack.glb", sarah: "../assets/models/sarah.glb" },
+        models: { ...PEOPLE_MODELS },
         camera: CAM,
         room,
         // Sarah is 32 weeks pregnant: seated, she sits upright with her hips a little more

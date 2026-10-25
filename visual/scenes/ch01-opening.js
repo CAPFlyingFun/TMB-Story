@@ -20,6 +20,7 @@
 
 import { templates, sarahTemplates } from "../screens/console.js";
 import { settlementLights } from "../paint/island.js";
+import { PEOPLE_MODELS } from "./metric.js";
 
 const DIAG_BLUE = "rgba(80,160,255,0.55)";
 const AMBER = "rgba(255,160,50,0.62)";
@@ -449,7 +450,7 @@ export default {
         // original frame, level, 1.43 m up, the room's depth lines vanishing at x 905 -- so
         // every mark and shot below lands in it. `aisle` is the floor between the counters.
         people3d: {
-          models: { jack: "../assets/models/jack.glb", sarah: "../assets/models/sarah.glb" },
+          models: { ...PEOPLE_MODELS },
           camera: { focal: 1300, principal: [1024, 581], height: 1.43, vanishX: 905.2 },
           aisle: { left: -0.5, right: 1.2, deskFront: -3.65, rightRunEnds: -1.46, rightNear: 1.08 },
           // Lights that draw a person's eye while they are on.

@@ -1,7 +1,7 @@
 // THE PEOPLE IN 3D (Joshua, 2026-09-29: "I was wanting to replace the 2D storyboard with the
 // 3D models", and, asked how: "Both, switchable"). Jack and Sarah are the real rigged
-// models from TRADDOMIUM: Micro Battle (assets/models/jack.glb, sarah.glb -- that game's
-// pair, the ones the 2D sprites were drawn from), posed by that game's own rig code
+// models from TRADDOMIUM: Micro Battle (assets/models/jack.glb, and sarah-v2.glb -- Sarah as
+// Joshua saved her in that game's Sarah Lab, see storyParts), posed by that game's own rig code
 // (vendor/three-human.js, bundled from its src/actor and src/view), and drawn in the
 // painted picture by the picture's own camera.
 //
@@ -403,6 +403,14 @@ export class People3D {
   addBody(id, model) {
     const rig = new THREE.HumanRig(model);
     const measure = THREE.measureHuman(rig.bind);
+    // SARAH V2 (Joshua, 2026-10-24: "add this new Sarah into the TMB-Story so I can watch
+    // Sarah and see how it looks"): Sarah as he saved her in TRADDOMIUM's Sarah Lab, baked
+    // into one file by that game's scripts/sarahV2Recovery/story-sarah.mjs. The file says what
+    // it was baked at (its body node's `storySarah` extras): the bump her walk and her sit are
+    // posed for, the seat corrective her body and tee carry, and the material her face is drawn
+    // on. A file without it (Jack, the toon Sarah) is posed exactly as before.
+    let story = null;
+    model.traverse((n) => { if (!story && n.userData && n.userData.storySarah) story = n.userData.storySarah; });
     // Seat geometry, measured once: pose the doze at the origin and read where it put the
     // hips and the ankles. A pose never moves the hips, so this holds for every pose.
     model.position.set(0, 0, 0);
@@ -455,7 +463,68 @@ export class People3D {
     shadow.rotation.x = -Math.PI / 2;
     this.scene.add(model, shadow);
     const eye = { stand: standEye, sit: seatTop + 0.1 + headAboveHips + 0.04 };
-    this.bodies[id] = { id, model, rig, measure, materials, shadow, seatTop, hips, head, bones, tips, handBindInv, eye, seed: Object.keys(this.bodies).length, opacity: 1 };
+    const seed = Object.keys(this.bodies).length;
+    // AN ARM THAT HANGS IN THE BIND (Sarah v2's master is rigged with her arms down; Jack and
+    // the toon Sarah stand in a T). The scenes' arm moves (extras: a talking hand, a point, a
+    // wave) bend an elbow or tilt a wrist as turns of an arm held out in the T, the way
+    // TRADDOMIUM's humanSeated writes its arms; on a hanging arm the same turn only twists the
+    // forearm about its own length. So for an arm that droops more than 30 degrees in the bind,
+    // its elbow's and wrist's turns are carried into the hanging arm's frame, D q D^-1 with D
+    // the droop -- exactly humanSeated's `inT`. A T-pose arm droops a few degrees at most and
+    // keeps its turns exactly.
+    const lowered = {};
+    const Ls = measure.leftSign < 0 ? -1 : 1;
+    for (const [sh, el, wr, s] of [[j.shoulderL, j.elbowL, j.wristL, Ls], [j.shoulderR, j.elbowR, j.wristR, -Ls]]) {
+      const sb = rig.bind[sh], eb = rig.bind[el];
+      const droop = Math.atan2(sb.y - eb.y, Math.abs(eb.x - sb.x));
+      if (droop > 30 * DEG) lowered[el] = lowered[wr] = [rz(-s * droop), rz(s * droop)];
+    }
+    this.bodies[id] = { id, model, rig, measure, materials, shadow, seatTop, hips, head, bones, tips, handBindInv, eye, seed, lowered, opacity: 1, ...this.storyParts(model, skin, story, seed) };
+  }
+
+  // What a story bake of Sarah v2 brings with it (see addBody): nothing for any other file.
+  //  - carry: her bump as the Lab's slider over 100, for her walk (shorter, wider steps) and
+  //    her settled pregnant sit, which TRADDOMIUM tunes by it;
+  //  - seat: every mesh carrying the `storySeat` corrective (the Lab's seated belly shape),
+  //    set by how seated she is each frame;
+  //  - face: her face rig (TRADDOMIUM's faceRig, the Lab's own) laid on her body's material
+  //    `Material_0`, and the animator that moves it (faceMotion): her eyes, blinks and jaw;
+  //  - her hair's cards lit from the side they face (the Lab's patchHairMaterial), or the
+  //    back of every curtain card draws dark.
+  storyParts(model, skin, story, seed) {
+    if (!story) return { carry: 0, settled: false, seat: [], face: null };
+    const seat = [];
+    model.traverse((n) => {
+      const at = n.isMesh && n.morphTargetDictionary ? n.morphTargetDictionary[story.seatMorph || "storySeat"] : undefined;
+      if (at !== undefined) seat.push([n, at]);
+      if (n.isMesh) for (const m of [].concat(n.material)) if (m.name === "sarahHair") THREE.patchHairMaterial(m);
+    });
+    const faceMaterial = [].concat(skin.material).find((m) => m.name === "Material_0");
+    if (faceMaterial) THREE.patchFaceRig(faceMaterial);
+    return {
+      carry: Number.isFinite(story.bump) ? story.bump : 0,
+      settled: true,
+      seat,
+      face: faceMaterial ? { mesh: skin, material: faceMaterial, motion: new THREE.FaceMotion(7 + seed), t: null, rest: [0, 0, 0] } : null,
+    };
+  }
+
+  // HER FACE, each frame (bodies from a story bake): where her eyes look -- the same thing her
+  // head is aimed at (gaze), eye to eye with the other person, or idly about when there is
+  // nothing to look at -- her blinks, shut while she sleeps, and her jaw moving while one of
+  // her lines is heard (talking). The animator runs on the story's clock, so a pause holds her
+  // face and a seek carries on from where it was rather than replaying.
+  drawFace(body, a, t, look) {
+    const F = body.face, M = F.motion;
+    const dt = F.t !== null && t >= F.t ? Math.min(0.25, t - F.t) : 0;
+    F.t = t;
+    const asleep = a.state.v === "asleep";
+    M.talking = !asleep && this.talking(body.id, t) > 0.2;
+    M.blinking = !asleep;
+    const target = look && !asleep ? THREE.restFromWorld(F.mesh, look.target, F.rest) : null;
+    M.mode = target ? "camera" : "around";
+    M.step(dt, target);
+    THREE.setFaceRig(F.material, { jaw: M.jaw, gazeRight: M.gazeRight, gazeLeft: M.gazeLeft, blink: asleep ? 1 : M.blink });
   }
 
   // THE TOMBS BADGE (Joshua, 2026-10-07: "I separated the badges from the body, so the badge
@@ -649,11 +718,14 @@ export class People3D {
   basePose(body, kind, t, a) {
     const { measure, rig } = body;
     let turns;
-    if (kind === "doze" || kind === "sit") turns = THREE.poseSeated(measure, rig.bind, { style: kind, seconds: t + body.seed * 1.7, headSide: 1, arms: (this.spec.cradle || []).includes(body.id) ? "cradle" : "fold", posture: (this.spec.pregnant || []).includes(body.id) ? "pregnant" : undefined }, []);
+    // A story bake's bump (storyParts): her settled pregnant sit opened for it, her walk
+    // shortened and widened for it -- as the Sarah Lab poses her.
+    const pregnant = (this.spec.pregnant || []).includes(body.id);
+    if (kind === "doze" || kind === "sit") turns = THREE.poseSeated(measure, rig.bind, { style: kind, seconds: t + body.seed * 1.7, headSide: 1, arms: (this.spec.cradle || []).includes(body.id) ? "cradle" : "fold", posture: pregnant ? "pregnant" : undefined, ...(pregnant && body.settled ? { settled: true, bump: body.carry } : {}) }, []);
     else {
       const walking = kind === "walk";
-      const phase = walking ? ((body.walked * rig.bindScale) / THREE.humanStride(measure, "walk")) % 1 : 0;
-      turns = THREE.poseHuman(measure, rig.bind, { stance: walking ? "walk" : "stand", phase, seconds: t + body.seed * 1.7, lean: 0 }, []);
+      const phase = walking ? ((body.walked * rig.bindScale) / THREE.humanStride(measure, "walk", body.carry)) % 1 : 0;
+      turns = THREE.poseHuman(measure, rig.bind, { stance: walking ? "walk" : "stand", phase, seconds: t + body.seed * 1.7, lean: 0, carry: body.carry }, []);
     }
     return toMap(turns);
   }
@@ -664,7 +736,9 @@ export class People3D {
   extras(body, a, t, seated) {
     const j = { ...body.measure.joints, head: body.head }, L = body.measure.leftSign < 0 ? -1 : 1;
     const out = [];
-    const add = (joint, q) => out.push([joint, q]);
+    // an elbow's or wrist's turn on an arm that hangs in the bind, carried into its frame (addBody)
+    const low = body.lowered || {};
+    const add = (joint, q) => out.push([joint, low[joint] ? qMul(low[joint][0], qMul(q, low[joint][1])) : q]);
     const st = a.state, k = smooth((t - st.since) / 0.8);
     const w = (name) => (st.v === name ? k : 0) + (st.prev === name ? 1 - k : 0);
     const lean = w("leaning");
@@ -1101,6 +1175,12 @@ export class People3D {
     const k = smooth((t - changedAt) / BLEND_SECONDS);
     let map = this.basePose(body, cur, t, a);
     if (prev !== cur && k < 1) map = blendMaps(this.basePose(body, prev, t, a), map, k);
+    // the seat corrective (a story bake's `storySeat`), eased in and out with the pose
+    if (body.seat.length) {
+      const sits = (kind) => (kind === "sit" || kind === "doze" ? 1 : 0);
+      const w = prev !== cur && k < 1 ? sits(prev) + (sits(cur) - sits(prev)) * k : sits(cur);
+      for (const [mesh, at] of body.seat) mesh.morphTargetInfluences[at] = w;
+    }
     // the poses turn the crown; the head turns at the base of the skull
     if (body.head !== j.head && map.has(j.head)) {
       map.set(body.head, qMul(map.get(j.head), map.get(body.head) || IDENTITY));
@@ -1206,6 +1286,7 @@ export class People3D {
     body.model.position.set(r[0], rootY, r[2]);
     body.model.rotation.set(0, yaw, 0);
     body.model.updateMatrixWorld(true);
+    if (body.face) this.drawFace(body, a, t, look);
     // The badge swings on the story's own clock: a seek or a pause starts it from rest.
     if (body.badge) {
       const dt = body.badgeT !== undefined ? t - body.badgeT : 0;

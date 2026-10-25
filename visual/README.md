@@ -39,8 +39,8 @@ line; the voice-only export is not indexable.
 | `../scripts/models/` | `fix-jumping-spider-legs.mjs` and `prepare-model.mjs`: how the two spider models were made light enough for a phone |
 | `screens/control.js` | the control room's screens: the Array, the emitters, boundary acquisition, the hidden target parameters, the scale factor (never readable), access denied, the sensor grid, communications, the perimeter cameras, the structural monitor, the event log and the settlement map |
 | `engine/labRoom.js` | the lab built as a 3D room after ChatGPT's procedural lab: shell, desks, racks, monitors, keyboards, the intercom, the props |
-| `vendor/three-human.js` | three.js r185, its glTF loader and meshopt decoder, and TRADDOMIUM's human rig and poses (`src/actor/human*.ts`, `src/view/HumanRig.ts`), bundled into one module |
-| `../assets/models/` | `jack.glb` and `sarah.glb` (TRADDOMIUM: Micro Battle's rigged pair; since 2026-10-07 Joshua's Pixar-style toon masters, baked by that game's `bake:humans`), `badge.glb` (the TOMBS card, hung from the chest and swung by `attachBadge`/`swingBadge` in `vendor/three-human.js`); `black-widow.glb` and `jumping-spider.glb` (Joshua's Meshy releases on TRADDOMIUM, 2026-10-01) |
+| `vendor/three-human.js` | three.js r185, its glTF loader and meshopt decoder, TRADDOMIUM's human rig and poses (`src/actor/human*.ts`, `src/view/HumanRig.ts`), and Sarah v2's face rig, face animator and hair patch (`src/sarahlab/faceRig.ts`, `faceMotion.ts`, `hairMaterial.ts`), bundled into one module |
+| `../assets/models/` | `jack.glb` (TRADDOMIUM: Micro Battle's rigged toon Jack, baked by that game's `bake:humans`), `sarah-v2.glb` (Sarah v2 as Joshua saved her in that game's Sarah Lab, baked by its `scripts/sarahV2Recovery/story-sarah.mjs`, 2026-10-25) and `sarah.glb` (the toon Sarah of 2026-10-07, kept for `?sarah=toon` and the caption portraits), `badge.glb` (the TOMBS card, hung from the chest and swung by `attachBadge`/`swingBadge` in `vendor/three-human.js`); `black-widow.glb` and `jumping-spider.glb` (Joshua's Meshy releases on TRADDOMIUM, 2026-10-01) |
 | `../scripts/make-portraits.py` | the caption portraits (`assets/portraits/`): cut from each character's front sprite, and the systems' terminal icon |
 | `portraits.html` | dev-only: renders Jack's and Sarah's 3D caption portraits (`<name>-3d.png`) from their models |
 | `engine/rig.js` | the optional cutout rig: cuts a sprite into body parts along polygons and turns them about pivots |
@@ -170,6 +170,29 @@ The rig's `head` joint is the crown, so turns go to its parent, the base of the 
 and a lowered arm shares its drop with the collarbone so the shoulder does not square off. A seated person has a chair; a person who
 stands leaves it where it was, and the next person to sit down there takes it.
 
+**Sarah v2** (Joshua, 2026-10-24: "add this new Sarah into the TMB-Story so I can watch
+Sarah and see how it looks"). Sarah is the one he saved in TRADDOMIUM's Sarah Lab: the v2
+body at 73%, her navel at +20, the red light spandex tee over the painted charcoal
+leggings, her face and her hair. The Lab draws her with many layers that exist only in it
+(morph weights, shader patches, the leggings painted on), so the game bakes her FROM the
+running Lab into one skinned file (`scripts/sarahV2Recovery/story-sarah.mjs`, rerun
+whenever her look changes) and the Watch draws that file. Its body node says what she was
+baked at (`storySarah` extras), and `engine/people3d.js` reads it:
+
+- her walk and her sit are posed for her bump, as the Lab poses her (the settled pregnant
+  sit, shorter and wider steps), and her `storySeat` corrective blends in as she sits;
+- her FACE is the Lab's face rig, laid on her body's material: her eyes go where her head
+  is aimed (the other person, a monitor) or idly about when nothing draws them, she
+  blinks, her eyes are shut while she sleeps, and her jaw moves while her own line is
+  heard;
+- her hair's cards are lit from the side they face, as in the Lab.
+
+Her master is rigged with the arms DOWN, where Jack's stands in a T, so the scenes' elbow
+and wrist moves (a talking hand, a point, a wave) are carried into a hanging arm's frame
+for her, as TRADDOMIUM's seated poses do. `?sarah=toon` brings back the toon Sarah to
+compare (`scenes/metric.js`, `PEOPLE_MODELS`). The cloth simulation the Lab runs on her
+tee is not in the Watch: she wears the fitted tee, skinned.
+
 THE ROOM IS BUILT (Joshua, 2026-09-29: "rebuild the lab... you can use the Lab ChatGPT did
 as it looks better"). `engine/labRoom.js` is a lit 3D room in the style of ChatGPT's
 procedural lab (TMB-Interactive-Story, `app/game/three/lab-room.ts`): no photographs,
@@ -214,10 +237,10 @@ settlement security) shows the line alone.
 
 **The start menu and the download.** Watch opens on a menu: Resume (when a place is saved
 on the device), Start over, Chapter select (Chapter 1 now; the others say "Not in Watch
-yet") and Main menu. The 3D people's files (about 6.5 MB: the three.js bundle and the two
-models) start downloading the moment the page opens and never hold the menu up. Start over
+yet") and Main menu. The 3D people's files (about 9.3 MB: the three.js bundle, the two
+models and the badge) start downloading the moment the page opens and never hold the menu up. Start over
 plays the island intro at once while they finish; Resume into the lab waits for them. A
-line along the bottom counts the bytes, "Loading… 1.2MB/6.5MB (18.5%)", above the controls
+line along the bottom counts the bytes, "Loading… 1.7MB/9.3MB (18.5%)", above the controls
 while they show, and says "3D ready" when they have arrived (`engine/download.js`).
 
 **Switchable.** The menu's "People: 3D / Drawn" button (remembered on the device) or

@@ -36,7 +36,7 @@ class People3d(unittest.TestCase):
         self.assertIn('spec.pregnant', src)
         for path in SCENES:
             text = open(path, encoding="utf-8").read()
-            if "people3d" in text and "sarah.glb" in text:
+            if "people3d" in text and re.search(r"sarah[\w-]*\.glb|PEOPLE_MODELS", text):
                 self.assertRegex(text, r'pregnant:\s*\[\s*"sarah"\s*\]', path)
 
 
