@@ -111,13 +111,19 @@ const KEYBOARD_REACH = 0.95, KEYBOARD_HOLD_REACH = 1.2;
 // the middle, so the keys are 0.30 m in front of them: about 65% of Jack's arm, elbows bent),
 // and how near the desk's front edge that middle may come, its base rolled under it.
 const CHAIR_TO_KEYS_M = 0.26, CHAIR_UNDER_DESK_M = 0.16;
+// How much further from the keys a chair stops per unit of bump (the Lab's slider over 100):
+// Sarah v2's belly stands 20 cm in front of her spine at 73%, Jack's chest 11 cm. GAME TUNING.
+const BUMP_KEYS_M = 0.19;
 // How far off square to its keyboard a chair at the keys may stand, following the way its
 // person faces (pullChairsIn). GAME TUNING: the opening's Jack, turned 45 degrees to his
 // monitor, keeps the place he was approved in.
 const KEYS_CONE = 50 * DEG;
 // Turned further than this from their own keyboard, a seated person's hands leave the keys
 // (reachesFor). GAME TUNING: past it a typist is typing sideways across their own lap.
-const KEYS_TURNED = 55 * DEG;
+const KEYS_TURNED = 55 * DEG, KEYS_TURNED_MARGIN = 6 * DEG;
+// How far past the middle of the body a hand may reach before the body turns to it, metres;
+// the most it turns for its hands; and how fast (armsTurn). GAME TUNING.
+const ARM_MIDLINE_M = 0.08, ARMS_TURN_MAX = 60 * DEG, ARMS_TURN_RATE = 2.5;
 // Holding a button: in over this long, out over this long, whatever the gesture's length.
 const PRESS_IN = 0.8, PRESS_OUT = 0.6;
 // A fingertip resting on a keyboard sits this far above its anchor (the keys' tops): the
@@ -502,7 +508,7 @@ export class People3D {
   //  - her hair's cards lit from the side they face (the Lab's patchHairMaterial), or the
   //    back of every curtain card draws dark.
   storyParts(model, skin, story, seed) {
-    if (!story) return { carry: 0, settled: false, seat: [], face: null };
+    if (!story) return { carry: 0, settled: false, seat: [], face: null, keysGap: CHAIR_TO_KEYS_M };
     const seat = [];
     model.traverse((n) => {
       const at = n.isMesh && n.morphTargetDictionary ? n.morphTargetDictionary[story.seatMorph || "storySeat"] : undefined;
@@ -514,9 +520,42 @@ export class People3D {
     return {
       carry: Number.isFinite(story.bump) ? story.bump : 0,
       settled: true,
+      // her bump keeps her chair further from the keys, or her hands reach down through it
+      keysGap: CHAIR_TO_KEYS_M + BUMP_KEYS_M * (Number.isFinite(story.bump) ? story.bump : 0),
       seat,
       face: faceMaterial ? { mesh: skin, material: faceMaterial, motion: new THREE.FaceMotion(7 + seed), t: null, rest: [0, 0, 0] } : null,
     };
+  }
+
+  // AN ARM NEVER CROSSES THE BODY TO REACH (Joshua, 2026-10-25: "their hands and arms cross
+  // their body… rotate the body instead slightly or as need to reach without clipping"). A
+  // hand may reach ARM_MIDLINE_M past the middle of the body; for anything further across --
+  // the keys to one side of someone turned to talk, a button on the far side -- the body
+  // turns toward it instead (a seated person swivels the chair), as far as the hand needs and
+  // never more than ARMS_TURN_MAX, eased at ARMS_TURN_RATE on the story's clock (a seek
+  // settles it at once). Two hands that would need opposite turns are crossed on purpose and
+  // left to the reach solver. Returns the turn to add to the body's yaw, radians.
+  armsTurn(body, reaches, at, yaw, t) {
+    const L = body.measure.leftSign < 0 ? -1 : 1;
+    const fx = Math.sin(yaw), fz = Math.cos(yaw), lx = Math.cos(yaw) * L, lz = -Math.sin(yaw) * L;
+    let toLeft = 0, toRight = 0;
+    for (const R of reaches) {
+      if (!R.target || !(R.weight > 0)) continue;
+      const dx = R.target.x - at[0], dz = R.target.z - at[2];
+      const ahead = dx * fx + dz * fz, across = dx * lx + dz * lz, r = Math.hypot(ahead, across);
+      if (r < 0.05) continue;
+      // how far round the hand's side of the body the target lies (+ toward the body's left)
+      const phi = Math.atan2(across, ahead), lim = Math.asin(Math.min(1, ARM_MIDLINE_M / r));
+      const w = Math.min(1, R.weight);
+      if (R.side === "R" && phi > lim) toLeft = Math.max(toLeft, (phi - lim) * w);
+      if (R.side === "L" && phi < -lim) toRight = Math.max(toRight, (-lim - phi) * w);
+    }
+    const want = toLeft > 0 && toRight > 0 ? 0 : Math.max(-ARMS_TURN_MAX, Math.min(ARMS_TURN_MAX, toLeft - toRight));
+    const was = body.armsTurnAt;
+    body.armsTurnAt = t;
+    if (was === undefined || !(t >= was) || t - was >= 0.25) body.armsTurn = want;
+    else body.armsTurn += Math.max(-ARMS_TURN_RATE * (t - was), Math.min(ARMS_TURN_RATE * (t - was), want - body.armsTurn));
+    return body.armsTurn * L;
   }
 
   // WHERE HER HEAD AIMS, when she has eyes that move (bodies from a story bake): her eyes take
@@ -1036,7 +1075,8 @@ export class People3D {
       const ax = -c.side[0], az = -c.side[1], fx = Math.sin(c.P.yaw), fz = Math.cos(c.P.yaw);
       const off = Math.max(-KEYS_CONE, Math.min(KEYS_CONE, Math.atan2(ax * fz - az * fx, ax * fx + az * fz)));
       const dx = ax * Math.cos(off) - az * Math.sin(off), dz = ax * Math.sin(off) + az * Math.cos(off);
-      const wantX = c.kb.c.x - dx * CHAIR_TO_KEYS_M, wantZ = c.kb.c.z - dz * CHAIR_TO_KEYS_M;
+      const gap = (this.bodies[c.id] && this.bodies[c.id].keysGap) || CHAIR_TO_KEYS_M;
+      const wantX = c.kb.c.x - dx * gap, wantZ = c.kb.c.z - dz * gap;
       c.P.at[0] += (wantX - c.P.at[0]) * c.P.pull;
       c.P.at[2] += (wantZ - c.P.at[2]) * c.P.pull;
       this.clampAisle(c.P.at, CHAIR_UNDER_DESK_M);
@@ -1217,6 +1257,9 @@ export class People3D {
     // Hands at work: typing on the nearest keyboard in reach, reaching for it, a hand on
     // Sarah's stomach. Decided first, because the turns leave these arms to the reach.
     const reaches = this.reachesFor(body, a, t, place);
+    // ...and the body turned toward what the hands hold, so neither arm crosses it (armsTurn)
+    yaw += this.armsTurn(body, reaches, place.at, yaw, t);
+    place.yaw = yaw;
     a._typingIK = reaches.reduce((m, r) => (r.typing ? Math.max(m, r.weight) : m), 0);
     a._pressing = reaches.reduce((m, r) => (r.pressing ? Math.max(m, r.pressing) : m), 0);
 
@@ -1380,8 +1423,13 @@ export class People3D {
         // their hands off the keys rather than type sideways across their own lap
         const own = this.ownKeyboard(place.mark, Math.max(reach, KEYBOARD_HOLD_REACH));
         if (!own) return null;
-        const v = own.K.c.clone().sub(chest), d = Math.hypot(v.x, v.z);
-        return d > 1e-6 && (v.x * fwd.x + v.z * fwd.z) / d > Math.cos(KEYS_TURNED) ? own.K : null;
+        // (with a margin either way, so someone turned near the line does not take hold and let
+        // go of the keys, turning to them and away, from one moment to the next)
+        // Turned is measured from SQUARE to the keyboard, the way its user sits to it: the
+        // chair's own place at the keys follows the body round (pullChairsIn), so the keys seen
+        // from the chair always look nearer straight ahead than the body is really turned.
+        const limit = KEYS_TURNED + (body.atKeys ? KEYS_TURNED_MARGIN : -KEYS_TURNED_MARGIN);
+        return -(own.side[0] * fwd.x + own.side[1] * fwd.z) > Math.cos(limit) ? own.K : null;
       }
       let found = null, best = reach;
       for (const K of this.keyboards) {
@@ -1420,6 +1468,7 @@ export class People3D {
     // own hand and the other stays; "type" with no arm takes both and types.
     const keys = gest.find((g) => g.name === "keys");
     const holdKb = keys ? nearestKeyboard(KEYBOARD_HOLD_REACH) : null;
+    body.atKeys = !!holdKb;
     const typingBoth = gest.some((g) => g.name === "type" && kb && !(g.opts && g.opts.arm));
     if (keys && holdKb && !typingBoth) {
       const d = (keys.opts && keys.opts.dur) || 1;

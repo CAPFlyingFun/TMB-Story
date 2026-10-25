@@ -355,3 +355,14 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
   - Her eyes take the first 15° of a look up or down.
 **After:** across all ten 3D chapters, Jack and Sarah are never in each other's left-to-right places except the single frame where she walks past him (Chapter 1, 321.5 s). The moves off a mark that remain are each person pulled in to their own keys (up to about 0.5 m toward the desk) and a standing person kept clear of a chair or a console (under 0.45 m).
 **Status:** Accepted pending Joshua's look at the rendered Watch, 2026-10-25. Presentation only (decision 0031): no chapter text or audio changes.
+
+### 0039 — In the Watch, a reach across the body turns the body
+**Context:** Joshua, 2026-10-25: "Looks like their hands and arms cross their body… can you add a simple collision check to prevent it from clipping into Sarah or Jack, and instead, rotate the body instead slightly or as need to reach without clipping?" The arms were audited every fifth of a second in all ten 3D chapters: Jack's and Sarah's forearms and hands against both torsos and against her bump. Before the fix, Chapter 1 had 200 arm-frames more than 2 cm inside a body:
+- Jack turned to talk with his right hand still on the keys, his arm across his chest;
+- Sarah's hands at the keys reaching down through her bump.
+**Decision:** all in `visual/engine/people3d.js`:
+- **The midline.** A hand may reach up to 8 cm past the middle of its own body. Further across, the body turns toward the target, up to 60°, at most 2.5 radians a second (at once on a seek). A seated person swivels the chair. If both hands pull opposite ways, the body stays square.
+- **The keys.** A seated person's hands leave their own keys when they are turned more than 55° from square to them. A 6° margin either way stops the hands flickering on and off at the line.
+- **Her bump.** Sarah's chair stops further from the keys for her bump: 19 cm at full term, on top of the usual 26 cm.
+**After:** Chapter 1 has no arm through a body by more than 2 cm. Chapters 2 to 10 had none before and have none after, except two single frames in Chapter 3 (184.6 s and 547.4 s). In those, Sarah's forearm passes 5 to 7 cm into her own side as her hand goes to her bump. Positions were re-audited after the change: decision 0038's result still holds.
+**Status:** Accepted pending Joshua's look at the rendered Watch, 2026-10-25. Presentation only (decision 0031): no chapter text or audio changes.

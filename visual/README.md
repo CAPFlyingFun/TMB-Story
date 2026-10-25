@@ -182,6 +182,12 @@ off the scene's mark for three reasons only, and each is kept small:
 - **Furniture.** A standing person is kept out of the furniture. The setting's own extent
   (the ground and hills outdoors, a sky, a road; anything over 20 m) is not furniture: it
   was, and outdoors Jack was pushed 50 m behind the camera.
+- **Their own arms.** A hand may reach 8 cm past the middle of the body. For anything further
+  across, the body turns toward it instead (a seated person swivels the chair), up to 60
+  degrees. Sarah's chair stops further from the keys for her bump (19 cm per full term), or
+  her hands reached down through it. A frame-by-frame check of every chapter (forearms and
+  hands against both torsos and her bump) finds no arm through a body by more than 2 cm,
+  except two single frames in Chapter 3 as her hand goes to her bump.
 - **The way round.** A walk that would pass through a console is written around it
   (`scenes/metric.js` `routeM`): Chapter 2's walk to the window goes through the walkway
   between the two consoles.
