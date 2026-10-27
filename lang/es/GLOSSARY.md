@@ -60,6 +60,39 @@ says what the English says and nothing more: it never explains, adds or reveals.
 | timestamp | marca de tiempo |  |
 | "Access revoked." / "Request denied." / "Access denied." | "Acceso revocado." / "Solicitud denegada." / "Acceso denegado." |  |
 | "Negative." / "Understood." (radio) | "Negativo." / "Entendido." |  |
+| Unit Four | Unidad Cuatro | same pattern as Unidad Doce; "la Unidad Cuatro" in narration |
+| Paul Harlan / the machine shop | Paul Harlan / el taller de máquinas | Paul uses *usted* with Jack and Sarah, *tú* with Lena, Mark, Aiden |
+| resident(s) / the town | residente(s) / el pueblo | residents and Paul use *usted* with "Doctor Bennett"; Jack uses *ustedes* to the crowd |
+| jumping spider / jumpers | araña saltarina / las saltarinas |  |
+| retreat (the spider's silk bag) | refugio |  |
+| "Slow is invisible. Fast is food." | "Lo lento es invisible. Lo rápido es comida." | Chapter 12 on; "And fast is food." = "Y lo rápido es comida." |
+| "Be boring." / "Still boring." | "Sé aburrido." / "Seguimos aburridos." | Mark's whiteboard line, Chapters 18 to 20 |
+| "Nothing bare touches water." | "Nada al descubierto toca el agua." | also Chapter 18's title |
+| "Stop." (Mark's freeze word) / "go" | "Alto." / "adelante" | "Alto." as in Chapter 6 |
+| "Pull." (rope) | "Tira." |  |
+| "Two minutes." (radio check) | "Dos minutos." |  |
+| the end of the road / the end of the pavement | el final del camino / el final del pavimento | "Nobody goes past the end of any road" = "Nadie pasa del final de ningún camino" |
+| the edge (of town) | el borde | never *el límite*, which is the boundary |
+| the western road / the western glass | el camino del oeste / el vidrio del lado oeste |  |
+| maintenance cart | carrito de mantenimiento |  |
+| the water clock / "Water's still the clock." | el reloj del agua / "El agua sigue siendo el reloj." |  |
+| supply windows | horarios de suministro |  |
+| drinking water / drinking-water point | agua potable / punto de agua potable |  |
+| treated water / wastewater plant | agua tratada / planta de aguas residuales |  |
+| restricted (water) / water limits / draw (consumption) | restringida / límites de agua / consumo |  |
+| bathtub / jug / bucket / faucet | tina / bidón / balde / llave | neutral words; avoid *regadera*, *cubeta*, *garrafón* |
+| dew / guttation | rocío / gutación | "Gutta-what?" = "¿Guta-qué?" |
+| drop (of water) | gota |  |
+| the pole / painter's pole / sponge / funnel / trough / gutter | el tubo / tubo de pintor / esponja / embudo / canaleta / canalón |  |
+| rope / harness / tow hitch | cuerda / arnés / enganche de remolque |  |
+| grow lights / roof vents / catwalk / crank | lámparas de cultivo / ventilas del techo / pasarela / manivela |  |
+| seedlings / pesticide fogger / aphids | plántulas / nebulizador de pesticida / pulgones |  |
+| coolant / lathes | refrigerante / tornos | Paul's running request |
+| midge / moths / flies | jején / polillas / moscas |  |
+| stitches / blood-pressure cuff / scanner | puntos / brazalete / escáner |  |
+| community center main hall / public speakers | salón principal / altavoces públicos |  |
+| Block C / housing blocks | Bloque C / bloques de viviendas |  |
+| Officer (Aiden to Mark) / sir (Unit Four to Mark) | oficial / señor |  |
 
 ## Voice
 

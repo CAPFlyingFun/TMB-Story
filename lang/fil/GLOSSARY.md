@@ -60,6 +60,33 @@ says what the English says and nothing more: it never explains, adds or reveals.
 | timestamp | timestamp |  |
 | "Access revoked." / "Request denied." / "Access denied." | "Access revoked." / "Request denied." / "Access denied." |  |
 | "Negative." / "Understood." (radio) | "Negative." / "Copy." |  |
+| Doctor Bennett (Sarah) | Doktora Bennett | Jack stays Doktor Bennett |
+| Unit Four | Unit Four | like Unit Twelve |
+| jumping spider / jumpers | jumping spider / mga jumper | Aiden's word; elsewhere just *gagamba* |
+| "Slow is invisible. Fast is food." | "Ang mabagal, hindi nakikita. Ang mabilis, pagkain." | Chapter 12 on; "fast is food" = *ang mabilis, pagkain* |
+| "Stop." (Mark's freeze word) | "Tigil." | already used in Chapter 8 |
+| "Pull." (Mark, on the rope) | "Hila." |  |
+| "Two minutes." (radio check) | "Dalawang minuto." | "check in every two" = *mag-check in tuwing dalawang minuto* |
+| "Be boring." / boring | "Maging boring." / boring |  |
+| "Nothing bare touches water." | "Walang nakalantad na sasayad sa tubig." | Chapter 18 title too |
+| the end of the road | ang dulo ng kalsada |  |
+| the edge (of town / of the road) | ang gilid (ng bayan) | the boundary itself stays *ang hangganan* |
+| pavement / asphalt | sementadong daan / aspalto |  |
+| dew | hamog |  |
+| guttation | guttation | Aiden's term, kept in English |
+| drop (of water) | patak |  |
+| retreat (the spider's silk bag) | taguan | "silk bag" = *supot ng sutla* |
+| midge / gnats | niknik |  |
+| the water clock / "water's still the clock" | ang orasan ng tubig / "tubig pa rin ang orasan" |  |
+| supply windows | supply window | "two windows" = *dalawang window* |
+| drinking water / drinking tanks | inuming tubig / drinking tank |  |
+| drinking-water point | igiban ng inuming tubig | at the community center |
+| treated water / wastewater plant | treated water / wastewater plant |  |
+| restricted (water) / limits | limitado / mga limit |  |
+| roof vents / grow lights / fogger | roof vent / grow light / fogger | greenhouse equipment |
+| trough / gutter | labangan / alulod | Chapter 20 |
+| sponge on a painter's pole | espongha / poste | the pole = *poste* |
+| jug (twenty-liter) | galon |  |
 
 ## Voice
 

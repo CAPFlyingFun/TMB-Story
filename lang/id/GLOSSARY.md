@@ -102,6 +102,40 @@ the captions.
 | decoy | umpan | |
 | "Negative." / "Understood." (radio) | "Nihil." / "Dimengerti." | |
 | Temporal Object Manipulation and Boundary System | (unchanged) | the name TOMBS stands for |
+| Unit Four | Unit Empat | follows *Unit Dua Belas*; also the speaker label "Security, Unit Four" |
+| "Slow is invisible. Fast is food." | "Pelan itu tak terlihat. Cepat itu makanan." | Chapter 12 on; "fast is food" alone → *cepat itu makanan* |
+| "Be boring." | "Jadilah membosankan." | Mark's last rule; "Not slow. Boring." → *Bukan pelan. Membosankan.* |
+| "Nothing bare touches water." | "Tak ada yang menyentuh air tanpa pelindung." | Chapter 18 title and rule |
+| "Stop." (Mark's freeze word) | "Berhenti." | always this word |
+| "Pull." | "Tarik." | the rope call |
+| "Two minutes." (radio check) | "Dua menit." | "check in every two" → *lapor tiap dua menit* |
+| "Already planned on it." / "Planning on it." | "Memang sudah kurencanakan begitu." / "Memang itu rencanaku." | recurring reply |
+| the end of the road | ujung jalan | "end of the pavement / asphalt" → *ujung jalan beraspal / ujung aspal* |
+| the edge (of town, of the settlement) | tepian | *tepian kota*; the boundary stays *batas* |
+| jumping spider / jumper | laba-laba pelompat / pelompat | |
+| retreat (the spider's silk bag) | tempat persembunyian | the bag itself: *kantong sutra* |
+| dew | embun | |
+| guttation | gutasi | Mark's "Gutta-what?" → "Guta-apa?" |
+| drop (of water) | tetesan / tetes | "one drop" → *satu tetes* |
+| the water clock | jam air | "water's still the clock" → *air masih jadi jamnya* |
+| supply windows | sesi pasokan | "two windows" → *dua sesi* |
+| drinking-water point | titik air minum | at the community center |
+| treated water / wastewater plant | air olahan / instalasi air limbah | |
+| drinking tanks / fire reserve | tangki air minum / cadangan pemadam kebakaran | |
+| jug (twenty-liter) | jeriken | |
+| trough / gutter | talang / talang air | Chapter 20 |
+| painter's pole / sponge / funnel | tiang pengecat / spons / corong | |
+| coolant (Paul's) | cairan pendingin | |
+| machine shop | bengkel mesin | |
+| grow lights / roof vents / catwalk / crank | lampu tanam / ventilasi atap / titian / engkol | the greenhouse |
+| pesticide fogger | alat pengasap pestisida | |
+| maintenance cart | kereta pemeliharaan | at the end of the western road |
+| harness / rope | harnes / tali | |
+| midge / gnat / aphid | agas / agas / kutu daun | |
+| Block C | Blok C | |
+| "Yes, sir." (Unit Four to Mark) | "Siap, Pak." | |
+| "ma'am" / "Mister Harlan" / "Officer" | Bu / Pak Harlan / Pak Petugas | |
+| Doctor (Paul, residents, Aiden to Jack) | Dokter | *Dok* stays Mark's alone |
 
 ## Voice
 
@@ -111,3 +145,8 @@ Sarah to each other *aku / kamu*; colleagues *aku / kamu* once they are working 
 Short lines stay short. English idioms are carried by their meaning, not their words
 ("Try harder." → "Berusahalah lebih keras." reads stiff; "Lebih lucu lagi, dong." keeps the
 tease). Numbers are written as words, as the English writes them.
+
+From Chapter 11: Mark, Aiden and Lena with each other *aku / kamu*; Mark to residents
+*saya* and "Pak". Doctor Mercer *saya / Anda* to everyone, and Jack and Sarah answer her
+with *saya*. Paul Harlan *saya / Anda* to Jack. Jack on the public speakers *saya*, and
+the room *Anda*.

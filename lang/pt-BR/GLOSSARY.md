@@ -60,6 +60,35 @@ says what the English says and nothing more: it never explains, adds or reveals.
 | timestamp | carimbo de data e hora |  |
 | "Access revoked." / "Request denied." / "Access denied." | "Acesso revogado." / "Solicitação negada." / "Acesso negado." |  |
 | "Negative." / "Understood." (radio) | "Negativo." / "Entendido." |  |
+| Unit Four | Unidade Quatro | the young officer; "a Unidade Quatro" |
+| "Go ahead." (radio) | "Prossiga." |  |
+| "Two minutes." (radio check) | "Dois minutos." | Chapters 17 to 20 |
+| "Stop." (Mark's freeze word) | "Parados." | the drill word, Chapters 19 to 20; "Aiden. Stop moving." = "Aiden. Para de se mexer." |
+| "Slow is invisible. Fast is food." | "Devagar é invisível. Rápido é comida." | also the title of Chapter 12 |
+| "Be boring." / "Still boring." | "Seja sem graça." / "Ainda sem graça." | boring = sem graça everywhere (never "chato") |
+| "Nothing bare touches water." | "Nada descoberto toca a água." |  |
+| the end of the road | o fim da estrada | "nobody goes past the end of any road" = "ninguém passa do fim de nenhuma rua" |
+| the edge (of town, along the grass) | a borda |  |
+| jumping spider / jumpers | aranha-saltadora / saltadoras |  |
+| retreat (the spider's silk bag) | refúgio |  |
+| dew / guttation | orvalho / gutação | "Gutta-what?" = "Guta-o quê?" |
+| drop (of water) | gota |  |
+| the water clock / "water's still the clock" | o relógio da água / "a água continua sendo o relógio" |  |
+| supply windows | janelas de abastecimento |  |
+| drinking water / drinking-water point | água potável / ponto de água potável |  |
+| treated water / wastewater plant | água tratada / estação de tratamento de esgoto |  |
+| restricted (water) / limits | racionada / limites |  |
+| coolant (Paul's) | fluido de refrigeração |  |
+| greenhouse roof vents | janelas de ventilação (do teto) |  |
+| grow lights | luzes de cultivo |  |
+| catwalk | passarela |  |
+| fogger | nebulizador |  |
+| pole (Paul's painter's pole) / sponge / funnel / jug | vara / esponja / funil / galão |  |
+| trough / gutter | calha |  |
+| the maintenance cart | o carrinho de manutenção |  |
+| harness / rope | arnês / corda |  |
+| machine shop | oficina mecânica |  |
+| blood-pressure cuff | braçadeira |  |
 
 ## Voice
 
@@ -70,3 +99,5 @@ Brazilian Portuguese, natural and modern, as a good Brazilian novel translation 
 - Mark's first words to Jack, a stranger he calls "Doctor": *o senhor* ("O senhor é o Doutor Bennett?"); once they are working together (from Chapter 5's ride on), *você*.
 - Contractions of speech are welcome in dialogue (*tá*, *pra*) where a Brazilian would say them, sparingly; never in narration.
 - Idioms by meaning. Numbers written as words, as the English does.
+- Paul Harlan and Jack (from Chapter 13): *o senhor* both ways, Paul's "Doctor" kept as *Doutor*; Paul with Lena and the others: *você*. Residents to Mark/Mercer: *senhor/senhora*. Unit Four's "Yes, sir." = "Sim, senhor."
+- Aiden calls Mark "Officer" once, sarcastically: *seu guarda*.

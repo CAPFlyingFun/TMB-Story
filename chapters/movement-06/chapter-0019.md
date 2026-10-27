@@ -143,7 +143,7 @@ Jack thought about leaving her on this couch with a number that wouldn't come do
 
 He meant to argue. He was asleep before he had figured out how.
 
-The alarm went at a quarter to five. Mark was outside at half past, with the motor running and the headlights off.
+The alarm went at a quarter to five. Mark was outside at half past five, with the motor running and the headlights off.
 
 The edge of town was completely dark. The streetlights burned along the inner roads, the way Lena had left them, but every porch light near the edge was out, and every window along the western blocks had its blinds down. Mark drove by the streetlights as far as they went. He drove the last stretch slowly, by memory, with a small red lamp cupped in one hand and pointed straight down at the road just ahead of the wheels.
 

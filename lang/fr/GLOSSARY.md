@@ -60,6 +60,41 @@ says what the English says and nothing more: it never explains, adds or reveals.
 | timestamp | horodatage |  |
 | "Access revoked." / "Request denied." / "Access denied." | "Accès révoqué." / "Demande refusée." / "Accès refusé." |  |
 | "Negative." / "Understood." (radio) | "Négatif." / "Compris." |  |
+| Unit Four | Unité Quatre | call sign; the officer takes masculine agreement ("Unité Quatre est resté") |
+| the edge (of town / of the settlement) | la lisière | as in the Chapter 5 title |
+| the end of the road / the end of the pavement | le bout de la route / la fin du bitume | |
+| asphalt | l'asphalte |  |
+| jumping spider / jumpers | araignée sauteuse / les sauteuses |  |
+| "Slow is invisible. Fast is food." | "Lent, c'est invisible. Rapide, c'est un repas." | Chapter 12 title "Lent, c'est invisible"; "fast is food" alone = "rapide, c'est un repas" |
+| "Be boring." / "Still boring." | "Soyez ennuyeux." (to a group) / "Sois ennuyeux." (Sarah to Jack) / "Toujours ennuyeux." |  |
+| "Nothing bare touches water." | "Rien de nu ne touche l'eau." | Chapter 18 title |
+| "Stop." (Mark's freeze word) | "Stop." | kept as is; "go" in that drill = "allez" |
+| "Two minutes." (radio check) | "Deux minutes." |  |
+| dew / guttation | la rosée / la guttation | "Gutta-what?" = "Gutta-quoi ?" |
+| drop (of water) | goutte | |
+| retreat (the spider's silk bag) | retraite | "le sac de soie" when the English says bag |
+| the water clock / "water's still the clock" | l'horloge de l'eau / "c'est toujours l'eau, l'horloge" | Chapter 16 title |
+| tanks (drinking water) / holding tank | cuves / cuve de stockage | "réservoir" stays for the reservoir |
+| supply windows | créneaux de distribution |  |
+| drinking-water point | point d'eau potable |  |
+| treated water / wastewater plant | eau traitée / station d'épuration |  |
+| water restricted / restrictions | l'eau est rationnée / le rationnement |  |
+| draw (water use) / draw curve | consommation / courbe de consommation |  |
+| roof vents | aérations du toit |  |
+| catwalk / crank | passerelle / manivelle |  |
+| grow lights | lampes de culture |  |
+| pesticide fogger | pulvérisateur de pesticide |  |
+| blackout blinds | stores occultants |  |
+| public speakers | haut-parleurs publics |  |
+| machine shop | atelier de mécanique |  |
+| coolant | liquide de refroidissement |  |
+| maintenance cart | voiturette de maintenance |  |
+| painter's pole / sponge | perche (de peintre) / éponge |  |
+| jug (twenty-liter) | bidon (de vingt litres) |  |
+| trough / gutter (Paul) | rigole / gouttière |  |
+| midge | moucheron |  |
+| "Yes, sir." (Unit Four to Mark) | "Oui, chef." |  |
+| ma'am / Mister Harlan | madame / monsieur Harlan |  |
 
 ## Voice
 
@@ -70,3 +105,4 @@ Natural modern French, as a good published translation reads. Narration in the p
 - Mark, security, with Jack and Sarah: *vous* throughout -- he calls Jack "Docteur", and that respect is part of who he is.
 - The reader adds straight quotation marks around dialogue lines; inside a line keep straight double quotes where the English has them. Spaces before ? ! : ; follow French usage.
 - Idioms by meaning. Numbers written as words, as the English does.
+- From Chapter 11: Paul Harlan and the residents with Jack, Sarah and Lena: *vous* (Paul calls Jack "Docteur"). Mark with Aiden and Paul: *vous*; Mark to Unit Four, his junior: *tu*. Doctor Mercer with Mark: *vous*.
