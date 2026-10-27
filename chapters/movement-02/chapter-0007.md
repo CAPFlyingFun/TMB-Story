@@ -25,7 +25,7 @@ new_canon:
 playable_beat_flow: ["overlay the boundary on the island development survey", "open the maintenance partition", "read the file metadata", "open the ownership field", "open the label"]
 ending_type: revelation
 review_status: approved
-audio_status: pending-review
+audio_status: approved
 approved_on: "2026-10-27"
 last_approved_revision: ""
 source: "Joshua's revised Word manuscript, 80a85a2b-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 4 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first. SPLIT 2026-10-07 at Joshua's instruction (decision 0033): the original Chapter 6 was divided at the end of Doctor Mercer's call into Chapter 6 (Several Millimeters) and Chapter 7 (Someone Knew), with no change to any sentence; the old Chapters 7 to 12 became 8 to 13."

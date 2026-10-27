@@ -27,7 +27,7 @@ new_canon:
 playable_beat_flow: ["answer the utility call", "bring up the utility station cameras", "answer the security channel", "open the settlement infrastructure schematic", "trace the freshwater intake to the boundary", "inspect the cut pipe on the maintenance camera", "step through the frozen camera frames", "take the water estimate"]
 ending_type: quiet beat
 review_status: approved
-audio_status: pending-review
+audio_status: approved
 approved_on: "2026-10-13"
 last_approved_revision: ""
 source: "Joshua's revised Word manuscript, 80a85a2b-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 7 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first."
