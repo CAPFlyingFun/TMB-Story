@@ -1,0 +1,21 @@
+{
+  "clipId": "jack-bennett-fef382de231d",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.3,
+    "similarity_boost": 0.75,
+    "style": 0.4,
+    "use_speaker_boost": true,
+    "speed": 0.85
+  },
+  "delivery": "dread",
+  "previousText": "He breathed it in horrified disbelief, staring at the screen.",
+  "fingerprint": "7a1a76260aa4eb287c4414c3275bdcca8518c1b1482b5dfae3df0644ee40a31b",
+  "text": "No.",
+  "bytes": 13835,
+  "generated": "2026-10-27T13:17:34Z"
+}

@@ -1,0 +1,21 @@
+{
+  "clipId": "jack-bennett-56899a47b42d",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  },
+  "delivery": "grim",
+  "previousText": "His voice dropped, low and grim, as the truth of it settled on him.",
+  "fingerprint": "0af2076c5e5335c27958d215e94c048597f6c4d3425a1b48613b42e8ddebe0c2",
+  "text": "No.",
+  "bytes": 11327,
+  "generated": "2026-10-27T13:17:34Z"
+}

@@ -1,0 +1,21 @@
+{
+  "clipId": "jack-bennett-ac22aee412ab",
+  "speaker": "jack-bennett",
+  "voiceId": "mkT7KpSQR9btjx2rHpQY",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.35,
+    "similarity_boost": 0.75,
+    "style": 0.3,
+    "use_speaker_boost": true,
+    "speed": 0.95
+  },
+  "delivery": "firm",
+  "previousText": "He said it flatly, with complete certainty, and he meant every bit of it.",
+  "fingerprint": "ae465ec86f8cb49d8fee9882b91a436f8365b8088fed2237214e7fe180b7f16f",
+  "text": "No.",
+  "bytes": 10910,
+  "generated": "2026-10-27T13:17:35Z"
+}

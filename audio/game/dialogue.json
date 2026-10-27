@@ -1,6 +1,6 @@
 {
   "_comment": "Canonical character and system voice lines for the game. Narration is excluded because it is audiobook-only. `audio` points at the same clip the audiobook plays: one generated line, used in both places.",
-  "lineCount": 824,
+  "lineCount": 1223,
   "lines": [
     {
       "lineId": "system-884c6f5a459a",
@@ -505,7 +505,8 @@
         6,
         7,
         8,
-        9
+        9,
+        16
       ]
     },
     {
@@ -828,20 +829,14 @@
       ]
     },
     {
-      "lineId": "jack-bennett-a40ffc6ce592",
+      "lineId": "jack-bennett-3bc4ea82fa1d",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
       "kind": "character",
       "text": "No.",
-      "audio": "audio/clips/jack/jack-bennett-a40ffc6ce592.mp3",
+      "audio": "audio/clips/jack/jack-bennett-3bc4ea82fa1d.mp3",
       "chapters": [
         1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
         9
       ]
     },
@@ -1008,7 +1003,8 @@
       "audio": "audio/clips/sarah/sarah-bennett-13fd659750f3.mp3",
       "chapters": [
         2,
-        6
+        6,
+        17
       ]
     },
     {
@@ -1321,6 +1317,19 @@
       "audio": "audio/clips/sarah/sarah-bennett-b96f9b147d4b.mp3",
       "chapters": [
         2
+      ]
+    },
+    {
+      "lineId": "jack-bennett-a40ffc6ce592",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "No.",
+      "audio": "audio/clips/jack/jack-bennett-a40ffc6ce592.mp3",
+      "chapters": [
+        2,
+        6,
+        7
       ]
     },
     {
@@ -1737,6 +1746,18 @@
       ]
     },
     {
+      "lineId": "jack-bennett-fef382de231d",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "No.",
+      "audio": "audio/clips/jack/jack-bennett-fef382de231d.mp3",
+      "chapters": [
+        2,
+        3
+      ]
+    },
+    {
       "lineId": "system-cf9c6f65b3f9",
       "character": "system",
       "characterName": "TOMBS / settlement systems",
@@ -1756,6 +1777,18 @@
       "audio": "audio/clips/sarah/sarah-bennett-aa9dec3d0c15.mp3",
       "chapters": [
         2
+      ]
+    },
+    {
+      "lineId": "jack-bennett-56899a47b42d",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "No.",
+      "audio": "audio/clips/jack/jack-bennett-56899a47b42d.mp3",
+      "chapters": [
+        2,
+        7
       ]
     },
     {
@@ -1822,7 +1855,8 @@
       "audio": "audio/clips/jack/jack-bennett-cfa169a3dc78.mp3",
       "chapters": [
         3,
-        4
+        4,
+        15
       ]
     },
     {
@@ -2465,7 +2499,8 @@
       "chapters": [
         3,
         9,
-        13
+        13,
+        14
       ]
     },
     {
@@ -2869,6 +2904,19 @@
       ]
     },
     {
+      "lineId": "jack-bennett-1d5f7e878adc",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "No.",
+      "audio": "audio/clips/jack/jack-bennett-1d5f7e878adc.mp3",
+      "chapters": [
+        4,
+        5,
+        7
+      ]
+    },
+    {
       "lineId": "jack-bennett-69625b8efd44",
       "character": "jack-bennett",
       "characterName": "Jack Bennett",
@@ -3132,7 +3180,8 @@
       "text": "How bad?",
       "audio": "audio/clips/jack/jack-bennett-2efbf92a72f4.mp3",
       "chapters": [
-        4
+        4,
+        18
       ]
     },
     {
@@ -3387,6 +3436,18 @@
       "audio": "audio/clips/sarah/sarah-bennett-bab7521e458d.mp3",
       "chapters": [
         5
+      ]
+    },
+    {
+      "lineId": "jack-bennett-ac22aee412ab",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "No.",
+      "audio": "audio/clips/jack/jack-bennett-ac22aee412ab.mp3",
+      "chapters": [
+        5,
+        7
       ]
     },
     {
@@ -3849,7 +3910,8 @@
       "text": "Still here. Still boring.",
       "audio": "audio/clips/jack/jack-bennett-67ab9342f223.mp3",
       "chapters": [
-        5
+        5,
+        19
       ]
     },
     {
@@ -3904,7 +3966,8 @@
       "text": "I heard that.",
       "audio": "audio/clips/sarah/sarah-bennett-c8e8fe245461.mp3",
       "chapters": [
-        5
+        5,
+        18
       ]
     },
     {
@@ -8174,7 +8237,8 @@
       "audio": "audio/clips/jack/jack-bennett-f7d0ce0eb1ce.mp3",
       "chapters": [
         12,
-        13
+        13,
+        15
       ]
     },
     {
@@ -9110,6 +9174,4345 @@
       "audio": "audio/clips/harlan/paul-harlan-320303aafc5f.mp3",
       "chapters": [
         13
+      ]
+    },
+    {
+      "lineId": "jack-bennett-6a46c06c31aa",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Somebody did.",
+      "audio": "audio/clips/jack/jack-bennett-6a46c06c31aa.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-7e651db3837a",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "TOMBS didn't fail last night. Somebody activated it on purpose. They did it with my credentials, and they did it while locking me out of my own system. It wasn't me. I don't know who it was yet.",
+      "audio": "audio/clips/jack/jack-bennett-7e651db3837a.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "paul-harlan-5981b08a8f79",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Your credentials.",
+      "audio": "audio/clips/harlan/paul-harlan-5981b08a8f79.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "paul-harlan-f3cc5f790e97",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "So it was your password that did this.",
+      "audio": "audio/clips/harlan/paul-harlan-f3cc5f790e97.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-bc53503fc4cf",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "It was my password that somebody else used. That's not the same thing, and I know exactly how that sounds.",
+      "audio": "audio/clips/jack/jack-bennett-bc53503fc4cf.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "paul-harlan-e49e4ceb5a94",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "It sounds like the lab is telling us the lab didn't do it.",
+      "audio": "audio/clips/harlan/paul-harlan-e49e4ceb5a94.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-449a8b39bf07",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "It sounds like that because it's true. I was with him. When it started, we were both in the laboratory trying to stop it. We pulled the shutdown lever. It kept running.",
+      "audio": "audio/clips/sarah/sarah-bennett-449a8b39bf07.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "paul-harlan-0220bf9ed238",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "With respect, ma'am, you're his wife.",
+      "audio": "audio/clips/harlan/paul-harlan-0220bf9ed238.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-0ea233306d74",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "With respect, Mister Harlan, would I be standing up here next to him if I thought he'd done it?",
+      "audio": "audio/clips/sarah/sarah-bennett-0ea233306d74.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "paul-harlan-dd206ebe219a",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "What else do you know?",
+      "audio": "audio/clips/harlan/paul-harlan-dd206ebe219a.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-6909f080925e",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "More than I'm going to say on this microphone.",
+      "audio": "audio/clips/jack/jack-bennett-6909f080925e.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-cc17abc43683",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Listen to me. Every speaker in this settlement is carrying my voice right now. That's what we wanted. One message, everyone hears the same thing. But it means that if the person who did this is in this town, they're hearing it too.",
+      "audio": "audio/clips/jack/jack-bennett-cc17abc43683.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-838d85e056cf",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "I'm not going to tell them what we've found. I'm not going to tell them what we're looking for. When I know who it was, you'll know. All of you. That's a promise.",
+      "audio": "audio/clips/jack/jack-bennett-838d85e056cf.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "paul-harlan-51c4eafcd3c1",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "And until then, the lab investigates the lab.",
+      "audio": "audio/clips/harlan/paul-harlan-51c4eafcd3c1.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-4102339984b4",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "No. Security investigates. Mark Jones and his officers. They report to the whole settlement, not to me.",
+      "audio": "audio/clips/jack/jack-bennett-4102339984b4.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "security-officer-0fd15d69b48b",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "News to me. Fine.",
+      "audio": "audio/clips/security/security-officer-0fd15d69b48b.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "paul-harlan-9e8de66b8ec1",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "I want to see what they find. Me, not a summary.",
+      "audio": "audio/clips/harlan/paul-harlan-9e8de66b8ec1.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-c0bbbcf55e59",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "You'll see everything that won't tip them off. Which is most of it.",
+      "audio": "audio/clips/jack/jack-bennett-c0bbbcf55e59.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "paul-harlan-93e845a16f2d",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Most.",
+      "audio": "audio/clips/harlan/paul-harlan-93e845a16f2d.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-9dd8682934d6",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Most.",
+      "audio": "audio/clips/jack/jack-bennett-9dd8682934d6.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "resident-woman-255c44cf09dc",
+      "character": "resident-woman",
+      "characterName": "Resident (woman)",
+      "kind": "character",
+      "text": "What about food? I've got a two-year-old who eats like a grown man.",
+      "audio": "audio/clips/residentwoman/resident-woman-255c44cf09dc.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-c7bd749f408d",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "The kitchens and the stores are counting everything this morning. I don't have a number for you yet. When I do, it'll come over these speakers, the same as this.",
+      "audio": "audio/clips/jack/jack-bennett-c7bd749f408d.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "resident-woman-60bd9d5abb49",
+      "character": "resident-woman",
+      "characterName": "Resident (woman)",
+      "kind": "character",
+      "text": "Is there enough?",
+      "audio": "audio/clips/residentwoman/resident-woman-60bd9d5abb49.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-4a4f8ea106fd",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Today, yes. Beyond that, I won't guess.",
+      "audio": "audio/clips/jack/jack-bennett-4a4f8ea106fd.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "resident-8954c0b12196",
+      "character": "resident",
+      "characterName": "Resident (man)",
+      "kind": "character",
+      "text": "I don't believe any of it.",
+      "audio": "audio/clips/resident/resident-8954c0b12196.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "resident-c464b019496f",
+      "character": "resident",
+      "characterName": "Resident (man)",
+      "kind": "character",
+      "text": "No offense, Doctor. A video of a spider. Grass out the window. I could make that video. I'll believe it when I walk to the end of the road and look.",
+      "audio": "audio/clips/resident/resident-c464b019496f.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "security-officer-26dd894e25db",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Nobody walks to the end of the road.",
+      "audio": "audio/clips/security/security-officer-26dd894e25db.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "resident-f3227af42562",
+      "character": "resident",
+      "characterName": "Resident (man)",
+      "kind": "character",
+      "text": "Then how am I supposed to believe you?",
+      "audio": "audio/clips/resident/resident-f3227af42562.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-833369c91f79",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Lena, can you give him the western road? Live.",
+      "audio": "audio/clips/jack/jack-bennett-833369c91f79.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-d6b98e202776",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Give me five seconds.",
+      "audio": "audio/clips/lena/lena-ortiz-d6b98e202776.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "resident-0301398eb7fd",
+      "character": "resident",
+      "characterName": "Resident (man)",
+      "kind": "character",
+      "text": "That's live?",
+      "audio": "audio/clips/resident/resident-0301398eb7fd.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-68e8f27f70b9",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "That's live. That's the cart Facilities parks there every night. You've walked past it.",
+      "audio": "audio/clips/jack/jack-bennett-68e8f27f70b9.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "resident-woman-91d2fff50c71",
+      "character": "resident-woman",
+      "characterName": "Resident (woman)",
+      "kind": "character",
+      "text": "What do we do? Right now. Today. Not the rules. What do we actually do?",
+      "audio": "audio/clips/residentwoman/resident-woman-91d2fff50c71.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-99aa5541b7e8",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Today, we count. Water, food, medicine, fuel, everything. We find out exactly what came with us and what didn't. If you have a skill, tell security, and they'll find you something to do with it. If you don't, stay home, check on your neighbors, and keep the lights off at the edge tonight. Nobody's going to fix this by lunchtime. But nobody's going to face it alone, either.",
+      "audio": "audio/clips/jack/jack-bennett-99aa5541b7e8.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-0a1884574c97",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "That's all I have. The utility station will post the water limits by noon. Lena, you can turn me off.",
+      "audio": "audio/clips/jack/jack-bennett-0a1884574c97.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-c2adbf65eede",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Gladly.",
+      "audio": "audio/clips/lena/lena-ortiz-c2adbf65eede.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-b674377dd797",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Well. Nobody threw a chair.",
+      "audio": "audio/clips/sarah/sarah-bennett-b674377dd797.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-d70018dd3f8d",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "The day's young.",
+      "audio": "audio/clips/jack/jack-bennett-d70018dd3f8d.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-c4086053a97e",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "That was the right answer. About keeping things back.",
+      "audio": "audio/clips/sarah/sarah-bennett-c4086053a97e.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-c7e968087c34",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Paul didn't think so.",
+      "audio": "audio/clips/jack/jack-bennett-c7e968087c34.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-682b6fb366ec",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Paul thinks it was the right answer too. He just doesn't like it.",
+      "audio": "audio/clips/sarah/sarah-bennett-682b6fb366ec.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-aa4b47aa8a66",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "I'd rather have him asking questions than not.",
+      "audio": "audio/clips/sarah/sarah-bennett-aa4b47aa8a66.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-d7d8500ed2b5",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "If you're calling to review my performance, I'd rather wait.",
+      "audio": "audio/clips/jack/jack-bennett-d7d8500ed2b5.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-9d32ecc620b2",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "It was good. That's not why I'm calling.",
+      "audio": "audio/clips/lena/lena-ortiz-9d32ecc620b2.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-586d1932f39c",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "What's wrong?",
+      "audio": "audio/clips/jack/jack-bennett-586d1932f39c.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-055e72778643",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Nothing's broken. I want to be clear about that. I've just been watching the water system while you talked.",
+      "audio": "audio/clips/lena/lena-ortiz-055e72778643.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-22f4290d5358",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "And?",
+      "audio": "audio/clips/jack/jack-bennett-22f4290d5358.mp3",
+      "chapters": [
+        14,
+        18
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-52234609274b",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "And the second you said the word restricted, the whole settlement turned on its faucets. Kitchens, showers, laundry, bathtubs. I've never seen a draw curve like it. We've used more water since then than we did in the entire night.",
+      "audio": "audio/clips/lena/lena-ortiz-52234609274b.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-2ffb6f41ff27",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "People are filling their bathtubs.",
+      "audio": "audio/clips/jack/jack-bennett-2ffb6f41ff27.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-3721d817e139",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Every bathtub in town, from the look of it. And every pot, every bottle and every bucket they own.",
+      "audio": "audio/clips/lena/lena-ortiz-3721d817e139.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-a65a308ff98d",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "We told five hundred people the water was running out.",
+      "audio": "audio/clips/jack/jack-bennett-a65a308ff98d.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-789a274644e3",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "And five hundred people did the most reasonable thing in the world.",
+      "audio": "audio/clips/lena/lena-ortiz-789a274644e3.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-8205b151a1b2",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "How fast is it going down?",
+      "audio": "audio/clips/jack/jack-bennett-8205b151a1b2.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-2f83b9a0dcf6",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Fast enough that if I don't do something in the next ten minutes, the limits I post at noon are going to be a lot smaller than the ones I promised you.",
+      "audio": "audio/clips/lena/lena-ortiz-2f83b9a0dcf6.mp3",
+      "chapters": [
+        14
+      ]
+    },
+    {
+      "lineId": "jack-bennett-5b092f822871",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Lena. What can you do in ten minutes?",
+      "audio": "audio/clips/jack/jack-bennett-5b092f822871.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-83b2d63e6d7e",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Short of shutting the water off entirely? I can drop the pressure. Block by block. The faucets still run, they just run slowly. Very slowly.",
+      "audio": "audio/clips/lena/lena-ortiz-83b2d63e6d7e.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-01e05eaac9ab",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "How slowly?",
+      "audio": "audio/clips/jack/jack-bennett-01e05eaac9ab.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-d2b01b886d40",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Filling a bathtub would take most of the morning. Filling a glass would take about as long as it does now if you're patient.",
+      "audio": "audio/clips/lena/lena-ortiz-d2b01b886d40.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-9bf3c2a90a83",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "What happens to the people who didn't fill anything yet? The ones who were actually listening to the part about restrictions?",
+      "audio": "audio/clips/sarah/sarah-bennett-9bf3c2a90a83.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-5c383059ff2b",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "They get a slow faucet like everyone else. Nobody gets cut off. Nobody gets ahead any further than they already are.",
+      "audio": "audio/clips/lena/lena-ortiz-5c383059ff2b.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-f6db340d016b",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Keep full pressure at medical.",
+      "audio": "audio/clips/jack/jack-bennett-f6db340d016b.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-d734b25b9a68",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Already planned on it.",
+      "audio": "audio/clips/lena/lena-ortiz-d734b25b9a68.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-61a183f2e943",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "The kitchens, too. And your station.",
+      "audio": "audio/clips/jack/jack-bennett-61a183f2e943.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-600b2bdbcd31",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Done. Housing blocks first, then the workshops. Mark's people are going to get calls.",
+      "audio": "audio/clips/lena/lena-ortiz-600b2bdbcd31.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-442a5ff678d4",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Lots of calls?",
+      "audio": "audio/clips/jack/jack-bennett-442a5ff678d4.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-e41b50ec0321",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Every single person in town who was halfway through filling something.",
+      "audio": "audio/clips/lena/lena-ortiz-e41b50ec0321.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "security-officer-334b3913a384",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Somebody want to tell me why my officers are suddenly getting reports that the water's broken?",
+      "audio": "audio/clips/security/security-officer-334b3913a384.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-85fa71121456",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "It's not broken. It's slow on purpose.",
+      "audio": "audio/clips/jack/jack-bennett-85fa71121456.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "security-officer-6d8624ac9b52",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Can I tell them that?",
+      "audio": "audio/clips/security/security-officer-6d8624ac9b52.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-b40fab11811c",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Tell them it's slow so there's enough for everybody. Tell them the limits come at noon.",
+      "audio": "audio/clips/jack/jack-bennett-b40fab11811c.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "security-officer-28779c37efe3",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Unit Four says a man in Block C is very upset about his bath.",
+      "audio": "audio/clips/security/security-officer-28779c37efe3.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-fd1e471e46fd",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Tell Unit Four that a man in Block C is going to have the cleanest emergency in the settlement.",
+      "audio": "audio/clips/sarah/sarah-bennett-fd1e471e46fd.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-d466d3691a2b",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Medical. Now.",
+      "audio": "audio/clips/mercer/doctor-mercer-d466d3691a2b.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-dbbbd812b0a7",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Lena needs me at the utility station.",
+      "audio": "audio/clips/jack/jack-bennett-dbbbd812b0a7.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-a35a90f1ae9d",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Lena has your wrist. The utility station has walls. Neither of them is going anywhere. Your hand is bleeding through a rag that has now been through a greenhouse roof and a town meeting.",
+      "audio": "audio/clips/mercer/doctor-mercer-a35a90f1ae9d.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-b2d0fcdd7139",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Then it will take very little time to fix.",
+      "audio": "audio/clips/mercer/doctor-mercer-b2d0fcdd7139.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-70f3e1c3488d",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Glass?",
+      "audio": "audio/clips/mercer/doctor-mercer-70f3e1c3488d.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-6842030c09b7",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "The greenhouse roof.",
+      "audio": "audio/clips/jack/jack-bennett-6842030c09b7.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-790025261901",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Of course it was.",
+      "audio": "audio/clips/mercer/doctor-mercer-790025261901.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-0b8ddf7a5cdf",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Four stitches. Keep it dry. Which, today, should be easy for everyone.",
+      "audio": "audio/clips/mercer/doctor-mercer-0b8ddf7a5cdf.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-e9ee2b291422",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "You're next. Don't think I've forgotten.",
+      "audio": "audio/clips/mercer/doctor-mercer-e9ee2b291422.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-ec1cbfeb43ea",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "I would never.",
+      "audio": "audio/clips/sarah/sarah-bennett-ec1cbfeb43ea.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-88b9e84274e0",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Draw's down to half what it was ten minutes ago. Complaints are up about four times. I'd call that a trade.",
+      "audio": "audio/clips/lena/lena-ortiz-88b9e84274e0.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-32bf5d67bab7",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Keep it there.",
+      "audio": "audio/clips/jack/jack-bennett-32bf5d67bab7.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-5ee963c203ec",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Planning on it.",
+      "audio": "audio/clips/lena/lena-ortiz-5ee963c203ec.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-5cf1b5418aee",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "There you are.",
+      "audio": "audio/clips/sarah/sarah-bennett-5cf1b5418aee.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-525c790771db",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "He's annoyed with you.",
+      "audio": "audio/clips/mercer/doctor-mercer-525c790771db.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-6e2cb4308bbe",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "He's been annoyed with me all night. He kicked me during the activation.",
+      "audio": "audio/clips/sarah/sarah-bennett-6e2cb4308bbe.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-9a856813adaa",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Good. A baby who's annoyed is a baby who's paying attention.",
+      "audio": "audio/clips/mercer/doctor-mercer-9a856813adaa.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-f4c811991aea",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Heartbeat's strong. Size is right where it should be. Movement's good.",
+      "audio": "audio/clips/mercer/doctor-mercer-f4c811991aea.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-7d486cb64678",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "What?",
+      "audio": "audio/clips/jack/jack-bennett-7d486cb64678.mp3",
+      "chapters": [
+        15,
+        16
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-b44d51d55c80",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Your blood pressure's a little high.",
+      "audio": "audio/clips/mercer/doctor-mercer-b44d51d55c80.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-f502bd3b24f6",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "How high?",
+      "audio": "audio/clips/sarah/sarah-bennett-f502bd3b24f6.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-965f65c94e78",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "High enough that I'd like to see it lower, and not so high that I'm going to panic about it. You've been on your feet for nine hours in a crisis. I'd be more worried if it were perfect.",
+      "audio": "audio/clips/mercer/doctor-mercer-965f65c94e78.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-f7bdb649df22",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "So it's fine.",
+      "audio": "audio/clips/sarah/sarah-bennett-f7bdb649df22.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-67e172df7aa8",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "So it's a little high. I want you resting. I want you drinking your full share of water. And I want to check it again tonight.",
+      "audio": "audio/clips/mercer/doctor-mercer-67e172df7aa8.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-a1399e63f203",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Resting where?",
+      "audio": "audio/clips/sarah/sarah-bennett-a1399e63f203.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-b3765acae4ab",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Somewhere with a chair.",
+      "audio": "audio/clips/mercer/doctor-mercer-b3765acae4ab.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-3932d678a84e",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "The utility station has chairs.",
+      "audio": "audio/clips/sarah/sarah-bennett-3932d678a84e.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-d9b8ba67a1ff",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "The utility station has a crisis.",
+      "audio": "audio/clips/mercer/doctor-mercer-d9b8ba67a1ff.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-10170bc72791",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Every building in this town has a crisis. At least at the utility station, I can be useful while I sit in one of its chairs.",
+      "audio": "audio/clips/sarah/sarah-bennett-10170bc72791.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-41fda19ee141",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Is she always like this?",
+      "audio": "audio/clips/mercer/doctor-mercer-41fda19ee141.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-02d5c461c5fc",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Since the day I met her.",
+      "audio": "audio/clips/jack/jack-bennett-02d5c461c5fc.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-2c351de29744",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Fine. Mark drives you. You sit. You do not climb anything, carry anything, or argue with anyone for more than five minutes at a time. If you feel a headache, dizziness, anything strange with your vision, you call me. Not him. Me.",
+      "audio": "audio/clips/mercer/doctor-mercer-2c351de29744.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-3ee62a1880c8",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Deal.",
+      "audio": "audio/clips/sarah/sarah-bennett-3ee62a1880c8.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-268becf77a32",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "It wasn't an offer.",
+      "audio": "audio/clips/mercer/doctor-mercer-268becf77a32.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-366e6fdb9609",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Draw curve's flattening. You'll want to see this in person. I'm heading to the station now. The gauges there are older than the sensors, and I trust them more.",
+      "audio": "audio/clips/lena/lena-ortiz-366e6fdb9609.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-0dab8595d574",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "We're on our way.",
+      "audio": "audio/clips/jack/jack-bennett-0dab8595d574.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-97dbff8436a9",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Good. There's something else you should know before you get here.",
+      "audio": "audio/clips/lena/lena-ortiz-97dbff8436a9.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-a4aed9529160",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Go ahead.",
+      "audio": "audio/clips/jack/jack-bennett-a4aed9529160.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-5f8f5c72110d",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "The machine shop's water was shut off last night with the rest of the industrial lines. Somebody just noticed.",
+      "audio": "audio/clips/lena/lena-ortiz-5f8f5c72110d.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-8ca8b1405f69",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Let me guess.",
+      "audio": "audio/clips/jack/jack-bennett-8ca8b1405f69.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-158fca54fb9a",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Five minutes. I'm allowed to argue for five minutes.",
+      "audio": "audio/clips/sarah/sarah-bennett-158fca54fb9a.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "jack-bennett-5b0a6dc2ec61",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Then I'll go first.",
+      "audio": "audio/clips/jack/jack-bennett-5b0a6dc2ec61.mp3",
+      "chapters": [
+        15
+      ]
+    },
+    {
+      "lineId": "paul-harlan-ddbc5ac2944e",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "You shut off my shop.",
+      "audio": "audio/clips/harlan/paul-harlan-ddbc5ac2944e.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-d0e97cab027e",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Lena shut off every nonessential industrial line last night. Yours was one of them.",
+      "audio": "audio/clips/jack/jack-bennett-d0e97cab027e.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-245350e3d37f",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Nobody asked me.",
+      "audio": "audio/clips/harlan/paul-harlan-245350e3d37f.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-cd029b557d81",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Nobody asked anybody. It was the middle of the night and the town had just shrunk.",
+      "audio": "audio/clips/jack/jack-bennett-cd029b557d81.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-b7daa44980ab",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "My lathes run on coolant. Coolant is water. Half my machines are sitting there with jobs clamped in them, and if they sit dry long enough, I'm going to lose parts I can't make again. Not with what's left in this town.",
+      "audio": "audio/clips/harlan/paul-harlan-b7daa44980ab.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-b98b1c4f876d",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "How much water do you need?",
+      "audio": "audio/clips/jack/jack-bennett-b98b1c4f876d.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-30459bdd92ad",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Not much. Not every day.",
+      "audio": "audio/clips/harlan/paul-harlan-30459bdd92ad.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-498589501a04",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Then tell Lena. She'll put it on the list. But I'm going to be honest with you, it won't be at the top.",
+      "audio": "audio/clips/jack/jack-bennett-498589501a04.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-97bff7964c0c",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Where will it be?",
+      "audio": "audio/clips/harlan/paul-harlan-97bff7964c0c.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-775a975e9f35",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Below drinking, below medical, below cooking. Above washing cars.",
+      "audio": "audio/clips/sarah/sarah-bennett-775a975e9f35.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-43bf436f7e77",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "I'm not trying to steal anybody's drinking water.",
+      "audio": "audio/clips/harlan/paul-harlan-43bf436f7e77.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-e3747a932745",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "My night shift was on the floor when that machine went off. They didn't get home in time to fill any bathtubs. They're going to get the same slow faucet as everybody else, and some of their neighbors are going to be sitting on a bathtub full of water.",
+      "audio": "audio/clips/harlan/paul-harlan-e3747a932745.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-5fd421916751",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Come inside. You should hear the numbers.",
+      "audio": "audio/clips/jack/jack-bennett-5fd421916751.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-fea83262f6e8",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Oh good, everybody. Sit down, Sarah.",
+      "audio": "audio/clips/lena/lena-ortiz-fea83262f6e8.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-8f3137e9f47e",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "I've been told.",
+      "audio": "audio/clips/sarah/sarah-bennett-8f3137e9f47e.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-a95e01c858d7",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Then do it.",
+      "audio": "audio/clips/lena/lena-ortiz-a95e01c858d7.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-9eb61a2d9e3a",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Two main tanks. Drinking water. When they're full, they hold about five hundred thousand liters together. Plus the fire reserve, which nobody touches unless something's burning.",
+      "audio": "audio/clips/lena/lena-ortiz-9eb61a2d9e3a.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-a9906e04f444",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "That's a lot.",
+      "audio": "audio/clips/harlan/paul-harlan-a9906e04f444.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-db3d2e288c27",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "It would be, if they were full. They weren't. They're never full at night.",
+      "audio": "audio/clips/lena/lena-ortiz-db3d2e288c27.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-e8b713306265",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "We use water all day. The tanks drop. Then every night, between midnight and five, they refill from the reservoir.",
+      "audio": "audio/clips/lena/lena-ortiz-e8b713306265.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-2189c668dff1",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "And TOMBS cut the intake at eleven.",
+      "audio": "audio/clips/jack/jack-bennett-2189c668dff1.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-a3c215cb86ce",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "At eleven. Right before the refill. The tanks were close to the lowest they ever get.",
+      "audio": "audio/clips/lena/lena-ortiz-a3c215cb86ce.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-452ffd833f44",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "How much is in them now?",
+      "audio": "audio/clips/sarah/sarah-bennett-452ffd833f44.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-c0778154d30d",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "About three hundred and fifty thousand liters. After this morning.",
+      "audio": "audio/clips/lena/lena-ortiz-c0778154d30d.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "security-officer-22b4823d75e5",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "That still sounds like a lot.",
+      "audio": "audio/clips/security/security-officer-22b4823d75e5.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-bc94d6101e5d",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Normal use is about a hundred thousand a day. Showers, laundry, cooking, the greenhouse, the shops. Everything.",
+      "audio": "audio/clips/lena/lena-ortiz-bc94d6101e5d.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-c7607517f80c",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Three and a half days.",
+      "audio": "audio/clips/harlan/paul-harlan-c7607517f80c.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-cb9a58c30ad6",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "At normal use. Yes.",
+      "audio": "audio/clips/lena/lena-ortiz-cb9a58c30ad6.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-d4c353bd3d51",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "So we don't use water normally.",
+      "audio": "audio/clips/jack/jack-bennett-d4c353bd3d51.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-f3d0002c74b3",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Emergency guidance says a person can get by on about twenty liters a day. Drinking, cooking, a little washing. That's not comfortable. But it's enough.",
+      "audio": "audio/clips/lena/lena-ortiz-f3d0002c74b3.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-76eb6ab3d540",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Five hundred people.",
+      "audio": "audio/clips/jack/jack-bennett-76eb6ab3d540.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-57a9591ccf13",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Ten thousand liters a day for homes. Medical needs its own, about three thousand. The kitchens, another two. Call it fifteen thousand a day. Toilets get flushed with a bucket of used washing water, not from the faucet.",
+      "audio": "audio/clips/lena/lena-ortiz-57a9591ccf13.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-2abc701751e3",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "That leaves the greenhouse. Aiden irrigates every morning.",
+      "audio": "audio/clips/jack/jack-bennett-2abc701751e3.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-7d097a2f7506",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "From the drinking tanks. It's a big piece of normal use. Bigger than the kitchens.",
+      "audio": "audio/clips/lena/lena-ortiz-7d097a2f7506.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-f34ae94404d9",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Then don't use drinking water for it.",
+      "audio": "audio/clips/harlan/paul-harlan-f34ae94404d9.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-892afdbd2e00",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "The wastewater plant treats everything that goes down the drains, doesn't it? Not to drinking quality. But clean enough for plants.",
+      "audio": "audio/clips/harlan/paul-harlan-892afdbd2e00.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-2d51c4ff3abc",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "It does. The treated water goes out to a holding tank and gets released.",
+      "audio": "audio/clips/lena/lena-ortiz-2d51c4ff3abc.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-54bc9e36d490",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Then stop releasing it. Run a line from that tank to the greenhouse irrigation. I can make you the fittings. My night shift can lay the pipe.",
+      "audio": "audio/clips/harlan/paul-harlan-54bc9e36d490.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-7031e5333d92",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "That would take the greenhouse off the drinking water entirely.",
+      "audio": "audio/clips/lena/lena-ortiz-7031e5333d92.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-46ac207f17cb",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Give me my night shift and a day.",
+      "audio": "audio/clips/harlan/paul-harlan-46ac207f17cb.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-5edb55e89450",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "You'll have them. And your coolant goes on the list.",
+      "audio": "audio/clips/jack/jack-bennett-5edb55e89450.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-1e008e6e1cb5",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Fifteen thousand a day. Twenty-three days.",
+      "audio": "audio/clips/sarah/sarah-bennett-1e008e6e1cb5.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-d59f26440f4b",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "A little over three weeks. If nothing leaks. If nothing breaks. If nobody cheats.",
+      "audio": "audio/clips/lena/lena-ortiz-d59f26440f4b.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "security-officer-c916a5ea53cc",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Somebody always cheats.",
+      "audio": "audio/clips/security/security-officer-c916a5ea53cc.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-f56714f83dc8",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Then a little less than three weeks.",
+      "audio": "audio/clips/lena/lena-ortiz-f56714f83dc8.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-d924337f7c2b",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "That leaves Paul's night shift. And everyone else who didn't fill a bathtub.",
+      "audio": "audio/clips/sarah/sarah-bennett-d924337f7c2b.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "security-officer-ab7be35d587d",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Can we take the water back?",
+      "audio": "audio/clips/security/security-officer-ab7be35d587d.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-f55f4cc1fc61",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Knock on five hundred doors and tell people to drain their bathtubs into a truck? We'd lose more trust than water.",
+      "audio": "audio/clips/sarah/sarah-bennett-f55f4cc1fc61.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "security-officer-ec8befa94b0c",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Then what?",
+      "audio": "audio/clips/security/security-officer-ec8befa94b0c.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-158d3751c188",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "We don't take it. It's theirs. Whatever's already in a bathtub or a bucket is that household's own. But nobody gets more than twenty liters a day from the faucets, whether they filled a bathtub or not. And we put a drinking-water point at the community center, where anyone who runs short can fill a jug. No questions. Just their name in a book.",
+      "audio": "audio/clips/sarah/sarah-bennett-158d3751c188.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-870158a34204",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "So the people who filled their tubs got ahead.",
+      "audio": "audio/clips/harlan/paul-harlan-870158a34204.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-78e3c2d8e9ef",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "For a few days. After that, everybody's the same.",
+      "audio": "audio/clips/sarah/sarah-bennett-78e3c2d8e9ef.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-e4b6f8b00e15",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "It's not fair.",
+      "audio": "audio/clips/harlan/paul-harlan-e4b6f8b00e15.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-ef10720adafa",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "No. It's just less unfair than anything else we could do this morning.",
+      "audio": "audio/clips/sarah/sarah-bennett-ef10720adafa.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "paul-harlan-e07026557ba0",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "My guys can live with that.",
+      "audio": "audio/clips/harlan/paul-harlan-e07026557ba0.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-cb1788f5b9f5",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Two supply windows a day. An hour in the morning, an hour in the evening. Full pressure during those windows, a trickle the rest of the time. Twenty liters a person. Medical and kitchens on their own allowance. Toilets flushed with washing water. Greenhouse on treated water once Paul's line is in. Drinking point at the community center.",
+      "audio": "audio/clips/lena/lena-ortiz-cb1788f5b9f5.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-991f49c8847e",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "It's eleven fifty-two.",
+      "audio": "audio/clips/lena/lena-ortiz-991f49c8847e.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-24abd1d1a6db",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Then you're on.",
+      "audio": "audio/clips/jack/jack-bennett-24abd1d1a6db.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-32b2b96e041b",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "We're counting the tanks.",
+      "audio": "audio/clips/sarah/sarah-bennett-32b2b96e041b.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-f441f878a7fd",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "That's what we're supposed to be counting.",
+      "audio": "audio/clips/jack/jack-bennett-f441f878a7fd.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-99b66b4f4982",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "I know. But we're only counting the water inside.",
+      "audio": "audio/clips/sarah/sarah-bennett-99b66b4f4982.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "jack-bennett-040fde0634e0",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Last night. At the edge. There was a drop of water out there as tall as I am to the ribs.",
+      "audio": "audio/clips/jack/jack-bennett-040fde0634e0.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-b068b0c328ac",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "One drop. On one blade.",
+      "audio": "audio/clips/sarah/sarah-bennett-b068b0c328ac.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-e991ad3b4326",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "How many blades are out there, Jack?",
+      "audio": "audio/clips/sarah/sarah-bennett-e991ad3b4326.mp3",
+      "chapters": [
+        16
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-5e150e7bb67b",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "How far?",
+      "audio": "audio/clips/lena/lena-ortiz-5e150e7bb67b.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-2e76193c159e",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Half past six. When the light first hit the grass.",
+      "audio": "audio/clips/sarah/sarah-bennett-2e76193c159e.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-70d95a4423ca",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Every morning. That's there every morning.",
+      "audio": "audio/clips/sarah/sarah-bennett-70d95a4423ca.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-666930d3f7c6",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Lena, can you get Aiden?",
+      "audio": "audio/clips/jack/jack-bennett-666930d3f7c6.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-53501498d9d0",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "He's on his way over with Unit Four. Paul's crew is at the greenhouse measuring for the new line, and Aiden didn't trust them not to drown his seedlings.",
+      "audio": "audio/clips/lena/lena-ortiz-53501498d9d0.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "aiden-376b128f34c1",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "Oh. That's dew. Some of it. And guttation.",
+      "audio": "audio/clips/aiden/aiden-376b128f34c1.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "security-officer-82f159b65952",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Gutta-what?",
+      "audio": "audio/clips/security/security-officer-82f159b65952.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "aiden-cc81070adb01",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "Guttation. At night, plants push extra water up through their roots, and it comes out at the tips of the leaves. Those big ones at the ends, those are the plant's own water. The little ones along the edges are dew from the air.",
+      "audio": "audio/clips/aiden/aiden-cc81070adb01.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-b1ce192f4f6f",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Is it drinkable?",
+      "audio": "audio/clips/sarah/sarah-bennett-b1ce192f4f6f.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "aiden-7a2766318271",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "The dew's basically clean. The guttation drops have minerals and sugars in them. You'd want to test it. Filter it, at least.",
+      "audio": "audio/clips/aiden/aiden-7a2766318271.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "aiden-4ce99253232b",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "And you'd want to be very careful getting it.",
+      "audio": "audio/clips/aiden/aiden-4ce99253232b.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-ba05a2e2f696",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Why?",
+      "audio": "audio/clips/jack/jack-bennett-ba05a2e2f696.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "aiden-864c38da7161",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "Because insects drown in it. All the time. In the greenhouse, I find gnats stuck in drops on the leaves every morning. The water grabs them, and they can't push their way back out. That one comes up past your chest. If you fell into it, I'm not sure you'd get out either.",
+      "audio": "audio/clips/aiden/aiden-864c38da7161.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-acd3141386e4",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Call that one most of a meter across. Even if I'm generous with the shape, it holds more than two hundred liters.",
+      "audio": "audio/clips/jack/jack-bennett-acd3141386e4.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-81dc3dc50cef",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "One drop?",
+      "audio": "audio/clips/lena/lena-ortiz-81dc3dc50cef.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-19671c400eee",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "One drop. That's ten people's water for a day. And that screen was covered in them.",
+      "audio": "audio/clips/jack/jack-bennett-19671c400eee.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-756eede9ffc3",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "So we have three weeks of water in the tanks, and more water than we could ever use sitting just past the end of the road every morning.",
+      "audio": "audio/clips/sarah/sarah-bennett-756eede9ffc3.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "security-officer-1253fea513b1",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Sitting past the end of the road, inside a forest full of things the size of cars. This morning I told that kid nobody even walks to the end of the road. You told the whole town nobody goes past it. Now you're going to stand there and tell me we're going out?",
+      "audio": "audio/clips/security/security-officer-1253fea513b1.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-3873b3d70ae6",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Not today.",
+      "audio": "audio/clips/jack/jack-bennett-3873b3d70ae6.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "security-officer-b4663e5918fc",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "When?",
+      "audio": "audio/clips/security/security-officer-b4663e5918fc.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-1faaeb991b4e",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Not tomorrow, either. This morning we ran in because we didn't have a choice. This time we plan it.",
+      "audio": "audio/clips/jack/jack-bennett-1faaeb991b4e.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "security-officer-f16941bf6983",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Plan what, exactly?",
+      "audio": "audio/clips/security/security-officer-f16941bf6983.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-94b0bb11128e",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "A small team. Roped together. On radio, every two minutes, the way you and I did last night. The very edge of the western road and no farther.",
+      "audio": "audio/clips/jack/jack-bennett-94b0bb11128e.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "security-officer-a767c00a8a32",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "And bring back what?",
+      "audio": "audio/clips/security/security-officer-a767c00a8a32.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-036c89f179fb",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "One jug. And a sample for Aiden to test. That's all. If it works once, we know how to do it again.",
+      "audio": "audio/clips/jack/jack-bennett-036c89f179fb.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "security-officer-981bbacfafe7",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "So when?",
+      "audio": "audio/clips/security/security-officer-981bbacfafe7.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-6a2a9639013a",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "First light. When the water's there and the spider's still cold. Back before the sun's off the grass. Nine o'clock at the latest.",
+      "audio": "audio/clips/jack/jack-bennett-6a2a9639013a.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "security-officer-680cd75ef605",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "And if the spider's not cold?",
+      "audio": "audio/clips/security/security-officer-680cd75ef605.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-81fccf0e8d9e",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Then we stand very still and try not to look like flies.",
+      "audio": "audio/clips/jack/jack-bennett-81fccf0e8d9e.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "security-officer-830fab0695f1",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "You said that this morning.",
+      "audio": "audio/clips/security/security-officer-830fab0695f1.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-fd00acb60afa",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "It worked this morning.",
+      "audio": "audio/clips/jack/jack-bennett-fd00acb60afa.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "security-officer-1d45e8ad3af6",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "The day after tomorrow. I want a whole day to plan it. I want to know every single thing that can go wrong before I let anyone stand next to one of those.",
+      "audio": "audio/clips/security/security-officer-1d45e8ad3af6.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-749e48e45624",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Agreed.",
+      "audio": "audio/clips/jack/jack-bennett-749e48e45624.mp3",
+      "chapters": [
+        17,
+        20
+      ]
+    },
+    {
+      "lineId": "aiden-c18c657c43d9",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "I could tell you which plants those are. The ones with the biggest drops. If I could see them up close.",
+      "audio": "audio/clips/aiden/aiden-c18c657c43d9.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-2b5aca0216d5",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "You want to come.",
+      "audio": "audio/clips/jack/jack-bennett-2b5aca0216d5.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "aiden-ab2120be6294",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "I want to not be useless.",
+      "audio": "audio/clips/aiden/aiden-ab2120be6294.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-e4b2751d8f5d",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "You weren't useless this morning. You knew what it was. Nobody else did.",
+      "audio": "audio/clips/sarah/sarah-bennett-e4b2751d8f5d.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "paul-harlan-b71fa9afe6db",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Measured the greenhouse end. I'll have treated water on those plants by tonight. Tell the kid his tomatoes will live.",
+      "audio": "audio/clips/harlan/paul-harlan-b71fa9afe6db.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-d8d595c5954d",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Thank you, Paul.",
+      "audio": "audio/clips/lena/lena-ortiz-d8d595c5954d.mp3",
+      "chapters": [
+        17,
+        20
+      ]
+    },
+    {
+      "lineId": "paul-harlan-5a495cbe1feb",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Don't thank me. Put my coolant on the list.",
+      "audio": "audio/clips/harlan/paul-harlan-5a495cbe1feb.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-cabb9953bc7d",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "It's on the list.",
+      "audio": "audio/clips/lena/lena-ortiz-cabb9953bc7d.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "paul-harlan-baba0a6ac486",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Higher.",
+      "audio": "audio/clips/harlan/paul-harlan-baba0a6ac486.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-ac2cee344ebb",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Better.",
+      "audio": "audio/clips/mercer/doctor-mercer-ac2cee344ebb.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-e3933d5ca748",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "I said better, not good. Still a little high. I'll be back tomorrow night. Until then, rest. Real rest. Not chair rest.",
+      "audio": "audio/clips/mercer/doctor-mercer-e3933d5ca748.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-018100f0562a",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "I rested all afternoon.",
+      "audio": "audio/clips/sarah/sarah-bennett-018100f0562a.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-96baa41de9b7",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "You ran a water department from a chair.",
+      "audio": "audio/clips/mercer/doctor-mercer-96baa41de9b7.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-732bc2aa3582",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "You're going out there.",
+      "audio": "audio/clips/sarah/sarah-bennett-732bc2aa3582.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-8d3a8284982c",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "To the end of the road. Not one step farther.",
+      "audio": "audio/clips/jack/jack-bennett-8d3a8284982c.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-b97e63a987c6",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "You said that about the boundary last night.",
+      "audio": "audio/clips/sarah/sarah-bennett-b97e63a987c6.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-f1754c78b93c",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "And I came back.",
+      "audio": "audio/clips/jack/jack-bennett-f1754c78b93c.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-3fa2edcba57b",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "With a fingernail story and a cut hand.",
+      "audio": "audio/clips/sarah/sarah-bennett-3fa2edcba57b.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-7219a5a34027",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Four stitches. Mercer was very proud of them.",
+      "audio": "audio/clips/jack/jack-bennett-7219a5a34027.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-b0e922c9af42",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "He wants you to come back by nine.",
+      "audio": "audio/clips/sarah/sarah-bennett-b0e922c9af42.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "jack-bennett-6a3bb511b57b",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Tell him I promise.",
+      "audio": "audio/clips/jack/jack-bennett-6a3bb511b57b.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-4dfefec1c1aa",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "You tell him. He heard your voice on every speaker in town this morning. He'll recognize it.",
+      "audio": "audio/clips/sarah/sarah-bennett-4dfefec1c1aa.mp3",
+      "chapters": [
+        17
+      ]
+    },
+    {
+      "lineId": "security-officer-fde2a5b3e4e5",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "You up?",
+      "audio": "audio/clips/security/security-officer-fde2a5b3e4e5.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-cc87a23d8356",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "I never went down.",
+      "audio": "audio/clips/jack/jack-bennett-cc87a23d8356.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-481f15f818e5",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Figured. That thing last night. You heard it?",
+      "audio": "audio/clips/security/security-officer-481f15f818e5.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-d1ee71830b04",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "I heard it.",
+      "audio": "audio/clips/jack/jack-bennett-d1ee71830b04.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-8f7c67126661",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "So did the perimeter sensors. Eleven forty, out past where any camera can see. One hit, nothing after. My night officers looked at every feed we've got. There's nothing to look at.",
+      "audio": "audio/clips/security/security-officer-8f7c67126661.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-4943c601932b",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "So we don't know.",
+      "audio": "audio/clips/jack/jack-bennett-4943c601932b.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-99dc1ecbdd29",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "We don't know. I'm putting it with the others. Planning meeting at nine. Utility station. Bring coffee. Don't bring Sarah.",
+      "audio": "audio/clips/security/security-officer-99dc1ecbdd29.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-cc3f567a3b61",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Morning, Doctor Bennett.",
+      "audio": "audio/clips/security/security-officer-cc3f567a3b61.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-75befc4372ff",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Morning, Mark. I'll be watching on the cameras. Lying down. Doctor Mercer's orders.",
+      "audio": "audio/clips/sarah/sarah-bennett-75befc4372ff.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-8093947d3e3f",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Then I'll make sure to look busy.",
+      "audio": "audio/clips/security/security-officer-8093947d3e3f.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-0a0917f67cd0",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "You didn't sleep.",
+      "audio": "audio/clips/sarah/sarah-bennett-0a0917f67cd0.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-b7f3dfdae3f4",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "I watched the grass.",
+      "audio": "audio/clips/jack/jack-bennett-b7f3dfdae3f4.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-e5fd46fc82f8",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Did it do anything interesting?",
+      "audio": "audio/clips/sarah/sarah-bennett-e5fd46fc82f8.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-30730391e703",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "It got wet.",
+      "audio": "audio/clips/jack/jack-bennett-30730391e703.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-5d72f405267e",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Good morning, Paul. Is that for us?",
+      "audio": "audio/clips/lena/lena-ortiz-5d72f405267e.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "paul-harlan-c9bb39854ceb",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "It's for whoever's stupid enough to use it. Your greenhouse line's in. Finished around three.",
+      "audio": "audio/clips/harlan/paul-harlan-c9bb39854ceb.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-fd4aa13cfec9",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "In the dark. At the edge.",
+      "audio": "audio/clips/security/security-officer-fd4aa13cfec9.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "paul-harlan-c5e5b211e844",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Under tarps. Every lamp pointed at the ground. Your Unit Four stood there all night making sure. He checked twice.",
+      "audio": "audio/clips/harlan/paul-harlan-c5e5b211e844.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "aiden-807baf345f14",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "The tomatoes are drinking it. I checked at six. Nothing's wilting.",
+      "audio": "audio/clips/aiden/aiden-807baf345f14.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "paul-harlan-9df5cf045b58",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Told you they'd live.",
+      "audio": "audio/clips/harlan/paul-harlan-9df5cf045b58.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-ac3b2bb5e476",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Before we start. The kitchens sent their count. I'm reading it out at noon, so you might as well hear it first.",
+      "audio": "audio/clips/lena/lena-ortiz-ac3b2bb5e476.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-9601713a4176",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Not as bad as water. About six weeks of food, at careful portions. A little longer once the greenhouse starts giving us more than salad.",
+      "audio": "audio/clips/lena/lena-ortiz-9601713a4176.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-6501ec2ac156",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Then water's still the clock.",
+      "audio": "audio/clips/jack/jack-bennett-6501ec2ac156.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-d7529a5566d7",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Water's still the clock.",
+      "audio": "audio/clips/lena/lena-ortiz-d7529a5566d7.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-7fe75b94cfed",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Good. Then let's talk about the end of the road.",
+      "audio": "audio/clips/security/security-officer-7fe75b94cfed.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-4c4c5e89c97f",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "It's out there. We've seen it. We know it hunts things that move fast. That's one.",
+      "audio": "audio/clips/security/security-officer-4c4c5e89c97f.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-6dd827c5e462",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Aiden says insects drown in those. Anything that can trap a fly can trap a person. That's two.",
+      "audio": "audio/clips/security/security-officer-6dd827c5e462.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-270ac86d10e1",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "The soil past the asphalt is wet in the morning. Wet soil is slippery. Nobody's standing on it. That's three.",
+      "audio": "audio/clips/security/security-officer-270ac86d10e1.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-323469d735aa",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "We haven't seen one up close. I'd like to keep it that way. Four.",
+      "audio": "audio/clips/security/security-officer-323469d735aa.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-d5192f4155eb",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "If the radio fails, we come back. We don't wait to find out why. Five.",
+      "audio": "audio/clips/security/security-officer-d5192f4155eb.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-7797ad7906d1",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "What's that one?",
+      "audio": "audio/clips/jack/jack-bennett-7797ad7906d1.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-507ee13102d9",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Somebody decides the plan is a suggestion. Somebody sees a bigger drop two meters farther in and thinks, just this once. That's the one that kills people. That's six.",
+      "audio": "audio/clips/security/security-officer-507ee13102d9.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-89f03003976b",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Nobody's going to do that.",
+      "audio": "audio/clips/jack/jack-bennett-89f03003976b.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-397bae3503b5",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Good. Then it's an easy rule to keep.",
+      "audio": "audio/clips/security/security-officer-397bae3503b5.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-8e0c5d7c70c6",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Tell me how we get the water.",
+      "audio": "audio/clips/jack/jack-bennett-8e0c5d7c70c6.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "aiden-09576c021426",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "Not with a cup.",
+      "audio": "audio/clips/aiden/aiden-09576c021426.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "aiden-4d1dca48b639",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "In the greenhouse, when a drop sits on a seedling too long, it rots the leaf. So I wick it off. I touch the drop with a corner of cotton cloth, and the water runs into the cloth on its own. You don't scoop it. You let it soak in.",
+      "audio": "audio/clips/aiden/aiden-4d1dca48b639.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-31db11a397a7",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Why not a cup? A cup's simpler.",
+      "audio": "audio/clips/lena/lena-ortiz-31db11a397a7.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "aiden-87306ad28f06",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "Because at our size, water climbs. It'll run up the rim of a cup and over the side and onto whoever's holding it. Same with skin. If that drop touches your hand, it won't fall off. It'll keep coming.",
+      "audio": "audio/clips/aiden/aiden-87306ad28f06.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "paul-harlan-f450eacb240a",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Four meters. Painter's pole from Facilities. The sponge is new, from my parts washer, never been used, so you won't be drinking machine oil. You soak it, you swing it back, you squeeze it into a funnel.",
+      "audio": "audio/clips/harlan/paul-harlan-f450eacb240a.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-4d7f70c42e0d",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Into what?",
+      "audio": "audio/clips/lena/lena-ortiz-4d7f70c42e0d.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "paul-harlan-573f80a1ce5b",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "A twenty-liter jug. One person's water for a day.",
+      "audio": "audio/clips/harlan/paul-harlan-573f80a1ce5b.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-3a5ae276af70",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Now it's heavy.",
+      "audio": "audio/clips/jack/jack-bennett-3a5ae276af70.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "paul-harlan-e7269f7d390d",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "That's a lot of water on the end of a long stick. Don't let it swing.",
+      "audio": "audio/clips/harlan/paul-harlan-e7269f7d390d.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-65b586e3c4ca",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "And you're doing that with one and a half hands.",
+      "audio": "audio/clips/security/security-officer-65b586e3c4ca.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-c4a439450260",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Mercer said keep it dry.",
+      "audio": "audio/clips/jack/jack-bennett-c4a439450260.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-f8f8529abf4d",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Mercer's going to love this.",
+      "audio": "audio/clips/security/security-officer-f8f8529abf4d.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-4cf108ee0bb7",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "I'll wear a glove.",
+      "audio": "audio/clips/jack/jack-bennett-4cf108ee0bb7.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-243b4c974861",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Wear two.",
+      "audio": "audio/clips/security/security-officer-243b4c974861.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-339b85a75692",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Three people go. Small, roped, slow. I'm on the rope. I've done this before, and I'm the one who says when we leave. Jack's on the pole.",
+      "audio": "audio/clips/security/security-officer-339b85a75692.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "paul-harlan-baddaa48dced",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "The man the whole town is waiting on to name a saboteur. You want him standing next to a spider?",
+      "audio": "audio/clips/harlan/paul-harlan-baddaa48dced.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-6d2836d1affb",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "I told five hundred people to stay off the edge. If anybody goes, I go.",
+      "audio": "audio/clips/jack/jack-bennett-6d2836d1affb.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "paul-harlan-f1739443f4bb",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Then don't fall in.",
+      "audio": "audio/clips/harlan/paul-harlan-f1739443f4bb.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-9df9e578e925",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "You're third. You take the sample, and you tell us what we're looking at. We tie the line off to the maintenance cart at the end of the road, and Unit Four stays at the cart and holds it.",
+      "audio": "audio/clips/security/security-officer-9df9e578e925.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "aiden-9d63432fce1a",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "And our feet?",
+      "audio": "audio/clips/aiden/aiden-9d63432fce1a.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-8aae041c3810",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Toes on the asphalt. All three of us. Nobody steps onto the soil. Not for a bigger drop, not for a better sample, not for anything.",
+      "audio": "audio/clips/security/security-officer-8aae041c3810.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-958e8b8ab999",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Sarah's on the line. She says it's important.",
+      "audio": "audio/clips/lena/lena-ortiz-958e8b8ab999.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-d139ce121903",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Put her on.",
+      "audio": "audio/clips/jack/jack-bennett-d139ce121903.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-382dc49b4c08",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "I've been going through the greenhouse cameras from this morning. The two on the outside wall. They look along the edge toward the end of the road.",
+      "audio": "audio/clips/sarah/sarah-bennett-382dc49b4c08.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-50737a0e4e79",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Lena, can you pull up the first outside camera, six forty-five?",
+      "audio": "audio/clips/sarah/sarah-bennett-50737a0e4e79.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-bf9f37c7883b",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "I thought that was a seed head. It isn't. Watch.",
+      "audio": "audio/clips/sarah/sarah-bennett-bf9f37c7883b.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "aiden-fd89a38e9722",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "It's a retreat. They sleep in those. They spin one and come back to it.",
+      "audio": "audio/clips/aiden/aiden-fd89a38e9722.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-4d824323d5ac",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "It sat there for a quarter of an hour. Then, just before seven, it started hunting. Right along the end of the road.",
+      "audio": "audio/clips/sarah/sarah-bennett-4d824323d5ac.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-a44562fc0c71",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "That's one morning. A cold morning, or a cloudy one, and it could change.",
+      "audio": "audio/clips/security/security-officer-a44562fc0c71.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-a85f7b7bd2f1",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "I know. But the water's there from half past six. And the spider comes out when the sun hits the grass.",
+      "audio": "audio/clips/sarah/sarah-bennett-a85f7b7bd2f1.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "jack-bennett-28cf2bf25a40",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Half an hour.",
+      "audio": "audio/clips/jack/jack-bennett-28cf2bf25a40.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "aiden-5636fbe40cbc",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "It lives there. Right above the end of the road. Every time we go out there, it'll be watching us.",
+      "audio": "audio/clips/aiden/aiden-5636fbe40cbc.mp3",
+      "chapters": [
+        18
+      ]
+    },
+    {
+      "lineId": "security-officer-2dbbe14cf364",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "The railing is the cart. The gravel is the road. That drain over there is the edge. Nobody goes past the drain.",
+      "audio": "audio/clips/security/security-officer-2dbbe14cf364.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "aiden-a3807a3b0c52",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "It's a very small drain.",
+      "audio": "audio/clips/aiden/aiden-a3807a3b0c52.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "security-officer-46b597c9f95d",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Then it'll be very easy to stay away from.",
+      "audio": "audio/clips/security/security-officer-46b597c9f95d.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "security-officer-10f56b09b047",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Stop.",
+      "audio": "audio/clips/security/security-officer-10f56b09b047.mp3",
+      "chapters": [
+        19,
+        20
+      ]
+    },
+    {
+      "lineId": "security-officer-b061ad74ebc9",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Good. That's the word. When I say it, you're a fence post. You don't look around. You don't ask why. You stop.",
+      "audio": "audio/clips/security/security-officer-b061ad74ebc9.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "jack-bennett-0ab26db93b7b",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "For how long?",
+      "audio": "audio/clips/jack/jack-bennett-0ab26db93b7b.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "security-officer-adc9d19b9ea1",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Until I say go.",
+      "audio": "audio/clips/security/security-officer-adc9d19b9ea1.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "aiden-e3ed455b9934",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "What if you don't say go?",
+      "audio": "audio/clips/aiden/aiden-e3ed455b9934.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "security-officer-d11e794140e9",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Then you're a fence post for a very long time.",
+      "audio": "audio/clips/security/security-officer-d11e794140e9.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "security-officer-9faa7c36601b",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "You hold this. You don't let go of it. If I yell pull, you pull.",
+      "audio": "audio/clips/security/security-officer-9faa7c36601b.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "unit-four-1f35dbf550ca",
+      "character": "unit-four",
+      "characterName": "Security, Unit Four",
+      "kind": "character",
+      "text": "Yes, sir.",
+      "audio": "audio/clips/unitfour/unit-four-1f35dbf550ca.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "security-officer-c83fc320c9f7",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "If you see something coming that we don't, you say so. You don't wait to be sure.",
+      "audio": "audio/clips/security/security-officer-c83fc320c9f7.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "security-officer-471ad72074e8",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "And you don't call me sir.",
+      "audio": "audio/clips/security/security-officer-471ad72074e8.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "unit-four-0bca323af47d",
+      "character": "unit-four",
+      "characterName": "Security, Unit Four",
+      "kind": "character",
+      "text": "Yes, sir. Sorry.",
+      "audio": "audio/clips/unitfour/unit-four-0bca323af47d.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-002c5b17c2a1",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "You rested.",
+      "audio": "audio/clips/mercer/doctor-mercer-002c5b17c2a1.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-4e665f05762c",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "I lay on that couch all day. I watched cameras. I watched Jack drill water into a bucket on Lena's feed. I've never been so bored in my life.",
+      "audio": "audio/clips/sarah/sarah-bennett-4e665f05762c.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-ecf0b656cf43",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Good. Keep it that way.",
+      "audio": "audio/clips/mercer/doctor-mercer-ecf0b656cf43.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-ba381bc41622",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Same as last night.",
+      "audio": "audio/clips/mercer/doctor-mercer-ba381bc41622.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-2ae7f63a8edc",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Same as better, or same as high?",
+      "audio": "audio/clips/sarah/sarah-bennett-2ae7f63a8edc.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-ae4b02102247",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Same as high. Not worse. I'd have liked better. I'll take same.",
+      "audio": "audio/clips/mercer/doctor-mercer-ae4b02102247.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-ce20e76a3893",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "No protein. That's good. That's the one I was watching for.",
+      "audio": "audio/clips/mercer/doctor-mercer-ce20e76a3893.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-c66ab30c89f4",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "So I can stop being bored?",
+      "audio": "audio/clips/sarah/sarah-bennett-c66ab30c89f4.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-730f920d6a4b",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "No.",
+      "audio": "audio/clips/mercer/doctor-mercer-730f920d6a4b.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-a39a3a587667",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "I hear you're going to be holding a wet pole in the morning.",
+      "audio": "audio/clips/mercer/doctor-mercer-a39a3a587667.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "jack-bennett-fa98d46629b8",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "News travels.",
+      "audio": "audio/clips/jack/jack-bennett-fa98d46629b8.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "doctor-mercer-ff50059bf08a",
+      "character": "doctor-mercer",
+      "characterName": "Doctor Mercer",
+      "kind": "character",
+      "text": "Everything travels. It's a very small town. If that gets wet, you come straight to me. Not after you've made your report. Straight to me.",
+      "audio": "audio/clips/mercer/doctor-mercer-ff50059bf08a.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "jack-bennett-0d2ac62dafbe",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Yes, Doctor.",
+      "audio": "audio/clips/jack/jack-bennett-0d2ac62dafbe.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-e2b4e159b355",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "And if the spider's out early?",
+      "audio": "audio/clips/sarah/sarah-bennett-e2b4e159b355.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "jack-bennett-5957a87f6da5",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "We stop. We wait. If it doesn't go back, we come home.",
+      "audio": "audio/clips/jack/jack-bennett-5957a87f6da5.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-204b2e7633f4",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "And if the radio goes quiet?",
+      "audio": "audio/clips/sarah/sarah-bennett-204b2e7633f4.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "jack-bennett-e963340d4cfb",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "We come home.",
+      "audio": "audio/clips/jack/jack-bennett-e963340d4cfb.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-573e35e0c132",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "And if you see a bigger drop two meters farther in?",
+      "audio": "audio/clips/sarah/sarah-bennett-573e35e0c132.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "jack-bennett-320dd83bf2fc",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "You've been talking to Lena.",
+      "audio": "audio/clips/jack/jack-bennett-320dd83bf2fc.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-f589d841f2a2",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Lena told me everything. Answer the question.",
+      "audio": "audio/clips/sarah/sarah-bennett-f589d841f2a2.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "jack-bennett-0e637a73108e",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "I leave it there.",
+      "audio": "audio/clips/jack/jack-bennett-0e637a73108e.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-68a4377b9d0f",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Then sleep. You can't hold a pole straight if you've been awake for two days.",
+      "audio": "audio/clips/sarah/sarah-bennett-68a4377b9d0f.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "unit-four-a4dbf63f425e",
+      "character": "unit-four",
+      "characterName": "Security, Unit Four",
+      "kind": "character",
+      "text": "Is that normal?",
+      "audio": "audio/clips/unitfour/unit-four-a4dbf63f425e.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "security-officer-9aae193ed6b8",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Nothing is normal. That's just loud.",
+      "audio": "audio/clips/security/security-officer-9aae193ed6b8.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "jack-bennett-e0b1211f41f7",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Station, this is Bennett. We're at the cart.",
+      "audio": "audio/clips/jack/jack-bennett-e0b1211f41f7.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-70bb08e0fc88",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Station hears you. Two minutes, starting now.",
+      "audio": "audio/clips/lena/lena-ortiz-70bb08e0fc88.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-44189d4fea08",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "I'm lying down. Ask anyone.",
+      "audio": "audio/clips/sarah/sarah-bennett-44189d4fea08.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "jack-bennett-c17dd15cf18b",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Morning.",
+      "audio": "audio/clips/jack/jack-bennett-c17dd15cf18b.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-ce67e6476c7f",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Morning. Be boring.",
+      "audio": "audio/clips/sarah/sarah-bennett-ce67e6476c7f.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "aiden-b692a33f2c58",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "That's a robin, I think.",
+      "audio": "audio/clips/aiden/aiden-b692a33f2c58.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "security-officer-355cf23b36ac",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Is it close?",
+      "audio": "audio/clips/security/security-officer-355cf23b36ac.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "aiden-7a91075931f9",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "I don't know. I can't tell anymore.",
+      "audio": "audio/clips/aiden/aiden-7a91075931f9.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-cb44b797712f",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Two minutes. You all still there?",
+      "audio": "audio/clips/lena/lena-ortiz-cb44b797712f.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "aiden-dc211abd6cd4",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "That one's the plant's. At the tip.",
+      "audio": "audio/clips/aiden/aiden-dc211abd6cd4.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "security-officer-c97efdac2218",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Ten minutes of gray. Then the sun.",
+      "audio": "audio/clips/security/security-officer-c97efdac2218.mp3",
+      "chapters": [
+        19
+      ]
+    },
+    {
+      "lineId": "aiden-8794f05015ef",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "It's working.",
+      "audio": "audio/clips/aiden/aiden-8794f05015ef.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "security-officer-e2dea368d3d9",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Swing it back. Slow.",
+      "audio": "audio/clips/security/security-officer-e2dea368d3d9.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-4d07e09158ad",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Two minutes.",
+      "audio": "audio/clips/lena/lena-ortiz-4d07e09158ad.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "aiden-6d1f6681a840",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "Maybe three liters.",
+      "audio": "audio/clips/aiden/aiden-6d1f6681a840.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "aiden-ae0ab3345dfb",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "Wipe it. Don't let it reach the glove.",
+      "audio": "audio/clips/aiden/aiden-ae0ab3345dfb.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "aiden-aa4315cd51e3",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "Dew. Not the plant's water. That's the one I want to test.",
+      "audio": "audio/clips/aiden/aiden-aa4315cd51e3.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "security-officer-3a3d2a8b9f9d",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Good. Now stay off that edge.",
+      "audio": "audio/clips/security/security-officer-3a3d2a8b9f9d.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "aiden-4fe43d4223e9",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "There's something in that one.",
+      "audio": "audio/clips/aiden/aiden-4fe43d4223e9.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "aiden-76f9432189b3",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "A midge. It's been stuck there all night.",
+      "audio": "audio/clips/aiden/aiden-76f9432189b3.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "jack-bennett-20cddd5fd91e",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Dead?",
+      "audio": "audio/clips/jack/jack-bennett-20cddd5fd91e.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "aiden-4107aa6a802c",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "Cold.",
+      "audio": "audio/clips/aiden/aiden-4107aa6a802c.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-51250b54694e",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Two minutes. Don't answer that.",
+      "audio": "audio/clips/lena/lena-ortiz-51250b54694e.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "security-officer-9edd69b96258",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Pull.",
+      "audio": "audio/clips/security/security-officer-9edd69b96258.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "security-officer-0abf3f4a19d3",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Aiden. Stop moving.",
+      "audio": "audio/clips/security/security-officer-0abf3f4a19d3.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "security-officer-9fec25a7fdcd",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "We're done. Back to the cart.",
+      "audio": "audio/clips/security/security-officer-9fec25a7fdcd.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "aiden-8a9ac7621a57",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "I've got it.",
+      "audio": "audio/clips/aiden/aiden-8a9ac7621a57.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-588567211abe",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "Is everyone all right?",
+      "audio": "audio/clips/sarah/sarah-bennett-588567211abe.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "jack-bennett-73c4c8d7d06d",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Everyone's all right. Aiden's wet.",
+      "audio": "audio/clips/jack/jack-bennett-73c4c8d7d06d.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-68959f6ccbec",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "And you?",
+      "audio": "audio/clips/sarah/sarah-bennett-68959f6ccbec.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "jack-bennett-498be509276e",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "I'm about to be in trouble with Doctor Mercer.",
+      "audio": "audio/clips/jack/jack-bennett-498be509276e.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-ec62027cb6bb",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "I already called her. She's meeting you at the station. And she says the station counts as straight to her, this once.",
+      "audio": "audio/clips/sarah/sarah-bennett-ec62027cb6bb.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "aiden-49cf045905b6",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "Low minerals. Low salt. It's dew, all right. Clean enough to filter and boil. Whether there's anything living in it, I can't tell you today. That takes longer.",
+      "audio": "audio/clips/aiden/aiden-49cf045905b6.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "jack-bennett-e8e708b39338",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Twelve liters. Half an hour. And we nearly lost you.",
+      "audio": "audio/clips/jack/jack-bennett-e8e708b39338.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "aiden-78a4ec21e563",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "You didn't.",
+      "audio": "audio/clips/aiden/aiden-78a4ec21e563.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "security-officer-34ac50d69088",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "We're not doing that every morning. I'm telling you now.",
+      "audio": "audio/clips/security/security-officer-34ac50d69088.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-e1f56c257596",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "We need fifteen thousand a day.",
+      "audio": "audio/clips/lena/lena-ortiz-e1f56c257596.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "jack-bennett-2f1cfd6581bf",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Which is why we can't do it with a stick.",
+      "audio": "audio/clips/jack/jack-bennett-2f1cfd6581bf.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "jack-bennett-453984004580",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "It came down to us.",
+      "audio": "audio/clips/jack/jack-bennett-453984004580.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "security-officer-824d50661e5a",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "The drop?",
+      "audio": "audio/clips/security/security-officer-824d50661e5a.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "jack-bennett-715acdde9a05",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "We spent half an hour reaching up for it with a stick. Then the blade bent, and it fell on its own, right onto the asphalt. We don't need to reach the water. We need to make it come down. Shake the blade, and let it fall onto something that catches it.",
+      "audio": "audio/clips/jack/jack-bennett-715acdde9a05.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-8f2bf53a6a2b",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "A trough. Along the end of the road, under the leaf tips.",
+      "audio": "audio/clips/lena/lena-ortiz-8f2bf53a6a2b.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-44147978078a",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Paul. You awake?",
+      "audio": "audio/clips/lena/lena-ortiz-44147978078a.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "paul-harlan-74e885e94907",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "I am now.",
+      "audio": "audio/clips/harlan/paul-harlan-74e885e94907.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "lena-ortiz-5300ced6951f",
+      "character": "lena-ortiz",
+      "characterName": "Lena Ortiz",
+      "kind": "character",
+      "text": "Could you make us a trough? Long, shallow, sitting on the asphalt at the end of the western road.",
+      "audio": "audio/clips/lena/lena-ortiz-5300ced6951f.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "paul-harlan-77b870761929",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "A gutter. Yes. Give me a day. And I'm putting a collar on that pole of yours. I watched the feed. Water running down to your hands like that, it's a wonder it didn't grab a fistful of you.",
+      "audio": "audio/clips/harlan/paul-harlan-77b870761929.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "paul-harlan-9f34684395d1",
+      "character": "paul-harlan",
+      "characterName": "Paul Harlan",
+      "kind": "character",
+      "text": "Don't thank me. Bump my coolant.",
+      "audio": "audio/clips/harlan/paul-harlan-9f34684395d1.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-3c4e4a8737cc",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "It's seven fifty. You said nine.",
+      "audio": "audio/clips/sarah/sarah-bennett-3c4e4a8737cc.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "jack-bennett-7c365c803851",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "I'm early. Don't get used to it.",
+      "audio": "audio/clips/jack/jack-bennett-7c365c803851.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "sarah-bennett-10aa08734c8e",
+      "character": "sarah-bennett",
+      "characterName": "Sarah Bennett",
+      "kind": "character",
+      "text": "He kicked. When you said you were coming back.",
+      "audio": "audio/clips/sarah/sarah-bennett-10aa08734c8e.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "jack-bennett-85bcc8acd3dc",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Tell him I heard. No. I'll tell him myself. Tonight.",
+      "audio": "audio/clips/jack/jack-bennett-85bcc8acd3dc.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "aiden-fea40e485ef4",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "It watched us. The whole time. Every pass with the pole, every time you swung it back. It knew exactly where we were. So why didn't it come for us?",
+      "audio": "audio/clips/aiden/aiden-fea40e485ef4.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "security-officer-fced73a1eb2f",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Because we were slow.",
+      "audio": "audio/clips/security/security-officer-fced73a1eb2f.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "aiden-70c0f9a01053",
+      "character": "aiden",
+      "characterName": "Aiden",
+      "kind": "character",
+      "text": "Not slow. Boring. The midge wasn't.",
+      "audio": "audio/clips/aiden/aiden-70c0f9a01053.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "security-officer-9f13d18a0697",
+      "character": "security-officer",
+      "characterName": "Settlement security",
+      "kind": "character",
+      "text": "Which is the problem with your trough. Shaking grass isn't boring. Shaking grass is fast. And fast is food.",
+      "audio": "audio/clips/security/security-officer-9f13d18a0697.mp3",
+      "chapters": [
+        20
+      ]
+    },
+    {
+      "lineId": "jack-bennett-f0cad39a56f5",
+      "character": "jack-bennett",
+      "characterName": "Jack Bennett",
+      "kind": "character",
+      "text": "Then we do it in the gray. Before the sun. Before it's warm.",
+      "audio": "audio/clips/jack/jack-bennett-f0cad39a56f5.mp3",
+      "chapters": [
+        20
       ]
     }
   ]
