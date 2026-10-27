@@ -36,6 +36,12 @@
       "dir": "outline/movement-06",
       "overview": "outline/movement-06/overview.md",
       "miniArcs": []
+    },
+    {
+      "number": 7,
+      "dir": "outline/movement-07",
+      "overview": "outline/movement-07/overview.md",
+      "miniArcs": []
     }
   ],
   "chapters": [
@@ -258,6 +264,39 @@
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "realization"
+    },
+    {
+      "number": 21,
+      "path": "chapters/movement-07/chapter-0021.md",
+      "movement": 7,
+      "title": "The Second List",
+      "pov": "Jack",
+      "word_count": 1690,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "anticipation"
+    },
+    {
+      "number": 22,
+      "path": "chapters/movement-07/chapter-0022.md",
+      "movement": 7,
+      "title": "No Sun",
+      "pov": "Jack",
+      "word_count": 1629,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "realization"
+    },
+    {
+      "number": 23,
+      "path": "chapters/movement-07/chapter-0023.md",
+      "movement": 7,
+      "title": "Covered",
+      "pov": "Jack",
+      "word_count": 1635,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "decision"
     }
   ],
   "storyRules": [
