@@ -89,6 +89,15 @@ says what the English says and nothing more: it never explains, adds or reveals.
 | harness / rope | arnês / corda |  |
 | machine shop | oficina mecânica |  |
 | blood-pressure cuff | braçadeira |  |
+| the long test (Aiden's water test) | o teste longo | Chapters 21 to 23 |
+| door thermometer (greenhouse door) | termômetro da porta | "says twelve degrees" = "marca doze graus" |
+| splash board (on the trough) / board | anteparo | Chapters 21 to 23; whiteboard stays "quadro (branco)" |
+| collar (drip collar on Paul's pole) | colar | Chapters 20 and 23 |
+| "Cold. Clear. Gray." / "Covered." (Mark's list) | "Frio. Limpo. Cinza." / "Coberto." | "Covered" is also the title of Chapter 23 |
+| "Boil it. Always." / "Boil it, always" | "Ferve. Sempre." / "Ferve, sempre" | Chapter 23 |
+| midge / gnat | mosquito / mosquitinho | Chapters 20 and 22 |
+| kick (trapped insects in the drops) | espernear |  |
+| holding tank | tanque de armazenamento |  |
 
 ## Voice
 

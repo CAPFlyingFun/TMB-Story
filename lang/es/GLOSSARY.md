@@ -93,6 +93,18 @@ says what the English says and nothing more: it never explains, adds or reveals.
 | community center main hall / public speakers | salón principal / altavoces públicos |  |
 | Block C / housing blocks | Bloque C / bloques de viviendas |  |
 | Officer (Aiden to Mark) / sir (Unit Four to Mark) | oficial / señor |  |
+| the trough (Paul's covered box) / gutter sections | la canaleta / tramos de canalón | Chapters 21 to 23; "It wasn't a gutter anymore" = "Ya no era un canalón" |
+| splash board / the board | tabla contra salpicaduras / la tabla | Chapter 23 |
+| lid / "Lid shut, slow." | tapa / "Tapa cerrada, despacio." |  |
+| door thermometer (the greenhouse door) | termómetro de la puerta | readings as "seis grados Celsius", then "once grados" |
+| collar / drip collar (on the pole) / padded fork | collarín / horquilla acolchada | Chapters 20 and 23 |
+| "Cold. Clear. Gray." / "Covered." | "Frío. Despejado. Gris." / "Tapado." | Mark's board, Chapters 22 to 23; also Chapter 23's title |
+| "Boil it. Always." / "Boil it, always" (on the trough) | "Hervirla. Siempre." / "Hervirla, siempre" |  |
+| the long test | la prueba larga | Aiden's culture test, Chapters 21 to 23 |
+| first gray / first sun | el primer gris / el primer sol |  |
+| gnat | mosquito | distinct from midge (*jején*) |
+| holding tank / drum / flatbed | tanque de almacenamiento / tambor / camión de plataforma |  |
+| crib / crib rail | cuna / baranda de la cuna |  |
 
 ## Voice
 

@@ -87,6 +87,16 @@ says what the English says and nothing more: it never explains, adds or reveals.
 | trough / gutter | labangan / alulod | Chapter 20 |
 | sponge on a painter's pole | espongha / poste | the pole = *poste* |
 | jug (twenty-liter) | galon |  |
+| degrees Celsius / degrees | degrees Celsius / degrees | Filipino number word first: *anim na degrees Celsius*; Chapters 21 to 23 |
+| the door thermometer | ang thermometer sa pinto | the greenhouse door dial |
+| splash board / (the) board, on the trough | splash board / ang tabla | *tabla* when alone, so it is not confused with Mark's whiteboard (*board*) |
+| collar / drip collar (on the pole) | collar | Paul's rubber cup; *tinidor* = the padded fork |
+| lid (of the trough) | takip |  |
+| "Covered." (Aiden's rule) / "Cold. Clear. Gray." | "May takip." / "Malamig. Maaliwalas. Kulay-abo." | Mark's whiteboard rules; Chapter 23 title *May Takip* |
+| (first) gray / in the gray (pre-dawn light) | (unang) kulay-abong liwanag / sa kulay-abong liwanag |  |
+| "Boil it, always." | "Pakuluan, palagi." | written on the trough |
+| gnat | niknik | same as midge |
+| whiteboard | whiteboard | *board* alone also kept |
 
 ## Voice
 

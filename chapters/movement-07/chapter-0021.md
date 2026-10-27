@@ -3,7 +3,7 @@ chapter: 21
 title: "The Second List"
 movement: 7
 pov: Jack
-word_count: 1690
+word_count: 1693
 story_time:
   clock: settlement
   date: "March eighth, twenty-one ten"
@@ -179,11 +179,11 @@ It was nearly midnight when Jack's wrist buzzed. He answered it as quietly as he
 
 "Aiden. You're supposed to be asleep."
 
-Aiden's voice was low and excited. "I was. I came back to check the long test. Doctor Bennett, there's a thermometer screwed to the frame of the greenhouse door. An old dial one. We read it every morning, for the seedlings. Yesterday morning it said six. I just went out and looked."
+Aiden's voice was low and excited. "I was. I came back to check the long test. Doctor Bennett, there's a thermometer screwed to the frame of the greenhouse door. An old dial one. We read it every morning, for the seedlings. Yesterday morning it said six degrees Celsius. I just went out and looked."
 
 "And?"
 
-"Eleven. At midnight. It's barely moving."
+"Eleven degrees. At midnight. It's barely moving."
 
 Jack looked at the window. Past the rooftops, where the stars had been the night before, there was nothing at all. Just a dark, flat sky, close and heavy.
 

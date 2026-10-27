@@ -136,6 +136,18 @@ the captions.
 | "Yes, sir." (Unit Four to Mark) | "Siap, Pak." | |
 | "ma'am" / "Mister Harlan" / "Officer" | Bu / Pak Harlan / Pak Petugas | |
 | Doctor (Paul, residents, Aiden to Jack) | Dokter | *Dok* stays Mark's alone |
+| door thermometer | termometer pintu | the dial on the greenhouse door frame, Chapter 21 on |
+| the long test | uji jangka panjang | Aiden's test of the dew |
+| box (the rebuilt trough) | bak | Paul's "It's a box"; the thing itself stays *talang* |
+| splash board / board | papan penahan cipratan / papan | on the trough |
+| lid (of the trough) | tutup | |
+| collar (on the pole) | kerah | Paul's drip collar, Chapters 20 and 23 |
+| "Cold. Clear. Gray." / "Covered." | "Dingin. Cerah. Kelabu." / "Tertutup." | Mark's board; "Covered" is the Chapter 23 title |
+| the gray / first gray | kelabu / kelabu pertama | "in the gray" → *saat masih kelabu* / *dalam kelabu* |
+| first sun | sinar matahari pertama | |
+| "Boil it, always." | "Rebus, selalu." | Aiden's rule, on the trough |
+| holding tank | tangki penampung | from Chapter 16 |
+| crib / crib rail | boks bayi / pagar boks bayi | |
 
 ## Voice
 

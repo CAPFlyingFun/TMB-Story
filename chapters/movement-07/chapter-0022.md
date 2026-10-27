@@ -3,7 +3,7 @@ chapter: 22
 title: "No Sun"
 movement: 7
 pov: Jack
-word_count: 1629
+word_count: 1632
 story_time:
   clock: settlement
   date: "March ninth, twenty-one ten"
@@ -53,7 +53,7 @@ Jack took the screwdriver out of his mouth. "The one I'm holding with my teeth."
 
 "Then I've been doing step four wrong for ten minutes."
 
-Aiden's voice came on the channel, soft. He and Unit Four had been in the greenhouse since five, with the outside cameras up on Aiden's bench and the blackout blinds still down on the western glass. "Door thermometer says twelve. It barely moved all night."
+Aiden's voice came on the channel, soft. He and Unit Four had been in the greenhouse since five, with the outside cameras up on Aiden's bench and the blackout blinds still down on the western glass. "Door thermometer says twelve degrees Celsius. It barely moved all night."
 
 Mark answered from the station. "And outside?"
 
@@ -173,7 +173,7 @@ Aiden didn't need to look. "Five. Then six. Yesterday it was six."
 
 Sarah's pen tapped the page. "And today?"
 
-"Thirteen, when it came out."
+"Thirteen degrees, when it came out."
 
 Sarah sat up a little against the cushions, and Jack didn't stop her. "Then that's it. On the cold mornings, the sun came up, and it came out, and it sat still in the sun first. On the seventh, it sat there a quarter of an hour. That wasn't patience. It was cold. It was warming up. Today there was nothing to warm up from. So there was no waiting."
 

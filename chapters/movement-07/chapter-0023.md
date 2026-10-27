@@ -3,7 +3,7 @@ chapter: 23
 title: "Covered"
 movement: 7
 pov: Jack
-word_count: 1635
+word_count: 1638
 story_time:
   clock: settlement
   date: "March ninth, twenty-one ten"
@@ -118,7 +118,7 @@ Paul pressed the strip down along the rim with his thumb, the whole length of it
 
 In the afternoon, Mark wheeled his whiteboard out of the station and stood it on the gravel next to the trough. Under Cold, Clear, Gray, Covered, he wrote the numbers, one line at a time, and read them out as he wrote.
 
-"Clear sky at first gray. Stars. Not a cloud. Door thermometer at eight or under, when we get there. Aiden reads it, nobody else. Trough goes out in the dark, under the red lamp, board on our side. One leaf. One lift. One drop. Lid shut, slow. Everybody back off the edge at first sun, or at ten degrees on that door, whichever comes first. I don't care what's still hanging."
+"Clear sky at first gray. Stars. Not a cloud. Door thermometer at eight degrees Celsius or under, when we get there. Aiden reads it, nobody else. Trough goes out in the dark, under the red lamp, board on our side. One leaf. One lift. One drop. Lid shut, slow. Everybody back off the edge at first sun, or at ten degrees on that door, whichever comes first. I don't care what's still hanging."
 
 He capped the marker. "This isn't a water supply. It's a test. If it works, we've learned one thing. If it doesn't, we've learned another."
 
@@ -148,7 +148,7 @@ On her way to the door she stopped by the corner, where the crib stood with both
 
 She picked up her bag. "It shows. If you're on that pole in the morning, wear the glove and the bag. Take them off the second you're back in the truck."
 
-At half past ten, Lena's voice came over Jack's wrist. "Aiden's at the greenhouse. The clouds have gone. He can see stars from the door. Thermometer says seven, and it's falling."
+At half past ten, Lena's voice came over Jack's wrist. "Aiden's at the greenhouse. The clouds have gone. He can see stars from the door. Thermometer says seven degrees, and it's falling."
 
 Mark's voice came in a moment later, on the same channel. He must have been listening. He was quiet for a while.
 

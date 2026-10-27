@@ -95,6 +95,21 @@ says what the English says and nothing more: it never explains, adds or reveals.
 | midge | moucheron |  |
 | "Yes, sir." (Unit Four to Mark) | "Oui, chef." |  |
 | ma'am / Mister Harlan | madame / monsieur Harlan |  |
+| the trough (Paul's covered box, from Chapter 21) | la rigole | stays "rigole" even once it is a box; "gutter" = gouttière |
+| splash board / the board (on the trough) | pare-éclaboussures / le panneau | Chapters 21 to 23 |
+| lid (of the trough) | couvercle |  |
+| collar / drip collar (on the pole) | collerette | Chapters 20 and 23 |
+| door thermometer (greenhouse door) | le thermomètre de la porte |  |
+| degrees Celsius | degrés Celsius | said where the English says it (Joshua, 2026-10-27); "degrés" alone elsewhere |
+| Cold. Clear. Gray. Covered. (Mark's whiteboard) | Froid. Clair. Gris. Couvert. | Chapter 23 title "Couvert" |
+| gnat | moucheron | same word as midge |
+| kick / kicking (insects in the drops) | gigoter |  |
+| "Boil it, always." | "Faire bouillir, toujours." | written on the trough |
+| the long test (Aiden's) | le test long |  |
+| crib / end panels / rail | lit de bébé / extrémités / côté |  |
+| flatbed / drum | camion à plateau (le plateau) / fût |  |
+| loading platform | quai de chargement |  |
+| Four (Mark to Unit Four) | Quatre | "Bien vu, Quatre." |
 
 ## Voice
 

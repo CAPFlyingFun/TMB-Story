@@ -78,3 +78,9 @@ All five specialists advised on the plan and reviewed the draft. What changed be
    flat, so it is consistent; noted only in case you want it plainer.
 3. Units: temperatures are spoken without a unit ("eleven", "ten degrees"), consistent with the
    story's metric measures. Say if you want "degrees Celsius" said once.
+
+## Follow-up, same day (Joshua's answers)
+
+1. ChatGPT handoff note: acknowledged.
+2. **Temperature unit added:** "degrees Celsius" at the first reading in each chapter, "degrees" elsewhere. Manifests re-parsed, one pin re-keyed, validation READY. Word counts now 1,693 / 1,632 / 1,638.
+3. **Translated:** Chapters 21 to 23 in Indonesian, Brazilian Portuguese, Spanish, Filipino and French (306 lines each), glossaries extended. Decision 0028 addendum.
