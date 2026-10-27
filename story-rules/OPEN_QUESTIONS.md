@@ -13,6 +13,10 @@ ladder, which is archived. Ids are stable; add, never renumber.
 | Q06 | What was the faint deep vibration after the activation, softer than the array and more like distant thunder, with no seismic event on the monitor? It came twice and faded. | Ch 3 | open |
 | Q07 | Why is all external communication gone, when internal systems work? Satellite and radio both return nothing. | Ch 3 | open |
 | Q08 | What happened to the rest of the settlement's nearly five hundred people during the event? | Ch 3 | open |
+| Q09 | What does PHASE ONE READY imply? Is there a phase two, what would it need, and could its target be a person? | Ch 7, Ch 8 | open |
+| Q10 | Who used the maintenance tablet at the equipment shed by the north pumping station three weeks ago, with a retired groundskeeper's badge reported lost eight days before the event? | Ch 9, Ch 10 | open |
+| Q11 | What made the impacts: the dinner-plate mark pressed straight down at the southern perimeter with no trail, and the blade of grass pressed flat at the eastern marker twelve minutes earlier? | Ch 8, Ch 9 | open |
+| Q12 | What crossed the soil beyond the eastern fence, and what was the thing with several thin legs at the southern edge? | Ch 4, Ch 5 | open |
 
 ## Who knows what, at the end of Chapter 3
 
@@ -42,3 +46,13 @@ The year the settlement was founded, and anything about the island's owners or a
 concealment system (`WORLD_RULES.md` section 6). Do not invent them. The scale factor
 now has an author value of about 1:180 island-relative, but no character has said it
 aloud, so Q05 stays open.
+
+## Who knows what, at the end of Chapter 10 (approved 2026-10-27)
+
+- **Jack, Sarah, Lena and Mark:** the boundary file, its three-week-old date, PHASE ONE READY,
+  the tablet at the north pumping station and the lost groundskeeper's badge. Whoever did this
+  planned for that trail being found.
+- **Doctor Mercer and the department heads:** that the town got smaller (Ch 6, Ch 10). Not the
+  file, the tablet or the badge.
+- **Aiden:** that there is a giant spider outside the greenhouse.
+- **The rest of the settlement:** finding out on its own at dawn.

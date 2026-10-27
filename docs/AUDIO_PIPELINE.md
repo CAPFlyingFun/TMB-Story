@@ -157,8 +157,15 @@ file. A line repeated in two chapters appears once with both chapter numbers.
 speaker plus the spoken text. Inserting a paragraph at the top of a chapter leaves every
 other clip id untouched, and the manifest carries `order` separately for playback. Two
 identical lines by the same speaker deliberately share one clip, which is why three
-`"Access denied."` readouts cost one generation. Set a `variant` on a segment if a
-repeated line ever needs a different delivery.
+`"Access denied."` readouts cost one generation. When a repeated line needs a different
+reading, give that use a **named delivery** (decision 0040): define the delivery once per
+speaker under `deliveries` in `audio/config.json` (voice settings layered over the
+speaker's, plus an unspoken `previousText` lead-in sent as ElevenLabs `previous_text` to
+steer the reading), and assign it to a use in `audio/line-deliveries.json` by chapter,
+segment order, speaker and text. The delivery becomes the segment's `variant`, so it is its
+own clip, shared by every use with the same delivery. Uses not listed keep the original
+clip, and the fingerprint of every other clip is unchanged. A test checks every use still
+lands on its line. Jack's "No." has five: quick, firm, soft, grim and dread.
 
 **Two independent invalidation mechanisms.** Identity covers text changes. The
 fingerprint, a hash of text plus voice ID plus voice version plus model plus output

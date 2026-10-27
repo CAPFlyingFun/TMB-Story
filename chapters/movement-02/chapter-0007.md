@@ -24,10 +24,10 @@ new_canon:
   - "The label PHASE ONE READY implies a later phase; whether a phase two exists, and what it is, is unknown"
 playable_beat_flow: ["overlay the boundary on the island development survey", "open the maintenance partition", "read the file metadata", "open the ownership field", "open the label"]
 ending_type: revelation
-review_status: revision-pending
+review_status: approved
 audio_status: pending-review
-approved_on: ""
-last_approved_revision: "93ac65a (story text approved 2026-09-21 as the second half of the original Chapter 6; the 2026-10-06 dialogue-attribution revision and the 2026-10-07 split are pending Joshua's script review)"
+approved_on: "2026-10-27"
+last_approved_revision: ""
 source: "Joshua's revised Word manuscript, 80a85a2b-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 4 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first. SPLIT 2026-10-07 at Joshua's instruction (decision 0033): the original Chapter 6 was divided at the end of Doctor Mercer's call into Chapter 6 (Several Millimeters) and Chapter 7 (Someone Knew), with no change to any sentence; the old Chapters 7 to 12 became 8 to 13."
 ---
 # Chapter 7: Someone Knew

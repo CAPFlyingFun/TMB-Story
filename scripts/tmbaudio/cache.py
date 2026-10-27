@@ -23,15 +23,21 @@ from .registry import ROOT
 CLIPS_DIR = os.path.join(ROOT, "audio", "clips")
 
 
-def fingerprint(tts_text, voice_id, voice_version, model, output_format, settings):
-    payload = json.dumps({
+def fingerprint(tts_text, voice_id, voice_version, model, output_format, settings,
+                context=""):
+    body = {
         "text": normalize(tts_text),
         "voiceId": voice_id,
         "voiceVersion": voice_version,
         "model": model,
         "outputFormat": output_format,
         "settings": {k: settings[k] for k in sorted(settings)},
-    }, sort_keys=True, separators=(",", ":"))
+    }
+    # Only a delivery has a context, and the key is added only then, so every clip
+    # generated before deliveries existed keeps exactly the fingerprint it had.
+    if context:
+        body["previousText"] = context
+    payload = json.dumps(body, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
@@ -85,10 +91,12 @@ def plan_segment(registry, seg):
     """Attach generation-relevant fields to a segment. No network, no secret."""
     sid = seg["speaker"]
     voice_id = registry.voice_id(sid)
-    settings = registry.settings_for(sid)
+    delivery = seg.get("delivery") or None
+    settings = registry.settings_for(sid, delivery)
     fp = fingerprint(
         seg["ttsText"], voice_id, registry.voice_version(sid),
-        registry.model(), registry.output_format(), settings)
+        registry.model(), registry.output_format(), settings,
+        registry.delivery_context(sid, delivery))
     audio_path, sidecar_path = clip_paths(registry, sid, seg["clipId"])
     out = dict(seg)
     out["voiceId"] = voice_id

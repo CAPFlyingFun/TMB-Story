@@ -1,0 +1,99 @@
+{
+  "_comment": [
+    "Which delivery (audio/config.json, deliveries) each use of a recurring short line gets.",
+    "Keyed by chapter and segment order, and the use also names the speaker and text it expects,",
+    "so if a manuscript edit moves the line the use misses instead of landing on another line.",
+    "A test checks every use still lands. Uses not listed keep the original clip.",
+    "Assigned 2026-10-27 at Joshua's request: \"when Jack says like No back to back, it all doesn't sound the same\"."
+  ],
+  "uses": [
+    {
+      "chapter": 1,
+      "order": 155,
+      "speaker": "jack-bennett",
+      "text": "No.",
+      "delivery": "quick",
+      "why": "Sarah: \"Did you do that?\" He is already reaching for the console."
+    },
+    {
+      "chapter": 2,
+      "order": 152,
+      "speaker": "jack-bennett",
+      "text": "No.",
+      "delivery": "dread",
+      "why": "\"Boundary acquired.\" Jack's hands stop."
+    },
+    {
+      "chapter": 2,
+      "order": 162,
+      "speaker": "jack-bennett",
+      "text": "No.",
+      "delivery": "grim",
+      "why": "Sarah: \"Someone isn't just activating TOMBS.\" He is agreeing, and it is worse."
+    },
+    {
+      "chapter": 3,
+      "order": 123,
+      "speaker": "jack-bennett",
+      "text": "No.",
+      "delivery": "dread",
+      "why": "Backing away from the window after seeing the grass."
+    },
+    {
+      "chapter": 4,
+      "order": 73,
+      "speaker": "jack-bennett",
+      "text": "No.",
+      "delivery": "soft",
+      "why": "Sarah: \"Not long.\" Quiet agreement."
+    },
+    {
+      "chapter": 5,
+      "order": 34,
+      "speaker": "jack-bennett",
+      "text": "No.",
+      "delivery": "firm",
+      "why": "Sarah: \"But you didn't.\" Certain."
+    },
+    {
+      "chapter": 5,
+      "order": 176,
+      "speaker": "jack-bennett",
+      "text": "No.",
+      "delivery": "soft",
+      "why": "\"Is that plastic?\" A quiet realization: it is a fingernail."
+    },
+    {
+      "chapter": 7,
+      "order": 12,
+      "speaker": "jack-bennett",
+      "text": "No.",
+      "delivery": "firm",
+      "why": "Lena: \"Could the system have picked that number randomly?\""
+    },
+    {
+      "chapter": 7,
+      "order": 32,
+      "speaker": "jack-bennett",
+      "text": "No.",
+      "delivery": "grim",
+      "why": "Second of two back-to-back \"No.\" lines (the first, line 30, keeps the original take)."
+    },
+    {
+      "chapter": 7,
+      "order": 157,
+      "speaker": "jack-bennett",
+      "text": "No.",
+      "delivery": "soft",
+      "why": "Sarah: \"This didn't start tonight.\""
+    },
+    {
+      "chapter": 9,
+      "order": 3,
+      "speaker": "jack-bennett",
+      "text": "No.",
+      "delivery": "quick",
+      "why": "Sarah: \"That's not a TOMBS component.\""
+    }
+  ]
+}

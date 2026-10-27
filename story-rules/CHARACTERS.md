@@ -41,8 +41,9 @@ Only what the approved manuscript establishes. Cite the chapter.
 ## Lena Ortiz
 
 - **Role:** night-shift power technician at the island utility station.
-- **Established:** reached only through Jack's wrist terminal. She is NOT in the
-  laboratory `[ch 2, ch 3]`. She was about to call Jack when he called her. She
+- **Established:** reached only through Jack's wrist terminal in Chapters 2 to 4. She is NOT
+  in the laboratory then `[ch 2, ch 3]`. From Chapter 5 she is in the control room in person,
+  in her orange utility jacket, having locked the utility station `[ch 5]`. She was about to call Jack when he called her. She
   reported fourteen then fifteen megawatts, cut external access, disconnected TOMBS
   from the island grid, and confirmed the disconnection had not stopped it. She ran
   the settlement-wide emergency order Jack gave her, and after the activation reported
@@ -63,3 +64,27 @@ Only what the approved manuscript establishes. Cite the chapter.
 
 Not a character, but it speaks and its lines are narrated. See
 `story-rules/TECHNOLOGY.md` for the system and the machine-voice style.
+
+## Mark Jones
+
+- **Role:** perimeter security; on the radio as Unit Twelve `[ch 4, ch 5]`.
+- **Established:** checks the southern boundary with Jack, from inside the developed zone
+  `[ch 5]`; reports the dinner-plate mark `[ch 8]`; walks out to the eastern marker with Jack
+  and offers the door-camera footage `[ch 9]`; starts telling the department heads, medical
+  first `[ch 10]`. One of the four who know about the file, the tablet and the badge.
+- **Voice:** practical, dry, a little deadpan. "UFO?" "That is deeply unpleasant."
+
+## Doctor Mercer
+
+- **Role:** the settlement's doctor, at the medical center.
+- **Established:** calls the control room before dawn to ask whether the lab caused the
+  vibration, and is told the town got smaller `[ch 6]`; calls again with two more patients
+  awake and her patience nearly gone `[ch 8]`. Told first among the department heads
+  `[ch 10]`.
+- **Voice:** brisk, procedural once she has the facts. "What do you need from medical?"
+
+## Aiden
+
+- **Role:** works at the greenhouse `[ch 10]`.
+- **Established:** calls the facilities channel at dawn, breathless, about a spider the size
+  of a delivery truck outside the greenhouse; told to stay where he is `[ch 10]`.

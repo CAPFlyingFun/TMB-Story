@@ -25,10 +25,10 @@ new_canon:
   - "Outside, grass blades rise around them like a colonnade, and dew beads are large enough to swallow a person"
 playable_beat_flow: ["open the buried record", "cross-reference the device on the facilities map", "read the tablet checkout log", "pull the badge-tracking overlay", "pull every perimeter sensor from the last hour", "walk to the eastern sensor marker", "photograph the pressed blade of grass", "take Sarah's call"]
 ending_type: cliffhanger
-review_status: in-review
+review_status: approved
 audio_status: pending-review
-approved_on: ""
-last_approved_revision: ""   # never approved; pending first script review
+approved_on: "2026-10-27"
+last_approved_revision: ""
 source: "Joshua's Word manuscript, ba62e566-07-09_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-10-01. For the audio, following Decision 0024 as applied to his two earlier documents: 9 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first."
 ---
 # Chapter 9: Three Weeks

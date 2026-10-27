@@ -91,14 +91,20 @@ def _refusal(exc):
             "printed." % (exc.code, (": " + said) if said else ".", hint))
 
 
-def _request(text, voice_id, model, output_format, settings, timeout):
-    """One synchronous request. Returns audio bytes. Raises on failure."""
+def _request(text, voice_id, model, output_format, settings, timeout, context=""):
+    """One synchronous request. Returns audio bytes. Raises on failure.
+
+    `context` goes out as previous_text: it is never spoken, it only steers how the
+    line is read. Sent only for a named delivery."""
     url = "%s/%s?output_format=%s" % (API_ROOT, voice_id, output_format)
-    body = json.dumps({
+    payload = {
         "text": text,
         "model_id": model,
         "voice_settings": settings,
-    }).encode("utf-8")
+    }
+    if context:
+        payload["previous_text"] = context
+    body = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(url, data=body, method="POST")
     req.add_header("Content-Type", "application/json")
     req.add_header("Accept", "audio/mpeg")
@@ -119,7 +125,9 @@ def generate_one(seg, registry, log=print):
     voice_id = registry.voice_id(sid)
     if not voice_id:
         raise RuntimeError("no voice assigned for %s; refusing to substitute one" % sid)
-    settings = registry.settings_for(sid)
+    delivery = seg.get("delivery") or None
+    settings = registry.settings_for(sid, delivery)
+    context = registry.delivery_context(sid, delivery)
     audio_path, sidecar_path = cache.clip_paths(registry, sid, seg["clipId"])
     if cache.is_cached(audio_path, sidecar_path, seg["fingerprint"]):
         return "cached"
@@ -133,7 +141,7 @@ def generate_one(seg, registry, log=print):
     for attempt in range(1, attempts + 1):
         try:
             data = _request(seg["ttsText"], voice_id, registry.model(),
-                            registry.output_format(), settings, timeout)
+                            registry.output_format(), settings, timeout, context)
         except urllib.error.HTTPError as exc:
             last = exc
             if exc.code in (401, 403):
@@ -166,6 +174,8 @@ def generate_one(seg, registry, log=print):
                 "model": registry.model(),
                 "outputFormat": registry.output_format(),
                 "settings": settings,
+                "delivery": delivery or "",
+                "previousText": context,
                 "fingerprint": seg["fingerprint"],
                 "text": seg["ttsText"],
                 "bytes": len(data),

@@ -1725,8 +1725,11 @@ class SmartQuoteTests(unittest.TestCase):
         reg = Registry()
         for n, path in sorted(mf.chapter_files().items()):
             for seg in parse.parse_chapter(path, reg, mf.load_overrides())["segments"]:
+                # A named delivery (decision 0040) is a deliberate new clip; the fold
+                # this test guards is about the text, so compare with its variant.
                 self.assertEqual(seg["clipId"],
-                                 parse.clip_id(seg["speaker"], seg["ttsText"]))
+                                 parse.clip_id(seg["speaker"], seg["ttsText"],
+                                               seg.get("variant", "")))
 
 
 class CacheKeyTests(unittest.TestCase):
@@ -2941,6 +2944,59 @@ class NormalizeOvershootTests(NormalizeFileTests):
         self.assertEqual((done, len(self.encodes)), (0, before),
                          "deriving from the master every time must not mean "
                          "re-encoding every time")
+
+
+class DeliveryTests(unittest.TestCase):
+    """Named deliveries (audio/line-deliveries.json): a recurring short line such as
+    Jack's "No." gets a few different readings, so back-to-back uses do not sound like
+    the same clip played twice. Joshua, 2026-10-27."""
+
+    def setUp(self):
+        self.reg = Registry()
+        self.files = mf.chapter_files()
+        self.uses = parse.load_deliveries()
+
+    def test_every_use_still_lands_on_its_line(self):
+        for u in self.uses:
+            segs = parse.parse_chapter(self.files[u["chapter"]], self.reg,
+                                       mf.load_overrides())["segments"]
+            hit = [s for s in segs if s.get("delivery") == u["delivery"]
+                   and s["order"] == u["order"]]
+            self.assertEqual(len(hit), 1, "delivery use %r no longer matches its line; "
+                             "a manuscript edit moved it" % u)
+
+    def test_every_named_delivery_is_defined(self):
+        for u in self.uses:
+            block = self.reg.delivery(u["speaker"], u["delivery"])
+            self.assertTrue(block.get("settings") or block.get("previousText"))
+
+    def test_a_delivery_is_its_own_clip_and_shared_between_its_uses(self):
+        plain = parse.clip_id("jack-bennett", "No.")
+        a = parse.clip_id("jack-bennett", "No.", "delivery:soft")
+        b = parse.clip_id("jack-bennett", "No.", "delivery:soft")
+        c = parse.clip_id("jack-bennett", "No.", "delivery:firm")
+        self.assertEqual(a, b)
+        self.assertNotIn(plain, (a, c))
+        self.assertNotEqual(a, c)
+
+    def test_a_line_with_no_delivery_keeps_its_fingerprint(self):
+        """Adding deliveries must not regenerate anything else."""
+        s = self.reg.settings_for("jack-bennett")
+        args = ("Hello.", "V", 1, "m", "f", s)
+        self.assertEqual(cache.fingerprint(*args), cache.fingerprint(*args, context=""))
+        self.assertNotEqual(cache.fingerprint(*args),
+                            cache.fingerprint(*args, context="He said it quietly."))
+
+    def test_delivery_settings_layer_over_the_speaker(self):
+        for name in ("quick", "firm", "soft", "grim", "dread"):
+            merged = self.reg.settings_for("jack-bennett", name)
+            for k, v in self.reg.delivery("jack-bennett", name)["settings"].items():
+                self.assertEqual(merged[k], v)
+            self.assertIn("similarity_boost", merged)
+
+    def test_an_unknown_delivery_refuses_rather_than_guesses(self):
+        with self.assertRaises(KeyError):
+            self.reg.settings_for("jack-bennett", "no-such-delivery")
 
 
 if __name__ == "__main__":

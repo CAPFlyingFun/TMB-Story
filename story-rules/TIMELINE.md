@@ -19,10 +19,15 @@
 | Continuous | 2 | The array powers up past standby. Lena reports fourteen then fifteen megawatts and disconnects TOMBS from the island grid; it keeps running. The physical shutdown lever stops the rings and they restart. The boundary target is the developed settlement. Jack orders everyone indoors rather than out. |
 | Continuous | 3 | TOMBS activates and goes offline because it finished. Jack and Sarah are knocked down and unhurt; the baby moves. External communication is gone. The settlement has been reduced in scale and the island has not. |
 
+| Before dawn | 4 to 7 | The first calls, the walk to the edge, the scale ("several millimeters"), and the boundary file: three weeks old, signed with Jack's credentials, labeled PHASE ONE READY. |
+| About half past three in the morning, March sixth | 8 | An impact; a dinner-plate mark at the southern perimeter with no trail. Sarah asks whether a phase two could target a person. |
+| The last hour of darkness | 9 | The file was planted from a maintenance tablet at the equipment shed by the north pumping station, three weeks earlier. A second impact twelve minutes before the first; a blade of grass pressed flat at the eastern marker. |
+| Dawn | 10 | The badge was a retired groundskeeper's, reported lost eight days before. Aiden reports a giant spider outside the greenhouse. The department heads are told, medical first. |
+
 ## Ahead
 
-- **Chapters 4 to 7:** the same night, to "PHASE ONE READY" before dawn. Written and
-  canon.
+- **Chapters 4 to 10:** the night of March fifth to dawn on March sixth. Written and
+  canon (Chapters 7 to 10 approved 2026-10-27).
 - **Next:** still overnight, dawn approaching. The story stays in twenty-one ten
   through Sarah giving birth (Joshua, 2026-09-25).
 - **Then the jump to twenty-one twenty-eight,** at a chapter Joshua chooses. Jack and

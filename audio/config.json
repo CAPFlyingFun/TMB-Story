@@ -307,5 +307,59 @@
       "system": -45.1,
       "foley": -47.1
     }
+  },
+  "deliveries": {
+    "_comment": [
+      "Named alternative readings of a short line that recurs, so back-to-back uses do not",
+      "sound identical (Joshua, 2026-10-27, for Jack's \"No.\"). A delivery is assigned per use in",
+      "audio/line-deliveries.json. Its settings are layered over the speaker's, and previousText is",
+      "sent as ElevenLabs previous_text: never spoken, it only steers the reading. Lines with no",
+      "delivery keep their original clip. Changing a delivery here regenerates only its own clip."
+    ],
+    "jack-bennett": {
+      "quick": {
+        "settings": {
+          "stability": 0.45,
+          "speed": 1.12
+        },
+        "previousText": "Jack answered at once, sharp and quick, before she had finished asking.",
+        "_note": "A fast reflexive denial."
+      },
+      "firm": {
+        "settings": {
+          "stability": 0.35,
+          "style": 0.3,
+          "speed": 0.95
+        },
+        "previousText": "He said it flatly, with complete certainty, and he meant every bit of it.",
+        "_note": "Certain, final."
+      },
+      "soft": {
+        "settings": {
+          "stability": 0.4,
+          "speed": 0.88
+        },
+        "previousText": "He said it quietly, almost under his breath, agreeing.",
+        "_note": "Quiet agreement or a quiet realization."
+      },
+      "grim": {
+        "settings": {
+          "stability": 0.45,
+          "style": 0.2,
+          "speed": 0.9
+        },
+        "previousText": "His voice dropped, low and grim, as the truth of it settled on him.",
+        "_note": "Low, heavy agreement."
+      },
+      "dread": {
+        "settings": {
+          "stability": 0.3,
+          "style": 0.4,
+          "speed": 0.85
+        },
+        "previousText": "He breathed it in horrified disbelief, staring at the screen.",
+        "_note": "Disbelief and dread."
+      }
+    }
   }
 }

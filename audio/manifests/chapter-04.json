@@ -1475,16 +1475,18 @@
       "paragraph": 54,
       "spanInParagraph": 0,
       "order": 73,
-      "clipId": "jack-bennett-a40ffc6ce592",
+      "delivery": "soft",
+      "variant": "delivery:soft",
+      "clipId": "jack-bennett-1d5f7e878adc",
       "voiceId": "mkT7KpSQR9btjx2rHpQY",
       "voiceVersion": 1,
-      "fingerprint": "a1f2c4944c034915c3e5693641f08b2ff06ff25006c0136597a7611c39277aef",
-      "audio": "audio/clips/jack/jack-bennett-a40ffc6ce592.mp3",
-      "cached": true,
+      "fingerprint": "2ae1c9f88e7339df6f4926615f79ca3c2dc42aebbef151731201b2e414c5205b",
+      "audio": "audio/clips/jack/jack-bennett-1d5f7e878adc.mp3",
+      "cached": false,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
       "startMs": 266882,
-      "endMs": 267561
+      "endMs": 266882
     },
     {
       "speaker": "narrator",
@@ -1503,8 +1505,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 267881,
-      "endMs": 269944
+      "startMs": 267202,
+      "endMs": 269265
     },
     {
       "speaker": "narrator",
@@ -1523,8 +1525,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 270204,
-      "endMs": 281829
+      "startMs": 269525,
+      "endMs": 281150
     },
     {
       "speaker": "narrator",
@@ -1543,8 +1545,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 282089,
-      "endMs": 290788
+      "startMs": 281410,
+      "endMs": 290109
     },
     {
       "speaker": "narrator",
@@ -1563,8 +1565,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 291048,
-      "endMs": 294313
+      "startMs": 290369,
+      "endMs": 293634
     },
     {
       "speaker": "narrator",
@@ -1583,8 +1585,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 294573,
-      "endMs": 296219
+      "startMs": 293894,
+      "endMs": 295540
     },
     {
       "speaker": "narrator",
@@ -1603,8 +1605,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 296479,
-      "endMs": 298542
+      "startMs": 295800,
+      "endMs": 297863
     },
     {
       "speaker": "sarah-bennett",
@@ -1623,8 +1625,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 298862,
-      "endMs": 299437
+      "startMs": 298183,
+      "endMs": 298758
     },
     {
       "speaker": "jack-bennett",
@@ -1643,8 +1645,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 299857,
-      "endMs": 301398
+      "startMs": 299178,
+      "endMs": 300719
     },
     {
       "speaker": "narrator",
@@ -1663,8 +1665,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 301718,
-      "endMs": 303364
+      "startMs": 301039,
+      "endMs": 302685
     },
     {
       "speaker": "narrator",
@@ -1683,8 +1685,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 303624,
-      "endMs": 316607
+      "startMs": 302945,
+      "endMs": 315928
     },
     {
       "speaker": "narrator",
@@ -1703,8 +1705,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 316867,
-      "endMs": 319401
+      "startMs": 316188,
+      "endMs": 318722
     },
     {
       "speaker": "sarah-bennett",
@@ -1723,8 +1725,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 319721,
-      "endMs": 321837
+      "startMs": 319042,
+      "endMs": 321158
     },
     {
       "speaker": "jack-bennett",
@@ -1743,8 +1745,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 322257,
-      "endMs": 322962
+      "startMs": 321578,
+      "endMs": 322283
     },
     {
       "speaker": "narrator",
@@ -1763,8 +1765,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 323282,
-      "endMs": 327253
+      "startMs": 322603,
+      "endMs": 326573
     },
     {
       "speaker": "narrator",
@@ -1783,8 +1785,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 327513,
-      "endMs": 336316
+      "startMs": 326833,
+      "endMs": 335637
     },
     {
       "speaker": "narrator",
@@ -1803,8 +1805,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 336576,
-      "endMs": 338535
+      "startMs": 335897,
+      "endMs": 337856
     },
     {
       "speaker": "narrator",
@@ -1823,8 +1825,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 338795,
-      "endMs": 340911
+      "startMs": 338116,
+      "endMs": 340232
     },
     {
       "speaker": "narrator",
@@ -1843,8 +1845,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 341171,
-      "endMs": 346343
+      "startMs": 340492,
+      "endMs": 345664
     },
     {
       "speaker": "narrator",
@@ -1863,8 +1865,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 346603,
-      "endMs": 348980
+      "startMs": 345924,
+      "endMs": 348301
     },
     {
       "speaker": "narrator",
@@ -1883,8 +1885,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 349240,
-      "endMs": 350886
+      "startMs": 348561,
+      "endMs": 350207
     },
     {
       "speaker": "sarah-bennett",
@@ -1903,8 +1905,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 351206,
-      "endMs": 352512
+      "startMs": 350527,
+      "endMs": 351833
     },
     {
       "speaker": "narrator",
@@ -1923,8 +1925,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 352832,
-      "endMs": 354896
+      "startMs": 352153,
+      "endMs": 354217
     },
     {
       "speaker": "jack-bennett",
@@ -1943,8 +1945,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 355216,
-      "endMs": 356078
+      "startMs": 354537,
+      "endMs": 355399
     },
     {
       "speaker": "narrator",
@@ -1963,8 +1965,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 356398,
-      "endMs": 359245
+      "startMs": 355719,
+      "endMs": 358566
     },
     {
       "speaker": "lena-ortiz",
@@ -1983,8 +1985,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 359565,
-      "endMs": 361394
+      "startMs": 358886,
+      "endMs": 360715
     },
     {
       "speaker": "narrator",
@@ -2003,8 +2005,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 361714,
-      "endMs": 363072
+      "startMs": 361035,
+      "endMs": 362393
     },
     {
       "speaker": "sarah-bennett",
@@ -2023,8 +2025,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 363392,
-      "endMs": 364698
+      "startMs": 362713,
+      "endMs": 364019
     },
     {
       "speaker": "lena-ortiz",
@@ -2043,8 +2045,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Lena Ortiz",
-      "startMs": 365118,
-      "endMs": 374000
+      "startMs": 364439,
+      "endMs": 373321
     },
     {
       "speaker": "narrator",
@@ -2063,8 +2065,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 374320,
-      "endMs": 376749
+      "startMs": 373641,
+      "endMs": 376070
     },
     {
       "speaker": "jack-bennett",
@@ -2083,8 +2085,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 377069,
-      "endMs": 379551
+      "startMs": 376390,
+      "endMs": 378872
     },
     {
       "speaker": "narrator",
@@ -2103,8 +2105,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 379871,
-      "endMs": 383241
+      "startMs": 379192,
+      "endMs": 382562
     },
     {
       "speaker": "lena-ortiz",
@@ -2123,8 +2125,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 383561,
-      "endMs": 389856
+      "startMs": 382882,
+      "endMs": 389177
     },
     {
       "speaker": "narrator",
@@ -2143,8 +2145,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 390176,
-      "endMs": 392971
+      "startMs": 389497,
+      "endMs": 392292
     },
     {
       "speaker": "sarah-bennett",
@@ -2163,8 +2165,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 393291,
-      "endMs": 395825
+      "startMs": 392612,
+      "endMs": 395146
     },
     {
       "speaker": "lena-ortiz",
@@ -2183,8 +2185,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Lena Ortiz",
-      "startMs": 396245,
-      "endMs": 397107
+      "startMs": 395566,
+      "endMs": 396428
     },
     {
       "speaker": "narrator",
@@ -2203,8 +2205,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 397427,
-      "endMs": 399857
+      "startMs": 396748,
+      "endMs": 399178
     },
     {
       "speaker": "narrator",
@@ -2223,8 +2225,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 400117,
-      "endMs": 403095
+      "startMs": 399438,
+      "endMs": 402416
     },
     {
       "speaker": "narrator",
@@ -2243,8 +2245,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 403355,
-      "endMs": 406019
+      "startMs": 402676,
+      "endMs": 405340
     },
     {
       "speaker": "narrator",
@@ -2263,8 +2265,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 406279,
-      "endMs": 408996
+      "startMs": 405600,
+      "endMs": 408317
     },
     {
       "speaker": "narrator",
@@ -2283,8 +2285,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 409256,
-      "endMs": 410849
+      "startMs": 408577,
+      "endMs": 410170
     },
     {
       "speaker": "narrator",
@@ -2303,8 +2305,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 411109,
-      "endMs": 412886
+      "startMs": 410430,
+      "endMs": 412207
     },
     {
       "speaker": "narrator",
@@ -2323,8 +2325,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 413146,
-      "endMs": 422785
+      "startMs": 412467,
+      "endMs": 422106
     },
     {
       "speaker": "narrator",
@@ -2343,8 +2345,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 423045,
-      "endMs": 425840
+      "startMs": 422366,
+      "endMs": 425161
     },
     {
       "speaker": "narrator",
@@ -2363,8 +2365,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 426100,
-      "endMs": 427824
+      "startMs": 425421,
+      "endMs": 427145
     },
     {
       "speaker": "jack-bennett",
@@ -2383,8 +2385,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 428144,
-      "endMs": 428902
+      "startMs": 427465,
+      "endMs": 428222
     },
     {
       "speaker": "narrator",
@@ -2403,8 +2405,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 429222,
-      "endMs": 431756
+      "startMs": 428542,
+      "endMs": 431076
     },
     {
       "speaker": "sarah-bennett",
@@ -2423,8 +2425,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 432076,
-      "endMs": 433251
+      "startMs": 431396,
+      "endMs": 432572
     },
     {
       "speaker": "narrator",
@@ -2443,8 +2445,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 433571,
-      "endMs": 436340
+      "startMs": 432892,
+      "endMs": 435661
     },
     {
       "speaker": "narrator",
@@ -2463,8 +2465,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 436600,
-      "endMs": 438899
+      "startMs": 435921,
+      "endMs": 438220
     },
     {
       "speaker": "lena-ortiz",
@@ -2483,8 +2485,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 439219,
-      "endMs": 442118
+      "startMs": 438540,
+      "endMs": 441439
     },
     {
       "speaker": "narrator",
@@ -2503,8 +2505,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 442438,
-      "endMs": 448551
+      "startMs": 441759,
+      "endMs": 447872
     },
     {
       "speaker": "jack-bennett",
@@ -2523,8 +2525,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 448871,
-      "endMs": 449733
+      "startMs": 448192,
+      "endMs": 449054
     },
     {
       "speaker": "narrator",
@@ -2543,8 +2545,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 450053,
-      "endMs": 452169
+      "startMs": 449374,
+      "endMs": 451490
     },
     {
       "speaker": "narrator",
@@ -2563,8 +2565,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 452429,
-      "endMs": 456713
+      "startMs": 451750,
+      "endMs": 456034
     },
     {
       "speaker": "narrator",
@@ -2583,8 +2585,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 456973,
-      "endMs": 459768
+      "startMs": 456294,
+      "endMs": 459089
     },
     {
       "speaker": "narrator",
@@ -2603,8 +2605,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 460028,
-      "endMs": 463058
+      "startMs": 459349,
+      "endMs": 462379
     },
     {
       "speaker": "narrator",
@@ -2623,8 +2625,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 463318,
-      "endMs": 473193
+      "startMs": 462639,
+      "endMs": 472513
     },
     {
       "speaker": "narrator",
@@ -2643,8 +2645,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 473453,
-      "endMs": 475412
+      "startMs": 472773,
+      "endMs": 474733
     },
     {
       "speaker": "narrator",
@@ -2663,8 +2665,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 475672,
-      "endMs": 477553
+      "startMs": 474993,
+      "endMs": 476873
     },
     {
       "speaker": "sarah-bennett",
@@ -2683,8 +2685,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 477873,
-      "endMs": 479179
+      "startMs": 477193,
+      "endMs": 478500
     },
     {
       "speaker": "jack-bennett",
@@ -2703,8 +2705,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 479599,
-      "endMs": 480304
+      "startMs": 478920,
+      "endMs": 479625
     },
     {
       "speaker": "narrator",
@@ -2723,8 +2725,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 480624,
-      "endMs": 482400
+      "startMs": 479945,
+      "endMs": 481721
     },
     {
       "speaker": "narrator",
@@ -2743,8 +2745,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 482660,
-      "endMs": 491176
+      "startMs": 481981,
+      "endMs": 490497
     },
     {
       "speaker": "narrator",
@@ -2763,8 +2765,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 491436,
-      "endMs": 494649
+      "startMs": 490757,
+      "endMs": 493970
     },
     {
       "speaker": "narrator",
@@ -2783,8 +2785,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 494909,
-      "endMs": 496973
+      "startMs": 494230,
+      "endMs": 496294
     },
     {
       "speaker": "lena-ortiz",
@@ -2803,8 +2805,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 497293,
-      "endMs": 498103
+      "startMs": 496614,
+      "endMs": 497424
     },
     {
       "speaker": "narrator",
@@ -2823,8 +2825,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 498423,
-      "endMs": 501192
+      "startMs": 497744,
+      "endMs": 500513
     },
     {
       "speaker": "jack-bennett",
@@ -2843,8 +2845,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 501512,
-      "endMs": 503758
+      "startMs": 500833,
+      "endMs": 503079
     },
     {
       "speaker": "narrator",
@@ -2863,8 +2865,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 504078,
-      "endMs": 507527
+      "startMs": 503399,
+      "endMs": 506847
     },
     {
       "speaker": "narrator",
@@ -2883,8 +2885,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 507787,
-      "endMs": 509720
+      "startMs": 507107,
+      "endMs": 509040
     },
     {
       "speaker": "narrator",
@@ -2903,8 +2905,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 509980,
-      "endMs": 520585
+      "startMs": 509300,
+      "endMs": 519906
     },
     {
       "speaker": "narrator",
@@ -2923,8 +2925,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 520845,
-      "endMs": 545766
+      "startMs": 520166,
+      "endMs": 545087
     },
     {
       "speaker": "narrator",
@@ -2943,8 +2945,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 546026,
-      "endMs": 557755
+      "startMs": 545347,
+      "endMs": 557076
     },
     {
       "speaker": "narrator",
@@ -2963,8 +2965,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 558015,
-      "endMs": 560680
+      "startMs": 557336,
+      "endMs": 560000
     },
     {
       "speaker": "narrator",
@@ -2983,8 +2985,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 560940,
-      "endMs": 572433
+      "startMs": 560260,
+      "endMs": 571754
     },
     {
       "speaker": "narrator",
@@ -3003,8 +3005,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 572693,
-      "endMs": 576089
+      "startMs": 572014,
+      "endMs": 575410
     },
     {
       "speaker": "narrator",
@@ -3023,8 +3025,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 576349,
-      "endMs": 578727
+      "startMs": 575670,
+      "endMs": 578047
     },
     {
       "speaker": "narrator",
@@ -3043,8 +3045,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 578987,
-      "endMs": 588156
+      "startMs": 578307,
+      "endMs": 587476
     },
     {
       "speaker": "narrator",
@@ -3063,8 +3065,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 588416,
-      "endMs": 590009
+      "startMs": 587736,
+      "endMs": 589330
     },
     {
       "speaker": "narrator",
@@ -3083,8 +3085,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 590269,
-      "endMs": 591967
+      "startMs": 589590,
+      "endMs": 591288
     },
     {
       "speaker": "sarah-bennett",
@@ -3103,8 +3105,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 592287,
-      "endMs": 593044
+      "startMs": 591608,
+      "endMs": 592365
     },
     {
       "speaker": "jack-bennett",
@@ -3123,8 +3125,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 593464,
-      "endMs": 594875
+      "startMs": 592785,
+      "endMs": 594196
     },
     {
       "speaker": "sarah-bennett",
@@ -3143,8 +3145,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 595295,
-      "endMs": 596706
+      "startMs": 594616,
+      "endMs": 596027
     },
     {
       "speaker": "narrator",
@@ -3163,8 +3165,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 597026,
-      "endMs": 598907
+      "startMs": 596347,
+      "endMs": 598227
     },
     {
       "speaker": "jack-bennett",
@@ -3183,8 +3185,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 599227,
-      "endMs": 600689
+      "startMs": 598547,
+      "endMs": 600010
     },
     {
       "speaker": "sarah-bennett",
@@ -3203,8 +3205,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Sarah Bennett",
-      "startMs": 601109,
-      "endMs": 602807
+      "startMs": 600430,
+      "endMs": 602128
     },
     {
       "speaker": "jack-bennett",
@@ -3223,8 +3225,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 603227,
-      "endMs": 604455
+      "startMs": 602548,
+      "endMs": 603776
     },
     {
       "speaker": "narrator",
@@ -3243,8 +3245,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 604775,
-      "endMs": 608171
+      "startMs": 604096,
+      "endMs": 607492
     },
     {
       "speaker": "narrator",
@@ -3263,8 +3265,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 608431,
-      "endMs": 611931
+      "startMs": 607752,
+      "endMs": 611252
     },
     {
       "speaker": "narrator",
@@ -3283,8 +3285,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 612191,
-      "endMs": 614386
+      "startMs": 611512,
+      "endMs": 613707
     },
     {
       "speaker": "lena-ortiz",
@@ -3303,8 +3305,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 614706,
-      "endMs": 616299
+      "startMs": 614027,
+      "endMs": 615620
     },
     {
       "speaker": "narrator",
@@ -3323,8 +3325,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 616619,
-      "endMs": 618160
+      "startMs": 615940,
+      "endMs": 617481
     },
     {
       "speaker": "jack-bennett",
@@ -3343,8 +3345,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 618480,
-      "endMs": 619342
+      "startMs": 617801,
+      "endMs": 618663
     },
     {
       "speaker": "lena-ortiz",
@@ -3363,8 +3365,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Lena Ortiz",
-      "startMs": 619762,
-      "endMs": 625483
+      "startMs": 619083,
+      "endMs": 624804
     },
     {
       "speaker": "narrator",
@@ -3383,8 +3385,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 625803,
-      "endMs": 627580
+      "startMs": 625124,
+      "endMs": 626900
     },
     {
       "speaker": "sarah-bennett",
@@ -3403,8 +3405,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 627900,
-      "endMs": 628605
+      "startMs": 627220,
+      "endMs": 627926
     },
     {
       "speaker": "lena-ortiz",
@@ -3423,8 +3425,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Lena Ortiz",
-      "startMs": 629025,
-      "endMs": 640231
+      "startMs": 628346,
+      "endMs": 639552
     },
     {
       "speaker": "narrator",
@@ -3443,8 +3445,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 640551,
-      "endMs": 641910
+      "startMs": 639872,
+      "endMs": 641231
     },
     {
       "speaker": "jack-bennett",
@@ -3463,8 +3465,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Jack Bennett",
-      "startMs": 642230,
-      "endMs": 642752
+      "startMs": 641551,
+      "endMs": 642073
     },
     {
       "speaker": "lena-ortiz",
@@ -3483,8 +3485,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Lena Ortiz",
-      "startMs": 643172,
-      "endMs": 644635
+      "startMs": 642493,
+      "endMs": 643956
     },
     {
       "speaker": "narrator",
@@ -3503,8 +3505,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 644955,
-      "endMs": 646601
+      "startMs": 644276,
+      "endMs": 645922
     },
     {
       "speaker": "sarah-bennett",
@@ -3523,8 +3525,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Sarah Bennett",
-      "startMs": 646921,
-      "endMs": 647731
+      "startMs": 646242,
+      "endMs": 647051
     },
     {
       "speaker": "jack-bennett",
@@ -3543,8 +3545,8 @@
       "cached": true,
       "pauseBeforeMs": 420,
       "speakerName": "Jack Bennett",
-      "startMs": 648151,
-      "endMs": 648856
+      "startMs": 647471,
+      "endMs": 648177
     },
     {
       "speaker": "narrator",
@@ -3563,8 +3565,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 649176,
-      "endMs": 651422
+      "startMs": 648497,
+      "endMs": 650743
     },
     {
       "speaker": "lena-ortiz",
@@ -3583,8 +3585,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Lena Ortiz",
-      "startMs": 651742,
-      "endMs": 652840
+      "startMs": 651063,
+      "endMs": 652160
     },
     {
       "speaker": "narrator",
@@ -3603,8 +3605,8 @@
       "cached": true,
       "pauseBeforeMs": 320,
       "speakerName": "Narrator",
-      "startMs": 653160,
-      "endMs": 654858
+      "startMs": 652480,
+      "endMs": 654178
     },
     {
       "speaker": "narrator",
@@ -3623,8 +3625,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 655118,
-      "endMs": 656894
+      "startMs": 654438,
+      "endMs": 656215
     },
     {
       "speaker": "narrator",
@@ -3643,8 +3645,8 @@
       "cached": true,
       "pauseBeforeMs": 260,
       "speakerName": "Narrator",
-      "startMs": 657154,
-      "endMs": 660471
+      "startMs": 656475,
+      "endMs": 659792
     }
   ],
   "cues": [
@@ -3994,9 +3996,9 @@
     }
   },
   "timeline": {
-    "totalMs": 660471,
-    "complete": true,
-    "missingClips": 0,
+    "totalMs": 659792,
+    "complete": false,
+    "missingClips": 1,
     "source": "each segment's pause then its clip; the same sum the exports are built with"
   },
   "exports": {
@@ -4010,190 +4012,7 @@
         "ambience",
         "sfx"
       ],
-      "startMs": [
-        0,
-        4074,
-        15305,
-        20738,
-        27196,
-        28404,
-        37050,
-        39068,
-        40145,
-        42895,
-        44625,
-        53644,
-        58248,
-        59979,
-        61161,
-        63544,
-        68954,
-        70684,
-        76360,
-        78038,
-        80022,
-        82171,
-        85024,
-        90692,
-        92893,
-        93892,
-        97660,
-        98868,
-        101435,
-        104942,
-        119569,
-        122964,
-        132210,
-        134176,
-        135671,
-        138055,
-        140356,
-        148325,
-        150891,
-        153327,
-        160356,
-        161586,
-        162716,
-        166406,
-        168032,
-        171009,
-        175422,
-        177388,
-        183298,
-        185211,
-        188191,
-        189400,
-        191261,
-        197171,
-        199738,
-        201020,
-        203534,
-        207224,
-        212502,
-        213763,
-        215564,
-        219377,
-        221413,
-        237947,
-        240827,
-        243363,
-        244489,
-        247160,
-        251293,
-        258505,
-        260101,
-        263738,
-        265835,
-        266882,
-        267881,
-        270204,
-        282089,
-        291048,
-        294573,
-        296479,
-        298862,
-        299857,
-        301718,
-        303624,
-        316867,
-        319721,
-        322257,
-        323282,
-        327513,
-        336576,
-        338795,
-        341171,
-        346603,
-        349240,
-        351206,
-        352832,
-        355216,
-        356398,
-        359565,
-        361714,
-        363392,
-        365118,
-        374320,
-        377069,
-        379871,
-        383561,
-        390176,
-        393291,
-        396245,
-        397427,
-        400117,
-        403355,
-        406279,
-        409256,
-        411109,
-        413146,
-        423045,
-        426100,
-        428144,
-        429222,
-        432076,
-        433571,
-        436600,
-        439219,
-        442438,
-        448871,
-        450053,
-        452429,
-        456973,
-        460028,
-        463318,
-        473453,
-        475672,
-        477873,
-        479599,
-        480624,
-        482660,
-        491436,
-        494909,
-        497293,
-        498423,
-        501512,
-        504078,
-        507787,
-        509980,
-        520845,
-        546026,
-        558015,
-        560940,
-        572693,
-        576349,
-        578987,
-        588416,
-        590269,
-        592287,
-        593464,
-        595295,
-        597026,
-        599227,
-        601109,
-        603227,
-        604775,
-        608431,
-        612191,
-        614706,
-        616619,
-        618480,
-        619762,
-        625803,
-        627900,
-        629025,
-        640551,
-        642230,
-        643172,
-        644955,
-        646921,
-        648151,
-        649176,
-        651742,
-        653160,
-        655118,
-        657154
-      ],
+      "startMs": null,
       "indexSource": "the manifest timeline, which the mix is built from"
     },
     "voice": {

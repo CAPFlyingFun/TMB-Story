@@ -10,9 +10,37 @@ a character's dialogue clip has to be reusable in the game on its own.
 """
 
 import hashlib
+import json
+import os
 import re
 
-from .registry import NARRATOR, REVIEW, SYSTEM
+from .registry import NARRATOR, REVIEW, ROOT, SYSTEM
+
+DELIVERIES_PATH = os.path.join(ROOT, "audio", "line-deliveries.json")
+
+
+def load_deliveries(path=DELIVERIES_PATH):
+    """The per-use delivery assignments in audio/line-deliveries.json, as a list."""
+    if not os.path.isfile(path):
+        return []
+    with open(path, encoding="utf-8") as fh:
+        data = json.load(fh)
+    return [u for u in (data.get("uses") or []) if isinstance(u, dict)]
+
+
+def delivery_for(uses, number, order, speaker, text):
+    """The delivery named for THIS segment, or None.
+
+    A use names its chapter, the segment order AND the speaker and text it expects, so a
+    manuscript edit that moves the line makes the use miss rather than land on some
+    other line. A test checks that every use still lands.
+    """
+    for u in uses:
+        if (int(u.get("chapter", -1)) == number and int(u.get("order", -1)) == order
+                and u.get("speaker") == speaker
+                and normalize(u.get("text", "")) == normalize(text)):
+            return u.get("delivery") or None
+    return None
 
 # Straight and curly quotes both appear in manuscripts.
 QUOTE_RE = re.compile(r'[“"]([^”"]*)[”"]')
@@ -295,7 +323,7 @@ def _pin_applies(pin, number, order):
     return True
 
 
-def parse_chapter(path, registry, overrides=None):
+def parse_chapter(path, registry, overrides=None, deliveries=None):
     """Parse one chapter file into an ordered segment list."""
     overrides = overrides or {}
     number = chapter_number(path)
@@ -341,7 +369,8 @@ def parse_chapter(path, registry, overrides=None):
                 "spanInParagraph": s_index,
             })
 
-    # stable identity, then the human overrides, then order
+    uses = load_deliveries() if deliveries is None else deliveries
+    # stable identity, then the human overrides, then any named delivery, then order
     for i, seg in enumerate(segments):
         seg["order"] = i
         provisional = clip_id(seg["speaker"], seg["ttsText"])
@@ -354,6 +383,10 @@ def parse_chapter(path, registry, overrides=None):
                 seg["ttsText"] = pinned["ttsText"]
             seg["method"] = "override"
             seg["note"] = pinned.get("note", "pinned in audio/speaker-overrides.json")
+        delivery = delivery_for(uses, number, i, seg["speaker"], seg["displayText"])
+        if delivery:
+            seg["delivery"] = delivery
+            seg["variant"] = "delivery:" + delivery
         seg["clipId"] = clip_id(seg["speaker"], seg["ttsText"], seg.get("variant", ""))
 
     return {"title": title, "segments": segments}

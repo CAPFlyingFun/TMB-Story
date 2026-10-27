@@ -79,12 +79,34 @@ class Registry:
     def output_format(self):
         return self.config.get("outputFormat")
 
-    def settings_for(self, speaker_id):
-        """Global defaults with the speaker's overrides applied. Comment keys dropped."""
+    def settings_for(self, speaker_id, delivery=None):
+        """Global defaults with the speaker's overrides applied. Comment keys dropped.
+
+        A DELIVERY is a named alternative reading of a short line ("No.", "Stop.") that
+        recurs often enough to sound mechanical when every use is the same clip. Its
+        settings are layered on top of the speaker's, and only for segments that name
+        it in audio/line-deliveries.json, so every other clip keeps its settings, its
+        fingerprint and its cached audio.
+        """
         merged = dict(self.config.get("defaultSettings", {}))
         override = dict((self.config.get("speakerSettings") or {}).get(speaker_id, {}))
         merged.update(override)
+        if delivery:
+            merged.update(self.delivery(speaker_id, delivery).get("settings") or {})
         return {k: v for k, v in merged.items() if not k.startswith("_")}
+
+    def delivery(self, speaker_id, name):
+        """The config block for one named delivery, or raise: never guess one."""
+        block = ((self.config.get("deliveries") or {}).get(speaker_id) or {}).get(name)
+        if block is None:
+            raise KeyError("no delivery %r for %s in audio/config.json" % (name, speaker_id))
+        return block
+
+    def delivery_context(self, speaker_id, name):
+        """Unspoken lead-in text sent as previous_text, which shapes the reading only."""
+        if not name:
+            return ""
+        return (self.delivery(speaker_id, name).get("previousText") or "").strip()
 
     def pauses(self):
         return {k: v for k, v in (self.config.get("pausesMs") or {}).items()
