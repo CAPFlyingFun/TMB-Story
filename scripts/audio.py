@@ -289,7 +289,14 @@ def cmd_generate_sfx(args, reg):
             print("chapter %d has %d unresolved cue(s); fix those first." % (n, len(probs)))
         wanted.update(c["asset"] for c in resolved)
     if args.all:
+        # --all regenerates from the registry, not from the cue sheets, so a cue that
+        # does not resolve cannot change which assets are bought. It is still reported
+        # above; it just no longer blocks a whole-registry run (decision 0041).
         wanted = set(sreg.assets)
+        if blocked:
+            print("(--all: every registered asset is planned from the registry; the cue "
+                  "problems above stay to be fixed, but they do not block this run.)")
+            blocked = False
     if blocked:
         print("\nNothing was generated and no credit was spent.")
         return 1

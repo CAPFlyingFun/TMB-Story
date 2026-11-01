@@ -294,25 +294,25 @@
       "cueId": "ch01-120-second-chair",
       "asset": "sfx_chair_roll_slow",
       "anchor": {
-        "clipId": "narrator-25bf9a648f08",
+        "clipId": "narrator-112bd6eec1a0",
         "occurrence": 1
       },
       "timing": "during",
-      "offsetMs": 5100,
+      "offsetMs": 2400,
       "gain": 0.038,
-      "why": "'dragged its chair back, wheels squeaking against the floor' -- the manuscript names the sound. Two people arranging themselves around two workstations; the chairs are how the chapter shows them working as a pair. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since."
+      "why": "'dragged its chair back, wheels squeaking against the floor' -- the manuscript names the sound. Two people arranging themselves around two workstations; the chairs are how the chapter shows them working as a pair. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since. Re-anchored 2026-11-01 to 'He crossed to the next workstation and dragged its chair back': the 2026-10 attribution revision split or reworded the old anchor sentence, which left this cue unresolved."
     },
     {
       "cueId": "ch01-121-jack-makes-room",
       "asset": "sfx_chair_roll_slow",
       "anchor": {
-        "clipId": "narrator-25bf9a648f08",
+        "clipId": "narrator-1db12ede3123",
         "occurrence": 1
       },
       "timing": "during",
-      "offsetMs": 700,
+      "offsetMs": 300,
       "gain": 0.038,
-      "why": "'Jack gave Sarah his chair' -- the same slow roll as the second chair, closing the small exchange that started with 'Can I take your chair?': Jack gives up his seat, physically. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since."
+      "why": "'Jack gave Sarah his chair' -- the same slow roll as the second chair, closing the small exchange that started with 'Can I take your chair?': Jack gives up his seat, physically. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since. Re-anchored 2026-11-01 to 'Jack gave Sarah his chair right away.': the 2026-10 attribution revision split or reworded the old anchor sentence, which left this cue unresolved."
     },
     {
       "cueId": "ch01-130-sarah-types",
@@ -342,13 +342,13 @@
       "cueId": "ch01-132-sarah-digs",
       "asset": "sfx_keyboard_typing_short",
       "anchor": {
-        "clipId": "narrator-86e124a3c0e4",
+        "clipId": "narrator-5f65109dc97b",
         "occurrence": 1
       },
       "timing": "during",
       "offsetMs": 1600,
       "gain": 0.234,
-      "why": "'Jack pulled up the TOMBS directory again, tracing back through what had changed' -- the longest stretch of work in the scene, now on Jack's keyboard beside hers, and it had no sound under it. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since."
+      "why": "'Jack pulled up the TOMBS directory again, tracing back through what had changed' -- the longest stretch of work in the scene, now on Jack's keyboard beside hers, and it had no sound under it. Re-anchored 2026-09-26: the chair-exchange rewrite imported on 2026-09-23 removed the line this cue was on, and the drama mix had been skipping it since. Re-anchored 2026-11-01 to 'He pulled up the TOMBS directory again': the 2026-10 attribution revision split or reworded the old anchor sentence, which left this cue unresolved."
     },
     {
       "cueId": "ch01-133-sarah-keeps-typing",
@@ -366,13 +366,13 @@
       "cueId": "ch01-140-sarah-resumes",
       "asset": "sfx_keyboard_typing_short",
       "anchor": {
-        "clipId": "narrator-4ae27aba679f",
+        "clipId": "narrator-0dfbb488de9b",
         "occurrence": 1
       },
       "timing": "during",
       "offsetMs": 200,
       "gain": 0.234,
-      "why": "Sarah going back to work after the exchange about the baby. Anchored to '...then returned to typing', which is where she resumes. It moved here on 2026-09-21 from 'Sarah returned to the keyboard', whose replacement reads 'Sarah's hands went still' -- keyboard clatter on that line would contradict the sentence carrying it, and the stillness is the beat before her reply."
+      "why": "Sarah going back to work after the exchange about the baby. Anchored to '...then returned to typing', which is where she resumes. It moved here on 2026-09-21 from 'Sarah returned to the keyboard', whose replacement reads 'Sarah's hands went still' -- keyboard clatter on that line would contradict the sentence carrying it, and the stillness is the beat before her reply. Re-anchored 2026-11-01 to 'Then she returned to typing.': the 2026-10 attribution revision split or reworded the old anchor sentence, which left this cue unresolved."
     },
     {
       "cueId": "ch01-150-interrupting-tone",

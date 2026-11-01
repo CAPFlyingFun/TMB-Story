@@ -27,6 +27,11 @@ on:
         required: true
         default: false
         type: boolean
+      sfx_all_assets:
+        description: 'With generate_sfx: every registered sound asset, not only those cued in these chapters'
+        required: true
+        default: false
+        type: boolean
       commit:
         description: 'Commit the generated audio back to main'
         required: true
@@ -110,7 +115,10 @@ jobs:
         if: inputs.generate_sfx && inputs.mode != 'dry-run'
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-        run: python3 scripts/audio.py generate-sfx --chapters "${{ inputs.chapters }}"
+        run: |
+          ARGS=(generate-sfx --chapters "${{ inputs.chapters }}")
+          if [ "${{ inputs.sfx_all_assets }}" = "true" ]; then ARGS+=(--all); fi
+          python3 scripts/audio.py "${ARGS[@]}"
 
       - name: Install ffmpeg
         if: inputs.mode != 'dry-run'
