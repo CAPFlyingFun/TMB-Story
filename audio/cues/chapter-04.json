@@ -38,7 +38,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.039,
+      "gain": 0.009,
       "why": "The connect tone as Jack answers. DELIBERATELY NOT ON THE LINE ABOVE IT: the manuscript says the terminal VIBRATED against his skin, and a chirp there would contradict the sentence and the whole point of the scene, which is that this catastrophe does not announce itself."
     },
     {
@@ -49,7 +49,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.007,
+      "gain": 0.011,
       "fadeInMs": 300,
       "fadeOutMs": 900,
       "sustain": {
@@ -69,7 +69,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.029,
+      "gain": 0.066,
       "why": "Bringing up the utility station's exterior cameras. The same notify tone the first three chapters use for a screen answering a request."
     },
     {
@@ -80,7 +80,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.039,
+      "gain": 0.009,
       "why": "The medical centre calling in. This one IS an arriving call, so the chirp is what the sentence says."
     },
     {
@@ -91,7 +91,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.007,
+      "gain": 0.011,
       "fadeInMs": 400,
       "fadeOutMs": 1200,
       "sustain": {
@@ -111,7 +111,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.031,
+      "gain": 0.091,
       "why": "'The call ended.' A close on the sentence that says so."
     },
     {
@@ -122,7 +122,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.052,
+      "gain": 0.092,
       "why": "'Jack opened the channel.' Security, on the settlement net rather than his wrist, so it gets the intercom rather than the terminal chirp."
     },
     {
@@ -133,7 +133,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.007,
+      "gain": 0.011,
       "fadeInMs": 250,
       "fadeOutMs": 700,
       "sustain": {
@@ -153,7 +153,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.031,
+      "gain": 0.091,
       "why": "The channel closing, and with it the last voice from outside the building before the settlement's first porch lights come on."
     },
     {
@@ -165,7 +165,7 @@
       },
       "timing": "during",
       "offsetMs": 900,
-      "gain": 0.234,
+      "gain": 0.164,
       "why": "Two people settling into work. It is the only ordinary sound in the chapter and it is there so the vibration that follows has something to interrupt."
     },
     {
@@ -176,7 +176,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.029,
+      "gain": 0.066,
       "why": "Selecting the maintenance camera that shows the cut intake pipe."
     },
     {
@@ -187,7 +187,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.039,
+      "gain": 0.009,
       "why": "Lena calling back through Sarah's tablet, having checked three boundary crossings."
     },
     {
@@ -198,7 +198,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.068,
+      "gain": 0.065,
       "why": "'A low vibration passed through the floor.' The first of four, and the quietest. Placed BEFORE its line so the room feels it and the narration then names it, which is the order the people in the room experience."
     },
     {
@@ -212,7 +212,7 @@
       "offsetMs": 1800,
       "emphasisDb": 2.0,
       "why": "'...returned several seconds later, deeper than before.' Same asset, +2 dB. The manuscript says deeper, and the escalation across this chapter is done with level on one sound rather than with four different ones -- which is also how it stays recognisable as the same thing getting closer.",
-      "gain": 0.085
+      "gain": 0.082
     },
     {
       "cueId": "ch04-080-vibration-three",
@@ -224,7 +224,7 @@
       "timing": "before",
       "emphasisDb": 4.0,
       "why": "'Another vibration rolled through the settlement.' +4 dB. This is the one the shadow crosses the camera on.",
-      "gain": 0.107
+      "gain": 0.104
     },
     {
       "cueId": "ch04-085-ground-trembles",
@@ -236,7 +236,7 @@
       "timing": "before",
       "emphasisDb": 5.0,
       "why": "'The ground trembled again.' +5 dB, the loudest in the chapter, and the last thing before Jack says nobody goes outside.",
-      "gain": 0.12
+      "gain": 0.116
     },
     {
       "cueId": "ch04-086-pebble-falls",
@@ -249,7 +249,7 @@
       "offsetMs": 2400,
       "emphasisDb": 2.0,
       "why": "A pebble rolling down the dirt wall and striking the earth hard enough to throw dust across a road. It is a pebble; at this scale it is a boulder, and the sound has to be the boulder rather than the word.",
-      "gain": 0.101
+      "gain": 0.11
     }
   ]
 }

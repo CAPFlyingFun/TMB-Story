@@ -3,33 +3,28 @@
   "category": "ambience",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "Room tone of a clean research laboratory at night, microphone standing in the room. Moving ventilation air, a continuous electrical hum from racked equipment, cooling fans turning, and a fine high shimmer from instruments on standby. Enclosed and filling the frame, recorded at a strong present level. Even throughout so it loops. No voices, no music, no alarms, no beeping, no footsteps.",
   "durationSeconds": 20,
   "promptInfluence": 0.3,
   "loop": true,
   "assetVersion": 2,
-  "fingerprint": "d9072af9695912f96a0ad7f6c66047b92d56c55ed8fbf4ef9c69ba2c96717c94",
+  "fingerprint": "df504efd7f797f7f16535d51951b07c9d5e643e77aa27846e66e6f58805b2106",
   "bytes": 321036,
-  "generated": "2026-09-18T12:20:57Z",
+  "generated": "2026-11-01T12:03:25Z",
   "normalize": {
-    "appliedDb": 18.8,
+    "appliedDb": 20.7,
     "targetRmsDbfs": -20.0,
     "peakCeilingDbfs": -3.0,
-    "limitedBy": "peak ceiling, measured after encoding",
-    "corrections": [
-      {
-        "overBy": 2.5,
-        "newGainDb": 18.8
-      }
-    ],
-    "sourceRmsDbfs": -42.5,
-    "sourcePeakDbfs": -24.4,
-    "resultRmsDbfs": -21.1,
-    "resultPeakDbfs": -3.0,
-    "resultLufs": -17.7,
+    "limitedBy": "rms target",
+    "corrections": [],
+    "sourceRmsDbfs": -40.7,
+    "sourcePeakDbfs": -26.8,
+    "resultRmsDbfs": -17.4,
+    "resultPeakDbfs": -3.6,
+    "resultLufs": -19.7,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/ambience/amb_tombs_lab_night.source.mp3",
-    "at": "2026-10-27T13:18:13Z"
+    "at": "2026-11-01T12:04:56Z"
   }
 }

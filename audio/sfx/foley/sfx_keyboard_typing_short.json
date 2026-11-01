@@ -3,33 +3,33 @@
   "category": "foley",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "Continuous fast typing on a low-profile computer keyboard, microphone directly over the keys. Keystrokes landing without a gap for the whole recording, about six a second, each a crisp plastic click with the dense clatter of the key bed under it. No pauses, no fade in, no fade out. Filling the frame, recorded at a strong present level. No voices, no music, no beeping, no mouse clicks.",
   "durationSeconds": 3,
   "promptInfluence": 0.3,
   "loop": false,
   "assetVersion": 2,
-  "fingerprint": "407ddfd76fe721116b620ec198ab390dfcd1df10c9c63f02842ff4d056d99045",
+  "fingerprint": "1b454854b902e5d424413bdcc3c9b56ee2b2dbbd3f6f38e162950191ef757a1c",
   "bytes": 48945,
-  "generated": "2026-09-18T12:21:04Z",
+  "generated": "2026-11-01T12:03:39Z",
   "normalize": {
-    "appliedDb": 5.0,
+    "appliedDb": 2.7,
     "targetRmsDbfs": -20.0,
     "peakCeilingDbfs": -3.0,
     "limitedBy": "peak ceiling, measured after encoding",
     "corrections": [
       {
         "overBy": 2.6,
-        "newGainDb": 5.0
+        "newGainDb": 2.7
       }
     ],
-    "sourceRmsDbfs": -42.6,
-    "sourcePeakDbfs": -10.7,
-    "resultRmsDbfs": -35.1,
-    "resultPeakDbfs": -3.1,
-    "resultLufs": -34.5,
+    "sourceRmsDbfs": -39.0,
+    "sourcePeakDbfs": -8.4,
+    "resultRmsDbfs": -33.8,
+    "resultPeakDbfs": -3.0,
+    "resultLufs": -31.4,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/foley/sfx_keyboard_typing_short.source.mp3",
-    "at": "2026-10-27T13:18:15Z"
+    "at": "2026-11-01T12:05:00Z"
   }
 }

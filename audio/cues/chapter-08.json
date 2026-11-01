@@ -32,7 +32,7 @@
       },
       "timing": "during",
       "offsetMs": 300,
-      "gain": 0.234,
+      "gain": 0.164,
       "why": "Jack pulling the southern camera feed onto the main display before he has decided to."
     },
     {
@@ -43,7 +43,7 @@
         "occurrence": 1
       },
       "timing": "during",
-      "gain": 0.018,
+      "gain": 0.094,
       "why": "Mark leaving to check the perimeter."
     },
     {
@@ -54,7 +54,7 @@
         "occurrence": 1
       },
       "timing": "during",
-      "gain": 0.234,
+      "gain": 0.164,
       "why": "The search across the diagnostic snapshot."
     },
     {
@@ -66,7 +66,7 @@
       },
       "timing": "during",
       "offsetMs": 2600,
-      "gain": 0.021,
+      "gain": 0.047,
       "emphasisDb": -3.0,
       "why": "'The system returned nothing.' A soft, empty answer."
     },
@@ -78,7 +78,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.011,
+      "gain": 0.027,
       "emphasisDb": -2.0,
       "why": "Mark's radio from the southern perimeter: a crackle, then his voice."
     },
@@ -99,7 +99,7 @@
         },
         "timing": "before"
       },
-      "gain": 0.007,
+      "gain": 0.011,
       "why": "The open radio under Mark's report, so his voice reads as coming from outside."
     },
     {
@@ -111,7 +111,7 @@
       },
       "timing": "during",
       "offsetMs": 1800,
-      "gain": 0.018,
+      "gain": 0.094,
       "why": "'Cold air followed him through the door before it sealed shut again.'"
     },
     {
@@ -122,7 +122,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.039,
+      "gain": 0.009,
       "why": "Doctor Mercer calling again, the same chirp as her first call in Chapter 4."
     },
     {
@@ -142,7 +142,7 @@
         },
         "timing": "before"
       },
-      "gain": 0.007,
+      "gain": 0.011,
       "why": "The line to the medical center, open under the call."
     },
     {
@@ -153,7 +153,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.031,
+      "gain": 0.091,
       "why": "Mercer hangs up."
     },
     {
@@ -164,7 +164,7 @@
         "occurrence": 1
       },
       "timing": "during",
-      "gain": 0.234,
+      "gain": 0.164,
       "why": "The narrower search, and enter."
     },
     {
@@ -175,7 +175,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.029,
+      "gain": 0.066,
       "why": "The one result, after a pause that lasted longer than it should have."
     },
     {
@@ -187,7 +187,7 @@
       },
       "timing": "during",
       "offsetMs": 1500,
-      "gain": 0.018,
+      "gain": 0.042,
       "emphasisDb": -4.0,
       "why": "The record arriving line by line; the chapter ends on it."
     }

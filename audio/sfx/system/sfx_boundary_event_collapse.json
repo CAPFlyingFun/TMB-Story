@@ -3,18 +3,33 @@
   "category": "system",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "An electrical charge rising over a room, then the whole air of that room compressing inward in one second, the way a hatch sealing on a pressurised chamber pulls at your ears. A deep inward suck with the room's hum bending downward in pitch as it goes. Close and enveloping, filling the frame, recorded at a strong present level. No voices, no music, no impact, no explosion.",
   "durationSeconds": 4,
   "promptInfluence": 0.45,
   "loop": false,
   "assetVersion": 2,
-  "fingerprint": "47e1a6e1bb9b52493b82b6d6ff9fe7bbdf42c0f4bfc5ea2838a1cb3e0fb6592c",
+  "fingerprint": "27e15cc2c8727bc33901184eadadf346c27608f29790f39b4174b987db82a858",
   "bytes": 65245,
-  "generated": "2026-09-18T12:20:58Z",
-  "measured": {
-    "lufs": -12.3,
-    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+  "generated": "2026-11-01T12:03:29Z",
+  "normalize": {
+    "appliedDb": 6.9,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -3.0,
+    "limitedBy": "peak ceiling, measured after encoding",
+    "corrections": [
+      {
+        "overBy": 2.5,
+        "newGainDb": 6.9
+      }
+    ],
+    "sourceRmsDbfs": -31.8,
+    "sourcePeakDbfs": -12.5,
+    "resultRmsDbfs": -22.4,
+    "resultPeakDbfs": -2.9,
+    "resultLufs": -18.0,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/system/sfx_boundary_event_collapse.source.mp3",
+    "at": "2026-11-01T12:04:57Z"
   }
 }

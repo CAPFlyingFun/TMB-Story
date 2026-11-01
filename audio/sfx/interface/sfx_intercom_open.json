@@ -3,18 +3,33 @@
   "category": "interface",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "An intercom being keyed on. A firm mechanical button press followed immediately by a small electrical pop and the channel opening into a thin live speaker hiss. Close-mic, tactile. No voices, no speech, no music, no tones.",
   "durationSeconds": 1.5,
   "promptInfluence": 0.35,
   "loop": false,
   "assetVersion": 1,
-  "fingerprint": "b92899d5a1aa9d200a0595cfa8ec5627d9b600ae171ac7275e143fb41834a3e8",
+  "fingerprint": "02f75307ca5e7e98e8126201c907278aeb2e8df3b9df64dc534b0ad90a3c3436",
   "bytes": 24703,
-  "generated": "2026-09-18T04:16:58Z",
-  "measured": {
-    "lufs": -19.5,
-    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+  "generated": "2026-11-01T12:03:37Z",
+  "normalize": {
+    "appliedDb": 5.6,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -3.0,
+    "limitedBy": "peak ceiling, measured after encoding",
+    "corrections": [
+      {
+        "overBy": 2.5,
+        "newGainDb": 5.6
+      }
+    ],
+    "sourceRmsDbfs": -36.6,
+    "sourcePeakDbfs": -11.2,
+    "resultRmsDbfs": -28.4,
+    "resultPeakDbfs": -3.2,
+    "resultLufs": -24.4,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/interface/sfx_intercom_open.source.mp3",
+    "at": "2026-11-01T12:05:00Z"
   }
 }

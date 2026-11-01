@@ -3,33 +3,18 @@
   "category": "interface",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "A two-tone electronic blip from a laboratory console, microphone close to the speaker. Two rounded mid-range notes with a clean decay, synthetic and warm rather than piercing, sounding once and not repeating. Filling the frame, recorded at a strong present level, with a little room reflection. No alarm, no siren, no voices, no music.",
   "durationSeconds": 1.5,
   "promptInfluence": 0.35,
   "loop": false,
   "assetVersion": 2,
-  "fingerprint": "314e989512040687a72c0ed3ac36122cc433089d9606240a6b14a49abab37df7",
-  "bytes": 24703,
-  "generated": "2026-09-18T12:21:01Z",
-  "normalize": {
-    "appliedDb": 13.8,
-    "targetRmsDbfs": -20.0,
-    "peakCeilingDbfs": -3.0,
-    "limitedBy": "peak ceiling, measured after encoding",
-    "corrections": [
-      {
-        "overBy": 2.6,
-        "newGainDb": 13.8
-      }
-    ],
-    "sourceRmsDbfs": -40.1,
-    "sourcePeakDbfs": -19.5,
-    "resultRmsDbfs": -23.7,
-    "resultPeakDbfs": -3.1,
-    "resultLufs": -21.6,
-    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/interface/sfx_console_tone_soft.source.mp3",
-    "at": "2026-10-27T13:18:14Z"
+  "fingerprint": "f0f11f4c5cb17f06517c6e275e10f2eb99946cabd8428bb2f5e75506a080d896",
+  "bytes": 24702,
+  "generated": "2026-11-01T12:03:33Z",
+  "measured": {
+    "lufs": -14.2,
+    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
   }
 }

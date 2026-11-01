@@ -3,33 +3,33 @@
   "category": "foley",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "Four or five footsteps of an adult in rubber-soled sneakers on a hard smooth laboratory floor, microphone at floor level beside them. Rubbery contact with a broad low thud under it and no heel click, an even walking gait. Close and filling the frame, recorded at a strong present level, with modest room reflection. No voices, no music, no heels, no hard shoes, no boots.",
   "durationSeconds": 3,
   "promptInfluence": 0.35,
   "loop": false,
   "assetVersion": 2,
-  "fingerprint": "ae3aa2ce5e83ea81355e7690b03bda4edd3a746934b692638c0fcba782189fb3",
+  "fingerprint": "b5dedad6c55503710a66204b9b1be544f3fccb988012a2457f1bd76edb9eba11",
   "bytes": 48945,
-  "generated": "2026-09-18T12:21:04Z",
+  "generated": "2026-11-01T12:03:36Z",
   "normalize": {
-    "appliedDb": 6.0,
+    "appliedDb": 2.6,
     "targetRmsDbfs": -20.0,
     "peakCeilingDbfs": -3.0,
     "limitedBy": "peak ceiling, measured after encoding",
     "corrections": [
       {
         "overBy": 2.6,
-        "newGainDb": 6.0
+        "newGainDb": 2.6
       }
     ],
-    "sourceRmsDbfs": -38.2,
-    "sourcePeakDbfs": -11.7,
-    "resultRmsDbfs": -29.6,
+    "sourceRmsDbfs": -35.7,
+    "sourcePeakDbfs": -8.3,
+    "resultRmsDbfs": -30.5,
     "resultPeakDbfs": -3.1,
-    "resultLufs": -30.4,
+    "resultLufs": -31.1,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/foley/sfx_footsteps_sarah_sneakers.source.mp3",
-    "at": "2026-10-27T13:18:15Z"
+    "at": "2026-11-01T12:04:59Z"
   }
 }

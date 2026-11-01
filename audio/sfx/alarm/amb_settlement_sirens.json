@@ -3,33 +3,33 @@
   "category": "alarm",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "Civil emergency sirens across a small town, heard from indoors through walls and glass. Several units at different distances, rising and falling out of step with each other, with the building muffling the high end. Even and continuous, recorded at a strong present level. No voices, no music, no interior alarm.",
   "durationSeconds": 12,
   "promptInfluence": 0.35,
   "loop": true,
   "assetVersion": 1,
-  "fingerprint": "b324dd0e3ea6b51f6d6d00f436ec3ec30f661728e8c8568c7a73d63209b56b38",
+  "fingerprint": "669c8c4c67c030a8e475e13536591635ded3f854caba3d37d4107a1628e8d861",
   "bytes": 193141,
-  "generated": "2026-09-18T11:58:37Z",
+  "generated": "2026-11-01T12:03:21Z",
   "normalize": {
-    "appliedDb": 11.0,
+    "appliedDb": 15.3,
     "targetRmsDbfs": -20.0,
     "peakCeilingDbfs": -3.0,
     "limitedBy": "peak ceiling, measured after encoding",
     "corrections": [
       {
-        "overBy": 2.5,
-        "newGainDb": 11.0
+        "overBy": 2.2,
+        "newGainDb": 15.3
       }
     ],
-    "sourceRmsDbfs": -34.3,
-    "sourcePeakDbfs": -16.6,
-    "resultRmsDbfs": -20.8,
+    "sourceRmsDbfs": -37.6,
+    "sourcePeakDbfs": -21.0,
+    "resultRmsDbfs": -19.7,
     "resultPeakDbfs": -3.1,
-    "resultLufs": -18.8,
+    "resultLufs": -19.8,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/alarm/amb_settlement_sirens.source.mp3",
-    "at": "2026-10-27T13:18:13Z"
+    "at": "2026-11-01T12:04:56Z"
   }
 }

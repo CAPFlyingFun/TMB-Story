@@ -31,7 +31,7 @@
         "occurrence": 1
       },
       "timing": "during",
-      "gain": 0.234,
+      "gain": 0.164,
       "why": "Jack pulling up the lost-badge ticket himself."
     },
     {
@@ -42,7 +42,7 @@
         "occurrence": 1
       },
       "timing": "during",
-      "gain": 0.029,
+      "gain": 0.066,
       "why": "The groundskeeper's file opening: years of lawn schedules."
     },
     {
@@ -76,7 +76,7 @@
       },
       "timing": "during",
       "offsetMs": 1500,
-      "gain": 0.067,
+      "gain": 0.029,
       "why": "'A different tone than before, not the medical center this time, but the general facilities channel.' Deliberately NOT the wrist chirp every other call has used."
     },
     {
@@ -96,7 +96,7 @@
         },
         "timing": "before"
       },
-      "gain": 0.007,
+      "gain": 0.011,
       "why": "The facilities channel open under Aiden's call."
     },
     {
@@ -107,7 +107,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.031,
+      "gain": 0.091,
       "why": "Jack ending the call."
     },
     {
@@ -118,7 +118,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.037,
+      "gain": 0.065,
       "emphasisDb": -3.0,
       "why": "Mark keying his radio to get the department heads moving."
     },
@@ -130,7 +130,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.234,
+      "gain": 0.164,
       "why": "Lena pulling every camera for the briefing."
     }
   ]

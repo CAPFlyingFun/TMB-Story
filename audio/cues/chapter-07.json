@@ -40,7 +40,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.166,
+      "gain": 0.116,
       "emphasisDb": -3.0,
       "why": "The maintenance partition opening, filling the screen with machine data the intruder did not erase."
     },
@@ -52,7 +52,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.052,
+      "gain": 0.018,
       "emphasisDb": -4.0,
       "why": "A single flat system tone as the creation time is checked against the island clock and the backup server. Not an alarm -- four dB down, and the same tone Chapter 1 uses when TOMBS refuses him -- because what it marks is a machine calmly confirming something nobody wants confirmed."
     },
@@ -64,7 +64,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.023,
+      "gain": 0.052,
       "emphasisDb": -2.0,
       "why": "'Three words appeared on the screen.' The notify tone lands just before the narration, so the listener hears the screen answer and is then told what it said: PHASE ONE READY."
     },
@@ -78,7 +78,7 @@
       "timing": "before",
       "emphasisDb": 8.0,
       "why": "'Outside, something struck the distant ground.' The last sound of the movement and the loudest, +8 dB -- one step beyond the boundary vibration in Chapter 5, because the point of the ending is that it is still coming.",
-      "gain": 0.17
+      "gain": 0.164
     },
     {
       "cueId": "ch07-091-window-trembles",
@@ -91,7 +91,7 @@
       "offsetMs": 300,
       "emphasisDb": 0.0,
       "why": "'The control-room window trembled.' The building's answer to it, under the line. Nothing sounds after this: the chapter ends on 'It had gone exactly the way someone planned', and that belongs to the narrator alone.",
-      "gain": 0.08
+      "gain": 0.087
     }
   ]
 }

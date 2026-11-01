@@ -3,28 +3,33 @@
   "category": "system",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "A deep vibration arriving from somewhere far outside a building and passing through it. Sub-bass swell with a slow approach and a slower departure, felt through the structure rather than heard as an event, like distant thunder with no crack. Recorded at a strong present level with real low end. No voices, no music, no impact.",
   "durationSeconds": 6,
   "promptInfluence": 0.4,
   "loop": false,
   "assetVersion": 1,
-  "fingerprint": "4f43f18b6723bf02463080dd7115fed42395450c70d084ac076adb0a0fa9790e",
+  "fingerprint": "3706026b4e6a9f76ed2996b467dee2136c13e9ee092c35b8f130306cd9e91b15",
   "bytes": 97010,
-  "generated": "2026-09-18T11:58:42Z",
+  "generated": "2026-11-01T12:03:34Z",
   "normalize": {
-    "appliedDb": 18.9,
+    "appliedDb": 11.2,
     "targetRmsDbfs": -20.0,
-    "peakCeilingDbfs": -1.0,
-    "limitedBy": "rms target",
-    "sourceRmsDbfs": -38.9,
-    "sourcePeakDbfs": -26.5,
-    "resultRmsDbfs": -17.4,
-    "resultPeakDbfs": -5.1,
+    "peakCeilingDbfs": -3.0,
+    "limitedBy": "peak ceiling, measured after encoding",
+    "corrections": [
+      {
+        "overBy": 0.8,
+        "newGainDb": 11.2
+      }
+    ],
+    "sourceRmsDbfs": -32.1,
+    "sourcePeakDbfs": -16.9,
+    "resultRmsDbfs": -18.3,
+    "resultPeakDbfs": -3.1,
+    "resultLufs": -21.4,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/system/sfx_distant_vibration_deep.source.mp3",
-    "at": "2026-09-18T12:33:49Z",
-    "resultLufs": -21.7,
-    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+    "at": "2026-11-01T12:04:59Z"
   }
 }

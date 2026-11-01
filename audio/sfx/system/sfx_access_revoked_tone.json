@@ -3,28 +3,33 @@
   "category": "system",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "A system locking a user out for good. A heavier descending electronic tone with a low weighted thud underneath it and a short cold decay, more serious and more final than an ordinary rejection. Close-mic with slight room. No voices, no music, no siren, no alarm.",
   "durationSeconds": 2,
   "promptInfluence": 0.4,
   "loop": false,
   "assetVersion": 1,
-  "fingerprint": "de9c16fbed3356ba764dd93f856887996602c4e3a1fb3bc6af94475691b72dec",
+  "fingerprint": "dfc9c9328b3f1743e6aa89e61d8a30dcb4370652149718fc0a809398d354ba78",
   "bytes": 33062,
-  "generated": "2026-09-18T04:16:48Z",
+  "generated": "2026-11-01T12:03:26Z",
   "normalize": {
-    "appliedDb": 6.1,
+    "appliedDb": 12.5,
     "targetRmsDbfs": -20.0,
-    "peakCeilingDbfs": -1.0,
-    "limitedBy": "rms target",
-    "sourceRmsDbfs": -26.1,
-    "sourcePeakDbfs": -11.9,
-    "resultRmsDbfs": -17.5,
-    "resultPeakDbfs": -3.3,
+    "peakCeilingDbfs": -3.0,
+    "limitedBy": "peak ceiling, measured after encoding",
+    "corrections": [
+      {
+        "overBy": 1.6,
+        "newGainDb": 12.5
+      }
+    ],
+    "sourceRmsDbfs": -34.2,
+    "sourcePeakDbfs": -18.1,
+    "resultRmsDbfs": -19.1,
+    "resultPeakDbfs": -3.1,
+    "resultLufs": -16.4,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/system/sfx_access_revoked_tone.source.mp3",
-    "at": "2026-09-18T12:33:49Z",
-    "resultLufs": -23.1,
-    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+    "at": "2026-11-01T12:04:57Z"
   }
 }

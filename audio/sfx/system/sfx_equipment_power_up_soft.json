@@ -3,33 +3,33 @@
   "category": "system",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "A display and the equipment behind it coming back on, microphone at the machine. An energising swell with a rising high-frequency whine settling into a steady hum, and a capacitive tick as the panel wakes. One unhurried movement, close-mic, filling the frame, recorded at a strong present level. No alarm, no beeping, no voices, no music.",
   "durationSeconds": 2.5,
   "promptInfluence": 0.3,
   "loop": false,
   "assetVersion": 2,
-  "fingerprint": "21f572a138dcc08e57bb4a9aedacb12dae4d31b6d9f9c395e6c4093d7e882534",
+  "fingerprint": "cedf17b54fd44a653dcb95fb66ebb2c6bae9f20dfc6a6c363fb4e0219eb3dbdf",
   "bytes": 40586,
-  "generated": "2026-09-18T12:21:02Z",
+  "generated": "2026-11-01T12:03:35Z",
   "normalize": {
-    "appliedDb": 4.7,
+    "appliedDb": 16.2,
     "targetRmsDbfs": -20.0,
     "peakCeilingDbfs": -3.0,
     "limitedBy": "peak ceiling, measured after encoding",
     "corrections": [
       {
-        "overBy": 3.0,
-        "newGainDb": 4.7
+        "overBy": 2.8,
+        "newGainDb": 16.2
       }
     ],
-    "sourceRmsDbfs": -28.0,
-    "sourcePeakDbfs": -10.8,
-    "resultRmsDbfs": -20.8,
-    "resultPeakDbfs": -4.0,
-    "resultLufs": -16.3,
+    "sourceRmsDbfs": -42.1,
+    "sourcePeakDbfs": -22.1,
+    "resultRmsDbfs": -23.3,
+    "resultPeakDbfs": -3.1,
+    "resultLufs": -24.0,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/system/sfx_equipment_power_up_soft.source.mp3",
-    "at": "2026-10-27T13:18:15Z"
+    "at": "2026-11-01T12:04:59Z"
   }
 }

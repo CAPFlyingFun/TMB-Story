@@ -35,7 +35,7 @@
       },
       "timing": "during",
       "offsetMs": 2400,
-      "gain": 0.029,
+      "gain": 0.066,
       "why": "The red marker appearing on the facilities map."
     },
     {
@@ -46,7 +46,7 @@
         "occurrence": 1
       },
       "timing": "during",
-      "gain": 0.234,
+      "gain": 0.164,
       "why": "Pulling the checkout log; names scroll past."
     },
     {
@@ -57,7 +57,7 @@
         "occurrence": 1
       },
       "timing": "during",
-      "gain": 0.029,
+      "gain": 0.066,
       "why": "The badge-tracking overlay coming up across the facility map."
     },
     {
@@ -68,7 +68,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.166,
+      "gain": 0.116,
       "emphasisDb": -3.0,
       "why": "Lena pulling every perimeter sensor from the last hour."
     },
@@ -81,7 +81,7 @@
       },
       "timing": "during",
       "offsetMs": 1200,
-      "gain": 0.008,
+      "gain": 0.011,
       "emphasisDb": -6.0,
       "why": "The second impact on the eastern array, twelve minutes before the first: a flag on the sensor log, kept low."
     },
@@ -93,7 +93,7 @@
         "occurrence": 1
       },
       "timing": "during",
-      "gain": 0.018,
+      "gain": 0.094,
       "why": "'A soft hydraulic hiss that sounded, tonight, uncomfortably final.'"
     },
     {
@@ -121,7 +121,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.011,
+      "gain": 0.027,
       "emphasisDb": -2.0,
       "why": "Sarah on the radio from the control room."
     },
@@ -142,7 +142,7 @@
         },
         "timing": "before"
       },
-      "gain": 0.007,
+      "gain": 0.011,
       "why": "The open channel under Sarah's last lines."
     }
   ]

@@ -3,28 +3,33 @@
   "category": "foley",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "An office chair on castors rolled a short distance across a hard floor, microphone right at the castors. An even castor rumble at walking pace over a smooth surface, ending in a settle as the chair takes weight. Close and physical, filling the frame, recorded at a strong present level, with room reflection. No voices, no music, no impact.",
   "durationSeconds": 2.5,
   "promptInfluence": 0.3,
   "loop": false,
   "assetVersion": 2,
-  "fingerprint": "9587bae3c0a87a7ac1632b123409154cf7c3b70b3cacf29334cd01c519388c74",
+  "fingerprint": "736bcd75668d64137bc93fb9b8ac7867fc1baef7a98eacd306359f6916649d89",
   "bytes": 40586,
-  "generated": "2026-09-18T12:21:00Z",
+  "generated": "2026-11-01T12:03:31Z",
   "normalize": {
-    "appliedDb": 26.7,
+    "appliedDb": 10.3,
     "targetRmsDbfs": -20.0,
-    "peakCeilingDbfs": -1.0,
-    "limitedBy": "rms target",
-    "sourceRmsDbfs": -46.7,
-    "sourcePeakDbfs": -32.6,
-    "resultRmsDbfs": -17.4,
-    "resultPeakDbfs": -3.4,
+    "peakCeilingDbfs": -3.0,
+    "limitedBy": "peak ceiling, measured after encoding",
+    "corrections": [
+      {
+        "overBy": 1.6,
+        "newGainDb": 10.3
+      }
+    ],
+    "sourceRmsDbfs": -32.0,
+    "sourcePeakDbfs": -16.0,
+    "resultRmsDbfs": -19.1,
+    "resultPeakDbfs": -3.1,
+    "resultLufs": -19.1,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/foley/sfx_chair_roll_slow.source.mp3",
-    "at": "2026-09-18T12:33:49Z",
-    "resultLufs": -18.8,
-    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+    "at": "2026-11-01T12:04:58Z"
   }
 }

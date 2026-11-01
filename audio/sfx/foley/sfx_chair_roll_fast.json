@@ -3,33 +3,33 @@
   "category": "foley",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "An office chair on castors shoved hard backward across a hard floor, microphone right at the castors. A fast scuff, castors rumbling over a smooth surface with the frame rattling above them, and an abrupt stop. Physical and close, filling the frame, recorded at a strong present level, with room reflection. No voices, no music, no crash, no breaking.",
   "durationSeconds": 2,
   "promptInfluence": 0.35,
   "loop": false,
   "assetVersion": 2,
-  "fingerprint": "806b7b0b9d5ffc38aaa3770abdf7767b889c86adc6dc96a80013cd85bb188afe",
+  "fingerprint": "83c237665c2940eb057eab0c7b460734fe1d78e0d0e289b499d41d840eea4bf9",
   "bytes": 33062,
-  "generated": "2026-09-18T12:20:59Z",
+  "generated": "2026-11-01T12:03:31Z",
   "normalize": {
-    "appliedDb": 21.2,
+    "appliedDb": 0.6,
     "targetRmsDbfs": -20.0,
     "peakCeilingDbfs": -3.0,
     "limitedBy": "peak ceiling, measured after encoding",
     "corrections": [
       {
         "overBy": 2.5,
-        "newGainDb": 21.2
+        "newGainDb": 0.6
       }
     ],
-    "sourceRmsDbfs": -48.3,
-    "sourcePeakDbfs": -26.8,
-    "resultRmsDbfs": -24.5,
-    "resultPeakDbfs": -3.1,
-    "resultLufs": -21.1,
+    "sourceRmsDbfs": -27.0,
+    "sourcePeakDbfs": -6.2,
+    "resultRmsDbfs": -23.9,
+    "resultPeakDbfs": -3.0,
+    "resultLufs": -19.6,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/foley/sfx_chair_roll_fast.source.mp3",
-    "at": "2026-10-27T13:18:14Z"
+    "at": "2026-11-01T12:04:58Z"
   }
 }

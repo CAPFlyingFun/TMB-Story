@@ -3,18 +3,33 @@
   "category": "foley",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "An automatic laboratory door sliding open. A soft pneumatic release, a smooth mechanical glide along a track, and a light settling clunk as it reaches the end of its travel. Clean modern facility, close but with room reflection behind it. No voices, no music, no alarm.",
   "durationSeconds": 2.5,
   "promptInfluence": 0.35,
   "loop": false,
   "assetVersion": 1,
-  "fingerprint": "6cb95350ecc4487a9a4926c9909cea522ef69b96425087cf083a0fa6bb2052c9",
+  "fingerprint": "893ff25898306935d4517cdc163ff8f82ce501adbb8b2ba57af8046d493ca8f9",
   "bytes": 40586,
-  "generated": "2026-09-18T04:17:01Z",
-  "measured": {
-    "lufs": -12.4,
-    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+  "generated": "2026-11-01T12:03:39Z",
+  "normalize": {
+    "appliedDb": 7.0,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -3.0,
+    "limitedBy": "peak ceiling, measured after encoding",
+    "corrections": [
+      {
+        "overBy": 2.7,
+        "newGainDb": 7.0
+      }
+    ],
+    "sourceRmsDbfs": -36.1,
+    "sourcePeakDbfs": -12.8,
+    "resultRmsDbfs": -26.6,
+    "resultPeakDbfs": -3.2,
+    "resultLufs": -26.6,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/foley/sfx_lab_door_slide.source.mp3",
+    "at": "2026-11-01T12:05:01Z"
   }
 }

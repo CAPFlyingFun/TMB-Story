@@ -41,7 +41,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.052,
+      "gain": 0.092,
       "why": "'He opened the settlement broadcast controls.' The same intercom the lab uses, because it is the settlement's own system -- and it is the first time in the story anyone addresses the whole town."
     },
     {
@@ -53,7 +53,7 @@
       },
       "timing": "during",
       "offsetMs": 2200,
-      "gain": 0.067,
+      "gain": 0.029,
       "why": "'Then he pressed transmit.' One small tone under the last word of the beat, so the announcement begins on a machine rather than on a breath."
     },
     {
@@ -64,7 +64,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.031,
+      "gain": 0.091,
       "why": "'Jack ended the broadcast.' The silence after it is doing the work, so nothing else sounds here."
     },
     {
@@ -75,7 +75,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.039,
+      "gain": 0.009,
       "why": "'A call indicator appeared on Jack's console.' Lena, from the emergency coordination channel."
     },
     {
@@ -86,7 +86,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.007,
+      "gain": 0.011,
       "fadeInMs": 400,
       "fadeOutMs": 1500,
       "sustain": {
@@ -108,7 +108,7 @@
       "timing": "before",
       "emphasisDb": 4.0,
       "why": "'Then the building vibrated again.' It arrives on the one light moment in the movement, mid-laugh, and takes it away. Carried over at Chapter 4's loudest level because it is the same thing, no nearer yet.",
-      "gain": 0.107
+      "gain": 0.104
     },
     {
       "cueId": "ch05-050-knock",
@@ -118,7 +118,7 @@
         "occurrence": 1
       },
       "timing": "before",
-      "gain": 0.018,
+      "gain": 0.094,
       "why": "The control-room door opening for Lena and the two officers. The knock itself has no asset and is left to the prose; what is heard is the door, which is the part that changes the room."
     },
     {
@@ -129,7 +129,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.029,
+      "gain": 0.066,
       "why": "Jack checking the southern boundary feeds before agreeing to go."
     },
     {
@@ -157,7 +157,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.019,
+      "gain": 0.004,
       "emphasisDb": -6.0,
       "why": "The environmental sensor taking its first reading at the boundary. Six dB under the other terminal chirps: outdoors, in the open, a small instrument in one hand."
     },
@@ -169,7 +169,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.018,
+      "gain": 0.042,
       "emphasisDb": -4.0,
       "why": "Jack zooming the wrist camera onto the pale object. Quiet, because the next sound in the scene should be nothing at all -- 'Nobody spoke for several seconds' is four beats away."
     },
@@ -183,7 +183,7 @@
       "timing": "before",
       "emphasisDb": 7.0,
       "why": "'A vibration rolled through the ground.' The loudest in the movement so far, +7 dB, and the first one heard from OUTSIDE a building rather than through a floor. This is the moment the thing stops being a report.",
-      "gain": 0.151
+      "gain": 0.146
     },
     {
       "cueId": "ch05-140-vehicle-away",
@@ -194,7 +194,7 @@
       },
       "timing": "during",
       "offsetMs": 200,
-      "gain": 0.032,
+      "gain": 0.035,
       "emphasisDb": -8.0,
       "why": "'The vehicle accelerated away from the boundary.' A low body of sound under the line rather than an engine, which the library does not have. Eight dB down: it is a departure, not an event, and the chapter's last line belongs to the grass still moving behind them."
     }

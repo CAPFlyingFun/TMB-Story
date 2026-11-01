@@ -3,18 +3,33 @@
   "category": "foley",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "A heavy industrial disconnect lever thrown by hand, followed by electrical power dropping out of a room. A solid mechanical clack with weight behind it, then the collapse of every hum and fan into silence. Close and physical, recorded at a strong present level. No voices, no music.",
   "durationSeconds": 3,
   "promptInfluence": 0.35,
   "loop": false,
   "assetVersion": 1,
-  "fingerprint": "8169d11d81a61a358f1be88523ebfeb1bffb491fad2cbc792b913bcc03a97167",
+  "fingerprint": "728a48baa9df5ca9c51ff66a8432649d5c21b67f116399c4e248153675ed49bc",
   "bytes": 48945,
-  "generated": "2026-09-18T11:58:42Z",
-  "measured": {
-    "lufs": -20.2,
-    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+  "generated": "2026-11-01T12:03:40Z",
+  "normalize": {
+    "appliedDb": -1.0,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -3.0,
+    "limitedBy": "peak ceiling, measured after encoding",
+    "corrections": [
+      {
+        "overBy": 2.4,
+        "newGainDb": -1.0
+      }
+    ],
+    "sourceRmsDbfs": -32.4,
+    "sourcePeakDbfs": -4.5,
+    "resultRmsDbfs": -30.9,
+    "resultPeakDbfs": -2.9,
+    "resultLufs": -23.5,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/foley/sfx_shutdown_lever_pull.source.mp3",
+    "at": "2026-11-01T12:05:01Z"
   }
 }

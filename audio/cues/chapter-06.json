@@ -40,7 +40,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.029,
+      "gain": 0.066,
       "why": "The environmental sensor reading out into the console."
     },
     {
@@ -52,7 +52,7 @@
       },
       "timing": "during",
       "offsetMs": 1500,
-      "gain": 0.029,
+      "gain": 0.066,
       "why": "The wrist-camera recording arriving on the main screen, with the fingernail clipping on it."
     },
     {
@@ -64,7 +64,7 @@
       },
       "timing": "during",
       "offsetMs": 600,
-      "gain": 0.166,
+      "gain": 0.116,
       "emphasisDb": -3.0,
       "why": "Advancing the footage a frame at a time. Three dB under the chapter's other typing: this is one finger, not two hands working."
     },
@@ -76,7 +76,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.234,
+      "gain": 0.164,
       "why": "Jack searching the original TOMBS calibration records for the scale target."
     },
     {
@@ -87,7 +87,7 @@
         "occurrence": 1
       },
       "timing": "after",
-      "gain": 0.029,
+      "gain": 0.066,
       "why": "The surviving parameter block coming up: 'Target height normalization', the line that proves somebody chose how small."
     }
   ]

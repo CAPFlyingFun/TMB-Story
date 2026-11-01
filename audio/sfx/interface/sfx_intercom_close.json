@@ -3,28 +3,33 @@
   "category": "interface",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "An intercom channel closing. A light mechanical release click and the live speaker hiss cutting away to room silence. Close-mic, small and final. No voices, no speech, no music, no tones.",
   "durationSeconds": 1,
   "promptInfluence": 0.35,
   "loop": false,
   "assetVersion": 1,
-  "fingerprint": "cf99f2378aaa8fbe8aea4bc408055ada64a5a46739c9c41e8d5b463e5ce4859a",
+  "fingerprint": "532423e6eb6b8081f7460ed92d3f2250ba5174caeba886a3a77c0abff7941a57",
   "bytes": 17180,
-  "generated": "2026-09-18T04:16:57Z",
+  "generated": "2026-11-01T12:03:36Z",
   "normalize": {
-    "appliedDb": 1.5,
+    "appliedDb": -1.4,
     "targetRmsDbfs": -20.0,
-    "peakCeilingDbfs": -1.0,
-    "limitedBy": "rms target",
-    "sourceRmsDbfs": -21.5,
-    "sourcePeakDbfs": -7.9,
-    "resultRmsDbfs": -17.4,
-    "resultPeakDbfs": -3.9,
+    "peakCeilingDbfs": -3.0,
+    "limitedBy": "peak ceiling, measured after encoding",
+    "corrections": [
+      {
+        "overBy": 2.5,
+        "newGainDb": -1.4
+      }
+    ],
+    "sourceRmsDbfs": -29.6,
+    "sourcePeakDbfs": -4.2,
+    "resultRmsDbfs": -28.5,
+    "resultPeakDbfs": -3.1,
+    "resultLufs": -24.3,
     "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/interface/sfx_intercom_close.source.mp3",
-    "at": "2026-09-18T12:33:50Z",
-    "resultLufs": -15.0,
-    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+    "at": "2026-11-01T12:05:00Z"
   }
 }

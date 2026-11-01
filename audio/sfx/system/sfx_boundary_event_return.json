@@ -3,18 +3,28 @@
   "category": "system",
   "source": "generated",
   "provider": "elevenlabs-sfx",
-  "model": null,
+  "model": "eleven_text_to_sound_v3",
   "outputFormat": "mp3_44100_128",
   "prompt": "Sound rushing back into a room all at once after total silence. A sharp pressure return with room ambience and machinery slamming back to full in a single instant, then settling. Close and enveloping, recorded at a strong present level. No voices, no music.",
   "durationSeconds": 3,
   "promptInfluence": 0.45,
   "loop": false,
   "assetVersion": 1,
-  "fingerprint": "5b3716a6d4bbc9a1a9b9f96194eb1025ca02f7f47762ecf1f352eddf0c4ee64a",
+  "fingerprint": "ab98a87965d5f29ec066e0689718d9158aa59b8399750cc8d388cf7d6255a00e",
   "bytes": 48945,
-  "generated": "2026-09-18T11:58:40Z",
-  "measured": {
-    "lufs": -8.6,
-    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+  "generated": "2026-11-01T12:03:30Z",
+  "normalize": {
+    "appliedDb": 9.0,
+    "targetRmsDbfs": -20.0,
+    "peakCeilingDbfs": -3.0,
+    "limitedBy": "rms target",
+    "corrections": [],
+    "sourceRmsDbfs": -29.0,
+    "sourcePeakDbfs": -14.6,
+    "resultRmsDbfs": -17.5,
+    "resultPeakDbfs": -3.1,
+    "resultLufs": -17.9,
+    "sourceFile": "/home/runner/work/TMB-Story/TMB-Story/audio/sfx/system/sfx_boundary_event_return.source.mp3",
+    "at": "2026-11-01T12:04:57Z"
   }
 }
