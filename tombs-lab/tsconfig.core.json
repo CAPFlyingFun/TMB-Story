@@ -1,0 +1,4 @@
+{
+ "compilerOptions":{"target":"ES2022","lib":["ES2022"],"module":"CommonJS","moduleResolution":"node","strict":true,"outDir":"/tmp/tombs-core-compiled","skipLibCheck":true},
+ "files":["src/tombs/types.ts","src/tombs/spec.ts","src/tombs/collision.ts","src/tombs/state.ts","src/tombs/interactions.ts"]
+}
