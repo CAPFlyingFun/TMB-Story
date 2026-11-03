@@ -101,6 +101,12 @@ should be checked against the blueprint "like a home or office decorator".
   badge reader, the sensor drawer) moved to the furniture they belong to. The tour's path
   follows the corridor.
 
+## Joystick (2026-11-03)
+
+On phones the four arrow buttons are replaced by an analog joystick at the bottom left. How far
+you push the knob sets how fast you walk, in the direction it points. Drag anywhere else to look.
+The keyboard still works on a computer.
+
 ## Rebuilding
 
 ```bash

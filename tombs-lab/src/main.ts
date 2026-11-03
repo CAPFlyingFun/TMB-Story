@@ -12,8 +12,8 @@ holder.innerHTML=`<div class="view" id="view"></div><div class="ui">
 <div id="caption">Standalone procedural facility · Chapter 1 environment</div><div id="objective">Select TOUR or EXPLORE to begin.</div>
 <div class="mini" id="mini"></div></div>
 <div class="bottom"><div class="btns"><button data-act="tour">🎬 CINEMATIC TOUR</button><button data-act="explore">🚶 EXPLORE</button><button data-act="top">🗺 TOP VIEW</button><button data-act="plan">📐 PLAN</button><button data-act="roof">ROOF: OFF</button></div>
-<div class="btns"><button data-act="activate" class="primary">⚡ ACTIVATE ARRAY</button><button data-act="restore">↩ NORMAL SIZE</button><button data-act="interact">E · INTERACT</button><button data-act="save">SAVE</button><button data-act="load">LOAD</button></div><div class="hint">WASD / arrows move · drag to look · E interact · mobile: pad to move, swipe view to turn · 1:180 scales the town and people only</div></div>
-<div class="pad"><button data-move="forward">▲</button><div><button data-move="left">◀</button><button data-move="back">▼</button><button data-move="right">▶</button></div></div>
+<div class="btns"><button data-act="activate" class="primary">⚡ ACTIVATE ARRAY</button><button data-act="restore">↩ NORMAL SIZE</button><button data-act="interact">E · INTERACT</button><button data-act="save">SAVE</button><button data-act="load">LOAD</button></div><div class="hint">WASD / arrows move · drag to look · E interact · mobile: joystick to move, swipe view to turn · 1:180 scales the town and people only</div></div>
+<div class="joy" id="joy" aria-label="Move"><div class="knob" id="knob"></div></div>
 <div class="effects" id="effects"></div><div class="plan" id="plan" hidden><button class="close" data-act="plan">✕ CLOSE PLAN</button><div class="sheet" id="plansheet"></div></div><div class="toast" id="toast"></div></div>`;
 const element=document.getElementById('view')!;
 const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
@@ -33,7 +33,7 @@ const camera=new THREE.PerspectiveCamera(68,innerWidth/innerHeight,.025,1500);co
 camera.position.set(-13.1,1.65,-9.9);aimLocal(-13.0,1.1,-12.4);
 const orbit=new OrbitControls(camera,renderer.domElement);orbit.enabled=false;orbit.enableDamping=true;orbit.minDistance=.8;orbit.maxDistance=95;
 let view:'tour'|'explore'|'top'='explore';let roof=false;let yaw=0,pitch=0;
-const held=new Set<string>();let touchMove=new Set<string>();let drag=false,px=0,py=0;let toastTimeout=0;
+const held=new Set<string>();const joy={x:0,y:0};let drag=false,px=0,py=0;let toastTimeout=0;
 const $=(id:string)=>document.getElementById(id)!;
 function setCaption(v:string):void{$('caption').textContent=v}
 function notify(msg:string):void{$('toast').textContent=msg;$('toast').classList.add('show');toastTimeout=2.7}
@@ -67,20 +67,30 @@ for(const b of Array.from(document.querySelectorAll<HTMLButtonElement>('button[d
  })}
 window.addEventListener('keydown',e=>{if(e.repeat)return;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' '].includes(e.key))e.preventDefault();held.add(e.key.toLowerCase());if(e.key.toLowerCase()==='e')useNearest();if(e.key==='1')setView('explore');if(e.key==='2')setView('top');if(e.key==='3')activate()});
 window.addEventListener('keyup',e=>held.delete(e.key.toLowerCase()));
-window.addEventListener('blur',()=>{held.clear();touchMove.clear()});
+window.addEventListener('blur',()=>{held.clear();releaseJoy()});
 renderer.domElement.addEventListener('pointerdown',e=>{if(view!=='explore')return;drag=true;px=e.clientX;py=e.clientY;renderer.domElement.setPointerCapture(e.pointerId)});
 renderer.domElement.addEventListener('pointerup',()=>{drag=false});
 renderer.domElement.addEventListener('pointermove',e=>{if(view!=='explore'||!drag)return;const dx=e.clientX-px,dy=e.clientY-py;px=e.clientX;py=e.clientY;
  yaw+=dx*.004;pitch=THREE.MathUtils.clamp(pitch-dy*.004,-1.35,1.35);applyViewAngles()});
-for(const b of Array.from(document.querySelectorAll<HTMLButtonElement>('button[data-move]'))){const k=b.dataset.move!;
- b.addEventListener('pointerdown',e=>{e.preventDefault();touchMove.add(k);b.setPointerCapture(e.pointerId)});
- for(const event of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(event,()=>touchMove.delete(k));
+// The on-screen joystick, bottom left (Joshua, 2026-11-03: "a real joystick on the left side").
+// Analog: how far the knob is pushed is how fast you walk, in whatever direction it points.
+const joyEl=$('joy'),knob=$('knob');let joyId:number|null=null;
+function joyAt(e:PointerEvent):void{
+ const r=joyEl.getBoundingClientRect(),R=r.width/2;
+ let dx=(e.clientX-(r.left+R))/R,dy=(e.clientY-(r.top+R))/R;const m=Math.hypot(dx,dy);if(m>1){dx/=m;dy/=m}
+ joy.x=dx;joy.y=dy;knob.style.transform=`translate(${dx*R*.62}px,${dy*R*.62}px)`;
 }
+function releaseJoy():void{joyId=null;joy.x=0;joy.y=0;knob.style.transform='';joyEl.classList.remove('active')}
+joyEl.addEventListener('pointerdown',e=>{e.preventDefault();e.stopPropagation();joyId=e.pointerId;joyEl.setPointerCapture(e.pointerId);joyEl.classList.add('active');joyAt(e)});
+joyEl.addEventListener('pointermove',e=>{if(e.pointerId===joyId)joyAt(e)});
+for(const event of ['pointerup','pointercancel','lostpointercapture'])joyEl.addEventListener(event,e=>{if((e as PointerEvent).pointerId===joyId)releaseJoy()});
 function movement(dt:number):void{
  if(view!=='explore'||director.isPlaying||orbit.enabled)return;
- const forward=(held.has('w')||held.has('arrowup')||touchMove.has('forward')?1:0)-(held.has('s')||held.has('arrowdown')||touchMove.has('back')?1:0);
- const side=(held.has('d')||held.has('arrowright')||touchMove.has('right')?1:0)-(held.has('a')||held.has('arrowleft')||touchMove.has('left')?1:0);
- if(!forward&&!side)return;const len=Math.hypot(forward,side),speed=(held.has('shift')?3.5:2.2)*Math.min(dt,.05)/len;
+ const dead=Math.hypot(joy.x,joy.y)<.12; // a small dead zone, so a resting thumb does not drift
+ const forward=(held.has('w')||held.has('arrowup')?1:0)-(held.has('s')||held.has('arrowdown')?1:0)+(dead?0:-joy.y);
+ const side=(held.has('d')||held.has('arrowright')?1:0)-(held.has('a')||held.has('arrowleft')?1:0)+(dead?0:joy.x);
+ const len=Math.hypot(forward,side);if(len<.01)return;
+ const speed=(held.has('shift')?3.5:2.2)*Math.min(dt,.05)*Math.min(1,len)/len;
  const dx=(Math.sin(yaw)*forward+Math.cos(yaw)*side)*speed;
  const dz=(-Math.cos(yaw)*forward+Math.sin(yaw)*side)*speed;
  const [x,z]=moveWithWalls(camera.position.x,camera.position.z,dx,dz,.24,id=>labState.isOpen(id));
