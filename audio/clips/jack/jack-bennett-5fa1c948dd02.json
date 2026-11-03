@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-5fa1c948dd02",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "baf81452fedd99fae82227a7fc4a1f5886f8f34de947ce54b684679d293dedfe",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "cdc928ee3e4de1e9a5a245f3818970fcac5d3270c5d749b3236d92b2e6309146",
   "text": "You didn't like that either.",
-  "bytes": 22613,
-  "generated": "2026-10-01T18:02:01Z"
+  "bytes": 21776,
+  "generated": "2026-11-03T19:10:09Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-243711cb840f",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "1631fafa0d20e289c85a93960730deb6769cfbcd172255419b7ace33440d251b",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "c43a338f617656e925dad11e0711a6e3afa491f642d6fba5863506fd44cb26e3",
   "text": "What do you see?",
-  "bytes": 14254,
-  "generated": "2026-09-21T14:15:27Z"
+  "bytes": 14253,
+  "generated": "2026-11-03T19:09:55Z"
 }

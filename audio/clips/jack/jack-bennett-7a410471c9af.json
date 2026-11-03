@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-7a410471c9af",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "8f2678a60acc2420b95a82b0dc95bae03d42258a66bc57720ebf0eec24c29ea9",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "7083c2b85d0121f3e4d6155fdd52edcd9301ec0797a8d3599c689bbe8162bb38",
   "text": "Okay. So we stay inside, we stay still, and we wait for it to eat and leave.",
-  "bytes": 84889,
-  "generated": "2026-10-07T03:28:05Z"
+  "bytes": 80709,
+  "generated": "2026-11-03T19:10:15Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-baef1dcc876f",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "90de9686863947d096c0ad3b0acf8774c7cdea7468be709d69889ac36c1e67f3",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "0f811bd4b952873aa09c49904a38d4ed13fcedf1aaa0846350013c6ccd9aa62f",
   "text": "If the transformation is uniform, an average adult here is somewhere around several millimeters tall.",
-  "bytes": 89487,
-  "generated": "2026-09-21T15:13:28Z"
+  "bytes": 79873,
+  "generated": "2026-11-03T19:10:05Z"
 }

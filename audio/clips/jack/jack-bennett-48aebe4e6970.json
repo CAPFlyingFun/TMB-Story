@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-48aebe4e6970",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "efda8b36fccafece0136f870bbd5ba17c19c841e0fa397caccbd84ffc55afa85",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "28940162d5159f2aa915442925c7ec144d5fcf33a6af95efd02b543464041260",
   "text": "That's different.",
-  "bytes": 16762,
-  "generated": "2026-09-17T22:36:21Z"
+  "bytes": 15925,
+  "generated": "2026-11-03T19:09:46Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-d2c892e11efe",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "17f3732af209bd5485f974de4cf5effe66f66db3aa7554d87609be62fe53e767",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "204e089e2fdf843a82f5400c8ead9e0afa2cced484f9f433f0209e3b1ce03e8b",
   "text": "It means we're running out of dark to hide in.",
-  "bytes": 35988,
-  "generated": "2026-10-01T18:02:53Z"
+  "bytes": 35987,
+  "generated": "2026-11-03T19:10:12Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-57a1f5dfe461",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "f798edceb3c9c8abec0eb6c549859b4d30a738d4eddc45d58f75974374e92d0f",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "9efa052e0a5522a9280e049dda62071d9a826cc23fab4965dc2171255774435f",
   "text": "Mine too. Whoever it was covered both trails.",
-  "bytes": 38078,
-  "generated": "2026-09-23T19:34:22Z"
+  "bytes": 41003,
+  "generated": "2026-11-03T19:09:45Z"
 }

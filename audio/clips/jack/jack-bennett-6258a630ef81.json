@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-6258a630ef81",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "0d2c5bf734f55e1532d853b2248cf90b4c9ccb3efb09ad563f62c806ffa2886d",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "70578ddc826229cf75e0ad211de364c9469de6d841c9c66ebc479f6b21773aa5",
   "text": "It's water.",
-  "bytes": 15090,
-  "generated": "2026-09-21T15:12:35Z"
+  "bytes": 13835,
+  "generated": "2026-11-03T19:10:01Z"
 }

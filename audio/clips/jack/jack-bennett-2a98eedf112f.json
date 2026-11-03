@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-2a98eedf112f",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "1538cc0644638815fbd8d442f3b0a431ab079736168e534a818b0b81a0e9cadb",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "31b442354f22ec26d9f25804796b9dbc659e8ce34324ff3918947fa12f064cf7",
   "text": "I thought so.",
-  "bytes": 13836,
-  "generated": "2026-09-17T22:36:13Z"
+  "bytes": 15089,
+  "generated": "2026-11-03T19:09:45Z"
 }

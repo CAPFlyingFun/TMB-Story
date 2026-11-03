@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-5429e0cd333c",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "d415c647d8bfcff459784eefb74c84003b2e4af65ad786a48a32fc5844844399",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "e4ab0e051c4e0362cbe75aeebbe5182b9063baeee174bc3a2873caf17581bac6",
   "text": "So do I.",
-  "bytes": 11328,
-  "generated": "2026-09-21T23:10:12Z"
+  "bytes": 12163,
+  "generated": "2026-11-03T19:09:57Z"
 }

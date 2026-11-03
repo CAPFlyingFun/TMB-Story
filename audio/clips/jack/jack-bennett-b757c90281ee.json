@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-b757c90281ee",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "9e1852091700edef80447c74a690ddb09f7b46cea22b9ed27c3b3eb650e76df8",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "1bac9c71e06182265c1ff7a20c1b51c81a6f6bc384ae671f0a6ebad067a18d8d",
   "text": "Kill them.",
-  "bytes": 13000,
-  "generated": "2026-09-18T11:50:55Z"
+  "bytes": 12163,
+  "generated": "2026-11-03T19:09:48Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-2e54338f8610",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "20151d7b94075cbb16656c6dcedcb80f969ae565f768f405481f6b63715d84ef",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "ef517c3568ec3b2c22959f91d4bcb81a18a8f72492d0cf662650795feb4aa1c5",
   "text": "It means you're carrying something considerably more important than this laboratory.",
-  "bytes": 64409,
-  "generated": "2026-09-18T11:50:32Z"
+  "bytes": 55213,
+  "generated": "2026-11-03T19:09:47Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-85dfddc7134b",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "db0c8e831a4e41e54f06b992fd1d2a45c8cc76f23e1901f53a6df8a9a4044e17",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "0e34ddd3e0bdedc2f56b2580f95a2bdfa4916a04a7fca1b1bb5b5048bb6b1d2f",
   "text": "That's not good.",
-  "bytes": 15926,
-  "generated": "2026-09-17T22:35:35Z"
+  "bytes": 17597,
+  "generated": "2026-11-03T19:09:42Z"
 }

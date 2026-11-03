@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-a453c35f43c1",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "89b46cfd795aed77a1f8c81bc778c589bfccd0654fff985b74f0c8e3e16b7de0",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "a18916fb236e4ad0b81085118574d97c2d94c71df81c5bb2734b034035c31f45",
   "text": "I noticed.",
-  "bytes": 14254,
-  "generated": "2026-10-01T18:02:51Z"
+  "bytes": 14253,
+  "generated": "2026-11-03T19:10:11Z"
 }

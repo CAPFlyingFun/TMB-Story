@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-e6c4a53338aa",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "4d42c3df9df953291bf7c5cf514bca1f2725cb677d680540012e6f2dfdd6092f",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "ac5cb70abd6b5b0c8a4eec62c4393b1a88a386d872eefcc86f0286b5569f7871",
   "text": "I'm here.",
-  "bytes": 12164,
-  "generated": "2026-09-18T11:51:58Z"
+  "bytes": 11327,
+  "generated": "2026-11-03T19:09:53Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-7aa5600e9ab1",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "e80060ac8b4eedf980a1e2383b43f1d03bd13769f2577e0900fc5a0fc4951781",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "64a4354118be69de42cca5f4f1027ee9a527b2f57ff96117061069a7f0f74a9e",
   "text": "Unit Twelve, this is Bennett. Do not cross the end of the road. Turn around and return to the developed zone.",
-  "bytes": 89487,
-  "generated": "2026-09-21T15:11:13Z"
+  "bytes": 84888,
+  "generated": "2026-11-03T19:09:56Z"
 }

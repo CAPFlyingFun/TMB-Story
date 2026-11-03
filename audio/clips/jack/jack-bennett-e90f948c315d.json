@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-e90f948c315d",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "19110b601a1e47e5d168e34441de62c3d1a4dbc03e2e0ee0b6043dc3db84850b",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "ab88074eae0b6040e25ce1ca0f1fee0e26a84d313e1065ab3296592f1dceb1f3",
   "text": "I don't know. I haven't tried. And I'm not going to try until I understand exactly what it would do. If I get that wrong, I don't get a second chance, and neither do you.",
-  "bytes": 166809,
-  "generated": "2026-10-07T03:29:53Z"
+  "bytes": 134625,
+  "generated": "2026-11-03T19:10:20Z"
 }

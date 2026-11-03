@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-4957b745d8af",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "0679a3f4d8309cfeac2890f48e9e8a85877fe1796e1009b413d24890ec63a4ca",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "bfc08d5456d6bd6386b3dd49785ec3593da6fb27348d187d0577e9d9206e01d2",
   "text": "Come on. Give me something.",
-  "bytes": 18852,
-  "generated": "2026-09-18T11:51:24Z"
+  "bytes": 23448,
+  "generated": "2026-11-03T19:09:51Z"
 }

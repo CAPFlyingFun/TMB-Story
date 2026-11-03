@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-e61a5b7e36cd",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "ae53fed4c4e03e44f7622777a963e35a1b3319a695173c70a1ece299a3397400",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "2f6a291cc11ee99ad0f8bd5a350015f20b3ed9a2c9756442a648e8e422405853",
   "text": "You know, you're supposed to be resting.",
-  "bytes": 34316,
-  "generated": "2026-09-17T22:36:18Z"
+  "bytes": 33897,
+  "generated": "2026-11-03T19:09:45Z"
 }

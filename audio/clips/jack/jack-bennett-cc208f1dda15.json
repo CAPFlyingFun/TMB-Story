@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-cc208f1dda15",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "d445301c54ddadfb21b30ef5ca8fa0d24a0321d326002c2ab5bc58f9b396e2ee",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "d83c2c599fd6c2bfe0322f90a14f9e7dc61cec51c107215dfaffc3414cf238c0",
   "text": "Fourteen?",
-  "bytes": 15926,
-  "generated": "2026-09-18T11:50:40Z"
+  "bytes": 12999,
+  "generated": "2026-11-03T19:09:47Z"
 }

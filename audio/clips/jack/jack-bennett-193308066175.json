@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-193308066175",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "bc6c548ecd3b55c51456477683065beb1ee23164d809f9169bd828c71628061c",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "04c18d3173150f6bffb388eba69b3f8d392e4d5511f6a8fd185f8de2d2f2634b",
   "text": "Good to know.",
-  "bytes": 14254,
-  "generated": "2026-10-07T03:28:33Z"
+  "bytes": 12163,
+  "generated": "2026-11-03T19:10:17Z"
 }

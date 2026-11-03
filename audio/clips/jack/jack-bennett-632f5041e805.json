@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-632f5041e805",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "7f0358ca668be8965e27a283c938c0bd542f1f9e7231d747be7d1c3a840ade88",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "068ce8123554f75700d2d660a7d02f165ae562a6fa5fb0a7f15de9bda04ed6c0",
   "text": "Can you come take a look?",
-  "bytes": 17598,
-  "generated": "2026-09-17T22:35:49Z"
+  "bytes": 19687,
+  "generated": "2026-11-03T19:09:43Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-a8fa7357e25b",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "38a462fa38c305caf767bed30f8f92b00ad9f61b400bc0b71ad3971ea54eb2c3",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "bce316db871d53b673a057fe250ded6c1e8083ac37636e866d48f667e2fb1a49",
   "text": "You okay?",
-  "bytes": 12164,
-  "generated": "2026-09-18T11:51:34Z"
+  "bytes": 12999,
+  "generated": "2026-11-03T19:09:52Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-808605dca6f7",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "351daacddbdb2585c657f59211310e34142beeca5c56cc85622e3eabd941276a",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "1c262b25a2d1c90da9e212ee414055709cada91860194e3b4f2d2edf41b4d77c",
   "text": "If they hid one file for three weeks, I don't think they stopped at one.",
-  "bytes": 65663,
-  "generated": "2026-10-01T18:02:17Z"
+  "bytes": 55213,
+  "generated": "2026-11-03T19:10:09Z"
 }

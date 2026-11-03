@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-e7a2ba2045df",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "9cfef590caa2ebead92867b24a5abc75a44bb187bf1d41ed46d9946172c861f9",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "2494b87fcf8df09544618ec9bc98fe256f1ee0cee35be010815125ab28ce858b",
   "text": "Not enough for this.",
-  "bytes": 18852,
-  "generated": "2026-09-18T11:50:47Z"
+  "bytes": 18851,
+  "generated": "2026-11-03T19:09:48Z"
 }

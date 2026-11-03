@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-fc5d3f4c19b2",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "2e1cd93aad125e9ce23c1984baf133851e05198c9ae24613ac9a802f2131b029",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "af18c40d1bb4756827a091cddc29a7c8553fb8d6ddd8a2e9fcdae15671b30794",
   "text": "Okay. Meet us at the front steps.",
-  "bytes": 33062,
-  "generated": "2026-10-07T03:29:17Z"
+  "bytes": 27628,
+  "generated": "2026-11-03T19:10:19Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-b94145d639e6",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "318d264d9c0a1446c0b8cce66795f0f42b4121068e1c22c838155ac64ed83381",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "73b2e0781a809f1bce2666eb94d60d17c77abfa8791e0594b906ed4ed6c45da6",
   "text": "I know. Status?",
-  "bytes": 22613,
-  "generated": "2026-09-18T11:52:00Z"
+  "bytes": 20941,
+  "generated": "2026-11-03T19:09:53Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-92ce22fee124",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "ca5e1b0fba798f3cc6182414a90000d2d24d7e5de016d4713753fa3584c096bf",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "9155a32588875343b5282da546a67a62821715bb706e03c2daa3c45a44e7c0d2",
   "text": "It unlocked itself.",
-  "bytes": 20942,
-  "generated": "2026-09-17T22:36:07Z"
+  "bytes": 19687,
+  "generated": "2026-11-03T19:09:44Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-0f0ba5c12209",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "5f702c85f1c8eabd247fb29561859097ff06c7f976e81b65e34b8d968920f384",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "05e8b422db957ba5c37512ae597b9c9fd03ac0f2f8a766c342099a3e0b424c9c",
   "text": "We're working on that.",
-  "bytes": 20524,
-  "generated": "2026-09-21T15:11:09Z"
+  "bytes": 19687,
+  "generated": "2026-11-03T19:10:06Z"
 }

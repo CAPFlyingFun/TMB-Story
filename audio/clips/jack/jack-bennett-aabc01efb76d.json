@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-aabc01efb76d",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "e49f299584197b3b9cde87596eb1df9482f19ff4b77c7ecf37ef24062e1948c9",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "8e7ade54a929fd38be9e68c577e82d9daa64d9ebe804ccde8d913c4709573ed1",
   "text": "I'll take it.",
-  "bytes": 12164,
-  "generated": "2026-10-07T03:28:55Z"
+  "bytes": 12999,
+  "generated": "2026-11-03T19:10:17Z"
 }

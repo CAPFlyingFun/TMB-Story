@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-b247602cc37a",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "036af09485c678558e0e29959656cee8309a4484d31163f5995e23e9e79799bc",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "fa6b96f9991cb46cecc4cc1d536f4a12b2a00ce8005df11859942d0b173a9855",
   "text": "TOMBS activated. We think the developed zone was inside the boundary.",
-  "bytes": 68589,
-  "generated": "2026-09-22T19:21:33Z"
+  "bytes": 61901,
+  "generated": "2026-11-03T19:09:55Z"
 }

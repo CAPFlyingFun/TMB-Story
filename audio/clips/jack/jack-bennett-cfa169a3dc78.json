@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-cfa169a3dc78",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "3312a35ddd077115349590e15d8b03520f900641c96bb41a009ad75760b55780",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "501d1116a34993bbf0a74b7bfbf272d8c55d2a9e25e2503e8039971d58ef02b2",
   "text": "Do it.",
-  "bytes": 8403,
-  "generated": "2026-09-18T11:51:31Z"
+  "bytes": 10910,
+  "generated": "2026-11-03T19:09:52Z"
 }

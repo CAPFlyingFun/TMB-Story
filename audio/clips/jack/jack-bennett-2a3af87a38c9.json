@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-2a3af87a38c9",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "6fcf92df728c4588536e774bbed0b380afc35e08c52e4aa772f2cfa950da1ab5",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "3312502b5e5005ffdc705989172192ba9825a4db32a816cd28bec9eee52b6a44",
   "text": "Anything that moved and shouldn't have.",
-  "bytes": 33062,
-  "generated": "2026-10-01T18:02:42Z"
+  "bytes": 30136,
+  "generated": "2026-11-03T19:10:11Z"
 }

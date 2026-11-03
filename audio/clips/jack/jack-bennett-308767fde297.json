@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-308767fde297",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "8ae1803c712f20ec3ef6095221d75e528ac4095bc8ac1fe5445168004e1441e4",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "5d5069d52d9781f952a290ec3036fc1bb9d04740cd82707d1ae588462ca21dc7",
   "text": "Revoked.",
-  "bytes": 13836,
-  "generated": "2026-09-17T22:36:32Z"
+  "bytes": 10910,
+  "generated": "2026-11-03T19:09:46Z"
 }

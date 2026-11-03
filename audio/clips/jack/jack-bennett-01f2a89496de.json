@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-01f2a89496de",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "365eb49173e62afb219b88c036cc03d251015b2c90bf66f50351f1a36f25f357",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "14783dce4964e22a1b77791dbbd1855070f49e0cb545d8ca5014a94a0bd63160",
   "text": "I'm sitting here.",
-  "bytes": 19688,
-  "generated": "2026-09-17T22:36:09Z"
+  "bytes": 18015,
+  "generated": "2026-11-03T19:09:45Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-383407311440",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "195465961f4585acaee984c91b1e0f752b44be71fa5fbda4c086a141303899cd",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "29115096a310c1ad3849eb6a35acc95527ae5e306c7556640e1453c9a39883a2",
   "text": "Try the emergency frequencies.",
-  "bytes": 27211,
-  "generated": "2026-09-18T11:52:06Z"
+  "bytes": 26374,
+  "generated": "2026-11-03T19:09:53Z"
 }

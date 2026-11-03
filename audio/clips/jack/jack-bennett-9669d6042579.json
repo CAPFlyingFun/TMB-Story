@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-9669d6042579",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "752cb5419c3bab8b4ab2edd159792a6159955bdeba53dd8180b2f832856a2420",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "c5849cc72b70ca3a00e25305526212acf62ddd561a7aecbb34c9ac2c6db8f317",
   "text": "You can do that?",
-  "bytes": 17598,
-  "generated": "2026-10-01T18:02:33Z"
+  "bytes": 15089,
+  "generated": "2026-11-03T19:10:10Z"
 }

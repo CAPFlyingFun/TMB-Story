@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-5d311a6c90d7",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "e0f42f8790d029ef78ca43047be44b8cc2e85933e85980d5e4bce86fd5a93ab5",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "f775ae43329ec0efa9279fe1355e02dfd3de6d75d68c24c61d70f9f8fc7acbd1",
   "text": "That's not supposed to happen.",
-  "bytes": 25539,
-  "generated": "2026-09-17T22:36:30Z"
+  "bytes": 22612,
+  "generated": "2026-11-03T19:09:46Z"
 }

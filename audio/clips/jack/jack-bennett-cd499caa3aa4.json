@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-cd499caa3aa4",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "fc7c1da3125110cea2c8866ba8297d19fe575d61f4abfe94bc233700faa3e2cf",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "d53e31210169cc87c64a94fcddd3e5eaa191c3313ca2123d4296750952a89ee9",
   "text": "I wasn't in the laboratory.",
-  "bytes": 25539,
-  "generated": "2026-09-21T15:14:14Z"
+  "bytes": 24284,
+  "generated": "2026-11-03T19:10:07Z"
 }

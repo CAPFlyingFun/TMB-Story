@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-2c95b0fba514",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "8aca433fde4a226f280b4c94a387a75594ba81594e880f41fa02f416562d334f",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "fd9aba31388756000e868933e788afdc53696e633c331d23c99b028da3fd5864",
   "text": "I want neither of us to go first.",
-  "bytes": 31391,
-  "generated": "2026-10-07T03:27:34Z"
+  "bytes": 27628,
+  "generated": "2026-11-03T19:10:14Z"
 }

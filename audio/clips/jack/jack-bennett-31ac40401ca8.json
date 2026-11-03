@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-31ac40401ca8",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "0c3f157453a731ba46944cd99f0e78484b957529dd3be719d0c47201cbf75e78",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "6dfe620dab9ff0540f60a018a6750776f1b94a575d13249a28506abc158cb108",
   "text": "Who are you?",
-  "bytes": 15926,
-  "generated": "2026-09-17T22:35:50Z"
+  "bytes": 14253,
+  "generated": "2026-11-03T19:09:43Z"
 }

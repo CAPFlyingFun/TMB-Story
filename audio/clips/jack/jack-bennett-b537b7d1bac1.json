@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-b537b7d1bac1",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "1088d28dcc54f0581d13b9d5b3ed17dfc40d7089ba6e530cb07ebbc3e5c42321",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "b8045e6cc6a6bc8b8da5d436528ad0344e93494cdf82831e3bfd2b2982d302cb",
   "text": "Do that again.",
-  "bytes": 16762,
-  "generated": "2026-09-21T14:15:05Z"
+  "bytes": 15089,
+  "generated": "2026-11-03T19:09:49Z"
 }

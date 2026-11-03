@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-3d0d0952e81d",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "87a16afd0723ab64dea993685ea1d281d80db39f9f07d7ef13808c547a136dec",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "4d23f4fcaaf78f52047f7476bd4eb17610c54e0cad9b7be7cd1ba811bcd7a27c",
   "text": "I need to go outside.",
-  "bytes": 21777,
-  "generated": "2026-09-22T19:21:38Z"
+  "bytes": 21776,
+  "generated": "2026-11-03T19:09:59Z"
 }

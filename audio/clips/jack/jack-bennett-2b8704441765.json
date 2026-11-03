@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-2b8704441765",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "581a1600602046d850a38e4d5080c9b05c41db96faa3759f57efe3abed4b96f4",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "fe6dc5b7514813dffbf6931d31f2924f8db0a7e207e58d5a858d54d0cf1cc171",
   "text": "What? Okay, I'm awake.",
-  "bytes": 22613,
-  "generated": "2026-09-17T22:35:35Z"
+  "bytes": 24284,
+  "generated": "2026-11-03T19:09:41Z"
 }

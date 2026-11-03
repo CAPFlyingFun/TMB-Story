@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-b3d824772f7a",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "eb5c924b20b9334a1cfbbf26127cb8068e32e749a58ecdd23ec022849592c4b2",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "04c5bf2536f682a19c52f7db2cca6d769067c840548b4247c37ac2c853bcce54",
   "text": "Why would you ask that?",
-  "bytes": 21777,
-  "generated": "2026-10-01T18:01:57Z"
+  "bytes": 17597,
+  "generated": "2026-11-03T19:10:09Z"
 }

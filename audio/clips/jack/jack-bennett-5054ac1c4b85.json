@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-5054ac1c4b85",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "3ea90cb17e153f48346e8a53077275072605e40a670402d5610ac9c614419911",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "51740e9a43a8e7f8922b3ec587011197aba2cf314b132207dd6bced8ff1d24ce",
   "text": "Lena?",
-  "bytes": 10911,
-  "generated": "2026-10-07T03:29:33Z"
+  "bytes": 10910,
+  "generated": "2026-11-03T19:10:19Z"
 }

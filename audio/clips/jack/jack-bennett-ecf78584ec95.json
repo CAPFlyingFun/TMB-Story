@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-ecf78584ec95",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "52329809f3d532b0b8a9e6a3a75307597328809c8001f9f0afacacc49014311b",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "ab12ac69e04dedaeeb7de0837a5cb6070dc81f34f475cf6cbe30dcca8456c8cd",
   "text": "Oh, no you don't.",
-  "bytes": 15926,
-  "generated": "2026-09-17T22:35:40Z"
+  "bytes": 18851,
+  "generated": "2026-11-03T19:09:42Z"
 }

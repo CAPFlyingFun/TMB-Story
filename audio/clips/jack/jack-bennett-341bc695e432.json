@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-341bc695e432",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "1f2600285118c82631edb4858320cc219767eff5a334530553af08f96af6fe9c",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "150c9c401e75af73884ecf3a3bb993c689c61a6cda1f6e30e643095036250833",
   "text": "That's the ground.",
-  "bytes": 18852,
-  "generated": "2026-09-21T14:15:31Z"
+  "bytes": 18015,
+  "generated": "2026-11-03T19:09:55Z"
 }

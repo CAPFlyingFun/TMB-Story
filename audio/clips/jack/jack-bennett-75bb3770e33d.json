@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-75bb3770e33d",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "5f5cc93bbfe6d44f6fd5e23b59cf7b4630bb68a85d084015300d33f58e985070",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "c846045c225d4bb3e8bf63c817ac7e654331e0c6135bc56502696f24016e82db",
   "text": "It might. Add it to the list.",
-  "bytes": 27629,
-  "generated": "2026-10-01T18:02:37Z"
+  "bytes": 25538,
+  "generated": "2026-11-03T19:10:11Z"
 }

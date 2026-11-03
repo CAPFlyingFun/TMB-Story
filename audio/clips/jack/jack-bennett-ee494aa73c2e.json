@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-ee494aa73c2e",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "d2a5cc87d5ca2015dc53534eed91731c6953c2ee97356f961a3d0a90431f1d31",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "bb75b8d2d26bcc7aef6ed546c396b84b4faf469e825b5a5373d6ebc9aa43f73a",
   "text": "Good. Is the spider still there?",
-  "bytes": 33062,
-  "generated": "2026-10-07T03:27:26Z"
+  "bytes": 24702,
+  "generated": "2026-11-03T19:10:13Z"
 }

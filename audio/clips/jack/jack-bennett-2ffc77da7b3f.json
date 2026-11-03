@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-2ffc77da7b3f",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "09406ba392e37104eebef0042d21296bf58fa12da0402aa7efee2de683b98e4d",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "3d311935665a21fd0d47c03ccf909ea5e34f15f5d2a0051445ee468def9c5f4a",
   "text": "Well, that's new.",
-  "bytes": 18016,
-  "generated": "2026-09-17T22:35:41Z"
+  "bytes": 15925,
+  "generated": "2026-11-03T19:09:42Z"
 }

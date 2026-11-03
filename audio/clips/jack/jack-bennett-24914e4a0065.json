@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-24914e4a0065",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "466b570ec3d35701306c837b3516ecc2f9a6e1b9663c5933506b49fb32701caf",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "1c606fdeb2d2f6b2ee1def33832ddaeb0db60897d8074b906ef619409d41d6ca",
   "text": "Rule two?",
-  "bytes": 15090,
-  "generated": "2026-10-07T03:29:03Z"
+  "bytes": 15089,
+  "generated": "2026-11-03T19:10:18Z"
 }

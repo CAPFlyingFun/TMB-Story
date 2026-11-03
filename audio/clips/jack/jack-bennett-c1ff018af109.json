@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-c1ff018af109",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "b16ec471990748b48cf6d752fcca32f90b4edb6a476353addc334b7954e89cf8",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "6df70ff6892cb01760173061f9fa4a317e22b6f8517ecfd2c0f49664b13b307a",
   "text": "I'm not the pregnant one.",
-  "bytes": 23449,
-  "generated": "2026-09-17T22:36:19Z"
+  "bytes": 22612,
+  "generated": "2026-11-03T19:09:46Z"
 }

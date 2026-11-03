@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-1ecaa1e81e25",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "826761568619a5607ad0984081fc01246d07eb8baeab5baa9c1629ac98329cf6",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "43b369c6ae21ee9b87712f78db3c977dcc6f07603a7c4585eb4bb66fcb0ef8a9",
   "text": "No. That was my defense.",
-  "bytes": 29301,
-  "generated": "2026-09-17T22:35:55Z"
+  "bytes": 20941,
+  "generated": "2026-11-03T19:09:44Z"
 }

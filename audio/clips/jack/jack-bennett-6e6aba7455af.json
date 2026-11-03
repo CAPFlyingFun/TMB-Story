@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-6e6aba7455af",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "8430ae781925244fa4487c7a22f386dea16bc428c1a73e227ec3b103989d7ce9",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "b8acc5885cce61763500c370a4221a4fea948366082fd72273a5d867e32bd442",
   "text": "They'll survive an hour without you. I'm less sure about the reverse.",
-  "bytes": 59812,
-  "generated": "2026-10-07T03:29:15Z"
+  "bytes": 51452,
+  "generated": "2026-11-03T19:10:19Z"
 }

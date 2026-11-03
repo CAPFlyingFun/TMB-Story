@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-d093f1782c12",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "b05d7d1e5709c4bb42251314cedc2b700151073cd1728b127513d9157a98a10b",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "1b4b25434a07699aedb1a4c96346e8306ca75c0b7c1ecf2b935eac09c92daa6c",
   "text": "Radio?",
-  "bytes": 11328,
-  "generated": "2026-09-18T11:52:04Z"
+  "bytes": 12999,
+  "generated": "2026-11-03T19:09:53Z"
 }

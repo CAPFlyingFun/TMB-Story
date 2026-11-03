@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-415f9f5eadc8",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "b1aecb952ee302477303fc7f686a31c1c16e1ee87676233470845a396ee59da1",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "6654521ca6be7ab01e5d206d7062577738a5aa34c3e9aaad22cf7a857e35a89a",
   "text": "Not tonight.",
-  "bytes": 13836,
-  "generated": "2026-09-22T19:21:39Z"
+  "bytes": 13835,
+  "generated": "2026-11-03T19:10:01Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-465b977548da",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "431b496dcc469cb520303eaaedbc0a95582396d45c4828287b09ad03191beeae",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "3d849e4ae6f7ee72e81ec693c8ac657856a708217b0af91067c77f233dcfc30c",
   "text": "Not into the wilderness. Just the edge, on our side. I'll walk the line, take real environmental readings, and see what's actually there instead of what a camera decides to show me. We need firsthand information, not another feed.",
-  "bytes": 224906,
-  "generated": "2026-09-21T23:10:23Z"
+  "bytes": 206096,
+  "generated": "2026-11-03T19:10:00Z"
 }

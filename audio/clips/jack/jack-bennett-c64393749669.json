@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-c64393749669",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "7c71141c0b1f039491e87ebed0f955073d774053a84c5a96c9737022b66f93c9",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "9f5ee5c79889b42c60d21bc1a2be3a06cdb6daf79a452eff5abc6e8b13fdbc8e",
   "text": "If they're hunters, why isn't it hunting?",
-  "bytes": 32226,
-  "generated": "2026-10-07T03:27:56Z"
+  "bytes": 32225,
+  "generated": "2026-11-03T19:10:15Z"
 }

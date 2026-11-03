@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-cd6306840908",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "094af203597c55b68bf59af157ad837e0fe0e6f33f0d36dee106b84d2b975dd9",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "26b88242f58ae95e49368732ca5084d572f627b8d02fe2ff74077c43a052ccc5",
   "text": "Three weeks ago?",
-  "bytes": 18852,
-  "generated": "2026-09-21T15:14:13Z"
+  "bytes": 17597,
+  "generated": "2026-11-03T19:10:07Z"
 }

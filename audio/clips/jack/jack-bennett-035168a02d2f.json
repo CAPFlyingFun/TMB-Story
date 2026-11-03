@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-035168a02d2f",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "90f3783470990d9507ef8043d7bdf3972f144274cde4e0f9470c9f76bdb11cbc",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "869f25624aa16a501673766e6beb22143184aeb3fb82a744cd454d143a0af7ea",
   "text": "Sarah, are you seeing this?",
-  "bytes": 24285,
-  "generated": "2026-10-07T03:27:50Z"
+  "bytes": 23448,
+  "generated": "2026-11-03T19:10:15Z"
 }

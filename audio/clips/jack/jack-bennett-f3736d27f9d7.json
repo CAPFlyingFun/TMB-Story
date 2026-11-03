@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-f3736d27f9d7",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "77fdbf475a81d8f654a120dd6915dc272292ecbbf64f1069cc6a05249326d581",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "56efed8aa0dbc3b32839c3c1e137b65ad00a81f1797afa2179da5ebec062f743",
   "text": "Almost immediately.",
-  "bytes": 20524,
-  "generated": "2026-09-17T22:36:11Z"
+  "bytes": 18851,
+  "generated": "2026-11-03T19:09:45Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-cf40efed6a5e",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "aebb75d66a33302709aea118390dc796f4cefce6349e2b1b21f8390cc1f878b4",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "67a233a862f4888949b4b5df6579891b1f620e43f885832309ec87317eadbb6d",
   "text": "I know. It's the best one I've got right now.",
-  "bytes": 39750,
-  "generated": "2026-10-01T18:03:26Z"
+  "bytes": 35987,
+  "generated": "2026-11-03T19:10:13Z"
 }

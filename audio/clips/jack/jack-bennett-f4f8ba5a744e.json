@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-f4f8ba5a744e",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "f92a0c5f8c6f7daf2c1d6648befe8dbe345233dd6af87cd7b848c5776eee44a7",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "cd02bf05f6a6c154b9585785250908da3ef4a79976341e12bb1c298d9fc5eea4",
   "text": "Are you writing that down?",
-  "bytes": 21777,
-  "generated": "2026-10-07T03:29:08Z"
+  "bytes": 19687,
+  "generated": "2026-11-03T19:10:18Z"
 }

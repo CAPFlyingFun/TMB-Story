@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-c28ade84dc8e",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "21dc11c6b4e34198dd54f1c5cc273d2e495e28135a2c845360bb3f3e494dd0eb",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "15534858bc99f7e82411f8b3022ee3d455001388e04c2c36dafcf04f9edc8914",
   "text": "Pull up every perimeter sensor from the last hour. Not just south.",
-  "bytes": 58140,
-  "generated": "2026-10-01T18:02:42Z"
+  "bytes": 54377,
+  "generated": "2026-11-03T19:10:11Z"
 }

@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-c62328a43a55",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "4005572e9fa2869134ef755ab2e6ba673ec1e741e87da01d7697991505f6aba3",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "257e1a6b4e3b19915488ec809e689e04f62e5c1284d9c4a6e5201eb535a484dc",
   "text": "There's another copy.",
-  "bytes": 18852,
-  "generated": "2026-09-21T15:13:51Z"
+  "bytes": 20941,
+  "generated": "2026-11-03T19:10:07Z"
 }

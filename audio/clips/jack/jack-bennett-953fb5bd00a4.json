@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-953fb5bd00a4",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "9725d75800ddc4ecce75dd329b5797e5b50087af462a83684588259c4e85e335",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "141b53d55b7ac5092916281464981da9a01b74e0604154f8c798d9ccf7fbab19",
   "text": "Wastewater processing.",
-  "bytes": 22613,
-  "generated": "2026-09-21T15:13:42Z"
+  "bytes": 22612,
+  "generated": "2026-11-03T19:10:06Z"
 }

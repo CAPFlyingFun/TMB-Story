@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-be5816ba6413",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "35a495e7c938c52a28ed004acbb58f17a240c8b81055f0ca7d72ed400623c83f",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "209d0082a619444ef1859c23a44eb1d1bdffd8a314e60a9c4f2daa04284d887b",
   "text": "The scale target.",
-  "bytes": 19688,
-  "generated": "2026-09-21T15:13:17Z"
+  "bytes": 19687,
+  "generated": "2026-11-03T19:10:04Z"
 }

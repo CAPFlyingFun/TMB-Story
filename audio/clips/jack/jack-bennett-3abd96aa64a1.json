@@ -1,8 +1,8 @@
 {
   "clipId": "jack-bennett-3abd96aa64a1",
   "speaker": "jack-bennett",
-  "voiceId": "mkT7KpSQR9btjx2rHpQY",
-  "voiceVersion": 1,
+  "voiceId": "tSlTCAlRDndL8T1Rvzb3",
+  "voiceVersion": 2,
   "model": "eleven_multilingual_v2",
   "outputFormat": "mp3_44100_128",
   "settings": {
@@ -11,8 +11,10 @@
     "style": 0.0,
     "use_speaker_boost": true
   },
-  "fingerprint": "5a82e7190f7f5585b0cd8651aebc21ddc9980a9b364abbb8d2c963472c6d3c55",
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "33ab2c4f5f7d7172cc9b2ae775382d3a383e45f46382a40716859ee358eee01a",
   "text": "I think somebody patient enough to plant this three weeks in advance doesn't leave loose ends.",
-  "bytes": 68589,
-  "generated": "2026-10-01T18:02:18Z"
+  "bytes": 71096,
+  "generated": "2026-11-03T19:10:10Z"
 }
