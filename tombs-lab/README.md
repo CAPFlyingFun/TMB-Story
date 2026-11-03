@@ -15,6 +15,13 @@ layout.
 - **ChatGPT's notes:** `README-chatgpt.md`, `docs/INTEGRATION_FOR_CLAUDE.md`,
   `docs/DIFFERENCES_FROM_CANONICAL_GAME.md`.
 
+## One look for the movie and the game
+
+Joshua, 2026-11-03: the Watch tab ("movie style") and TRADDOMIUM's playable lab must look the
+same. This module is the one source of the building for both: the same manifest, geometry and
+materials, with no copy of the lab's look kept on either side. Improvements to the look are
+made here. Cameras, story events and who is playing stay outside the geometry.
+
 ## What changed on import
 
 - The build failed on one unused parameter (`buildLab(state)` in `src/tombs/geometry.ts`). It is
