@@ -38,6 +38,8 @@ export interface LabDisplay{
  readonly arrayRings:readonly THREE.Mesh[];
  readonly stats:{staticDrawGroups:number;roomCount:number;doorCount:number};
  setRoof(on:boolean):void;
+ /** Room name tags. They draw through walls, so they belong to the top view, not to walking around. */
+ setLabels(on:boolean):void;
  update(dt:number,state:LabState):void;
  dispose():void;
 }
@@ -46,6 +48,7 @@ export function buildLab(_state:LabState):LabDisplay{
  const root=new THREE.Group();root.name='TOMBS:DRAFT-C:LAB';
  const shell=new THREE.Group();shell.name='TOMBS:static-facility';root.add(shell);
  const roof=new THREE.Group();roof.name='TOMBS:removable-roof';root.add(roof);roof.visible=false;
+ const labels=new THREE.Group();labels.name='TOMBS:room-labels';root.add(labels);labels.visible=false;
  const m=new Map<string,THREE.Material>([
   ['floor',boxMaterial(palette.floor)],['wall',boxMaterial(palette.wall)],['external',boxMaterial(palette.external)],
   ['array',boxMaterial(palette.arrayWall)],['metal',boxMaterial(palette.metal)],['desk',boxMaterial(palette.desk)],
@@ -54,27 +57,62 @@ export function buildLab(_state:LabState):LabDisplay{
   ['red',new THREE.MeshBasicMaterial({color:0xe35f61})],['yellow',new THREE.MeshBasicMaterial({color:0xf3c37c})],
  ]);
  const batch=new Batch(shell,m);
- // Foundations and internal flooring are derived from exactly the same metric room and corridor manifest.
+ // ONE floor slab under the whole building, traced along the outside walls. Per-room and per-hall
+ // boxes left gaps wherever no room or hall rectangle reached (between the wings, beside the
+ // chamber) and overlapped where halls crossed, and overlapping tops at y=0 z-fight.
  const placeFloor=(x0:number,x1:number,z0:number,z1:number)=>batch.add('floor',(x0+x1)/2,-.12,(z0+z1)/2,x1-x0,.24,z1-z0);
- for(const r of PLAN.rooms)placeFloor(r.bounds.x0,r.bounds.x1,r.bounds.z0,r.bounds.z1);
- for(const h of PLAN.halls)placeFloor(h.bounds.x0,h.bounds.x1,h.bounds.z0,h.bounds.z1);
+ {
+  const T=.08; // to the outer face of the thinner (0.16 m) outside walls; the 0.28 m ones overhang it a little
+  const outline:[number,number][]=[[-17-T,-13.1-T],[17+T,-13.1-T],[17+T,5.3],[10.1,8.5+T],[3+T,8.5+T],[3+T,11.5+T],[-3-T,11.5+T],[-3-T,8.5+T],[-10.1,8.5+T],[-17-T,4.8]];
+  const shape=new THREE.Shape(outline.map(([x,z])=>new THREE.Vector2(x,-z)));
+  const slab=new THREE.ExtrudeGeometry(shape,{depth:.24,bevelEnabled:false});slab.rotateX(-Math.PI/2);
+  const floor=new THREE.Mesh(slab,m.get('floor'));floor.position.y=-.24;floor.name='TOMBS:floor-slab';shell.add(floor);
+ }
  // Forecourt is WORLD-side integration marker: small normal-scale section here only for preview.
- placeFloor(-2.2,2.2,11.5,14);
+ placeFloor(-2.2,2.2,11.5+.08,14); // starts where the slab ends: overlapping tops at y=0 flicker
  // The corridor reads as a U even from overhead thanks to continuous floor markers.
  for(const [x,z,ry,len] of [[-8.1,-3.5,0,9],[8.1,-3.5,0,9],[0,7,Math.PI/2,14]] as const){
    batch.add('light',x,.012,z,.032,.014,len,ry);
  }
  // Real walls, carefully cut around doors and windows. Geometry and collision share cutWall().
  const glassMat=new THREE.MeshPhysicalMaterial({color:0x91d7ef,transparent:true,opacity:.32,metalness:.05,roughness:.12,side:THREE.DoubleSide,depthWrite:false});
- for(const wall of PLAN.walls)for(const part of cutWall(wall)){
-  const dx=part.to[0]-part.from[0],dz=part.to[1]-part.from[1],len=Math.hypot(dx,dz),h=part.y1-part.y0;
+ // Does another wall meet this one at `end` and run on in the same straight line?
+ const continues=(wall:(typeof PLAN.walls)[number],end:readonly[number,number])=>PLAN.walls.some(o=>{
+  if(o===wall)return false;
+  const touches=[o.from,o.to].some(q=>Math.abs(q[0]-end[0])<.001&&Math.abs(q[1]-end[1])<.001);
+  if(!touches)return false;
+  const ax=wall.to[0]-wall.from[0],az=wall.to[1]-wall.from[1],bx=o.to[0]-o.from[0],bz=o.to[1]-o.from[1];
+  return Math.abs(ax*bz-az*bx)<1e-6*Math.hypot(ax,az)*Math.hypot(bx,bz);
+ });
+ PLAN.walls.forEach((wall,wallIndex)=>{for(const part of cutWall(wall)){
+  const dx=part.to[0]-part.from[0],dz=part.to[1]-part.from[1],len=Math.hypot(dx,dz),h=part.y1-part.y0,yaw=Math.atan2(-dz,dx);
   const x=(part.from[0]+part.to[0])/2,z=(part.from[1]+part.to[1])/2;
-  const yaw=Math.atan2(-dz,dx),thick=wall.material==='external'?.28:wall.material==='array'?.25:.16;
+  const thick=wall.material==='external'?.28:wall.material==='array'?.25:.16;
   if(part.glass){
-   const pane=new THREE.Mesh(new THREE.BoxGeometry(len,h,.046),glassMat);pane.position.set(x,part.y0+h/2,z);pane.rotation.y=yaw;pane.name=`tombs:glass:${part.id}`;root.add(pane);
-   batch.add('metal',x,part.y0+.035,z,len+.05,.07,.11,yaw);batch.add('metal',x,part.y1-.035,z,len+.05,.07,.11,yaw);
-  }else batch.add(wall.material==='external'?'external':wall.material==='array'?'array':'wall',x,part.y0+h/2,z,len,h,thick,yaw);
- }
+   // A little short of the sill and lintel, so the pane's ends never share their faces.
+   const pane=new THREE.Mesh(new THREE.BoxGeometry(len-.012,h-.012,.046),glassMat);pane.position.set(x,part.y0+h/2,z);pane.rotation.y=yaw;pane.name=`tombs:glass:${part.id}`;root.add(pane);
+   batch.add('metal',x,part.y0+.036,z,len+.05,.07,.11,yaw);batch.add('metal',x,part.y1-.036,z,len+.05,.07,.11,yaw);
+  }else{
+   // A solid piece that ends at a wall's own end runs on by just under half its thickness, so
+   // two walls meeting at a corner fill the corner instead of leaving a notch, without any two
+   // faces landing in the same plane. Tops are staggered by a millimetre or two per wall for
+   // the same reason: walls of one room share a height, and their overlapping corner tops
+   // flickered from above.
+   const ext=thick/2-.004,full=Math.hypot(wall.to[0]-wall.from[0],wall.to[1]-wall.from[1]);
+   const ux=dx/len,uz=dz/len;
+   const t0=Math.hypot(part.from[0]-wall.from[0],part.from[1]-wall.from[1]),t1=Math.hypot(part.to[0]-wall.from[0],part.to[1]-wall.from[1]);
+   // ...but not where the wall carries straight on into another wall: two collinear walls
+   // overlapping put their faces in the same plane, which is the flicker this is avoiding.
+   const e0=t0<.001&&!continues(wall,wall.from)?ext:0,e1=Math.abs(t1-full)<.001&&!continues(wall,wall.to)?ext:0;
+   const lift=part.y1>=wall.height-.001?(wallIndex%7)*.0015:0;
+   // A sill or lintel over an opening reaches a centimetre into the wall on each side, a
+   // millimetre thinner than it: butted exactly edge to edge, the pieces showed a sparkling
+   // crack up the side of every door and window.
+   const bridge=/:(sill|lintel)$/.test(part.id);
+   const L2=len+e0+e1+(bridge?.02:0),cx=x+ux*(e1-e0)/2,cz=z+uz*(e1-e0)/2;
+   batch.add(wall.material==='external'?'external':wall.material==='array'?'array':'wall',cx,part.y0+(h+lift)/2,cz,L2,h+lift,bridge?thick-.002:thick,yaw);
+  }
+ }});
  // Octagonal Array base, central machinery and independent ring articulations.
  const chamber=new THREE.Group();chamber.name='tombs.array';root.add(chamber);
  const platform=new THREE.Mesh(new THREE.CylinderGeometry(1.65,1.9,.62,32),boxMaterial(0x6b8296));platform.position.y=.36;chamber.add(platform);
@@ -113,7 +151,7 @@ export function buildLab(_state:LabState):LabDisplay{
  // Area lighting strips (no 100+ point lights).
  for(const r of PLAN.rooms){const x=(r.bounds.x0+r.bounds.x1)/2,z=(r.bounds.z0+r.bounds.z1)/2;
   for(let i=-1;i<=1;i++)batch.add('light',x+i*1.35,r.ceiling-.12,z,1.0,.04,.11);
-  const name=labelSprite(r.label,r.id==='control'?4:3);name.position.set(x,Math.min(r.ceiling-.65,3),z);root.add(name);
+  const name=labelSprite(r.label,r.id==='control'?4:3);name.position.set(x,Math.min(r.ceiling-.65,3),z);labels.add(name);
  }
  for(const h of PLAN.halls){const x=(h.bounds.x0+h.bounds.x1)/2,z=(h.bounds.z0+h.bounds.z1)/2;
   batch.add('light',x,h.ceiling-.12,z,.55,.05,.10);
@@ -128,12 +166,27 @@ export function buildLab(_state:LabState):LabDisplay{
  for(const h of PLAN.halls){const b=h.bounds;const panel=new THREE.Mesh(new THREE.BoxGeometry(b.x1-b.x0,.13,b.z1-b.z0),roofMat);
  panel.position.set((b.x0+b.x1)/2,h.ceiling+.1,(b.z0+b.z1)/2);roof.add(panel)}
  const doorGroups=new Map<DoorId,THREE.Group>();
+ // Where an open sliding door goes: into the longer part of its own wall, by no more than that
+ // part holds. Sliding the full width the same way every time ran some doors out past the end
+ // of their wall and into the corridor.
+ const doorSlides=new Map<DoorId,[number,number]>();
+ function doorSlide(d:(typeof PLAN.doors)[number]):[number,number]{
+  const wall=PLAN.walls.find(w=>w.openings.includes(d.id))!;
+  const L=Math.hypot(wall.to[0]-wall.from[0],wall.to[1]-wall.from[1]),ux=(wall.to[0]-wall.from[0])/L,uz=(wall.to[1]-wall.from[1])/L;
+  const c=(d.at[0]-wall.from[0])*ux+(d.at[1]-wall.from[1])*uz;
+  const before=c-d.width/2-.05,after=L-c-d.width/2-.05,sign=after>=before?1:-1;
+  const travel=Math.max(0,Math.min(d.width*.95,Math.max(before,after)));
+  return [ux*sign*travel,uz*sign*travel];
+ }
  const doorMaterial=boxMaterial(0x8ba7b5);const glassDoorMaterial=new THREE.MeshPhysicalMaterial({color:0x75bfd4,metalness:.12,roughness:.2,transparent:true,opacity:.72});
  for(const d of PLAN.doors){const g=new THREE.Group();g.name=`tombs:door:${d.id}`;g.position.set(d.at[0],0,d.at[1]);root.add(g);doorGroups.set(d.id,g);
   const orientation=d.along==='x'?0:Math.PI/2;
-  const panel=new THREE.Mesh(new THREE.BoxGeometry(d.width,d.height,.085),d.id.startsWith('security')?glassDoorMaterial:doorMaterial);
-  panel.rotation.y=orientation;panel.position.y=d.height/2;panel.name=`door:panel:${d.id}`;g.add(panel);
-  const edge=new THREE.Mesh(new THREE.BoxGeometry(d.width,.065,.1),new THREE.MeshBasicMaterial({color:0x4cc7eb}));edge.position.y=d.height-.02;edge.rotation.y=orientation;g.add(edge);
+  // A centimetre narrower and shorter than its opening: a panel exactly the opening's size put
+  // its edges in the same planes as the jambs and the lintel, which flickered.
+  const panel=new THREE.Mesh(new THREE.BoxGeometry(d.width-.02,d.height-.012,.085),d.id.startsWith('security')?glassDoorMaterial:doorMaterial);
+  panel.rotation.y=orientation;panel.position.y=(d.height-.012)/2;panel.name=`door:panel:${d.id}`;g.add(panel);
+  const edge=new THREE.Mesh(new THREE.BoxGeometry(d.width-.02,.06,.1),new THREE.MeshBasicMaterial({color:0x4cc7eb}));edge.position.y=d.height-.05;edge.rotation.y=orientation;g.add(edge);
+  doorSlides.set(d.id,doorSlide(d));
  }
  // Lamps belong to town, so they naturally follow a 1:180 shrink.
  const ambient=new THREE.HemisphereLight(0xa7dbff,0x101821,1.4);ambient.name='TOMBS:fill';root.add(ambient);
@@ -150,12 +203,13 @@ export function buildLab(_state:LabState):LabDisplay{
   for(const d of PLAN.doors){const old=animatedDoor.get(d.id)??0,target=s.isOpen(d.id)?1:0;
     const next=Math.max(0,Math.min(1,old+(target>old?1:-1)*dt*1.6));animatedDoor.set(d.id,next);
     const g=doorGroups.get(d.id)!;const moving=g.children.filter(c=>c.name.startsWith('door:')||c.type==='Mesh');
-    for(const child of moving){child.position.x=d.along==='x'?next*d.width*.95:0;child.position.z=d.along==='z'?next*d.width*.95:0;}
+    const [sx,sz]=doorSlides.get(d.id)!;
+    for(const child of moving){child.position.x=next*sx;child.position.z=next*sz;}
   }
   if(mode==='activation'){arrayRings.forEach((ring,i)=>{ring.rotation.y+=spinRate[i]*dt;ring.rotation.x+=spinRate[i]*dt*.42})}
  }
  return {group:root,roof,doors:doorGroups,arrayRings,stats:{staticDrawGroups,roomCount:PLAN.rooms.length,doorCount:PLAN.doors.length},
-  setRoof:(on:boolean)=>{roof.visible=on},update,dispose(){root.traverse(o=>{
+  setRoof:(on:boolean)=>{roof.visible=on},setLabels:(on:boolean)=>{labels.visible=on},update,dispose(){root.traverse(o=>{
     if(o instanceof THREE.Mesh){o.geometry.dispose();const arr=Array.isArray(o.material)?o.material:[o.material];for(const mat of arr)mat.dispose()}
     if(o instanceof THREE.Sprite){o.material.map?.dispose();o.material.dispose()}
    });for(const mat of m.values())mat.dispose();glassMat.dispose();roofMat.dispose();doorMaterial.dispose();glassDoorMaterial.dispose();root.removeFromParent();}

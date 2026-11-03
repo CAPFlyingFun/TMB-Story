@@ -68,10 +68,14 @@ edges(R[7],{n:['security-inner'],s:['security-outer']});
 // Exterior perimeter of support wings and corridors; avoids capping existing office window walls.
 addWall('west-outside-a',[-17,-7.6],[-17,-5.5],3.4,[],'external');
 addWall('west-outside-b',[-17,-1.5],[-17,.8],3.4,[],'external');
-addWall('west-outside-c',[-17,4.8],[-10.1,8.4],3.4,[],'external');
+addWall('west-outside-c',[-17,4.8],[-10.1,8.5],3.4,[],'external');
 addWall('east-outside-a',[17,-7.6],[17,-4.5],3.4,[],'external');
 addWall('east-outside-b',[17,1.5],[17,5.3],3.4,[],'external');
-addWall('east-outside-c',[17,5.3],[10.1,8.4],3.4,[],'external');
+addWall('east-outside-c',[17,5.3],[10.1,8.5],3.4,[],'external');
+// The north face between the office wings and the control room (left open in the first draft,
+// which showed the outside through the building between the rooms).
+addWall('north-outside-west',[-10.5,-13.1],[-6,-13.1],3.4,[],'external');
+addWall('north-outside-east',[6,-13.1],[10.5,-13.1],3.4,[],'external');
 // Outer corridor boundaries are open to office connections up north; both side halls meet the bottom hall.
 addWall('west-hall-inside',[-6.3,-7.55],[-6.3,-5.7],3.4,[],'internal');
 addWall('east-hall-inside',[6.3,-7.55],[6.3,-5.7],3.4,[],'internal');

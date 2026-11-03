@@ -39,6 +39,25 @@ made here. Cameras, story events and who is playing stay outside the geometry.
     still never said in the story (Q05).
 - `vite.config.ts` was added so the build lands in `preview/` with relative paths, for GitHub Pages.
 
+## Fixes after Joshua's first look (2026-11-03)
+
+- **Looking left and right was backwards.** Dragging right now turns right.
+- **Gaps in the floor.** The floor was one box per room and per corridor, which left holes
+  wherever none of them reached and overlapped where corridors crossed. It is now one slab
+  traced along the outside walls. The north face between the office wings and the control
+  room had no wall at all, so two outside wall pieces were added there.
+- **Flickering (z-fighting) on doors and windows.**
+  - Door panels were exactly the size of their opening. They are now a centimetre smaller,
+    and the top strip sits below the lintel.
+  - Sliding doors now slide into the longer side of their wall and never past its end. Some
+    used to run out into the corridor.
+  - Window glass stops short of the sill and the lintel.
+  - Sills and lintels reach just into the wall beside them, which removes the sparkling crack
+    up each side of every opening.
+  - Wall corners are filled without overlapping faces, and wall tops no longer share a height
+    where they overlap.
+- **Room name tags** drew through every wall. They now show only in the top view.
+
 ## Rebuilding
 
 ```bash

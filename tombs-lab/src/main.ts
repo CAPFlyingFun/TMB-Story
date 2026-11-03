@@ -41,7 +41,7 @@ function captureExploreAngles():void{const target=new THREE.Vector3();camera.get
 function aimLocal(x:number,y:number,z:number):void{controller.townRoot.updateWorldMatrix(true,false);camera.lookAt(controller.townRoot.localToWorld(new THREE.Vector3(x,y,z)))}
 function applyViewAngles():void{const dx=Math.sin(yaw)*Math.cos(pitch),dy=Math.sin(pitch),dz=-Math.cos(yaw)*Math.cos(pitch);aimLocal(camera.position.x+dx,camera.position.y+dy,camera.position.z+dz)}
 function setView(next:typeof view):void{
- director.stop();view=next;orbit.enabled=next==='top';
+ director.stop();view=next;orbit.enabled=next==='top';building.setLabels(next==='top');
  if(next==='top'){building.setRoof(false);roof=false;camera.position.set(0,52,22);orbit.target.set(0,0,0);orbit.update();aimLocal(0,0,0);setCaption('Authoritative metric blockout: orbit, zoom and inspect the U-shaped loop.');}
  else if(next==='explore'){camera.position.set(-13.1,1.65,-9.9);aimLocal(-14.5,1.4,-11.8);captureExploreAngles();setCaption('Playable room exploration · Stable interactive object IDs');}
 }
@@ -70,7 +70,7 @@ window.addEventListener('blur',()=>{held.clear();touchMove.clear()});
 renderer.domElement.addEventListener('pointerdown',e=>{if(view!=='explore')return;drag=true;px=e.clientX;py=e.clientY;renderer.domElement.setPointerCapture(e.pointerId)});
 renderer.domElement.addEventListener('pointerup',()=>{drag=false});
 renderer.domElement.addEventListener('pointermove',e=>{if(view!=='explore'||!drag)return;const dx=e.clientX-px,dy=e.clientY-py;px=e.clientX;py=e.clientY;
- yaw-=dx*.004;pitch=THREE.MathUtils.clamp(pitch-dy*.004,-1.35,1.35);applyViewAngles()});
+ yaw+=dx*.004;pitch=THREE.MathUtils.clamp(pitch-dy*.004,-1.35,1.35);applyViewAngles()});
 for(const b of Array.from(document.querySelectorAll<HTMLButtonElement>('button[data-move]'))){const k=b.dataset.move!;
  b.addEventListener('pointerdown',e=>{e.preventDefault();touchMove.add(k);b.setPointerCapture(e.pointerId)});
  for(const event of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(event,()=>touchMove.delete(k));
