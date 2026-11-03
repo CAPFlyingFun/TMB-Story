@@ -98,6 +98,15 @@ says what the English says and nothing more: it never explains, adds or reveals.
 | midge / gnat | mosquito / mosquitinho | Chapters 20 and 22 |
 | kick (trapped insects in the drops) | espernear |  |
 | holding tank | tanque de armazenamento |  |
+| flatbed (Paul's truck) | caminhão-plataforma | Chapters 23 to 25 |
+| red lamp (Mark's) | lâmpada vermelha | Chapters 23 to 24 |
+| front door (of the spider's retreat) | porta da frente (dela) | Chapters 21, 24, 26 |
+| the crack (across the road) | a rachadura (atravessando a estrada) | Chapter 24 |
+| spare line | corda reserva | Chapter 25 |
+| drain spigot (on the trough) | torneira de dreno | Chapter 25; "handle" = manopla |
+| the wet line | a linha molhada | Chapter 26 |
+| watching (Sarah's job) / "watching with a pen" | assistir / "assistir com uma caneta" | "Watching is fine" = "assistir pode" (Chapters 21, 26) |
+| "One shake." / "First gray" | "Uma sacudida." / "Primeiro cinza" | titles of Chapters 25 and 24 |
 
 ## Voice
 

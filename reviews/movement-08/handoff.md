@@ -90,3 +90,10 @@ It did:
   Validation for Chapters 1 to 26 is READY.
 - Rebuilt the reader manifest and the `22-24` and `25-27` Word files from the chapter files. The
   run's own copies were not used. The audio tests pass.
+
+## Translations (2026-11-03)
+
+Chapters 24 to 26 translated by hand into Indonesian, Brazilian Portuguese, Spanish, Filipino and
+French (262 lines each), glossaries extended. Every line checked against the manifests. Decision
+0028 addendum. Noticed, not changed: Indonesian Chapter 22 says "kait gandengan" for the tow hitch
+where Chapter 19 and the glossary say "kait derek".

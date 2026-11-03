@@ -110,6 +110,20 @@ says what the English says and nothing more: it never explains, adds or reveals.
 | flatbed / drum | camion à plateau (le plateau) / fût |  |
 | loading platform | quai de chargement |  |
 | Four (Mark to Unit Four) | Quatre | "Bien vu, Quatre." |
+| the cart (the white maintenance cart) / tow hitch | la voiturette / l'attelage | as in Chapters 21 and 24 |
+| the crack (across the road) | la fissure (en travers de la route) | Chapter 24 |
+| work lamp / the red lamp | lampe de chantier / la lampe rouge |  |
+| first gray / charcoal (the sky) | premier gris / anthracite | Chapter 24 title "Premier gris" |
+| shake / one shake | secousse / une secousse | Chapter 25 title "Une secousse" |
+| the shower (the beads falling) | l'averse |  |
+| rubber strips (on the lid rim) | bandes de caoutchouc |  |
+| spare line / main rope | corde de rechange / corde principale |  |
+| "Walk it back." | "Ramenez-la au pas." |  |
+| drain spigot | robinet de vidange | Chapter 25 |
+| the wet line | la traînée mouillée | Chapter 26 |
+| "watching with a pen" | "regarder avec un stylo" | Chapter 26; "watching is fine" = "regarder, ça va" |
+| "That's the thing." (Paul and Jack, the spider) | "C'est elle, la bête." |  |
+| robin | rouge-gorge | as in Chapter 19 |
 
 ## Voice
 

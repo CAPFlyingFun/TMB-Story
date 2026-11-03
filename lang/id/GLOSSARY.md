@@ -148,6 +148,14 @@ the captions.
 | "Boil it, always." | "Rebus, selalu." | Aiden's rule, on the trough |
 | holding tank | tangki penampung | from Chapter 16 |
 | crib / crib rail | boks bayi / pagar boks bayi | |
+| the crack across the road | retakan melintang di jalan / retakan | Chapter 24, where the trough is set |
+| front door (the retreat's) | pintu depan | "under the front door" → *di bawah pintu depan(nya)* |
+| tow hitch | kait derek | as Chapter 19 |
+| spare line | tali cadangan | Chapter 25 |
+| "Walk it back." | "Tuntun mundur." | dragging the trough on the rope; Unit Four's *menuntunnya mundur* |
+| drain spigot | keran pembuangan | on the trough, Chapter 25 |
+| the wet line | garis basah | Chapter 26 |
+| "watching" / "watching with a pen" | mengawasi / mengawasi pakai pena | Sarah's work, Doctor Mercer's word |
 
 ## Voice
 

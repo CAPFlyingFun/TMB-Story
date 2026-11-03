@@ -105,6 +105,15 @@ says what the English says and nothing more: it never explains, adds or reveals.
 | gnat | mosquito | distinct from midge (*jején*) |
 | holding tank / drum / flatbed | tanque de almacenamiento / tambor / camión de plataforma |  |
 | crib / crib rail | cuna / baranda de la cuna |  |
+| the crack across the road | la grieta que atraviesa el camino | Chapter 24 |
+| front door (the retreat's opening) / "under its front door" | puerta de entrada / "debajo de su puerta de entrada" | Chapters 21, 24 to 26 |
+| strings of glass / beads (drops along a blade) | sartas de vidrio / cuentas | Chapters 19, 24, 25 |
+| spare line | cuerda de repuesto | Chapter 25 |
+| "Pull. Slow." (to the rope team) | "Tiren. Despacio." | plural; "Tira." stays for one person |
+| drain spigot | llave de desagüe | Chapter 25 |
+| the wet line | la línea mojada | Chapter 26 |
+| "Watching." / "watching is fine" / "watching with a pen" | "Mirar." / "mirar está bien" / "mirar con bolígrafo" | Chapters 21, 26 |
+| board (Mark's whiteboard) | pizarrón | never *tabla*, which is the splash board |
 
 ## Voice
 

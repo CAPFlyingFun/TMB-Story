@@ -97,6 +97,13 @@ says what the English says and nothing more: it never explains, adds or reveals.
 | "Boil it, always." | "Pakuluan, palagi." | written on the trough |
 | gnat | niknik | same as midge |
 | whiteboard | whiteboard | *board* alone also kept |
+| the spider's front door | ang pintuan nito | Chapters 21, 24, 26; not the greenhouse *front door* |
+| the crack across the road | ang bitak (na tumatawid sa kalsada) | Chapter 24 |
+| "One leaf. One lift. One drop." | "Isang dahon. Isang angat. Isang patak." | Mark's rule, Chapters 23 to 24 |
+| spare line (rope) | reserbang lubid | Chapter 25 |
+| drain spigot | gripong pang-drain | Paul's brass spout on the trough, Chapter 25 |
+| the wet line | ang basang guhit | Chapter 26 |
+| watching / "watching with a pen" (Sarah) | panonood / "panonood na may hawak na panulat" | Doctor Mercer's allowance; Chapter 26 |
 
 ## Voice
 
