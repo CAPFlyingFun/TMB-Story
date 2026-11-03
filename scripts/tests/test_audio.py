@@ -1958,7 +1958,7 @@ class VoiceAssignmentTests(unittest.TestCase):
         pins all five so a regeneration cannot quietly recast anybody."""
         reg = Registry()
         expect = {
-            "jack-bennett": "mkT7KpSQR9btjx2rHpQY",
+            "jack-bennett": "tSlTCAlRDndL8T1Rvzb3",  # recast 2026-11-03 (decision 0043)
             "sarah-bennett": "MClEFoImJXBTgLwdLI5n",
             "system": "QpRibeuwXoGrlpLFDwqY",
             "narrator": "XjLkpWUlnhS8i7gGz3lZ",
