@@ -28,6 +28,8 @@ const controller=new TownScaleController(island,1);
 controller.setWorldAnchor(0,0,0);
 const labState=new LabState();const building=buildLab(labState);controller.townRoot.add(building.group);
 const characters=createCharacterMounts();controller.townRoot.add(characters.group);
+// For debugging in the browser console and automated checks; nothing depends on it.
+(window as unknown as {__tombs:unknown}).__tombs={labState,building,controller,get camera(){return camera},THREE};
 // Camera belongs inside townRoot: it scales with Jack, Sarah and the lab, while exterior bugs stay in island.
 const camera=new THREE.PerspectiveCamera(68,innerWidth/innerHeight,.025,1500);controller.townRoot.add(camera);
 camera.position.set(-13.1,1.65,-9.9);aimLocal(-13.0,1.1,-12.4);

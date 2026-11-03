@@ -107,6 +107,15 @@ On phones the four arrow buttons are replaced by an analog joystick at the botto
 you push the knob sets how fast you walk, in the direction it points. Drag anywhere else to look.
 The keyboard still works on a computer.
 
+## Door shudder (2026-11-03)
+
+Joshua was right that the open doors were "opening and closing quickly". The first draft's door
+animation stepped backward whenever a door was not below its target, so a fully open door
+stepped back every other frame and shuddered. It now eases to the target and stops. The doors
+are also pocket doors now: open, a leaf goes all the way into its wall, past the opening, with a
+frame (casing) round every doorway that covers the edges. `window.__tombs` exposes the lab state
+and building, for debugging in the browser console.
+
 ## Rebuilding
 
 ```bash

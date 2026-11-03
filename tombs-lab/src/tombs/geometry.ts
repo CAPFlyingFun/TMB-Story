@@ -161,6 +161,7 @@ export function buildLab(_state:LabState):LabDisplay{
  const doorLeaves=new Map<DoorId,Leaf[]>();
  const doorMaterial=boxMaterial(0x8ba7b5);const glassDoorMaterial=new THREE.MeshPhysicalMaterial({color:0x75bfd4,metalness:.12,roughness:.2,transparent:true,opacity:.72});
  const edgeMaterial=new THREE.MeshBasicMaterial({color:0x4cc7eb});
+ const frameMaterial=boxMaterial(0x5d7486);
  for(const d of PLAN.doors){const g=new THREE.Group();g.name=`tombs:door:${d.id}`;g.position.set(d.at[0],0,d.at[1]);root.add(g);doorGroups.set(d.id,g);
   const wall=PLAN.walls.find(w=>w.openings.includes(d.id))!;
   const L=Math.hypot(wall.to[0]-wall.from[0],wall.to[1]-wall.from[1]),ux=(wall.to[0]-wall.from[0])/L,uz=(wall.to[1]-wall.from[1])/L;
@@ -172,14 +173,32 @@ export function buildLab(_state:LabState):LabDisplay{
   const leaves:Leaf[]=[];
   for(const [offset,width,dir] of spans){
    const room=dir>0?after:before;
-   const travel=Math.max(0,Math.min(width*.97,room)); // its far end may go no deeper than the wall it slides into
+   // A pocket door: open, the leaf goes ALL the way into its wall, a few centimetres past the
+   // opening's edge, so no sliver of it is left standing in the doorway (that sliver, a few
+   // centimetres from the jamb, shimmered like z-fighting). Only a wall too short to hold it
+   // stops it sooner.
+   const travel=Math.max(0,Math.min(width+.08,room));
    const leaf=new THREE.Group();leaf.position.set(ux*offset,0,uz*offset);leaf.rotation.y=yaw;g.add(leaf);
    const lw=width-.024,lh=d.height-.014;
    const panel=new THREE.Mesh(new THREE.BoxGeometry(lw,lh,.085),d.id.startsWith('security')?glassDoorMaterial:doorMaterial);panel.position.y=lh/2;panel.name=`door:panel:${d.id}`;leaf.add(panel);
-   const edge=new THREE.Mesh(new THREE.BoxGeometry(lw-.012,.06,.1),edgeMaterial);edge.position.y=lh-.045;leaf.add(edge);
+   // The top strip is a hair thinner than the leaf itself, so it never stands out of the leaf's
+   // faces to catch the light inside the wall's pocket.
+   const edge=new THREE.Mesh(new THREE.BoxGeometry(lw-.012,.06,.08),edgeMaterial);edge.position.y=lh-.045;leaf.add(edge);
    leaves.push({node:leaf,slide:[ux*dir*travel,uz*dir*travel]});
   }
   doorLeaves.set(d.id,leaves);
+  // A door frame (casing) on both faces of the wall: two jambs and a head, a little deeper than
+  // the wall so they stand proud of it, and overlapping the opening by 3.5 cm so the leaf's
+  // edges, the gap round a closed door and the cut ends of the wall all sit behind them.
+  {
+   const thick=wall.material==='external'?.28:wall.material==='array'?.25:.16,depth=thick+.03,t=.07;
+   for(const side of [-1,1]){
+    const jamb=new THREE.Mesh(new THREE.BoxGeometry(t,d.height,depth),frameMaterial);
+    jamb.position.set(ux*side*d.width/2,d.height/2,uz*side*d.width/2);jamb.rotation.y=yaw;g.add(jamb);
+   }
+   const head=new THREE.Mesh(new THREE.BoxGeometry(d.width+2*t,t,depth+.006),frameMaterial);
+   head.position.set(0,d.height,0);head.rotation.y=yaw;g.add(head);
+  }
  }
  // Lamps belong to town, so they naturally follow a 1:180 shrink.
  const ambient=new THREE.HemisphereLight(0xa7dbff,0x101821,1.4);ambient.name='TOMBS:fill';root.add(ambient);
@@ -194,7 +213,10 @@ export function buildLab(_state:LabState):LabDisplay{
   const mode=s.mode;const alarm=mode==='alarm'||mode==='emergency';
   for(const [i,l] of highlights.entries()){l.color.setHex(alarm?(i%2?0xff6355:0xedac6b):mode==='dawn'?0xffd9b1:0xa0dcff);l.intensity=alarm?16:mode==='night'?26:21}
   for(const d of PLAN.doors){const old=animatedDoor.get(d.id)??0,target=s.isOpen(d.id)?1:0;
-    const next=Math.max(0,Math.min(1,old+(target>old?1:-1)*dt*1.6));animatedDoor.set(d.id,next);
+    // Ease toward the target and STOP there. The first draft stepped "down" whenever it was not
+    // below the target, so an open door (at 1, target 1) stepped back every other frame and
+    // shuddered between nearly open and open: the flicker Joshua saw.
+    const step=dt*1.6,next=old<target?Math.min(target,old+step):Math.max(target,old-step);animatedDoor.set(d.id,next);
     for(const leaf of doorLeaves.get(d.id)!){const base=leaf.node.userData.base??(leaf.node.userData.base=leaf.node.position.clone());
      leaf.node.position.set(base.x+next*leaf.slide[0],0,base.z+next*leaf.slide[1]);}
   }
@@ -204,7 +226,7 @@ export function buildLab(_state:LabState):LabDisplay{
   setRoof:(on:boolean)=>{roof.visible=on},setLabels:(on:boolean)=>{labels.visible=on},update,dispose(){root.traverse(o=>{
     if(o instanceof THREE.Mesh){o.geometry.dispose();const arr=Array.isArray(o.material)?o.material:[o.material];for(const mat of arr)mat.dispose()}
     if(o instanceof THREE.Sprite){o.material.map?.dispose();o.material.dispose()}
-   });for(const mat of m.values())mat.dispose();glassMat.dispose();roofMat.dispose();doorMaterial.dispose();glassDoorMaterial.dispose();edgeMaterial.dispose();root.removeFromParent();}
+   });for(const mat of m.values())mat.dispose();glassMat.dispose();roofMat.dispose();doorMaterial.dispose();glassDoorMaterial.dispose();edgeMaterial.dispose();frameMaterial.dispose();root.removeFromParent();}
  };
 }
 /** Decorative only: insects and landscape remain in island world, OUTSIDE townRoot. */
