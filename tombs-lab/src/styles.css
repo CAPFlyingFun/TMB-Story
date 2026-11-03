@@ -14,3 +14,9 @@ button{background:#142b42ed;border:1px solid #436f88;border-radius:6px;padding:9
 .pad{position:absolute;right:16px;bottom:168px;pointer-events:auto;display:none;align-items:center;flex-direction:column;gap:4px}.pad div{display:flex;gap:4px}.pad button{height:48px;min-width:48px;font-size:16px;background:#11253cbd;user-select:none}
 @media(hover:none),(max-width:720px){.pad{display:flex}.left{max-width:260px;margin-top:0;padding:12px}.left h1{font-size:19px}.brand b{font-size:17px}.hud span{font-size:8px;padding:6px}.bottom{padding:8px 9px max(8px,env(safe-area-inset-bottom))}.btns{gap:4px}.btns button{font-size:9px;padding:7px 8px}.hint{font-size:9px;max-width:65%}.toast{bottom:190px}.pad{bottom:196px}}
 @media(max-height:600px){.left{display:none}.pad{bottom:105px}.toast{bottom:105px}.hint{display:none}}
+
+/* The floor plan drawn from the model (src/tombs/planSvg.ts), over everything, scrollable on a phone. */
+.plan{position:fixed;inset:0;z-index:50;pointer-events:auto;background:#06162c;overflow:auto;-webkit-overflow-scrolling:touch}
+.plan[hidden]{display:none}
+.plan .sheet svg{display:block;width:max(100%,900px);height:auto}
+.plan .close{position:fixed;top:12px;right:12px;z-index:51}

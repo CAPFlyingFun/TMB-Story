@@ -1,4 +1,5 @@
 import {PLAN,isWalkable} from './spec';
+import {FURNITURE} from './furniture';
 import type {CollisionSegment, DoorId, Portal, Wall} from './types';
 
 /** Straight wall sections come from the SAME opening cuts used by the renderer. */
@@ -27,6 +28,11 @@ export function collisionSegments():CollisionSegment[]{
  const s:CollisionSegment[]=[];
  for(const w of PLAN.walls) for(const p of cutWall(w)) if(p.y0<1.8 && p.y1>0){
    s.push({id:p.id,x0:p.from[0],z0:p.from[1],x1:p.to[0],z1:p.to[1],height:p.y1,glass:p.glass});
+ }
+ // Furniture you cannot walk through: its footprint's four edges (furniture.ts, `solid`).
+ for(const f of FURNITURE)if(f.solid&&(f.y0??0)<1.2){
+  const x0=f.x-f.w/2,x1=f.x+f.w/2,z0=f.z-f.d/2,z1=f.z+f.d/2,h=(f.y0??0)+f.h;
+  s.push({id:`${f.id}:n`,x0,z0,x1,z1:z0,height:h},{id:`${f.id}:s`,x0,z0:z1,x1,z1,height:h},{id:`${f.id}:w`,x0,z0,x1:x0,z1,height:h},{id:`${f.id}:e`,x0:x1,z0,x1,z1,height:h});
  }
  for(const d of PLAN.doors){const wall=PLAN.walls.find(w=>w.openings.includes(d.id));if(!wall)throw new Error(`Door ${d.id} has no wall`);
   const ax=wall.from[0],az=wall.from[1],bx=wall.to[0],bz=wall.to[1],len=Math.hypot(bx-ax,bz-az),tx=(bx-ax)/len,tz=(bz-az)/len;

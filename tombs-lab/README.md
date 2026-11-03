@@ -58,6 +58,49 @@ made here. Cameras, story events and who is playing stay outside the geometry.
     where they overlap.
 - **Room name tags** drew through every wall. They now show only in the top view.
 
+## Layout and furniture pass (2026-11-03, second round)
+
+Joshua: a desk stood in front of Jack's door, the open doors still flickered, and the layout
+should be checked against the blueprint "like a home or office decorator".
+
+- **Plan from the model:** the PLAN button (and `docs/plan-from-model.svg`/`.png`) draws the
+  building top-down from the same data as the 3D. `docs/blueprint-vs-model.png` sets it beside
+  the blueprint. ChatGPT's `docs/metric-layout.*` show the first draft and are out of date.
+- **Building, to match the blueprint:**
+  - **Corridor ring.** The first draft stood a small 10 m chamber in one wide open hall. The
+    Array chamber is now an 18 × 10.7 m octagon with a corridor about 3 m wide all the way
+    round it, as drawn.
+  - **Wings.** The west wing is one stack (Jack's laboratory, storage, the break nook) and the
+    east wing is Sarah's office over the server room. There is no dead space between rooms.
+  - **Outer walls** follow the corridor, with the cut corners at the south.
+  - **North face.** The north face steps in between the office wings and the control room.
+  - **Control room.** It now has its own reinforced window onto the Array (Chapter 2). Before,
+    a solid wall stood between the consoles and the chamber.
+- **Furniture** lives in one list, `src/tombs/furniture.ts`. The renderer, the plan and the
+  walk collision all read it, so you can no longer walk through a desk. Every room was placed
+  for use:
+  - **Jack's laboratory.** His workstation and "the other console next to Jack" sit side by
+    side under the window, with the intercom on his desk. The bench and rack are on the walls,
+    and the door's approach is clear.
+  - **Sarah's office.** Her desk is against the wall opposite her door, as the design document
+    asks, so the camera at the door finds the back of her chair. The credenza sits under the
+    window, with a bookcase, an armchair corner and a plant.
+  - **Control room.** Three consoles face the observation glass, with 2.4 m clear inside each
+    door. The shutdown lever and the sensor cabinet are on the north wall, which leaves the
+    exterior window clear for the settlement view.
+  - **Utility rooms.** Storage has shelving, a workbench and a field case. The break nook has a
+    counter, a coffee machine, a fridge and a table for three. The server room has racks, UPS
+    cabinets and an electrical panel.
+  - **Security vestibule.** A counter and the badge reader by the inner door, with the 2.4 m
+    walkway clear.
+  - **Array chamber.** Research stations stand along its sides.
+- **Doors:** the wide entrance doors now part in two. The top strip of each door sits inside
+  its leaf's ends; their ends were in the same plane, which flickered whenever a door stood
+  open.
+- Anchors and interactions (Jack's and Sarah's seats, the intercom, the tablet, the lever, the
+  badge reader, the sensor drawer) moved to the furniture they belong to. The tour's path
+  follows the corridor.
+
 ## Rebuilding
 
 ```bash

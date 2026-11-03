@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {buildLab,buildIslandScaleReferences,createCharacterMounts,LabState,TownScaleController,CinematicDirector,
-  nearestUse,useObject,moveWithWalls,roomAt,anchor} from './tombs';
+  nearestUse,useObject,moveWithWalls,roomAt,anchor,planSvg} from './tombs';
 import './styles.css';
 
 const holder=document.getElementById('app');if(!holder)throw new Error('Missing #app');
@@ -11,10 +11,10 @@ holder.innerHTML=`<div class="view" id="view"></div><div class="ui">
 <div class="left"><div class="eyebrow">TOMBS LABORATORY · 2110</div><h1 id="title">THE ALARM</h1>
 <div id="caption">Standalone procedural facility · Chapter 1 environment</div><div id="objective">Select TOUR or EXPLORE to begin.</div>
 <div class="mini" id="mini"></div></div>
-<div class="bottom"><div class="btns"><button data-act="tour">🎬 CINEMATIC TOUR</button><button data-act="explore">🚶 EXPLORE</button><button data-act="top">🗺 TOP VIEW</button><button data-act="roof">ROOF: OFF</button></div>
+<div class="bottom"><div class="btns"><button data-act="tour">🎬 CINEMATIC TOUR</button><button data-act="explore">🚶 EXPLORE</button><button data-act="top">🗺 TOP VIEW</button><button data-act="plan">📐 PLAN</button><button data-act="roof">ROOF: OFF</button></div>
 <div class="btns"><button data-act="activate" class="primary">⚡ ACTIVATE ARRAY</button><button data-act="restore">↩ NORMAL SIZE</button><button data-act="interact">E · INTERACT</button><button data-act="save">SAVE</button><button data-act="load">LOAD</button></div><div class="hint">WASD / arrows move · drag to look · E interact · mobile: pad to move, swipe view to turn · 1:180 scales the town and people only</div></div>
 <div class="pad"><button data-move="forward">▲</button><div><button data-move="left">◀</button><button data-move="back">▼</button><button data-move="right">▶</button></div></div>
-<div class="effects" id="effects"></div><div class="toast" id="toast"></div></div>`;
+<div class="effects" id="effects"></div><div class="plan" id="plan" hidden><button class="close" data-act="plan">✕ CLOSE PLAN</button><div class="sheet" id="plansheet"></div></div><div class="toast" id="toast"></div></div>`;
 const element=document.getElementById('view')!;
 const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
 renderer.setPixelRatio(Math.min(2,devicePixelRatio||1));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.12;
@@ -30,7 +30,7 @@ const labState=new LabState();const building=buildLab(labState);controller.townR
 const characters=createCharacterMounts();controller.townRoot.add(characters.group);
 // Camera belongs inside townRoot: it scales with Jack, Sarah and the lab, while exterior bugs stay in island.
 const camera=new THREE.PerspectiveCamera(68,innerWidth/innerHeight,.025,1500);controller.townRoot.add(camera);
-camera.position.set(-13.1,1.65,-9.9);aimLocal(-14.5,1.4,-11.8);
+camera.position.set(-13.1,1.65,-9.9);aimLocal(-13.0,1.1,-12.4);
 const orbit=new OrbitControls(camera,renderer.domElement);orbit.enabled=false;orbit.enableDamping=true;orbit.minDistance=.8;orbit.maxDistance=95;
 let view:'tour'|'explore'|'top'='explore';let roof=false;let yaw=0,pitch=0;
 const held=new Set<string>();let touchMove=new Set<string>();let drag=false,px=0,py=0;let toastTimeout=0;
@@ -43,7 +43,7 @@ function applyViewAngles():void{const dx=Math.sin(yaw)*Math.cos(pitch),dy=Math.s
 function setView(next:typeof view):void{
  director.stop();view=next;orbit.enabled=next==='top';building.setLabels(next==='top');
  if(next==='top'){building.setRoof(false);roof=false;camera.position.set(0,52,22);orbit.target.set(0,0,0);orbit.update();aimLocal(0,0,0);setCaption('Authoritative metric blockout: orbit, zoom and inspect the U-shaped loop.');}
- else if(next==='explore'){camera.position.set(-13.1,1.65,-9.9);aimLocal(-14.5,1.4,-11.8);captureExploreAngles();setCaption('Playable room exploration · Stable interactive object IDs');}
+ else if(next==='explore'){camera.position.set(-13.1,1.65,-9.9);aimLocal(-13.0,1.1,-12.4);captureExploreAngles();setCaption('Playable room exploration · Stable interactive object IDs');}
 }
 const director=new CinematicDirector(camera,controller,labState,{
  onCaption:setCaption,onEffects:s=>{$('effects').style.opacity=String(s)},onComplete:event=>{if(event==='intro'){view='explore';captureExploreAngles();notify('Explore as Jack · Use E near doors, monitors or intercom.')}else{view='explore';captureExploreAngles();outside.visible=true;notify('1:180 · town and humans shrunk, insects and island unchanged.')}}
@@ -58,6 +58,7 @@ for(const b of Array.from(document.querySelectorAll<HTMLButtonElement>('button[d
  case 'tour':orbit.enabled=false;view='tour';outside.visible=false;director.startIntro();notify('Cinematic opening · ending in Jack’s laboratory');break;
  case 'explore':setView('explore');break;
  case 'top':setView('top');break;
+ case 'plan':{const el=$('plan');if(el.hidden){$('plansheet').innerHTML=planSvg();el.hidden=false}else el.hidden=true;break}
  case 'roof':roof=!roof;building.setRoof(roof);b.textContent=`ROOF: ${roof?'ON':'OFF'}`;break;
  case 'activate':activate();break;case 'restore':restore();break;case 'interact':useNearest();break;
  case 'save':{const save={schema:1,state:labState.snapshot(),townScale:controller.relativeScale,pose:[camera.position.x,camera.position.y,camera.position.z,yaw,pitch]};localStorage.setItem('tombs-draft-c-preview',JSON.stringify(save));notify('Standalone preview state saved locally.');break}
@@ -105,5 +106,5 @@ function frame(now:number):void{
  if(toastTimeout>0){toastTimeout-=dt;if(toastTimeout<=0)$('toast').classList.remove('show')}
  renderer.render(scene,camera);requestAnimationFrame(frame);
 }
-const spawn=anchor('jackSpawn');camera.position.set(...spawn.xyz);camera.position.y=1.65;aimLocal(-14.5,1.4,-11.8);captureExploreAngles();
+const spawn=anchor('jackSpawn');camera.position.set(...spawn.xyz);camera.position.y=1.65;aimLocal(-13.0,1.1,-12.4);captureExploreAngles();
 notify('TOMBS Draft C standalone · all geometry is procedural.');requestAnimationFrame(frame);

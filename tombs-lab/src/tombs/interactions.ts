@@ -3,12 +3,13 @@ import type {DoorId} from './types';
 import {LabState} from './state';
 export interface UsePoint { readonly id:string; readonly label:string; readonly x:number; readonly y:number; readonly z:number; readonly range:number }
 export const OBJECTS:readonly UsePoint[]=[
- {id:'tombs.jack.intercom',label:'Call Sarah on intercom',x:-10.8,y:1.55,z:-11,range:2.2},
- {id:'tombs.jack.primary_console',label:'Inspect unauthorized access',x:-15,y:1,z:-12.3,range:2.4},
- {id:'tombs.sarah.tablet',label:'Pick up Sarah’s tablet',x:14.7,y:1,z:-12.7,range:2.5},
- {id:'tombs.control.emergency_lever',label:'Pull emergency shutdown',x:-2.2,y:1.1,z:-9.7,range:2.2},
- {id:'tombs.security.entry_reader',label:'Access security scanner',x:2.7,y:1.25,z:10.1,range:2.5},
- {id:'tombs.control.sensor_drawer',label:'Collect field sensor',x:4.8,y:1,z:-10,range:1.8},
+ // Positions are the furniture they belong to (furniture.ts).
+ {id:'tombs.jack.intercom',label:'Call Sarah on intercom',x:-12.25,y:.86,z:-12.7,range:2.2},
+ {id:'tombs.jack.primary_console',label:'Inspect unauthorized access',x:-13.0,y:1,z:-12.5,range:2.4},
+ {id:'tombs.sarah.tablet',label:'Pick up Sarah’s tablet',x:16.3,y:.75,z:-9.75,range:2.5},
+ {id:'tombs.control.emergency_lever',label:'Pull emergency shutdown',x:-4.6,y:1.1,z:-12.6,range:2.2},
+ {id:'tombs.security.entry_reader',label:'Access security scanner',x:2.86,y:1.25,z:9.05,range:2.5},
+ {id:'tombs.control.sensor_drawer',label:'Collect field sensor',x:4.6,y:.9,z:-12.4,range:1.8},
 ];
 export type Nearby={id:string,label:string,distance:number,kind:'door'|'object'};
 export function nearestUse(x:number,z:number,maxDistance=2.6):Nearby|null{

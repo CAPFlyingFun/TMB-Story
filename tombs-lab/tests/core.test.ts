@@ -18,7 +18,7 @@ describe('metric Draft C',()=>{
   expect(anchor('jackDeskSeat').xyz[0]).toBeLessThan(0);
   expect(anchor('sarahDeskSeat').xyz[0]).toBeGreaterThan(0);
   expect(anchor('arrayGlassLook').xyz[2]).toBeLessThan(0);
-  expect(nearestUse(-10.8,-11)?.id).toBe('tombs.jack.intercom');
+  expect(nearestUse(-12.25,-12.0)?.id).toBe('tombs.jack.intercom');
  });
  it('cuts identical openings for geometry and collision',()=>{
   for(const w of PLAN.walls){const p=cutWall(w);expect(p.length).toBeGreaterThan(0);for(const v of p){expect(v.y1).toBeGreaterThan(v.y0);}}

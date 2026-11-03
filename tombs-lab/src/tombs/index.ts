@@ -7,3 +7,5 @@ export * from './interactions';
 export * from './geometry';
 export * from './cinematic';
 export * from './characters';
+export * from './furniture';
+export * from './planSvg';

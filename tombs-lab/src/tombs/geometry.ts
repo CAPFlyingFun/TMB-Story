@@ -1,8 +1,9 @@
 import * as THREE from 'three';
-import {PLAN} from './spec';
+import {PLAN,FOOTPRINT,ARRAY_OCTAGON} from './spec';
 import {cutWall} from './collision';
 import type {DoorId} from './types';
 import {LabState} from './state';
+import {FURNITURE,type Furniture} from './furniture';
 
 const palette={floor:0x343f50,ceiling:0x233143,wall:0x98a8b2,external:0x4d6475,
  partition:0x637c8e,arrayWall:0x345468,blue:0x46c4ff,amber:0xffb557,red:0xf46c73,
@@ -55,6 +56,7 @@ export function buildLab(_state:LabState):LabDisplay{
   ['console',boxMaterial(palette.console)],['chair',boxMaterial(palette.chair)],
   ['light',new THREE.MeshBasicMaterial({color:0xa5e9ff})],['screen',new THREE.MeshBasicMaterial({color:0x2cbcf2})],
   ['red',new THREE.MeshBasicMaterial({color:0xe35f61})],['yellow',new THREE.MeshBasicMaterial({color:0xf3c37c})],
+  ['plant',boxMaterial(0x3f7d4f)],['pot',boxMaterial(0x6e5a4a)],['fabric',boxMaterial(0x46607a)],['book',boxMaterial(0x8a6f52)],
  ]);
  const batch=new Batch(shell,m);
  // ONE floor slab under the whole building, traced along the outside walls. Per-room and per-hall
@@ -62,8 +64,9 @@ export function buildLab(_state:LabState):LabDisplay{
  // chamber) and overlapped where halls crossed, and overlapping tops at y=0 z-fight.
  const placeFloor=(x0:number,x1:number,z0:number,z1:number)=>batch.add('floor',(x0+x1)/2,-.12,(z0+z1)/2,x1-x0,.24,z1-z0);
  {
-  const T=.08; // to the outer face of the thinner (0.16 m) outside walls; the 0.28 m ones overhang it a little
-  const outline:[number,number][]=[[-17-T,-13.1-T],[17+T,-13.1-T],[17+T,5.3],[10.1,8.5+T],[3+T,8.5+T],[3+T,11.5+T],[-3-T,11.5+T],[-3-T,8.5+T],[-10.1,8.5+T],[-17-T,4.8]];
+  // The building's outline (spec.ts FOOTPRINT) pushed out 8 cm, under the outer face of the
+  // thinner outside walls.
+  const outline=offsetPolygon(FOOTPRINT,.08);
   const shape=new THREE.Shape(outline.map(([x,z])=>new THREE.Vector2(x,-z)));
   const slab=new THREE.ExtrudeGeometry(shape,{depth:.24,bevelEnabled:false});slab.rotateX(-Math.PI/2);
   const floor=new THREE.Mesh(slab,m.get('floor'));floor.position.y=-.24;floor.name='TOMBS:floor-slab';shell.add(floor);
@@ -71,7 +74,7 @@ export function buildLab(_state:LabState):LabDisplay{
  // Forecourt is WORLD-side integration marker: small normal-scale section here only for preview.
  placeFloor(-2.2,2.2,11.5+.08,14); // starts where the slab ends: overlapping tops at y=0 flicker
  // The corridor reads as a U even from overhead thanks to continuous floor markers.
- for(const [x,z,ry,len] of [[-8.1,-3.5,0,9],[8.1,-3.5,0,9],[0,7,Math.PI/2,14]] as const){
+ for(const [x,z,ry,len] of [[-10.5,-1.5,0,12],[10.5,-1.5,0,12],[0,7,Math.PI/2,18]] as const){ // down the middle of the corridor ring
    batch.add('light',x,.012,z,.032,.014,len,ry);
  }
  // Real walls, carefully cut around doors and windows. Geometry and collision share cutWall().
@@ -114,7 +117,9 @@ export function buildLab(_state:LabState):LabDisplay{
   }
  }});
  // Octagonal Array base, central machinery and independent ring articulations.
- const chamber=new THREE.Group();chamber.name='tombs.array';root.add(chamber);
+ // The apparatus is 15% larger than the first draft's, for the larger chamber; its rings still
+ // clear the 7.5 m ceiling at any angle.
+ const chamber=new THREE.Group();chamber.name='tombs.array';chamber.scale.setScalar(1.15);root.add(chamber);
  const platform=new THREE.Mesh(new THREE.CylinderGeometry(1.65,1.9,.62,32),boxMaterial(0x6b8296));platform.position.y=.36;chamber.add(platform);
  const concentric=new THREE.Mesh(new THREE.TorusGeometry(1.5,.035,8,64),new THREE.MeshBasicMaterial({color:0x65d9f8}));
  concentric.rotation.x=-Math.PI/2;concentric.position.y=.71;chamber.add(concentric);
@@ -123,31 +128,11 @@ export function buildLab(_state:LabState):LabDisplay{
   const t=new THREE.Mesh(new THREE.TorusGeometry(2.65-i*.34,.17-i*.014,9,64),new THREE.MeshStandardMaterial({color:i%2?0x7e9eaf:0x9dc4d2,metalness:.72,roughness:.26,emissive:0x073f59,emissiveIntensity:.18}));
   t.rotation.set(.25+i*.3,i*.55,i*.15);t.position.y=3.55;t.name=`tombs.array.ring-${i}`;arrayRings.push(t);chamber.add(t);
  }
- for(let i=0;i<8;i++){const a=i*2*Math.PI/8,x=Math.cos(a)*3.4,z=Math.sin(a)*3.4;
+ for(let i=0;i<8;i++){const a=i*2*Math.PI/8,x=Math.cos(a)*4.4,z=Math.sin(a)*4.4;
   batch.add('metal',x,1,z,.3,2,.3);batch.add('light',x,2.05,z,.16,.13,.16);
  }
- // Interior props. Everything decorative is grouped by material to limit draw calls on phones.
- function desk(x:number,z:number,angle=0):void{batch.add('desk',x,.73,z,2.2,.09,.84,angle);batch.add('metal',x-.9,.35,z,.12,.7,.12,angle);batch.add('metal',x+.9,.35,z,.12,.7,.12,angle);
-   batch.add('console',x,.95,z-.28,.78,.44,.075,angle);batch.add('screen',x,.96,z-.235,.69,.32,.018,angle);
-   batch.add('chair',x, .46,z+1,.62,.14,.58);batch.add('chair',x,.83,z+1.25,.60,.64,.12);
- }
- desk(-14.4,-11.75);desk(-12,-9.1);desk(14.1,-11.75);
- // Deep control-room consoles face the physical observation port.
- for(let i=0;i<5;i++){const x=-4.8+i*2.4;desk(x,-11.2)}
- // Secondary central workstation and manual shutdown panel.
- batch.add('console',-2.2,1,-9.7,.64,1.8,.3);
- batch.add('yellow',-2.2,1.65,-9.48,.08,.42,.1);
- // Storage shelving and crates.
- for(let i=0;i<4;i++){const z=-5.05+i*.94;batch.add('metal',-16.5,1.15,z,.65,2.25,.65);for(let j=0;j<3;j++)batch.add('console',-16.5,.42+j*.72,z,.57,.34,.57)}
- // Break nook: countertop, cupboards, tabletop and coffee fixtures.
- batch.add('desk',-15.2,.81,1.15,2.7,.12,.7);batch.add('metal',-15.1,.37,1.15,2.65,.62,.65);
- const table=new THREE.Mesh(new THREE.CylinderGeometry(.78,.78,.09,16),m.get('desk'));table.position.set(-14.4,.76,3.3);root.add(table);
- for(let i=0;i<4;i++){const a=i*Math.PI/2;batch.add('chair',-14.4+Math.cos(a)*1.36,.45,3.3+Math.sin(a)*1.36,.52,.45,.52)}
- // Server bank with glowing activity panels.
- for(let i=0;i<5;i++){const z=-3.7+i*1.05;batch.add('console',16,1.55,z,1.25,3.0,.8);for(let j=0;j<5;j++)batch.add(j%2?'light':'screen',15.53,.5+j*.48,z,.012,.09,.42)}
- // Security vestibule: badge reader, gate sensors, desk.
- batch.add('console',2.7,1.1,10.1,.25,.65,.2);batch.add('light',2.7,1.27,9.98,.13,.12,.04);
- batch.add('desk',-1.5,.95,10.65,1.1,.1,.5);
+ // Furniture, from the one list in furniture.ts that the collision and the plan also read.
+ buildFurniture(batch,root,m);
  // Area lighting strips (no 100+ point lights).
  for(const r of PLAN.rooms){const x=(r.bounds.x0+r.bounds.x1)/2,z=(r.bounds.z0+r.bounds.z1)/2;
   for(let i=-1;i<=1;i++)batch.add('light',x+i*1.35,r.ceiling-.12,z,1.0,.04,.11);
@@ -162,31 +147,39 @@ export function buildLab(_state:LabState):LabDisplay{
   const b=r.bounds;const panel=new THREE.Mesh(new THREE.BoxGeometry(b.x1-b.x0,.18,b.z1-b.z0),roofMat);
   panel.position.set((b.x0+b.x1)/2,r.ceiling+.10,(b.z0+b.z1)/2);roof.add(panel);
  }
- const arrayRoof=new THREE.Mesh(new THREE.CylinderGeometry(5.45,5.45,.18,8),roofMat);arrayRoof.position.y=7.64;arrayRoof.rotation.y=Math.PI/8;roof.add(arrayRoof);
+ {const sh=new THREE.Shape(ARRAY_OCTAGON.map(([x,z])=>new THREE.Vector2(x,-z)));const g=new THREE.ExtrudeGeometry(sh,{depth:.18,bevelEnabled:false});g.rotateX(-Math.PI/2);
+  const arrayRoof=new THREE.Mesh(g,roofMat);arrayRoof.position.y=7.55;roof.add(arrayRoof);}
  for(const h of PLAN.halls){const b=h.bounds;const panel=new THREE.Mesh(new THREE.BoxGeometry(b.x1-b.x0,.13,b.z1-b.z0),roofMat);
  panel.position.set((b.x0+b.x1)/2,h.ceiling+.1,(b.z0+b.z1)/2);roof.add(panel)}
  const doorGroups=new Map<DoorId,THREE.Group>();
- // Where an open sliding door goes: into the longer part of its own wall, by no more than that
- // part holds. Sliding the full width the same way every time ran some doors out past the end
- // of their wall and into the corridor.
- const doorSlides=new Map<DoorId,[number,number]>();
- function doorSlide(d:(typeof PLAN.doors)[number]):[number,number]{
+ // Each door is one leaf, or two for the wide paired entrance doors, and each leaf slides into
+ // its own wall: the longer side of it, by no more than that side holds. A leaf is a few
+ // millimetres inside its opening on every side, and its top strip a few millimetres inside the
+ // leaf's ends: faces that share a plane flicker (z-fighting), worst when a door stands open
+ // with its edge in the opening.
+ type Leaf={node:THREE.Group;slide:[number,number]};
+ const doorLeaves=new Map<DoorId,Leaf[]>();
+ const doorMaterial=boxMaterial(0x8ba7b5);const glassDoorMaterial=new THREE.MeshPhysicalMaterial({color:0x75bfd4,metalness:.12,roughness:.2,transparent:true,opacity:.72});
+ const edgeMaterial=new THREE.MeshBasicMaterial({color:0x4cc7eb});
+ for(const d of PLAN.doors){const g=new THREE.Group();g.name=`tombs:door:${d.id}`;g.position.set(d.at[0],0,d.at[1]);root.add(g);doorGroups.set(d.id,g);
   const wall=PLAN.walls.find(w=>w.openings.includes(d.id))!;
   const L=Math.hypot(wall.to[0]-wall.from[0],wall.to[1]-wall.from[1]),ux=(wall.to[0]-wall.from[0])/L,uz=(wall.to[1]-wall.from[1])/L;
   const c=(d.at[0]-wall.from[0])*ux+(d.at[1]-wall.from[1])*uz;
-  const before=c-d.width/2-.05,after=L-c-d.width/2-.05,sign=after>=before?1:-1;
-  const travel=Math.max(0,Math.min(d.width*.95,Math.max(before,after)));
-  return [ux*sign*travel,uz*sign*travel];
- }
- const doorMaterial=boxMaterial(0x8ba7b5);const glassDoorMaterial=new THREE.MeshPhysicalMaterial({color:0x75bfd4,metalness:.12,roughness:.2,transparent:true,opacity:.72});
- for(const d of PLAN.doors){const g=new THREE.Group();g.name=`tombs:door:${d.id}`;g.position.set(d.at[0],0,d.at[1]);root.add(g);doorGroups.set(d.id,g);
-  const orientation=d.along==='x'?0:Math.PI/2;
-  // A centimetre narrower and shorter than its opening: a panel exactly the opening's size put
-  // its edges in the same planes as the jambs and the lintel, which flickered.
-  const panel=new THREE.Mesh(new THREE.BoxGeometry(d.width-.02,d.height-.012,.085),d.id.startsWith('security')?glassDoorMaterial:doorMaterial);
-  panel.rotation.y=orientation;panel.position.y=(d.height-.012)/2;panel.name=`door:panel:${d.id}`;g.add(panel);
-  const edge=new THREE.Mesh(new THREE.BoxGeometry(d.width-.02,.06,.1),new THREE.MeshBasicMaterial({color:0x4cc7eb}));edge.position.y=d.height-.05;edge.rotation.y=orientation;g.add(edge);
-  doorSlides.set(d.id,doorSlide(d));
+  const before=c-d.width/2-.05,after=L-c-d.width/2-.05;
+  const yaw=Math.atan2(-uz,ux);
+  const paired=d.width>=2;
+  const spans:[number,number,number][]=paired?[[-d.width/4,d.width/2,-1],[d.width/4,d.width/2,1]]:[[0,d.width,after>=before?1:-1]];
+  const leaves:Leaf[]=[];
+  for(const [offset,width,dir] of spans){
+   const room=dir>0?after:before;
+   const travel=Math.max(0,Math.min(width*.97,room)); // its far end may go no deeper than the wall it slides into
+   const leaf=new THREE.Group();leaf.position.set(ux*offset,0,uz*offset);leaf.rotation.y=yaw;g.add(leaf);
+   const lw=width-.024,lh=d.height-.014;
+   const panel=new THREE.Mesh(new THREE.BoxGeometry(lw,lh,.085),d.id.startsWith('security')?glassDoorMaterial:doorMaterial);panel.position.y=lh/2;panel.name=`door:panel:${d.id}`;leaf.add(panel);
+   const edge=new THREE.Mesh(new THREE.BoxGeometry(lw-.012,.06,.1),edgeMaterial);edge.position.y=lh-.045;leaf.add(edge);
+   leaves.push({node:leaf,slide:[ux*dir*travel,uz*dir*travel]});
+  }
+  doorLeaves.set(d.id,leaves);
  }
  // Lamps belong to town, so they naturally follow a 1:180 shrink.
  const ambient=new THREE.HemisphereLight(0xa7dbff,0x101821,1.4);ambient.name='TOMBS:fill';root.add(ambient);
@@ -202,9 +195,8 @@ export function buildLab(_state:LabState):LabDisplay{
   for(const [i,l] of highlights.entries()){l.color.setHex(alarm?(i%2?0xff6355:0xedac6b):mode==='dawn'?0xffd9b1:0xa0dcff);l.intensity=alarm?16:mode==='night'?26:21}
   for(const d of PLAN.doors){const old=animatedDoor.get(d.id)??0,target=s.isOpen(d.id)?1:0;
     const next=Math.max(0,Math.min(1,old+(target>old?1:-1)*dt*1.6));animatedDoor.set(d.id,next);
-    const g=doorGroups.get(d.id)!;const moving=g.children.filter(c=>c.name.startsWith('door:')||c.type==='Mesh');
-    const [sx,sz]=doorSlides.get(d.id)!;
-    for(const child of moving){child.position.x=next*sx;child.position.z=next*sz;}
+    for(const leaf of doorLeaves.get(d.id)!){const base=leaf.node.userData.base??(leaf.node.userData.base=leaf.node.position.clone());
+     leaf.node.position.set(base.x+next*leaf.slide[0],0,base.z+next*leaf.slide[1]);}
   }
   if(mode==='activation'){arrayRings.forEach((ring,i)=>{ring.rotation.y+=spinRate[i]*dt;ring.rotation.x+=spinRate[i]*dt*.42})}
  }
@@ -212,7 +204,7 @@ export function buildLab(_state:LabState):LabDisplay{
   setRoof:(on:boolean)=>{roof.visible=on},setLabels:(on:boolean)=>{labels.visible=on},update,dispose(){root.traverse(o=>{
     if(o instanceof THREE.Mesh){o.geometry.dispose();const arr=Array.isArray(o.material)?o.material:[o.material];for(const mat of arr)mat.dispose()}
     if(o instanceof THREE.Sprite){o.material.map?.dispose();o.material.dispose()}
-   });for(const mat of m.values())mat.dispose();glassMat.dispose();roofMat.dispose();doorMaterial.dispose();glassDoorMaterial.dispose();root.removeFromParent();}
+   });for(const mat of m.values())mat.dispose();glassMat.dispose();roofMat.dispose();doorMaterial.dispose();glassDoorMaterial.dispose();edgeMaterial.dispose();root.removeFromParent();}
  };
 }
 /** Decorative only: insects and landscape remain in island world, OUTSIDE townRoot. */
@@ -234,3 +226,103 @@ export function buildIslandScaleReferences():THREE.Group{
  }
  root.add(ant);root.visible=false;return root;
 }
+
+/** Furniture from furniture.ts, built of boxes in each piece's own frame: `a` across it, `b`
+ * along the way its user looks (so the user's side is negative b), `y` up from its underside. */
+function buildFurniture(batch:{add(name:string,x:number,y:number,z:number,sx:number,sy:number,sz:number,ry?:number):void},root:THREE.Group,m:Map<string,THREE.Material>):void{
+ const F={n:[0,-1],s:[0,1],e:[1,0],w:[-1,0]} as const;
+ for(const it of FURNITURE){
+  const [fx,fz]=F[it.facing],rx=-fz,rz=fx;
+  const along=fz!==0; // looks along z: its width runs along x
+  const W=along?it.w:it.d,D=along?it.d:it.w,H=it.h,y0=it.y0??0;
+  const box=(mat:string,a:number,b:number,y:number,sa:number,sb:number,sy:number)=>{
+   const x=it.x+a*rx+b*fx,z=it.z+a*rz+b*fz;
+   batch.add(mat,x,y0+y,z,along?sa:sb,sy,along?sb:sa);
+  };
+  piece(it,W,D,H,box,root,m,y0);
+ }
+}
+function piece(it:Furniture,W:number,D:number,H:number,box:(mat:string,a:number,b:number,y:number,sa:number,sb:number,sy:number)=>void,root:THREE.Group,m:Map<string,THREE.Material>,y0:number):void{
+ switch(it.kind){
+ case 'desk':{
+  box('desk',0,0,H-.025,W,D,.05);
+  for(const sa of [-1,1])for(const sb of [-1,1])box('metal',sa*(W/2-.05),sb*(D/2-.05),(H-.05)/2,.05,.05,H-.05);
+  const monitors=W>=1.6?[-.45,.45]:[0];
+  for(const a of monitors){box('console',a,D/2-.16,H+.29,.6,.04,.38);box('screen',a,D/2-.185,H+.29,.55,.01,.33);box('metal',a,D/2-.14,H+.06,.08,.08,.12);}
+  box('console',0,-D/2+.25,H+.012,.48,.16,.02);
+  break}
+ case 'console':{
+  box('console',0,.02,(H-.04)/2,W,D-.04,H-.04);box('desk',0,0,H-.02,W+.02,D,.04);
+  for(const a of [-.72,0,.72]){box('console',a,D/2-.18,H+.3,.62,.05,.4);box('screen',a,D/2-.21,H+.3,.57,.01,.35);}
+  box('light',0,-D/2+.004,H-.12,W*.8,.008,.03);
+  break}
+ case 'chair':{
+  box('metal',0,0,.03,W*.75,D*.75,.04);box('metal',0,0,.25,.06,.06,.4);
+  box('chair',0,0,.48,W*.9,D*.9,.08);box('chair',0,-D/2+.06,.82,W*.85,.07,.55);
+  break}
+ case 'bench':{
+  box('metal',0,0,(H-.05)/2,W-.04,D-.04,H-.05);box('desk',0,0,H-.025,W,D,.05);
+  box('console',-W/4,D/2-.22,H+.15,.5,.32,.3);box('console',W/4,D/2-.2,H+.1,.36,.28,.2);box('screen',W/4,D/2-.345,H+.1,.3,.01,.14);
+  break}
+ case 'shelf':{
+  for(const s of [-1,1])box('metal',s*(W/2-.03),0,H/2,.04,D,H);
+  for(let i=0;i<5;i++)box('metal',0,0,.08+i*(H-.12)/4,W-.06,D,.03);
+  for(let i=0;i<4;i++)box('console',(i%2?.15:-.12),.02,.1+i*(H-.12)/4+.17,W*.55,D*.75,.3);
+  break}
+ case 'rack':{
+  box('console',0,0,H/2,W,D,H);
+  for(let i=0;i<6;i++)box(i%2?'light':'screen',0,-D/2-.006,.3+i*.3,W*.6,.012,.05);
+  break}
+ case 'cabinet':{
+  box('console',0,0,H/2,W,D,H);
+  for(let i=1;i<4;i++)box('metal',0,-D/2-.005,i*H/4,W*.9,.01,.012);
+  box('light',W*.3,-D/2-.006,H-.12,.08,.01,.05);
+  break}
+ case 'counter':{
+  box('metal',0,.02,(H-.04)/2,W-.02,D-.04,H-.04);box('desk',0,0,H-.02,W,D,.04);
+  break}
+ case 'round-table':{
+  const top=new THREE.Mesh(new THREE.CylinderGeometry(W/2,W/2,.04,24),m.get('desk'));top.position.set(it.x,y0+H-.02,it.z);root.add(top);
+  box('metal',0,0,(H-.04)/2,.07,.07,H-.04);box('metal',0,0,.015,W*.5,W*.5,.03);
+  break}
+ case 'fridge':{box('metal',0,0,H/2,W,D,H);box('console',W*.35,-D/2-.01,H*.6,.03,.02,.5);box('metal',0,-D/2-.004,H*.42,W*.95,.008,.01);break}
+ case 'emergency-panel':{
+  box('console',0,0,H/2,W,D,H);box('red',0,-D/2-.006,H-.12,W*.9,.012,.05);
+  box('yellow',0,-D/2-.06,H*.62,.08,.1,.42);box('metal',0,-D/2-.03,H*.62-.24,.18,.06,.06);
+  break}
+ case 'reader':{box('console',0,0,H/2,W,D,H);box('light',0,-W/2-.004,H*.65,.012,D*.6,.05);break}
+ case 'credenza':{box('desk',0,0,H/2,W,D,H);for(const a of [-W/4,W/4])box('metal',a,-D/2-.004,H*.55,W*.4,.008,.012);break}
+ case 'bookcase':{
+  box('desk',0,0,H/2,W,D,H);
+  for(let i=0;i<4;i++)box('book',(i%2?.08:-.06),-D/2+.12,.25+i*.45,W*.8,.22,.28);
+  break}
+ case 'armchair':{
+  box('fabric',0,0,.22,W,D,.44);box('fabric',0,-D/2+.1,.62,W,.2,.4);
+  for(const s of [-1,1])box('fabric',s*(W/2-.07),.05,.55,.14,D-.1,.26);
+  break}
+ case 'plant':{
+  box('pot',0,0,.2,W*.75,D*.75,.4);
+  const leaves=new THREE.Mesh(new THREE.SphereGeometry(Math.min(W,D)*.62,10,8),m.get('plant'));leaves.position.set(it.x,y0+.4+(H-.4)/2,it.z);leaves.scale.y=(H-.4)/(Math.min(W,D)*1.2);root.add(leaves);
+  break}
+ case 'crate':{box('metal',0,0,H/2,W,D,H);box('yellow',0,-D/2-.004,H*.7,W*.5,.008,.04);break}
+ case 'intercom':{box('console',0,0,H/2,W,D,H);box('light',W*.2,-D/2-.004,H*.6,.05,.008,.03);break}
+ case 'tablet':{box('console',0,0,.005,W,D,.01);box('screen',0,0,.011,W*.88,D*.84,.003);break}
+ case 'coffee-machine':{box('console',0,0,H/2,W,D,H);box('red',W*.25,-D/2-.004,H*.75,.03,.008,.03);break}
+ case 'electrical-panel':{box('metal',0,0,H/2,W,D,H);box('yellow',0,-D/2-.004,H*.8,W*.3,.008,.06);break}
+ }
+}
+
+/** A simple polygon pushed outward by `d` (corners mitred). Counter-clockwise or clockwise both work. */
+export function offsetPolygon(pts:readonly(readonly[number,number])[],d:number):[number,number][]{
+ let area=0;for(let i=0;i<pts.length;i++){const a=pts[i],b=pts[(i+1)%pts.length];area+=a[0]*b[1]-b[0]*a[1]}
+ const sgn=area>0?-1:1,n=pts.length,out:[number,number][]=[];
+ for(let i=0;i<n;i++){
+  const p=pts[(i+n-1)%n],c=pts[i],q=pts[(i+1)%n];
+  const n1=norm(c[0]-p[0],c[1]-p[1]),n2=norm(q[0]-c[0],q[1]-c[1]);
+  const o1:[number,number]=[sgn*-n1[1],sgn*n1[0]],o2:[number,number]=[sgn*-n2[1],sgn*n2[0]];
+  const bx=o1[0]+o2[0],bz=o1[1]+o2[1],k=1+o1[0]*o2[0]+o1[1]*o2[1];
+  out.push([c[0]+d*bx/k,c[1]+d*bz/k]);
+ }
+ return out;
+}
+function norm(x:number,z:number):[number,number]{const l=Math.hypot(x,z)||1;return [x/l,z/l]}

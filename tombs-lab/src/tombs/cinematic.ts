@@ -10,9 +10,9 @@ const KEYS:readonly Key[]=[
  {at:10.4,position:[0,2.2,13.6],look:[0,1.8,8],caption:'UNAUTHORIZED ACCESS DETECTED'},
  {at:13.0,position:[0,1.7,10.2],look:[0,1.6,6.5],caption:'SECURITY VESTIBULE'},
  {at:15.1,position:[0,1.7,7],look:[-7.7,1.7,6.5],caption:'FOLLOW THE ALARM'},
- {at:17.7,position:[-8,1.7,6.5],look:[-8,1.7,-7.2],caption:'WEST CORRIDOR'},
- {at:20.8,position:[-8,1.7,-9.4],look:[-13.4,1.7,-9.5],caption:'JACK’S LABORATORY'},
- {at:23.8,position:[-13.1,1.65,-9.9],look:[-14.5,1.4,-11.8],caption:'CHAPTER ONE · THE ALARM'},
+ {at:17.7,position:[-10.5,1.7,6.2],look:[-10.5,1.7,-7.2],caption:'WEST CORRIDOR'},
+ {at:20.8,position:[-9.6,1.7,-9.45],look:[-13.4,1.4,-10.5],caption:'JACK’S LABORATORY'},
+ {at:23.8,position:[-13.1,1.65,-9.9],look:[-13.0,1.1,-12.4],caption:'CHAPTER ONE · THE ALARM'},
 ];
 function between(a:number,b:number,t:number):number{const v=Math.max(0,Math.min(1,(t-a)/(b-a)));return v*v*(3-2*v)}
 function lerp(a:readonly[number,number,number],b:readonly[number,number,number],t:number,out:THREE.Vector3):THREE.Vector3{return out.set(a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t)}
