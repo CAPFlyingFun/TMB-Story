@@ -970,6 +970,19 @@
         "level": 0.5,
         "lowpassHz": 1250
       }
+    },
+    "sfx_stumble_console_catch": {
+      "category": "foley",
+      "source": "generated",
+      "prompt": "Shoes scuffing and skidding a short way on a hard laboratory floor as someone loses their balance, then two hands slapping onto the edge of a metal console to catch themselves, a brief creak of the console taking the weight, then stillness. Close interior perspective, recorded at a strong present level. No voices, no music, no body hitting the floor, no debris.",
+      "durationSeconds": 2,
+      "loop": false,
+      "promptInfluence": 0.45,
+      "assetVersion": 1,
+      "godotReuse": true,
+      "approved": false,
+      "notes": "Chapter 3, after the activation (revised 2026-11-03, decision 0044): Jack and Sarah are thrown off balance and catch themselves on the console and desk instead of falling. A stumble and a catch, not a fall.",
+      "promptStyle": "corrected-2026-09-18: character and mic distance only, explicit strong present level, no loudness adjectives"
     }
   }
 }

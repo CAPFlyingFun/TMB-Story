@@ -24,8 +24,9 @@ const RED = "rgba(255,60,40,0.7)";
 const CM = "control-main", CS = "control-second", MAP = "control-map";
 const PRIMARY_SPOT = [-1.15, -4.45], SECOND_SPOT = [1.9, -4.45], BESIDE = [-0.35, -4.4];
 const NEAR_SARAH = [1.15, -4.2], WINDOW_SARAH = [3.0, -2.75], WINDOW_JACK = [2.95, -1.95];
-// where they land: on the floor between the consoles
-const FLOOR_JACK = [0.15, -3.6], FLOOR_SARAH = [1.05, -3.9];
+// where the snap back leaves them (revised 2026-11-03, decision 0044): still standing,
+// Jack braced on the console edge, Sarah swaying into the desk beside him
+const CAUGHT_JACK = [0.55, -4.2], CAUGHT_SARAH = [1.2, -4.25];
 
 const at = (x, z) => P(x, z);
 const cue = (c, o = {}) => ({ cue: c, ...o });
@@ -78,14 +79,6 @@ const control = {
   },
   camera: { initial: { shot: "primary" }, name: "Main control room" },
 };
-
-// Someone landing on the floor at a cut (`fallen` is sitting without a chair; people3d.js).
-function fallTo(actor, a, x, z, dir) {
-  return [placeM(actor, a, x, z), { at: a, action: "sit", actor }, { at: a, action: "state", actor, state: "fallen" }, { at: a, action: "face", actor, direction: dir }];
-}
-function getUp(actor, a) {
-  return [{ at: a, action: "stand", actor }, { at: a, action: "state", actor, state: "awake" }];
-}
 
 export default {
   id: "ch03-activation",
@@ -152,9 +145,9 @@ export default {
     { at: L("Jack could see Sarah shouting", { phrase: "and then impossibly close" }), action: "camera", shot: "whiteNear", duration: 0.7, ease: "inOut" },
     { at: L("Jack could see Sarah shouting", { phrase: "His stomach dropped" }), action: "camera", shot: "white", duration: 2.5, ease: "inOut" },
     { at: L("Jack tightened his grip"), action: "fade", to: 0.8, duration: 2.0, ease: "inOut" },
-    // "The floor seemed to disappear beneath his feet."
-    { at: L("The floor seemed to disappear"), action: "fade", to: 1, duration: 1.0, ease: "in" },
-    // "Then everything snapped back." -- and they are on the floor
+    // "The floor seemed to drop away beneath his feet, and he grabbed the edge of the console."
+    { at: L("The floor seemed to drop away"), action: "fade", to: 1, duration: 1.0, ease: "in" },
+    // "Then everything snapped back." -- they are thrown off balance but still on their feet
     { at: L("Then everything snapped back."), action: "scene", name: "The snap back" },
     { at: L("Then everything snapped back."), action: "prop", target: "white", to: 0, duration: 0 },
     { at: L("Then everything snapped back."), action: "prop", target: "rings", to: 0, duration: 0 },
@@ -167,38 +160,39 @@ export default {
     { at: L("Then everything snapped back."), action: "light", target: "monitor", color: DIAG_BLUE, intensity: 0.05, duration: 0 },
     { at: L("Then everything snapped back."), action: "light", target: "second", intensity: 0, duration: 0 },
     { at: L("Then everything snapped back."), action: "light", target: "chamber", intensity: 0.05, duration: 0 },
-    ...fallTo("jack", L("Then everything snapped back."), ...FLOOR_JACK, "east"),
-    ...fallTo("sarah", L("Then everything snapped back."), ...FLOOR_SARAH, "west"),
-    { at: L("Then everything snapped back."), action: "camera", shot: "floor", duration: 0 },
+    placeM("jack", L("Then everything snapped back."), ...CAUGHT_JACK),
+    placeM("sarah", L("Then everything snapped back."), ...CAUGHT_SARAH),
+    { at: L("Then everything snapped back."), action: "face", actor: "jack", direction: "north" },
+    { at: L("Then everything snapped back."), action: "face", actor: "sarah", direction: "north" },
+    { at: L("Then everything snapped back."), action: "camera", shot: "consoles", duration: 0 },
     { at: L("Then everything snapped back.", { offset: 0.1 }), action: "fade", color: "#fff", to: 0, duration: 0.25, ease: "out" },
     { at: L("Sound returned all at once"), action: "shake", amount: 6, duration: 0.5 },
-    { at: L("Sound returned all at once"), action: "jolt", actor: "jack", amount: 1.6, duration: 0.6 },
-    { at: L("Sound returned all at once", { offset: 0.3 }), action: "jolt", actor: "sarah", amount: 1.4, duration: 0.6 },
-    // "Jack crawled toward her." / "Sarah! Are you hurt?"
-    { at: L("Jack crawled toward her."), action: "move", actor: "jack", x: at(0.55, -3.75)[0], y: at(0.55, -3.75)[1], duration: 1.6, ease: "inOut" },
-    { at: L("Jack crawled toward her."), action: "camera", shot: "floorClose", duration: 2.0, ease: "inOut" },
-    { at: L("Sarah pushed herself upright."), action: "jolt", actor: "sarah", amount: 0.6, duration: 0.8 },
+    { at: L("Sound returned all at once", { phrase: "knees buckled" }), action: "jolt", actor: "jack", amount: 1.6, duration: 0.7 },
+    { at: L("Sound returned all at once", { phrase: "Sarah swayed" }), action: "jolt", actor: "sarah", amount: 1.4, duration: 0.7 },
+    // "Jack turned to her." / "Sarah! Are you hurt?"
+    { at: L("Jack turned to her."), action: "face", actor: "jack", direction: "east" },
+    { at: L("Jack turned to her."), action: "camera", shot: "second", duration: 2.0, ease: "inOut" },
+    // "Sarah clung to the edge of the desk, eyes squeezed shut." / "Everything's spinning."
+    { at: L("Sarah clung to the edge of the desk"), action: "jolt", actor: "sarah", amount: 0.5, duration: 1.2 },
     { at: L("Jack looked at her stomach."), action: "gesture", actor: "jack", animation: "look-down", duration: 1.2 },
     { at: L("Sarah pressed a hand against her stomach."), action: "gesture", actor: "sarah", animation: "hand-on-belly", arm: "left", duration: 9 },
     { at: L("She closed her eyes"), action: "gesture", actor: "sarah", animation: "look-down", duration: 1.8 },
-    // "The laboratory settled into an unsettling silence. Jack slowly stood and looked around.
+    // "The laboratory settled into an unsettling silence. Jack slowly let go of the console and looked around.
     //  Nothing appeared different. The consoles were intact, the TOMBS Array had stopped, and
     //  even the emergency lighting had returned to normal."
     { at: L("The laboratory settled"), action: "scene", name: "After" },
-    ...getUp("jack", L("The laboratory settled", { phrase: "Jack slowly stood" })),
-    { at: L("The laboratory settled", { phrase: "Jack slowly stood" }), action: "camera", shot: "room", duration: 3.0, ease: "inOut" },
+    { at: L("The laboratory settled", { phrase: "Jack slowly let go" }), action: "camera", shot: "room", duration: 3.0, ease: "inOut" },
     { at: L("The laboratory settled", { phrase: "looked around" }), action: "face", actor: "jack", direction: "north" },
     { at: L("The laboratory settled", { phrase: "the TOMBS Array had stopped" }), action: "camera", shot: "window", duration: 3.0, ease: "inOut" },
-    ...getUp("sarah", L("Sarah got to her feet")),
-    { at: L("Sarah got to her feet"), action: "face", actor: "sarah", direction: "north" },
-    { at: L("Sarah got to her feet"), action: "camera", shot: "twoShot", duration: 2.0, ease: "inOut" },
+    { at: L("Sarah straightened beside him"), action: "face", actor: "sarah", direction: "north" },
+    { at: L("Sarah straightened beside him"), action: "camera", shot: "twoShot", duration: 2.0, ease: "inOut" },
     // "Jack glanced back at the main console. The display had gone dark except for a single
     //  status light. He crossed the room and touched the controls." / "TOMBS is offline."
-    ...walkM("jack", L("Jack glanced back at the main console.", { phrase: "He crossed the room" }), [0.55, -3.75], PRIMARY_SPOT, 2.4, "north", null, 3),
+    ...walkM("jack", L("Jack glanced back at the main console.", { phrase: "He crossed the room" }), CAUGHT_JACK, PRIMARY_SPOT, 2.4, "north", null, 3),
     { at: L("TOMBS is offline."), action: "screen", target: CM, state: "offline", params: { label: true } },
     { at: L("TOMBS is offline."), action: "camera", shot: "primary", duration: 1.6, ease: "inOut" },
     // "Sarah followed more carefully, one hand resting beneath her stomach."
-    ...walkM("sarah", L("Sarah followed more carefully"), FLOOR_SARAH, BESIDE, 3.0, "north", null, 3),
+    ...walkM("sarah", L("Sarah followed more carefully"), CAUGHT_SARAH, BESIDE, 3.0, "north", null, 3),
     { at: L("Sarah followed more carefully"), action: "gesture", actor: "sarah", animation: "hand-on-belly", arm: "left", duration: 4 },
     { at: L("Jack tried the controls again."), action: "gesture", actor: "jack", animation: "type", duration: 2.0 },
     { at: L("Sarah looked toward the chamber window."), action: "camera", shot: "rings", duration: 2.0, ease: "inOut" },

@@ -121,7 +121,7 @@
       "cueId": "ch03-070-event-return",
       "asset": "sfx_boundary_event_return",
       "anchor": {
-        "clipId": "narrator-9ac25b040210",
+        "clipId": "narrator-9e87329a660a",
         "occurrence": 1
       },
       "timing": "before",
@@ -130,10 +130,22 @@
       "emphasisDb": 6.0
     },
     {
+      "cueId": "ch03-072-stumble-catch",
+      "asset": "sfx_stumble_console_catch",
+      "anchor": {
+        "clipId": "narrator-9e87329a660a",
+        "occurrence": 1
+      },
+      "timing": "during",
+      "offsetMs": 1500,
+      "gain": 0.087,
+      "why": "NEW 2026-11-03 (decision 0044). Jack and Sarah no longer hit the floor; they lose their balance and catch the console and desk. The scuff and the hands landing on metal arrive as the narrator says his knees buckled, right after the sound rushes back."
+    },
+    {
       "cueId": "ch03-080-lab-after",
       "asset": "amb_computer_lab",
       "anchor": {
-        "clipId": "narrator-4ede4886737f",
+        "clipId": "narrator-d7e8db067c60",
         "occurrence": 1
       },
       "timing": "after",

@@ -3,7 +3,7 @@ chapter: 3
 title: "The Activation"
 movement: 1
 pov: Jack
-word_count: 1390
+word_count: 1432
 story_time:
   clock: settlement
   date: "March fifth, twenty-one ten"
@@ -14,7 +14,7 @@ locations: ["The main control room", "The settlement, seen through the window an
 characters: [Jack, Sarah, "Lena Ortiz (remote, by wrist terminal)", "TOMBS (system messages)"]
 status_changes:
   - "TOMBS activates and goes offline because it finished"
-  - "Jack and Sarah are both knocked down. Neither is hurt. The baby moves"
+  - "Jack and Sarah are thrown off balance and catch themselves on the console and desk. Sarah is dizzy. Neither is hurt. The baby moves"
   - "External communications are gone: no satellite, no radio, nothing beyond the settlement"
   - "Knowledge: the settlement has been reduced in scale. The island has not"
 new_canon:
@@ -23,7 +23,7 @@ playable_beat_flow: ["attempt manual control", "interrupt the scale calculation"
 ending_type: revelation
 review_status: approved
 audio_status: approved
-approved_on: "2026-10-13"
+approved_on: "2026-11-03"
 last_approved_revision: ""
 source: "Joshua's revised Word manuscript, 3e9a1f9b-01-03_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 0 bare said-tag(s) removed, and 3 quote(s) split by a beat joined into one line with the beat first."
 ---
@@ -73,15 +73,15 @@ Jack could see Sarah shouting, but he couldn't hear her. The laboratory seemed t
 
 Jack tightened his grip on her hand.
 
-The floor seemed to disappear beneath his feet.
+The floor seemed to drop away beneath his feet, and he grabbed the edge of the console with his free hand.
 
 Then everything snapped back.
 
-Sound returned all at once as Jack hit the floor and Sarah landed beside him. Somewhere inside the array chamber, metal rang once and went still.
+Sound returned all at once. Jack's knees buckled, and the console was the only thing that kept him upright. Sarah swayed into the desk beside him, still holding his hand. Somewhere inside the array chamber, metal rang once and went still.
 
-Jack crawled toward her. "Sarah! Are you hurt?"
+Jack turned to her. "Sarah! Are you hurt?"
 
-Sarah pushed herself upright. "I'm here. I don't think so."
+Sarah clung to the edge of the desk, eyes squeezed shut. "I'm okay. I think. Everything's spinning."
 
 Jack looked at her stomach. "The baby?"
 
@@ -95,9 +95,9 @@ Jack released the breath he had been holding. "Okay."
 
 Sarah squeezed his hand. "We're okay."
 
-The laboratory settled into an unsettling silence. Jack slowly stood and looked around. Nothing appeared different. The consoles were intact, the TOMBS Array had stopped, and even the emergency lighting had returned to normal.
+The laboratory settled into an unsettling silence. Jack slowly let go of the console and looked around. Nothing appeared different. The consoles were intact, the TOMBS Array had stopped, and even the emergency lighting had returned to normal.
 
-Sarah got to her feet beside him and looked around. "Did it fail?"
+Sarah straightened beside him, one hand still on the desk, and looked around. "Did it fail?"
 
 Jack glanced back at the main console. The display had gone dark except for a single status light. He crossed the room and touched the controls. "TOMBS is offline."
 
