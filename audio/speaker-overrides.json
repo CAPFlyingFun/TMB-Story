@@ -1451,12 +1451,14 @@
     "REVIEW_REQUIRED-b08b0d7cd739": {
       "speaker": "jack-bennett",
       "chapters": [
-        7
+        7,
+        24
       ],
       "orders": [
-        2
+        2,
+        10
       ],
-      "note": "Chapter 7 order 2: Jack's answer to Sarah's 'Dawn's coming.' Pinned 2026-10-07 when the split made this exchange the chapter's opening, where the parser has no earlier turn to alternate from. Same speaker as before the split."
+      "note": "Chapter 7 order 2: Jack's answer to Sarah's 'Dawn's coming.' Pinned 2026-10-07 when the split made this exchange the chapter's opening, where the parser has no earlier turn to alternate from. Same speaker as before the split. Chapter 24 order 10 added 2026-11-03: Jack again ('I know.' to Sarah's reminder about the glove), same speaker, so the one clip serves both."
     },
     "REVIEW_REQUIRED-2a2dfd8f03e1": {
       "speaker": "sarah-bennett",
@@ -2811,6 +2813,202 @@
       "note": "Chapter 23: Mark's go-rules, \"Clear sky at first gray. Stars. Not a cloud. Door thermometer at eight degrees Celsius or under...\" Read against the scene, 2026-10-27; re-pinned after \"degrees Celsius\" was added at Joshua's request.",
       "chapters": [
         23
+      ]
+    },
+    "REVIEW_REQUIRED-6c361ae6a5bc": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 24: \"You're supposed to be asleep.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        24
+      ]
+    },
+    "REVIEW_REQUIRED-8ac7f7b536dc": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 24: \"He doesn't know anything. He's the size of a melon.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        24
+      ]
+    },
+    "REVIEW_REQUIRED-ac472ff79597": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 24: \"A melon that kicks. Sit down. Give me your hand.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        24
+      ]
+    },
+    "REVIEW_REQUIRED-45daf537963f": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 24: \"Doctor Mercer said take it off the second you're back in the truck.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        24
+      ]
+    },
+    "REVIEW_REQUIRED-66be6278eb76": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 24: \"I'm telling you anyway. You're going to be cold, and wet, and pleased with yourself, and you'll forget.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        24
+      ]
+    },
+    "lena-ortiz-2dd26fccc982": {
+      "speaker": "paul-harlan",
+      "note": "Chapter 24: \"Easy. Easy. Your end's high. Easy.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        24
+      ]
+    },
+    "lena-ortiz-064666f58df8": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 24: \"There's a crack across the road. On yesterday's footage, the big drop hung right over it. A meter past the cart's line, and a little to the right. Look for the crack.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        24
+      ]
+    },
+    "lena-ortiz-1ddb7ebe9f6a": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 24: \"Understood.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        24
+      ]
+    },
+    "REVIEW_REQUIRED-31e8b89f8d74": {
+      "speaker": "security-officer",
+      "note": "Chapter 25: \"Now.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        25
+      ]
+    },
+    "aiden-1cfca0850024": {
+      "speaker": "lena-ortiz",
+      "note": "Chapter 25: \"Six thirty-eight.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        25
+      ]
+    },
+    "aiden-7ca00bfb17d2": {
+      "speaker": "security-officer",
+      "note": "Chapter 25: \"Pull. Slow.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        25
+      ]
+    },
+    "security-officer-a7d4429f55e7": {
+      "speaker": "paul-harlan",
+      "note": "Chapter 25: \"That's the thing.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        25
+      ]
+    },
+    "paul-harlan-844d544b40b2": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 25: \"I took it off.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        25
+      ]
+    },
+    "paul-harlan-9c328e9212a4": {
+      "speaker": "lena-ortiz",
+      "note": "Chapter 25: \"A hundred and ten liters.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        25
+      ]
+    },
+    "sarah-bennett-f5b3cfc16882": {
+      "speaker": "aiden",
+      "note": "Chapter 25: \"Doctor Bennett. I've been going back over the feed, up to where you closed the lid. The leg didn't come out when the stem moved. The stem had been moving for a good five seconds by then. It came out two seconds after that gnat hit the water and started kicking. It wasn't watching us. It wasn't watching the shake. It saw breakfast. And it was too cold to come and get it.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        25
+      ]
+    },
+    "paul-harlan-949f6b6fd699": {
+      "speaker": "aiden",
+      "note": "Chapter 25: \"Every leaf we shake is going to shake one down.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        25
+      ]
+    },
+    "REVIEW_REQUIRED-8e516b58ecd0": {
+      "speaker": "aiden",
+      "note": "Chapter 26: \"They were in the station kitchen.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        26
+      ]
+    },
+    "REVIEW_REQUIRED-3afb7087383a": {
+      "speaker": "paul-harlan",
+      "note": "Chapter 26: \"They were mine before that.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        26
+      ]
+    },
+    "lena-ortiz-d27ab111907c": {
+      "speaker": "security-officer",
+      "note": "Chapter 26: \"What worked.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        26
+      ]
+    },
+    "lena-ortiz-8dec29018309": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 26: \"The collar. My glove came back dry.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        26
+      ]
+    },
+    "lena-ortiz-aca345eaa892": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 26: \"One shake is a hundred and ten liters. On a clear, cold morning. And there aren't clear, cold mornings every day.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        26
+      ]
+    },
+    "lena-ortiz-91cc81fbbaf4": {
+      "speaker": "security-officer",
+      "note": "Chapter 26: \"Here's what I'll agree to. Not again today. One leaf near that retreat on any morning. Never the one under it. If you want more water than that, find me somewhere else to shake.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        26
+      ]
+    },
+    "aiden-e4c5f631b87b": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 26: \"There's somewhere else. There's the end of every road.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        26
+      ]
+    },
+    "security-officer-5fdf1ab2fbb1": {
+      "speaker": "doctor-mercer",
+      "note": "Chapter 26: \"What's that?\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        26
+      ]
+    },
+    "security-officer-b572a236d9c7": {
+      "speaker": "doctor-mercer",
+      "note": "Chapter 26: \"It looks like work.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        26
+      ]
+    },
+    "sarah-bennett-04fcf6c09f18": {
+      "speaker": "doctor-mercer",
+      "note": "Chapter 26: \"It's dry.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        26
+      ]
+    },
+    "doctor-mercer-160cd12031d9": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 26: \"Dry as a bone.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        26
+      ]
+    },
+    "sarah-bennett-4b6fe4e8894c": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 26: \"Paul's.\" Read against the scene, 2026-11-03 (chapters from the reference-repos run, integrated here).",
+      "chapters": [
+        26
       ]
     }
   }

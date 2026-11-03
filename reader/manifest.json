@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01",
+  "generated": "2026-11-03",
   "movements": [
     {
       "number": 1,
@@ -41,6 +41,12 @@
       "number": 7,
       "dir": "outline/movement-07",
       "overview": "outline/movement-07/overview.md",
+      "miniArcs": []
+    },
+    {
+      "number": 8,
+      "dir": "outline/movement-08",
+      "overview": "outline/movement-08/overview.md",
       "miniArcs": []
     }
   ],
@@ -297,6 +303,39 @@
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "decision"
+    },
+    {
+      "number": 24,
+      "path": "chapters/movement-08/chapter-0024.md",
+      "movement": 8,
+      "title": "First Gray",
+      "pov": "Jack",
+      "word_count": 1529,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "action"
+    },
+    {
+      "number": 25,
+      "path": "chapters/movement-08/chapter-0025.md",
+      "movement": 8,
+      "title": "One Shake",
+      "pov": "Jack",
+      "word_count": 1662,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "reveal"
+    },
+    {
+      "number": 26,
+      "path": "chapters/movement-08/chapter-0026.md",
+      "movement": 8,
+      "title": "Wet Asphalt",
+      "pov": "Jack",
+      "word_count": 1570,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "realization"
     }
   ],
   "storyRules": [
