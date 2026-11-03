@@ -1,6 +1,6 @@
 {
   "_comment": "Canonical sound assets the game may reuse. `audio` points at the same file the audiobook plays: one generated effect, used in both places, never a second copy for Godot. Playback timing is NOT exported -- the audiobook's cue sheet times these against narration, and the game times them against gameplay. `generated` false means the asset is approved but not yet made.",
-  "assetCount": 28,
+  "assetCount": 29,
   "assets": [
     {
       "assetId": "amb_computer_lab",
@@ -408,6 +408,20 @@
       "description": "Jack's physical shutdown. It has to sound conclusive, because the room coming back on afterwards is the moment TOMBS stops being a malfunction.",
       "chapters": [
         2
+      ]
+    },
+    {
+      "assetId": "sfx_stumble_console_catch",
+      "category": "foley",
+      "loop": false,
+      "audio": "audio/sfx/foley/sfx_stumble_console_catch.mp3",
+      "durationSeconds": 2,
+      "source": "generated",
+      "generated": true,
+      "suggestedGain": 0.4,
+      "description": "Chapter 3, after the activation (revised 2026-11-03, decision 0044): Jack and Sarah are thrown off balance and catch themselves on the console and desk instead of falling. A stumble and a catch, not a fall.",
+      "chapters": [
+        3
       ]
     },
     {

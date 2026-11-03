@@ -1,0 +1,20 @@
+{
+  "asset": "sfx_stumble_console_catch",
+  "category": "foley",
+  "source": "generated",
+  "provider": "elevenlabs-sfx",
+  "model": "eleven_text_to_sound_v3",
+  "outputFormat": "mp3_44100_128",
+  "prompt": "Shoes scuffing and skidding a short way on a hard laboratory floor as someone loses their balance, then two hands slapping onto the edge of a metal console to catch themselves, a brief creak of the console taking the weight, then stillness. Close interior perspective, recorded at a strong present level. No voices, no music, no body hitting the floor, no debris.",
+  "durationSeconds": 2,
+  "promptInfluence": 0.45,
+  "loop": false,
+  "assetVersion": 1,
+  "fingerprint": "0ee0ce752f3c6f295e54f19df20c7f7a0660c4de31048a0ea5883d3890ef6de1",
+  "bytes": 33061,
+  "generated": "2026-11-03T21:46:12Z",
+  "measured": {
+    "lufs": -25.4,
+    "loudnessSource": "scripts/audio.py measure-loudness, ffmpeg ebur128 on the served file"
+  }
+}

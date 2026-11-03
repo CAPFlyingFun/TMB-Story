@@ -1,0 +1,20 @@
+{
+  "clipId": "narrator-b3f64d3b094a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "003b2437194464a0df6021ad6142127252fe2fb7ebbf815d7e5f3940b20b432d",
+  "text": "The floor seemed to drop away beneath his feet, and he grabbed the edge of the console with his free hand.",
+  "bytes": 91158,
+  "generated": "2026-11-03T21:46:08Z"
+}

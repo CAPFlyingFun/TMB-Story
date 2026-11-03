@@ -1,0 +1,20 @@
+{
+  "clipId": "narrator-9e87329a660a",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "62fbff551b315591f4456aa990c50107eaf7871c5ea8c7d2052cb219a39edb38",
+  "text": "Sound returned all at once. Jack's knees buckled, and the console was the only thing that kept him upright. Sarah swayed into the desk beside him, still holding his hand. Somewhere inside the array chamber, metal rang once and went still.",
+  "bytes": 234936,
+  "generated": "2026-11-03T21:46:09Z"
+}

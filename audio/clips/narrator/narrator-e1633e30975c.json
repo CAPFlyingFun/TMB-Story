@@ -1,0 +1,20 @@
+{
+  "clipId": "narrator-e1633e30975c",
+  "speaker": "narrator",
+  "voiceId": "XjLkpWUlnhS8i7gGz3lZ",
+  "voiceVersion": 1,
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.62,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+  },
+  "delivery": "",
+  "previousText": "",
+  "fingerprint": "8e4de6d91db1ff1cf627a3b4d9f7ac619d0c1ce26bfb85db2e324369007d25f6",
+  "text": "Jack turned to her.",
+  "bytes": 27628,
+  "generated": "2026-11-03T21:46:08Z"
+}
