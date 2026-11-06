@@ -17,7 +17,7 @@ status_changes:
   - "Aiden: air coming up from underground is warmer and wetter than the morning air; when it meets the cold, it fogs; something down there is wet"
   - "Sarah judges the distance by sight: from the road end to the grate is about as far as from their house to the station"
   - "In the community center's back room, Mark, Lena, Doctor Mercer, Paul, Aiden, Jack and Sarah decide: one team goes past the end of the southern road, in daylight, to the grate"
-  - "Lena: twelve days of water by her morning reading"
+  - "Lena: thirteen days of water by her morning reading"
   - "The plan: Jack leads, with Mark and Aiden in the cage and Unit Four on the winch at the grate; Paul's crew waits at the road end; Sarah runs the expedition from the utility station with Lena, on the helmet cameras"
   - "Paul builds a cage on a cable to lower people down the shaft, and a frame to sit across two of the grate's bars"
   - "Lena will set relay radios: one at the road end, one carried to the grate; past that, the concrete may cut the signal"
