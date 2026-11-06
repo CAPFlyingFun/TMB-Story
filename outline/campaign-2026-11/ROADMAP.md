@@ -12,16 +12,25 @@ of 2026-11-06 22:44 UTC, reconciled with the manuscript at `55682cb` and Joshua'
   night of March tenth, about five days after the activation. Sarah was thirty-two weeks on
   March fifth, so about thirty-two weeks five days now. Forty-one weeks falls about **May
   seventh, twenty-one ten**, about fifty-eight days after Chapter 26.
+- **Calendar.** Thirty-two weeks zero days on March fifth; thirty-three on March twelfth; forty-one
+  on May seventh. The countdown is not restarted at Chapter 26.
 - **Water clock.** At the seventeen thousand liters a day observed in Chapter 26 the tanks
   run dry around March twenty-sixth. **The underground finds water:** the construction
   records (Event 3) point to the island's own engineered water system, and the expedition
   (Event 4) is driven by reaching it. It ends with a limited, hard-won supply and an outpost,
-  not an unlimited fix.
+  not an unlimited fix. **Gradual (Joshua):** evidence first, then safe access, testing and
+  treatment, then a reliable supply to the town before the tanks run dry around March
+  twenty-sixth. The seventeen-thousand-liter daily need stands unless the story gives a credible
+  reason for it to change.
 - **Access.** The tunnels are full island scale, outside the transformed town. **They enter
   through an island-scale service grate just past the end of a road,** the way they went to
-  the western road's end. Nothing about how the edge works is revealed (WORLD_RULES §1, §7).
-- **Event 2.** "First Night" is **the first night after they learn the spider follows water
-  onto the asphalt**: a night watch at the cart and the trough site, light, and new rules.
+  the western road's end. Chapter 4's severed pipes and cables stay severed; there is no intact
+  connection through the boundary. The expedition must physically reach the entrance and
+  overcome the scale. Nothing about how the edge works is revealed (WORLD_RULES §1, §7).
+- **Event 2** is renamed **"The Spider on the Road"** (Joshua): a meaningful night encounter that
+  tests the existing night defenses (Ch 12 blinds, Ch 13 edge lights out, Ch 19 inner
+  streetlights) and reveals something new. The jumping spider is diurnal (Ch 11, 12, 22), so the
+  night spider is a second species, a wolf spider.
 - **TOMBS stays offline.** Sarah reads its event log and records; live mapping is the
   field team's helmet cameras, a laser scanner and tablets.
 - **Modular island** is Joshua's new canon (Events 3 and 8): the man-made island was built in
@@ -36,7 +45,7 @@ of 2026-11-06 22:44 UTC, reconciled with the manuscript at `55682cb` and Joshua'
 | # | Event | Suggested | Story time (tentative) | Sarah |
 |---|---|---|---|---|
 | 1 | Water Trail | 1 | night of March 10 – March 11 | ~32w5d |
-| 2 | First Night (spider on the road) | 2 | March 11–12 | ~32w6d |
+| 2 | The Spider on the Road | 2 | March 11–12 | 32w6d–33w0d |
 | 3 | Construction Records | 2 | March 12–14 | ~33w |
 | 4 | Underground Expedition | 5 | March 15–19 | ~33–34w |
 | 5 | Building a Home | 2 | late March | ~34–35w |
@@ -52,3 +61,5 @@ Mysteries stay open for Andy's generation: Q01–Q12, the hidden scale layers, P
 
 | Event | Status | Chapters | Ends | Sarah |
 |---|---|---|---|---|
+| 1 Water Trail | ✅ drafted, pending | 27 | morning of March 11 | 32w6d |
+| 2 The Spider on the Road | ✅ drafted, pending | 28, 29 | March 12, mid-morning; 14 days of water | 33w0d |

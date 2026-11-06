@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-03",
+  "generated": "2026-11-06",
   "movements": [
     {
       "number": 1,
@@ -47,6 +47,12 @@
       "number": 8,
       "dir": "outline/movement-08",
       "overview": "outline/movement-08/overview.md",
+      "miniArcs": []
+    },
+    {
+      "number": 9,
+      "dir": "outline/movement-09",
+      "overview": "outline/movement-09/overview.md",
       "miniArcs": []
     }
   ],
@@ -336,6 +342,39 @@
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "realization"
+    },
+    {
+      "number": 27,
+      "path": "chapters/movement-09/chapter-0027.md",
+      "movement": 9,
+      "title": "The Wet Line",
+      "pov": "Jack",
+      "word_count": 1477,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "decision"
+    },
+    {
+      "number": 28,
+      "path": "chapters/movement-09/chapter-0028.md",
+      "movement": 9,
+      "title": "Eyeshine",
+      "pov": "Jack",
+      "word_count": 1760,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "suspense"
+    },
+    {
+      "number": 29,
+      "path": "chapters/movement-09/chapter-0029.md",
+      "movement": 9,
+      "title": "Night Shift",
+      "pov": "Jack",
+      "word_count": 1262,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "decision"
     }
   ],
   "storyRules": [

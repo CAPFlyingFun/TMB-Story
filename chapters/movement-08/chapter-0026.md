@@ -165,7 +165,7 @@ She went quiet. Not the quiet of someone reading. The other kind.
 
 He sat on the edge of the couch. She had the western road up. Not the live feed. The recording from that morning, a little after seven. The timestamp in the corner read seven oh four.
 
-The sun was full on the road end. The trough was gone. The puddles from the shower lay on the asphalt in front of the place where it had stood, flat and shining. From them, a thin, wet line ran back across the road toward the cart. The line the corners had left, all the way back.
+The sun was full on the road end. The trough was gone. The puddles from the shower lay on the asphalt in front of the place where it had stood, flat and shining. From them, a thin, wet line ran back across the road toward the cart. The line the corners had left.
 
 The spider was on the asphalt.
 
