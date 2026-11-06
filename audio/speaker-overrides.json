@@ -197,7 +197,8 @@
       "note": "Chapter 6: \"I know.\" -- a speaker-only tag nearby was removed on 2026-10-06 (DIALOGUE ATTRIBUTION RULE: speaker carried by the structured data, portrait and voice), and alternation then read the wrong person. Restored to the speaker Joshua had heard and checked. Same line, same correction, in Chapter 16 (2026-10-13).",
       "chapters": [
         6,
-        16
+        16,
+        31
       ]
     },
     "sarah-bennett-5d402806295f": {
@@ -1452,7 +1453,8 @@
       "speaker": "jack-bennett",
       "chapters": [
         7,
-        24
+        24,
+        30
       ],
       "orders": [
         2,
@@ -3429,6 +3431,267 @@
       ],
       "orders": [
         69
+      ]
+    },
+    "REVIEW_REQUIRED-c77b02d3dcfd": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 30, order 4: \"There's a chair.\" is sarah-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        4
+      ]
+    },
+    "REVIEW_REQUIRED-9b5224f8524c": {
+      "speaker": "doctor-mercer",
+      "note": "Chapter 30, order 5: \"Then sit in it. Four blocks, in a truck, and you sit. If I hear you climbed a st\" is doctor-mercer's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        5
+      ]
+    },
+    "REVIEW_REQUIRED-805b59a15fde": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 30, order 6: \"There are stairs. It's a basement.\" is sarah-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        6
+      ]
+    },
+    "REVIEW_REQUIRED-0ba3fb72e082": {
+      "speaker": "doctor-mercer",
+      "note": "Chapter 30, order 8: \"Then somebody carries the chair.\" is doctor-mercer's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        8
+      ]
+    },
+    "REVIEW_REQUIRED-5a6b4d07de79": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 30, order 11: \"Then why are you walking backward in front of me?\" is sarah-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        11
+      ]
+    },
+    "REVIEW_REQUIRED-f98390531196": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 30, order 12: \"So I can see you.\" is jack-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        12
+      ]
+    },
+    "REVIEW_REQUIRED-4d833911fe62": {
+      "speaker": "lena-ortiz",
+      "note": "Chapter 30, order 14: \"It's been running the whole time. Nobody turned it off. Nobody had a reason to t\" is lena-ortiz's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        14
+      ]
+    },
+    "sarah-bennett-4e5812b12f5b": {
+      "speaker": "lena-ortiz",
+      "note": "Chapter 30, order 49: \"That's us. Before.\" is lena-ortiz's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        49
+      ]
+    },
+    "security-officer-1b8382dd720e": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 30, order 51: \"There.\" is sarah-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        51
+      ]
+    },
+    "security-officer-de2ffe993d5a": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 30, order 57: \"If it's there, I should be able to see it.\" is sarah-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        57
+      ]
+    },
+    "sarah-bennett-6cbf6148f4c8": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 30, order 70: \"Can we see down it?\" is jack-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        70
+      ]
+    },
+    "lena-ortiz-40ee8a96ffaf": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 30, order 74: \"I know.\" is jack-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        74,
+        76
+      ]
+    },
+    "sarah-bennett-8c238bdf752b": {
+      "speaker": "security-officer",
+      "note": "Chapter 30, order 78: \"Lena. How old are these drawings?\" is security-officer's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        78
+      ]
+    },
+    "sarah-bennett-ae037dfeb951": {
+      "speaker": "security-officer",
+      "note": "Chapter 30, order 80: \"So nobody knows what's down there now.\" is security-officer's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        30
+      ],
+      "orders": [
+        80
+      ]
+    },
+    "REVIEW_REQUIRED-eb9f9d2845c1": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 31, order 1: \"Watch the bars.\" is sarah-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        31
+      ],
+      "orders": [
+        1
+      ]
+    },
+    "sarah-bennett-ffff72d7bf2c": {
+      "speaker": "doctor-mercer",
+      "note": "Chapter 31, order 50: \"And you. You're not going.\" is doctor-mercer's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        31
+      ],
+      "orders": [
+        50
+      ]
+    },
+    "security-officer-5eb48203ebd8": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 31, order 62: \"In a chair.\" is sarah-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        31
+      ],
+      "orders": [
+        62
+      ]
+    },
+    "security-officer-92dd7dc31bea": {
+      "speaker": "unit-four",
+      "note": "Chapter 31, order 67: \"It's good.\" is unit-four's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        31
+      ],
+      "orders": [
+        67
+      ]
+    },
+    "security-officer-469bb35c6f91": {
+      "speaker": "unit-four",
+      "note": "Chapter 31, order 70: \"I'm just checking.\" is unit-four's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        31
+      ],
+      "orders": [
+        70
+      ]
+    },
+    "paul-harlan-6928c77d211d": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 31, order 76: \"Five days.\" is jack-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        31
+      ],
+      "orders": [
+        76
+      ]
+    },
+    "paul-harlan-0d0d8457d6fc": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 31, order 79: \"Jack.\" is sarah-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        31
+      ],
+      "orders": [
+        79
+      ]
+    },
+    "sarah-bennett-45d85b1c6841": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 31, order 80: \"Mm.\" is jack-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        31
+      ],
+      "orders": [
+        80
+      ]
+    },
+    "paul-harlan-b559bde43192": {
+      "speaker": "sarah-bennett",
+      "note": "Chapter 31, order 81: \"You're going past the end of the road.\" is sarah-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        31
+      ],
+      "orders": [
+        81
+      ]
+    },
+    "paul-harlan-0f791311d82e": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 31, order 86: \"Look, and come back.\" is jack-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        31
+      ],
+      "orders": [
+        86
+      ]
+    },
+    "paul-harlan-92d5d93ccffd": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 31, order 88: \"I'll look. And I'll come back.\" is jack-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        31
+      ],
+      "orders": [
+        88
+      ]
+    },
+    "paul-harlan-86b0dac5497a": {
+      "speaker": "jack-bennett",
+      "note": "Chapter 31, order 91: \"He always agrees with you.\" is jack-bennett's line, read against the scene (campaign 2026-11-06).",
+      "chapters": [
+        31
+      ],
+      "orders": [
+        91
       ]
     }
   }

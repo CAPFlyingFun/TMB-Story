@@ -54,6 +54,12 @@
       "dir": "outline/movement-09",
       "overview": "outline/movement-09/overview.md",
       "miniArcs": []
+    },
+    {
+      "number": 10,
+      "dir": "outline/movement-10",
+      "overview": "outline/movement-10/overview.md",
+      "miniArcs": []
     }
   ],
   "chapters": [
@@ -372,6 +378,28 @@
       "title": "Night Shift",
       "pov": "Jack",
       "word_count": 1262,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "decision"
+    },
+    {
+      "number": 30,
+      "path": "chapters/movement-10/chapter-0030.md",
+      "movement": 10,
+      "title": "The Drawings",
+      "pov": "Jack",
+      "word_count": 1278,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "revelation"
+    },
+    {
+      "number": 31,
+      "path": "chapters/movement-10/chapter-0031.md",
+      "movement": 10,
+      "title": "The Grate Breathes",
+      "pov": "Jack",
+      "word_count": 1260,
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "decision"
