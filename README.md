@@ -6,6 +6,11 @@
 > Everything under `archive/pre-reboot/` belongs to a different, superseded story and
 > is **not canon**. See `archive/pre-reboot/README.md`.
 
+**Created and directed by Joshua Herring.** Claude (Anthropic) and ChatGPT (OpenAI) assist with
+drafting, software and production under his direction; AI-generated material is reviewed by Joshua
+and is not canon until he approves it. © 2026 Joshua Herring. All rights reserved in
+copyright-protected original contributions. See [`AUTHORSHIP.md`](AUTHORSHIP.md).
+
 The writing repository for **TRADDOMIUM: Micro Battle!**, a serialized,
 audiobook-first science fiction story. A research settlement on a remote Atlantic
 island is reduced to insect scale by its own experimental system, and the people

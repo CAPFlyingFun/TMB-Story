@@ -669,3 +669,6 @@ button {
 .spk-mic { border: none; background: transparent; display: inline-grid; place-items: center; font-size: 1em; }
 .spk-narrator .spk-name { color: var(--text-muted, #8B7E6E); font-weight: 500; }
 .now-empty { display: none; }
+
+.authorship { margin-top: 10px; font-size: 0.85em; opacity: 0.8; }
+.authorship a { color: inherit; }
