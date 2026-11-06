@@ -3,7 +3,7 @@ chapter: 27
 title: "The Wet Line"
 movement: 9
 pov: Jack
-word_count: 1477
+word_count: 1488
 story_time:
   clock: settlement
   date: "March tenth to March eleventh, twenty-one ten"
@@ -66,7 +66,11 @@ Nobody argued with that.
 
 Sarah pulled up a different window on the tablet. It was a map Jack hadn't looked at in five days. The settlement, drawn from above, every street and roof, with a thin red line around all of it.
 
-"That's the boundary overlay. From the night it happened. Whoever drew it drew it carefully, and nobody's touched it since." She zoomed in on the western road until the red line sat right across the end of the asphalt. "It's the best map of the edge we've got. So I can measure." She laid one finger on the end of the road and one on the cart, and moved the first finger along the wet line on the frame beside it. "It got about halfway. Halfway to the cart. Then the road was dry, and it stopped."
+"That's the boundary overlay. From the night it happened. Whoever drew it drew it carefully, and nobody's touched it since."
+
+She zoomed in on the western road until the red line sat right across the end of the asphalt. "It's the best map of the edge we've got. So I can measure."
+
+She laid one finger on the end of the road and one on the cart, and moved the first finger along the wet line on the frame beside it. "It got about halfway. Halfway to the cart. Then the road was dry, and it stopped."
 
 Mark looked at the map for a long moment. "On a sunny morning."
 
@@ -92,9 +96,13 @@ Sarah told him. She told it plainly, the puddles, the line, the halfway, and whe
 
 Mark kept his voice even. "Out of the corners. Not your fault. Nobody knew."
 
-"I knew it leaked. I said so. I didn't know what a leak meant." Paul cleared his throat. "Second one doesn't get corners. I'll bend the whole thing out of one sheet. No seams where the water sits. That's two days, not one."
+"I knew it leaked. I said so. I didn't know what a leak meant."
 
-"Take three. Here's the rest of it." Mark took a breath and counted them off, the way he had on the board. "Nothing gets left wet on that road. Ever. The trough goes back to the cart on a tarp, so whatever comes out of it goes into the tarp, and the tarp comes home with it. Your crew waits at the last streetlight. Not at the cart."
+Paul cleared his throat. "Second one doesn't get corners. I'll bend the whole thing out of one sheet. No seams where the water sits. That's two days, not one."
+
+"Take three. Here's the rest of it."
+
+Mark took a breath and counted them off, the way he had on the board. "Nothing gets left wet on that road. Ever. The trough goes back to the cart on a tarp, so whatever comes out of it goes into the tarp, and the tarp comes home with it. Your crew waits at the last streetlight. Not at the cart."
 
 "I'm allowed at the cart."
 
@@ -102,7 +110,9 @@ Mark kept his voice even. "Out of the corners. Not your fault. Nobody knew."
 
 There was a pause on the line. Then Paul's voice, quieter. "Last streetlight."
 
-"And nobody stops watching." Mark looked at Sarah. "Not when the lid closes. Not when we're in the truck. Somebody watches that road until it's dry."
+"And nobody stops watching."
+
+Mark looked at Sarah. "Not when the lid closes. Not when we're in the truck. Somebody watches that road until it's dry."
 
 "Me."
 
@@ -114,7 +124,9 @@ He looked at Jack, and then at the crib, and almost smiled. "Doctor Mercer's goi
 
 Mark turned to go. Sarah held up a hand.
 
-"There's one more. I wasn't going to show you tonight." She closed the map and opened another feed. "I've done five roads. The northern ones are fine. Dry, every morning. But this one's the southern road. The last block, where the houses are. Look at the curb."
+"There's one more. I wasn't going to show you tonight."
+
+She closed the map and opened another feed. "I've done five roads. The northern ones are fine. Dry, every morning. But this one's the southern road. The last block, where the houses are. Look at the curb."
 
 She ran the recording from that morning at speed. In the gray before sunrise, a thin dark line lay along the gutter, from the last driveway, down the curb, and out across the end of the asphalt into the soil.
 
@@ -128,7 +140,9 @@ Lena had been listening. Her voice came back sharp. "That's my two thousand lite
 
 Jack looked at the radio. "Some of it."
 
-"Some of it. A hose running for an hour is a few hundred. Do that on six or seven blocks and it's the difference." She was quiet for a moment, counting. "I said somebody's tomatoes were dying. I didn't think somebody was saving them."
+"Some of it. A hose running for an hour is a few hundred. Do that on six or seven blocks and it's the difference."
+
+She was quiet for a moment, counting. "I said somebody's tomatoes were dying. I didn't think somebody was saving them."
 
 Mark was still looking at the flies. "That line goes into the grass."
 
@@ -138,7 +152,9 @@ Mark was still looking at the flies. "That line goes into the grass."
 
 Nobody said anything.
 
-"Lena. A notice. Tonight. Short." Mark said it the way he wrote on the board. "No water poured or sprayed outside. Not on gardens, not on cars, not in the street. Anywhere, any hour. No reason given except that it matters."
+"Lena. A notice. Tonight. Short."
+
+Mark said it the way he wrote on the board. "No water poured or sprayed outside. Not on gardens, not on cars, not in the street. Anywhere, any hour. No reason given except that it matters."
 
 "They'll want a reason."
 
@@ -154,7 +170,9 @@ Mark put his radio back on his belt. "I'll send Four to the last block in the mo
 
 "And then what?"
 
-"And then he helps them carry their tomatoes inside." He opened the door. Cold came in around him. "Plants can live in a window. Nobody can live on that road."
+"And then he helps them carry their tomatoes inside."
+
+He opened the door. Cold came in around him. "Plants can live in a window. Nobody can live on that road."
 
 He went out, and the door closed behind him, and the house was very quiet.
 
@@ -162,7 +180,9 @@ Jack sat down on the couch beside Sarah. She leaned against him without looking 
 
 "Five roads."
 
-"Five roads. Four to go." She yawned, and hated that she had. "I'll do them tomorrow."
+"Five roads. Four to go."
+
+She yawned, and hated that she had. "I'll do them tomorrow."
 
 "You'll do them now."
 
@@ -178,7 +198,9 @@ At nine, Unit Four called in from the southern road. His voice was careful and a
 
 Mark's voice came back slowly. "What did you tell him?"
 
-"That it was. Then I carried the beans inside. He wanted them by the window, where she used to sit." Unit Four hesitated. "He asked me whether it was true. About the spider."
+"That it was. Then I carried the beans inside. He wanted them by the window, where she used to sit."
+
+Unit Four hesitated. "He asked me whether it was true. About the spider."
 
 "What did you say?"
 

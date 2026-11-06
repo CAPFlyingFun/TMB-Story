@@ -3,7 +3,7 @@ chapter: 36
 title: "Ten Thousand"
 movement: 10
 pov: Jack
-word_count: 
+word_count: 1351
 story_time:
   clock: settlement
   date: "March nineteenth, twenty-one ten"
@@ -16,17 +16,17 @@ status_changes:
   - "First light, March nineteenth: Unit Four walks the line with Jack; at a joint about halfway out, a coupling has wept overnight; the soil around it is wet and drowned gnats lie in it"
   - "Sarah, on the road camera, sees the ground beetle coming along the hose toward the wet joint; Unit Four clamps and sleeves the joint while she counts the distance down, and they back off along the stakes; the beetle eats the drowned gnats on the wet soil and goes back into the stems once the patch dries"
   - "Aiden's first treated sample is clean: one of three"
-  - "Lena routes the old irrigation tank through pipes to the greenhouse line, the community laundry and the public washrooms; nothing is poured outdoors"
-  - "The pump runs from nine to half past two: about nine thousand six hundred liters"
+  - "Lena routes the old irrigation tank through pipes to the community laundry, the public washrooms' showers and basins, and the kitchens' washing-up; nothing is poured outdoors"
+  - "The pumps run from nine to half past two: about nine thousand six hundred liters"
   - "Lena's reading: the drinking tanks hold about a hundred and nineteen thousand liters; the town now takes about seven thousand a day from them instead of seventeen; at that rate about seventeen days, to the beginning of April"
   - "Mark's rule for the far wall: nobody crosses the channel, nobody goes up or down the gallery past the scanner, nobody goes near the opening"
   - "Paul asks that the town hear that his crew has worked past the end of a road for three days"
   - "Doctor Mercer's evening check: Sarah is thirty-four weeks; pressure holding; tightenings that come and go are practice, normal at this stage; Doctor Mercer gives the list of what would not be normal"
   - "Doctor Mercer asks to go through her delivery supplies with them the next day; more is missing than she would like"
 new_canon:
-  - "Gallery water feeds the greenhouse, the community laundry and the public washrooms, by pipe, from the old irrigation tank"
+  - "Gallery water feeds the community laundry, the public washrooms' showers and basins and the kitchens' washing-up, by pipe, from the old irrigation tank"
   - "On March nineteenth the drinking tanks hold about a hundred and nineteen thousand liters, drawn down about seven thousand a day"
-  - "The pump runs from about nine to half past two, while the line is staffed"
+  - "The staged pumps run from about nine to half past two, while the line is staffed"
   - "Sarah is thirty-four weeks on March nineteenth, with practice contractions"
   - "Every delivery on the island was planned with a hospital to send the mother to if anything went wrong"
 playable_beat_flow: ["walk the line at first light", "find the weeping joint", "clamp and sleeve it while the beetle comes", "back off along the stakes", "read Aiden's first result", "reroute the irrigation tank", "count the day's liters", "rule out the far wall", "sit in on the evening check"]
@@ -45,7 +45,7 @@ They went out from the asphalt along the stakes in the gray, slowly, one joint a
 
 At the thirty-first, he stopped.
 
-The soil around the coupling was dark. Not soaked, but damp, in a ring as wide as a room. Overnight, after the pump had stopped, the water left standing in the hose had wept out through the coupling, a drop at a time, all night. In the dark ring lay gnats, a dozen of them, drowned, their wings stuck flat.
+The soil around the coupling was dark. Not soaked, but damp, in a ring as wide as a room. Overnight, after the pumps had stopped, the water left standing in the hose had wept out through the coupling, a drop at a time, all night. In the dark ring lay gnats, a dozen of them, drowned, their wings stuck flat.
 
 Unit Four looked at it for a long moment. "That's a wet line."
 
@@ -89,19 +89,23 @@ Aiden was at the station at eight with a jar and the look of someone who had sle
 
 Lena didn't look up from the gauges. "Clean how?"
 
-"After the filter and the chlorine, nothing my kits can find. Nothing growing. It tastes like a swimming pool and a piece of chalk." He set the jar on her desk. "That's one."
+"After the filter and the chlorine, nothing my kits can find. Nothing growing. It tastes like a swimming pool and a piece of chalk."
+
+He set the jar on her desk. "That's one."
 
 "Out of three."
 
 "Out of three."
 
-Lena had written Doctor Mercer's rule in red at the top of her clipboard. She tapped it with her pen. "So it doesn't go anywhere anyone drinks it. It goes where it doesn't matter if it tastes of chalk." She pulled the town's schematic up and drew on it with her finger. "The old irrigation tank feeds the greenhouse line. I can open it into the pipes that feed the community laundry, and the public washrooms. Inside, through the pipes. Nothing poured outside. All of that came out of the drinking tanks until this morning."
+Lena had written Doctor Mercer's rule in red at the top of her clipboard. She tapped it with her pen. "So it doesn't go anywhere anyone drinks it. It goes where it doesn't matter if it tastes of chalk."
+
+She pulled the town's schematic up and drew on it with her finger. "The old irrigation tank can open into the pipes that feed the community laundry, and the public washrooms' showers and basins, and the kitchens' washing-up. Inside, through the pipes. Nothing poured outside. All of that came out of the drinking tanks until this morning."
 
 Jack watched the lines appear. "So the tanks stop paying for laundry."
 
-"And toilets. And the greenhouse."
+"And the showers. And the washing-up."
 
-The pump ran from nine. Unit Four called in from the outpost every hour, three sentences each time. Pump running. Line dry. Nothing on the soil. At half past two, Mark called it from the grate. Pump off. Everybody walking back. At five, the soil past the road end was empty.
+The pumps ran from nine. Unit Four called in from the outpost every hour, three sentences each time. Pumps running. Line dry. Nothing on the soil. At half past two, Mark called it from the grate. Pumps off. Everybody walking back. At five, the soil past the road end was empty.
 
 Lena read the inlet meter on the irrigation tank, and wrote the number down before she said it.
 
@@ -111,17 +115,23 @@ Paul was sitting on his crate. He took a pencil out of his pocket and wrote the 
 
 Then Lena read the drinking tanks, and that number took her longer.
 
-"A hundred and nineteen thousand. At seventeen a day, that's seven days. But the drinking tanks aren't paying for the laundry anymore, or the greenhouse, or the washrooms. If the line runs every day like today, the town takes about seven thousand a day out of them, not seventeen." She did the last of it out loud, because everyone was watching her. "Seventeen days. To the beginning of April."
+"A hundred and nineteen thousand. At seventeen a day, that's seven days. But the drinking tanks aren't paying for the laundry anymore, or the showers, or the washing-up. If the line runs every day like today, the town takes about seven thousand a day out of them, not seventeen."
+
+She did the last of it out loud, because everyone was watching her. "Seventeen days. To the beginning of April."
 
 Seventeen days wasn't forever. It wasn't even a month. But that morning it had been seven.
 
 Mark wrote it on the board. Then he looked at Sarah's gallery map on Lena's second screen, the channel and the tiles, and the small red mark on the far wall.
 
-"Nobody crosses the channel. Nobody goes up the gallery or down it past the scanner. And nobody goes near that." He tapped the red mark. "I don't care what it is. Not this month."
+"Nobody crosses the channel. Nobody goes up the gallery or down it past the scanner. And nobody goes near that."
+
+He tapped the red mark. "I don't care what it is. Not this month."
 
 Before Jack left, Paul spoke from his crate without looking up.
 
-"People saw the hoses go down the southern road. They saw my crew carry them." He turned the pencil over in his fingers. "People think the end of the road is where you die. My crew's been past it three days running. It's where you work. Tell them that, when you tell them about the water."
+"People saw the hoses go down the southern road. They saw my crew carry them."
+
+He turned the pencil over in his fingers. "People think the end of the road is where you die. My crew's been past it three days running. It's where you work. Tell them that, when you tell them about the water."
 
 Mark looked at him for a moment, and nodded.
 
@@ -129,7 +139,9 @@ Doctor Mercer came to the house at eight.
 
 Sarah was on the couch with the tablet face down on her stomach, too tired to hold it up. Five days at a screen had come off her all at once, the moment there was nothing left to watch.
 
-Doctor Mercer took her pressure. "Holding." She wrote it down. "Thirty-four weeks today."
+Doctor Mercer took her pressure. "Holding."
+
+She wrote it down. "Thirty-four weeks today."
 
 "I know."
 
@@ -141,7 +153,9 @@ Jack sat up very straight.
 
 Doctor Mercer didn't. She put her hand flat on Sarah's stomach and left it there, and waited.
 
-"That's practice. Your body rehearsing. Normal, at this stage. They come and go, they don't get closer together, they don't get stronger." She took her hand away. "Here's what isn't practice. If they come regularly, closer and closer. If they hurt and keep hurting. Any bleeding. Any water. Or he goes quiet when he usually kicks. Any of those, you call me. Not Jack. Not the station. Me. Day or night."
+"That's practice. Your body rehearsing. Normal, at this stage. They come and go, they don't get closer together, they don't get stronger."
+
+She took her hand away. "Here's what isn't practice. If they come regularly, closer and closer. If they hurt and keep hurting. Any bleeding. Any water. Or he goes quiet when he usually kicks. Any of those, you call me. Not Jack. Not the station. Me. Day or night."
 
 "I know the list."
 
@@ -153,7 +167,9 @@ Then she turned to Jack. "And I want something from you."
 
 "Anything."
 
-"Your wife is going to have this baby here. In this town. With what this town has." She picked up her bag. "Every delivery on this island was planned with a hospital behind it. Somewhere to send her if anything went wrong. There isn't one now. I've made a list of what I've got. Tomorrow I want to go through it with both of you. Line by line."
+"Your wife is going to have this baby here. In this town. With what this town has."
+
+She picked up her bag. "Every delivery on this island was planned with a hospital behind it. Somewhere to send her if anything went wrong. There isn't one now. I've made a list of what I've got. Tomorrow I want to go through it with both of you. Line by line."
 
 Sarah pushed herself up on one elbow. She looked at Doctor Mercer the way she looked at a number she didn't trust.
 

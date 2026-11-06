@@ -3,7 +3,7 @@ chapter: 34
 title: "What's in It"
 movement: 10
 pov: Jack
-word_count: 
+word_count: 1357
 story_time:
   clock: settlement
   date: "March fifteenth to March sixteenth, twenty-one ten"
@@ -21,14 +21,14 @@ status_changes:
   - "Doctor Mercer: not drinking water yet; first it washes, flushes and waters the greenhouse, which frees the tanks; three clean tests in a row after treatment, then she will talk about drinking"
   - "Lena: the station has chlorine for tank maintenance and a spare holding tank, the old irrigation tank, kept apart from the drinking supply"
   - "Sarah asks whether the channel stops when it does not rain; Aiden: it picks up ground water and will drop in a dry spell; the channel is measured daily"
-  - "Paul: the fire station's electric pump (an engine would fill the gallery with exhaust), a generator at the grate, and every hose in town; whether it can lift water up a shaft that tall, he does not know; about thirty liters a minute"
+  - "Paul: no single pump lifts water six hundred meters; stage it like a mine, a pump to a drum to a pump, seven electric pumps (an engine would fill the gallery with exhaust), a generator at the grate, and every hose in town; about thirty liters a minute"
   - "Lena: thirty a minute, only while people are out there (at the grate by nine, starting back by half past two), is about ten thousand liters on a good day; not seventeen; weeks, not days"
   - "Sarah thirty-three weeks four days"
 new_canon:
   - "Centipedes longer than a truck live in the service gallery"
   - "The gallery water is hard and carries ordinary bacteria; treatable by filtering, chlorine and boiling (Aiden's kits)"
   - "The utility station has chlorine for tank maintenance and an old irrigation tank kept apart from drinking water"
-  - "The fire station has an electric pump and hoses"
+  - "The town has pumps that can be spared at the fire station, the greenhouse, the utility station and the wastewater plant, and hoses"
   - "There is an opening in the gallery wall that the drawing does not show"
 playable_beat_flow: ["fill the sample jars with the pole", "scan the gallery", "mark the opening", "see the centipede", "drop a jar", "get in the cage", "ride up", "run the water tests", "ask whether the channel stops", "make the plan at the station"]
 ending_type: decision
@@ -56,7 +56,9 @@ He turned. His helmet light slid across the tiles, and the seams, and into the d
 
 He found it after a moment, far across the gallery, where his light was nearly too thin to show anything. The wall rose pale and smooth, and low down in it, there was a dark shape. An opening. Square cornered. Black.
 
-"That's not on the drawing. The drawing has that wall as solid all the way along. I've marked it." Her voice was very even. "Nobody goes near it."
+"That's not on the drawing. The drawing has that wall as solid all the way along. I've marked it."
+
+Her voice was very even. "Nobody goes near it."
 
 Mark didn't look away from Aiden's boots. "Nobody was going to."
 
@@ -100,7 +102,9 @@ Aiden held them up. "Two jars. The third one's down there. It can stay there."
 
 The next afternoon, Aiden came to the station with three clean jars and a notebook full of numbers, and stood in front of Mark's board like a student in front of an exam.
 
-"It's hard water. Full of minerals, from running over all that concrete. That's not a problem. It tastes of chalk, that's all." He turned a page. "It has bacteria in it. Not a lot. Ordinary ones. What you'd find in any water that's run over the ground and into a drain. Nothing my kits can find that a filter and chlorine and boiling won't deal with."
+"It's hard water. Full of minerals, from running over all that concrete. That's not a problem. It tastes of chalk, that's all."
+
+He turned a page. "It has bacteria in it. Not a lot. Ordinary ones. What you'd find in any water that's run over the ground and into a drain. Nothing my kits can find that a filter and chlorine and boiling won't deal with."
 
 Doctor Mercer had come from the medical center to hear it. She stood by the window with her arms folded.
 
@@ -108,7 +112,9 @@ Doctor Mercer had come from the medical center to hear it. She stood by the wind
 
 "My kits. They're not a laboratory."
 
-"No, they aren't." She looked at the numbers in his notebook for a long time. "So here's what it is. It's not drinking water. Not yet. First it washes. It flushes toilets. It waters the greenhouse. Every liter of that is a liter that doesn't come out of the tanks. Then it gets treated, and you test it after it's treated, three times, three days in a row, clean every time. Then I'll talk about drinking."
+"No, they aren't."
+
+She looked at the numbers in his notebook for a long time. "So here's what it is. It's not drinking water. Not yet. First it washes. It flushes toilets. It waters the greenhouse. Every liter of that is a liter that doesn't come out of the tanks. Then it gets treated, and you test it after it's treated, three times, three days in a row, clean every time. Then I'll talk about drinking."
 
 Lena was already writing. "The station has chlorine. For cleaning the tanks. And there's the old irrigation tank behind the building. Nobody's used it since they put the new line in. It's separate from the drinking tanks. Nothing mixes."
 
@@ -124,7 +130,9 @@ Then he turned to Paul. "And how does it get from down there to up here?"
 
 Paul had been waiting all day to be asked. He stood up off his crate.
 
-"The fire station's got an electric pump. Electric, because an engine down there fills that tunnel with exhaust, and then Aiden's meter says no. I'll put a generator in a shed at the grate and run the cable down. Whether it'll lift water up a shaft that tall, I don't know. On paper it shouldn't. I want to try it." He spread his hands. "Then the hoses. Every hose in town. Fire station, greenhouse, my shop. Up the shaft, along Four's stakes to the road end, down the southern road to the station. It's a long way. But we've got a lot of hose."
+"No single pump in this town will lift water up that shaft. Sarah's scanner says it's over six hundred meters. A good pump does a hundred. So we do it like a mine. A pump at the bottom pushes up to a drum on a platform. The next pump takes from the drum and pushes up to the next. Electric, every one, because an engine down there fills that tunnel with exhaust and then Aiden's meter says no. A generator in a shed at the grate. Seven pumps, if I can find seven."
+
+He spread his hands. "Then the hoses. Every hose in town. Fire station, greenhouse, my shop. Up the shaft, along Four's stakes to the road end, down the southern road to the station. It's a long way. But we've got a lot of hose."
 
 "How much water?"
 
@@ -134,7 +142,9 @@ Lena's pen moved. "Thirty a minute. Only while people are out there with it. The
 
 Jack heard the sum before she said the rest.
 
-"It's not seventeen. It doesn't replace the tanks." Lena looked up at the board. "But ten thousand a day we don't take out of them is the difference between running out at the end of this month and running out weeks later. Weeks we don't have now."
+"It's not seventeen. It doesn't replace the tanks."
+
+Lena looked up at the board. "But ten thousand a day we don't take out of them is the difference between running out at the end of this month and running out weeks later. Weeks we don't have now."
 
 Nobody said anything for a moment.
 

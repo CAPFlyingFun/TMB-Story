@@ -60,6 +60,12 @@
       "dir": "outline/movement-10",
       "overview": "outline/movement-10/overview.md",
       "miniArcs": []
+    },
+    {
+      "number": 11,
+      "dir": "outline/movement-11",
+      "overview": "outline/movement-11/overview.md",
+      "miniArcs": []
     }
   ],
   "chapters": [
@@ -355,7 +361,7 @@
       "movement": 9,
       "title": "The Wet Line",
       "pov": "Jack",
-      "word_count": 1477,
+      "word_count": 1488,
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "decision"
@@ -366,7 +372,7 @@
       "movement": 9,
       "title": "Eyeshine",
       "pov": "Jack",
-      "word_count": 1760,
+      "word_count": 1751,
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "suspense"
@@ -377,7 +383,7 @@
       "movement": 9,
       "title": "Night Shift",
       "pov": "Jack",
-      "word_count": 1262,
+      "word_count": 1290,
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "decision"
@@ -410,7 +416,7 @@
       "movement": 10,
       "title": "Past the Asphalt",
       "pov": "Jack",
-      "word_count": 0,
+      "word_count": 1470,
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "suspense"
@@ -421,7 +427,7 @@
       "movement": 10,
       "title": "Down",
       "pov": "Jack",
-      "word_count": 0,
+      "word_count": 1167,
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "revelation"
@@ -432,7 +438,7 @@
       "movement": 10,
       "title": "What's in It",
       "pov": "Jack",
-      "word_count": 0,
+      "word_count": 1357,
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "decision"
@@ -443,7 +449,7 @@
       "movement": 10,
       "title": "The Line",
       "pov": "Jack",
-      "word_count": 0,
+      "word_count": 1348,
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "reveal"
@@ -454,10 +460,32 @@
       "movement": 10,
       "title": "Ten Thousand",
       "pov": "Jack",
-      "word_count": 0,
+      "word_count": 1351,
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "decision"
+    },
+    {
+      "number": 37,
+      "path": "chapters/movement-11/chapter-0037.md",
+      "movement": 11,
+      "title": "Line by Line",
+      "pov": "Jack",
+      "word_count": 1310,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "decision"
+    },
+    {
+      "number": 38,
+      "path": "chapters/movement-11/chapter-0038.md",
+      "movement": 11,
+      "title": "Covered",
+      "pov": "Jack",
+      "word_count": 1471,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "realization"
     }
   ],
   "storyRules": [

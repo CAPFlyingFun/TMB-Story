@@ -76,7 +76,9 @@ Jack had seen photographs of it, a green shape on a gray sea. He had never seen 
 
 Sarah traced one with her finger. "What are these?"
 
-Lena leaned in. "Seams. I've heard the engineers say it. The island wasn't built in one go. It was built in sections, and they were joined." She pointed at the label in the corner of one piece. "Modules. That's what the drawings call them."
+Lena leaned in. "Seams. I've heard the engineers say it. The island wasn't built in one go. It was built in sections, and they were joined."
+
+She pointed at the label in the corner of one piece. "Modules. That's what the drawings call them."
 
 Mark stood behind them with his arms folded. "And under the seams?"
 
@@ -100,7 +102,9 @@ Nobody said anything for a moment.
 
 Lena's voice was very careful. "That's drawn full. That's what it's meant to look like. That doesn't mean it is."
 
-"No. But it means it was built to hold water." Sarah sat back in the chair. "Lena, where's the town on this?"
+"No. But it means it was built to hold water."
+
+Sarah sat back in the chair. "Lena, where's the town on this?"
 
 Lena took the keyboard, found a little search box, typed something, and the view slid sideways across the dark blue. A cluster of tiny buildings came into the middle of the screen, small and neat, with the roads running out from them in every direction. Jack knew every one of those roads. On this drawing, they were nothing. A fingerprint on a window.
 
@@ -132,7 +136,9 @@ It was the only straight line out there.
 
 Mark said it very quietly. "That's not the island growing something."
 
-"No." Sarah didn't take her eyes off it. "That's the island somebody built."
+"No."
+
+Sarah didn't take her eyes off it. "That's the island somebody built."
 
 Lena had gone very still. "I've worked at that station a long time. I've never once thought about where the rain went."
 
@@ -140,7 +146,9 @@ Jack looked at the drawing, and then at the camera, and then at the drawing agai
 
 "Can we see down it?"
 
-"Not from here. It's just dark between the bars." Sarah zoomed in until the picture broke into gray squares, then zoomed back out. "It's past the end of the road, Jack."
+"Not from here. It's just dark between the bars."
+
+Sarah zoomed in until the picture broke into gray squares, then zoomed back out. "It's past the end of the road, Jack."
 
 "I know."
 

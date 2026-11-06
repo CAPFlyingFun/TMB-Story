@@ -3,7 +3,7 @@ chapter: 29
 title: "Night Shift"
 movement: 9
 pov: Jack
-word_count: 1262
+word_count: 1290
 story_time:
   clock: settlement
   date: "March twelfth, twenty-one ten"
@@ -151,7 +151,9 @@ Mark frowned at the console. "Where else would it come from?"
 
 Lena looked up from her clipboard.
 
-"The station has the settlement's plans. Every pipe and cable inside the town. That's mine. But the island's own drawings were never the station's business. Nobody at the station ever needed them." She hesitated. "There's an engineering archive. Old. On the servers in the records building. I've never had a reason to open it."
+"The station has the settlement's plans. Every pipe and cable inside the town. That's mine. But the island's own drawings were never the station's business. Nobody at the station ever needed them."
+
+She hesitated. "There's an engineering archive. Old. On the servers in the records building. I've never had a reason to open it."
 
 Mark looked at her for a long moment. Then he turned back to the board, uncapped the marker, and wrote one more word under all the others.
 

@@ -3,7 +3,7 @@ chapter: 33
 title: "Down"
 movement: 10
 pov: Jack
-word_count: 
+word_count: 1167
 story_time:
   clock: settlement
   date: "March fifteenth, twenty-one ten"
@@ -49,7 +49,9 @@ Unit Four lowered it. The cable ran off the drum and over the wheel, slowly, for
 
 Then it went slack.
 
-"It's at the bottom." Unit Four didn't let go of the handle. "How long does it need?"
+"It's at the bottom."
+
+Unit Four didn't let go of the handle. "How long does it need?"
 
 "Five minutes. Then bring it up."
 
@@ -57,7 +59,9 @@ Five minutes was a long time to stand on a bar over a hole. Jack spent it lookin
 
 Unit Four brought the meter up. Aiden took it in both hands and read it out loud, slowly.
 
-"Oxygen's normal. Carbon dioxide's a little higher than up here. That's what you'd expect underground. Nothing flammable. Nothing poisonous." He looked up. "It's air. It's damp, but it's air."
+"Oxygen's normal. Carbon dioxide's a little higher than up here. That's what you'd expect underground. Nothing flammable. Nothing poisonous."
+
+He looked up. "It's air. It's damp, but it's air."
 
 A new voice came over the channel. Doctor Mercer, from the medical center. She had promised Sarah she would listen.
 
@@ -87,7 +91,9 @@ Sarah's voice came in his ear. "I see you. I've got all three of you. You're abo
 
 Then, halfway, her voice broke into crackling.
 
-"Jack, you're—" Static. "—say again—"
+"Jack, you're—"
+
+Static. "—say again—"
 
 Then nothing at all.
 
@@ -137,4 +143,6 @@ Jack crouched beside him and looked at the water going by, on and on, out of the
 
 Lena's voice came back over the wire, slow, as though she were afraid to say the wrong number.
 
-"I'm seeing it. I can't give you a flow rate from a picture." She stopped, and Jack heard her pen. "But it's more than we use."
+"I'm seeing it. I can't give you a flow rate from a picture."
+
+She stopped, and Jack heard her pen. "But it's more than we use."

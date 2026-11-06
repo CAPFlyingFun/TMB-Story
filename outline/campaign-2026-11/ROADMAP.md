@@ -65,3 +65,4 @@ Mysteries stay open for Andy's generation: Q01–Q12, the hidden scale layers, P
 | 2 The Spider on the Road | ✅ drafted, pending | 28, 29 | March 12, mid-morning; 14 days of water | 33w0d |
 | 3 Construction Records | ✅ drafted, pending | 30, 31 | night of March 14; expedition set for March 15 | 33w2d |
 | 4 Underground Expedition | ✅ drafted, pending | 32–36 | night of March 19; 119k L, ~17 days at 7k/day net | 34w0d |
+| 5 Building a Home | ✅ drafted, pending | 37, 38 | evening of March 26; 72k L, second line due ~March 31 | 35w0d |

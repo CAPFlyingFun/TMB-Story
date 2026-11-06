@@ -3,7 +3,7 @@ chapter: 28
 title: "Eyeshine"
 movement: 9
 pov: Jack
-word_count: 1760
+word_count: 1751
 story_time:
   clock: settlement
   date: "March eleventh, twenty-one ten"
@@ -44,7 +44,9 @@ Doctor Mercer came at eight and took Sarah's pressure twice, the way she always 
 
 Sarah let out a breath. "Holding is good."
 
-"Holding is what I asked for." Doctor Mercer wrote it down and closed the notebook. "Thirty-three weeks tomorrow. You know that."
+"Holding is what I asked for."
+
+Doctor Mercer wrote it down and closed the notebook. "Thirty-three weeks tomorrow. You know that."
 
 "I know that."
 
@@ -56,7 +58,9 @@ Doctor Mercer turned around. "You're going out tonight."
 
 "That's the point. It's asleep in the dark."
 
-Doctor Mercer peeled back his dressing, looked at the stitches, and pressed the tape down again. "Pink. Closing. If you open it on a rope, I'll sew it shut myself, and I won't be gentle." She picked up her bag. At the door she stopped and looked back at Sarah. "And you sleep."
+Doctor Mercer peeled back his dressing, looked at the stitches, and pressed the tape down again. "Pink. Closing. If you open it on a rope, I'll sew it shut myself, and I won't be gentle."
+
+She picked up her bag. At the door she stopped and looked back at Sarah. "And you sleep."
 
 "I'll be on the couch."
 

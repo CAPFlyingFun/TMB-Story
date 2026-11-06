@@ -51,9 +51,13 @@ And between its bars, something was moving. Not an animal. Something pale and th
 
 Jack sat down on the edge of the couch. "Is that smoke?"
 
-"It's breath." Sarah didn't look up. "Aiden, tell him."
+"It's breath."
 
-"It's air coming up from underground. Down there, it's warmer than up here this morning, and it's wetter. When it meets the cold, it fogs. Like your breath on a winter morning." Aiden paused. "Something down there is wet, Doctor Bennett. Wet enough to breathe like that."
+Sarah didn't look up. "Aiden, tell him."
+
+"It's air coming up from underground. Down there, it's warmer than up here this morning, and it's wetter. When it meets the cold, it fogs. Like your breath on a winter morning."
+
+Aiden paused. "Something down there is wet, Doctor Bennett. Wet enough to breathe like that."
 
 They watched it until the sun came. The mist thinned, and thinned, and was gone.
 
@@ -69,7 +73,9 @@ Mark stood at the end of the table. "Here's the problem. The grate is past the e
 
 Paul didn't unfold his arms. "Then it was the right thing to say until it wasn't."
 
-"Maybe." Mark looked at Sarah. "How far?"
+"Maybe."
+
+Mark looked at Sarah. "How far?"
 
 Sarah had worked it out from the camera. "By the camera, from the road end to the grate is about as far as from our house to the station. Through grass, and soil, and whatever's lying on the soil. On flat asphalt that's a ten-minute walk. Out there, I don't know."
 
@@ -103,7 +109,9 @@ Sarah's voice didn't change at all. "I know I'm not going. I'm running it."
 
 Mark frowned. "Running it."
 
-"From the station. With Lena. Every one of you wears a helmet camera, and I watch all four. I've got the drawings. I've got the road-end feed. I'll know where you are, and what's around you, before you do." She looked at Mark. "You like lists. I'll be the list."
+"From the station. With Lena. Every one of you wears a helmet camera, and I watch all four. I've got the drawings. I've got the road-end feed. I'll know where you are, and what's around you, before you do."
+
+She looked at Mark. "You like lists. I'll be the list."
 
 Mark looked at her, and then at Jack, and then back at her. Something in his face eased.
 
@@ -147,7 +155,9 @@ He sat back against the couch beside her legs. For a while neither of them said 
 
 "I know."
 
-"I'll be watching every step. Every single one." Her hand found the back of his neck and stayed there. "So you don't get to be brave. You get to be boring. You stop when Mark says stop. You don't go down until the meter says. And when you get there, you look, and you come back."
+"I'll be watching every step. Every single one."
+
+Her hand found the back of his neck and stayed there. "So you don't get to be brave. You get to be boring. You stop when Mark says stop. You don't go down until the meter says. And when you get there, you look, and you come back."
 
 "Look, and come back."
 

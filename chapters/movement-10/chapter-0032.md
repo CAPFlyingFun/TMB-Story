@@ -3,7 +3,7 @@ chapter: 32
 title: "Past the Asphalt"
 movement: 10
 pov: Jack
-word_count: 
+word_count: 1470
 story_time:
   clock: settlement
   date: "March fifteenth, twenty-one ten"
@@ -83,7 +83,9 @@ They dug the soil away from the front of the runners with their hands, and pulle
 
 Aiden sat in the soil, breathing hard. "That was ten minutes."
 
-"That was ten meters." Mark was already folding the tarp. "We'll do it again on the way back."
+"That was ten meters."
+
+Mark was already folding the tarp. "We'll do it again on the way back."
 
 A little farther on, the lifeline went tight behind them. Unit Four looked back along it. "That's the end. Paul's crew's at the end of it."
 
@@ -153,4 +155,6 @@ Lena's voice came in, crackling, then clear. "Relay's up. Station hears you."
 
 Then Sarah's, from somewhere very far away, and right in his ear.
 
-"I see it, Jack. I see what you see." She was quiet for a moment. "Now don't fall in."
+"I see it, Jack. I see what you see."
+
+She was quiet for a moment. "Now don't fall in."

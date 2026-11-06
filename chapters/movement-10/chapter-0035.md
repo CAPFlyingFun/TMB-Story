@@ -3,7 +3,7 @@ chapter: 35
 title: "The Line"
 movement: 10
 pov: Jack
-word_count: 
+word_count: 1348
 story_time:
   clock: settlement
   date: "March seventeenth to March eighteenth, twenty-one ten"
@@ -16,17 +16,18 @@ status_changes:
   - "March seventeenth: seventy-three lengths of hose, every hose in town, are laid along Unit Four's stakes from the grate to the road end and down the southern road to the station, joined end to end; nobody is past the road end after five"
   - "Paul builds a small plywood shelter on the frame at the grate, the outpost, with the winch inside, the relay on a shelf and room for two; a generator sits in a lean-to beside it, cabled down the shaft"
   - "Sarah asks what happens to the line overnight and who checks it before anyone else goes out; Mark makes it a rule: the whole line is walked at first light every day, every joint looked at"
-  - "March eighteenth: the electric pump goes down in the cage with Mark and Aiden, with Jack on the winch, and is set beside the channel with its intake on a float"
-  - "Paul feared the pump could not lift water up a shaft that tall; it lifts it easily; Aiden: at their size the water does not weigh on a pump the way the height looks (the characters' reading; Paul does not like not knowing why)"
+  - "March eighteenth: seven pumps, every one in town that could be spared (fire station, greenhouse, the utility station's spare booster, wastewater plant sump pumps), are hung in stages up the shaft on platforms clamped to the rungs, each lifting into a drum with a float switch for the next; the bottom pump sits beside the channel with its intake on a float"
+  - "Sarah's scanner measures the drop from grate to gallery floor at a little over six hundred meters; no single pump can lift that, and no hose would hold the pressure, so it is staged like a mine"
+  - "At start-up the fourth stage's float sticks; Jack rides the cage down alone and frees it"
   - "The pump starts at about half past one; the hose fills for nearly two hours before water reaches the old irrigation tank, cloudy, then clear"
   - "Lena puts the first chlorine in; Aiden takes the first treated sample"
 new_canon:
   - "A line of seventy-three hose lengths runs from the gallery up the shaft, across the soil along the flagged stakes, to the road end and down the southern road to the utility station"
   - "The grate outpost: a plywood shelter on Paul's frame for two people, with the winch and the relay, and a generator in a lean-to beside it"
   - "The line is walked at first light daily, every joint checked"
-  - "The pump lifts water up the shaft more easily than its height suggests; nobody knows why"
+  - "Seven staged pumps on rung platforms lift gallery water up the shaft"
   - "The first gallery water reached the old irrigation tank on March eighteenth"
-playable_beat_flow: ["unroll the hoses along the stakes", "join the lengths", "build the outpost", "set the generator", "make the first-light rule", "lower the pump", "set the float", "start the pump", "wait for the hose to fill", "watch the tank fill"]
+playable_beat_flow: ["unroll the hoses along the stakes", "join the lengths", "build the outpost", "set the generator", "make the first-light rule", "hang the seven stages", "set the floats", "start the bottom pump", "free the stuck float", "wait for the hose to fill", "watch the tank fill"]
 ending_type: reveal
 review_status: in-review
 audio_status: not-started
@@ -62,7 +63,9 @@ Sarah's voice came over the channel while they were still pulling off their harn
 
 He stopped with one strap half off. "Nothing. It sits there."
 
-"In the dark. With slugs. And whatever crossed the road on the eleventh. And seventy-two joints that nobody's looked at since lunch." Her voice was perfectly reasonable, which was how Jack knew she had been thinking about it for an hour. "Who checks it in the morning? Before anybody walks out along it?"
+"In the dark. With slugs. And whatever crossed the road on the eleventh. And seventy-two joints that nobody's looked at since lunch."
+
+Her voice was perfectly reasonable, which was how Jack knew she had been thinking about it for an hour. "Who checks it in the morning? Before anybody walks out along it?"
 
 Mark looked at the red line going away into the stems. Then he turned to Unit Four.
 
@@ -74,45 +77,57 @@ Unit Four nodded once. "Every joint."
 
 "I already did."
 
-The pump went down the next morning. It was a squat gray electric pump on a frame of its own, and it filled the cage so completely that only two people could ride with it. Mark went, and Aiden with the gas meter. Jack stayed at the top on the winch.
+The stages went down the next morning.
 
-He let the cable out slowly. It ran off the drum and over the wheel and down into the dark, for a long time, and he listened to Mark's voice come up the wire.
+There were seven pumps. Paul had gone through the town for two days and taken every one that could be spared: the fire station's, two from the greenhouse, the utility station's spare booster, three sump pumps from the wastewater plant. Not one of them could lift water out of that shaft on its own. Sarah's scanner had measured the drop from the grate to the gallery floor at a little over six hundred meters. A good pump, Paul said, could push water up a hundred, maybe a bit more, and no hose in town would hold the pressure of doing it all at once.
 
-"On the floor. Moving it. Slowly." A long pause. "Nothing on the walls."
+"So we do it like a mine."
 
-Sarah came in over the relay. "Nothing on the walls. I'm watching both cameras."
+He had drawn it on Mark's board the day before, a ladder of boxes up the side of the shaft. "One pump at the bottom pushes up to a drum. The next one takes from that drum and pushes up to the next. Every stage only lifts its own bit. Every hose only holds its own bit."
 
-They set the pump on the tiles beside the channel and floated its intake out onto the water on a cut-down drum, so that it would ride up and down with the level and never suck air. Then Jack brought them back up.
+The drums sat on platforms his crew had built while the water was being tested, steel frames that clamped around the rungs, every second rung, all the way up. A drum on each, with a lid and a float that switched its pump on when the water came up and off when it fell.
 
-Paul was waiting in the outpost with his hand on the switch he had wired to the generator. He didn't look happy.
+It took all morning. Mark and Aiden rode the cage down with the bottom pump and set it on the tiles beside the channel, with its intake floating out on the water on a cut-down drum, so it would ride up and down with the level and never suck air. Then the cage came up a stage at a time, stopping at every platform while Mark clamped it to the rung and Aiden hung the pump and the hose. Jack stayed at the top on the winch, and let the cable out, and took it in, and listened to Mark's voice come up the wire.
 
-"I'll tell you now. On paper, it can't push water up a shaft that tall. Not a pump that size. If nothing comes, it's not broken. It's arithmetic."
+"Stage two. Clamped. Nothing on the walls."
 
-Mark looked at him. "Then why are we trying?"
+Sarah came in over the relay. "Nothing on the walls. I've got the platforms on Aiden's camera."
 
-"Because I've been wrong about water at our size every day this week."
+At half past one, with all seven stages hung and the cage back at the top, Paul stood in the outpost with his hand on the switch to the generator.
 
-At half past one he threw the switch.
+"Bottom first. Then each one wakes up when its drum fills. If one doesn't, the one under it fills its drum and stops. Nothing breaks. It just waits."
 
-Far below, the pump began to hum. It came up the shaft as a low, steady note, like something breathing in its sleep. Beside Jack's boot, the hose jumped and stiffened and went round and hard.
+He threw the switch.
 
-Paul stared at it. "That's pressure."
+Far below, the bottom pump began to hum. Jack heard it come up the shaft as a low, steady note, like something breathing in its sleep. Then, a long time later, a second note joined it, higher up. Then a third.
 
-Aiden was crouched by the hose with his hand flat on it. "It's lifting."
+Sarah was counting the drums on the camera. "Stage two's full. Three's filling. Three's full. Four."
 
-"It shouldn't be."
+She stopped. "Four's full and five isn't running. The water's at the top of four's drum. It's not going anywhere."
 
-"I know." Aiden looked up at the shaft, and then down at the hose, frowning the way he did at the leaves. "It's a long way up, to us. I don't think it's a long way up to the water. Everything about water down here has been wrong for our size. The way it sticks to things. The way it climbs a pole. Maybe the way it weighs on a pump, too."
+Paul swore, quietly and thoroughly. "Float's stuck."
 
-Paul didn't like that. Jack could see him not liking it. "I don't like a thing working when I don't know why."
+Mark was already looking at the cage. "Jack. You know the float?"
 
-"Neither do I. But it's working."
+"I watched Aiden hang it."
 
-It took a long time. The hose was nearly two kilometers long, Lena said, and every meter of it had to fill before anything came out of the far end. Jack sat on the floor of the outpost with his back against the wall and listened to the hum, and to Unit Four's quiet report on the hour, and to nothing else. One hour. An hour and a half.
+"Then go and unstick it. I'll run the winch."
+
+Jack rode the cage down alone, past the first platform and the second, into the dark, with the hum of the pumps below him and the drip of water somewhere close. At the fourth platform the drum was brimming. Its float sat jammed against the lid bracket. He reached through the bars of the cage with his gloved left hand, and the new skin pulled, and he pushed the float free.
+
+Above him, the fifth pump coughed and caught.
+
+"Five's running."
+
+Sarah's voice was very close. "Six. Seven. Jack, come up. You did it. Come up."
+
+It took a long time after that. The hose from the top drum to the station was nearly two kilometers long, Lena said, and every meter of it had to fill before anything came out of the far end. Jack sat on the floor of the outpost with his back against the wall and listened to the seven pumps humming in the shaft, one above another, and to Unit Four's quiet report on the hour, and to nothing else. One hour. An hour and a half.
 
 Then Lena's voice came over the channel, and she wasn't calm at all.
 
-"It's here. It's coming in. It's cloudy, it's coming in cloudy, it's clearing. It's clear." She stopped, and laughed, a short surprised sound Jack had never heard her make. "It's water. It's coming into my tank."
+"It's here. It's coming in. It's cloudy, it's coming in cloudy, it's clearing. It's clear."
+
+She stopped, and laughed, a short surprised sound Jack had never heard her make. "It's water. It's coming into my tank."
 
 Nobody in the outpost said anything.
 
