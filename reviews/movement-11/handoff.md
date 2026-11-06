@@ -9,3 +9,11 @@ Continuity and world-creature reviewed. Changed: tank figures (108,000 on March 
 Mr. Pell speaks for the first time; he is voiced with the existing "Resident (man)" voice rather than a new null-voice entry. Say if you want him his own voice.
 
 Canon candidates: the eight o'clock meeting; Mercer's four gaps; the grow beds; last-block moves; the March 25 rain; the blanket.
+
+## Event 6, Medical Problem (Ch 39–40), 2026-11-06
+
+Continuity reviewed (including a lay medical read). Changed: the second line goes in at first light so the first full two-line day is 19,300 L and April 1 reads about two thousand higher; "I didn't know we had that many" (Ch 37 already had "Some. Not much."); the drill drive stays on inner streets, nowhere near the edge blocks; Sarah wears the belt in the drill and the tablet runs on its own battery; "somewhere that couldn't afford the machines"; "Five minutes apart" so it does not blur with the four-minute drive; a repeated "which was how Jack knew" construction dropped.
+
+Nurse Hale speaks; she is voiced with the existing "Resident (woman)" voice. Say if you want her her own voice.
+
+Canon candidates: Nurse Hale; heat-stable tablets; the belt monitor; the bubble breathing device and warming box; head down at 36 weeks; the eleven-second generator; two lines, about 19,300 L a day, tanks rising from April 1.

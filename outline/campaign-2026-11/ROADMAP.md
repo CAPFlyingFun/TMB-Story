@@ -66,3 +66,4 @@ Mysteries stay open for Andy's generation: Q01–Q12, the hidden scale layers, P
 | 3 Construction Records | ✅ drafted, pending | 30, 31 | night of March 14; expedition set for March 15 | 33w2d |
 | 4 Underground Expedition | ✅ drafted, pending | 32–36 | night of March 19; 119k L, ~17 days at 7k/day net | 34w0d |
 | 5 Building a Home | ✅ drafted, pending | 37, 38 | evening of March 26; 72k L, second line due ~March 31 | 35w0d |
+| 6 Medical Problem | ✅ drafted, pending | 39, 40 | April 5; tanks rising; all four gaps addressed | 36w3d |

@@ -486,6 +486,28 @@
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "realization"
+    },
+    {
+      "number": 39,
+      "path": "chapters/movement-11/chapter-0039.md",
+      "movement": 11,
+      "title": "Four Things",
+      "pov": "Jack",
+      "word_count": 1288,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "decision"
+    },
+    {
+      "number": 40,
+      "path": "chapters/movement-11/chapter-0040.md",
+      "movement": 11,
+      "title": "The Drill",
+      "pov": "Jack",
+      "word_count": 1216,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "decision"
     }
   ],
   "storyRules": [
