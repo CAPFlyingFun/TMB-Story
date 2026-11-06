@@ -1,0 +1,7 @@
+# How to resume the campaign (read this first in any continuation)
+
+1. `git pull`; read `ROADMAP.md` (progress table at the bottom = what is done), `architecture/DECISIONS.md` 0045 and its addendum, the newest `outline/movement-NN/overview.md` ("Next chapter start"), and the last three chapters in full.
+2. Never write a chapter number that already exists in `chapters/`. The next event is the first row not in the progress table.
+3. Per event: draft natural chapters (frontmatter per `chapters/CHAPTER_TEMPLATE.md`, `review_status: in-review`, `audio_status: not-started`, source line naming decision 0045) → `scripts/style-check.py` → `audio.py parse` → read every dialogue line and pin wrong ones in `audio/speaker-overrides.json` (key = the parser's clip id; scope with `chapters` and `orders`) → specialist review (continuity, world-creature, mystery; all five after Events 4, 8, 10) → fixes → `validate` → `build-manifest.py` → `build-word-docs.py` (restore unchanged older docx with `git checkout`) → `tests/test_audio.py` → overview + handoff + ROADMAP progress row → commit, rebase, push → Trello card: rename "(WRITING COMPLETE · 🟡 pending approval)", comment, move to ✍️ WRITING.
+4. `audio.py validate` rewrites other chapters' manifests as a side effect: `git checkout` any manifest you did not mean to change before committing.
+5. No audio. No approval changes. Chapters 1–10 are approved; never edit them.
