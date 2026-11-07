@@ -21,3 +21,45 @@ Canon candidates:
 - The due date is April 30.
 - The bag list and the knitted hat.
 - Labor begins at about eleven at night on May 6.
+
+## Event 10, Andy's Arrival (Ch 48–49), 2026-11-07
+
+All five specialists reviewed. What changed:
+
+- **Medicine:**
+  - The envelope injection (Ch 39, "That one is Sarah's") is now the one given after the birth, and the afterbirth is mentioned.
+  - Pain medicine is no longer offered during pushing, since it can make the baby sleepy. Mercer now names that cost, and Sarah declines in Mercer's own terms.
+  - The counted silence before the cry is cut, so he cries at once.
+  - Newborns see about as far as a face, and the text now says so.
+  - The kneeling lasts "all that last hour".
+- **Continuity:**
+  - The house has no stairs, so Sarah sits on the chair by the front door.
+  - "For weeks" replaces "every evening for a month".
+  - The light is no longer gray at midday.
+  - Mark waits by the front door, and his "Anything?" plays as a knowing joke.
+  - "Fetch the ice" is removed from the beat flow.
+- **Craft:**
+  - The ending stays in Sarah's point of view and closes on her saying his name to herself. The omniscient pull-back and "the forgotten room" are cut.
+  - "It's the end" becomes "You said we wouldn't need it until the end".
+  - Cut: echo pairs, "the most beautiful sound", "almost proud", Mercer's ears line, extra "enormous" and "didn't say anything" tics.
+  - The robin is placed beyond the edge of the town.
+  - Rule 8a splits are fixed.
+
+No open question is introduced, advanced or answered.
+
+**For Joshua:**
+
+- **Andy's full name.** The chapters say only "Andy" and "Andy Bennett". DESIGNED_VOICES lists "Andrew" as tentative. Please confirm or change it.
+- **Pain medicine.** Mercer's one pain medicine is new canon.
+- **Ch 48 length.** It is 1,529 words, over the normal band, and should be checked by ear.
+- **Watch item for the time-jump era.** Q09 ("could its target be a person") must never point at Andy without your decision.
+- **CREATURES.md.** It stops at Chapter 10. The robin, wolf spider, slugs, ants and centipedes live only in the chapters.
+
+**Canon candidates:**
+
+- Andy Bennett, born at 12:48 pm on May 7, 2110, at forty-one weeks, about three and a half kilos.
+- A straightforward birth, delivered by Mercer with Nurse Hale.
+- The belt slip.
+- Mercer's pain medicine.
+- Mark's "Anything?" / "Copy." ritual.
+

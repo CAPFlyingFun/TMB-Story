@@ -597,6 +597,28 @@
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "cliffhanger"
+    },
+    {
+      "number": 48,
+      "path": "chapters/movement-13/chapter-0048.md",
+      "movement": 13,
+      "title": "Slow Isn't Wrong",
+      "pov": "Jack",
+      "word_count": 1529,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "turn"
+    },
+    {
+      "number": 49,
+      "path": "chapters/movement-13/chapter-0049.md",
+      "movement": 13,
+      "title": "Andy",
+      "pov": "Sarah",
+      "word_count": 1450,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "quiet"
     }
   ],
   "storyRules": [

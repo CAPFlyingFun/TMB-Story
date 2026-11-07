@@ -81,3 +81,6 @@ Mysteries stay open for Andy's generation: Q01–Q12, the hidden scale layers, P
 | 7 Ecological Survey | ✅ drafted, pending | 41, 42 | night of April 13; the old revision found | 37w4d |
 | 8 Forgotten Module | ✅ drafted, pending | 43, 44, 45 | evening of April 16; bulkhead left sealed | 38w0d |
 | 9 Preparing for Birth | ✅ drafted, pending | 46, 47 | just after midnight, night of May 6; labor begun | 40w6d |
+| 10 Andy's Arrival | ✅ drafted, pending | 48, 49 | early afternoon, May 7; Andy born 12:48 pm | 41w0d |
+
+**Campaign drafting complete (2026-11-07).** Twenty-three chapters, 27 to 49, all pending Joshua's approval, no audio. Decision 0045's exception has run its course; the weekly rules apply again when Joshua resumes the schedule.
