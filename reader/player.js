@@ -90,6 +90,8 @@
       a.addEventListener("playing", function () {
         state.consecutiveFailures = 0;
         state.retries = 0;
+        /* The active chapter is playing: now fetch the next ones in the background. */
+        if (window.TMBOffline && state.chapter != null) window.TMBOffline.prefetchAfter(state.chapter);
         var l = layers(); if (l) l.setSpeaking(true);
       });
       a.addEventListener("pause", function () {
@@ -369,12 +371,25 @@
       if (state.download && state.download.abort) state.download.abort.abort();
       state.playing = true;      // the listener asked to play; it starts when the file is here
       var chapter = state.chapter;
-      download(src).then(function () {
+      var O = window.TMBOffline, m = state.mixed;
+      var got = O && O.available()
+        ? O.getForPlay(chapter, { audio: m.audio, hash: m.hash, bytes: m.bytes }, function (loaded, total, started) {
+            state.download = state.download || { src: src, loaded: 0, total: total, started: started };
+            state.download.loaded = loaded; state.download.total = total; renderLoading();
+          }).then(function (blob) {
+            state.download = null; renderLoading();
+            remember(src, URL.createObjectURL(blob));
+          }, function (err) { state.download = null; renderLoading(); throw err; })
+        : download(src);
+      got.then(function () {
         if (state.chapter === chapter && state.playing && mixedSrc() === src) playMixed();
       }, function (err) {
         if (err && err.name === "AbortError") return;
-        state.streamOnly = true;              // fall back to streaming rather than not playing
-        if (state.chapter === chapter && state.playing) playMixed();
+        /* Say what happened (attempts, time, last error), then fall back to streaming
+           rather than not playing at all. */
+        state.stalled = (err && err.message) || "The chapter audio did not download.";
+        state.streamOnly = true;
+        if (state.chapter === chapter && state.playing) playMixed(); else render();
       });
       render();
       return;
@@ -860,6 +875,93 @@
     startTicking();
   }
 
+  /* ---- chapters and downloads (reader/offline.js) ---------------------------
+     A PocketFM-style chapter list: each chapter's state on this device, a button to
+     download / update / retry / remove it, how many chapters to fetch ahead, and a short
+     log so a failed download says what went wrong. */
+  function downloadsHtml() {
+    var O = window.TMBOffline;
+    if (!O || !O.available()) return "";
+    var list = O.chapters(), done = 0, bytes = 0;
+    var rows = list.map(function (c) {
+      var st = O.status(c.number), a = c.audio, label, btn;
+      if (st.state === "done") { done += 1; bytes += a.bytes || 0; }
+      if (st.state === "done") { label = "Downloaded"; btn = ["remove", "Remove"]; }
+      else if (st.state === "downloading") {
+        var pct = st.total ? Math.floor(100 * st.loaded / st.total) : 0;
+        label = "Downloading " + pct + "%"; btn = ["cancel", "Cancel"];
+      }
+      else if (st.state === "queued") { label = "Waiting"; btn = ["cancel", "Cancel"]; }
+      else if (st.state === "update") { label = "Update available"; btn = ["download", "Update"]; }
+      else if (st.state === "error") { label = "Failed"; btn = ["download", "Retry"]; }
+      else { label = ""; btn = ["download", "Download"]; }
+      return '<li class="dl-row dl-' + st.state + (c.number === state.chapter ? " dl-current" : "") + '">' +
+        '<button type="button" class="dl-open" data-ch="' + c.number + '">' +
+          '<span class="dl-num">' + c.number + '</span> ' + esc(c.title) + '</button>' +
+        '<span class="dl-meta">' + O.mb(a.bytes || 0) + ' MB · ' + clock(a.seconds) +
+          (label ? ' · <span class="dl-state">' + esc(label) + '</span>' : '') + '</span>' +
+        '<button type="button" class="dl-act" data-act="' + btn[0] + '" data-ch="' + c.number + '">' + btn[1] + '</button>' +
+        (st.state === "error" && st.error ? '<p class="dl-err">' + esc(st.error) + '</p>' : '') +
+        '</li>';
+    }).join("");
+    var k = O.ahead();
+    var log = O.log().slice(0, 12).map(function (e) {
+      return '<li class="dl-log-' + e.level + '">' + esc(e.at) + ' · ' + esc(e.msg) + '</li>';
+    }).join("");
+    return '<h2 class="dl-head">Chapters &amp; downloads</h2>' +
+      '<div class="dl-settings">' +
+        '<label>Download ahead <select id="dl-ahead">' +
+          [0, 1, 2, 3].map(function (n) {
+            return '<option value="' + n + '"' + (n === k ? " selected" : "") + '>' +
+              (n ? "next " + n + " chapter" + (n > 1 ? "s" : "") : "off") + '</option>';
+          }).join("") + '</select></label>' +
+        '<span class="dl-sum">' + done + ' downloaded · ' + O.mb(bytes) + ' MB on this device</span>' +
+        '<button type="button" id="dl-all">Download all</button>' +
+        '<button type="button" id="dl-clear">Remove all</button>' +
+      '</div>' +
+      '<ul class="dl-list">' + rows + '</ul>' +
+      (log ? '<details class="dl-log"><summary>Download log</summary><ul>' + log + '</ul></details>' : '');
+  }
+
+  var dlPending = false;
+  function renderDownloads() {
+    if (dlPending) return;
+    dlPending = true;
+    (window.requestAnimationFrame || setTimeout)(function () {
+      dlPending = false;
+      var box = document.getElementById("listen-downloads");
+      if (!box) return;
+      var open = box.querySelector("details.dl-log") && box.querySelector("details.dl-log").open;
+      box.innerHTML = downloadsHtml();
+      if (open && box.querySelector("details.dl-log")) box.querySelector("details.dl-log").open = true;
+      var O = window.TMBOffline;
+      var ahead = document.getElementById("dl-ahead");
+      if (ahead) ahead.onchange = function () { O.setAhead(parseInt(ahead.value, 10)); };
+      var all = document.getElementById("dl-all");
+      if (all) all.onclick = function () { O.downloadAll(); };
+      var clear = document.getElementById("dl-clear");
+      if (clear) clear.onclick = function () {
+        if (window.confirm("Remove every downloaded chapter from this device?")) O.removeAll();
+      };
+      Array.prototype.forEach.call(box.querySelectorAll(".dl-act"), function (b) {
+        b.onclick = function () {
+          var n = parseInt(b.getAttribute("data-ch"), 10), act = b.getAttribute("data-act");
+          if (act === "download") O.download(n); else if (act === "cancel") O.cancel(n); else O.remove(n);
+        };
+      });
+      Array.prototype.forEach.call(box.querySelectorAll(".dl-open"), function (b) {
+        b.onclick = function () {
+          var n = parseInt(b.getAttribute("data-ch"), 10);
+          var pick = document.getElementById("listen-chapter");
+          if (pick) pick.value = String(n);
+          loadChapter(n);
+          var top = document.querySelector(".listen");
+          if (top && top.scrollIntoView) top.scrollIntoView({ behavior: "smooth" });
+        };
+      });
+    });
+  }
+
   // ---- public entry --------------------------------------------------------
   window.TMBPlayer = {
     mount: function (view, manifestData) {
@@ -877,7 +979,12 @@
           return '<option value="' + c.number + '">' + c.number + ' · ' + esc(c.title) + '</option>';
         }).join("") + '</select></label>' +
         '<div id="listen-body"><p class="state state-loading">Loading audio manifest…</p></div>' +
+        '<div id="listen-downloads" class="listen-downloads"></div>' +
         '</section>';
+      if (window.TMBOffline) {
+        if (!state.dlBound) { window.TMBOffline.onChange(renderDownloads); state.dlBound = true; }
+        renderDownloads();
+      }
       var pick = document.getElementById("listen-chapter");
       pick.onchange = function () { loadChapter(parseInt(pick.value, 10)); };
       if (chapters.length) loadChapter(chapters[0].number);

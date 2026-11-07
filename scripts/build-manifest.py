@@ -228,6 +228,28 @@ def _as_str(v):
     return str(v)
 
 
+def chapter_audio(number):
+    """The one file the Listen tab plays for a chapter by default, for offline download
+    and update checks: the v4 dialogue file when it has a full index, else the mixed
+    file. None when the chapter has neither."""
+    path = os.path.join(ROOT, "audio", "manifests", "chapter-%02d.json" % number)
+    if not os.path.isfile(path):
+        return None
+    try:
+        with open(path) as fh:
+            m = json.load(fh)
+    except Exception:
+        return None
+    n = len(m.get("segments") or [])
+    ex = m.get("exports") or {}
+    for kind in ("dialogue", "mixed"):
+        e = ex.get(kind)
+        if e and e.get("audio") and e.get("startMs") and len(e["startMs"]) == n:
+            return {"kind": kind, "audio": e["audio"], "hash": e.get("hash"),
+                    "bytes": e.get("bytes"), "seconds": e.get("seconds")}
+    return None
+
+
 def scan_chapters():
     chapters = []
     chapters_dir = os.path.join(ROOT, "chapters")
@@ -261,6 +283,7 @@ def scan_chapters():
                 "review_status": _as_str(fm.get("review_status")) or "draft",
                 "audio_status": _as_str(fm.get("audio_status")) or "not-started",
                 "ending_type": _as_str(fm.get("ending_type")),
+                "audio": chapter_audio(number),
             })
     chapters.sort(key=lambda c: (c["number"], c["path"]))
     return chapters
