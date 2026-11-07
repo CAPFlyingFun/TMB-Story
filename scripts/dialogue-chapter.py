@@ -7,14 +7,20 @@ The chapter's manifest is the script: every segment (narration, dialogue, system
 one dialogue input in its own voice. Requests are cut at segment boundaries, at most
 2,000 characters each, and pass previous/next text for continuity.
 
-Then, free: each line is cut out at the returned voice_segments, its edge silence is
-trimmed, narration is sped up by --narrator-tempo (pitch kept), and the lines are
+Then, free: each line is cut out at the returned voice_segments and trimmed to its own
+speech. The segments run slightly late, so most lines end with a short blip (the next
+speaker's breath or onset, a "heh" or a pop) after a few hundred ms of silence; the
+trim drops any edge sound island under 160 ms that is set apart by silence, cuts at
+the speech itself and fades each edge (8 ms) so no cut clicks. Then narration is sped up by --narrator-tempo (pitch kept), and the lines are
 joined with the manifest's own pauseBeforeMs, the same pauses the Listen tab uses.
 
 Output: audio/tests/dialogue-v4/chapter-NN/ (raw requests, timings, chapter mp3).
 Never touches the chapter's real clips, manifest, fingerprints or approval state.
 """
 import argparse, base64, json, os, subprocess, sys, urllib.request, urllib.error
+import numpy as np
+
+SR = 44100
 
 LIMIT = 1900
 
@@ -49,6 +55,37 @@ def render(inputs, prev_text, next_text, model):
                 return json.load(r)
         print("HTTP", e.code, e.read().decode()[:2000]); raise
 
+def load(path):
+    b = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", path, "-ac", "1", "-ar", str(SR),
+                        "-f", "s16le", "-"], capture_output=True, check=True).stdout
+    return np.frombuffer(b, np.int16).astype(np.float32) / 32768
+
+def speech_bounds(seg, floor_db=-40, min_island=0.16, min_gap=0.05, pad=0.03):
+    """Start/end (seconds within seg) of the line's own speech, dropping edge blips."""
+    fr = int(0.01 * SR); n = len(seg) // fr
+    if n < 3:
+        return 0.0, len(seg) / SR
+    db = 20 * np.log10(np.sqrt((seg[:n * fr].reshape(n, fr) ** 2).mean(1)) + 1e-9)
+    on = db > floor_db
+    isl, i = [], 0
+    while i < n:
+        if on[i]:
+            j = i
+            while j < n and on[j]:
+                j += 1
+            isl.append([i, j]); i = j
+        else:
+            i += 1
+    if not isl:
+        return 0.0, len(seg) / SR
+    def short(k): return (isl[k][1] - isl[k][0]) * 0.01 < min_island
+    while len(isl) > 1 and short(-1) and (isl[-1][0] - isl[-2][1]) * 0.01 >= min_gap:
+        isl.pop()
+    while len(isl) > 1 and short(0) and (isl[1][0] - isl[0][1]) * 0.01 >= min_gap:
+        isl.pop(0)
+    a = max(0.0, isl[0][0] * 0.01 - pad); b = min(len(seg) / SR, isl[-1][1] * 0.01 + pad)
+    return a, b
+
 def ff(*a):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *a], check=True)
 
@@ -76,7 +113,8 @@ def main():
             print("request %d: %d lines, %d characters" % (gi, len(g), sum(len(s["ttsText"]) for s in g)))
             res = render(inputs, prev_t, next_t, a.model)
             open(mp3, "wb").write(base64.b64decode(res["audio_base64"]))
-            json.dump({"voice_segments": res.get("voice_segments"), "orders": [s["order"] for s in g]},
+            json.dump({"voice_segments": res.get("voice_segments"), "alignment": res.get("alignment"),
+                       "orders": [s["order"] for s in g]},
                       open(tj, "w"), indent=1)
         vs = sorted(json.load(open(tj))["voice_segments"] or [], key=lambda s: s["start_time_seconds"])
         span = {}
@@ -89,11 +127,13 @@ def main():
             w = os.path.join(tmp, "p%04d.wav" % k); k += 1
             ff("-i", mp3, "-ac", "1", "-ar", "44100", w)
             pieces.append((g[0]["pauseBeforeMs"] if pieces else 0, w)); continue
+        audio = load(mp3)
         for i, s in enumerate(g):
             lo, hi = span[i]
+            a0, b0 = speech_bounds(audio[int(lo * SR):int(hi * SR)])
+            lo, hi = lo + a0, lo + b0
             w = os.path.join(tmp, "p%04d.wav" % k); k += 1
-            af = ("silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.02,areverse,"
-                  "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.06,areverse")
+            af = "afade=t=in:d=0.008,areverse,afade=t=in:d=0.008,areverse"
             if s["speaker"] == "narrator" and a.narrator_tempo != 1.0:
                 af += ",atempo=%.3f" % a.narrator_tempo
             ff("-ss", "%.3f" % lo, "-to", "%.3f" % hi, "-i", mp3, "-af", af, "-ac", "1", "-ar", "44100", w)
