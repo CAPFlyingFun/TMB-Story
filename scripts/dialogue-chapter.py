@@ -80,8 +80,9 @@ def main():
     a = ap.parse_args()
     segs = json.load(open(os.path.join(ROOT, "audio/manifests/chapter-%02d.json" % a.chapter)))["segments"]
     raw = os.path.join(ROOT, "audio/tests/dialogue-v4/chapter-%02d/raw" % a.chapter)
-    have = os.path.isdir(raw) and any(f.endswith(".mp3") for f in os.listdir(raw))
     reqs = requests_for(units(segs))
+    def done(ri): return os.path.exists(os.path.join(raw, "request-%02d.timing.json" % ri))
+    have = all(done(ri) for ri in range(len(reqs)))
     chars = sum(len(text(u)) for r in reqs for u in r)
     print("chapter %d: %d segments, %d inputs, %d requests, ~%d credits%s"
           % (a.chapter, len(segs), sum(len(r) for r in reqs), len(reqs), chars,
@@ -91,6 +92,8 @@ def main():
     if not have:
         os.makedirs(raw, exist_ok=True)
         for ri, r in enumerate(reqs):
+            if done(ri):
+                continue          # paid for already; a re-run only fills the gaps
             prev_t = text(reqs[ri - 1][-1]) if ri else ""
             next_t = text(reqs[ri + 1][0]) if ri + 1 < len(reqs) else ""
             inputs = [{"text": text(u), "voice_id": u[0]["voiceId"]} for u in r]
