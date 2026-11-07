@@ -3,7 +3,7 @@ chapter: 40
 title: "The Drill"
 movement: 11
 pov: Jack
-word_count: 1216
+word_count: 1456
 story_time:
   clock: settlement
   date: "April second to April fifth, twenty-one ten"
@@ -21,7 +21,8 @@ status_changes:
   - "Doctor Mercer, afterward: she is no longer afraid of the night it happens; she is only afraid of the things nobody can plan for, which is everyone's fear and not a reason to stop"
   - "Morning of April fifth: Sarah, restless with nothing urgent left on her list, asks Aiden what his gnat jar told him"
 new_canon:
-  - "The medical center has a bubble breathing device for a newborn, built from its oxygen concentrator, tubing and a bottle of water"
+  - "The medical center has an improvised bubble breathing device for a newborn, built from its oxygen concentrator, tubing and a bottle of water; it is tested only on a training doll, never on a baby; Nurse Hale: a last resort after drying, warming, clearing the airway and Mercer's bag and mask, watched on the baby, not the bubbles, and taken off if it isn't helping"
+  - "The belt monitor can lose the baby when the mother moves, or count her pulse instead; Mercer checks it against Sarah's pulse, and a trained listener stays with it"
   - "A warming box for a newborn, from a storage crate, a heating pad and a greenhouse thermostat"
   - "The baby is head down at thirty-six weeks"
   - "The route from Jack and Sarah's house to the medical center takes four minutes by truck at night by the inner streets"
@@ -52,13 +53,25 @@ Paul marked the bottle. He marked it with a scribe and a ruler, and then he made
 
 Then she brought out the doll.
 
-It was a training doll from the medical center's cupboard, a soft pink thing the size of a newborn, with lungs that rose and fell when you squeezed a bulb. She fitted the tiny mask to its face. Paul opened the oxygen.
+It was a training doll from the medical center's supply closet, a soft pink thing the size of a newborn, with lungs that rose and fell when you squeezed a bulb. She fitted the tiny mask to its face. Paul opened the oxygen.
 
 In the bottle, bubbles began to come up. Small, fast, steady.
 
 Nurse Hale watched them for a long time without speaking. Then she nodded.
 
 "That's right. That's what it looked like."
+
+Paul started to smile, and she shook her head at him, not unkindly.
+
+"Don't. All that tells us is the bottle does what a bottle does. A doll doesn't breathe. It doesn't get tired, or cold, or go the wrong color. This has never been on a baby, and the first baby it goes on, I'll be watching him, not the bubbles. If it isn't helping, it comes off."
+
+"So what's it for?"
+
+"For after. Only if. Drying him, warming him, clearing his mouth and holding his head right, and Doctor Mercer's bag and mask if he needs breathing for. Those come first, and they're most of it. This is the thing we have for when those aren't enough, and it might not be enough either."
+
+Paul looked at the bottle with its marked line for a moment. Then he nodded slowly. "Better than nothing."
+
+"Better than nothing. Not a hospital."
 
 Jack spent the rest of the day on the warming box. A clear storage crate with the lid cut back, a heating pad from the medical center's supply room laid in the bottom under a folded towel, and a thermostat from the greenhouse that Aiden had pulled out of a seed tray. He set it to the number Doctor Mercer gave him and left it running, and checked it every hour with a thermometer until it held.
 
@@ -68,7 +81,9 @@ On the second of April, Doctor Mercer did the thirty-six-week check. She did it 
 
 She took her hands away. "Where he should be. A good size. Not too big."
 
-She glanced at the tablet. "Hundred and forty. Same as Jack's line said."
+She glanced at the tablet, and then she put two fingers on the inside of Sarah's wrist and watched the line while she counted. "Hundred and forty on the screen. Your pulse is about eighty. So it's counting him, not you. Good."
+
+She looked at Jack. "It's a good machine. It isn't a trained ear. It can lose him when she moves, and it can find her heart instead of his and count that just as happily. It tells us when to look. It doesn't tell us he's well. Somebody who knows what a baby sounds like listens to it too."
 
 Sarah let out a long breath. "So he's doing everything right."
 

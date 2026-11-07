@@ -3,7 +3,7 @@ chapter: 43
 title: "Not This Month"
 movement: 12
 pov: Jack
-word_count: 1093
+word_count: 1165
 story_time:
   clock: settlement
   date: "April fourteenth to April fifteenth, twenty-one ten"
@@ -17,13 +17,13 @@ status_changes:
   - "The case for going: the centipedes leave the gallery by the opening, a few minutes' walk from the pumps that keep the town in water; nobody knows what is behind the pumps' nearest wall"
   - "Mark lifts his ban on the page, with conditions: daylight hours only, three people, lights, the gas meter first, Sarah on every camera, and the moment anything is wrong, everybody comes back"
   - "The channel is too wide to bridge; the oldest revision, and the newest, both draw a crossing plate over the channel a little downstream of the shaft, an island-scale grating; it is on Aiden's scanner map too"
-  - "Aiden: centipedes keep out of bright light; Paul builds a rack of work lamps on a pole for the doorway"
+  - "Aiden: on the bottom pump camera, centipedes on the far wall have gone back into the dark each time the pump light came on; centipedes keep to dark, damp places; a strong light at the door might send them deeper, but it is an observation, not a promise; Mark: then nobody treats it like one; Paul builds a rack of work lamps on a pole for the doorway"
   - "Doctor Mercer agrees to Jack going on condition that Sarah stays home, in reach of the medical center, and that Jack's wrist is never off"
   - "Sarah thirty-seven weeks five days; she will run it from the couch"
 new_canon:
   - "Mark lifted the ban on the gallery opening on April fourteenth, with conditions"
   - "A crossing plate, an island-scale grating, spans the channel a little downstream of the shaft"
-  - "Centipedes avoid bright light (Aiden); a lamp rack is built for the doorway"
+  - "Centipedes in the gallery have so far drawn back from the pump light (Aiden's observation, not a rule); a lamp rack is built for the doorway as one precaution among others"
 playable_beat_flow: ["show the old revision", "argue it out", "set the conditions", "find the crossing plate", "build the lamp rack", "agree Mercer's terms"]
 ending_type: decision
 review_status: in-review
@@ -90,7 +90,11 @@ Paul grunted. "On one bar. Over that."
 
 Mark had already turned to the board. "What about the things that live there?"
 
-Aiden had thought about that. "Centipedes keep out of bright light. That's why they live in walls and under stones. A strong enough light at the door, they'll go deeper, not come out."
+Aiden had thought about that. "Every time the bottom pump's light has come on, the ones on the far wall have gone back into the dark. Every time so far. They like dark and damp. That's why they live in walls and under stones. A strong light at the door might send them deeper instead of out."
+
+He hesitated. "Might. That's what I've seen, a few times, on a camera. It's not a promise."
+
+Mark didn't take his eyes off him. "Then nobody treats it like one. The light's one thing. The rope, the meter, the three of us and coming back are the rest."
 
 "How strong?"
 

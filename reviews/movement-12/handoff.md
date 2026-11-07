@@ -15,3 +15,10 @@ Canon candidates: the Field Book; the robin as a daytime hunter of open ground; 
 All five specialists reviewed. Changed: three 10 mm people cannot shove an island-scale steel door, so the stale air (carbon dioxide pooled on the floor) is cleared with a tarp sail turning the gallery draft into the room, an hour; the crossing gets a real problem (slime-slick iron where spray comes up) solved on Sarah's call; a reel of Paul's wire carries voice past the cage; Mercer listens on the wire; Mark recalls his spoken ban rather than a board line; the stencil sits "where anyone would have put it, before" (not "the people who built the island"); Aiden's "workshop" guess cut (Q13's purpose stays open); dry strip, not "a single tile"; the ceiling sags "the height of a house"; the den is damp, under the rubble; the fake bubble scare replaced by Sarah's overlay catching a floor drain under a wet patch; a dry rustle as they pass the den; the doorway lamp runs on its own battery, and Aiden hedges ("Mostly. Light draws insects."); Mercer's check moved to the evening of the sixteenth; repeated "look and come back", "Be boring" and the baby-vote joke cut; Lena trimmed.
 
 Q13 in `story-rules/OPEN_QUESTIONS.md` updated to "advanced Ch 42–45 (pending)", purpose unresolved.
+
+## Revision, 2026-11-07 (from Joshua's outside review)
+
+Joshua passed on three notes from a ChatGPT read-through.
+- **Ch 42:** Mercer now says thirty-seven weeks is "early term", not full term. She adds "If he came now, I wouldn't be worried" and that she'd still like him to stay a little longer, "another two weeks would suit me fine".
+- **Ch 43:** Aiden's light claim is now an observation, not a rule: "Every time the bottom pump's light has come on... Every time so far... Might. That's what I've seen, a few times, on a camera. It's not a promise." Mark adds: "Then nobody treats it like one. The light's one thing. The rope, the meter, the three of us and coming back are the rest."
+- **Ch 44–45:** these already hedged ("You keep saying that." / "I keep hoping it's true."; "Mostly. Light draws insects.") and are unchanged.

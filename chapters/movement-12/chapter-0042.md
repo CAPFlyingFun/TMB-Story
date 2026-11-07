@@ -3,7 +3,7 @@ chapter: 42
 title: "The Field Book"
 movement: 12
 pov: Jack
-word_count: 1364
+word_count: 1374
 story_time:
   clock: settlement
   date: "April eighth to April thirteenth, twenty-one ten"
@@ -18,7 +18,7 @@ status_changes:
   - "April tenth: on the eastern road camera at mid-morning, Mr. Pell's sheet notes ants, then more ants: a line of them, each as long as a person, walking from the stems onto the asphalt toward the kitchen bins behind the community center's back door"
   - "Aiden: an ant that finds food leaves a scent trail and the others follow it; one ant found the bins; Mark has the bins sealed and brought inside; Paul scrubs the asphalt with the gallery's washing water; by the thirteenth the line has broken up and gone"
   - "The outpost crew's sheets: centipedes in the gallery twice more, each time on the far wall, and each time they leave by the opening; nobody goes near it"
-  - "Doctor Mercer's check on April ninth: thirty-seven weeks; full term; head down; pressure holding"
+  - "Doctor Mercer's check on April ninth: thirty-seven weeks; early term; if he came now she wouldn't be worried, but she would like him to stay put a little longer; head down; pressure holding"
   - "Night of April thirteenth: Sarah, matching the gallery sheets to the drawings in the records building, finds the archive keeps older revisions; on an older revision of the southern seam, behind the far wall where the opening is, a door is drawn, and a chamber behind it with a module label that does not appear on the newer drawings"
 new_canon:
   - "Small ants at island scale are knee-high to the town; they follow scent trails to food"
@@ -72,13 +72,13 @@ Sarah wrote it down. End of April. Beans, three weeks. "Then food is the next li
 
 Doctor Mercer came on the ninth. She took Sarah's pressure and wrote it down, and then she sat back and looked at her for a moment over her glasses.
 
-"Thirty-seven weeks. That's full term. If he comes now, he's not early. He's just eager."
+"Thirty-seven weeks. That's early term. If he came now, I wouldn't be worried."
 
-Sarah let out a breath she seemed to have been holding for a month. "He's not eager. He's comfortable."
+Sarah let out a breath she seemed to have been holding for a month. "He's not coming now. He's comfortable."
 
 "Head down. Pressure holding."
 
-Doctor Mercer packed her bag. "I'd like him to stay comfortable a little longer. But if he doesn't, we're ready. That's a sentence I didn't think I'd say in this town."
+Doctor Mercer packed her bag. "Good. I'd still like him to stay where he is a little longer. Another two weeks would suit me fine. But if he doesn't, we're ready. That's a sentence I didn't think I'd say in this town."
 
 On the tenth, at mid-morning, Mr. Pell's sheet for the eastern road came in, and Sarah read it twice and called Mark before she had finished.
 

@@ -17,3 +17,12 @@ Continuity reviewed (including a lay medical read). Changed: the second line goe
 Nurse Hale speaks; she is voiced with the existing "Resident (woman)" voice. Say if you want her her own voice.
 
 Canon candidates: Nurse Hale; heat-stable tablets; the belt monitor; the bubble breathing device and warming box; head down at 36 weeks; the eleven-second generator; two lines, about 19,300 L a day, tanks rising from April 1.
+
+## Revision, 2026-11-07 (from Joshua's outside review)
+
+The improvised equipment in Ch 40 now has its limits on the page.
+- **Bubble device:** Nurse Hale stops Paul celebrating the doll test. A doll doesn't breathe, and the device has never been on a baby. Whoever uses it watches the baby, not the bubbles, and takes it off if it isn't helping. It is a last resort, after drying, warming, clearing the airway and Mercer's bag and mask: "Better than nothing. Not a hospital."
+- **Belt monitor:** at the thirty-six-week check Mercer checks the belt against Sarah's own pulse (about eighty against a hundred and forty), so it's counting him and not her. She warns that it can lose the baby when Sarah moves, or count Sarah's heart instead. "It tells us when to look. It doesn't tell us he's well." This sets up the belt slip in Ch 48.
+- **Minor fix:** "cupboard" became "supply closet".
+
+No outcome changes. Neither device is needed at the birth.
