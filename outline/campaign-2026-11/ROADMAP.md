@@ -40,6 +40,17 @@ of 2026-11-06 22:44 UTC, reconciled with the manuscript at `55682cb` and Joshua'
 - **Reviews.** Continuity, world-creature and mystery specialists after every event; all five
   after Events 4, 8 and 10.
 
+## Birth direction (Joshua, 2026-11-07) — governs Events 9 and 10
+
+- **No major medical complications** in labor or delivery. Medically straightforward, though it can be long, exhausting, emotional, uncomfortable and frustrating.
+- Mercer's preparations (attendant, drugs, monitor, breathing device, warming box) stay appropriate and are shown as responsible preparation; they **need not be used**.
+- **A brief scare is fine:** for example an unreliable heartbeat reading that turns out to be the belt slipping or the probe's position.
+- **Not without discussing it with Joshua first:** serious fetal distress, major hemorrhage, emergency surgery, or any other life-threatening complication.
+- **Humor:** Jack tries to keep her relaxed with jokes and finds his timing isn't always appreciated; Sarah answers with playful irritation, affection or sarcasm. Warm and believable; not a comedy scene.
+- **Sarah's agency throughout:** she is part of every decision, supported by Jack and Doctor Mercer.
+- **Emotional focus:** anticipation, effort, love, relief, and the joy of welcoming Andy.
+- Creative direction only; no approved canon is rewritten.
+
 ## Events (chapter counts are suggestions, never quotas)
 
 | # | Event | Suggested | Story time (tentative) | Sarah |
