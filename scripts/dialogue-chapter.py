@@ -94,6 +94,11 @@ def main():
     ap.add_argument("chapter", type=int)
     ap.add_argument("--narrator-tempo", type=float, default=1.1)
     ap.add_argument("--model", default="eleven_v4")
+    ap.add_argument("--paragraph-pause-ms", type=int, default=1100,
+                    help="pause between two narration paragraphs (the manifest's 260 ms "
+                         "runs a narrated passage together)")
+    ap.add_argument("--opening-pause-ms", type=int, default=1500,
+                    help="pause after the chapter's first line (the date line)")
     a = ap.parse_args()
     segs = json.load(open("audio/manifests/chapter-%02d.json" % a.chapter))["segments"]
     d = "audio/tests/dialogue-v4/chapter-%02d" % a.chapter
@@ -103,6 +108,16 @@ def main():
           % (a.chapter, len(segs), sum(len(s["ttsText"]) for s in segs), len(groups)))
     tmp = os.path.join(d, ".tmp"); os.makedirs(tmp, exist_ok=True)
     pieces, k = [], 0
+    def pause_for(idx):
+        if idx == 0:
+            return 0
+        cur, prev = segs[idx], segs[idx - 1]
+        if idx == 1:
+            return a.opening_pause_ms
+        if cur["speaker"] == prev["speaker"] == "narrator" and cur["paragraph"] != prev["paragraph"]:
+            return a.paragraph_pause_ms
+        return cur["pauseBeforeMs"]
+    pos = {s["order"]: n for n, s in enumerate(segs)}
     for gi, g in enumerate(groups):
         mp3 = os.path.join(raw, "request-%02d.mp3" % gi)
         tj = os.path.join(raw, "request-%02d.timing.json" % gi)
@@ -126,7 +141,7 @@ def main():
             print("  request %d returned %d segments for %d lines; using it unsplit" % (gi, len(span), len(g)))
             w = os.path.join(tmp, "p%04d.wav" % k); k += 1
             ff("-i", mp3, "-ac", "1", "-ar", "44100", w)
-            pieces.append((g[0]["pauseBeforeMs"] if pieces else 0, w)); continue
+            pieces.append((pause_for(pos[g[0]["order"]]), w)); continue
         audio = load(mp3)
         for i, s in enumerate(g):
             lo, hi = span[i]
@@ -137,7 +152,7 @@ def main():
             if s["speaker"] == "narrator" and a.narrator_tempo != 1.0:
                 af += ",atempo=%.3f" % a.narrator_tempo
             ff("-ss", "%.3f" % lo, "-to", "%.3f" % hi, "-i", mp3, "-af", af, "-ac", "1", "-ar", "44100", w)
-            pieces.append((s["pauseBeforeMs"] if pieces else 0, w))
+            pieces.append((pause_for(pos[s["order"]]), w))
     lst = os.path.join(tmp, "list.txt")
     with open(lst, "w") as f:
         for n, (pause, w) in enumerate(pieces):

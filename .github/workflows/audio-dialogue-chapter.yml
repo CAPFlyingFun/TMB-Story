@@ -15,6 +15,10 @@ on:
         description: 'Narrator speed (1.1 = 10% faster, pitch kept)'
         required: true
         default: '1.1'
+      paragraph_pause_ms:
+        description: 'Pause between two narration paragraphs, in ms'
+        required: true
+        default: '1100'
 
 jobs:
   render:
@@ -28,7 +32,7 @@ jobs:
       - name: Render and re-time
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-        run: python3 scripts/dialogue-chapter.py "${{ inputs.chapter }}" --narrator-tempo "${{ inputs.narrator_tempo }}"
+        run: python3 scripts/dialogue-chapter.py "${{ inputs.chapter }}" --narrator-tempo "${{ inputs.narrator_tempo }}" --paragraph-pause-ms "${{ inputs.paragraph_pause_ms }}"
       - name: Commit the result
         if: always()
         run: |
