@@ -667,6 +667,34 @@
     seekChapter(t);
   }
 
+  /* ONE BUTTON EACH WAY THAT SPEEDS UP (Joshua, 2026-11-07). The first tap jumps 15 s;
+     another tap within 3 s jumps 30 s, and every tap after that keeps jumping 30 s for as
+     long as they keep coming within 3 s of each other. Three seconds without a tap and
+     the next jump is back to 15 s. The label always shows what the next tap will do. */
+  var STEP_FIRST = 15, STEP_REPEAT = 30, STEP_WINDOW_MS = 3000;
+  var steps = { "-1": { last: 0, timer: null }, "1": { last: 0, timer: null } };
+
+  function stepSize(dir) {
+    return Date.now() - steps[dir].last < STEP_WINDOW_MS ? STEP_REPEAT : STEP_FIRST;
+  }
+
+  function stepLabel(dir) {
+    var b = document.getElementById(dir > 0 ? "listen-fwd" : "listen-back");
+    if (!b) return;
+    var n = stepSize(dir);
+    b.innerHTML = (dir > 0 ? "+" : "&minus;") + n + "s";
+    b.setAttribute("aria-label", (dir > 0 ? "Forward " : "Back ") + n + " seconds");
+  }
+
+  function stepTap(dir) {
+    var st = steps[dir], n = stepSize(dir);
+    st.last = Date.now();
+    skip(dir * n);
+    stepLabel(dir);
+    clearTimeout(st.timer);
+    st.timer = setTimeout(function () { stepLabel(dir); }, STEP_WINDOW_MS + 20);
+  }
+
   function chapterStep(delta) {
     var i = state.chapters.indexOf(state.chapter);
     var j = i + delta;
@@ -823,12 +851,10 @@
       '<div class="listen-controls" role="group" aria-label="Playback">' +
       '<button id="listen-prev-ch" type="button" aria-label="Previous chapter"' +
         (chapterStep(-1) == null ? " disabled" : "") + '>&#9198;</button>' +
-      '<button id="listen-back30" type="button" aria-label="Back 30 seconds">&minus;30s</button>' +
-      '<button id="listen-back10" type="button" aria-label="Back 10 seconds">&minus;10s</button>' +
-      '<button id="listen-play" type="button" aria-label="Play"' + (state.playing ? ' class="is-on"' : '') + '>&#9654; Play</button>' +
-      '<button id="listen-pause" type="button" aria-label="Pause"' + (state.playing ? '' : ' class="is-on"') + '>&#10074;&#10074; Pause</button>' +
-      '<button id="listen-fwd10" type="button" aria-label="Forward 10 seconds">+10s</button>' +
-      '<button id="listen-fwd30" type="button" aria-label="Forward 30 seconds">+30s</button>' +
+      '<button id="listen-back" type="button" class="listen-step" aria-label="Back ' + stepSize(-1) + ' seconds">&minus;' + stepSize(-1) + 's</button>' +
+      '<button id="listen-toggle" type="button" class="is-on" aria-label="' + (state.playing ? "Pause" : "Play") + '">' +
+        (state.playing ? "&#10074;&#10074; Pause" : "&#9654; Play") + '</button>' +
+      '<button id="listen-fwd" type="button" class="listen-step" aria-label="Forward ' + stepSize(1) + ' seconds">+' + stepSize(1) + 's</button>' +
       '<button id="listen-next-ch" type="button" aria-label="Next chapter"' +
         (chapterStep(1) == null ? " disabled" : "") + '>&#9197;</button>' +
       '</div><div class="listen-controls listen-controls-sub">' +
@@ -844,12 +870,9 @@
       '<p class="listen-meta"><span id="listen-position">Segment ' + (state.index + 1) +
         ' of ' + total + '</span></p>';
 
-    document.getElementById("listen-play").onclick = function () { if (!state.playing) play(); };
-    document.getElementById("listen-pause").onclick = function () { if (state.playing) pause(); };
-    document.getElementById("listen-back30").onclick = function () { skip(-30); };
-    document.getElementById("listen-back10").onclick = function () { skip(-10); };
-    document.getElementById("listen-fwd10").onclick = function () { skip(10); };
-    document.getElementById("listen-fwd30").onclick = function () { skip(30); };
+    document.getElementById("listen-toggle").onclick = function () { state.playing ? pause() : play(); };
+    document.getElementById("listen-back").onclick = function () { stepTap(-1); };
+    document.getElementById("listen-fwd").onclick = function () { stepTap(1); };
     document.getElementById("listen-prev-ch").onclick = function () { changeChapter(-1); };
     document.getElementById("listen-next-ch").onclick = function () { changeChapter(1); };
     document.getElementById("listen-rate").onchange = function (e) {
