@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06",
+  "generated": "2026-11-07",
   "movements": [
     {
       "number": 1,
@@ -65,6 +65,12 @@
       "number": 11,
       "dir": "outline/movement-11",
       "overview": "outline/movement-11/overview.md",
+      "miniArcs": []
+    },
+    {
+      "number": 12,
+      "dir": "outline/movement-12",
+      "overview": "outline/movement-12/overview.md",
       "miniArcs": []
     }
   ],
@@ -508,6 +514,28 @@
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "decision"
+    },
+    {
+      "number": 41,
+      "path": "chapters/movement-12/chapter-0041.md",
+      "movement": 12,
+      "title": "What Eats What",
+      "pov": "Jack",
+      "word_count": 1456,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "realization"
+    },
+    {
+      "number": 42,
+      "path": "chapters/movement-12/chapter-0042.md",
+      "movement": 12,
+      "title": "The Field Book",
+      "pov": "Jack",
+      "word_count": 1364,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "revelation"
     }
   ],
   "storyRules": [
