@@ -80,3 +80,4 @@ Mysteries stay open for Andy's generation: Q01–Q12, the hidden scale layers, P
 | 6 Medical Problem | ✅ drafted, pending | 39, 40 | April 5; tanks rising; all four gaps addressed | 36w3d |
 | 7 Ecological Survey | ✅ drafted, pending | 41, 42 | night of April 13; the old revision found | 37w4d |
 | 8 Forgotten Module | ✅ drafted, pending | 43, 44, 45 | evening of April 16; bulkhead left sealed | 38w0d |
+| 9 Preparing for Birth | ✅ drafted, pending | 46, 47 | just after midnight, night of May 6; labor begun | 40w6d |

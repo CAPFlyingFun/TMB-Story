@@ -72,6 +72,12 @@
       "dir": "outline/movement-12",
       "overview": "outline/movement-12/overview.md",
       "miniArcs": []
+    },
+    {
+      "number": 13,
+      "dir": "outline/movement-13",
+      "overview": "outline/movement-13/overview.md",
+      "miniArcs": []
     }
   ],
   "chapters": [
@@ -569,6 +575,28 @@
       "review_status": "in-review",
       "audio_status": "not-started",
       "ending_type": "realization"
+    },
+    {
+      "number": 46,
+      "path": "chapters/movement-13/chapter-0046.md",
+      "movement": 13,
+      "title": "Forty Weeks",
+      "pov": "Jack",
+      "word_count": 1374,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "comic-turn"
+    },
+    {
+      "number": 47,
+      "path": "chapters/movement-13/chapter-0047.md",
+      "movement": 13,
+      "title": "Eleven at Night",
+      "pov": "Sarah",
+      "word_count": 1392,
+      "review_status": "in-review",
+      "audio_status": "not-started",
+      "ending_type": "cliffhanger"
     }
   ],
   "storyRules": [
