@@ -1,0 +1,104 @@
+{
+  "_comment": [
+    "v2 vs v4 listening comparison, Joshua 2026-11-07. Chapter 9 opening exchange, dialogue only.",
+    "The v4 takes were generated once in Joshua's ElevenLabs workspace (475 credits) and are fetched here from",
+    "his ElevenLabs history by id, which costs nothing. Nothing here touches a manifest, a fingerprint or a chapter."
+  ],
+  "chapter": 9,
+  "breakSeconds": 2.0,
+  "gapSameSpeakerMs": 200,
+  "gapDifferentSpeakerMs": 420,
+  "lines": [
+    {
+      "order": 2,
+      "speaker": "sarah-bennett",
+      "text": "That's not a TOMBS component.",
+      "v2": "audio/clips/sarah/sarah-bennett-598261e12ed5.mp3",
+      "v4HistoryItemId": "AgiNVGfPEtjNjqs3Pq9W"
+    },
+    {
+      "order": 3,
+      "speaker": "jack-bennett",
+      "text": "No.",
+      "v2": "audio/clips/jack/jack-bennett-3bc4ea82fa1d.mp3",
+      "v4HistoryItemId": "WnQVkHseeAJiLBwuWs3v"
+    },
+    {
+      "order": 4,
+      "speaker": "sarah-bennett",
+      "text": "Then what is it?",
+      "v2": "audio/clips/sarah/sarah-bennett-fab32ec7c880.mp3",
+      "v4HistoryItemId": "HUFUDAmrMDc0yiDklu9a"
+    },
+    {
+      "order": 6,
+      "speaker": "jack-bennett",
+      "text": "A maintenance tablet. Logged into the network for six minutes, three weeks ago. Same day as the boundary file.",
+      "v2": "audio/clips/jack/jack-bennett-4aa8836f9f0b.mp3",
+      "v4HistoryItemId": "k4emLq4N2Rla7Fi9pvCu"
+    },
+    {
+      "order": 8,
+      "speaker": "lena-ortiz",
+      "text": "The same day you and Sarah were at the community center.",
+      "v2": "audio/clips/lena/lena-ortiz-baf652c256ef.mp3",
+      "v4HistoryItemId": "50CoIKUn4Wu0WE0VJm8q"
+    },
+    {
+      "order": 9,
+      "speaker": "jack-bennett",
+      "text": "Yes.",
+      "v2": "audio/clips/jack/jack-bennett-930d0f9640e4.mp3",
+      "v4HistoryItemId": "zc9oA0zNlU9LusfT7WLu"
+    },
+    {
+      "order": 10,
+      "speaker": "lena-ortiz",
+      "text": "So somebody used a maintenance tablet to plant a boundary file while wearing your credentials.",
+      "v2": "audio/clips/lena/lena-ortiz-e4ba73191373.mp3",
+      "v4HistoryItemId": "opNKMdv7uwac0GLjWivJ"
+    },
+    {
+      "order": 11,
+      "speaker": "jack-bennett",
+      "text": "That's what it looks like.",
+      "v2": "audio/clips/jack/jack-bennett-034b7c96011f.mp3",
+      "v4HistoryItemId": "dySjor2dAsdqir2Zl0Ue"
+    },
+    {
+      "order": 13,
+      "speaker": "sarah-bennett",
+      "text": "Where was the tablet?",
+      "v2": "audio/clips/sarah/sarah-bennett-6a6589f46c0b.mp3",
+      "v4HistoryItemId": "D0sRTJ80if57B2sSWw6p"
+    },
+    {
+      "order": 15,
+      "speaker": "jack-bennett",
+      "text": "The equipment shed by the north pumping station.",
+      "v2": "audio/clips/jack/jack-bennett-7dfc523c3f87.mp3",
+      "v4HistoryItemId": "9ExWYrQnnqL9inunKdsw"
+    },
+    {
+      "order": 17,
+      "speaker": "security-officer",
+      "text": "That's inside the boundary.",
+      "v2": "audio/clips/security/security-officer-29613072bf5a.mp3",
+      "v4HistoryItemId": "YwnwPswkW8u4hpfST691"
+    },
+    {
+      "order": 18,
+      "speaker": "jack-bennett",
+      "text": "I know.",
+      "v2": "audio/clips/jack/jack-bennett-9cc3304964a3.mp3",
+      "v4HistoryItemId": "AeEWFhg0LBJHGRx18HOe"
+    },
+    {
+      "order": 19,
+      "speaker": "security-officer",
+      "text": "Somebody who works here did this.",
+      "v2": "audio/clips/security/security-officer-cf4fa3094857.mp3",
+      "v4HistoryItemId": "oMMWnEV16WHj9R2FtASz"
+    }
+  ]
+}
