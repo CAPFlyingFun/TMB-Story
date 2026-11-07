@@ -6,10 +6,10 @@ Drafted 2026-11-07 while the v4 voices for Chapters 2 to 9 render. **Nothing in 
 
 - **The voices moved to a new timeline.** The v4 dialogue files have different timing from the v2 clips. Each cue is anchored to a *line*, not to a time, so placing every existing cue on the new timeline is **free**. That alone gives Chapters 1 to 9 their ambience and effects back.
 - **The model.** ElevenLabs' newest sound model is still **SFX v3** (`eleven_text_to_sound_v3`, which we already use). There is no SFX v4. v3 follows multi-part prompts better and sounds more natural than v2.
-- **One catch on loops.** ElevenLabs says seamless looping only works on **SFX v2**. v3 has no loop option. Our generated beds were made on v3, so they're not true loops, and that matches the "too quiet" and seam trouble we had. For anything that loops, the choice is:
-  - (a) **SFX v2 with looping on** (recommended for beds); or
-  - (b) a longer **v3** take, up to 20 s, crossfaded into a loop by our own pipeline; or
-  - (c) a **supplied recording**, like the three you already chose, which loop perfectly.
+- **The rule (Joshua, 2026-11-07).** Every sound falls into one of three kinds:
+  - **Continuous textures** that have to loop (room hiss, an open intercom line, a machine hum, sirens): **SFX v2 with looping on.** ElevenLabs only loops on v2.
+  - **Single sounds** (a door, a chair, a click, a beep): **SFX v3**, which sounds more natural. These never need looping.
+  - **Repeating alarms** (beep … beep … beep): **one v3 beep, repeated by our pipeline** at a fixed interval, for example every 1.5 s. This is how the settlement alert (`amb_alarm_pulse`) already works. It gives an exact rhythm and no seam. It's cheap, because only one short sound is generated. The interval can be changed for free, and a faster version is the same beep with a shorter gap. Real electronic alarms repeat the same tone, so the repetition won't sound artificial.
 - **Cost.** ElevenLabs charges sound effects by length, not by characters. I'll price one generation before any batch, so the totals below are counts, not credits.
 
 ## The assets (35 in the library; 29 used in Chapters 1 to 9)
@@ -23,9 +23,9 @@ Drafted 2026-11-07 while the v4 voices for Chapters 2 to 9 render. **Nothing in 
 | amb_nature_outside | Your supplied nature tone | 3, 10 | approved | **keep** |
 | amb_intercom_channel_open | Open intercom line, nobody talking | 1–5, 8–10 | too quiet to rescue | **redo** on SFX v2 with looping on, louder hiss in the prompt |
 | amb_tombs_lab_night | Lab room tone at night | (library) | too quiet to rescue | **cut**: amb_computer_lab already does this job |
-| amb_console_alarm_bed | Two-note security alarm, looping | 1, 2 | usable | **redo** on v2 with looping on (seam check) |
-| amb_tombs_array_power_rise | Huge machine drawing power far below | 1, 3 | usable | **keep**, or redo on v2 with looping on if you hear a seam |
-| amb_settlement_sirens | Town sirens heard through walls | (library) | quiet | **keep in library** (not used in 1–9) |
+| amb_console_alarm_bed | Two-note security alarm, looping | 1, 2 | usable | **redo as a repeating alarm**: one v3 two-note beep, repeated every ~1.5 s (interval yours to set) |
+| amb_tombs_array_power_rise | Huge machine drawing power far below | 1, 3 | usable | **redo on v2 with looping on** (continuous texture) |
+| amb_settlement_sirens | Town sirens heard through walls | (library) | quiet | keep in library; when it's needed, redo on v2 with looping on |
 | amb_alarm_pulse / _fast | Settlement alert built to your spec | — | approved (procedural) | **keep** |
 | sfx_siren_winddown | Siren dying away | — | approved (procedural) | **keep** |
 
@@ -84,5 +84,5 @@ Chapters 6 and 7 are thin, with six cues each. If you'd like more texture there,
 ## My recommendation, cheapest first
 
 1. **Free:** put every existing cue on the v4 timeline and build each chapter's one-file mix (voices plus ambience plus effects) for Chapters 1 to 9.
-2. **Small spend:** redo the seven quiet one-shots and the intercom bed. That's 8 generations, about 30 seconds of sound in total.
-3. **Optional:** redo the two alarm or power beds as true v2 loops, and add the new beds when we reach those chapters.
+2. **Small spend:** redo the seven quiet one-shots on v3, and the intercom bed on v2 with looping on. That's 8 generations, about 30 seconds of sound in total.
+3. **Next:** the console alarm as a repeated v3 beep, and the power hum as a v2 loop. Add the new beds when we reach those chapters.
