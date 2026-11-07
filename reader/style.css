@@ -573,7 +573,14 @@ button {
   min-height: 2.75rem; min-width: 3.2rem;     /* comfortable thumb targets on a phone */
 }
 .listen-controls button:hover { background: #3D3733; }
-#listen-toggle { background: #8B7355; border-color: #8B7355; min-width: 6rem; }
+/* The transport: previous chapter, -30 s, -10 s, Play, Pause, +10 s, +30 s, next
+   chapter, in one row; it wraps to two even rows on a phone. The button for the state
+   you are in (playing or paused) is the lit one. */
+.listen-controls:not(.listen-controls-sub) { gap: .4rem; flex-wrap: wrap; }
+.listen-controls:not(.listen-controls-sub) button { padding: .55rem .7rem; min-width: 3rem; }
+#listen-play.is-on, #listen-pause.is-on { background: #8B7355; border-color: #8B7355; }
+.listen-controls button:disabled { opacity: .35; cursor: default; }
+.listen-controls-sub { margin-top: 0; }
 .listen-rate { margin-left: auto; display: inline-flex; gap: .4rem; align-items: center;
   color: #8B7E6E; font-size: .9rem; }
 .listen-bar { width: 100%; margin: .3rem 0 .2rem; accent-color: #D4A853; height: 1.6rem; }
@@ -592,7 +599,7 @@ button {
 .listen-layer-note { color: #8B7E6E; font-size: .84rem; margin-left: auto; }
 @media (max-width: 30rem) {
   .listen-rate { margin-left: 0; width: 100%; }
-  .listen-controls button { flex: 1 1 auto; }
+  .listen-controls:not(.listen-controls-sub) button { flex: 1 1 22%; min-width: 0; }
 }
 
 /* Attribution for sound we did not make. Quiet, but present on every page. */

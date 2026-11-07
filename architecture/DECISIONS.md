@@ -429,3 +429,17 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 **0045, addendum (2026-11-07):** Joshua's birth direction for Events 9 and 10 is recorded in `outline/campaign-2026-11/ROADMAP.md` ("Birth direction"): no major complications; a brief equipment scare at most; Jack's jokes with imperfect timing; Sarah's agency throughout; the focus on anticipation, effort, love, relief and joy. Serious fetal distress, major hemorrhage, emergency surgery or any life-threatening complication are not to be written without discussing them with him first.
 
 **0045, addendum (2026-11-07, campaign drafting complete):** All ten events are drafted, Chapters 27 to 49 (twenty-three chapters), every one `in-review` / 🟡 pending, with no audio generated. Andy is born at twelve minutes to one on May seventh, twenty-one ten, at forty-one weeks, with a straightforward birth that follows Joshua's birth direction. No time jump was written. This completes the scoped exception: the campaign has no further drafting, and the weekly Tuesday rules (decision 0032, `outline/SCHEDULED_WRITING.md`) apply again whenever Joshua resumes the schedule. The full name ("Andrew" in `story-rules/reference/DESIGNED_VOICES.md`, marked tentative) is still unconfirmed on the page.
+
+### 0047 — The audiobook moves to Eleven v4 dialogue mode, played as one file per chapter
+**Context:** Joshua, 2026-11-07, after a v2 / v4-line-by-line / v4-dialogue comparison of a Chapter 9 scene and a full Chapter 1 test: "I approve version B. The default when you play the chapter should be one file … the narration is timed so it syncs up and okay if it's off 0.25s or so." Version B renders a run of narration paragraphs as one passage, so the narrator paces it himself. He also asked for the transport to be Previous Chapter, −30s, −10s, Play, Pause, +10s, +30s, Next Chapter, with previous and next starting a chapter from the beginning.
+**Decision:**
+- **Rendering.** Chapters are rendered with Eleven v4 Text to Dialogue (`scripts/dialogue-chapter.py`, workflow "Render a chapter in v4 dialogue mode"). Every manifest segment is one input in its own voice, except a run of narration paragraphs, which is one input. Requests are at most 1,900 characters and every take is kept, so a re-assembly is free.
+- **Assembly.** `scripts/dialogue-assemble.py` builds one file per chapter, `audio/exports/chapter-NN-dialogue.mp3`, with an index of every segment (`chapter-NN-dialogue.json`). Lines are trimmed to their own speech, which drops the next voice's breath or onset blips. Cuts are faded. Narration is played at ×1.1 with pitch kept. Separate narration paragraphs are 1.1 s apart. A merged passage keeps its own pacing, and its lines are located by the take's character alignment.
+- **Manifest.** `scripts/tmbaudio/manifest.py` lists it as `exports.dialogue`.
+- **Player.** The Listen tab plays the dialogue file by default and highlights lines from its index. The v2 mix with ambience and effects, and the separate clips, stay selectable.
+- **Chapter 1.** The opening (orders 0–6) is the merged take. The rest is the separate-paragraph take with 1.1 s narration breaks.
+**Consequences:**
+- The dialogue file carries voices only. Ambience and effects still need re-placing on the new timeline.
+- The per-line v2 clips, the game export and every approval state are unchanged. No chapter's `audio_status` was changed; approving the new audio is Joshua's call.
+- Test spend on 2026-11-07 was about 9,100 credits.
+**Status:** Accepted (Joshua, 2026-11-07).

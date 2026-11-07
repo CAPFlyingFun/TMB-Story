@@ -2,8 +2,9 @@ name: Render a chapter in v4 dialogue mode (spends credits)
 
 # MANUAL ONLY. The first run for a chapter SPENDS ELEVENLABS CREDITS (about one per
 # character; Chapter 1 is about 7,100). Raw requests are kept, so running it again only
-# re-times the chapter and costs nothing. Listening test only: the chapter's real clips,
-# manifest and approval state are never touched.
+# re-assembles the chapter and costs nothing. Writes audio/exports/chapter-NN-dialogue.mp3
+# and its index, which the Listen tab plays by default. The chapter's clips and approval
+# state are never touched.
 on:
   workflow_dispatch:
     inputs:
@@ -33,12 +34,16 @@ jobs:
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
         run: python3 scripts/dialogue-chapter.py "${{ inputs.chapter }}" --narrator-tempo "${{ inputs.narrator_tempo }}" --paragraph-pause-ms "${{ inputs.paragraph_pause_ms }}"
+      - name: Refresh the manifest and the reader's chapter list
+        run: |
+          python3 scripts/audio.py parse --chapters "${{ inputs.chapter }}"
+          python3 scripts/build-manifest.py
       - name: Commit the result
         if: always()
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add audio/tests/
+          git add audio/tests/ audio/exports/ audio/manifests/ reader/manifest.json
           git diff --cached --quiet && { echo "Nothing new."; exit 0; }
           git commit -m "Add v4 dialogue-mode test render of chapter ${{ inputs.chapter }}"
           git pull --rebase -q origin main

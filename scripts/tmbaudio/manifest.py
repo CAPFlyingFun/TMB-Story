@@ -166,6 +166,22 @@ def attach_timeline(manifest):
             "says while a part-by-part index drifts 12 s -- so this file is offered "
             "for download and listening, never as something the page indexes into.")
         exports["voice"] = voice
+    # THE v4 DIALOGUE READING (Joshua, 2026-11-07, "version B"): one file assembled
+    # from Eleven v4 Text to Dialogue takes by scripts/dialogue-assemble.py, which
+    # also writes its own index, because its timing is the takes' timing and not
+    # this manifest's arithmetic. Used only when that index covers every segment.
+    dialogue = _export(manifest["chapter"], "-dialogue")
+    side = os.path.join(ROOT, "audio", "exports", "chapter-%02d-dialogue.json" % manifest["chapter"])
+    if dialogue and os.path.isfile(side):
+        with open(side) as fh:
+            idx = json.load(fh)
+        if len(idx.get("startMs") or []) == len(segments):
+            dialogue["layers"] = ["voice"]
+            dialogue["model"] = idx.get("model")
+            dialogue["startMs"] = idx["startMs"]
+            dialogue["endMs"] = idx.get("endMs")
+            dialogue["indexSource"] = "the takes' own timing, from scripts/dialogue-assemble.py"
+            exports["dialogue"] = dialogue
     manifest["exports"] = exports
     return manifest
 
