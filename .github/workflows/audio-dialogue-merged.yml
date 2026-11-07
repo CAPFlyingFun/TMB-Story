@@ -1,0 +1,32 @@
+name: Render a merged-narration opening test (spends credits)
+
+# MANUAL ONLY. Spends ElevenLabs credits once (about one per character; Chapter 1's
+# opening, orders 0-6, is about 1,050). Refuses to generate again. Listening test only.
+on:
+  workflow_dispatch:
+    inputs:
+      chapter: {description: 'Chapter', required: true, default: '1'}
+      first_order: {description: 'First segment order', required: true, default: '0'}
+      last_order: {description: 'Last segment order', required: true, default: '6'}
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Render
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/dialogue-merged-test.py "${{ inputs.chapter }}" "${{ inputs.first_order }}" "${{ inputs.last_order }}"
+      - name: Commit the result
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio/tests/
+          git diff --cached --quiet && { echo "Nothing new."; exit 0; }
+          git commit -m "Add merged-narration opening test (chapter ${{ inputs.chapter }})"
+          git pull --rebase -q origin main
+          git push
