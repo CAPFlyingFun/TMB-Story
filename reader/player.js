@@ -455,7 +455,14 @@
   }
 
   function onEnded() {
-    if (mixedMode()) { state.playing = false; render(); return; }
+    if (mixedMode()) {
+      state.playing = false;
+      /* Like PocketFM: the next chapter follows on, unless the sleep timer was set to the
+         end of this one. */
+      if (state.sleep && state.sleep.mode === -1) { state.sleep = null; render(); return; }
+      if (chapterStep(1) != null) { changeChapter(1); state.autoNext = true; return; }
+      render(); return;
+    }
     var done = current();
     var l = layers();
     if (l) { l.setSpeaking(false); if (done) l.leaveSegment(done.order); }
@@ -682,7 +689,7 @@
     var b = document.getElementById(dir > 0 ? "listen-fwd" : "listen-back");
     if (!b) return;
     var n = stepSize(dir);
-    b.innerHTML = (dir > 0 ? "+" : "&minus;") + n + "s";
+    b.innerHTML = stepIcon(dir, n);
     b.setAttribute("aria-label", (dir > 0 ? "Forward " : "Back ") + n + " seconds");
   }
 
@@ -706,7 +713,8 @@
   function changeChapter(delta) {
     var n = chapterStep(delta);
     if (n == null) return;
-    var wasPlaying = state.playing;
+    var wasPlaying = state.playing || state.autoNext;
+    state.autoNext = false;
     var pick = document.getElementById("listen-chapter");
     if (pick) pick.value = String(n);
     loadChapter(n).then(function () { if (wasPlaying && state.manifest) play(); });
@@ -773,11 +781,19 @@
          scrubbing, a speed change and a seek all land on the right line for free. */
       var i = indexAt(a.currentTime * 1000);
       if (i !== state.index) { state.index = i; renderNow(); }
+      else {
+        var seg = current();
+        if (seg && state.index + ":" + captionPiece(seg).i !== state.capKey) {
+          var cap = document.getElementById("listen-now"); if (cap) cap.innerHTML = captionHtml();
+        }
+      }
     }
     var total = chapterTotal(), now = Math.min(chapterNow(), total || 0);
     var frac = total ? now / total : 0;
-    var bar = document.getElementById("listen-seg-bar");
-    if (bar && !state.dragging) bar.value = String(frac * 1000);
+    if (!state.dragging) drawScrub(frac);
+    var tt = document.getElementById("lp-total");
+    if (tt && total) tt.textContent = clock(total);
+    checkSleep();
     var pos = document.getElementById("listen-position");
     if (pos) {
       pos.textContent = "Segment " + (state.index + 1) + " of " + segments().length +
@@ -803,7 +819,19 @@
      volume sliders were destroyed between one segment and the next. */
   function renderNow() {
     var box = document.getElementById("listen-now");
-    if (box) box.innerHTML = nowHtml();
+    if (box) box.innerHTML = captionHtml();
+    var sc = document.getElementById("lp-script");
+    if (sc) sc.innerHTML = nowHtml();
+  }
+
+  /* Sleep timer: a set number of minutes, or the end of this chapter (the chapter then
+     stops instead of rolling on to the next). The pill counts down. */
+  function checkSleep() {
+    var z = state.sleep;
+    if (!z || z.mode <= 0) return;
+    var el = document.getElementById("lp-sleep-left");
+    if (el) el.textContent = sleepLabel();
+    if (Date.now() >= z.until) { state.sleep = null; if (state.playing) pause(); else render(); }
   }
 
   /* The line being read, with the one before and the one after dimmed either side, so a
@@ -825,77 +853,239 @@
     return lineHtml(segs[i - 1], "now-prev") + lineHtml(segs[i], "now-cur") + lineHtml(segs[i + 1], "now-next");
   }
 
+  /* ---- the PocketFM-style player (Joshua, 2026-11-07) -------------------------
+     Picture on top with the line being read in a caption box, the chapter title, a row
+     of round pills (chapters, download, speed, sleep), a tall scrubber with the time in a
+     bubble, then previous / back / play / forward / next. Chapters and downloads open in
+     a sheet; the technical choices (which reading, live layers) are under the menu. */
+  var SPEEDS = [1, 1.1, 1.25, 1.5, 1.75, 2, 0.75, 0.9];
+  var SLEEPS = [0, -1, 15, 30, 60];          // minutes; -1 = end of this chapter
+
+  function coverFor(n) { return n <= 4 ? "./assets/covers/lab.jpg" : "./assets/covers/island.jpg"; }
+
+  var ICON = {
+    play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>',
+    pause: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z" fill="currentColor"/></svg>',
+    prev: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2.2v14H6zM19 5.5v13L9.5 12z" fill="currentColor"/></svg>',
+    next: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.8 5H18v14h-2.2zM5 5.5v13L14.5 12z" fill="currentColor"/></svg>',
+    list: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h11" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>',
+    down: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>',
+    done: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>',
+    speed: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16a8 8 0 1 1 15 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M12 13l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    moon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/></svg>',
+    more: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5.5" r="1.8" fill="currentColor"/><circle cx="12" cy="12" r="1.8" fill="currentColor"/><circle cx="12" cy="18.5" r="1.8" fill="currentColor"/></svg>'
+  };
+  function stepIcon(dir, n) {
+    var arc = dir < 0
+      ? '<path d="M7.5 6.2A8 8 0 1 1 4.2 13" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" fill="none"/><path d="M7.9 2.6l-.6 4 4 .5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
+      : '<path d="M16.5 6.2A8 8 0 1 0 19.8 13" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" fill="none"/><path d="M16.1 2.6l.6 4-4 .5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>';
+    return '<svg viewBox="0 0 24 24" aria-hidden="true">' + arc +
+      '<text x="12" y="16" text-anchor="middle" font-size="7.6" font-weight="700" fill="currentColor" font-family="system-ui,sans-serif">' + n + '</text></svg>';
+  }
+
+  function chapterInfo(n) {
+    var O = window.TMBOffline, list = (O && O.chapters()) || [];
+    for (var i = 0; i < list.length; i++) if (list[i].number === n) return list[i];
+    return null;
+  }
+
+  /* SUBTITLES, NOT PARAGRAPHS. A narrated paragraph can run to 400 characters, which no
+     caption box can hold, so the line is cut into subtitle-sized pieces (whole sentences
+     where it can, about 90 characters at most) and the piece shown follows the audio: the
+     line's time is shared out by length, which lands within a word or two. */
+  var CAP_MAX = 90;
+  function captionChunks(text) {
+    var out = [], parts = String(text).match(/[^.!?…]+[.!?…]+["”’]?\s*|[^.!?…]+$/g) || [text];
+    var cur = "";
+    parts.forEach(function (p) {
+      p = p.trim(); if (!p) return;
+      while (p.length > CAP_MAX) {               // a long sentence: break at a space
+        var cut = p.lastIndexOf(" ", CAP_MAX); if (cut < 40) cut = CAP_MAX;
+        if (cur) { out.push(cur); cur = ""; }
+        out.push(p.slice(0, cut).trim()); p = p.slice(cut).trim();
+      }
+      if (cur && (cur + " " + p).length > CAP_MAX) { out.push(cur); cur = p; }
+      else cur = cur ? cur + " " + p : p;
+    });
+    if (cur) out.push(cur);
+    return out.length ? out : [String(text)];
+  }
+
+  function captionPiece(seg) {
+    var chunks = seg._chunks || (seg._chunks = captionChunks(seg.displayText));
+    if (chunks.length < 2 || !mixedMode()) return { i: 0, n: chunks.length, text: chunks[0] };
+    var at = starts(), i = state.index;
+    var a = (at[i] || 0) / 1000, b = at[i + 1] != null ? at[i + 1] / 1000 : chapterTotal();
+    var f = b > a ? Math.max(0, Math.min(0.999, (chapterNow() - a) / (b - a))) : 0;
+    var total = chunks.reduce(function (s, c) { return s + c.length; }, 0), acc = 0;
+    for (var k = 0; k < chunks.length; k++) { acc += chunks[k].length; if (f < acc / total) return { i: k, n: chunks.length, text: chunks[k] }; }
+    return { i: chunks.length - 1, n: chunks.length, text: chunks[chunks.length - 1] };
+  }
+
+  function captionHtml() {
+    var seg = current();
+    if (!seg) return "";
+    var narr = seg.speaker === "narrator";
+    var piece = captionPiece(seg);
+    state.capKey = state.index + ":" + piece.i;
+    var t = esc(piece.text);
+    var text = narr ? t : (piece.i === 0 ? "“" : "") + t + (piece.i === piece.n - 1 ? "”" : "");
+    return (narr ? "" : '<span class="lp-cap-who">' + esc(seg.speakerName || "") + '</span>') +
+      '<span class="lp-cap-text">' + text + '</span>';
+  }
+
+  function dlPillHtml() {
+    var O = window.TMBOffline;
+    if (!O || !O.available() || !chapterInfo(state.chapter)) return "";
+    var st = O.status(state.chapter), icon = ICON.down, label = "", cls = "";
+    if (st.state === "done") { icon = ICON.done; cls = " is-done"; }
+    else if (st.state === "downloading") { label = (st.total ? Math.floor(100 * st.loaded / st.total) : 0) + "%"; cls = " is-busy"; }
+    else if (st.state === "update") { label = "Update"; cls = " is-busy"; }
+    else if (st.state === "error") { label = "Retry"; cls = " is-err"; }
+    return '<button type="button" class="lp-pill' + cls + '" id="lp-dl" aria-label="Download this chapter">' +
+      icon + (label ? '<span>' + label + '</span>' : '') + '</button>';
+  }
+
+  function bindDlPill() {
+    var dl = document.getElementById("lp-dl");
+    if (dl) dl.onclick = function () {
+      var O = window.TMBOffline, st = O.status(state.chapter);
+      if (st.state === "done") openSheet("lp-sheet-list"); else if (st.state !== "downloading") O.download(state.chapter);
+    };
+  }
+
+  function sleepLabel() {
+    var z = state.sleep;
+    if (!z || !z.mode) return "";
+    if (z.mode === -1) return "End";
+    var left = Math.max(0, Math.round((z.until - Date.now()) / 1000));
+    return clock(left);
+  }
+
   function render() {
     var body = document.getElementById("listen-body");
     if (!body) return;
     var m = state.manifest;
     if (!m) return;
-    var seg = current() || {};
-    var total = segments().length;
-    var stalled = state.stalled
-      ? '<p class="listen-warn">' + esc(state.stalled) + '</p>'
-      : "";
+    var info = chapterInfo(state.chapter);
+    var stalled = state.stalled ? '<p class="listen-warn">' + esc(state.stalled) + '</p>' : "";
     var warn = state.missing
-      ? '<p class="listen-warn">' + state.missing + ' of ' +
-        Object.keys(segments().reduce(function (acc, s) { acc[s.audio] = 1; return acc; }, {})).length +
-        ' clip(s) have not been generated yet. The player skips them. Generate with ' +
-        '<code>python3 scripts/audio.py generate</code> in a secure environment.</p>'
+      ? '<p class="listen-warn">' + state.missing + ' clip(s) in this chapter have no audio yet; the player skips them.</p>'
       : "";
+    var total = chapterTotal();
     body.innerHTML =
-      '<div class="listen-head"><h2>' + esc(m.title || ("Chapter " + m.chapter)) + '</h2>' +
-      '<p class="listen-sub">' + esc(sourceLine(m, total)) + '</p></div>' +
-      stalled + warn +
-      '<p class="listen-loading" id="listen-loading"' + (state.download ? "" : " hidden") + '>' +
-        esc(loadingText()) + '</p>' +
-      '<div class="listen-now" id="listen-now" aria-live="polite">' + nowHtml() + '</div>' +
-      '<div class="listen-controls" role="group" aria-label="Playback">' +
-      '<button id="listen-prev-ch" type="button" aria-label="Previous chapter"' +
-        (chapterStep(-1) == null ? " disabled" : "") + '>&#9198;</button>' +
-      '<button id="listen-back" type="button" class="listen-step" aria-label="Back ' + stepSize(-1) + ' seconds">&minus;' + stepSize(-1) + 's</button>' +
-      '<button id="listen-toggle" type="button" class="is-on" aria-label="' + (state.playing ? "Pause" : "Play") + '">' +
-        (state.playing ? "&#10074;&#10074; Pause" : "&#9654; Play") + '</button>' +
-      '<button id="listen-fwd" type="button" class="listen-step" aria-label="Forward ' + stepSize(1) + ' seconds">+' + stepSize(1) + 's</button>' +
-      '<button id="listen-next-ch" type="button" aria-label="Next chapter"' +
-        (chapterStep(1) == null ? " disabled" : "") + '>&#9197;</button>' +
-      '</div><div class="listen-controls listen-controls-sub">' +
-      '<label class="listen-rate">Speed ' +
-      '<select id="listen-rate">' +
-      [0.75, 0.9, 1, 1.1, 1.25, 1.5].map(function (r) {
-        return '<option value="' + r + '"' + (r === state.rate ? " selected" : "") + '>' + r + '×</option>';
-      }).join("") + '</select></label></div>' +
-      sourceControlHtml() +
-      layerControlsHtml() +
-      '<input id="listen-seg-bar" class="listen-bar" type="range" min="0" max="1000" step="any" value="0" ' +
-        'aria-label="Position in the chapter">' +
-      '<p class="listen-meta"><span id="listen-position">Segment ' + (state.index + 1) +
-        ' of ' + total + '</span></p>';
+      '<div class="lp-wrap">' +
+      '<div class="lp-visual" style="background-image:url(\'' + coverFor(state.chapter) + '\')">' +
+        '<div class="lp-topbar">' +
+          '<button type="button" class="lp-icon" id="lp-open-list" aria-label="Chapters">' + ICON.list + '</button>' +
+          '<span class="lp-series">TRADDOMIUM: Micro Battle!</span>' +
+          '<button type="button" class="lp-icon" id="lp-open-more" aria-label="More options">' + ICON.more + '</button>' +
+        '</div>' +
+        '<div class="lp-caption" id="listen-now" aria-live="polite">' + captionHtml() + '</div>' +
+      '</div>' +
+      '<div class="lp-panel">' +
+        '<p class="lp-title">Chapter ' + m.chapter + '. ' + esc((info && info.title) || (m.title || "").replace(/^Chapter \d+:\s*/, "")) + '</p>' +
+        stalled + warn +
+        '<p class="listen-loading" id="listen-loading"' + (state.download ? "" : " hidden") + '>' + esc(loadingText()) + '</p>' +
+        '<div class="lp-pills">' +
+          '<button type="button" class="lp-pill" id="lp-pill-list" aria-label="Chapters">' + ICON.list + '<span>' + state.chapters.length + '</span></button>' +
+          dlPillHtml() +
+          '<button type="button" class="lp-pill" id="lp-speed" aria-label="Playback speed">' + ICON.speed + '<span>' + state.rate.toFixed(2) + 'x</span></button>' +
+          '<button type="button" class="lp-pill' + (state.sleep && state.sleep.mode ? " is-on" : "") + '" id="lp-sleep" aria-label="Sleep timer">' + ICON.moon +
+            '<span id="lp-sleep-left">' + sleepLabel() + '</span></button>' +
+        '</div>' +
+        '<div class="lp-scrub" id="lp-scrub" role="slider" aria-label="Position in the chapter" tabindex="0">' +
+          '<div class="lp-fill" id="lp-fill"></div>' +
+          '<div class="lp-head" id="lp-head"><span class="lp-bubble" id="lp-bubble">0:00</span></div>' +
+        '</div>' +
+        '<div class="lp-times"><span id="lp-total">' + clock(total) + '</span></div>' +
+        '<div class="lp-controls" role="group" aria-label="Playback">' +
+          '<button type="button" class="lp-btn" id="listen-prev-ch" aria-label="Previous chapter"' + (chapterStep(-1) == null ? " disabled" : "") + '>' + ICON.prev + '</button>' +
+          '<button type="button" class="lp-btn lp-step" id="listen-back" aria-label="Back ' + stepSize(-1) + ' seconds">' + stepIcon(-1, stepSize(-1)) + '</button>' +
+          '<button type="button" class="lp-play" id="listen-toggle" aria-label="' + (state.playing ? "Pause" : "Play") + '">' + (state.playing ? ICON.pause : ICON.play) + '</button>' +
+          '<button type="button" class="lp-btn lp-step" id="listen-fwd" aria-label="Forward ' + stepSize(1) + ' seconds">' + stepIcon(1, stepSize(1)) + '</button>' +
+          '<button type="button" class="lp-btn" id="listen-next-ch" aria-label="Next chapter"' + (chapterStep(1) == null ? " disabled" : "") + '>' + ICON.next + '</button>' +
+        '</div>' +
+        '<p class="lp-pos" id="listen-position"></p>' +
+        '<details class="lp-script" id="lp-script-box"' + (state.scriptOpen ? " open" : "") + '><summary>Script</summary>' +
+          '<div class="listen-now" id="lp-script">' + nowHtml() + '</div></details>' +
+      '</div></div>';
+
+    var more = document.getElementById("lp-more-body");
+    if (more) { more.innerHTML = sourceControlHtml() + layerControlsHtml() + '<p class="lp-tech">' + esc(sourceLine(m, segments().length)) + '</p>'; bindSourceControl(); bindLayerControls(); }
 
     document.getElementById("listen-toggle").onclick = function () { state.playing ? pause() : play(); };
     document.getElementById("listen-back").onclick = function () { stepTap(-1); };
     document.getElementById("listen-fwd").onclick = function () { stepTap(1); };
     document.getElementById("listen-prev-ch").onclick = function () { changeChapter(-1); };
     document.getElementById("listen-next-ch").onclick = function () { changeChapter(1); };
-    document.getElementById("listen-rate").onchange = function (e) {
-      setRate(parseFloat(e.target.value));
+    document.getElementById("lp-open-list").onclick = document.getElementById("lp-pill-list").onclick = function () { openSheet("lp-sheet-list"); };
+    document.getElementById("lp-open-more").onclick = function () { openSheet("lp-sheet-more"); };
+    document.getElementById("lp-speed").onclick = function () {
+      setRate(SPEEDS[(SPEEDS.indexOf(state.rate) + 1) % SPEEDS.length] || 1);
     };
-    /* Dragging previews the time; letting go seeks. Seeking on every pixel of a drag
-       reloaded a clip per pixel in clip mode. The mixed file can follow the finger. */
-    var segBar = document.getElementById("listen-seg-bar");
-    segBar.oninput = function (e) {
-      state.dragging = true;
-      var t = (parseFloat(e.target.value) / 1000) * chapterTotal();
-      if (mixedMode()) { seekChapter(t); state.dragging = true; return; }
-      var pos = document.getElementById("listen-position");
-      if (pos) pos.textContent = "Go to " + clock(t) + " of " + clock(chapterTotal());
+    document.getElementById("lp-sleep").onclick = function () {
+      var cur = state.sleep ? state.sleep.mode : 0, nx = SLEEPS[(SLEEPS.indexOf(cur) + 1) % SLEEPS.length];
+      state.sleep = nx ? { mode: nx, until: nx > 0 ? Date.now() + nx * 60000 : 0 } : null;
+      render();
     };
-    segBar.onchange = function (e) {
-      state.dragging = false;
-      seekChapter((parseFloat(e.target.value) / 1000) * chapterTotal());
-    };
-    bindSourceControl();
-    bindLayerControls();
+    bindDlPill();
+    var box = document.getElementById("lp-script-box");
+    box.ontoggle = function () { state.scriptOpen = box.open; };
+    bindScrub();
     renderProgress();
     startTicking();
+  }
+
+  /* The tall scrubber: drag (or tap) to move; the bubble shows where you will land, and
+     letting go seeks. Keyboard: arrow keys step 15 s. */
+  function bindScrub() {
+    var bar = document.getElementById("lp-scrub");
+    if (!bar) return;
+    function frac(e) {
+      var r = bar.getBoundingClientRect();
+      return Math.max(0, Math.min(1, (e.clientX - r.left) / r.width));
+    }
+    bar.onpointerdown = function (e) {
+      state.dragging = true;
+      try { bar.setPointerCapture(e.pointerId); } catch (x) {}
+      drawScrub(frac(e));
+    };
+    bar.onpointermove = function (e) { if (state.dragging) drawScrub(frac(e)); };
+    bar.onpointerup = bar.onpointercancel = function (e) {
+      if (!state.dragging) return;
+      state.dragging = false;
+      seekChapter(frac(e) * chapterTotal());
+    };
+    bar.onkeydown = function (e) {
+      if (e.key === "ArrowRight") { skip(15); e.preventDefault(); }
+      if (e.key === "ArrowLeft") { skip(-15); e.preventDefault(); }
+    };
+  }
+
+  function drawScrub(f) {
+    var fill = document.getElementById("lp-fill"), head = document.getElementById("lp-head"), bub = document.getElementById("lp-bubble");
+    if (fill) fill.style.width = (f * 100) + "%";
+    if (head) head.style.left = (f * 100) + "%";
+    if (bub) {
+      bub.textContent = clock(f * chapterTotal());
+      bub.style.transform = "translateX(" + (-f * 100) + "%)";   // stays inside the bar at both ends
+    }
+    var bar = document.getElementById("lp-scrub");
+    if (bar) bar.setAttribute("aria-valuetext", clock(f * chapterTotal()) + " of " + clock(chapterTotal()));
+  }
+
+  function openSheet(id) {
+    var sh = document.getElementById(id);
+    if (!sh) return;
+    sh.classList.add("open");
+    sh.setAttribute("aria-hidden", "false");
+    if (id === "lp-sheet-list") renderDownloads();
+  }
+  function closeSheets() {
+    Array.prototype.forEach.call(document.querySelectorAll(".lp-sheet"), function (sh) {
+      sh.classList.remove("open"); sh.setAttribute("aria-hidden", "true");
+    });
   }
 
   /* ---- chapters and downloads (reader/offline.js) ---------------------------
@@ -931,7 +1121,7 @@
     var log = O.log().slice(0, 12).map(function (e) {
       return '<li class="dl-log-' + e.level + '">' + esc(e.at) + ' · ' + esc(e.msg) + '</li>';
     }).join("");
-    return '<h2 class="dl-head">Chapters &amp; downloads</h2>' +
+    return '<h2 class="dl-head">Chapters</h2>' +
       '<div class="dl-settings">' +
         '<label>Download ahead <select id="dl-ahead">' +
           [0, 1, 2, 3].map(function (n) {
@@ -977,9 +1167,9 @@
           var n = parseInt(b.getAttribute("data-ch"), 10);
           var pick = document.getElementById("listen-chapter");
           if (pick) pick.value = String(n);
-          loadChapter(n);
-          var top = document.querySelector(".listen");
-          if (top && top.scrollIntoView) top.scrollIntoView({ behavior: "smooth" });
+          closeSheets();
+          var wasPlaying = state.playing;
+          loadChapter(n).then(function () { if (wasPlaying && state.manifest) play(); });
         };
       });
     });
@@ -992,20 +1182,26 @@
         .slice().sort(function (a, b) { return a.number - b.number; });
       state.chapters = chapters.map(function (c) { return c.number; });
       view.innerHTML =
-        '<section class="listen"><h1>Listen</h1>' +
-        '<p class="listen-intro">The audiobook. A chapter plays as one file: the v4 ' +
-        'dialogue reading where there is one, otherwise the mixed file with ambience and ' +
-        'effects; anything not combined yet plays clip by clip with the layers live. ' +
-        'This page plays existing audio only and contains no ElevenLabs key.</p>' +
-        '<label class="listen-pick">Chapter <select id="listen-chapter">' +
-        chapters.map(function (c) {
-          return '<option value="' + c.number + '">' + c.number + ' · ' + esc(c.title) + '</option>';
-        }).join("") + '</select></label>' +
-        '<div id="listen-body"><p class="state state-loading">Loading audio manifest…</p></div>' +
-        '<div id="listen-downloads" class="listen-downloads"></div>' +
+        '<section class="listen lp">' +
+        '<select id="listen-chapter" hidden aria-hidden="true">' +
+        chapters.map(function (c) { return '<option value="' + c.number + '">' + c.number + '</option>'; }).join("") +
+        '</select>' +
+        '<div id="listen-body"><p class="state state-loading">Loading audio…</p></div>' +
+        '<div class="lp-sheet" id="lp-sheet-list" aria-hidden="true"><div class="lp-scrim" data-close></div>' +
+          '<div class="lp-sheet-panel" role="dialog" aria-label="Chapters"><div class="lp-grab" data-close></div>' +
+          '<div id="listen-downloads" class="listen-downloads"></div></div></div>' +
+        '<div class="lp-sheet" id="lp-sheet-more" aria-hidden="true"><div class="lp-scrim" data-close></div>' +
+          '<div class="lp-sheet-panel" role="dialog" aria-label="More options"><div class="lp-grab" data-close></div>' +
+          '<h2 class="dl-head">Playback</h2><div id="lp-more-body"></div>' +
+          '<p class="lp-tech">Plays existing audio only; this page holds no ElevenLabs key.</p></div></div>' +
         '</section>';
+      Array.prototype.forEach.call(view.querySelectorAll("[data-close]"), function (el) { el.onclick = closeSheets; });
       if (window.TMBOffline) {
-        if (!state.dlBound) { window.TMBOffline.onChange(renderDownloads); state.dlBound = true; }
+        if (!state.dlBound) { window.TMBOffline.onChange(function () {
+          renderDownloads();
+          var p = document.getElementById("lp-dl");
+          if (p) { p.outerHTML = dlPillHtml(); bindDlPill(); }
+        }); state.dlBound = true; }
         renderDownloads();
       }
       var pick = document.getElementById("listen-chapter");

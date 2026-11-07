@@ -578,7 +578,6 @@ button {
    you are in (playing or paused) is the lit one. */
 .listen-controls:not(.listen-controls-sub) { gap: .4rem; flex-wrap: wrap; }
 .listen-controls:not(.listen-controls-sub) button { padding: .55rem .7rem; min-width: 3rem; }
-#listen-toggle { background: #8B7355; border-color: #8B7355; min-width: 7rem; }
 .listen-step { min-width: 4.2rem; font-variant-numeric: tabular-nums; }
 .listen-controls button:disabled { opacity: .35; cursor: default; }
 .listen-controls-sub { margin-top: 0; }
@@ -723,3 +722,86 @@ button {
 .tmb-update-banner button { margin-right: .5rem; background: #8B7355; color: #fff; border: 0;
   border-radius: .4rem; padding: .45rem .9rem; font: inherit; cursor: pointer; }
 .tmb-update-banner button + button { background: #3D3733; }
+
+/* ===== The PocketFM-style player (Listen tab, 2026-11-07) =====================
+   Picture with a caption box on top; title; round pills; a tall scrubber with the time
+   in a bubble; previous / back / play / forward / next. Landscape on a phone puts the
+   picture on the left and the controls on the right. */
+.lp { max-width: 34rem; margin: 0 auto; }
+.lp-wrap { display: flex; flex-direction: column; gap: 0; }
+.lp-visual { position: relative; aspect-ratio: 1 / 0.92; border-radius: 14px; overflow: hidden;
+  background: #000 center / cover no-repeat; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+.lp-visual::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,.55) 0, transparent 22%, transparent 55%, rgba(0,0,0,.35) 100%); }
+.lp-topbar { position: absolute; left: 0; right: 0; top: 0; z-index: 2; display: flex; align-items: center;
+  justify-content: space-between; padding: 8px 6px; }
+.lp-series { flex: 1; min-width: 0; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-size: .95rem; color: #F5EDE4; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
+.lp-icon { width: 44px; height: 44px; border: 0; background: none; color: #F5EDE4; cursor: pointer;
+  display: grid; place-items: center; border-radius: 50%; }
+.lp-icon svg { width: 24px; height: 24px; filter: drop-shadow(0 1px 2px rgba(0,0,0,.6)); }
+.lp-caption { position: absolute; z-index: 2; left: 6%; right: 6%; bottom: 7%;
+  background: rgba(245,240,232,.94); color: #1A1714; border-radius: 4px; padding: .55rem .8rem;
+  text-align: center; font: 600 1.02rem/1.35 Georgia, "Times New Roman", serif;
+  overflow: hidden; }
+.lp-caption:empty { display: none; }
+.lp-cap-who { display: block; font: 700 .7rem/1.2 var(--font-body); letter-spacing: .08em;
+  text-transform: uppercase; color: #8B6A3D; margin-bottom: .15rem; }
+.lp-panel { padding: 14px 4px 8px; }
+.lp-title { text-align: center; color: var(--text-muted); margin: 0 0 12px; font-size: .98rem; }
+.lp-pills { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 0 0 18px; }
+.lp-pill { display: inline-flex; align-items: center; gap: 8px; height: 44px; min-width: 52px; justify-content: center;
+  padding: 0 16px; border-radius: 999px; border: 0; background: #252220; color: #F5EDE4; font: inherit; font-size: .95rem;
+  cursor: pointer; font-variant-numeric: tabular-nums; }
+.lp-pill svg { width: 22px; height: 22px; }
+.lp-pill.is-done { color: var(--accent-sage); }
+.lp-pill.is-busy { color: var(--accent-gold); }
+.lp-pill.is-err { color: var(--accent-rose); }
+.lp-pill.is-on { background: #3A3128; color: var(--accent-gold); }
+.lp-scrub { position: relative; height: 54px; border-radius: 4px; background: #1E1B19; cursor: pointer;
+  touch-action: none; margin: 18px 0 0; }
+.lp-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 4px 0 0 4px;
+  background: linear-gradient(90deg, rgba(139,115,85,.25), rgba(212,168,83,.55)); }
+.lp-head { position: absolute; top: -8px; bottom: -8px; width: 3px; margin-left: -1.5px; left: 0;
+  background: var(--accent-gold); border-radius: 2px; }
+.lp-bubble { position: absolute; top: calc(100% + 2px); left: 0;
+  background: var(--accent-gold); color: #1A1714; font-size: .8rem; font-weight: 700; padding: 2px 6px;
+  border-radius: 3px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.lp-times { display: flex; justify-content: flex-end; min-height: 1.5em; color: var(--text-muted); font-size: .85rem;
+  margin: 6px 0 0; font-variant-numeric: tabular-nums; }
+.lp-controls { display: flex; align-items: center; justify-content: space-between; margin: 22px 0 6px; padding: 0 2px; }
+.lp-btn { width: 52px; height: 52px; border: 0; background: none; color: #F5EDE4; cursor: pointer;
+  display: grid; place-items: center; border-radius: 50%; }
+.lp-btn svg { width: 30px; height: 30px; }
+.lp-step svg { width: 38px; height: 38px; }
+.lp-btn:disabled { opacity: .3; cursor: default; }
+.lp .lp-play { width: 78px; height: 78px; min-width: 0; border-radius: 50%; border: 0; background: #F5EDE4; color: #12100E; padding: 0;
+  display: grid; place-items: center; cursor: pointer; box-shadow: 0 6px 20px rgba(0,0,0,.4); }
+.lp-play svg { width: 34px; height: 34px; }
+.lp-pos { display: none; }
+.lp-script { margin-top: 14px; border-top: 1px solid #2A2622; padding-top: 8px; }
+.lp-script summary { color: var(--text-muted); cursor: pointer; padding: 8px 0; }
+.lp-tech { color: var(--text-muted); font-size: .84rem; }
+/* Sheets: chapters and the menu. */
+.lp-sheet { position: fixed; inset: 0; z-index: 40; pointer-events: none; }
+.lp-scrim { position: absolute; inset: 0; background: rgba(0,0,0,.5); opacity: 0; transition: opacity .2s; }
+.lp-sheet-panel { position: absolute; left: 0; right: 0; bottom: 0; max-height: 80vh; overflow-y: auto;
+  background: #1C1917; border-radius: 18px 18px 0 0; padding: 0 16px 24px; transform: translateY(102%);
+  transition: transform .25s ease; max-width: 40rem; margin: 0 auto; box-shadow: 0 -10px 40px rgba(0,0,0,.6); }
+.lp-sheet.open { pointer-events: auto; }
+.lp-sheet.open .lp-scrim { opacity: 1; }
+.lp-sheet.open .lp-sheet-panel { transform: none; }
+.lp-grab { width: 44px; height: 5px; border-radius: 3px; background: #4A433D; margin: 10px auto 6px; cursor: pointer; }
+.lp-sheet .dl-head { margin-top: .4rem; }
+/* Phones on their side: picture left, controls right, everything on one screen. */
+@media (orientation: landscape) and (max-height: 520px) {
+  .lp { max-width: none; }
+  .lp-wrap { flex-direction: row; gap: 18px; align-items: stretch; }
+  .lp-visual { flex: 0 0 auto; height: calc(100vh - 150px); min-height: 220px; aspect-ratio: 1 / 0.92; }
+  .lp-panel { flex: 1; padding-top: 0; display: flex; flex-direction: column; justify-content: center; }
+  .lp-pills { margin-bottom: 6px; }
+  .lp-scrub { height: 40px; margin-top: 10px; }
+  .lp-controls { margin: 12px 0 0; }
+  .lp .lp-play { width: 64px; height: 64px; }
+  .lp-script { display: none; }
+}
