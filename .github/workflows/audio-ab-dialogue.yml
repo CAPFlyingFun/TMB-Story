@@ -1,0 +1,36 @@
+name: Render v4 dialogue-mode test (spends credits)
+
+# MANUAL ONLY. SPENDS ELEVENLABS CREDITS (about one per character of the spec's lines,
+# 475 for the Chapter 9 test). Renders the spec's lines as one Text to Dialogue request.
+# Refuses to generate again if the output already exists.
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: 'Comparison spec'
+        required: true
+        default: 'audio/tests/ab-v4-ch9/spec.json'
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Render the dialogue
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/ab-dialogue.py "${{ inputs.spec }}"
+      - name: Commit the result
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio/tests/
+          git diff --cached --quiet && { echo "Nothing new."; exit 0; }
+          git commit -m "Add v4 dialogue-mode test audio ($(dirname "${{ inputs.spec }}"))"
+          git pull --rebase -q origin main
+          git push
