@@ -679,3 +679,9 @@ button {
 
 .authorship { margin-top: 10px; font-size: 0.85em; opacity: 0.8; }
 .authorship a { color: inherit; }
+
+/* "Loading the chapter audio: 3.2 MB / 6.4 MB · 1m 19s" while the whole file downloads
+   before playing (no mid-chapter buffering). */
+.listen-loading { margin: .4rem 0; padding: .55rem .8rem; border-radius: .45rem;
+  background: #2A2622; color: #D4A853; font-size: .92rem; }
+.listen-loading[hidden] { display: none; }

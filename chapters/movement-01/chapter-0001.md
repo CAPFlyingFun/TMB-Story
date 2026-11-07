@@ -20,10 +20,10 @@ new_canon:
   - "See story-rules/ for the canon this movement established. This file is the manuscript."
 playable_beat_flow: ["review diagnostic data", "read the access warning", "open the network monitor", "trace the unknown connection", "lock the terminal", "call Sarah on the intercom", "search the access logs", "attempt to cancel the initialization request", "re-enter administrator credentials"]
 ending_type: unanswered question
-review_status: approved
-audio_status: approved
+review_status: revision-pending
+audio_status: outdated
 approved_on: "2026-10-13"
-last_approved_revision: ""
+last_approved_revision: "e32f50b"
 source: "Joshua's revised Word manuscript, 3c63298d-01-03_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-26 (three lines of Sarah's entrance changed; the rest identical to 3e9a1f9b, imported 2026-09-23). For the audio, at his instruction the same day (Decision 0024): 0 bare said-tag(s) removed, and 3 quote(s) split by a beat joined into one line with the beat first."
 revision_notes:
   - date: "2026-09-26"
@@ -145,7 +145,7 @@ Jack kept one hand on the keyboard. "I'm sitting here."
 
 Sarah nudged the arm of his chair, looking slightly annoyed, but sympathetic. "Let me have your chair and get another chair."
 
-Jack gave Sarah his chair right away. "Oh. Of course. Anything for you." He crossed to the next workstation and dragged its chair back, wheels squeaking against the floor, before pulling himself up to his own screen.
+Jack gave Sarah his chair right away. "Of course. Anything for you." He crossed to the next workstation and dragged its chair back, wheels squeaking against the floor, before pulling himself up to his own screen.
 
 Sarah was already typing. "You said the connection disappeared?"
 

@@ -443,3 +443,7 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 - The per-line v2 clips, the game export and every approval state are unchanged. No chapter's `audio_status` was changed; approving the new audio is Joshua's call.
 - Test spend on 2026-11-07 was about 9,100 credits.
 **Status:** Accepted (Joshua, 2026-11-07).
+
+**0047, addendum (2026-11-07):**
+- **Chapter 1 line change.** Joshua asked for the change after hearing the v4 render, which drops the "Oh": "remove text wise the 'Oh' for consistency." Jack's line in Chapter 1 is now "Of course. Anything for you."; it was "Oh. Of course. Anything for you." Per decision 0031, Chapter 1 goes from `approved` to `revision-pending` (`last_approved_revision` e32f50b), and its `audio_status` becomes `outdated`. That status refers to the v2 clips; the v4 dialogue file already matches the new text. The five translations lost the matching interjection.
+- **Listen tab loading.** The Listen tab now downloads the whole chapter file before it plays, showing "MB loaded / total · time left". Streaming had stalled mid-chapter after a change of speaker and then hurried to catch up.

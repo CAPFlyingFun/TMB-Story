@@ -51,6 +51,9 @@
     mode: MODE_CLIPS,
     mixed: null,       // the one-file export being played (dialogue or mixed), when there is one
     chapters: [],      // chapter numbers in order, for previous/next chapter
+    blobs: {},         // one-file src -> object URL of the fully downloaded file
+    blobOrder: [],     // oldest first, so only the last few chapters stay in memory
+    download: null,    // { src, loaded, total, started, abort } while one is coming in
     retries: 0,
     consecutiveFailures: 0,
     playToken: 0,
@@ -155,6 +158,9 @@
   // ---- loading -------------------------------------------------------------
   function loadChapter(n) {
     stop();
+    if (state.download && state.download.abort) state.download.abort.abort();
+    state.download = null;
+    state.streamOnly = false;
     state.chapter = n;
     state.index = 0;
     state.pendingSec = null;
@@ -275,6 +281,81 @@
     render();
   }
 
+  /* THE WHOLE FILE IS DOWNLOADED BEFORE IT PLAYS (Joshua, 2026-11-07). Streaming it
+     let the browser run out of buffer mid-chapter: the voice paused right after a change
+     of speaker, then hurried to catch up. So Play fetches the complete file first, shows
+     how far along that is ("3.2 MB / 6.4 MB · 1m 19s"), and plays it from memory, where
+     a seek or a skip never waits on the network. The last three files are kept, so going
+     back a chapter or switching readings is instant. If the download cannot be read as a
+     stream, it falls back to the old streamed playback rather than not playing. */
+  var KEEP_FILES = 3;
+
+  function mb(b) { return (b / 1048576).toFixed(1); }
+
+  function eta(d) {
+    var secs = (Date.now() - d.started) / 1000;
+    if (!d.total || d.loaded < 65536 || secs < 0.4) return "";
+    var left = (d.total - d.loaded) / (d.loaded / secs);
+    if (!isFinite(left)) return "";
+    left = Math.max(0, Math.round(left));
+    return " · " + (left >= 60 ? Math.floor(left / 60) + "m " : "") + (left % 60) + "s";
+  }
+
+  function loadingText() {
+    var d = state.download;
+    if (!d) return "";
+    var total = d.total || (state.mixed && state.mixed.bytes) || 0;
+    return "Loading the chapter audio: " + mb(d.loaded) + " MB" +
+      (total ? " / " + mb(total) + " MB" : "") + eta({ loaded: d.loaded, total: total, started: d.started });
+  }
+
+  function renderLoading() {
+    var el = document.getElementById("listen-loading");
+    if (el) { el.textContent = loadingText(); el.hidden = !state.download; }
+  }
+
+  function remember(src, url) {
+    state.blobs[src] = url;
+    state.blobOrder.push(src);
+    while (state.blobOrder.length > KEEP_FILES) {
+      var old = state.blobOrder.shift();
+      try { URL.revokeObjectURL(state.blobs[old]); } catch (e) {}
+      delete state.blobs[old];
+    }
+  }
+
+  function download(src) {
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var d = { src: src, loaded: 0, total: (state.mixed && state.mixed.bytes) || 0,
+              started: Date.now(), abort: ctrl };
+    state.download = d;
+    renderLoading();
+    return fetch(src, ctrl ? { signal: ctrl.signal } : {}).then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      var len = parseInt(r.headers.get("Content-Length") || "0", 10);
+      if (len) d.total = len;
+      if (!r.body || !r.body.getReader) return r.blob();
+      var reader = r.body.getReader(), parts = [];
+      function pump() {
+        return reader.read().then(function (x) {
+          if (x.done) return new Blob(parts, { type: "audio/mpeg" });
+          parts.push(x.value); d.loaded += x.value.length; renderLoading();
+          return pump();
+        });
+      }
+      return pump();
+    }).then(function (blob) {
+      remember(src, URL.createObjectURL(blob));
+      if (state.download === d) state.download = null;
+      renderLoading();
+      return state.blobs[src];
+    }, function (err) {
+      if (state.download === d) state.download = null;
+      renderLoading();
+      throw err;
+    });
+  }
+
   /* ONE ELEMENT, ONE FILE, AND THE POSITION IS THE ONLY STATE. Where the clip player
      has to decide when a segment ends, what the gap is, which cue belongs in it and
      what to do when a load fails, this asks the element where it is and reads the
@@ -283,8 +364,23 @@
     var a = audioEl();
     var src = mixedSrc();
     var seeking = a.getAttribute("data-src") !== src;
+    if (seeking && !state.blobs[src] && !state.streamOnly) {
+      if (state.download && state.download.src === src) return;   // already coming in
+      if (state.download && state.download.abort) state.download.abort.abort();
+      state.playing = true;      // the listener asked to play; it starts when the file is here
+      var chapter = state.chapter;
+      download(src).then(function () {
+        if (state.chapter === chapter && state.playing && mixedSrc() === src) playMixed();
+      }, function (err) {
+        if (err && err.name === "AbortError") return;
+        state.streamOnly = true;              // fall back to streaming rather than not playing
+        if (state.chapter === chapter && state.playing) playMixed();
+      });
+      render();
+      return;
+    }
     if (seeking) {
-      a.src = src;
+      a.src = state.blobs[src] || src;
       a.setAttribute("data-src", src);
       a.load();
       var at = state.pendingSec != null ? state.pendingSec * 1000 : (starts()[state.index] || 0);
@@ -706,6 +802,8 @@
       '<div class="listen-head"><h2>' + esc(m.title || ("Chapter " + m.chapter)) + '</h2>' +
       '<p class="listen-sub">' + esc(sourceLine(m, total)) + '</p></div>' +
       stalled + warn +
+      '<p class="listen-loading" id="listen-loading"' + (state.download ? "" : " hidden") + '>' +
+        esc(loadingText()) + '</p>' +
       '<div class="listen-now" id="listen-now" aria-live="polite">' + nowHtml() + '</div>' +
       '<div class="listen-controls" role="group" aria-label="Playback">' +
       '<button id="listen-prev-ch" type="button" aria-label="Previous chapter"' +
