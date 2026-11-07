@@ -17,7 +17,7 @@ ladder, which is archived. Ids are stable; add, never renumber.
 | Q10 | Who used the maintenance tablet at the equipment shed by the north pumping station three weeks ago, with a retired groundskeeper's badge reported lost eight days before the event? | Ch 9, Ch 10 | open |
 | Q11 | What made the impacts: the dinner-plate mark pressed straight down at the southern perimeter with no trail, and the blade of grass pressed flat at the eastern marker twelve minutes earlier? | Ch 8, Ch 9 | open |
 | Q12 | What crossed the soil beyond the eastern fence, and what was the thing with several thin legs at the southern edge? | Ch 4, Ch 5 | open |
-| Q13 | What is the square opening low in the far wall of the service gallery under the southern seam, which the island's drawings show as solid wall? Mark has ruled that nobody goes near it (Joshua added this question on 2026-11-06; its purpose stays unresolved, a possible link to Event 8 and later mysteries of Andy's generation). | Ch 34 (pending) | open |
+| Q13 | What is the square opening low in the far wall of the service gallery under the southern seam, which the island's drawings show as solid wall? Mark has ruled that nobody goes near it (Joshua added this question on 2026-11-06; its purpose stays unresolved, a possible link to Event 8 and later mysteries of Andy's generation). | Ch 34 (pending); advanced Ch 42–45 (pending): an older drawing revision shows a door and a module chamber; the chamber, older work, ends at a sealed bulkhead with the same number where the drawing says "continued"; left unopened. Its purpose and what lies beyond stay unresolved. | open |
 
 ## Who knows what, at the end of Chapter 3
 

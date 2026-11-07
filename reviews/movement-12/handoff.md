@@ -9,3 +9,9 @@ Continuity, world-creature and mystery reviewed. Changed: the gnat on the slide 
 **For Joshua:** the archive, called static in Ch 30, is now shown to keep three undated, unattributed revisions. That advances Q13 (an old revision draws a door and a chamber) without saying what it is for. Confirm or redirect before Event 8.
 
 Canon candidates: the Field Book; the robin as a daytime hunter of open ground; the grass-colored tarp roof; small ants and scent trails; sealed indoor bins; food to the end of April.
+
+## Event 8, Forgotten Module (Ch 43–45), 2026-11-07
+
+All five specialists reviewed. Changed: three 10 mm people cannot shove an island-scale steel door, so the stale air (carbon dioxide pooled on the floor) is cleared with a tarp sail turning the gallery draft into the room, an hour; the crossing gets a real problem (slime-slick iron where spray comes up) solved on Sarah's call; a reel of Paul's wire carries voice past the cage; Mercer listens on the wire; Mark recalls his spoken ban rather than a board line; the stencil sits "where anyone would have put it, before" (not "the people who built the island"); Aiden's "workshop" guess cut (Q13's purpose stays open); dry strip, not "a single tile"; the ceiling sags "the height of a house"; the den is damp, under the rubble; the fake bubble scare replaced by Sarah's overlay catching a floor drain under a wet patch; a dry rustle as they pass the den; the doorway lamp runs on its own battery, and Aiden hedges ("Mostly. Light draws insects."); Mercer's check moved to the evening of the sixteenth; repeated "look and come back", "Be boring" and the baby-vote joke cut; Lena trimmed.
+
+Q13 in `story-rules/OPEN_QUESTIONS.md` updated to "advanced Ch 42–45 (pending)", purpose unresolved.

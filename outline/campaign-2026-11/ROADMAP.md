@@ -79,3 +79,4 @@ Mysteries stay open for Andy's generation: Q01–Q12, the hidden scale layers, P
 | 5 Building a Home | ✅ drafted, pending | 37, 38 | evening of March 26; 72k L, second line due ~March 31 | 35w0d |
 | 6 Medical Problem | ✅ drafted, pending | 39, 40 | April 5; tanks rising; all four gaps addressed | 36w3d |
 | 7 Ecological Survey | ✅ drafted, pending | 41, 42 | night of April 13; the old revision found | 37w4d |
+| 8 Forgotten Module | ✅ drafted, pending | 43, 44, 45 | evening of April 16; bulkhead left sealed | 38w0d |
