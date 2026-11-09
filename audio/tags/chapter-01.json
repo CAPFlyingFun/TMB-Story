@@ -1,0 +1,544 @@
+{
+ "_comment": [
+  "Delivery tags for Chapter 1's character lines, approved by Joshua 2026-11-09.",
+  "Each tag is written in front of the line as [tag] [tag] when it is rendered as its own clip",
+  "(scripts/clips-chapter.py); tags set the delivery and are not spoken. Taken from the action beat",
+  "just before the line. A tag is skipped if its line's text has changed since."
+ ],
+ "lines": [
+  {
+   "order": 5,
+   "speaker": "system",
+   "text": "Warning. Unauthorized system access.",
+   "tag": ""
+  },
+  {
+   "order": 7,
+   "speaker": "jack-bennett",
+   "text": "What? Okay, I'm awake.",
+   "tag": "startled, groggy"
+  },
+  {
+   "order": 9,
+   "speaker": "jack-bennett",
+   "text": "That's not good.",
+   "tag": "muttering, uneasy"
+  },
+  {
+   "order": 11,
+   "speaker": "jack-bennett",
+   "text": "Come on. What are you doing?",
+   "tag": "muttering, focused"
+  },
+  {
+   "order": 14,
+   "speaker": "jack-bennett",
+   "text": "No. Where'd you go?",
+   "tag": "frustrated, under his breath"
+  },
+  {
+   "order": 16,
+   "speaker": "system",
+   "text": "Security protocol violation.",
+   "tag": ""
+  },
+  {
+   "order": 17,
+   "speaker": "jack-bennett",
+   "text": "Okay. Definitely awake now.",
+   "tag": "wry, wide awake"
+  },
+  {
+   "order": 19,
+   "speaker": "jack-bennett",
+   "text": "That's impossible.",
+   "tag": "disbelieving"
+  },
+  {
+   "order": 21,
+   "speaker": "system",
+   "text": "Tombs project.",
+   "tag": ""
+  },
+  {
+   "order": 22,
+   "speaker": "jack-bennett",
+   "text": "Oh, no you don't.",
+   "tag": "firmly, under his breath"
+  },
+  {
+   "order": 25,
+   "speaker": "jack-bennett",
+   "text": "Well, that's new.",
+   "tag": "dry, uneasy"
+  },
+  {
+   "order": 27,
+   "speaker": "jack-bennett",
+   "text": "Sarah?",
+   "tag": "tentative"
+  },
+  {
+   "order": 30,
+   "speaker": "jack-bennett",
+   "text": "Sarah, you there?",
+   "tag": "a little urgent"
+  },
+  {
+   "order": 32,
+   "speaker": "sarah-bennett",
+   "text": "I'm here. What's wrong?",
+   "tag": "calm, attentive"
+  },
+  {
+   "order": 33,
+   "speaker": "jack-bennett",
+   "text": "I've got something weird on my computer. It tripped a security alarm.",
+   "tag": "trying to sound casual"
+  },
+  {
+   "order": 35,
+   "speaker": "sarah-bennett",
+   "text": "Define weird.",
+   "tag": "curious"
+  },
+  {
+   "order": 37,
+   "speaker": "jack-bennett",
+   "text": "I think somebody's in the system.",
+   "tag": "hesitant"
+  },
+  {
+   "order": 39,
+   "speaker": "sarah-bennett",
+   "text": "Are you sure?",
+   "tag": "concerned"
+  },
+  {
+   "order": 41,
+   "speaker": "jack-bennett",
+   "text": "No. That's why I'm calling the smarter scientist.",
+   "tag": "wry"
+  },
+  {
+   "order": 43,
+   "speaker": "sarah-bennett",
+   "text": "Good answer.",
+   "tag": "laughs softly"
+  },
+  {
+   "order": 45,
+   "speaker": "jack-bennett",
+   "text": "Can you come take a look?",
+   "tag": "smiling"
+  },
+  {
+   "order": 46,
+   "speaker": "sarah-bennett",
+   "text": "I'm on my way.",
+   "tag": "brisk"
+  },
+  {
+   "order": 48,
+   "speaker": "jack-bennett",
+   "text": "Who are you?",
+   "tag": "quietly, wary"
+  },
+  {
+   "order": 51,
+   "speaker": "system",
+   "text": "Boundary control.",
+   "tag": ""
+  },
+  {
+   "order": 52,
+   "speaker": "jack-bennett",
+   "text": "No, no, no.",
+   "tag": "alarmed, rapid"
+  },
+  {
+   "order": 55,
+   "speaker": "sarah-bennett",
+   "text": "Please tell me you didn't break something.",
+   "tag": "teasing"
+  },
+  {
+   "order": 56,
+   "speaker": "jack-bennett",
+   "text": "I was asleep.",
+   "tag": "sheepish"
+  },
+  {
+   "order": 58,
+   "speaker": "sarah-bennett",
+   "text": "You called me in here to admit that?",
+   "tag": "amused, skeptical"
+  },
+  {
+   "order": 60,
+   "speaker": "jack-bennett",
+   "text": "No. That was my defense.",
+   "tag": "mock-defensive"
+  },
+  {
+   "order": 62,
+   "speaker": "sarah-bennett",
+   "text": "Against what?",
+   "tag": "eyebrow raised, dry"
+  },
+  {
+   "order": 64,
+   "speaker": "jack-bennett",
+   "text": "Whatever this is. I was reviewing yesterday's test results.",
+   "tag": "deadpan"
+  },
+  {
+   "order": 65,
+   "speaker": "sarah-bennett",
+   "text": "You were sleeping.",
+   "tag": "flatly"
+  },
+  {
+   "order": 67,
+   "speaker": "jack-bennett",
+   "text": "I was reviewing them internally.",
+   "tag": "with mock dignity"
+  },
+  {
+   "order": 69,
+   "speaker": "sarah-bennett",
+   "text": "With your eyes closed?",
+   "tag": "teasing"
+  },
+  {
+   "order": 71,
+   "speaker": "jack-bennett",
+   "text": "It's an advanced technique.",
+   "tag": "solemn, deadpan"
+  },
+  {
+   "order": 73,
+   "speaker": "sarah-bennett",
+   "text": "Jack.",
+   "tag": "gently firm"
+  },
+  {
+   "order": 75,
+   "speaker": "jack-bennett",
+   "text": "Right. Problem. I got an unauthorized access warning. I checked the network monitor and saw a connection I didn't recognize, but it disappeared before I could trace it.",
+   "tag": "focused, getting serious"
+  },
+  {
+   "order": 77,
+   "speaker": "sarah-bennett",
+   "text": "And then?",
+   "tag": "prompting"
+  },
+  {
+   "order": 79,
+   "speaker": "jack-bennett",
+   "text": "It opened the TOMBS directory.",
+   "tag": "serious"
+  },
+  {
+   "order": 81,
+   "speaker": "sarah-bennett",
+   "text": "By itself?",
+   "tag": "sharp, surprised"
+  },
+  {
+   "order": 82,
+   "speaker": "jack-bennett",
+   "text": "Yep.",
+   "tag": ""
+  },
+  {
+   "order": 84,
+   "speaker": "sarah-bennett",
+   "text": "You locked the terminal?",
+   "tag": "checking"
+  },
+  {
+   "order": 86,
+   "speaker": "jack-bennett",
+   "text": "Yep.",
+   "tag": ""
+  },
+  {
+   "order": 88,
+   "speaker": "sarah-bennett",
+   "text": "And?",
+   "tag": "waiting, prompting"
+  },
+  {
+   "order": 90,
+   "speaker": "jack-bennett",
+   "text": "It unlocked itself.",
+   "tag": "uneasy"
+  },
+  {
+   "order": 92,
+   "speaker": "jack-bennett",
+   "text": "I know.",
+   "tag": "resigned"
+  },
+  {
+   "order": 94,
+   "speaker": "sarah-bennett",
+   "text": "Can I take your chair?",
+   "tag": "politely"
+  },
+  {
+   "order": 96,
+   "speaker": "jack-bennett",
+   "text": "I'm sitting here.",
+   "tag": "playfully stubborn"
+  },
+  {
+   "order": 98,
+   "speaker": "sarah-bennett",
+   "text": "Let me have your chair and get another chair.",
+   "tag": "slightly annoyed, sympathetic"
+  },
+  {
+   "order": 100,
+   "speaker": "jack-bennett",
+   "text": "Of course. Anything for you.",
+   "tag": "warmly"
+  },
+  {
+   "order": 103,
+   "speaker": "sarah-bennett",
+   "text": "You said the connection disappeared?",
+   "tag": "focused, typing"
+  },
+  {
+   "order": 105,
+   "speaker": "jack-bennett",
+   "text": "Almost immediately.",
+   "tag": "distracted"
+  },
+  {
+   "order": 107,
+   "speaker": "sarah-bennett",
+   "text": "External?",
+   "tag": "clipped, focused"
+  },
+  {
+   "order": 109,
+   "speaker": "jack-bennett",
+   "text": "I couldn't tell.",
+   "tag": "frustrated"
+  },
+  {
+   "order": 111,
+   "speaker": "sarah-bennett",
+   "text": "That's reassuring.",
+   "tag": "dry, sarcastic"
+  },
+  {
+   "order": 113,
+   "speaker": "jack-bennett",
+   "text": "I thought so.",
+   "tag": "dry, not looking up"
+  },
+  {
+   "order": 116,
+   "speaker": "sarah-bennett",
+   "text": "These are clean.",
+   "tag": "focused"
+  },
+  {
+   "order": 118,
+   "speaker": "jack-bennett",
+   "text": "Mine too. Whoever it was covered both trails.",
+   "tag": "grim"
+  },
+  {
+   "order": 120,
+   "speaker": "sarah-bennett",
+   "text": "Too clean.",
+   "tag": "suspicious, narrowed"
+  },
+  {
+   "order": 122,
+   "speaker": "jack-bennett",
+   "text": "That's what I was thinking.",
+   "tag": "nodding, agreeing"
+  },
+  {
+   "order": 124,
+   "speaker": "sarah-bennett",
+   "text": "No, you were sleeping.",
+   "tag": "teasing"
+  },
+  {
+   "order": 125,
+   "speaker": "jack-bennett",
+   "text": "I was thinking eventually.",
+   "tag": "mock-wounded"
+  },
+  {
+   "order": 127,
+   "speaker": "jack-bennett",
+   "text": "You know, you're supposed to be resting.",
+   "tag": "gentle, concerned"
+  },
+  {
+   "order": 129,
+   "speaker": "sarah-bennett",
+   "text": "So are you.",
+   "tag": "dry, still typing"
+  },
+  {
+   "order": 131,
+   "speaker": "jack-bennett",
+   "text": "I'm not the pregnant one.",
+   "tag": "playful"
+  },
+  {
+   "order": 133,
+   "speaker": "sarah-bennett",
+   "text": "No. You're the one I found asleep at a laboratory terminal.",
+   "tag": "pointed, amused"
+  },
+  {
+   "order": 135,
+   "speaker": "jack-bennett",
+   "text": "That's different.",
+   "tag": "mock-defensive"
+  },
+  {
+   "order": 137,
+   "speaker": "sarah-bennett",
+   "text": "How?",
+   "tag": "challenging"
+  },
+  {
+   "order": 139,
+   "speaker": "jack-bennett",
+   "text": "I wasn't uncomfortable?",
+   "tag": "unsure, hopeful"
+  },
+  {
+   "order": 142,
+   "speaker": "jack-bennett",
+   "text": "Fair.",
+   "tag": "surrendering, small laugh"
+  },
+  {
+   "order": 144,
+   "speaker": "sarah-bennett",
+   "text": "Lately the baby seems to think eleven at night is morning.",
+   "tag": "tender, tired"
+  },
+  {
+   "order": 147,
+   "speaker": "jack-bennett",
+   "text": "Already takes after me.",
+   "tag": "smiling, fond"
+  },
+  {
+   "order": 149,
+   "speaker": "sarah-bennett",
+   "text": "That's what I'm afraid of.",
+   "tag": "dry, affectionate"
+  },
+  {
+   "order": 151,
+   "speaker": "system",
+   "text": "Tombs array remote initialization request.",
+   "tag": ""
+  },
+  {
+   "order": 153,
+   "speaker": "sarah-bennett",
+   "text": "Did you do that?",
+   "tag": "alarmed"
+  },
+  {
+   "order": 155,
+   "speaker": "jack-bennett",
+   "text": "No.",
+   "tag": "quick"
+  },
+  {
+   "order": 157,
+   "speaker": "sarah-bennett",
+   "text": "Cancel it.",
+   "tag": "urgent"
+  },
+  {
+   "order": 159,
+   "speaker": "system",
+   "text": "Request denied.",
+   "tag": ""
+  },
+  {
+   "order": 161,
+   "speaker": "system",
+   "text": "Request denied.",
+   "tag": ""
+  },
+  {
+   "order": 163,
+   "speaker": "jack-bennett",
+   "text": "That's not supposed to happen.",
+   "tag": "tense, hardening"
+  },
+  {
+   "order": 165,
+   "speaker": "system",
+   "text": "Access revoked.",
+   "tag": ""
+  },
+  {
+   "order": 167,
+   "speaker": "sarah-bennett",
+   "text": "Your credentials?",
+   "tag": "worried"
+  },
+  {
+   "order": 169,
+   "speaker": "jack-bennett",
+   "text": "Revoked.",
+   "tag": "stunned, flat"
+  },
+  {
+   "order": 171,
+   "speaker": "sarah-bennett",
+   "text": "You're the project administrator.",
+   "tag": "disbelieving"
+  },
+  {
+   "order": 173,
+   "speaker": "jack-bennett",
+   "text": "I know.",
+   "tag": "tight, strained"
+  },
+  {
+   "order": 175,
+   "speaker": "sarah-bennett",
+   "text": "Who can revoke you?",
+   "tag": "urgent, low"
+  },
+  {
+   "order": 177,
+   "speaker": "jack-bennett",
+   "text": "Me.",
+   "tag": "barely audible"
+  },
+  {
+   "order": 179,
+   "speaker": "sarah-bennett",
+   "text": "Jack.",
+   "tag": "quietly, serious"
+  },
+  {
+   "order": 181,
+   "speaker": "jack-bennett",
+   "text": "I didn't.",
+   "tag": "quiet, firm"
+  }
+ ]
+}

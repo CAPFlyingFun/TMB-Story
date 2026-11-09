@@ -1,0 +1,51 @@
+name: Render a chapter as separate v4 clips (spends credits)
+
+# MANUAL ONLY. The first run for a chapter SPENDS ELEVENLABS CREDITS (about one per
+# character plus the delivery tags; Chapter 1 is about 8,400). Every clip is kept under
+# audio/tests/clips-v4/, so running it again only renders what is missing and re-assembles.
+# Writes audio/exports/chapter-NN-clips.mp3 and its index, beside the dialogue file. The
+# Listen tab is not switched to it; that is Joshua's call after comparing.
+on:
+  workflow_dispatch:
+    inputs:
+      chapter:
+        description: 'Chapter, or a range rendered one after another, e.g. 2-9'
+        required: true
+        default: '1'
+      narrator_speed:
+        description: 'Narrator speed (1.1 = 10% faster)'
+        required: true
+        default: '1.1'
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && python3 -m pip install -q numpy
+      - name: Render and assemble
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          set -e
+          SPEC="${{ inputs.chapter }}"; A="${SPEC%-*}"; B="${SPEC#*-}"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for n in $(seq "$A" "$B"); do
+            python3 scripts/clips-chapter.py "$n" --narrator-speed "${{ inputs.narrator_speed }}"
+            git add audio/tests/clips-v4/ audio/exports/
+            git diff --cached --quiet || { git commit -q -m "Add separate-clip v4 render of chapter $n"; git pull --rebase -q origin main; git push -q; }
+          done
+      - name: Keep what was paid for, even after a failure
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio/tests/clips-v4/ audio/exports/ || true
+          git diff --cached --quiet && { echo "Nothing new."; exit 0; }
+          git commit -m "Keep separate-clip v4 clips (chapters ${{ inputs.chapter }})"
+          git pull --rebase -q origin main
+          git push
