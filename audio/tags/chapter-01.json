@@ -3,7 +3,8 @@
   "Delivery tags for Chapter 1's character lines, approved by Joshua 2026-11-09.",
   "Each tag is written in front of the line as [tag] [tag] when it is rendered as its own clip",
   "(scripts/clips-chapter.py); tags set the delivery and are not spoken. Taken from the action beat",
-  "just before the line. A tag is skipped if its line's text has changed since."
+  "just before the line. A tag is skipped if its line's text has changed since.",
+  "2026-11-09: Jack's lines to other characters made less hushed (Joshua): 27, 37, 56, 127, 169, 173, 177, 181."
  ],
  "lines": [
   {
@@ -76,7 +77,7 @@
    "order": 27,
    "speaker": "jack-bennett",
    "text": "Sarah?",
-   "tag": "tentative"
+   "tag": "calling out"
   },
   {
    "order": 30,
@@ -106,7 +107,7 @@
    "order": 37,
    "speaker": "jack-bennett",
    "text": "I think somebody's in the system.",
-   "tag": "hesitant"
+   "tag": "uncertain"
   },
   {
    "order": 39,
@@ -166,7 +167,7 @@
    "order": 56,
    "speaker": "jack-bennett",
    "text": "I was asleep.",
-   "tag": "sheepish"
+   "tag": "sheepish, matter-of-fact"
   },
   {
    "order": 58,
@@ -382,7 +383,7 @@
    "order": 127,
    "speaker": "jack-bennett",
    "text": "You know, you're supposed to be resting.",
-   "tag": "gentle, concerned"
+   "tag": "concerned"
   },
   {
    "order": 129,
@@ -502,7 +503,7 @@
    "order": 169,
    "speaker": "jack-bennett",
    "text": "Revoked.",
-   "tag": "stunned, flat"
+   "tag": "stunned, puzzled"
   },
   {
    "order": 171,
@@ -514,7 +515,7 @@
    "order": 173,
    "speaker": "jack-bennett",
    "text": "I know.",
-   "tag": "tight, strained"
+   "tag": "frustrated, strained"
   },
   {
    "order": 175,
@@ -526,7 +527,7 @@
    "order": 177,
    "speaker": "jack-bennett",
    "text": "Me.",
-   "tag": "barely audible"
+   "tag": "stunned, puzzled"
   },
   {
    "order": 179,
@@ -538,7 +539,7 @@
    "order": 181,
    "speaker": "jack-bennett",
    "text": "I didn't.",
-   "tag": "quiet, firm"
+   "tag": "firm, earnest"
   }
  ]
 }
