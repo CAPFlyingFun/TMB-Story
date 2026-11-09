@@ -16,6 +16,14 @@ on:
         description: 'Narrator speed (1.1 = 10% faster)'
         required: true
         default: '1.1'
+      redo:
+        description: 'Only these lines again (manifest orders, e.g. 25,42); empty renders what is missing'
+        required: false
+        default: ''
+      dictionaries:
+        description: "'auto' applies your ElevenLabs pronunciation dictionaries"
+        required: false
+        default: 'auto'
 
 jobs:
   render:
@@ -35,7 +43,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for n in $(seq "$A" "$B"); do
-            python3 scripts/clips-chapter.py "$n" --narrator-speed "${{ inputs.narrator_speed }}"
+            python3 scripts/clips-chapter.py "$n" --narrator-speed "${{ inputs.narrator_speed }}" --redo "${{ inputs.redo }}" --dictionaries "${{ inputs.dictionaries }}"
             git add audio/tests/clips-v4/ audio/exports/
             git diff --cached --quiet || { git commit -q -m "Add separate-clip v4 render of chapter $n"; git pull --rebase -q origin main; git push -q; }
           done

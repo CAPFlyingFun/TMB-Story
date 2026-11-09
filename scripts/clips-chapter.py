@@ -70,8 +70,21 @@ def call(voice, body):
         return json.load(r)
 
 
-def render(voice, text, prev_text, next_text, speed, model):
+def dictionaries():
+    """Joshua's pronunciation dictionaries on the ElevenLabs account (newest first, at most
+    3, the API's limit), so a pronunciation he fixes there applies to these clips too."""
+    req = urllib.request.Request("https://api.elevenlabs.io/v1/pronunciation-dictionaries?page_size=30&sort=creation_time_unix&sort_direction=descending",
+                                 headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"]})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        found = json.load(r).get("pronunciation_dictionaries") or []
+    for d in found:
+        print("  pronunciation dictionary: %r id=%s version=%s" % (d.get("name"), d.get("id"), d.get("latest_version_id")))
+    return [{"pronunciation_dictionary_id": d["id"], "version_id": d["latest_version_id"]} for d in found[:3] if d.get("latest_version_id")]
+
+
+def render(voice, text, prev_text, next_text, speed, model, dicts=None):
     body = {"text": text, "model_id": model}
+    if dicts: body["pronunciation_dictionary_locators"] = dicts
     if speed and speed != 1.0:
         body["voice_settings"] = {"speed": speed}
     if prev_text: body["previous_text"] = prev_text[-300:]
@@ -83,7 +96,7 @@ def render(voice, text, prev_text, next_text, speed, model):
         except urllib.error.HTTPError as e:
             msg = e.read().decode()[:400]
             if e.code in (400, 422):
-                for k in ("next_text", "previous_text", "voice_settings"):
+                for k in ("pronunciation_dictionary_locators", "next_text", "previous_text", "voice_settings"):
                     if k in body:
                         print("  model refused a field (HTTP %d: %s); retrying without %s" % (e.code, msg[:160], k))
                         body.pop(k); dropped.append(k); break
@@ -102,6 +115,8 @@ def main():
     ap.add_argument("--model", default="eleven_v4")
     ap.add_argument("--narrator-speed", type=float, default=1.1)
     ap.add_argument("--estimate", action="store_true")
+    ap.add_argument("--redo", default="", help="manifest orders to render again, e.g. 25,42 (the old take is kept in previous/)")
+    ap.add_argument("--dictionaries", default="none", help="'auto' applies the account's pronunciation dictionaries")
     a = ap.parse_args()
     segs = json.load(open(os.path.join(ROOT, "audio/manifests/chapter-%02d.json" % a.chapter)))["segments"]
     tags = load_tags(a.chapter)
@@ -111,20 +126,28 @@ def main():
     texts = [unit_text(u, tags) for u in us]
     plain = ["\n\n".join(s["ttsText"] for s in u) for u in us]
     def key(k): return os.path.join(out, "unit-%03d" % k)
+    redo = {int(x) for x in a.redo.replace(" ", "").split(",") if x}
+    for k, u in enumerate(us):
+        if redo & {s["order"] for s in u} and os.path.exists(key(k) + ".json"):
+            prev = os.path.join(out, "previous"); os.makedirs(prev, exist_ok=True)
+            for ext in (".mp3", ".json"):
+                os.replace(key(k) + ext, os.path.join(prev, "unit-%03d%s" % (k, ext)))
+            print("clip %d (orders %s) will be rendered again; the old take is in previous/" % (k, [s["order"] for s in u]))
     todo = [k for k in range(len(us)) if not os.path.exists(key(k) + ".json")]
     cost = sum(len(texts[k]) for k in todo)
     print("chapter %d: %d lines, %d clips (%d narrator, %d merged), %d to render, ~%d credits"
           % (a.chapter, len(segs), len(us), sum(u[0]["speaker"] == "narrator" for u in us), sum(len(u) > 1 for u in us), len(todo), cost))
     if a.estimate:
         return
+    dicts = dictionaries() if (todo and a.dictionaries == "auto") else []
     for k in todo:
         u = us[k]; narr = u[0]["speaker"] == "narrator"
         print("clip %d/%d: %s, %d characters" % (k + 1, len(us), u[0]["speaker"], len(texts[k])))
         res, dropped = render(u[0]["voiceId"], texts[k], plain[k - 1] if k else "", plain[k + 1] if k + 1 < len(us) else "",
-                              a.narrator_speed if narr else 1.0, a.model)
+                              a.narrator_speed if narr else 1.0, a.model, dicts)
         open(key(k) + ".mp3", "wb").write(base64.b64decode(res["audio_base64"]))
         json.dump({"orders": [s["order"] for s in u], "speaker": u[0]["speaker"], "text": texts[k], "model": a.model,
-                   "speedRequested": a.narrator_speed if narr else 1.0, "dropped": dropped,
+                   "speedRequested": a.narrator_speed if narr else 1.0, "dropped": dropped, "dictionaries": dicts,
                    "alignment": res.get("alignment"), "normalized_alignment": res.get("normalized_alignment")},
                   open(key(k) + ".json", "w"), indent=1)
     subprocess.run([sys.executable, os.path.join(ROOT, "scripts/clips-assemble.py"), str(a.chapter),
