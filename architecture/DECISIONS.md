@@ -460,3 +460,5 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 - Spend on 2026-11-09 was about 8,700 credits.
 - Captions were checked against the audio: every line's text matches the manuscript, and the line starts match the heard starts. No approval state changed.
 **Status:** Accepted for Chapter 1 (Joshua, 2026-11-09). Chapters 2 to 9 stay on the dialogue file until he decides.
+
+**0048, addendum (2026-11-09):** Chapter 2 is rendered the same way. Joshua asked for it directly ("Go ahead and do chapter two the same way"). 157 clips: 74 narrator, 6 merged runs. Tags are in `audio/tags/chapter-02.json`, drafted from the action beats; lines to other characters avoid hushed tags. Jack's two "No." lines carry their existing readings, `dread` and `grim`. It runs 7:28 (the dialogue file was 6:58) and cost about 7,350 credits. Every clip speaks its manuscript line, and every caption sits on its line's first sound. The Listen tab now plays it.
