@@ -1,0 +1,507 @@
+{
+ "_comment": [
+  "Delivery tags for Chapter 2's character lines, drafted 2026-11-09 from the action beat before each line.",
+  "Joshua asked for Chapter 2 to be rendered straight away; lines to other characters avoid hushed tags (his Chapter 1 note).",
+  "Jack's two 'No.' lines carry their line-deliveries.json readings as tags: order 152 'dread', order 162 'grim'."
+ ],
+ "lines": [
+  {
+   "order": 1,
+   "speaker": "sarah-bennett",
+   "text": "Was that the array?",
+   "tag": "alert, startled"
+  },
+  {
+   "order": 3,
+   "speaker": "jack-bennett",
+   "text": "Stay here.",
+   "tag": "firm, protective"
+  },
+  {
+   "order": 5,
+   "speaker": "sarah-bennett",
+   "text": "Absolutely not.",
+   "tag": "determined"
+  },
+  {
+   "order": 7,
+   "speaker": "sarah-bennett",
+   "text": "Being thirty-two weeks pregnant does not mean made of glass.",
+   "tag": "firm, a little annoyed"
+  },
+  {
+   "order": 9,
+   "speaker": "jack-bennett",
+   "text": "I know.",
+   "tag": "low, earnest"
+  },
+  {
+   "order": 11,
+   "speaker": "sarah-bennett",
+   "text": "Good.",
+   "tag": "satisfied"
+  },
+  {
+   "order": 13,
+   "speaker": "jack-bennett",
+   "text": "It means you're carrying something considerably more important than this laboratory.",
+   "tag": "earnest, sincere"
+  },
+  {
+   "order": 15,
+   "speaker": "sarah-bennett",
+   "text": "And you're his father.",
+   "tag": "softening, tender"
+  },
+  {
+   "order": 17,
+   "speaker": "sarah-bennett",
+   "text": "So we're both going.",
+   "tag": "decisive"
+  },
+  {
+   "order": 19,
+   "speaker": "jack-bennett",
+   "text": "Fine. But stay with me.",
+   "tag": "giving in"
+  },
+  {
+   "order": 21,
+   "speaker": "sarah-bennett",
+   "text": "That I can do.",
+   "tag": "warm, wry"
+  },
+  {
+   "order": 23,
+   "speaker": "system",
+   "text": "Warning. array power above standby threshold.",
+   "tag": ""
+  },
+  {
+   "order": 25,
+   "speaker": "jack-bennett",
+   "text": "Control, this is Bennett. Shut down power to TOMBS.",
+   "tag": "commanding, urgent"
+  },
+  {
+   "order": 27,
+   "speaker": "lena-ortiz",
+   "text": "Jack, we were about to call you. We're seeing a massive draw from your building.",
+   "tag": "relieved, urgent"
+  },
+  {
+   "order": 29,
+   "speaker": "jack-bennett",
+   "text": "How massive?",
+   "tag": "urgent"
+  },
+  {
+   "order": 31,
+   "speaker": "lena-ortiz",
+   "text": "Fourteen megawatts and climbing.",
+   "tag": "tense, reporting"
+  },
+  {
+   "order": 33,
+   "speaker": "jack-bennett",
+   "text": "Fourteen?",
+   "tag": "shocked"
+  },
+  {
+   "order": 35,
+   "speaker": "lena-ortiz",
+   "text": "Fifteen now.",
+   "tag": "tense, quick"
+  },
+  {
+   "order": 37,
+   "speaker": "sarah-bennett",
+   "text": "Yesterday's full test didn't use half that.",
+   "tag": "alarmed, disbelieving"
+  },
+  {
+   "order": 39,
+   "speaker": "jack-bennett",
+   "text": "I know.",
+   "tag": "grim"
+  },
+  {
+   "order": 41,
+   "speaker": "lena-ortiz",
+   "text": "What's happening over there?",
+   "tag": "worried"
+  },
+  {
+   "order": 42,
+   "speaker": "jack-bennett",
+   "text": "Possible network intrusion. Cut external access to the laboratory and disconnect TOMBS from the island grid.",
+   "tag": "urgent, commanding"
+  },
+  {
+   "order": 43,
+   "speaker": "lena-ortiz",
+   "text": "Doing it now.",
+   "tag": "brisk"
+  },
+  {
+   "order": 46,
+   "speaker": "lena-ortiz",
+   "text": "Jack? We disconnected you.",
+   "tag": "confused, reporting"
+  },
+  {
+   "order": 48,
+   "speaker": "jack-bennett",
+   "text": "It's still running.",
+   "tag": "disbelieving, tense"
+  },
+  {
+   "order": 50,
+   "speaker": "lena-ortiz",
+   "text": "That's impossible.",
+   "tag": "stunned"
+  },
+  {
+   "order": 52,
+   "speaker": "jack-bennett",
+   "text": "Tonight's developing a theme.",
+   "tag": "dry, grim humor"
+  },
+  {
+   "order": 54,
+   "speaker": "sarah-bennett",
+   "text": "Backup capacitors?",
+   "tag": "thinking fast"
+  },
+  {
+   "order": 56,
+   "speaker": "jack-bennett",
+   "text": "Not enough for this.",
+   "tag": "grim"
+  },
+  {
+   "order": 58,
+   "speaker": "sarah-bennett",
+   "text": "Internal reactor?",
+   "tag": "thinking fast"
+  },
+  {
+   "order": 60,
+   "speaker": "jack-bennett",
+   "text": "Offline.",
+   "tag": "flat, puzzled"
+  },
+  {
+   "order": 62,
+   "speaker": "sarah-bennett",
+   "text": "Then where is it getting the power?",
+   "tag": "uneasy"
+  },
+  {
+   "order": 64,
+   "speaker": "jack-bennett",
+   "text": "I don't know.",
+   "tag": "frustrated"
+  },
+  {
+   "order": 68,
+   "speaker": "sarah-bennett",
+   "text": "Jack.",
+   "tag": "low, alarmed"
+  },
+  {
+   "order": 69,
+   "speaker": "jack-bennett",
+   "text": "I see it.",
+   "tag": "tense"
+  },
+  {
+   "order": 71,
+   "speaker": "sarah-bennett",
+   "text": "You didn't authorize an experiment?",
+   "tag": "searching, uneasy"
+  },
+  {
+   "order": 73,
+   "speaker": "jack-bennett",
+   "text": "No.",
+   "tag": "firm"
+  },
+  {
+   "order": 75,
+   "speaker": "sarah-bennett",
+   "text": "Boundary emitters are active.",
+   "tag": "alarmed"
+  },
+  {
+   "order": 77,
+   "speaker": "jack-bennett",
+   "text": "Kill them.",
+   "tag": "urgent, commanding"
+  },
+  {
+   "order": 79,
+   "speaker": "sarah-bennett",
+   "text": "They're not responding.",
+   "tag": "urgent, frustrated"
+  },
+  {
+   "order": 81,
+   "speaker": "jack-bennett",
+   "text": "Then we'll do it the old-fashioned way.",
+   "tag": "determined"
+  },
+  {
+   "order": 85,
+   "speaker": "sarah-bennett",
+   "text": "Okay.",
+   "tag": "relieved, exhaling"
+  },
+  {
+   "order": 87,
+   "speaker": "jack-bennett",
+   "text": "That worked.",
+   "tag": "relieved, cautious"
+  },
+  {
+   "order": 90,
+   "speaker": "sarah-bennett",
+   "text": "Jack.",
+   "tag": "alarmed"
+  },
+  {
+   "order": 92,
+   "speaker": "jack-bennett",
+   "text": "I cut the physical connection.",
+   "tag": "confused, insistent"
+  },
+  {
+   "order": 94,
+   "speaker": "sarah-bennett",
+   "text": "Apparently TOMBS disagrees.",
+   "tag": "dry, uneasy"
+  },
+  {
+   "order": 96,
+   "speaker": "jack-bennett",
+   "text": "Machines don't get opinions.",
+   "tag": "stubborn, tense"
+  },
+  {
+   "order": 98,
+   "speaker": "sarah-bennett",
+   "text": "This one seems pretty committed.",
+   "tag": "nervous humor"
+  },
+  {
+   "order": 100,
+   "speaker": "system",
+   "text": "Boundary acquisition in progress.",
+   "tag": ""
+  },
+  {
+   "order": 102,
+   "speaker": "sarah-bennett",
+   "text": "What boundary?",
+   "tag": "puzzled"
+  },
+  {
+   "order": 104,
+   "speaker": "jack-bennett",
+   "text": "That's wrong.",
+   "tag": "alarmed"
+  },
+  {
+   "order": 106,
+   "speaker": "sarah-bennett",
+   "text": "What?",
+   "tag": "urgent"
+  },
+  {
+   "order": 108,
+   "speaker": "jack-bennett",
+   "text": "The target dimensions.",
+   "tag": "tense, puzzled"
+  },
+  {
+   "order": 110,
+   "speaker": "sarah-bennett",
+   "text": "It just hid them.",
+   "tag": "frustrated"
+  },
+  {
+   "order": 112,
+   "speaker": "jack-bennett",
+   "text": "Or somebody hid them.",
+   "tag": "suspicious, grim"
+  },
+  {
+   "order": 115,
+   "speaker": "jack-bennett",
+   "text": "Do that again.",
+   "tag": "tense"
+  },
+  {
+   "order": 116,
+   "speaker": "sarah-bennett",
+   "text": "I didn't do it the first time.",
+   "tag": "defensive, uneasy"
+  },
+  {
+   "order": 118,
+   "speaker": "sarah-bennett",
+   "text": "Mapping access denied.",
+   "tag": "reading aloud, frustrated"
+  },
+  {
+   "order": 120,
+   "speaker": "system",
+   "text": "Boundary acquisition in progress.",
+   "tag": ""
+  },
+  {
+   "order": 122,
+   "speaker": "sarah-bennett",
+   "text": "Boundary around what?",
+   "tag": "puzzled, uneasy"
+  },
+  {
+   "order": 123,
+   "speaker": "jack-bennett",
+   "text": "That's what I want to know.",
+   "tag": "grim, determined"
+  },
+  {
+   "order": 125,
+   "speaker": "jack-bennett",
+   "text": "Lena, keep the laboratory isolated. Don't sound a settlement alarm yet.",
+   "tag": "commanding, steady"
+  },
+  {
+   "order": 126,
+   "speaker": "lena-ortiz",
+   "text": "You sure?",
+   "tag": "uncertain"
+  },
+  {
+   "order": 127,
+   "speaker": "jack-bennett",
+   "text": "No. But I don't know what we'd be telling people to do, and I don't want anyone running toward whatever this is.",
+   "tag": "honest, strained"
+  },
+  {
+   "order": 129,
+   "speaker": "sarah-bennett",
+   "text": "Quiet containment until we know the boundary.",
+   "tag": "agreeing, steady"
+  },
+  {
+   "order": 131,
+   "speaker": "jack-bennett",
+   "text": "Exactly. If anything changes outside this building, call us.",
+   "tag": "firm"
+  },
+  {
+   "order": 132,
+   "speaker": "lena-ortiz",
+   "text": "Understood.",
+   "tag": "steady"
+  },
+  {
+   "order": 135,
+   "speaker": "sarah-bennett",
+   "text": "Can we interrupt the boundary?",
+   "tag": "urgent"
+  },
+  {
+   "order": 137,
+   "speaker": "jack-bennett",
+   "text": "I'm trying.",
+   "tag": "strained, focused"
+  },
+  {
+   "order": 139,
+   "speaker": "sarah-bennett",
+   "text": "Could we overload the emitters?",
+   "tag": "thinking fast"
+  },
+  {
+   "order": 141,
+   "speaker": "jack-bennett",
+   "text": "Maybe.",
+   "tag": "uncertain"
+  },
+  {
+   "order": 143,
+   "speaker": "sarah-bennett",
+   "text": "Maybe good, or maybe everyone-inside-the-field-dies bad?",
+   "tag": "nervous humor"
+  },
+  {
+   "order": 144,
+   "speaker": "jack-bennett",
+   "text": "The second one.",
+   "tag": "grim"
+  },
+  {
+   "order": 146,
+   "speaker": "sarah-bennett",
+   "text": "Then let's not.",
+   "tag": "quick, firm"
+  },
+  {
+   "order": 148,
+   "speaker": "jack-bennett",
+   "text": "Come on. Give me something.",
+   "tag": "frustrated, pleading"
+  },
+  {
+   "order": 150,
+   "speaker": "system",
+   "text": "Boundary acquired.",
+   "tag": ""
+  },
+  {
+   "order": 152,
+   "speaker": "jack-bennett",
+   "text": "No.",
+   "tag": "dread"
+  },
+  {
+   "order": 154,
+   "speaker": "system",
+   "text": "Scale factor calculating.",
+   "tag": ""
+  },
+  {
+   "order": 156,
+   "speaker": "sarah-bennett",
+   "text": "Jack.",
+   "tag": "urgent"
+  },
+  {
+   "order": 158,
+   "speaker": "jack-bennett",
+   "text": "I see it.",
+   "tag": "tense, focused"
+  },
+  {
+   "order": 160,
+   "speaker": "sarah-bennett",
+   "text": "Someone isn't just activating TOMBS.",
+   "tag": "realizing, uneasy"
+  },
+  {
+   "order": 162,
+   "speaker": "jack-bennett",
+   "text": "No.",
+   "tag": "grim"
+  },
+  {
+   "order": 164,
+   "speaker": "sarah-bennett",
+   "text": "They're running it.",
+   "tag": "stunned, grim"
+  }
+ ]
+}
