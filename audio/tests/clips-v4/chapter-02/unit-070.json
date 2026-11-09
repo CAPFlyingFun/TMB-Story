@@ -1,0 +1,86 @@
+{
+ "orders": [
+  73
+ ],
+ "speaker": "jack-bennett",
+ "text": "[firm] No.",
+ "model": "eleven_v4",
+ "speedRequested": 1.0,
+ "dropped": [],
+ "alignment": {
+  "characters": [
+   "[",
+   "f",
+   "i",
+   "r",
+   "m",
+   "]",
+   " ",
+   "N",
+   "o",
+   "."
+  ],
+  "character_start_times_seconds": [
+   0.0,
+   0.06,
+   0.075,
+   0.09,
+   0.105,
+   0.12,
+   0.18,
+   0.24,
+   0.36,
+   0.48
+  ],
+  "character_end_times_seconds": [
+   0.06,
+   0.075,
+   0.09,
+   0.105,
+   0.12,
+   0.18,
+   0.24,
+   0.36,
+   0.48,
+   0.72
+  ]
+ },
+ "normalized_alignment": {
+  "characters": [
+   "[",
+   "f",
+   "i",
+   "r",
+   "m",
+   "]",
+   " ",
+   "N",
+   "o",
+   "."
+  ],
+  "character_start_times_seconds": [
+   0.0,
+   0.06,
+   0.075,
+   0.09,
+   0.105,
+   0.12,
+   0.18,
+   0.24,
+   0.36,
+   0.48
+  ],
+  "character_end_times_seconds": [
+   0.06,
+   0.075,
+   0.09,
+   0.105,
+   0.12,
+   0.18,
+   0.24,
+   0.36,
+   0.48,
+   0.72
+  ]
+ }
+}

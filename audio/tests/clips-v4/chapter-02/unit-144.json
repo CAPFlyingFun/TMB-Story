@@ -1,0 +1,92 @@
+{
+ "orders": [
+  152
+ ],
+ "speaker": "jack-bennett",
+ "text": "[dread] No.",
+ "model": "eleven_v4",
+ "speedRequested": 1.0,
+ "dropped": [],
+ "alignment": {
+  "characters": [
+   "[",
+   "d",
+   "r",
+   "e",
+   "a",
+   "d",
+   "]",
+   " ",
+   "N",
+   "o",
+   "."
+  ],
+  "character_start_times_seconds": [
+   0.0,
+   0.03,
+   0.06,
+   0.075,
+   0.09,
+   0.105,
+   0.12,
+   0.18,
+   0.24,
+   0.4,
+   0.56
+  ],
+  "character_end_times_seconds": [
+   0.03,
+   0.06,
+   0.075,
+   0.09,
+   0.105,
+   0.12,
+   0.18,
+   0.24,
+   0.4,
+   0.56,
+   0.8
+  ]
+ },
+ "normalized_alignment": {
+  "characters": [
+   "[",
+   "d",
+   "r",
+   "e",
+   "a",
+   "d",
+   "]",
+   " ",
+   "N",
+   "o",
+   "."
+  ],
+  "character_start_times_seconds": [
+   0.0,
+   0.03,
+   0.06,
+   0.075,
+   0.09,
+   0.105,
+   0.12,
+   0.18,
+   0.24,
+   0.4,
+   0.56
+  ],
+  "character_end_times_seconds": [
+   0.03,
+   0.06,
+   0.075,
+   0.09,
+   0.105,
+   0.12,
+   0.18,
+   0.24,
+   0.4,
+   0.56,
+   0.8
+  ]
+ }
+}
