@@ -1,0 +1,104 @@
+{
+ "orders": [
+  87
+ ],
+ "speaker": "narrator",
+ "text": "Sarah waited.",
+ "model": "eleven_v4",
+ "speedRequested": 1.1,
+ "dropped": [],
+ "alignment": {
+  "characters": [
+   "S",
+   "a",
+   "r",
+   "a",
+   "h",
+   " ",
+   "w",
+   "a",
+   "i",
+   "t",
+   "e",
+   "d",
+   "."
+  ],
+  "character_start_times_seconds": [
+   0.0,
+   0.08,
+   0.16,
+   0.24,
+   0.32,
+   0.4,
+   0.56,
+   0.62,
+   0.68,
+   0.74,
+   0.8,
+   0.92,
+   1.04
+  ],
+  "character_end_times_seconds": [
+   0.08,
+   0.16,
+   0.24,
+   0.32,
+   0.4,
+   0.56,
+   0.62,
+   0.68,
+   0.74,
+   0.8,
+   0.92,
+   1.04,
+   1.52
+  ]
+ },
+ "normalized_alignment": {
+  "characters": [
+   "S",
+   "a",
+   "r",
+   "a",
+   "h",
+   " ",
+   "w",
+   "a",
+   "i",
+   "t",
+   "e",
+   "d",
+   "."
+  ],
+  "character_start_times_seconds": [
+   0.0,
+   0.08,
+   0.16,
+   0.24,
+   0.32,
+   0.4,
+   0.56,
+   0.62,
+   0.68,
+   0.74,
+   0.8,
+   0.92,
+   1.04
+  ],
+  "character_end_times_seconds": [
+   0.08,
+   0.16,
+   0.24,
+   0.32,
+   0.4,
+   0.56,
+   0.62,
+   0.68,
+   0.74,
+   0.8,
+   0.92,
+   1.04,
+   1.52
+  ]
+ }
+}

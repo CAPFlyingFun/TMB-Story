@@ -1,0 +1,92 @@
+{
+ "orders": [
+  155
+ ],
+ "speaker": "jack-bennett",
+ "text": "[quick] No.",
+ "model": "eleven_v4",
+ "speedRequested": 1.0,
+ "dropped": [],
+ "alignment": {
+  "characters": [
+   "[",
+   "q",
+   "u",
+   "i",
+   "c",
+   "k",
+   "]",
+   " ",
+   "N",
+   "o",
+   "."
+  ],
+  "character_start_times_seconds": [
+   0.0,
+   0.04,
+   0.048,
+   0.056,
+   0.064,
+   0.072,
+   0.08,
+   0.12,
+   0.16,
+   0.28,
+   0.4
+  ],
+  "character_end_times_seconds": [
+   0.04,
+   0.048,
+   0.056,
+   0.064,
+   0.072,
+   0.08,
+   0.12,
+   0.16,
+   0.28,
+   0.4,
+   0.64
+  ]
+ },
+ "normalized_alignment": {
+  "characters": [
+   "[",
+   "q",
+   "u",
+   "i",
+   "c",
+   "k",
+   "]",
+   " ",
+   "N",
+   "o",
+   "."
+  ],
+  "character_start_times_seconds": [
+   0.0,
+   0.04,
+   0.048,
+   0.056,
+   0.064,
+   0.072,
+   0.08,
+   0.12,
+   0.16,
+   0.28,
+   0.4
+  ],
+  "character_end_times_seconds": [
+   0.04,
+   0.048,
+   0.056,
+   0.064,
+   0.072,
+   0.08,
+   0.12,
+   0.16,
+   0.28,
+   0.4,
+   0.64
+  ]
+ }
+}
