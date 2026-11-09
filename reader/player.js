@@ -599,7 +599,7 @@
   function sourceLine(m, total) {
     if (mixedMode()) {
       var mb = (state.mixed.bytes / 1048576).toFixed(1);
-      var what = state.mode === MODE_DIALOGUE ? "one file, v4 dialogue, voices only" : "one mixed file";
+      var what = state.mode === MODE_DIALOGUE ? "one file, v4 voices only" : "one mixed file";
       return total + " segments · " + what + ", " + mb + " MB · " +
              clock(state.mixed.seconds);
     }
@@ -614,11 +614,11 @@
         'id="' + id + '"' + (state.mode === mode ? " checked" : "") + '> ' + label + '</label>';
     }
     return '<div class="listen-source" role="group" aria-label="How to play">' +
-      (dlg ? opt("listen-source-dialogue", MODE_DIALOGUE, "v4 dialogue (one file)") : "") +
+      (dlg ? opt("listen-source-dialogue", MODE_DIALOGUE, "v4 voices (one file)") : "") +
       (mix ? opt("listen-source-mixed", MODE_MIXED, "v2 with ambience &amp; effects (one file)") : "") +
       opt("listen-source-clips", MODE_CLIPS, "Separate clips, live layers") +
       '<span class="listen-layer-note">' +
-      (dlg ? 'The v4 dialogue file is voices only. ' : '') +
+      (dlg ? 'The v4 file is voices only. ' : '') +
       'The v2 mixed file carries the ambience and effects at the levels the pipeline ' +
       'measured. Separate clips let you switch those layers off.</span></div>';
   }

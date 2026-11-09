@@ -447,3 +447,16 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 **0047, addendum (2026-11-07):**
 - **Chapter 1 line change.** Joshua asked for the change after hearing the v4 render, which drops the "Oh": "remove text wise the 'Oh' for consistency." Jack's line in Chapter 1 is now "Of course. Anything for you."; it was "Oh. Of course. Anything for you." Per decision 0031, Chapter 1 goes from `approved` to `revision-pending` (`last_approved_revision` e32f50b), and its `audio_status` becomes `outdated`. That status refers to the v2 clips; the v4 dialogue file already matches the new text. The five translations lost the matching interjection.
 - **Listen tab loading.** The Listen tab now downloads the whole chapter file before it plays, showing "MB loaded / total · time left". Streaming had stalled mid-chapter after a change of speaker and then hurried to catch up.
+
+### 0048 — Chapter 1 is re-rendered as separate single-voice v4 clips, with delivery tags
+**Context:** Joshua heard brief stutters at the start of some character lines in the v4 dialogue file: a sound, a split-second pause, then the line. The dialogue takes are cut apart at the speaker boundaries ElevenLabs reports, which are not exact, so a cut that lands late can keep the start of the next voice. A local attempt to trim the stutters out cut words more often than not.
+**Decision:**
+- **Rendering.** `scripts/clips-chapter.py` (workflow "Render a chapter as separate v4 clips") renders a chapter as single-voice Eleven v4 clips. Back-to-back lines by the same speaker are one clip; the narrator's opening, up to Jack's first line, is one clip. Every other line is its own clip. Each request carries the text before and after it as unspoken context, and the narrator is asked for speed 1.1. v4 accepted all of these on the first run.
+- **Delivery tags.** Character lines carry delivery tags from `audio/tags/chapter-NN.json`, written in front of the line as `[tag]`, taken from the action beat before the line and approved by Joshua. On 2026-11-09, Jack's lines to other characters were re-tagged to sound less hushed; his lines to himself were kept.
+- **Assembly.** `scripts/clips-assemble.py` (free) joins the clips with the manifest's pauses and never cuts inside a clip; only the quiet at each clip's ends is trimmed. Captions inside a multi-line clip are timed from the clip's own character timings. It writes `audio/exports/chapter-NN-clips.mp3` and its index.
+- **Manifest and player.** `exports.dialogue` now prefers the clips file where one exists, so Chapter 1 plays it; the other chapters still play their dialogue files. The source option reads "v4 voices (one file)".
+**Consequences:**
+- Chapter 1 runs 8:46 instead of 8:04, because single-voice v4 reads about 10% slower than dialogue mode.
+- Spend on 2026-11-09 was about 8,700 credits.
+- Captions were checked against the audio: every line's text matches the manuscript, and the line starts match the heard starts. No approval state changed.
+**Status:** Accepted for Chapter 1 (Joshua, 2026-11-09). Chapters 2 to 9 stay on the dialogue file until he decides.

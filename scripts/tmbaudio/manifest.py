@@ -170,8 +170,17 @@ def attach_timeline(manifest):
     # from Eleven v4 Text to Dialogue takes by scripts/dialogue-assemble.py, which
     # also writes its own index, because its timing is the takes' timing and not
     # this manifest's arithmetic. Used only when that index covers every segment.
-    dialogue = _export(manifest["chapter"], "-dialogue")
-    side = os.path.join(ROOT, "audio", "exports", "chapter-%02d-dialogue.json" % manifest["chapter"])
+    # SEPARATE CLIPS FIRST (Joshua, 2026-11-09): a chapter re-rendered as single-voice v4
+    # clips (scripts/clips-chapter.py, scripts/clips-assemble.py) has no cuts at speaker
+    # changes, so none of the dialogue file's stutters; where it exists with a full index
+    # it is the one file the page plays, in the same slot and with the same index shape.
+    dialogue = _export(manifest["chapter"], "-clips")
+    side = os.path.join(ROOT, "audio", "exports", "chapter-%02d-clips.json" % manifest["chapter"])
+    source = "the clips' own timing, from scripts/clips-assemble.py"
+    if not (dialogue and os.path.isfile(side)):
+        dialogue = _export(manifest["chapter"], "-dialogue")
+        side = os.path.join(ROOT, "audio", "exports", "chapter-%02d-dialogue.json" % manifest["chapter"])
+        source = "the takes' own timing, from scripts/dialogue-assemble.py"
     if dialogue and os.path.isfile(side):
         with open(side) as fh:
             idx = json.load(fh)
@@ -180,7 +189,7 @@ def attach_timeline(manifest):
             dialogue["model"] = idx.get("model")
             dialogue["startMs"] = idx["startMs"]
             dialogue["endMs"] = idx.get("endMs")
-            dialogue["indexSource"] = "the takes' own timing, from scripts/dialogue-assemble.py"
+            dialogue["indexSource"] = source
             exports["dialogue"] = dialogue
     manifest["exports"] = exports
     return manifest
