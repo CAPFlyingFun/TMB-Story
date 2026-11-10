@@ -1,0 +1,51 @@
+# Publishes the site (reader, Watch, Lab) to GitHub Pages on every push to main.
+#
+# Why this replaced "Deploy from a branch" (2026-11-10): the branch deploy publishes the whole
+# repository (about 567 MB) and GitHub cancels it after 10 minutes, which it hit four times in a
+# row while copying files. This publishes the same files minus two folders the site never loads,
+# and gives GitHub up to 30 minutes.
+#   audio/tests  A/B and test renders, kept in the repository for comparison
+#   audio/clips  the per-line source clips the chapter mp3s in audio/exports are built from
+# Both stay in the repository; they are only left off the website.
+#
+# Needs Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
+name: Publish site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy the site, without the folders it never loads
+        run: |
+          mkdir -p "$RUNNER_TEMP/site"
+          rsync -a --exclude .git --exclude .github \
+                --exclude audio/tests --exclude audio/clips \
+                ./ "$RUNNER_TEMP/site/"
+          touch "$RUNNER_TEMP/site/.nojekyll"
+          du -sh "$RUNNER_TEMP/site"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/site
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 1800000
