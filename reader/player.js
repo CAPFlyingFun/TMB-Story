@@ -866,6 +866,15 @@
   var SLEEPS = [0, -1, 15, 30, 60];          // minutes; -1 = end of this chapter
 
   function coverFor(n) { return n <= 4 ? "./assets/covers/lab.jpg" : "./assets/covers/island.jpg"; }
+  var portraitScreen = window.matchMedia ? window.matchMedia('(orientation: portrait)') : null;
+  if (portraitScreen) portraitScreen.addEventListener('change', renderStoryImage);
+  function shotSource(cue) {
+    return portraitScreen && portraitScreen.matches && cue.portraitSrc ? cue.portraitSrc : cue.src;
+  }
+  function posterFor(n) {
+    if (n !== 1) return coverFor(n);
+    return './assets/story/ch01/001-island-wide' + (portraitScreen && portraitScreen.matches ? '-portrait' : '') + '.webp';
+  }
 
   /* Illustration batches live beside the reader, separate from generated audio
      manifests. Adding another shot to this chapter needs only its JSON and image. */
@@ -878,7 +887,7 @@
         if (state.chapter !== n || state.manifest !== manifest) return;
         state.shotCues = shots.compile(manifest, sheet);
         state.shotPreloads = state.shotCues.filter(function (cue) { return cue.src; }).map(function (cue) {
-          var image = new Image(); image.src = cue.src; return image;
+          var image = new Image(); image.src = shotSource(cue); return image;
         });
         renderStoryImage();
       }).catch(function () {
@@ -904,25 +913,21 @@
   }
 
   function renderStoryImage() {
-    var img = document.getElementById('listen-shot'), host = document.getElementById('listen-visual');
-    if (!img || !host) return;
+    var art = document.getElementById('listen-artwork'), img = document.getElementById('listen-shot');
+    var next = document.getElementById('listen-shot-next');
+    if (!art || !img || !next || !window.TMBShotFrames) return;
     var shots = window.TMBStoryShots;
     var cue = shots ? shots.select(state.shotCues, state.index, shotFraction()) : null;
-    var src = cue && cue.src;
-    if (img._requestedSrc === src) return;
-    img._requestedSrc = src;
-    img.hidden = true; host.classList.remove('has-shot');
-    if (!src) { img.removeAttribute('src'); img.alt = ''; return; }
-    var chapter = state.chapter, pending = new Image();
-    pending.onload = function () {
-      // A seek, chapter change or panel rebuild can happen while the image loads.
-      if (state.chapter !== chapter || document.getElementById('listen-shot') !== img || img._requestedSrc !== src) return;
-      img.src = src; img.alt = cue.alt; img.hidden = false;
-      host.classList.add('has-shot');
-    };
-    // On error the existing cover remains visible; do not retry on every frame.
-    pending.onerror = function () {};
-    pending.src = src;
+    // A null cue is a deliberate lab-cover shot, not an empty loading state.
+    var src = cue ? (shotSource(cue) || coverFor(state.chapter)) : posterFor(state.chapter);
+    if (!art._frames) {
+      var chapter = state.chapter;
+      art._chapter = chapter;
+      art._frames = window.TMBShotFrames.create(img, next, function () {
+        return state.chapter === chapter && document.getElementById('listen-artwork') === art;
+      });
+    }
+    art._frames.request(src, cue && cue.alt || 'Chapter artwork');
   }
 
   var ICON = {
@@ -1035,10 +1040,14 @@
       ? '<p class="listen-warn">' + state.missing + ' clip(s) in this chapter have no audio yet; the player skips them.</p>'
       : "";
     var total = chapterTotal();
+    var previousArt = document.getElementById('listen-artwork');
     body.innerHTML =
       '<div class="lp-wrap">' +
       '<div class="lp-visual" id="listen-visual" style="background-image:url(\'' + coverFor(state.chapter) + '\')">' +
-        '<img class="lp-shot" id="listen-shot" alt="" hidden>' +
+        '<div class="lp-artwork" id="listen-artwork" style="background-image:url(\'' + posterFor(state.chapter) + '\')">' +
+          '<img class="lp-shot" id="listen-shot" alt="" hidden>' +
+          '<img class="lp-shot lp-shot-next" id="listen-shot-next" alt="" aria-hidden="true" hidden>' +
+        '</div>' +
         '<div class="lp-topbar">' +
           '<button type="button" class="lp-icon" id="lp-open-list" aria-label="Chapters">' + ICON.list + '</button>' +
           '<span class="lp-series">TRADDOMIUM: Micro Battle!</span>' +
@@ -1074,6 +1083,11 @@
           '<div class="listen-now" id="lp-script">' + nowHtml() + '</div></details>' +
       '</div></div>';
 
+    // Pause, seek and speed changes rebuild controls, but must not reset image pixels
+    // or an in-progress fade. Reparent the existing image pair for the same chapter.
+    if (previousArt && previousArt._chapter === state.chapter) {
+      document.getElementById('listen-artwork').replaceWith(previousArt);
+    }
     var more = document.getElementById("lp-more-body");
     if (more) { more.innerHTML = sourceControlHtml() + layerControlsHtml() + '<p class="lp-tech">' + esc(sourceLine(m, segments().length)) + '</p>'; bindSourceControl(); bindLayerControls(); }
 

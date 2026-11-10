@@ -60,5 +60,8 @@ test('the shipped opening cue list resolves against the real chapter manifest', 
   const cues = compile(real, JSON.parse(fs.readFileSync(cuePath)));
   assert.deepEqual(cues.map(c => c.id), ['island-wide', 'island-approach', 'settlement-distant', 'settlement-close', 'laboratory']);
   assert.equal(api.select(cues, 2, 0).src, null);
-  for (const cue of cues) if (cue.src) assert.ok(fs.existsSync(path.join(root, cue.src)));
+  for (const cue of cues) if (cue.src) {
+    assert.ok(fs.existsSync(path.join(root, cue.src)));
+    assert.ok(cue.portraitSrc && fs.existsSync(path.join(root, cue.portraitSrc)));
+  }
 });

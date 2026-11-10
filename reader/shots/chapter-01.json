@@ -4,31 +4,48 @@
   "shots": [
     {
       "id": "island-wide",
-      "at": { "line": "It was March fifth" },
+      "at": {
+        "line": "It was March fifth"
+      },
       "src": "./assets/story/ch01/001-island-wide.webp",
-      "alt": "A remote forest island in the moonlit Atlantic, with tiny research lights near its center."
+      "alt": "A remote forest island in the moonlit Atlantic, with tiny research lights near its center.",
+      "portraitSrc": "./assets/story/ch01/001-island-wide-portrait.webp"
     },
     {
       "id": "island-approach",
-      "at": { "line": "It was almost eleven", "phrase": "The island stretched" },
+      "at": {
+        "line": "It was almost eleven",
+        "phrase": "The island stretched"
+      },
       "src": "./assets/story/ch01/002-island-approach.webp",
-      "alt": "Descending through moonlit clouds toward the island's small research settlement."
+      "alt": "Descending through moonlit clouds toward the island's small research settlement.",
+      "portraitSrc": "./assets/story/ch01/002-island-approach-portrait.webp"
     },
     {
       "id": "settlement-distant",
-      "at": { "line": "It was almost eleven", "phrase": "but most of it remained" },
+      "at": {
+        "line": "It was almost eleven",
+        "phrase": "but most of it remained"
+      },
       "src": "./assets/story/ch01/003-settlement-distant.webp",
-      "alt": "The research settlement and its laboratory surrounded by dense tropical forest."
+      "alt": "The research settlement and its laboratory surrounded by dense tropical forest.",
+      "portraitSrc": "./assets/story/ch01/003-settlement-distant-portrait.webp"
     },
     {
       "id": "settlement-close",
-      "at": { "line": "It was almost eleven", "phrase": "Near its center" },
+      "at": {
+        "line": "It was almost eleven",
+        "phrase": "Near its center"
+      },
       "src": "./assets/story/ch01/004-settlement-close.webp",
-      "alt": "A closer aerial view of the lit laboratory, homes, workshops and medical facility."
+      "alt": "A closer aerial view of the lit laboratory, homes, workshops and medical facility.",
+      "portraitSrc": "./assets/story/ch01/004-settlement-close-portrait.webp"
     },
     {
       "id": "laboratory",
-      "at": { "line": "Deep inside one of those laboratories" },
+      "at": {
+        "line": "Deep inside one of those laboratories"
+      },
       "src": null
     }
   ]

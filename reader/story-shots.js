@@ -27,7 +27,7 @@
         offset = text.indexOf(norm(at.phrase));
         if (offset < 0) throw new Error('Missing story shot phrase: ' + at.phrase);
       }
-      return { id: shot.id, src: shot.src || null, alt: shot.alt || '',
+      return { id: shot.id, src: shot.src || null, portraitSrc: shot.portraitSrc || null, alt: shot.alt || '',
         index: index, fraction: text.length ? offset / text.length : 0 };
     }).sort(function (a, b) { return a.index - b.index || a.fraction - b.fraction; });
   }
