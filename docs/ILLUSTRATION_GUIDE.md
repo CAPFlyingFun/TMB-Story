@@ -23,3 +23,7 @@ The 50–55% safe region fits inside that shared region. On-screen player artwor
 Keep the current image opaque while the next file loads and decodes. Fade the incoming image over it for 500ms. Do not fade both layers toward transparency, a cover image, black or white. Keep the same image nodes when controls rerender. Failed image loads retain the current story image; later cues can recover. The lab cover at the end of the opening is an intentional next shot and receives the same direct fade.
 
 The existing opening batch uses portraitSrc extensions when the viewport is portrait and its original wide images in landscape. New square masters can use src alone for both orientations.
+
+## Who adds images to the repository (Joshua, 2026-11-10)
+
+ChatGPT makes the images. Joshua reviews them, and the ones he approves come to Claude as a ZIP. Claude adds them to the repository (`assets/story/chNN/`, the chapter's `reader/shots/chapter-NN.json`) and pushes, so one agent is the main one working in the repository. ChatGPT does not push images itself.
