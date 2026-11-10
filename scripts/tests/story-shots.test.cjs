@@ -60,7 +60,9 @@ test('the shipped island and approved lab cues resolve against the real chapter 
   const cues = compile(real, JSON.parse(fs.readFileSync(cuePath)));
   assert.deepEqual(cues.map(c => c.id), ['island-wide', 'island-approach', 'settlement-distant', 'settlement-close',
     'laboratory', 'jack-asleep', 'jack-first-chirp', 'jack-amber-warning', 'jack-startled', 'jack-rubs-eyes',
-    'jack-unsolicited-windows', 'jack-network-monitor', 'jack-connection-vanishes', 'jack-red-warning']);
+    'jack-unsolicited-windows', 'jack-network-monitor', 'jack-connection-vanishes', 'jack-red-warning',
+    'jack-access-logs', 'tombs-directory', 'terminal-locked', 'terminal-reopened', 'jack-intercom',
+    'sarah-intercom', 'jack-intercom-network', 'sarah-good-answer', 'jack-who-are-you', 'boundary-control']);
   assert.ok(api.select(cues, 2, 0).src.endsWith('005-jack-lab.webp'));
   assert.ok(cues.every(c => c.src), 'approved story images must not fall through to the old lab cover');
   for (const cue of cues) if (cue.src) {
@@ -80,5 +82,14 @@ test('the shipped island and approved lab cues resolve against the real chapter 
   const red = cues.find(c => c.id === 'jack-red-warning');
   assert.equal(api.select(cues, red.index, 0.5).id, 'jack-connection-vanishes', 'refreshing alone must not show a red message early');
   assert.equal(api.select(cues, red.index, 0.99).id, 'jack-red-warning');
-  assert.equal(api.select(cues, real.segments.length - 1, 1).id, 'jack-red-warning', 'hold the last approved image until the next batch');
+  const locked = cues.find(c => c.id === 'terminal-locked');
+  const reopened = cues.find(c => c.id === 'terminal-reopened');
+  assert.equal(locked.index, reopened.index);
+  assert.ok(locked.fraction > 0 && reopened.fraction > locked.fraction, 'only blank the monitor on the stated screen cue');
+  assert.equal(api.select(cues, locked.index, reopened.fraction - 0.001).id, 'terminal-locked');
+  assert.equal(api.select(cues, reopened.index, reopened.fraction).id, 'terminal-reopened');
+  const sarah = cues.find(c => c.id === 'sarah-intercom');
+  assert.equal(api.select(cues, sarah.index - 1, 1).id, 'jack-intercom', 'Sarah must not appear before her intercom response');
+  assert.equal(api.select(cues, sarah.index, 0).id, 'sarah-intercom');
+  assert.equal(api.select(cues, real.segments.length - 1, 1).id, 'boundary-control', 'hold the last approved image until the next batch');
 });

@@ -1,6 +1,6 @@
 {
   "chapter": 1,
-  "note": "Four approved island images followed by ten approved laboratory stills. Changes follow script anchors; phrase positions within a narration clip are approximate character-share timings. The final approved lab still is held until a later batch extends the sequence. Audio and manuscript are unchanged.",
+  "note": "Four approved island images followed by twenty approved laboratory/intercom stills. Changes follow script anchors; phrase positions within a narration clip are approximate character-share timings. The final Boundary Control still is held until a later batch extends the sequence. Audio and manuscript are unchanged.",
   "shots": [
     {
       "id": "island-wide",
@@ -123,6 +123,91 @@
       },
       "src": "./assets/story/ch01/014-jack-red-warning.webp",
       "alt": "A red security warning appears on the primary monitor as Jack stares at it, fully awake."
+    },
+    {
+      "id": "jack-access-logs",
+      "at": {
+        "line": "Jack entered a command",
+        "phrase": "pulled up the laboratory access logs"
+      },
+      "src": "./assets/story/ch01/015-jack-access-logs.webp",
+      "alt": "Jack checks apparently normal laboratory access logs at his workstation."
+    },
+    {
+      "id": "tombs-directory",
+      "at": {
+        "line": "The system beeped",
+        "phrase": "a directory opened by itself"
+      },
+      "src": "./assets/story/ch01/016-tombs-directory.webp",
+      "alt": "The TOMBS directory opens by itself as Jack pauses above the keyboard."
+    },
+    {
+      "id": "terminal-locked",
+      "at": {
+        "line": "He immediately locked the terminal",
+        "phrase": "The screen went black"
+      },
+      "src": "./assets/story/ch01/017-terminal-locked.webp",
+      "alt": "Jack locks the terminal; only the primary monitor is black while the laboratory remains lit."
+    },
+    {
+      "id": "terminal-reopened",
+      "at": {
+        "line": "He immediately locked the terminal",
+        "phrase": "then came back on"
+      },
+      "src": "./assets/story/ch01/018-terminal-reopened.webp",
+      "alt": "The same TOMBS directory returns on Jack's monitor after he locks it."
+    },
+    {
+      "id": "jack-intercom",
+      "at": {
+        "line": "He reached for the intercom"
+      },
+      "src": "./assets/story/ch01/019-jack-intercom.webp",
+      "alt": "Jack presses the intercom to call Sarah, with the TOMBS directory still open."
+    },
+    {
+      "id": "sarah-intercom",
+      "at": {
+        "line": "Sarah's voice came through the speaker"
+      },
+      "src": "./assets/story/ch01/020-sarah-intercom.webp",
+      "alt": "Sarah answers from her separate office, pressing the intercom with her right hand and resting her left hand on her lap."
+    },
+    {
+      "id": "jack-intercom-network",
+      "at": {
+        "line": "Jack reopened the network monitor"
+      },
+      "src": "./assets/story/ch01/021-jack-intercom-network.webp",
+      "alt": "Jack examines the empty network list while speaking to Sarah through the intercom."
+    },
+    {
+      "id": "sarah-good-answer",
+      "at": {
+        "line": "Sarah laughed softly through the speaker"
+      },
+      "src": "./assets/story/ch01/022-sarah-good-answer.webp",
+      "alt": "Sarah smiles at Jack's remark, keeping her right hand on the office intercom and her left hand on her lap."
+    },
+    {
+      "id": "jack-who-are-you",
+      "at": {
+        "line": "Jack released the intercom and looked back at the monitor"
+      },
+      "src": "./assets/story/ch01/023-jack-who-are-you.webp",
+      "alt": "Jack turns back to the still-open TOMBS directory, hands clear of the controls."
+    },
+    {
+      "id": "boundary-control",
+      "at": {
+        "line": "Jack froze as a file opened",
+        "phrase": "a file opened"
+      },
+      "src": "./assets/story/ch01/024-boundary-control.webp",
+      "alt": "Boundary Control opens on the monitor without Jack touching the keyboard or mouse."
     }
   ]
 }

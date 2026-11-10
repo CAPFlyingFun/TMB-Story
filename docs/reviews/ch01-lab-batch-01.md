@@ -1,5 +1,7 @@
 # Chapter 1 laboratory stills — batch 1
 
+Update: [batch 2](ch01-lab-batch-02.md) extends the approved sequence through Boundary Control, replacing this batch's final-image hold. This document retains the original batch-1 record.
+
 Joshua approved this ten-image batch for repository integration on November 10, 2026. It follows the four existing island images. The retained amber-warning illustration is batch image 4; the other nine are the corrected workstation sequence approved afterward.
 
 ## Player behavior
