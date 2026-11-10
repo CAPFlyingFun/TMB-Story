@@ -67,6 +67,7 @@
     pauseTimer: null,
     missing: 0
   };
+  state.shotCues = [];
 
   /* Optional layers. If reader/sfx.js did not load, every call below is a no-op and
      the audiobook plays exactly as it did before ambience existed. */
@@ -169,6 +170,7 @@
     state.retries = 0;
     state.consecutiveFailures = 0;
     state.stalled = null;
+    state.shotCues = [];
     return fetch("./audio/manifests/chapter-" + String(n).padStart(2, "0") + ".json",
                  { cache: "no-cache" })
       .then(function (r) {
@@ -177,6 +179,7 @@
       })
       .then(function (m) {
         state.manifest = m;
+        loadStoryShots(n, m);
         var l = layers(); if (l) l.load(m);
         return chooseMode(m);
       })
@@ -775,7 +778,7 @@
 
   function renderProgress() {
     var a = state.audio;
-    if (mixedMode() && a) {
+    if (mixedMode() && a && a.getAttribute('data-src') === mixedSrc()) {
       /* THE FILE IS IN CHARGE. The page does not count segments as it plays them; it
          asks the element where it is and looks the answer up. That is what makes
          scrubbing, a speed change and a seek all land on the right line for free. */
@@ -788,6 +791,7 @@
         }
       }
     }
+    renderStoryImage();
     var total = chapterTotal(), now = Math.min(chapterNow(), total || 0);
     var frac = total ? now / total : 0;
     if (!state.dragging) drawScrub(frac);
@@ -862,6 +866,64 @@
   var SLEEPS = [0, -1, 15, 30, 60];          // minutes; -1 = end of this chapter
 
   function coverFor(n) { return n <= 4 ? "./assets/covers/lab.jpg" : "./assets/covers/island.jpg"; }
+
+  /* Illustration batches live beside the reader, separate from generated audio
+     manifests. Adding another shot to this chapter needs only its JSON and image. */
+  function loadStoryShots(n, manifest) {
+    var shots = window.TMBStoryShots;
+    if (!shots || n !== 1) return;
+    fetch('./reader/shots/chapter-' + String(n).padStart(2, '0') + '.json', { cache: 'no-cache' })
+      .then(function (r) { if (!r.ok) throw new Error('No story shots'); return r.json(); })
+      .then(function (sheet) {
+        if (state.chapter !== n || state.manifest !== manifest) return;
+        state.shotCues = shots.compile(manifest, sheet);
+        state.shotPreloads = state.shotCues.filter(function (cue) { return cue.src; }).map(function (cue) {
+          var image = new Image(); image.src = cue.src; return image;
+        });
+        renderStoryImage();
+      }).catch(function () {
+        // A missing/stale shot list must never interfere with the audiobook.
+        if (state.chapter === n && state.manifest === manifest) {
+          state.shotCues = []; renderStoryImage();
+        }
+      });
+  }
+
+  function shotFraction() {
+    var seg = current(), a = state.audio;
+    if (!seg) return 0;
+    if (mixedMode()) {
+      var at = starts(), i = state.index, start = (at[i] || 0) / 1000;
+      var ends = state.mixed.endMs || [];
+      var end = ends[i] != null ? ends[i] / 1000 : at[i + 1] != null ? at[i + 1] / 1000 : chapterTotal();
+      return end > start ? (chapterNow() - start) / (end - start) : 0;
+    }
+    if (!a || a.getAttribute('data-src') !== './' + seg.audio) return 0;
+    var duration = isFinite(a.duration) && a.duration > 0 ? a.duration : (seg.endMs - seg.startMs) / 1000;
+    return duration > 0 ? a.currentTime / duration : 0;
+  }
+
+  function renderStoryImage() {
+    var img = document.getElementById('listen-shot'), host = document.getElementById('listen-visual');
+    if (!img || !host) return;
+    var shots = window.TMBStoryShots;
+    var cue = shots ? shots.select(state.shotCues, state.index, shotFraction()) : null;
+    var src = cue && cue.src;
+    if (img._requestedSrc === src) return;
+    img._requestedSrc = src;
+    img.hidden = true; host.classList.remove('has-shot');
+    if (!src) { img.removeAttribute('src'); img.alt = ''; return; }
+    var chapter = state.chapter, pending = new Image();
+    pending.onload = function () {
+      // A seek, chapter change or panel rebuild can happen while the image loads.
+      if (state.chapter !== chapter || document.getElementById('listen-shot') !== img || img._requestedSrc !== src) return;
+      img.src = src; img.alt = cue.alt; img.hidden = false;
+      host.classList.add('has-shot');
+    };
+    // On error the existing cover remains visible; do not retry on every frame.
+    pending.onerror = function () {};
+    pending.src = src;
+  }
 
   var ICON = {
     play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>',
@@ -975,7 +1037,8 @@
     var total = chapterTotal();
     body.innerHTML =
       '<div class="lp-wrap">' +
-      '<div class="lp-visual" style="background-image:url(\'' + coverFor(state.chapter) + '\')">' +
+      '<div class="lp-visual" id="listen-visual" style="background-image:url(\'' + coverFor(state.chapter) + '\')">' +
+        '<img class="lp-shot" id="listen-shot" alt="" hidden>' +
         '<div class="lp-topbar">' +
           '<button type="button" class="lp-icon" id="lp-open-list" aria-label="Chapters">' + ICON.list + '</button>' +
           '<span class="lp-series">TRADDOMIUM: Micro Battle!</span>' +
