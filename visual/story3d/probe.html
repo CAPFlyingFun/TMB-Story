@@ -1,0 +1,40 @@
+<!doctype html>
+<!-- A PROBE FOR THE 3D STORY PICTURE, outside the player: the scene mounted with the chapter's
+     lines exactly as reader/player.js hands them over (the audio manifest's segments and its
+     one-file index), at a time given in the URL instead of a playing audio element.
+       visual/story3d/probe.html?t=123.4            one moment
+       visual/story3d/probe.html?t=123.4&w=380&h=350 the phone's picture slot
+     Served from the repository root, like the reader. window.done is set once that moment is
+     drawn; window.story3d is the mounted view, for tests. -->
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>html,body{margin:0;background:#000;height:100%}#host{position:relative;overflow:hidden}
+#host .s3-stage,#host .s3-stage canvas,#host .s3-intro{position:absolute;inset:0;width:100%!important;height:100%!important;display:block}
+#host .s3-hud{position:absolute;inset:0;pointer-events:none;font:600 11px/1 ui-monospace,Menlo,monospace;color:rgba(235,245,240,.85);text-shadow:0 1px 2px #000}
+#host .s3-tl{position:absolute;left:10px;top:10px}#host .s3-tr{position:absolute;right:10px;top:10px}#host .s3-tr b{color:#ff4a3d}
+#cap{position:absolute;left:0;right:0;bottom:0;padding:6px 10px;font:13px/1.3 system-ui;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.75))}</style>
+</head><body><div id="host"><div id="cap"></div></div>
+<script type="module">
+const q = new URLSearchParams(location.search);
+const W = +(q.get('w') || innerWidth), H = +(q.get('h') || innerHeight), n = +(q.get('ch') || 1);
+const host = document.getElementById('host'); host.style.width = W + 'px'; host.style.height = H + 'px';
+const pad = String(n).padStart(2, '0');
+const m = await (await fetch(`../../audio/manifests/chapter-${pad}.json`, { cache: 'no-cache' })).json();
+const x = m.exports.dialogue, segs = m.segments;
+// the same list the player builds (reader/player.js story3dLines)
+globalThis.__TMB_STORY3D = { seconds: x.seconds, lines: segs.map((s, i) => ({ text: s.displayText, who: s.speaker, s: x.startMs[i] / 1000, e: (x.endMs[i] ?? x.startMs[i + 1] ?? x.seconds * 1000) / 1000 })) };
+let t = +(q.get('t') || 0), playing = q.get('play') === '1';
+const mod = await import('./dist/story3d.js');
+const cap = document.getElementById('cap');
+// &cam=x,y,z,lookX,lookY,lookZ[,vfov]: look from there instead of the story's camera
+let cam = q.get('cam') ? q.get('cam').split(',').map(Number) : null;
+const view = mod.mount(host, { now: () => t, playing: () => playing, camera: () => cam && { pos: cam.slice(0, 3), look: cam.slice(3, 6), vfov: cam[6] || 40 } });
+host.appendChild(cap);
+window.story3d = { view, set(time, play = false) { t = time; playing = play; }, get t() { return t; } };
+await view.ready;
+const lines = globalThis.__TMB_STORY3D.lines;
+const show = () => { const ln = [...lines].reverse().find(l => l.s <= t); cap.textContent = ln ? `${t.toFixed(1)}s · ${ln.who}: ${ln.text}` : `${t.toFixed(1)}s`; };
+show();
+// two frames after ready: the scene has drawn this moment
+requestAnimationFrame(() => requestAnimationFrame(() => { window.done = true; }));
+window.story3d.at = async (time, c) => { t = time; if (c !== undefined) cam = c; show(); window.done = false; await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))); window.done = true; };
+</script></body></html>

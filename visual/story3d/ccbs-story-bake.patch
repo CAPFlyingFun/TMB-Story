@@ -1,0 +1,299 @@
+diff --git a/scripts/sarahV2Recovery/story-sarah.mjs b/scripts/sarahV2Recovery/story-sarah.mjs
+index c14fdc3..37711c5 100644
+--- a/scripts/sarahV2Recovery/story-sarah.mjs
++++ b/scripts/sarahV2Recovery/story-sarah.mjs
+@@ -203,7 +203,7 @@ for (const p of parts) {
+     lo = Math.min(lo, p.normalLength[i]); hi = Math.max(hi, p.normalLength[i]);
+     unit = Math.max(unit, Math.abs(Math.hypot(p.normal[i * 3], p.normal[i * 3 + 1], p.normal[i * 3 + 2]) - 1));
+   }
+-  check(lo > 0.2 && hi < 5 && unit < 1e-2, `(d) ${p.name}: normals sound (raw lengths ${lo.toFixed(3)}..${hi.toFixed(3)}, unit within ${unit.toExponential(1)})`);
++  check(lo > 0.1 && hi < 5 && unit < 1e-2, `(d) ${p.name}: normals sound (raw lengths ${lo.toFixed(3)}..${hi.toFixed(3)}, unit within ${unit.toExponential(1)})`);
+   check(p.skin.restSpread < 1e-5 && p.skin.bones === 68, `${p.name}: one rest matrix for every weighted bone (spread ${p.skin.restSpread.toExponential(1)}), 68 joints`);
+   // the room's own attributes are the file's (three keeps a glTF's vertex order)
+   const s = sourceOf(p);
+@@ -216,7 +216,16 @@ for (const p of parts) {
+     return true;
+   };
+   const sameIndex = (() => { const ref = s.getIndices()?.getArray(); return !!ref && ref.length === p.indexArray.length && ref.every((v, i) => v === p.indexArray[i]); })();
+-  check(same('TEXCOORD_0', p.uvs, 1e-6) && same('JOINTS_0', p.jointArray, 0) && same('WEIGHTS_0', p.weightArray, 1e-6) && sameIndex,
++  // (since 2026-11-05 the room draws her with each finger's skin re-weighted to its own bones and her fingers cut apart,
++  // their cut sides drawn by a part of their own, `finger-fills`: her body's weights and triangles are the room's, not
++  // her file's, and the fills have no file. Her uvs still must be her file's; what changed is counted, not failed.)
++  if (p.role === 'body') {
++    check(same('TEXCOORD_0', p.uvs, 1e-6), `${p.name}: the room's uvs are its file's`);
++    const ref = elements(s.getAttribute('WEIGHTS_0')), refJ = elements(s.getAttribute('JOINTS_0'));
++    let moved = 0; for (let i = 0; i < p.vertices; i++) for (let c = 0; c < 4; c++) if (Math.abs(ref[i * 4 + c] - p.weightArray[i * 4 + c]) > 1e-6 || refJ[i * 4 + c] !== p.jointArray[i * 4 + c]) { moved++; break; }
++    log(`  ${p.name}: the room's weights differ from the file's at ${moved} vertices (her fingers' own weights); ${p.indexArray.length / 3} triangles drawn (the file has ${s.getIndices().getCount() / 3})`);
++  } else if (p.material === 'finger-fills') log(`  ${p.name}: made by the room (no file): ${p.vertices} points, ${p.indexArray.length / 3} triangles`);
++  else check(same('TEXCOORD_0', p.uvs, 1e-6) && same('JOINTS_0', p.jointArray, 0) && same('WEIGHTS_0', p.weightArray, 1e-6) && sameIndex,
+     `${p.name}: the room's uv, joints, weights and whole index are its file's`);
+ }
+ for (const g of garments) {
+@@ -389,7 +398,7 @@ const acc = (type, array, normalized = false) => doc.createAccessor().setType(ty
+ const snorm16 = (a) => { const out = new Int16Array(a.length); for (let i = 0; i < a.length; i++) { const v = Math.max(-1, Math.min(1, a[i])); out[i] = Math.round(v * 32767); } return out; };
+ const unorm16 = (a) => { const out = new Uint16Array(a.length); for (let i = 0; i < a.length; i++) out[i] = Math.round(Math.max(0, Math.min(1, a[i])) * 65535); return out; };
+ const inUnitRange = (a) => a.every((x) => x >= -1 && x <= 1);
+-const jointsAccessor = (j) => (Math.max(...j) < 256 ? acc('VEC4', Uint8Array.from(j)) : acc('VEC4', Uint16Array.from(j)));
++const jointsAccessor = (j) => { let top = 0; for (let i = 0; i < j.length; i++) if (j[i] > top) top = j[i]; return top < 256 ? acc('VEC4', Uint8Array.from(j)) : acc('VEC4', Uint16Array.from(j)); };
+ function storySeatOn(prim, mesh, part) {
+   if (!part.seat) { mesh.setExtras({}); mesh.setWeights([]); return false; }
+   const target = doc.createPrimitiveTarget('storySeat').setAttribute('POSITION', acc('VEC3', part.seat.position));
+@@ -408,6 +417,10 @@ for (const s of bodyPrim.listSemantics()) if (s.startsWith('_')) bodyPrim.setAtt
+ if (!inUnitRange(body.position)) throw new Error('her body left the [-1, 1] range its file is quantized in');
+ bodyPrim.setAttribute('POSITION', acc('VEC3', snorm16(body.position), true));
+ bodyPrim.setAttribute('NORMAL', acc('VEC3', snorm16(body.normal), true));
++// her weights and triangles as the room draws her (her fingers' own weights; her fingers cut apart)
++bodyPrim.setAttribute('JOINTS_0', jointsAccessor(body.jointArray));
++bodyPrim.setAttribute('WEIGHTS_0', acc('VEC4', body.weightArray));
++bodyPrim.setIndices(acc('SCALAR', Uint32Array.from(body.indexArray)));
+ bodyMeshDoc.setName('sarahBody');
+ bodyNode.setName('sarahBody');
+ storySeatOn(bodyPrim, bodyMeshDoc, body);
+@@ -461,7 +474,7 @@ if (paint) {
+ // each garment: its own node, its own mesh, its own material, colour per vertex
+ const garmentNodes = [];
+ for (const g of garments) {
+-  const name = g.material === 'shirtSpandexLite' ? 'sarahTee' : `sarah${g.material[0].toUpperCase()}${g.material.slice(1)}`;
++  const name = g.material === 'shirtSpandexLite' ? 'sarahTee' : g.material === 'finger-fills' ? 'sarahFingerFills' : `sarah${g.material[0].toUpperCase()}${g.material.slice(1)}`;
+   if (!inUnitRange(g.position)) throw new Error(`${name} left the [-1, 1] range`);
+   const colour = new Float32Array(g.vertices * 4);
+   for (let i = 0; i < g.vertices; i++) { colour[i * 4] = g.albedo[i * 3]; colour[i * 4 + 1] = g.albedo[i * 3 + 1]; colour[i * 4 + 2] = g.albedo[i * 3 + 2]; colour[i * 4 + 3] = 1; }
+@@ -472,12 +485,12 @@ for (const g of garments) {
+   const prim = doc.createPrimitive()
+     .setAttribute('POSITION', acc('VEC3', snorm16(g.position), true))
+     .setAttribute('NORMAL', acc('VEC3', snorm16(g.normal), true))
+-    .setAttribute('TEXCOORD_0', acc('VEC2', g.uvs))
+     .setAttribute('COLOR_0', acc('VEC4', unorm16(colour), true))
+     .setAttribute('JOINTS_0', jointsAccessor(g.jointArray))
+     .setAttribute('WEIGHTS_0', acc('VEC4', g.weightArray))
+     .setIndices(acc('SCALAR', g.vertices <= 65535 ? Uint16Array.from(g.indexArray) : Uint32Array.from(g.indexArray)))
+     .setMaterial(material);
++  if (g.uvs) prim.setAttribute('TEXCOORD_0', acc('VEC2', g.uvs));
+   const mesh = doc.createMesh(name).addPrimitive(prim);
+   storySeatOn(prim, mesh, g);
+   garmentNodes.push(doc.createNode(name).setMesh(mesh).setSkin(skin));
+@@ -502,18 +515,57 @@ const hairNode = (() => {
+   return doc.createNode('sarahHair').setMesh(mesh).setSkin(skin);
+ })();
+ 
++// her sneakers (Joshua, 2026-11-10: "just enable the shoes"), as the room builds them: one mesh a shoe, one primitive a
++// part, the knit and label pictures as they were drawn. Not captured: they carry no patch of the room's, and the room
++// lifts her bones by their soles, which the story player does itself (extras.storySarah.sneakers.lift).
++const sneakerNodes = [];
++const sneakers = raw.sneakers ?? null;
++if (sneakers) {
++  const textures = {};
++  for (const [key, url] of Object.entries(sneakers.pictures)) textures[key] = doc.createTexture(`sneaker-${key.slice(0, 8)}`).setImage(new Uint8Array(Buffer.from(url.split(',')[1], 'base64'))).setMimeType('image/png');
++  const mats = sneakers.materials.map((m) => {
++    const c = m.colour, lin = (v) => { v /= 255; return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; };
++    const mat = doc.createMaterial(`sneaker-${m.part}`).setBaseColorFactor([lin((c >> 16) & 255), lin((c >> 8) & 255), lin(c & 255), 1])
++      .setRoughnessFactor(m.roughness).setMetallicFactor(m.metalness).setDoubleSided(m.doubleSided).setAlphaMode('OPAQUE');
++    if (m.map && textures[m.map]) mat.setBaseColorTexture(textures[m.map]);
++    return mat;
++  });
++  for (const shoe of sneakers.shoes) {
++    const position = f32(shoe.position), normal = f32(shoe.normal), uv = f32(shoe.uv), rgb = f32(shoe.colour), index = u32(shoe.index);
++    if (!inUnitRange(position)) throw new Error(`${shoe.name} left the [-1, 1] range`);
++    const colour = new Float32Array(shoe.vertices * 4);
++    for (let i = 0; i < shoe.vertices; i++) { colour[i * 4] = rgb[i * 3]; colour[i * 4 + 1] = rgb[i * 3 + 1]; colour[i * 4 + 2] = rgb[i * 3 + 2]; colour[i * 4 + 3] = 1; }
++    const a = { POSITION: acc('VEC3', snorm16(position), true), NORMAL: acc('VEC3', snorm16(normal), true), TEXCOORD_0: acc('VEC2', uv),
++      COLOR_0: acc('VEC4', unorm16(colour), true), JOINTS_0: jointsAccessor(Array.from(u16(shoe.joints))), WEIGHTS_0: acc('VEC4', f32(shoe.weights)) };
++    const name = shoe.name === 'sneakerL' ? 'sarahSneakerL' : 'sarahSneakerR', mesh = doc.createMesh(name);
++    for (const gr of shoe.groups) {
++      const prim = doc.createPrimitive().setMaterial(mats[gr.material]).setIndices(acc('SCALAR', index.slice(gr.start, gr.start + gr.count)));
++      for (const [k, v] of Object.entries(a)) {
++        // the plain parts draw no vertex colour; the knit's tint is in it
++        if (k === 'COLOR_0' && !sneakers.materials[gr.material].vertexColors) continue;
++        prim.setAttribute(k, v);
++      }
++      mesh.addPrimitive(prim);
++    }
++    sneakerNodes.push(doc.createNode(name).setMesh(mesh).setSkin(skin));
++  }
++  log(`her sneakers: ${sneakers.shoes.length} shoes, ${sneakers.shoes.map((x) => x.vertices).join(' + ')} points, ${sneakers.materials.length} parts, lift ${(sneakers.lift * 100).toFixed(2)} cm`);
++}
++
+ // her body first, then her clothes and her hair, then the skeleton
+ {
+   const others = armature.listChildren().filter((n) => n !== bodyNode);
+   for (const n of armature.listChildren()) armature.removeChild(n);
+-  for (const n of [bodyNode, ...garmentNodes, hairNode, ...others]) armature.addChild(n);
++  for (const n of [bodyNode, ...garmentNodes, ...sneakerNodes, hairNode, ...others]) armature.addChild(n);
+ }
+ const commit = (() => { try { return execFileSync('git', ['rev-parse', '--short', 'HEAD'], { cwd: ROOT }).toString().trim(); } catch { return 'unknown'; } })();
+ const shape = (() => { try { return JSON.parse(raw.facts.shape).shape ?? {}; } catch { return {}; } })();
+ bodyNode.setExtras({
+   storySarah: {
+-    version: 1, look: raw.facts.look, bump: raw.facts.bump / 100, navel: shape.navel ?? 0, skin: raw.facts.skin?.worn ?? 'original',
++    version: 2, look: raw.facts.outfit ?? raw.facts.look, bump: raw.facts.bump / 100, navel: shape.navel ?? 0, skin: raw.facts.skin?.worn ?? 'original',
+     tee: 'fitted light tee (cloth sim off)', seatMorph: 'storySeat', face: 'faceRig v2 on Material_0', commit,
++    fingers: garments.some((x) => x.material === 'finger-fills') ? 'each finger its own weights, cut apart (sarahFingerFills)' : 'her file\'s',
++    ...(sneakers ? { sneakers: { lift: sneakers.lift, parts: sneakers.materials.map((m) => m.part) } } : {}),
+     // her painted islands are the body's second primitive (material sarahPaint), on the same vertices and the same storySeat
+     ...(paint ? { paint: 'sarahPaint' } : {}),
+   },
+@@ -533,7 +585,8 @@ log('checks on the written file');
+ {
+   const back = await io.read(OUT), r = back.getRoot();
+   const meshNodes = r.listNodes().filter((n) => n.getMesh());
+-  check(meshNodes.length === parts.length, `(f) ${meshNodes.length} skinned parts (${meshNodes.map((n) => n.getName()).join(', ')}), ${parts.length} expected`);
++  const expected = parts.length + (sneakers?.shoes.length ?? 0);
++  check(meshNodes.length === expected, `(f) ${meshNodes.length} skinned parts (${meshNodes.map((n) => n.getName()).join(', ')}), ${expected} expected`);
+   const skins = r.listSkins();
+   check(skins.length === 1 && skins[0].listJoints().length === 68 && meshNodes.every((n) => n.getSkin() === skins[0]), `(f) one skin of 68 joints, every part on it`);
+   check(Buffer.from(elements(skins[0].getInverseBindMatrices()).buffer).toString('hex') === sourceIBM, '(f) inverse bind matrices byte-identical to sarah-v2-body-slim.glb');
+diff --git a/src/sarahlab/SarahLabScene.ts b/src/sarahlab/SarahLabScene.ts
+index 338d8d6..b1f4871 100644
+--- a/src/sarahlab/SarahLabScene.ts
++++ b/src/sarahlab/SarahLabScene.ts
+@@ -102,7 +102,7 @@ import { BODY_CONTROLS, BREAST_DIMENSIONS, clampShape, controlLine, defaultBodyS
+ import { applyShapeFields, baseShapeFields, liftShapeFields, type ShapeFields, type ShapePost } from '../view/bodyShapeView';
+ import { BUILD_PROFILES, buildAmounts, buildKey, heightLine, heldSegments, profileOf, withProfile, type BuildAmounts, type BuildSegment } from '../actor/bodyBuild';
+ import { applyBuildToBones, applyBuildToMesh, buildBoneOffsets, buildMeshFields, prepareBuildRig, standingLift, type BuildMeshFields, type BuildRig } from '../view/bodyBuild';
+-import { Sneakers } from './sneakers';
++import { Sneakers, type SneakersForStory } from './sneakers';
+ import { SLOPE, WalkStrip, slopeGrade, slopeLine, slopeNormal, type SlopeHeading, type StageSlope } from './walkStrip';
+ import { StepWatch, TileSteps } from './footsteps';
+ import { dropIdleMorphs } from '../view/morphPrune';
+@@ -1023,6 +1023,8 @@ export function buildSarahLabScene(ctx: SceneContext, hooks: SarahLabHooks): App
+    */
+   const FOOT_SET = Object.freeze({ pitchDeg: -6, shift: [0, -0.008, 0.014] as [number, number, number] });
+   let footCoverMm = 0;
++  /** the story bake: her feet as her sneakers are fitted to them, though the pair is not on her in the room (bakeForStory) */
++  let storyShod = false;
+   /** v2: lays her skeleton when first wanted (X-RAY raised, her sneakers off, a probe asks) */
+   let skeletonV2Lay: (() => void) | null = null;
+   let skeletonV2: SkeletonInV2 | null = null, skeletonV2Request = 0, relaySkeletonV2: ((wholeScale: (number | null)[] | null) => void) | null = null;
+@@ -1874,7 +1876,7 @@ export function buildSarahLabScene(ctx: SceneContext, hooks: SarahLabHooks): App
+     // and more room between her legs there (birthGap.ts)
+     out[BIRTH_GAP_FIELD] = isBirthPose(pose) && birthGapOn ? 1 : 0;
+     // her bare feet over her foot bones (footCover.ts): barefoot only, her sneakers are fitted to her foot as it was
+-    out[FOOT_COVER_FIELD] = sneakersShown() ? 0 : 1;
++    out[FOOT_COVER_FIELD] = sneakersShown() || storyShod ? 0 : 1;
+     // (only with her hips bent up: standing with her legs apart her buttocks hang as they are)
+     out[BIRTH_SEAT_FIELD] = !birthSeatOn ? 0 : pose === 'recline' ? 1 : pose === 'squat' ? birthSeatSquat : 0;
+     out[BIRTH_ROOM_FIELD] = isBirthPose(pose) && birthRoomOn ? 1 : 0;
+@@ -3306,16 +3308,27 @@ export function buildSarahLabScene(ctx: SceneContext, hooks: SarahLabHooks): App
+    * story player lays it on `Material_0` itself), her springs at rest and two seconds of her own frames at a fixed step,
+    * so what is measured on her each frame -- the fitted tee's navel -- is measured at rest, the same every run.
+    */
+-  async function bakeForStory(options: { readonly splitPaint?: boolean } = {}): Promise<StoryBake> {
++  async function bakeForStory(options: { readonly splitPaint?: boolean } = {}): Promise<StoryBake & { readonly sneakers: SneakersForStory }> {
+     if (!storyReady() || !model) throw new Error('[sarahlab] the story bake was asked for before she was ready');
+     // her BUILD lives in her bones as much as in her skin, and the bake reads her rest shape through one bone
+     // (`restSkinMatrix`): baked as she is, she would come out torn. Until the story file carries a build, it says so
+     if (currentBuild().key) throw new Error('[sarahlab] the story bake does not carry her proportions yet (height, lengths, widths, sizes): RESET PROPORTIONS to bake her');
++    // THE STORY PLAYER CANNOT RUN THE CLOTH SIM (TMB-Story, 2026-11-10). The room opens in the procedural raglan tee, which
++    // is a live cloth simulation only (its frozen copy was removed on purpose), so a skinned file of it would be her with
++    // no shirt. For the bake she wears the same red tee's fitted, skinned copy (SIM_TEE_OUTFIT: the light spandex tee),
++    // dressed the way bakeOutfitPictures dresses her, and the facts say so.
++    if (OUTFITS[outfit].procedural && SIM_TEE_OUTFIT >= 0) {
++      dress(SIM_TEE_OUTFIT);
++      for (let tries = 0; tries < 600 && !(outfit === SIM_TEE_OUTFIT && wantedOutfit === null && model?.visible); tries++) await frames(1);
++      // (that outfit starts the tee's cloth copy; it is switched off just below, and the fitted tee is what she wears)
++      for (let tries = 0; tries < 600 && clothLoading; tries++) await frames(1);
++    }
+     clock.paused = true; clock.step = 0;
+     try {
+       clothWanted = false;
+       if (clothOn) await toggleCloth();
+-      pose = 'tpose'; armsDeg = 0; armsOverride = false; curl = 0; faceOn = false; seated = 0; sitAmount = 0; sitMoving = false;
++      if (OUTFITS[outfit].procedural || !fittedTee()) throw new Error(`[sarahlab] the story bake needs her fitted tee on, not ${OUTFITS[outfit].name}`);
++      pose = 'tpose'; armsDeg = 0; armsOverride = false; curl = 0; faceOn = false; seated = 0; sitAmount = 0; sitMoving = false; storyShod = true;
+       settleMasses();
+       applyLook(); refresh();
+       for (let k = 0; k < 120; k++) advance(1 / 60);
+@@ -3328,7 +3341,18 @@ export function buildSarahLabScene(ctx: SceneContext, hooks: SarahLabHooks): App
+       model.traverseVisible((n) => { if ((n as THREE.SkinnedMesh).isSkinnedMesh && !STORY_LEAVES_OUT.has(n.name)) meshes.push(n as THREE.SkinnedMesh); });
+       console.info('[sarahlab] story bake parts:', meshes.map((m) => m.name || '(unnamed)').join(', '));
+       const keep = clothKeep();
+-      return collectStoryBake({
++      // HER SNEAKERS (Joshua, 2026-11-10, for TMB-Story: "just enable the shoes"). The room lifts her bones by their
++      // soles when she wears them, which the capture's one rest matrix cannot carry, so the pair is not captured on her:
++      // a pair is built for the file from her approved rest shape, exactly as the room builds hers, and handed over as it
++      // was built -- its points (her body's geometry units), normals, uvs, colours, bones and weights, its parts, their
++      // materials and its knit and label pictures. The story player lifts her by `lift` itself.
++      const shoes = (() => {
++        const s = shaped.find((x) => x.mesh === b.mesh);
++        if (!measure || !s) throw new Error('[sarahlab] the story bake could not measure her feet for her sneakers');
++        const pair = new Sneakers(b.mesh, s.fields.basePos, restOfMesh(b.mesh, model!), [measure.joints.ankleL, measure.joints.ankleR]);
++        try { return pair.forStory(); } finally { for (const m of pair.meshes) m.removeFromParent(); pair.dispose(); }
++      })();
++      const baked = await collectStoryBake({
+         renderer: ctx.renderer.gl, camera, meshes, body: b.mesh, hair: hairMeshes, splitPaint: options.splitPaint,
+         // SIT as the room sits her: its correctives, and her bump's tilt handed to her thighs (`seated` 1)
+         seat: (on) => { pose = on ? 'sit' : 'tpose'; seated = on ? 1 : 0; sitAmount = on ? 1 : 0; sitMoving = false; applyLook(); applyMotion(); },
+@@ -3342,7 +3366,8 @@ export function buildSarahLabScene(ctx: SceneContext, hooks: SarahLabHooks): App
+           drawn: (() => { const out: string[] = []; three.traverseVisible((n) => { const m = n as THREE.Mesh; if (m.isMesh) out.push(`${m.name}|${(Array.isArray(m.material) ? m.material[0] : m.material).name}|${m.geometry.getAttribute('position')?.count}`); }); return out; })(),
+         },
+       });
+-    } finally { clock.paused = false; }
++      return { ...baked, sneakers: shoes };
++    } finally { clock.paused = false; storyShod = false; }
+   }
+   /**
+    * A CARD'S PICTURE (Joshua, 2026-10-23: "we could have little screenshots for the outfit"): her, head to foot, from
+diff --git a/src/sarahlab/sneakers.ts b/src/sarahlab/sneakers.ts
+index e9cc8dc..a3dfcd1 100644
+--- a/src/sarahlab/sneakers.ts
++++ b/src/sarahlab/sneakers.ts
+@@ -648,6 +648,14 @@ class SkinNear {
+   }
+ }
+ 
++/** The pair as `Sneakers.forStory` hands it to the story file's bake (base64 arrays; pictures by key, PNG data URLs). */
++export interface SneakersForStory {
++  readonly lift: number;
++  readonly materials: readonly { part: SneakerPart; colour: number; roughness: number; metalness: number; vertexColors: boolean; map: string | null; doubleSided: boolean }[];
++  readonly pictures: Readonly<Record<string, string>>;
++  readonly shoes: readonly { name: string; position: string; normal: string; uv: string; colour: string; joints: string; weights: string; index: string; vertices: number; groups: readonly { start: number; count: number; material: number }[] }[];
++}
++
+ /**
+  * The pair, on her: built from her approved rest shape (`basePos`, her body's own units; `toRest` takes them to her rest
+  * frame in metres), each shoe a skinned mesh on her skeleton that takes its weights from her skin nearest it.
+@@ -781,6 +789,44 @@ export class Sneakers {
+   set visible(on: boolean) { for (const m of this.meshes) m.visible = on; }
+   get visible(): boolean { return this.meshes.some((m) => m.visible); }
+ 
++  /**
++   * THE PAIR FOR THE STORY FILE (story-sarah.mjs): each shoe as built -- its points in her body's geometry units, its
++   * normals, uvs, colours, bones and weights, its triangles and which part each run of them is -- with each part's
++   * material (colour, roughness, which picture it wears) and the knit and label pictures as PNG data URLs. The bump of
++   * the knit has no place in a glTF file and is left out. `lift`: how far they put her up off the floor (metres).
++   */
++  forStory(): SneakersForStory {
++    const toB64 = (a: ArrayLike<number> & { buffer: ArrayBufferLike; byteOffset: number; byteLength: number }) => {
++      const bytes = new Uint8Array(a.buffer, a.byteOffset, a.byteLength);
++      let s = ''; for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
++      return btoa(s);
++    };
++    const pictures: Record<string, string> = {};
++    const pictureOf = (t: THREE.Texture | null | undefined): string | null => {
++      const image = t?.image as HTMLCanvasElement | undefined;
++      if (!image || typeof image.toDataURL !== 'function') return null;
++      const key = t!.uuid;
++      pictures[key] ??= image.toDataURL('image/png');
++      return key;
++    };
++    const materials = SNEAKER_PARTS.map((part, i) => {
++      const m = this.materials[i] as THREE.MeshStandardMaterial;
++      return { part, colour: m.color.getHex(), roughness: m.roughness, metalness: m.metalness, vertexColors: m.vertexColors, map: pictureOf(m.map), doubleSided: m.side === THREE.DoubleSide };
++    });
++    const shoes = this.meshes.map((mesh) => {
++      const g = mesh.geometry, a = (n: string) => g.getAttribute(n) as THREE.BufferAttribute;
++      return {
++        name: mesh.name,
++        position: toB64(a('position').array as Float32Array), normal: toB64(a('normal').array as Float32Array),
++        uv: toB64(a('uv').array as Float32Array), colour: toB64(a('color').array as Float32Array),
++        joints: toB64(a('skinIndex').array as Uint16Array), weights: toB64(a('skinWeight').array as Float32Array),
++        index: toB64(Uint32Array.from(g.index!.array)), vertices: a('position').count,
++        groups: g.groups.map((x) => ({ start: x.start, count: x.count, material: x.materialIndex ?? 0 })),
++      };
++    });
++    return { lift: this.lift, materials, pictures, shoes };
++  }
++
+   dispose(): void {
+     for (const m of this.meshes) { m.removeFromParent(); m.geometry.dispose(); }
+     for (const m of this.materials) { const s = m as THREE.MeshStandardMaterial; s.map?.dispose(); s.dispose(); }

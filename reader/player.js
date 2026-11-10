@@ -69,6 +69,68 @@
   };
   state.shotCues = [];
 
+  /* ===== The 3D picture (Joshua, 2026-11-10: one player for Listen and Watch) ===========
+     The scene is a separate bundle that only reads this player's clock: it never plays,
+     seeks or loads audio, so turning it on or off cannot restart or move the chapter. The
+     stills stay underneath it, so the picture is never empty while it loads, and if it
+     fails the stills simply remain. Chapters without a staged scene show no switch. */
+  var STORY3D = { 1: "visual/story3d/dist/story3d.js" };
+  var s3 = { host: null, view: null, chapter: null, error: null };
+  try { state.view3d = window.localStorage.getItem("tmb.listen.3d") === "1"; } catch (e) { state.view3d = false; }
+  function has3d(n) { return !!STORY3D[n]; }
+  function story3dLines() {
+    var segs = segments(), at = starts(), ends = (state.mixed && state.mixed.endMs) || [], total = chapterTotal();
+    return {
+      seconds: total,
+      lines: segs.map(function (seg, i) {
+        var a = (at[i] || 0) / 1000, b = ends[i] != null ? ends[i] / 1000 : at[i + 1] != null ? at[i + 1] / 1000 : total;
+        return { text: seg.displayText, who: seg.speaker, s: a, e: b };
+      })
+    };
+  }
+  function drop3d() {
+    if (s3.view) { try { s3.view.destroy(); } catch (e) {} }
+    if (s3.host && s3.host.parentNode) s3.host.parentNode.removeChild(s3.host);
+    s3.view = null; s3.host = null; s3.chapter = null;
+  }
+  function sync3d() {
+    var art = document.getElementById("listen-artwork");
+    var want = state.view3d && has3d(state.chapter) && mixedMode() && state.mixed && art && !s3.error;
+    if (!want) { drop3d(); return; }
+    if (s3.chapter === state.chapter && s3.host) {
+      if (s3.host.parentNode !== art) art.appendChild(s3.host);   // the controls were rebuilt
+      return;
+    }
+    drop3d();
+    var host = document.createElement("div");
+    host.className = "lp-3d"; host.setAttribute("aria-hidden", "true");
+    art.appendChild(host);
+    s3.host = host; s3.chapter = state.chapter;
+    window.__TMB_STORY3D = story3dLines();
+    var url = new URL(STORY3D[state.chapter], document.baseURI).href;
+    import(url).then(function (mod) {
+      if (s3.host !== host) return null;
+      s3.view = mod.mount(host, {
+        now: chapterNow,
+        stills: true,
+        playing: function () { return !!(state.playing && state.audio && !state.audio.paused); }
+      });
+      return s3.view.ready;
+    }).then(function () {
+      if (s3.host === host) host.classList.add("is-ready");
+    }).catch(function (err) {
+      if (s3.host !== host) return;
+      if (window.console) console.warn("3D scene failed", err);
+      s3.error = "The 3D scene could not load on this device, so the pictures are showing instead.";
+      drop3d(); render();
+    });
+  }
+  function toggle3d() {
+    state.view3d = !state.view3d; s3.error = null;
+    try { window.localStorage.setItem("tmb.listen.3d", state.view3d ? "1" : "0"); } catch (e) {}
+    render();
+  }
+
   /* Optional layers. If reader/sfx.js did not load, every call below is a no-op and
      the audiobook plays exactly as it did before ambience existed. */
   function layers() {
@@ -1065,7 +1127,9 @@
           '<button type="button" class="lp-pill" id="lp-speed" aria-label="Playback speed">' + ICON.speed + '<span>' + state.rate.toFixed(2) + 'x</span></button>' +
           '<button type="button" class="lp-pill' + (state.sleep && state.sleep.mode ? " is-on" : "") + '" id="lp-sleep" aria-label="Sleep timer">' + ICON.moon +
             '<span id="lp-sleep-left">' + sleepLabel() + '</span></button>' +
+          (has3d(state.chapter) ? '<button type="button" class="lp-pill lp-pill-3d' + (state.view3d ? " is-on" : "") + '" id="lp-3d" aria-pressed="' + (state.view3d ? "true" : "false") + '" aria-label="3D scene">3D</button>' : '') +
         '</div>' +
+        (s3.error ? '<p class="listen-warn">' + esc(s3.error) + '</p>' : '') +
         '<div class="lp-scrub" id="lp-scrub" role="slider" aria-label="Position in the chapter" tabindex="0">' +
           '<div class="lp-fill" id="lp-fill"></div>' +
           '<div class="lp-head" id="lp-head"><span class="lp-bubble" id="lp-bubble">0:00</span></div>' +
@@ -1107,6 +1171,9 @@
       render();
     };
     bindDlPill();
+    var b3 = document.getElementById("lp-3d");
+    if (b3) b3.onclick = toggle3d;
+    sync3d();
     var box = document.getElementById("lp-script-box");
     box.ontoggle = function () { state.scriptOpen = box.open; };
     bindScrub();
@@ -1254,7 +1321,9 @@
 
   // ---- public entry --------------------------------------------------------
   window.TMBPlayer = {
-    mount: function (view, manifestData) {
+    mount: function (view, manifestData, want) {
+      want = want || {};
+      if (want.view3d) { state.view3d = true; try { window.localStorage.setItem("tmb.listen.3d", "1"); } catch (e) {} }
       var chapters = ((manifestData && manifestData.chapters) || [])
         .slice().sort(function (a, b) { return a.number - b.number; });
       state.chapters = chapters.map(function (c) { return c.number; });
@@ -1283,7 +1352,8 @@
       }
       var pick = document.getElementById("listen-chapter");
       pick.onchange = function () { loadChapter(parseInt(pick.value, 10)); };
-      if (chapters.length) loadChapter(chapters[0].number);
+      var first = want.chapter && state.chapters.indexOf(want.chapter) >= 0 ? want.chapter : (chapters.length ? chapters[0].number : null);
+      if (first != null) { pick.value = String(first); loadChapter(first); }
     }
   };
 })();

@@ -21,13 +21,23 @@ export function L(text, o = {}) {
 }
 
 // ---- places -----------------------------------------------------------------------------
+// Measured on the lab as built (tombs-lab furniture.ts + dressing.ts): each desk's monitors
+// stand 0.26 m in from its back edge with their middles 1.10 m up; its keyboard's keys are at
+// 0.767 m, 0.23 m in from the front edge; Jack's intercom stands at the front right of his
+// desk, its button on top at 0.88 m; Sarah's tablet starts on her desk.
 const P = {
-  jackMon: [-13.0, 1.05, -12.7], secMon: [-15.3, 1.05, -12.7], sarahMon: [16.6, 1.05, -10.4],
-  intercom: [-12.25, 0.88, -12.7], jackKeys: [-13.0, 0.775, -12.33], secKeys: [-15.3, 0.775, -12.33], sarahKeys: [16.33, 0.775, -10.4],
-  tabletDesk: [16.3, 0.755, -9.75], tabletJack: [-12.35, 0.762, -12.25],
+  jackMon: [-13.0, 1.1, -12.64], jackMonR: [-12.7, 1.1, -12.62], secMon: [-15.3, 1.1, -12.64], sarahMon: [16.62, 1.1, -10.4],
+  intercom: [-12.25, 0.885, -12.3], jackKeys: [-13.05, 0.772, -12.33], secKeys: [-15.35, 0.772, -12.33], sarahKeys: [16.31, 0.772, -10.45],
+  tabletDesk: [16.3, 0.74, -9.75],
+  // "Sarah placed her tablet beside the keyboard": to the right of his keyboard and mouse, in
+  // front of his right monitor, clear of the intercom
+  tabletJack: [-12.47, 0.74, -12.47],
 };
-const EYE = { jack: { sit: 1.13, stand: 1.59 }, sarah: { sit: 1.28, stand: 1.6 } };
-const SEAT = { jack: 0.40, sarah: 0.485 };
+const EYE = { jack: { sit: 1.13, stand: 1.6 }, sarah: { sit: 1.22, stand: 1.58 } };
+// the chair heights the cast's feet reach the floor at (stage.js CAST)
+const SEAT = { jack: 0.42, sarah: 0.49 };
+// the story's chairs are the lab's own (tombs-lab furniture.ts ids)
+export const CHAIR_IDS = { jackChair: 'jack.chair.primary', secondChair: 'jack.chair.bench', sarahChair: 'sarah.chair' };
 const N = PI, E = PI / 2, W = -PI / 2;
 
 // ---- Jack -------------------------------------------------------------------------------
@@ -216,6 +226,41 @@ const CHAIRS = {
 const TABLET = [{ t: 0, set: { on: 'desk', at: P.tabletDesk, yaw: 0 } },
   { t: L("I'm on my way.", { offset: 0.3 }), set: { on: 'arm', who: 'sarah' } },
   { t: L('Sarah placed her tablet', { edge: 'end', offset: -0.6 }), set: { on: 'desk', at: P.tabletJack, yaw: 0.25 } }];
+// ---- screens ----------------------------------------------------------------------------
+// What each of the room's screens shows, from the manuscript's own system lines. Jack's left
+// monitor ('...:0') is where he works (the network monitor, the logs, the directory); his right
+// ('...:1') carries the warnings. The other console stays dark until Sarah powers it up.
+const JL = 'jack.desk.primary:0', JR = 'jack.desk.primary:1', SL = 'jack.desk.secondary:0', SR = 'jack.desk.secondary:1';
+const SCREEN_EVENTS = [
+  { t: 0, set: { [JL]: 'diag', [JR]: 'diag', 'sarah.desk:0': 'feed', 'sarah.desk:1': 'diag', 'sarah.tablet': 'tablet' } },
+  { t: L('A warning tone chirped', { phrase: 'and the diagnostic display flashed amber' }), set: { [JR]: 'amber' } },
+  { t: L('Several windows were opening'), set: { [JL]: 'windows', [JR]: 'windows' } },
+  { t: L('Several windows were opening', { phrase: 'Jack grabbed the keyboard' }), set: { [JL]: 'netmon' } },
+  { t: L('An unfamiliar connection'), set: { [JL]: { kind: 'netmon', flash: true } } },
+  { t: L('He refreshed the display'), set: { [JL]: 'netmon' } },
+  { t: L('Security protocol violation.'), set: { [JR]: 'red' } },
+  { t: L('Jack entered a command', { phrase: 'pulled up the laboratory access logs' }), set: { [JL]: 'logs' } },
+  { t: L('The system beeped'), set: { [JL]: 'directory', [JR]: 'diag' } },
+  // "The screen went black for three seconds, then came back on and reopened the same directory."
+  { t: L('He immediately locked the terminal', { phrase: 'The screen went black' }), set: { [JL]: 'black', [JR]: 'black' } },
+  { t: L('He immediately locked the terminal', { phrase: 'The screen went black', offset: 3 }), set: { [JL]: 'directory', [JR]: 'diag' } },
+  { t: L('Jack reopened the network monitor.'), set: { [JR]: 'netmon' } },
+  { t: L('Boundary control.'), set: { [JL]: 'boundary' } },
+  // "Sarah started powering up the other console next to Jack."
+  { t: L('Sarah started powering up', { offset: 2.4 }), set: { [SL]: 'boot', [SR]: 'boot' } },
+  { t: L('Sarah started powering up', { offset: 6.5 }), set: { [SL]: 'diag', [SR]: 'diag' } },
+  { t: L('Sarah opened the connection history'), set: { [SR]: 'feed' } },
+  { t: L('He pulled up the TOMBS directory again'), set: { [JL]: 'directory' } },
+  { t: L('Tombs array remote initialization request.'), set: { [JR]: 'request' } },
+  { t: L('Request denied.'), set: { [JR]: 'denied' } },
+  { t: L('Request denied.', { nth: 1 }), set: { [JR]: 'denied' } },
+  { t: L('Access revoked.'), set: { [JR]: 'revoked' } },
+].sort((a, b) => a.t - b.t);
+function screensAt(t) {
+  const out = {};
+  for (const e of SCREEN_EVENTS) { if (e.t > t) break; for (const [k, v] of Object.entries(e.set)) out[k] = typeof v === 'string' ? { kind: v, t0: e.t } : { ...v, t0: e.t }; }
+  return out;
+}
 const ALARMS = [[L('Warning. Unauthorized system access.'), L('Jack entered a command', { edge: 'end' })], [L('A new warning tone interrupted them.'), DURATION + 5]];
 const DOORS = { 'jack-door': [-10.5, -9.45], 'sarah-door': [10.5, -9.45], 'control-east': [6, -9.5], 'control-west': [-6, -9.5] };
 
@@ -371,11 +416,15 @@ export function frame(t, aspect, fmt) {
   const actors = {};
   for (const id of ['jack', 'sarah']) {
     const a = A[id];
-    actors[id] = { ...a, visible: a.visible, look: lookPoint(a.look, A), hands: handTargets(id, a, A, chairs), talking: speaking.startsWith(id), seat: SEAT[id] };
+    actors[id] = { ...a, visible: a.visible, look: lookPoint(a.look, A), hands: handTargets(id, a, A, chairs), typing: /^type/.test(a.hands || ''), talking: speaking.startsWith(id), seat: SEAT[id] };
   }
   const tablet = evalDiscrete(TABLET, t, {});
+  const chairsOut = {}; for (const [id, c] of Object.entries(chairs)) chairsOut[CHAIR_IDS[id]] = c;
   const doors = {}; for (const [id, p] of Object.entries(DOORS)) doors[id] = ['jack', 'sarah'].some(k => Math.hypot(A[k].at[0] - p[0], A[k].at[1] - p[1]) < 1.7);
-  const inAlarm = ALARMS.some(([a, b]) => t >= a && t < b);
+  // (Joshua's approved stills keep the room's own light through the warnings: the amber and red
+  // are the screens', thrown on Jack by their desk's glow. The lab's alarm mode is kept for a
+  // chapter whose manuscript sounds a real alarm.)
+  const inAlarm = false;
   // camera
   let shot = SHOTLIST[0]; for (const s of SHOTLIST) { if (s.t <= t) shot = s; else break; }
   let camera;
@@ -397,5 +446,5 @@ export function frame(t, aspect, fmt) {
     for (let i = 1; i <= 28; i++) { const tt = t - i * 0.3; if (tt < 0) break; const p = evalActor(ev, tt).at; if (Math.hypot(p[0] - A[id].at[0], p[1] - A[id].at[1]) > 0.25) trail[i - 1] = [p[0], p[1], 1 - i / 29]; }
     markers[id] = { trail };
   }
-  return { t, actors, chairs, tablet, doors, mode: inAlarm ? 'alarm' : 'night', alarm: inAlarm ? 3 + 3 * Math.sin(t * 2 * PI * 0.8) : 0, camera, markers, line: ln, shot: shot.shot };
+  return { t, actors, chairs: chairsOut, tablet, screens: screensAt(t), lamp: true, doors, mode: inAlarm ? 'alarm' : 'night', alarm: inAlarm ? 3 + 3 * Math.sin(t * 2 * PI * 0.8) : 0, camera, markers, line: ln, shot: shot.shot };
 }

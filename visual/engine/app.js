@@ -521,6 +521,11 @@ async function boot() {
     seek(resumeAt);
     play();
   };
+  // ONE PLAYER (Joshua, 2026-11-10): a chapter staged in the Plan C lab is watched in the Listen
+  // player, on the same audio, with its 3D switched on. This tab keeps the chapters not yet
+  // moved there; ?old=1 still plays the older staging here, to compare.
+  const IN_PLAYER = q.has("old") ? {} : { 1: "../#listen/1/3d" };
+  if (IN_PLAYER[1] && scene.id === "ch01-opening") for (const b of ["start", "resume"]) $(b).onclick = () => { location.href = IN_PLAYER[1]; };
   const grid = $("chapter-grid");
   for (const c of CHAPTERS) {
     const b = document.createElement("button");
@@ -528,6 +533,7 @@ async function boot() {
     b.innerHTML = `${c.n} &middot; ${esc(c.title)}${c.scene ? "" : "<small>Not in Watch yet</small>"}`;
     b.disabled = !c.scene;
     b.onclick = () => {
+      if (IN_PLAYER[c.n]) { location.href = IN_PLAYER[c.n]; return; }
       if (c.scene === scene.id) $("start").onclick();
       else location.href = `?scene=${encodeURIComponent(c.scene)}`;
     };

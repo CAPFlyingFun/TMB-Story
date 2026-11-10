@@ -6,13 +6,14 @@
 // mount(host, api) -> { ready: Promise, destroy() }
 //   api.now()     -> chapter seconds on the current audio file
 //   api.playing() -> true while the audio is advancing
-import { Stage } from './stage.js';
+//   api.stills    -> the player shows its own approved island stills under this picture: the
+//                    3D stays clear through the island opening and comes in with the lab
+import { Stage, CAST } from './stage.js';
 import { frame, DURATION } from './ch1.js';
-import { loadIntro, drawIntro } from './intro.js';
+import { loadIntro, drawIntro, INTRO_UNTIL } from './intro.js';
 import { Foley, LANDS, stepIndex } from './footsteps.js';
 import * as THREE from 'three';
 
-const MODELS = { jack: './assets/models/jack.glb', sarah: './assets/models/sarah-v2.glb' };
 
 export function mount(host, api) {
   host.innerHTML = '<div class="s3-stage"></div><canvas class="s3-intro"></canvas><div class="s3-hud"></div>';
@@ -48,11 +49,17 @@ export function mount(host, api) {
     if (!W || !H) return;
     const t = Math.max(0, Math.min(DURATION - 0.02, api.now() || 0));
     const sized = W !== lastW || H !== lastH;
-    if (!sized && t === lastT && !api.playing()) return;   // nothing moves while paused
+    if (!sized && t === lastT && !api.playing() && !api.camera) return;   // nothing moves while paused
     if (Math.abs(t - lastT) > 0.5) stage.forceFresh = true;   // a seek: no easing from the old place
     lastW = W; lastH = H; lastT = t;
+    host.dataset.t = t.toFixed(2);   // the audio time this picture shows (tests read it)
     const aspect = W / H, S = frame(t, aspect, aspect < 1.3 ? 'slot' : 'wide');
-    const island = drawIntro(intro, t, W, H, Math.min(2, devicePixelRatio || 1));
+    // a probe may look from its own camera (tests and review; the player never passes one)
+    const own = api.camera && api.camera();
+    if (own) S.camera = { pos: own.pos, look: own.look, vfov: own.vfov || 40, label: 'PROBE' };
+    const clear = !!api.stills && t < INTRO_UNTIL;
+    host.classList.toggle('s3-clear', clear);
+    const island = clear ? true : drawIntro(intro, t, W, H, Math.min(2, devicePixelRatio || 1));
     if (!island) { stage.draw(S, W, H); footsteps(S, t); } else { stage.lastT = null; prevT = null; }
     const sec = island ? null : S.camera.sec;
     if (sec !== lastSec) { lastSec = sec; host.classList.toggle('s3-sec', !!sec); hud.innerHTML = sec ? '<span class="s3-tl">' + sec + '</span><span class="s3-tr"><b>●</b> REC 03.05.2110</span>' : ''; }
@@ -62,7 +69,7 @@ export function mount(host, api) {
   const unlock = () => { foley.ensure().catch(() => {}); };
   document.addEventListener('pointerdown', unlock, { passive: true });
 
-  const ready$ = Promise.all([loadIntro(), stage.load(MODELS)]).then(() => {
+  const ready$ = Promise.all([loadIntro(), stage.load(CAST)]).then(() => {
     if (!alive) return;
     ready = true; lastT = -1;
   });
@@ -74,7 +81,7 @@ export function mount(host, api) {
     destroy() {
       alive = false; cancelAnimationFrame(raf);
       document.removeEventListener('pointerdown', unlock);
-      try { stage.renderer.dispose(); stage.renderer.forceContextLoss(); } catch (e) {}
+      try { stage.dispose(); } catch (e) {}
       host.innerHTML = '';
     },
     debug: { stage, frame },

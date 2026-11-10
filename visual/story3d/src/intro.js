@@ -4,6 +4,7 @@
 // beats; only the times come from the v4 file's line index. Kept as Joshua asked (2026-11-07).
 import { settlementLights } from '../../paint/island.js';
 import { L } from './ch1.js';
+import { asset } from './paths.js';
 
 const smooth = p => (p <= 0 ? 0 : p >= 1 ? 1 : p * p * (3 - 2 * p));
 const ramp = (t, t0, dur) => Math.min(1, Math.max(0, (t - t0) / dur));
@@ -38,7 +39,7 @@ export const LAB_FADE = 2.2;
 const imgs = {}; let town = null;
 export async function loadIntro() {
   const DIR = { 'island-night.jpg': './assets/backgrounds/', 'wisp-1.png': './assets/backgrounds/clouds/', 'wisp-2.png': './assets/backgrounds/clouds/', 'wisp-3.png': './assets/backgrounds/clouds/', 'wisp-4.png': './assets/backgrounds/clouds/' };
-  const load = src => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error(src)); i.src = DIR[src] + src; });
+  const load = src => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error(src)); i.src = asset(DIR[src] + src); });
   await Promise.all(['island-night.jpg', 'wisp-1.png', 'wisp-2.png', 'wisp-3.png', 'wisp-4.png'].map(async s => (imgs[s] = await load(s))));
   town = document.createElement('canvas'); town.width = SETTLEMENT.canvas[0]; town.height = SETTLEMENT.canvas[1];
   settlementLights(town, { w: SETTLEMENT.w, h: SETTLEMENT.h, seed: SETTLEMENT.seed });
@@ -46,6 +47,8 @@ export async function loadIntro() {
 
 // Draws the intro (or the black over the lab's first seconds). Returns true while the intro
 // covers the whole picture, so the 3D lab need not be drawn underneath.
+/** When the island opening hands over to the lab (the player shows its own island stills until then). */
+export const INTRO_UNTIL = T.lab;
 export function drawIntro(cv, t, W, H, dpr) {
   if (cv.width !== Math.round(W * dpr) || cv.height !== Math.round(H * dpr)) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); }
   const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);

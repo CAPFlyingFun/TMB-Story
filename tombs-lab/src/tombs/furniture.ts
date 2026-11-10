@@ -20,7 +20,8 @@ export type Facing = 'n' | 's' | 'e' | 'w';
 export type FurnitureKind =
   | 'desk' | 'console' | 'chair' | 'bench' | 'shelf' | 'rack' | 'cabinet' | 'counter'
   | 'round-table' | 'fridge' | 'emergency-panel' | 'reader' | 'credenza' | 'bookcase'
-  | 'armchair' | 'plant' | 'crate' | 'intercom' | 'tablet' | 'coffee-machine' | 'electrical-panel';
+  | 'armchair' | 'plant' | 'crate' | 'intercom' | 'tablet' | 'coffee-machine' | 'electrical-panel'
+  | 'glass-cabinet' | 'wall-shelf' | 'microscope' | 'tube-rack' | 'desk-lamp' | 'pot-plant';
 export interface Furniture {
   readonly id: string;
   readonly room: RoomId;
@@ -43,14 +44,25 @@ const f = (id: string, room: RoomId, kind: FurnitureKind, x: number, z: number, 
 
 export const FURNITURE: readonly Furniture[] = [
   // JACK'S LABORATORY (x -17..-10.5, z -13.1..-7.6). Door: east wall, z -10.1..-8.8; window: north.
-  // Chapter 1: Jack's workstation and the "other console next to Jack" side by side, both
-  // rolling chairs, the intercom within reach of his chair. The door's approach is left clear.
+  // Chapter 1: Jack's workstation and the "other console next to Jack" side by side, the
+  // intercom within reach of his chair. The door's approach is left clear.
+  // 2026-11-10, toward Joshua's approved Chapter 1 stills: the intercom stands at the front right
+  // of his desk and his desk lamp at the back right; a tall glass cabinet on the east wall north
+  // of the door; the bench carries a microscope, a tube rack and a bottle shelf over it. The
+  // other console has no chair of its own: in Chapter 1 Sarah asks for Jack's, and Jack fetches
+  // the bench's ("He crossed to the next workstation and dragged its chair back").
   f('jack.desk.primary', 'jack', 'desk', -13.0, -12.5, 2.0, 0.8, 0.74, 'n', true, { note: "Jack's workstation, under the window" }),
   f('jack.desk.secondary', 'jack', 'desk', -15.3, -12.5, 2.0, 0.8, 0.74, 'n', true, { note: 'the other console next to Jack (Ch 1)' }),
   f('jack.chair.primary', 'jack', 'chair', -13.0, -11.55, 0.62, 0.6, 0.95, 'n', false),
-  f('jack.chair.secondary', 'jack', 'chair', -15.3, -11.55, 0.62, 0.6, 0.95, 'n', false),
-  f('jack.intercom', 'jack', 'intercom', -12.25, -12.7, 0.22, 0.14, 0.12, 'n', false, { y0: 0.74, note: 'on his desk, within reach' }),
+  f('jack.chair.bench', 'jack', 'chair', -14.0, -8.85, 0.62, 0.6, 0.95, 's', false, { note: "the bench's chair: the one Jack drags back in Ch 1" }),
+  f('jack.intercom', 'jack', 'intercom', -12.25, -12.3, 0.12, 0.1, 0.14, 'n', false, { y0: 0.74, note: 'on his desk at the front right, within reach' }),
+  f('jack.lamp', 'jack', 'desk-lamp', -12.2, -12.78, 0.16, 0.16, 0.62, 'n', false, { y0: 0.74, note: 'his desk lamp, back right' }),
   f('jack.bench', 'jack', 'bench', -14.5, -8.05, 3.0, 0.7, 0.9, 's', true, { note: 'prototype bench along the south wall, behind the chairs' }),
+  f('jack.bench.shelf', 'jack', 'wall-shelf', -14.5, -7.82, 2.6, 0.24, 0.32, 's', false, { y0: 1.48, note: 'bottles over the bench' }),
+  f('jack.microscope', 'jack', 'microscope', -15.6, -8.12, 0.24, 0.3, 0.44, 's', false, { y0: 0.9 }),
+  f('jack.tubes', 'jack', 'tube-rack', -14.75, -8.2, 0.26, 0.1, 0.12, 's', false, { y0: 0.9 }),
+  f('jack.plant', 'jack', 'pot-plant', -14.5, -7.86, 0.2, 0.2, 0.42, 's', false, { y0: 1.4925, note: 'on the bottle shelf' }),
+  f('jack.cabinet', 'jack', 'glass-cabinet', -10.83, -12.35, 0.45, 1.1, 2.1, 'e', true, { note: 'glass-fronted, east wall north of the door' }),
   f('jack.rack', 'jack', 'rack', -16.6, -10.2, 0.6, 1.2, 2.0, 'w', true, { note: 'instrument rack on the west wall' }),
 
   // SARAH'S OFFICE (x 10.5..17, z -13.1..-7.6). Door: west wall, z -10.1..-8.8; window: north.

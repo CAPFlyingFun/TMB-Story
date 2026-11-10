@@ -1,9 +1,36 @@
-// THE STAGE: the procedural TOMBS lab (tombs-lab) with the approved Jack and Sarah models,
-// posed by the Watch tab's own rig code (visual/vendor/three-human.js). The stage draws a
-// SCENE STATE it is handed (where everyone is, how they sit, what they hold, which camera);
-// it decides nothing about the story.
+// THE STAGE: the procedural TOMBS lab (tombs-lab, the one building the story and the game
+// share) with the story's people in it, posed by the Watch tab's own rig code
+// (visual/vendor/three-human.js). The stage draws a SCENE STATE it is handed (where everyone
+// is, how they sit, what they hold, what each screen shows, which camera); it decides nothing
+// about the story.
+//
+// THE CAST is data (CAST below), so a body can be swapped without touching the staging:
+// Joshua, 2026-11-10, "for now, just do both the cartoon characters with realistic badges...
+// we can always swap the models later once they are more stable". Each person has:
+//   url      the rigged GLB (Meshy's 69-joint rig, or the Sarah v2 story bake's 68)
+//   pregnant her seated posture and her walk are a pregnant woman's
+//   carry    her bump, 0..1+, for her walk's shorter wider steps (the Lab's slider over 100)
+//   seat     the chair height her feet reach the floor at (the chair is raised or lowered)
+//   badge    she wears the TOMBS badge on its lanyard (assets/models/badge.glb, swinging)
+//
+// DYNAMICS are anything on a person that moves by itself after the pose is set: the badge's
+// swing now, a cloth-sim garment later ("still allow the rooms to be capable with cloth sim
+// simulation"). Each is { step(dt), reset(), settle?(frames) } and runs on the STORY clock:
+// stepped by the audio time that passed while playing (so a speed change speeds it up with
+// everything else), reset and settled at the new pose after a seek or a long pause, never run
+// while paused. Add one with stage.addDynamics(id, sim) once the body is in.
 import * as THREE from 'three';
 import { buildLab, LabState } from '../../../tombs-lab/src/tombs/index.ts';
+import { ScreenSet, GLOW } from './screens.js';
+import { asset } from './paths.js';
+
+export const CAST = {
+  jack: { url: 'assets/models/jack.glb', seat: 0.42, carry: 0, badge: true },
+  // GAME TUNING: the toon Sarah's file carries no bump number; 0.55 gives her walk a late-
+  // pregnancy shortening without the waddle of the Lab's larger settings.
+  sarah: { url: 'assets/models/sarah.glb', seat: 0.49, carry: 0.55, pregnant: true, badge: true },
+};
+const BADGE_URL = 'assets/models/badge.glb';
 
 const smooth = p => (p <= 0 ? 0 : p >= 1 ? 1 : p * p * (3 - 2 * p));
 const qAxis = (x, y, z, a) => { const s = Math.sin(a / 2); return [x * s, y * s, z * s, Math.cos(a / 2)]; };
@@ -24,65 +51,47 @@ function toTurns(map) {
   return out;
 }
 const ID = [0, 0, 0, 1];
+const DEG = Math.PI / 180;
+const qMul = (a, b) => [a[3] * b[0] + a[0] * b[3] + a[1] * b[2] - a[2] * b[1], a[3] * b[1] - a[0] * b[2] + a[1] * b[3] + a[2] * b[0], a[3] * b[2] + a[0] * b[1] - a[1] * b[0] + a[2] * b[3], a[3] * b[3] - a[0] * b[0] - a[1] * b[1] - a[2] * b[2]];
+const rx = a => qAxis(1, 0, 0, a), ry = a => qAxis(0, 1, 0, a), rz = a => qAxis(0, 0, 1, a);
 function blend(a, b, k) { if (k >= 1) return b; const o = new Map(); for (const j of new Set([...a.keys(), ...b.keys()])) o.set(j, qSlerp(a.get(j) || ID, b.get(j) || ID, k)); return o; }
 
+/** Is this a device to spare: a phone or a small screen? (Fewer pixels, no shadow map.) */
+export function lowPower() {
+  try {
+    const q = new URLSearchParams(location.search).get('quality');
+    if (q) return q === 'low';
+    return /Mobi|Android|iPhone|iPad/.test(navigator.userAgent) || Math.min(screen.width, screen.height) < 700;
+  } catch (e) { return false; }
+}
+
 export class Stage {
-  constructor(canvasHost) {
-    const r = this.renderer = new THREE.WebGLRenderer({ antialias: true });
-    r.setPixelRatio(Math.min(2, devicePixelRatio || 1)); r.outputColorSpace = THREE.SRGBColorSpace;
-    r.toneMapping = THREE.ACESFilmicToneMapping; r.toneMappingExposure = 1.12;
+  constructor(canvasHost, opts = {}) {
+    this.low = opts.low ?? lowPower();
+    const r = this.renderer = new THREE.WebGLRenderer({ antialias: !this.low, powerPreference: 'high-performance' });
+    r.setPixelRatio(Math.min(this.low ? 1.5 : 2, devicePixelRatio || 1)); r.outputColorSpace = THREE.SRGBColorSpace;
+    r.toneMapping = THREE.ACESFilmicToneMapping; r.toneMappingExposure = 1.05;
+    r.shadowMap.enabled = !this.low; r.shadowMap.type = THREE.PCFSoftShadowMap;
     canvasHost.appendChild(r.domElement);
-    const scene = this.scene = new THREE.Scene(); scene.background = new THREE.Color(0x101d2d); scene.fog = new THREE.Fog(0x101d2d, 40, 160);
-    const sun = new THREE.DirectionalLight(0xc3e3ff, 2); sun.position.set(-18, 32, 24); scene.add(sun);
-    scene.add(new THREE.HemisphereLight(0xd5e9f4, 0x40505b, 0.9));
+    const scene = this.scene = new THREE.Scene(); scene.background = new THREE.Color(0x0b1520); scene.fog = new THREE.Fog(0x0b1520, 30, 140);
+    // moonlight through the north windows: a little cool shape on faces and furniture
+    const moon = new THREE.DirectionalLight(0x9ec4e8, 0.35); moon.position.set(-6, 9, -22); scene.add(moon);
     this.labState = new LabState(); this.labState.setMode('night');
     this.building = buildLab(this.labState); scene.add(this.building.group); this.building.setLabels(false);
+    const D = this.building.dressing;
+    this.chairs = D.chairs;           // by furniture id: 'jack.chair.primary', 'jack.chair.bench', 'sarah.chair', ...
+    this.tablet = D.props.get('sarah.tablet');
+    this.lamp = D.lamps.get('jack.lamp');
+    if (this.lamp && this.low) this.lamp.light.castShadow = false;
+    // every desk's screens, named desk:index ('jack.desk.primary:0' is the one on Jack's left)
+    this.screens = new ScreenSet();
+    let seed = 1;
+    for (const [desk, list] of D.screens) list.forEach((s, i) => this.screens.add(`${desk}:${i}`, s.mesh, seed++));
+    if (this.tablet) this.screens.add('sarah.tablet', this.tablet.userData.screen, 99);
     this.camera = new THREE.PerspectiveCamera(50, 1, 0.02, 400);
-    this.bodies = {}; this.chairs = {}; this.lastT = null;
-    this.hideInstances();
-    this.makeChairs();
-    this.tablet = new THREE.Mesh(new THREE.BoxGeometry(0.26, 0.012, 0.18), new THREE.MeshStandardMaterial({ color: 0x1b2633, roughness: 0.4, metalness: 0.3, emissive: 0x2a6f9a, emissiveIntensity: 0.25 }));
-    scene.add(this.tablet);
+    this.bodies = {}; this.lastT = null;
     this.alarm = new THREE.PointLight(0xff3030, 0, 9, 2); this.alarm.position.set(-13.5, 2.9, -10.3); scene.add(this.alarm);
     this.markers = this.makeMarkers();
-  }
-
-  // The lab's own chairs and Sarah's tablet are instanced and fixed; the story moves them, so
-  // they are hidden here and drawn as objects of their own.
-  hideInstances() {
-    const m4 = new THREE.Matrix4(), p = new THREE.Vector3(), q = new THREE.Quaternion(), sc = new THREE.Vector3();
-    const chairsAt = [[-13, -11.55], [-15.3, -11.55], [15.55, -10.4]];
-    this.building.group.traverse(o => {
-      if (!o.isInstancedMesh) return;
-      if (/batch:chair$/.test(o.name)) this.chairMat = o.material;
-      if (/batch:metal$/.test(o.name)) this.metalMat = o.material;
-      let hit = false;
-      for (let i = 0; i < o.count; i++) {
-        o.getMatrixAt(i, m4); m4.decompose(p, q, sc);
-        const chair = /batch:(chair|metal)$/.test(o.name) && p.y < 1.3 && chairsAt.some(([x, z]) => Math.abs(p.x - x) < 0.4 && Math.abs(p.z - z) < 0.4);
-        const tablet = /batch:console$/.test(o.name) && Math.abs(p.x - 16.3) < 0.05 && Math.abs(p.z + 9.75) < 0.05 && sc.y < 0.05;
-        if (chair || tablet) { sc.set(1e-5, 1e-5, 1e-5); m4.compose(p, q, sc); o.setMatrixAt(i, m4); hit = true; }
-      }
-      if (hit) o.instanceMatrix.needsUpdate = true;
-    });
-  }
-
-  makeChairs() {
-    for (const id of ['jackChair', 'secondChair', 'sarahChair']) {
-      const g = new THREE.Group(), W = 0.62, D = 0.6;
-      const box = (mat, x, y, z, sx, sy, sz) => { const m = new THREE.Mesh(new THREE.BoxGeometry(sx, sy, sz), mat); m.position.set(x, y, z); g.add(m); return m; };
-      box(this.metalMat, 0, 0.03, 0, W * 0.75, 0.04, D * 0.75);
-      const column = box(this.metalMat, 0, 0.25, 0, 0.06, 0.4, 0.06);
-      const seat = box(this.chairMat, 0, 0.48, 0, W * 0.9, 0.08, D * 0.9);
-      const back = box(this.chairMat, 0, 0.82, -D / 2 + 0.06, W * 0.85, 0.55, 0.07);
-      g.userData = { column, seat, back };
-      this.scene.add(g); this.chairs[id] = g;
-    }
-  }
-  setChair(id, c) {
-    const g = this.chairs[id]; g.position.set(c.at[0], 0, c.at[1]); g.rotation.y = c.yaw;
-    const top = c.seat || 0.45, { column, seat, back } = g.userData;
-    seat.position.y = top - 0.04; column.scale.y = (top - 0.09) / 0.4; column.position.y = 0.05 + (top - 0.09) / 2; back.position.y = top + 0.30;
   }
 
   makeMarkers() {
@@ -101,15 +110,33 @@ export class Stage {
     return { jack: mk(0x5aa9ff), sarah: mk(0xff6b7a), grp };
   }
 
-  async load(urls, onProgress) {
+  /** Load the cast (CAST, or another table of the same shape) and hang their badges. */
+  async load(cast = CAST, onProgress) {
     const loader = new THREE.GLTFLoader(); loader.setMeshoptDecoder(THREE.MeshoptDecoder);
-    let done = 0; const n = Object.keys(urls).length;
-    await Promise.all(Object.entries(urls).map(async ([id, url]) => {
-      const model = (typeof url === 'function' ? await loader.parseAsync(await url(), '') : await loader.loadAsync(url)).scene; this.addBody(id, model, { pregnant: id === 'sarah' }); onProgress && onProgress(++done / n);
+    const ids = Object.keys(cast); let done = 0;
+    const badge = Object.values(cast).some(c => c.badge) ? loader.loadAsync(asset(BADGE_URL)).then(g => g.scene).catch(e => { console.warn('[story3d] the badge did not load; everyone goes without', e); return null; }) : Promise.resolve(null);
+    await Promise.all(ids.map(async (id) => {
+      const model = (await loader.loadAsync(asset(cast[id].url))).scene;
+      this.addBody(id, model, cast[id]); onProgress && onProgress(++done / ids.length);
     }));
+    const template = await badge;
+    if (template) for (const id of ids) if (cast[id].badge) this.hangBadge(id, template);
   }
 
-  addBody(id, model, opts) {
+  hangBadge(id, template) {
+    const b = this.bodies[id];
+    try {
+      const badge = THREE.attachBadge(b.model, b.measure, b.rig.bind, template, { rest: () => b.rig.rest(), label: id });
+      if (!badge) return;
+      b.model.traverse(n => { if (n.isMesh) { n.castShadow = !this.low; n.frustumCulled = false; } });
+      this.addDynamics(id, { step: dt => THREE.swingBadge(badge, dt), reset: () => badge.reset(), name: 'badge' });
+    } catch (e) { console.warn(`[story3d] ${id}: the badge could not be hung`, e); }
+  }
+
+  /** Something on a person that moves by itself after the pose (a badge's swing, a cloth sim). */
+  addDynamics(id, sim) { const b = this.bodies[id]; if (b) b.dynamics.push(sim); }
+
+  addBody(id, model, spec) {
     const rig = new THREE.HumanRig(model), measure = THREE.measureHuman(rig.bind);
     let story = null; model.traverse(n => { if (!story && n.userData && n.userData.storySarah) story = n.userData.storySarah; });
     model.position.set(0, 0, 0); model.rotation.set(0, 0, 0);
@@ -117,52 +144,65 @@ export class Stage {
     model.updateMatrixWorld(true);
     const skin = THREE.findSkinnedMesh(model), bones = skin.skeleton.bones, j = measure.joints;
     const w = i => bones[i].getWorldPosition(new THREE.Vector3());
-    const crownParent = rig.bind[j.head].parent; const head = crownParent >= 0 && crownParent !== j.neck ? crownParent : j.head;
     const hips = w(j.hipL).add(w(j.hipR)).multiplyScalar(0.5);
-    const ankleDoze = Math.min(w(j.ankleL).y, w(j.ankleR).y);
-    const naturalSeat = Math.min(0.55, Math.max(0.4, hips.y - ankleDoze + 0.08 - 0.1));
+    // the joint that turns the head itself (the Watch's addBody: the crown's parent when it is not the neck)
+    const crownParent = rig.bind[j.head].parent, head = crownParent >= 0 && crownParent !== j.neck ? crownParent : j.head;
     rig.rest(); model.updateMatrixWorld(true);
-    const standAnkle = Math.min(w(j.ankleL).y, w(j.ankleR).y);
-    model.traverse(n => { if (n.isMesh) n.frustumCulled = false; });
-    const seat = []; let face = null, carry = 0;
+    model.traverse(n => { if (n.isMesh) { n.frustumCulled = false; n.castShadow = !this.low; n.receiveShadow = !this.low; } });
+    // a Sarah v2 story bake carries its own bump, seat corrective and face rig; a toon file does not
+    const seat = []; let face = null, carry = spec.carry || 0;
     if (story) {
-      carry = Number.isFinite(story.bump) ? story.bump : 0;
+      carry = Number.isFinite(story.bump) ? story.bump : carry;
       model.traverse(n => {
         const at = n.isMesh && n.morphTargetDictionary ? n.morphTargetDictionary[story.seatMorph || 'storySeat'] : undefined;
         if (at !== undefined) seat.push([n, at]);
         if (n.isMesh) for (const m of [].concat(n.material)) if (m.name === 'sarahHair') THREE.patchHairMaterial(m);
       });
       const fm = [].concat(skin.material).find(m => m.name === 'Material_0');
-      if (fm) { THREE.patchFaceRig(fm); face = { mesh: skin, material: fm, motion: new THREE.FaceMotion(7), rest: [0, 0, 0], t: null }; }
+      if (fm) { THREE.patchFaceRig(fm); face = { mesh: skin, material: fm, motion: new THREE.FaceMotion(7), rest: [0, 0, 0] }; }
     }
     this.scene.add(model);
-    this.bodies[id] = { id, model, rig, measure, bones, head, hips, standAnkle, naturalSeat, seatUsed: naturalSeat, seat, face, carry, pregnant: !!opts.pregnant, solver: null, lift: 0 };
+    this.bodies[id] = { id, model, rig, measure, bones, hips, head, seed: id === 'jack' ? 0.3 : 1.1, seat, face, carry, pregnant: !!spec.pregnant, settled: !!story && !!spec.pregnant, seatH: spec.seat || 0.45, solver: null, dynamics: [] };
   }
 
-  // a walking step's length in metres (the rig's own stride, in bind units)
+  /** a walking step's length in metres (the rig's own stride, in bind units) */
   strideM(id) { const b = this.bodies[id]; return THREE.humanStride(b.measure, 'walk', b.carry) / b.rig.bindScale; }
-  // test hook: ankle heights over one gait cycle, to find where each foot lands
-  gaitProbe(id) {
-    const b = this.bodies[id], j = b.measure.joints, out = [], L = this.strideM(id);
-    for (let i = 0; i < 40; i++) { const ph = i / 40; const m = this.baseMap(b, 'walk', { walked: ph * L }, 0); b.rig.apply(toTurns(m)); b.model.position.set(0, 0, 0); b.model.rotation.set(0, 0, 0); b.model.updateMatrixWorld(true);
-      const y = k => b.bones[k].getWorldPosition(new THREE.Vector3()); const l = y(j.ankleL), r = y(j.ankleR); out.push([ph, +l.y.toFixed(3), +r.y.toFixed(3), +l.z.toFixed(3), +r.z.toFixed(3)]); }
-    return { strideM: L, out };
-  }
+  /** where a body's bones are, metres (tests and the staging's own checks) */
+  bonePoint(id, joint) { const b = this.bodies[id]; return b.bones[b.measure.joints[joint]].getWorldPosition(new THREE.Vector3()); }
   baseMap(b, kind, a, t) {
     const { measure, rig } = b;
-    if (kind === 'sit' || kind === 'doze') return toMap(THREE.poseSeated(measure, rig.bind, { style: kind, seconds: t, headSide: 1, arms: b.pregnant ? 'cradle' : 'fold', posture: b.pregnant ? 'pregnant' : undefined, ...(b.pregnant ? { settled: true, bump: b.carry } : {}) }, []));
+    if (kind === 'sit' || kind === 'doze') return toMap(THREE.poseSeated(measure, rig.bind, { style: kind, seconds: t, headSide: 1, arms: b.pregnant ? 'cradle' : 'fold', posture: b.pregnant ? 'pregnant' : undefined, ...(b.settled ? { settled: true, bump: b.carry } : {}) }, []));
     const walking = kind === 'walk';
     const phase = walking ? ((a.walked * rig.bindScale) / THREE.humanStride(measure, 'walk', b.carry)) % 1 : 0;
-    return toMap(THREE.poseHuman(measure, rig.bind, { stance: walking ? 'walk' : 'stand', phase, seconds: t, lean: 0, carry: b.carry }, []));
+    return toMap(THREE.poseHuman(measure, rig.bind, { stance: walking ? 'walk' : 'stand', phase, seconds: t, lean: a.lean || 0, carry: b.carry }, []));
+  }
+  /**
+   * The Watch's small turns on top of a pose (people3d.js extras), so a body reads as a person:
+   * asleep he slumps back into the chair with his head down toward one shoulder; typing leans in
+   * so the arms bend instead of locking; a person's head moves with their own line; awake, the
+   * neck drifts a little. Each is [joint, quaternion], composed after the pose's own turn.
+   */
+  extras(b, a, t) {
+    const j = { ...b.measure.joints, head: b.head }, L = b.measure.leftSign < 0 ? -1 : 1, out = [];
+    const k = a.k < 1 ? smooth(a.k) : 1, w = name => (a.pose === name ? k : 0) + (a.prevPose === name ? 1 - k : 0);
+    const asleep = w('doze');
+    if (asleep > 0.01) { out.push([j.spine, rx(-9 * DEG * asleep)], [j.neck, rz(L * 12 * DEG * asleep)], [j.head, rz(L * 8 * DEG * asleep)]); }
+    if (a.typing) out.push([j.spine, rx((a.pose === 'sit' ? 10 : 6) * DEG)]);
+    if (a.lean) out.push([j.spine, rx(a.lean * DEG)]);
+    const awake = 1 - asleep - w('walk');
+    if (awake > 0.01) { const s = b.seed, h = Math.sin((2 * Math.PI * t) / (7.3 + s * 1.3) + s) + 0.5 * Math.sin((2 * Math.PI * t) / (3.1 + s * 0.4) + 2 * s); out.push([j.neck, ry(L * 3 * DEG * h * awake)]); }
+    if (a.talking && asleep < 0.5) { const s = b.seed; out.push([j.head, rx(3.5 * DEG * Math.sin(t * 2 * Math.PI * 1.6 + s))], [j.neck, ry(L * 3 * DEG * Math.sin(t * 2 * Math.PI * 0.55 + 2 * s))]); }
+    return out;
   }
   rootFor(b, kind, a) {
     const yaw = a.yaw, c = Math.cos(yaw), s = Math.sin(yaw), rot = (x, z) => [x * c + z * s, -x * s + z * c];
     if (kind !== 'sit' && kind !== 'doze') return [a.at[0], 0, a.at[1]];
-    const back = rot(0, -0.04), hip = rot(b.hips.x, b.hips.z);
-    return [a.at[0] + back[0] - hip[0], b.seatUsed + 0.1 - b.hips.y, a.at[1] + back[1] - hip[1]];
+    // seated: her hips' midpoint just ahead of the back of the seat, on its cushion
+    const back = rot(0, kind === 'doze' ? 0.07 : 0.02), hip = rot(b.hips.x, b.hips.z);
+    return [a.at[0] + back[0] - hip[0], (a.seat || b.seatH) + 0.1 - b.hips.y, a.at[1] + back[1] - hip[1]];
   }
 
-  // a: { at:[x,z], yaw, pose, prevPose, k, walked, look:[x,y,z]|null, hands:[{side,at}], talking }
+  // a: { at:[x,z], yaw, pose, prevPose, k, walked, look:[x,y,z]|null, hands:[{side,at}], talking, nod }
   pose(id, a, t, steady, dt) {
     const b = this.bodies[id]; if (!b) return;
     if (!a || !a.visible) { b.model.visible = false; return; } b.model.visible = true;
@@ -173,17 +213,21 @@ export class Stage {
       const k = smooth(a.k), m0 = this.baseMap(b, a.prevPose, a, t), r0 = this.rootFor(b, a.prevPose, { ...a, at: a.prevAt || a.at, yaw: a.prevYaw ?? a.yaw });
       map = blend(m0, map, k); root = r0.map((v, i) => v + (root[i] - v) * k);
     }
+    for (const [joint, q] of this.extras(b, a, t)) if (joint >= 0) map.set(joint, qMul(map.get(joint) || ID, q));
     const turns = toTurns(map);
     const sv = (!steady || !b.solver) ? (b.solver = { feet: THREE.createFeet(measure, rig.bind, -1), aim: THREE.createAim(measure, rig.bind, -1), reach: THREE.createReach(measure, rig.bind, -1), ft: [], at: [], rt: [] }, null) : b.solver;
     const S = b.solver, fresh = sv === null;
-    const footing = { dt: fresh ? 0 : dt, released: seated || (a.k < 1 && (a.prevPose === 'sit' || a.pose === 'sit')), rootX: root[0], rootY: root[1], rootZ: root[2], rootYaw: a.yaw, unitsPerMetre: rig.bindScale, groundAt: () => ({ y: 0, grip: 1 }) };
+    const footing = { dt: fresh ? 0 : dt, released: seated || (a.k < 1 && (a.prevPose === 'sit' || a.pose === 'sit' || a.prevPose === 'doze')), rootX: root[0], rootY: root[1], rootZ: root[2], rootYaw: a.yaw, unitsPerMetre: rig.bindScale, groundAt: () => ({ y: 0, grip: 1 }) };
     if (fresh) for (let i = 0; i < 8; i++) THREE.groundFeet(S.feet, measure, rig.bind, turns, { ...footing, dt: 0.05 }, S.ft);
     const grounded = THREE.groundFeet(S.feet, measure, rig.bind, turns, footing, S.ft);
     const rootY = root[1] - grounded.rootDrop;
     const frame = { rootX: root[0], rootY, rootZ: root[2], rootYaw: a.yaw, unitsPerMetre: rig.bindScale };
     const target = a.look ? { x: a.look[0], y: a.look[1], z: a.look[2] } : null;
     const hands = (a.hands || []).map(h => ({ side: h.side, x: h.at[0], y: h.at[1], z: h.at[2], kind: h.kind || 'press', palm: h.palm || { x: 0, y: -1, z: 0 } }));
-    const solve = d => { const aimed = THREE.aimBody(S.aim, measure, rig.bind, grounded.turns, { ...frame, dt: d, target, bodyFree: false, weight: 1 }, S.at); return THREE.reachHands(S.reach, measure, rig.bind, aimed.turns, { ...frame, dt: d, seated, hands }, S.rt); };
+    // a free seated hand rests on its thigh (humanReach rule 4) -- but asleep, his folded arms are
+    // the pose's own, so a doze is not "seated" for the hands
+    const handsSeated = a.pose === 'sit' && !(a.prevPose === 'doze' && a.k < 1);
+    const solve = d => { const aimed = THREE.aimBody(S.aim, measure, rig.bind, grounded.turns, { ...frame, dt: d, target, bodyFree: false, weight: 1 }, S.at); return THREE.reachHands(S.reach, measure, rig.bind, aimed.turns, { ...frame, dt: d, seated: handsSeated, hands }, S.rt); };
     let out; if (fresh) for (let i = 0; i < 12; i++) out = solve(0.05); else out = solve(dt);
     rig.apply(out.turns);
     b.model.position.set(root[0], rootY, root[2]); b.model.rotation.set(0, a.yaw, 0); b.model.updateMatrixWorld(true);
@@ -195,33 +239,51 @@ export class Stage {
       if (fresh) for (let i = 0; i < 10; i++) M.step(0.05, tgt); else M.step(Math.min(0.25, dt), tgt);
       THREE.setFaceRig(F.material, { jaw: M.jaw, gazeRight: M.gazeRight, gazeLeft: M.gazeLeft, blink: a.pose === 'doze' ? 1 : M.blink });
     }
+    // after the pose: the dynamics, on the story clock
+    for (const sim of b.dynamics) {
+      if (steady && dt > 0 && dt < 0.5) sim.step(dt);
+      else if (!steady || dt !== 0) { sim.reset(); if (sim.settle) sim.settle(30); }
+    }
   }
 
-  // where a body's left armpit is, for a tablet tucked under that arm
+  /** where a body's left armpit is, for a tablet tucked under that arm */
   underArm(id) {
     const b = this.bodies[id], j = b.measure.joints, w = i => b.bones[i].getWorldPosition(new THREE.Vector3());
     const sh = w(j.shoulderL), el = w(j.elbowL), chest = w(j.chest);
-    const p = sh.clone().lerp(el, 0.55).lerp(chest, 0.25);
+    const p = sh.clone().lerp(el, 0.55).lerp(chest, 0.28);
     return { p, yaw: b.model.rotation.y };
   }
 
-  // Draw one frame of a scene state. S: { t, actors:{jack,sarah}, chairs:{...}, tablet, doors, mode, alarm, camera, overhead, markers }
+  setChair(id, c) {
+    const g = this.chairs.get(id); if (!g) return;
+    g.position.set(c.at[0], 0, c.at[1]); g.rotation.y = c.yaw;
+    if (Math.abs(g.seatTop - (c.seat || 0.47)) > 1e-3) g.setSeat(c.seat || 0.47);
+  }
+
+  // Draw one frame of a scene state. S: { t, actors:{jack,sarah}, chairs:{id:{at,yaw,seat}}, tablet, screens, lamp, doors, mode, alarm, camera, markers }
   draw(S, w, h) {
     const t = S.t, dt = this.lastT === null ? 0 : t - this.lastT;
     const steady = this.lastT !== null && dt >= 0 && dt < 0.25 && !this.forceFresh;
     this.forceFresh = false;
     if (this.size !== w + 'x' + h) { this.renderer.setSize(w, h, false); this.size = w + 'x' + h; } this.camera.aspect = w / h;
     for (const [id, c] of Object.entries(S.chairs)) this.setChair(id, c);
-    for (const id of ['jack', 'sarah']) {
-      const a = S.actors[id], b = this.bodies[id]; if (!b) continue;
-      if (a && a.seat) b.seatUsed = a.seat;
-      this.pose(id, a, t, steady, dt);
-    }
-    // tablet
+    for (const id of Object.keys(this.bodies)) this.pose(id, S.actors[id], t, steady, dt);
+    // the tablet: under her arm while she carries it, else where it was set down
     const tb = S.tablet;
-    if (tb.on === 'arm' && this.bodies[tb.who] && this.bodies[tb.who].model.visible) {
-      const { p, yaw } = this.underArm(tb.who); this.tablet.position.copy(p); this.tablet.rotation.set(0, yaw, Math.PI / 2 - 0.15, 'YXZ');
-    } else { this.tablet.position.set(tb.at[0], tb.at[1] + 0.006, tb.at[2]); this.tablet.rotation.set(0, tb.yaw || 0, 0); }
+    if (this.tablet && tb) {
+      if (tb.on === 'arm' && this.bodies[tb.who] && this.bodies[tb.who].model.visible) {
+        const { p, yaw } = this.underArm(tb.who); this.tablet.position.copy(p); this.tablet.rotation.set(0, yaw, Math.PI / 2 - 0.15, 'YXZ');
+      } else { this.tablet.position.set(tb.at[0], tb.at[1], tb.at[2]); this.tablet.rotation.set(0, tb.yaw || 0, 0); }
+    }
+    // screens and the glow each desk throws
+    if (S.screens) {
+      this.screens.update(S.screens, t);
+      for (const [desk, glow] of this.building.dressing.glows) {
+        const k = [0, 1].map(i => S.screens[`${desk}:${i}`]?.kind).find(k => k && GLOW[k]);
+        glow.visible = !!k; if (k) { glow.color.setHex(GLOW[k]); glow.intensity = k === 'red' || k === 'revoked' || k === 'denied' ? 1.4 : 1.0; }
+      }
+    }
+    if (this.lamp) this.lamp.on = S.lamp !== false;
     // doors and mode (the lab animates its doors; a jump in time settles them at once)
     for (const [id, open] of Object.entries(S.doors)) this.labState.setDoor(id, open);
     if (this.labState.mode !== S.mode) this.labState.setMode(S.mode);
@@ -243,5 +305,10 @@ export class Stage {
     }
     this.renderer.render(this.scene, this.camera);
     this.lastT = t;
+  }
+
+  dispose() {
+    this.screens.dispose(); this.building.dispose();
+    try { this.renderer.dispose(); this.renderer.forceContextLoss(); } catch (e) {}
   }
 }

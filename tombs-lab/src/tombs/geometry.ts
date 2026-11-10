@@ -4,10 +4,14 @@ import {cutWall} from './collision';
 import type {DoorId} from './types';
 import {LabState} from './state';
 import {FURNITURE,type Furniture} from './furniture';
+import {buildDressing,type LabDressing} from './dressing';
+import {floorTiles,laminate,nightFoliage} from './textures';
 
-const palette={floor:0x343f50,ceiling:0x233143,wall:0x98a8b2,external:0x4d6475,
+// 2026-11-10, toward Joshua's approved Chapter 1 stills (the lab at night): light grey walls, a
+// dark grey tiled floor, grey laminate desk tops on steel legs, white cabinets, dark consoles.
+const palette={floor:0x8b9096,ceiling:0x233143,wall:0xc2c8ce,external:0x9aa5ae,
  partition:0x637c8e,arrayWall:0x345468,blue:0x46c4ff,amber:0xffb557,red:0xf46c73,
- console:0x1e2e42,metal:0x728a9e,desk:0x526579,chair:0x293f53,grass:0x24544d};
+ console:0x1d2228,metal:0x8f979f,desk:0x8a9097,chair:0x2f343b,grass:0x24544d,cabinet:0xe2e5e8};
 type Block={x:number;y:number;z:number;sx:number;sy:number;sz:number;ry:number};
 class Batch{
  private lists=new Map<string,Block[]>();
@@ -32,12 +36,17 @@ function labelSprite(text:string,width=3.1):THREE.Sprite{
  const sprite=new THREE.Sprite(new THREE.SpriteMaterial({map:texture,transparent:true,depthTest:false}));sprite.scale.set(width,width*96/512,1);return sprite;
 }
 function boxMaterial(hex:number,emissive=0,opacity=1):THREE.MeshStandardMaterial{return new THREE.MeshStandardMaterial({color:hex,roughness:.75,metalness:.18,emissive,emissiveIntensity:emissive? .35:0,transparent:opacity<1,opacity})}
+function shaded(o:THREE.Object3D,cast:boolean):void{o.castShadow=cast;o.receiveShadow=true}
 export interface LabDisplay{
  readonly group:THREE.Group;
  readonly roof:THREE.Group;
  readonly doors:ReadonlyMap<DoorId,THREE.Group>;
  readonly arrayRings:readonly THREE.Mesh[];
  readonly stats:{staticDrawGroups:number;roomCount:number;doorCount:number};
+ /** The pieces a story or a game moves or switches: chairs, named screens, their glows, desk lamps (dressing.ts). */
+ readonly dressing:LabDressing;
+ /** What is seen through the outside windows (night foliage); hide it once the view outside is something else. */
+ readonly outside:THREE.Group;
  setRoof(on:boolean):void;
  /** Room name tags. They draw through walls, so they belong to the top view, not to walking around. */
  setLabels(on:boolean):void;
@@ -51,8 +60,9 @@ export function buildLab(_state:LabState):LabDisplay{
  const roof=new THREE.Group();roof.name='TOMBS:removable-roof';root.add(roof);roof.visible=false;
  const labels=new THREE.Group();labels.name='TOMBS:room-labels';root.add(labels);labels.visible=false;
  const m=new Map<string,THREE.Material>([
-  ['floor',boxMaterial(palette.floor)],['wall',boxMaterial(palette.wall)],['external',boxMaterial(palette.external)],
-  ['array',boxMaterial(palette.arrayWall)],['metal',boxMaterial(palette.metal)],['desk',boxMaterial(palette.desk)],
+  ['floor',new THREE.MeshStandardMaterial({color:palette.floor,roughness:.42,metalness:.12,map:floorTiles()})],['wall',new THREE.MeshStandardMaterial({color:palette.wall,roughness:.88,metalness:0})],['external',new THREE.MeshStandardMaterial({color:palette.external,roughness:.88,metalness:0})],
+  ['array',boxMaterial(palette.arrayWall)],['metal',new THREE.MeshStandardMaterial({color:palette.metal,roughness:.35,metalness:.7})],['desk',new THREE.MeshStandardMaterial({color:palette.desk,roughness:.4,metalness:.35,map:laminate()})],
+  ['cabinet',new THREE.MeshStandardMaterial({color:palette.cabinet,roughness:.6,metalness:.05})],
   ['console',boxMaterial(palette.console)],['chair',boxMaterial(palette.chair)],
   ['light',new THREE.MeshBasicMaterial({color:0xa5e9ff})],['screen',new THREE.MeshBasicMaterial({color:0x2cbcf2})],
   ['red',new THREE.MeshBasicMaterial({color:0xe35f61})],['yellow',new THREE.MeshBasicMaterial({color:0xf3c37c})],
@@ -133,6 +143,14 @@ export function buildLab(_state:LabState):LabDisplay{
  }
  // Furniture, from the one list in furniture.ts that the collision and the plan also read.
  buildFurniture(batch,root,m);
+ const dressing=buildDressing();root.add(dressing.group);
+ // Through each outside window, the island's night: foliage under a moonlit sky, a little way out.
+ const outside=new THREE.Group();outside.name='TOMBS:outside-windows';root.add(outside);
+ {const fol=nightFoliage();const folMat=new THREE.MeshBasicMaterial({color:0x8a9aa6,map:fol});
+  for(const d of PLAN.portals){if(d.kind!=='glass'||!d.id.endsWith('-external'))continue;
+   const w=d.width+1.8,h=d.height+1.4,y=d.sill+d.height/2;
+   const plane=new THREE.Mesh(new THREE.PlaneGeometry(w,h),folMat);plane.position.set(d.at[0],y,d.at[1]-1.1);plane.name=`tombs:outside:${d.id}`;outside.add(plane);
+  }}
  // Area lighting strips (no 100+ point lights).
  for(const r of PLAN.rooms){const x=(r.bounds.x0+r.bounds.x1)/2,z=(r.bounds.z0+r.bounds.z1)/2;
   for(let i=-1;i<=1;i++)batch.add('light',x+i*1.35,r.ceiling-.12,z,1.0,.04,.11);
@@ -201,17 +219,20 @@ export function buildLab(_state:LabState):LabDisplay{
   }
  }
  // Lamps belong to town, so they naturally follow a 1:180 shrink.
- const ambient=new THREE.HemisphereLight(0xa7dbff,0x101821,1.4);ambient.name='TOMBS:fill';root.add(ambient);
+ const ambient=new THREE.HemisphereLight(0xa7dbff,0x1a2027,1.4);ambient.name='TOMBS:fill';root.add(ambient);
  const highlights:THREE.PointLight[]=[];
- for(const [x,y,z] of [[-13,2.2,-10],[0,3,-10],[13,2.2,-10],[0,5,0]] as const){
+ for(const [x,y,z] of [[-13.6,3.0,-10.2],[0,3,-10],[13.6,3.0,-10.2],[0,5,0]] as const){
   const light=new THREE.PointLight(0x9adbff,26,16,2);light.position.set(x,y,z);highlights.push(light);root.add(light);
  }
  const staticDrawGroups=batch.build();
+ shell.traverse(o=>{if(o instanceof THREE.Mesh){const n=o.name;shaded(o,/batch:(desk|metal|cabinet|console)$/.test(n))}});
  const animatedDoor=new Map<DoorId,number>();for(const d of PLAN.doors)animatedDoor.set(d.id,0);
  const spinRate=[.35,-.28,.22,-.18,.14];
  function update(dt:number,s:LabState):void{
   const mode=s.mode;const alarm=mode==='alarm'||mode==='emergency';
-  for(const [i,l] of highlights.entries()){l.color.setHex(alarm?(i%2?0xff6355:0xedac6b):mode==='dawn'?0xffd9b1:0xa0dcff);l.intensity=alarm?16:mode==='night'?26:21}
+  // night (the approved stills): the ceiling lights soft and cool, the room's warmth from its desk lamps
+  for(const [i,l] of highlights.entries()){l.color.setHex(alarm?(i%2?0xff6355:0xedac6b):mode==='dawn'?0xffd9b1:0xa8c8e8);l.intensity=alarm?12:mode==='night'?9:21}
+  ambient.intensity=mode==='night'?.62:alarm?.55:1.4;
   for(const d of PLAN.doors){const old=animatedDoor.get(d.id)??0,target=s.isOpen(d.id)?1:0;
     // Ease toward the target and STOP there. The first draft stepped "down" whenever it was not
     // below the target, so an open door (at 1, target 1) stepped back every other frame and
@@ -223,10 +244,11 @@ export function buildLab(_state:LabState):LabDisplay{
   if(mode==='activation'){arrayRings.forEach((ring,i)=>{ring.rotation.y+=spinRate[i]*dt;ring.rotation.x+=spinRate[i]*dt*.42})}
  }
  return {group:root,roof,doors:doorGroups,arrayRings,stats:{staticDrawGroups,roomCount:PLAN.rooms.length,doorCount:PLAN.doors.length},
+  dressing,outside,
   setRoof:(on:boolean)=>{roof.visible=on},setLabels:(on:boolean)=>{labels.visible=on},update,dispose(){root.traverse(o=>{
     if(o instanceof THREE.Mesh){o.geometry.dispose();const arr=Array.isArray(o.material)?o.material:[o.material];for(const mat of arr)mat.dispose()}
     if(o instanceof THREE.Sprite){o.material.map?.dispose();o.material.dispose()}
-   });for(const mat of m.values())mat.dispose();glassMat.dispose();roofMat.dispose();doorMaterial.dispose();glassDoorMaterial.dispose();edgeMaterial.dispose();frameMaterial.dispose();root.removeFromParent();}
+   });dressing.dispose();for(const mat of m.values())mat.dispose();glassMat.dispose();roofMat.dispose();doorMaterial.dispose();glassDoorMaterial.dispose();edgeMaterial.dispose();frameMaterial.dispose();root.removeFromParent();}
  };
 }
 /** Decorative only: insects and landscape remain in island world, OUTSIDE townRoot. */
@@ -267,24 +289,23 @@ function buildFurniture(batch:{add(name:string,x:number,y:number,z:number,sx:num
 function piece(it:Furniture,W:number,D:number,H:number,box:(mat:string,a:number,b:number,y:number,sa:number,sb:number,sy:number)=>void,root:THREE.Group,m:Map<string,THREE.Material>,y0:number):void{
  switch(it.kind){
  case 'desk':{
+  // the top and its steel frame; its monitors, keyboard and mouse are dressing.ts's (named screens)
   box('desk',0,0,H-.025,W,D,.05);
   for(const sa of [-1,1])for(const sb of [-1,1])box('metal',sa*(W/2-.05),sb*(D/2-.05),(H-.05)/2,.05,.05,H-.05);
-  const monitors=W>=1.6?[-.45,.45]:[0];
-  for(const a of monitors){box('console',a,D/2-.16,H+.29,.6,.04,.38);box('screen',a,D/2-.185,H+.29,.55,.01,.33);box('metal',a,D/2-.14,H+.06,.08,.08,.12);}
-  box('console',0,-D/2+.25,H+.012,.48,.16,.02);
+  for(const sa of [-1,1])box('metal',sa*(W/2-.05),0,.06,.04,D-.1,.04);
+  box('metal',0,D/2-.06,H-.12,W-.12,.02,.14);
   break}
  case 'console':{
   box('console',0,.02,(H-.04)/2,W,D-.04,H-.04);box('desk',0,0,H-.02,W+.02,D,.04);
   for(const a of [-.72,0,.72]){box('console',a,D/2-.18,H+.3,.62,.05,.4);box('screen',a,D/2-.21,H+.3,.57,.01,.35);}
   box('light',0,-D/2+.004,H-.12,W*.8,.008,.03);
   break}
- case 'chair':{
-  box('metal',0,0,.03,W*.75,D*.75,.04);box('metal',0,0,.25,.06,.06,.4);
-  box('chair',0,0,.48,W*.9,D*.9,.08);box('chair',0,-D/2+.06,.82,W*.85,.07,.55);
-  break}
+ case 'chair':break; // a movable group of its own (dressing.ts)
  case 'bench':{
-  box('metal',0,0,(H-.05)/2,W-.04,D-.04,H-.05);box('desk',0,0,H-.025,W,D,.05);
-  box('console',-W/4,D/2-.22,H+.15,.5,.32,.3);box('console',W/4,D/2-.2,H+.1,.36,.28,.2);box('screen',W/4,D/2-.345,H+.1,.3,.01,.14);
+  // white drawer units under a steel top, and one instrument case at its end
+  box('cabinet',0,.03,(H-.05)/2,W-.04,D-.06,H-.05);box('metal',0,0,H-.025,W,D,.05);
+  for(let i=0;i<5;i++){const a=-W/2+W*(i+.5)/5;for(let k=1;k<4;k++)box('metal',a,-D/2+.024,k*(H-.05)/4,W/5-.12,.008,.012);box('console',a,-D/2+.026,(H-.05)*.9,.12,.01,.025)}
+  box('console',-W/4,D/2-.22,H+.15,.5,.32,.3);box('light',-W/4,-.06+D/2-.22-.16,H+.22,.06,.004,.02);
   break}
  case 'shelf':{
   for(const s of [-1,1])box('metal',s*(W/2-.03),0,H/2,.04,D,H);
@@ -327,8 +348,9 @@ function piece(it:Furniture,W:number,D:number,H:number,box:(mat:string,a:number,
   const leaves=new THREE.Mesh(new THREE.SphereGeometry(Math.min(W,D)*.62,10,8),m.get('plant'));leaves.position.set(it.x,y0+.4+(H-.4)/2,it.z);leaves.scale.y=(H-.4)/(Math.min(W,D)*1.2);root.add(leaves);
   break}
  case 'crate':{box('metal',0,0,H/2,W,D,H);box('yellow',0,-D/2-.004,H*.7,W*.5,.008,.04);break}
- case 'intercom':{box('console',0,0,H/2,W,D,H);box('light',W*.2,-D/2-.004,H*.6,.05,.008,.03);break}
- case 'tablet':{box('console',0,0,.005,W,D,.01);box('screen',0,0,.011,W*.88,D*.84,.003);break}
+ case 'intercom':break; // dressing.ts: its grille and green ring
+ case 'glass-cabinet':case 'wall-shelf':case 'microscope':case 'tube-rack':case 'desk-lamp':case 'pot-plant':break; // dressing.ts
+ case 'tablet':break; // dressing.ts: a prop a hand carries
  case 'coffee-machine':{box('console',0,0,H/2,W,D,H);box('red',W*.25,-D/2-.004,H*.75,.03,.008,.03);break}
  case 'electrical-panel':{box('metal',0,0,H/2,W,D,H);box('yellow',0,-D/2-.004,H*.8,W*.3,.008,.06);break}
  }

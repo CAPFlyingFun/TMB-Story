@@ -570,7 +570,11 @@
 
   var BIBLE_TABS = ["CHARACTERS", "CREATURES", "LOCATIONS", "TECHNOLOGY", "MYSTERIES", "TIMELINE", "CONTINUITY_LOG"];
 
-  function viewListen() {
+  // #listen, or #listen/<chapter>[/3d]: open on that chapter, with its 3D scene shown (the Watch
+  // tab's Chapter 1 comes here: one player for listening and watching, Joshua 2026-11-10)
+  function viewListen(args) {
+    args = args || [];
+    var want = { chapter: parseInt(args[0], 10) || null, view3d: args.indexOf("3d") >= 0 ? true : null };
     setActiveTab("listen");
     if (!window.TMBPlayer) {
       view.innerHTML = '<div class="empty"><h2>Player unavailable</h2>' +
@@ -578,7 +582,7 @@
       return;
     }
     return loadManifest().then(function (m) {
-      window.TMBPlayer.mount(view, m);
+      window.TMBPlayer.mount(view, m, want);
     }).catch(function (err) {
       view.innerHTML = errorBlock(err, "reader/manifest.json");
     });
@@ -626,7 +630,7 @@
       case "overview": return viewOverview();
       case "outline": return viewOutline(arg || "1");
       case "story": return arg ? viewChapter(arg) : viewStoryList();
-      case "listen": return viewListen();
+      case "listen": return viewListen(segs.slice(1));
       case "rules": return viewRules(arg);
       case "index": return viewIndex();
       case "canon": return viewCanon(arg);

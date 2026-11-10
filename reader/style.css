@@ -810,3 +810,19 @@ button {
   .lp .lp-play { width: 64px; height: 64px; }
   .lp-script { display: none; }
 }
+
+/* The 3D scene over the stills (visual/story3d). It fades in once the lab and the people
+   have loaded; until then, or if it fails, the stills underneath carry the picture. */
+.lp-3d { position: absolute; inset: 0; opacity: 0; transition: opacity .5s ease; background: #000; }
+.lp-3d.is-ready { opacity: 1; }
+/* through the island opening the player's own approved stills show; the lab fades in over them */
+.lp-3d.is-ready.s3-clear { opacity: 0; }
+.lp-3d .s3-stage, .lp-3d .s3-stage canvas, .lp-3d .s3-intro { position: absolute; inset: 0; width: 100% !important; height: 100% !important; display: block; }
+.lp-3d .s3-hud { position: absolute; inset: 0; pointer-events: none; font: 600 .7rem/1 ui-monospace, Menlo, monospace;
+  color: rgba(235,245,240,.85); letter-spacing: .06em; text-shadow: 0 1px 2px #000; }
+.lp-3d .s3-tl { position: absolute; left: 12px; top: 56px; }
+.lp-3d .s3-tr { position: absolute; right: 12px; top: 56px; }
+.lp-3d .s3-tr b { color: #ff4a3d; }
+.lp-3d.s3-sec .s3-stage { filter: saturate(.75) contrast(1.05); }
+.lp-pill-3d { font-weight: 700; letter-spacing: .04em; }
+.lp-pill-3d.is-on { background: #8B6A3D; color: #fff; }
