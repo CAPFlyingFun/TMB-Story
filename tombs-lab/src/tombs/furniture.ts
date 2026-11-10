@@ -70,7 +70,7 @@ export const FURNITURE: readonly Furniture[] = [
   // in at the door finds the back of her chair.
   f('sarah.desk', 'sarah', 'desk', 16.48, -10.4, 0.8, 2.0, 0.74, 'e', true, { note: 'against the east wall, opposite the door' }),
   f('sarah.chair', 'sarah', 'chair', 15.55, -10.4, 0.6, 0.62, 0.95, 'e', false),
-  f('sarah.tablet', 'sarah', 'tablet', 16.3, -9.75, 0.26, 0.18, 0.012, 'e', false, { y0: 0.74, note: "Sarah's tablet, on her desk" }),
+  f('sarah.tablet', 'sarah', 'tablet', 16.17, -9.78, 0.26, 0.18, 0.012, 'e', false, { y0: 0.74, note: "Sarah's tablet, on her desk" }),
   f('sarah.credenza', 'sarah', 'credenza', 14.5, -12.7, 2.0, 0.45, 0.75, 'n', true, { note: 'low, under the window' }),
   f('sarah.bookcase', 'sarah', 'bookcase', 14.4, -7.92, 1.6, 0.4, 2.0, 's', true),
   f('sarah.armchair', 'sarah', 'armchair', 11.25, -12.35, 0.8, 0.8, 0.85, 'e', true, { note: 'reading corner, clear of the door' }),

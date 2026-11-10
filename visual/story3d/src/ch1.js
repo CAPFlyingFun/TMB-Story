@@ -26,15 +26,17 @@ export function L(text, o = {}) {
   throw new Error('Chapter 1 has no line: ' + text);
 }
 
+const N = PI, E = PI / 2, W = -PI / 2;
 // ---- places -----------------------------------------------------------------------------
 // Measured on the lab as built (tombs-lab furniture.ts + dressing.ts): each desk's monitors
 // stand 0.26 m in from its back edge with their middles 1.10 m up; its keyboard's keys are at
-// 0.767 m, 0.23 m in from the front edge; Jack's intercom stands at the front right of his
+// 0.767 m, 0.16 m in from the front edge; Jack's intercom stands at the front right of his
 // desk, its button on top at 0.88 m; Sarah's tablet starts on her desk.
 const P = {
   jackMon: [-13.0, 1.1, -12.64], jackMonR: [-12.7, 1.1, -12.62], secMon: [-15.3, 1.1, -12.64], sarahMon: [16.62, 1.1, -10.4],
-  intercom: [-12.15, 0.885, -12.3], jackKeys: [-13.05, 0.772, -12.33], secKeys: [-15.35, 0.772, -12.33], sarahKeys: [16.31, 0.772, -10.45],
-  tabletDesk: [16.3, 0.74, -9.75],
+  intercom: [-12.15, 0.885, -12.3], jackKeys: [-13.05, 0.772, -12.26], secKeys: [-15.35, 0.772, -12.26], sarahKeys: [16.24, 0.772, -10.45],
+  // (at her desk's front edge, laid long side across, so her fingertips reach its near edge)
+  tabletDesk: [16.17, 0.74, -9.78], tabletDeskYaw: E + PI,
   // "Sarah placed her tablet beside the keyboard": to the right of his keyboard and mouse, in
   // front of his right monitor, clear of the intercom
   // (its near edge under her right hand as she stands beside him: 3.5 cm clear of the intercom,
@@ -47,7 +49,6 @@ const EYE = { jack: { sit: 1.13, stand: 1.6 }, sarah: { sit: 1.22, stand: 1.58 }
 const SEAT = { jack: 0.42, sarah: 0.49 };
 // the story's chairs are the lab's own (tombs-lab furniture.ts ids)
 export const CHAIR_IDS = { jackChair: 'jack.chair.primary', secondChair: 'jack.chair.bench', sarahChair: 'sarah.chair' };
-const N = PI, E = PI / 2, W = -PI / 2;
 
 // ---- Jack -------------------------------------------------------------------------------
 const J = [
@@ -59,7 +60,7 @@ const J = [
   { t: L('Jack jerked awake', { offset: 0.1 }), face: N + 0.45, turn: 0.6 },
   { t: L('Jack jerked awake', { offset: 0.9 }), look: 'jackMon' },
   // "...leaned toward the monitor."
-  { t: L('The warning repeated'), move: { to: [-13, -11.95], dur: 1.6 } },
+  { t: L('The warning repeated'), move: { to: [-13, -11.85], dur: 1.6 } },
   { t: L('The warning repeated'), face: N, turn: 1.2 },
   { t: L('Several windows were opening'), hands: 'type' },
   { t: L('An unfamiliar connection'), hands: null },
@@ -70,13 +71,13 @@ const J = [
   { t: L('He immediately locked the terminal'), hands: 'type' },
   { t: L('He immediately locked the terminal', { offset: 1.6 }), hands: null },
   // the intercom: the chair rolls in toward it, the right hand holds the button
-  { t: L('He reached for the intercom.'), move: { to: [-12.7, -12.0], dur: 0.9 } },
+  { t: L('He reached for the intercom.'), move: { to: [-12.52, -11.95], dur: 0.9 } },
   { t: L('He reached for the intercom.'), face: N - 0.3 },
   { t: L('He reached for the intercom.', { offset: 0.4 }), hands: 'intercom', look: 'intercom' },
   { t: L('Jack reopened the network monitor.'), look: 'jackMon' },
   { t: L('Jack scanned the empty connection list.', { edge: 'end' }), look: 'intercom' },
   { t: L('Jack released the intercom'), hands: null, look: 'jackMon' },
-  { t: L('Jack released the intercom'), move: { to: [-13, -11.95], dur: 0.8 } },
+  { t: L('Jack released the intercom'), move: { to: [-13, -11.85], dur: 0.8 } },
   { t: L('Jack released the intercom'), face: N },
   { t: L('He reached for the keyboard'), hands: 'type' },
   // Sarah walks in behind him; he turns in his chair
@@ -96,7 +97,7 @@ const J = [
   { t: L('Sarah stared at him', { phrase: 'Jack pointed at the screen' }), look: 'jackMon', hands: 'point' },
   { t: L('I know.'), look: 'sarah', hands: null },
   { t: L('Sarah started powering up'), face: N + 0.35 },
-  { t: L('Jack kept one hand on the keyboard.'), move: { to: [-13, -11.9], dur: 0.5 } },
+  { t: L('Jack kept one hand on the keyboard.'), move: { to: [-13, -11.85], dur: 0.5 } },
   { t: L('Jack kept one hand on the keyboard.'), hands: 'typeL', face: N + 0.15 },
   // "Jack gave Sarah his chair right away." He stands, steps back out of her way...
   { t: L('Jack gave Sarah his chair', { offset: 0.2 }), pose: 'stand', at: [-12.7, -11.3], yaw: N + 0.6, blend: 0.7 },
@@ -113,7 +114,7 @@ const J = [
   { t: L('He crossed to the next workstation', { offset: 2.9 }), face: N, turn: 0.6 },
   { t: L('He crossed to the next workstation', { offset: 3.5 }), pose: 'sit', at: [-14.0, -9.6], yaw: N, blend: 0.7 },
   { t: L('He crossed to the next workstation', { offset: 4.3 }), move: { to: [-13.0, -10.9], dur: 2.3 } },
-  { t: L('He crossed to the next workstation', { offset: 6.6 }), move: { to: [-13.0, -11.95], dur: 1.0 } },
+  { t: L('He crossed to the next workstation', { offset: 6.6 }), move: { to: [-13.0, -11.85], dur: 1.0 } },
   { t: L('He crossed to the next workstation', { offset: 6.0 }), look: 'jackMon' },
   { t: L('Jack watched his own log scroll.'), look: 'jackMon' },
   { t: L('He pulled up the TOMBS directory again'), hands: 'type' },
@@ -155,9 +156,12 @@ const S = [
   { t: 0, look: 'sarahMon', hands: 'typeS' },
   { t: L("Sarah's voice came through the speaker."), hands: null },
   // she reacts while Jack is still asking, and walks only after "I'm on my way."
-  { t: L('Can you come take a look?', { offset: 0.1 }), pose: 'stand', at: [15.7, -9.9], yaw: E - 0.2, blend: 0.8 },
+  // she stands at her desk's edge, picks her tablet up (Joshua, 2026-11-10: "She didn't pick up a
+  // tablet that was sitting next on her desk"), tucks it under her right arm and carries it in
+  // ("tablet tucked beneath one arm") -- seen the whole way, until she draws it out to set it down
+  { t: L('Can you come take a look?', { offset: 0.1 }), pose: 'stand', at: [15.88, -9.86], yaw: E, blend: 0.8 },
   { t: L('Can you come take a look?', { offset: 0.6 }), hands: 'tabletPick', look: 'tablet' },
-  { t: L("I'm on my way.", { offset: 0.5 }), hands: null, look: null },
+  { t: L("I'm on my way.", { offset: 0.3 }), hands: 'carry', look: null },
   { t: 0, walk: null },
   { t: L("I'm on my way.", { offset: 1.1 }), walk: SARAH_WALK },
   { t: L('Sarah Bennett walked straight in', { offset: 0.2 }), look: 'jack' },
@@ -172,9 +176,9 @@ const S = [
   // (her bump is above the desk's height, so it overhangs the edge without touching it; her arms are
   // short for the toon model, 0.45 m shoulder to wrist, so the tablet's place and the keyboard's
   // near corner are reached by a deep lean, and her left hand rests on his right shoulder)
-  { t: L('She leaned over his shoulder'), walk: { points: [[-12.42, -11.97]], keys: [[0, L('She leaned over his shoulder', { offset: 0.1 })], [1, L('She leaned over his shoulder', { offset: 0.9 })]], endYaw: yawTo(-0.3, -1) } },
+  { t: L('She leaned over his shoulder'), walk: { points: [[-12.42, -11.89]], keys: [[0, L('She leaned over his shoulder', { offset: 0.1 })], [1, L('She leaned over his shoulder', { offset: 0.9 })]], endYaw: yawTo(-0.3, -1) } },
   { t: L('She leaned over his shoulder'), look: 'jackMon' },
-  { t: L('She leaned over his shoulder', { offset: 1.0 }), hands: 'onShoulder' },
+  { t: L('She leaned over his shoulder', { offset: 1.0 }), hands: 'shoulderCarry' },
   { t: L('Jack.', { nth: 0 }), look: 'jack' },
   { t: L('Sarah placed her tablet', { phrase: 'Sarah placed' }), hands: 'tabletPlace', look: 'tabletJack' },
   { t: L('Sarah placed her tablet', { edge: 'end' }), hands: 'onShoulder', look: 'jack' },
@@ -187,7 +191,7 @@ const S = [
   { t: L('Sarah stared at him', { phrase: 'before looking back' }), look: 'jackMon' },
   // "Sarah started powering up the other console next to Jack."
   { t: L('Sarah started powering up'), hands: null },
-  { t: L('Sarah started powering up'), walk: { points: [[-12.6, -10.95], [-13.4, -10.75], [-14.6, -11.0], [-15.05, -11.98]], keys: [[0, L('Sarah started powering up', { offset: 0.1 })], [4, L('Sarah started powering up', { offset: 2.6 })]], endYaw: N } },
+  { t: L('Sarah started powering up'), walk: { points: [[-12.6, -10.95], [-13.4, -10.75], [-14.6, -11.0], [-15.05, -11.9]], keys: [[0, L('Sarah started powering up', { offset: 0.1 })], [4, L('Sarah started powering up', { offset: 2.6 })]], endYaw: N } },
   { t: L('Sarah started powering up', { offset: 0.2 }), look: 'secMon' },
   { t: L('Sarah started powering up', { offset: 2.4 }), hands: 'powerUp' },
   { t: L('Can I take your chair?'), hands: null, look: 'jack' },
@@ -203,7 +207,7 @@ const S = [
   { t: tSit, pose: 'sit', at: [-13.0, -11.45], yaw: W, blend: 0.9 },
   { t: tSit, look: 'jack' },
   { t: L('He crossed to the next workstation', { offset: 1.0 }), face: N, turn: 1.2 },
-  { t: L('He crossed to the next workstation', { offset: 1.0 }), move: { to: [-15.3, -11.95], dur: 3.0 } },
+  { t: L('He crossed to the next workstation', { offset: 1.0 }), move: { to: [-15.3, -11.85], dur: 3.0 } },
   { t: L('He crossed to the next workstation', { offset: 1.2 }), look: 'secMon' },
   { t: L('Sarah was already typing.', { offset: -1.0 }), hands: 'typeS' },
   { t: L('Sarah looked sideways at him.'), look: 'jack', face: N - 0.3 },
@@ -240,10 +244,15 @@ const CHAIRS = {
     { t: L('Can you come take a look?', { offset: 0.1 }), occupant: null, place: { at: [15.85, -10.4], yaw: E } },
     { t: L('Can you come take a look?', { offset: 0.3 }), move: { to: [16.0, -10.75], yaw: E + 0.5, dur: 0.6 } }],
 };
-const TABLET = [{ t: 0, set: { on: 'desk', at: P.tabletDesk, yaw: 0 } },
-  { t: L("I'm on my way.", { offset: 0.3 }), set: { on: 'arm', who: 'sarah', side: 'R' } },
-  { t: L('Sarah placed her tablet', { phrase: 'Sarah placed', offset: -0.5 }), set: { on: 'hand', who: 'sarah', side: 'R', since: L('Sarah placed her tablet', { phrase: 'Sarah placed', offset: -0.5 }) } },
-  { t: L('Sarah placed her tablet', { edge: 'end', offset: -0.6 }), set: { on: 'desk', at: P.tabletJack, yaw: P.tabletYaw } }];
+// on her desk; lifted into her hand as her fingertips reach it; tucked under her right arm; drawn
+// out into her hand; set down beside his keyboard (each hand-off eased over `dur`)
+const tPick = L('Can you come take a look?', { offset: 1.25 }), tTuck = L("I'm on my way.", { offset: 0.3 });
+const tDraw = L('Sarah placed her tablet', { phrase: 'Sarah placed', offset: -0.5 }), tDown = L('Sarah placed her tablet', { edge: 'end', offset: -0.6 });
+const TABLET = [{ t: 0, set: { on: 'desk', at: P.tabletDesk, yaw: P.tabletDeskYaw } },
+  { t: tPick, set: { on: 'hand', from: 'desk', fromAt: P.tabletDesk, fromYaw: P.tabletDeskYaw, who: 'sarah', side: 'R', since: tPick, dur: 0.3 } },
+  { t: tTuck, set: { on: 'tuck', from: 'hand', since: tTuck, dur: 0.7 } },
+  { t: tDraw, set: { on: 'hand', from: 'tuck', since: tDraw, dur: 0.5 } },
+  { t: tDown, set: { on: 'desk', from: null, at: P.tabletJack, yaw: P.tabletYaw } }];
 // ---- screens ----------------------------------------------------------------------------
 // What each of the room's screens shows, from the manuscript's own system lines. Jack's left
 // monitor ('...:0') is where he works (the network monitor, the logs, the directory); his right
@@ -314,9 +323,23 @@ const CAM = {
   chairNudge: { pos: [-12.0, 1.45, -10.55], look: [-13.3, 0.8, -11.65], hfov: 62 },
   bench: { pos: [-12.25, 1.7, -10.3], look: [-14.0, 0.7, -9.2], hfov: 66 },
   pairFace: { pos: [-14.15, 1.32, -12.72], look: [-14.15, 1.12, -11.6], hfov: 74, slot: { hfov: 82 } },
+  // SARAH SEEN AS SHE IS (Joshua, 2026-11-10: "don't hide her pregnancy... so the camera can show her
+  // better"): side and three-quarter views at her own height, where her bump reads in profile
+  // at her desk, picking up her tablet
+  sarahPick: { pos: [15.95, 1.35, -8.55], look: [15.95, 0.98, -9.9], hfov: 62 },
+  // coming in through Jack's door, front on, the tablet under her arm
+  entrance: { pos: [-12.95, 1.4, -11.35], look: [-11.35, 1.05, -9.95], hfov: 62 },
+  // standing at his shoulder, from the desk's east end: her profile, Jack beyond her
+  sarahProfile: { pos: [-11.35, 1.28, -11.7], look: [-12.5, 1.02, -11.92], hfov: 54 },
+  // seated at the other console, from between the two chairs: her profile at her screen
+  sarahSide: { pos: [-14.05, 1.12, -12.0], look: [-15.3, 0.92, -11.9], hfov: 62 },
+  // just in, a few steps behind his chair: her front, over his left shoulder
+  sarahFront: { pos: [-13.6, 1.45, -11.6], look: [-12.3, 1.1, -11.15], hfov: 58 },
 };
 const FRAMES = { facility: [-18.5, 18.5, -14.5, 14.5], jackLab: [-17.4, -10.1, -13.5, -7.2], northWing: [-17.5, 17.5, -13.6, -6.8] };
 const SHOTS = [];
+// the slow push-in (frame): the most a shot closes in, and how quickly it gets there
+const PUSH = 0.12, PUSH_SECONDS = 10;
 const cut = (t, shot, extra = {}) => SHOTS.push({ t, shot, ...extra });
 cut(0, 'overhead', { from: 'facility', to: 'jackLab', t0: L('Deep inside one of those laboratories'), dur: L('A warning tone chirped') - L('Deep inside one of those laboratories') - 4 });
 cut(L('A warning tone chirped'), 'J2');   // (the toon faces' eyes are painted open: asleep, he is not seen close)
@@ -344,9 +367,8 @@ for (const ln of LINES) {
   const who = ln.who.startsWith('sarah') || /Sarah/.test(ln.text) ? 'S1' : 'J1';
   cut(ln.s, who);
 }
-cut(L('Can you come take a look?'), 'overhead', { from: 'northWing', to: 'northWing', t0: 0, dur: 1 });
-cut(L("I'm on my way."), 'S1');
-cut(L("I'm on my way.", { offset: 1.3 }), 'S2');
+cut(L('Can you come take a look?'), 'sarahPick');
+cut(L("I'm on my way.", { offset: 1.6 }), 'S2');
 cut(L("I'm on my way.", { offset: 4.0 }), 'SC');
 cut(L('Who are you?'), 'J1');
 cut(L('The cursor moved'), 'jackScreen');
@@ -354,12 +376,12 @@ cut(L('The cursor moved', { edge: 'end', offset: -0.2 }), 'C2');
 cut(L('Jack froze as a file opened.'), 'jackScreen');
 cut(L('No, no, no.'), 'J1');
 cut(L('He reached for the keyboard'), 'JC');
-cut(L('He reached for the keyboard', { offset: 4.1 }), 'J3');
-// Sarah in Jack's lab, still only from behind
+cut(L('He reached for the keyboard', { offset: 4.1 }), 'entrance');
+// Sarah in Jack's lab: his lines over her shoulder, hers in profile
 for (const ln of LINES) {
   if (ln.s < L('Please tell me you didn') || ln.s >= L('Sarah started powering up')) continue;
   if (ln.who.startsWith('jack')) cut(ln.s, 'overSarah');
-  else if (ln.who.startsWith('sarah')) cut(ln.s, 'J3');
+  else if (ln.who.startsWith('sarah')) cut(ln.s, ln.s < L('She leaned over his shoulder') ? 'sarahFront' : 'sarahProfile');
 }
 cut(L('Sarah started powering up'), 'J3');
 cut(L('Can I take your chair?'), 'overSarahW');
@@ -374,20 +396,20 @@ cut(L('Sarah was already typing.'), 'pairFront');
 for (const ln of LINES) {
   if (ln.s < L('You said the connection disappeared?') || ln.s >= L('A new warning tone interrupted them.')) continue;
   if (ln.who.startsWith('jack')) cut(ln.s, 'J1');
-  else if (ln.who.startsWith('sarah')) cut(ln.s, 'J4');
-  else { const j = /\bJack\b|\bHe\b/.test(ln.text), sa = /Sarah|\bShe\b|\bher\b/.test(ln.text); cut(ln.s, (j && sa) || /Both/.test(ln.text) ? 'pairFront' : sa ? 'J4' : 'J1'); }
+  else if (ln.who.startsWith('sarah')) cut(ln.s, 'sarahSide');
+  else { const j = /\bJack\b|\bHe\b/.test(ln.text), sa = /Sarah|\bShe\b|\bher\b/.test(ln.text); cut(ln.s, (j && sa) || /Both/.test(ln.text) ? 'pairFront' : sa ? 'sarahSide' : 'J1'); }
 }
 // the new warning: Jack's console and his reaction (the Array is not shown as its cause)
 cut(L('A new warning tone interrupted them.'), 'jackScreen');
 cut(L('Sarah sat upright.'), 'pairFront');
-cut(L('Did you do that?'), 'J4');
+cut(L('Did you do that?'), 'sarahSide');
 cut(L('Jack reached for the console.'), 'J1');
 cut(L('Sarah pointed at the request.'), 'J4');
 cut(L('Jack reached across the console'), 'jackScreen');
 cut(L("Jack's expression hardened."), 'J1');
 cut(L('He entered his administrator credentials'), 'jackScreen');
 cut(L('Sarah looked from the message to him.'), 'pairFront');
-cut(L('Your credentials?'), 'J4');
+cut(L('Your credentials?'), 'sarahSide');
 cut(L('Jack stared at the warning.'), 'J1');
 cut(L('Sarah turned toward him.'), 'J4');
 cut(L('Jack tried his credentials again.'), 'jackScreen');
@@ -408,13 +430,14 @@ export { SHOTLIST, CAM };
 
 // ---- evaluate ---------------------------------------------------------------------------
 const LEANS = {
-  sarah: [[L('She leaned over his shoulder', { offset: 0.2 }), 0], [L('She leaned over his shoulder', { offset: 1.5 }), 24],
+  sarah: [[L('Can you come take a look?', { offset: 0.4 }), 0], [L('Can you come take a look?', { offset: 0.95 }), 40], [tPick + 0.15, 40], [tTuck + 0.3, 0],
+    [L('She leaned over his shoulder', { offset: 0.2 }), 0], [L('She leaned over his shoulder', { offset: 1.5 }), 24],
     [L('Sarah placed her tablet', { phrase: 'Sarah placed', offset: -0.4 }), 24], [L('Sarah placed her tablet', { phrase: 'Sarah placed', offset: 0.6 }), 40],
     [L('Sarah placed her tablet', { edge: 'end', offset: 0.3 }), 40], [L('Sarah placed her tablet', { edge: 'end', offset: 1.3 }), 24],
     [L('Sarah tapped the edge of the keyboard.'), 24], [L('Sarah tapped the edge of the keyboard.', { offset: 0.7 }), 36],
     [L('Sarah tapped the edge of the keyboard.', { edge: 'end' }), 36], [L('And then?', { edge: 'end' }), 12],
     [L('Sarah started powering up'), 12], [L('Sarah started powering up', { offset: 0.8 }), 0],
-    [L('Sarah started powering up', { offset: 2.2 }), 0], [L('Sarah started powering up', { offset: 2.9 }), 16], [L('Can I take your chair?'), 0]],
+    [L('Sarah started powering up', { offset: 1.9 }), 0], [L('Sarah started powering up', { offset: 2.5 }), 34], [L('Sarah started powering up', { offset: 3.6 }), 34], [L('Can I take your chair?'), 0]],
   jack: [[L('Jack leaned back.'), 0], [L('Jack leaned back.', { offset: 0.6 }), -8], [L('I know.'), -8], [L('I know.', { offset: 0.8 }), 0]],
 };
 function leanAt(id, t) {
@@ -438,16 +461,23 @@ function lookPoint(name, A) {
 // then lowers onto it over `DOWN` seconds: the reach takes hold only under 85% of the arm and
 // keeps it to 90% (humanReach HOLD_IN / HOLD_OUT), and the toon arms are short.
 const DOWN = 0.7, ABOVE = 0.07;
+// GAME TUNING (toon Sarah): her carrying hand, metres to her right, forward, and up from the floor
+const CARRY = [0.27, 0.06, 1.0];
 function handTargets(id, a, A, chairs, t = 0) {
   const settle = 1 - smooth((t - (a.handsT || 0)) / DOWN), lift = ABOVE * settle;
   const f = [Math.sin(a.yaw), Math.cos(a.yaw)], left = [f[1], -f[0]];
   const keysAt = (k, side) => [k[0] + left[0] * 0.13 * side, k[1], k[2] + left[1] * 0.13 * side];
+  const carry = () => ({ side: 'R', at: [a.at[0] - left[0] * CARRY[0] + f[0] * CARRY[1], CARRY[2], a.at[1] - left[1] * CARRY[0] + f[1] * CARRY[1]], kind: 'hold', palm: { x: left[0], y: 0.3, z: left[1] } });
   const near = () => { let best = P.jackKeys, d = 1e9; for (const k of [P.jackKeys, P.secKeys, P.sarahKeys]) { const dd = Math.hypot(k[0] - a.at[0], k[2] - a.at[1]); if (dd < d) { d = dd; best = k; } } return best; };
   switch (a.hands) {
     case 'type': case 'typeS': { const k = near(); return [{ side: 'L', at: keysAt(k, 1) }, { side: 'R', at: keysAt(k, -1) }]; }
     case 'typeL': return [{ side: 'L', at: keysAt(P.jackKeys, 1) }];
     case 'intercom': return [{ side: 'R', at: P.intercom }];
-    case 'tabletPick': return [{ side: 'R', at: P.tabletDesk }];
+    // her fingertips on the tablet's near edge (it lies long side across, 0.175 m deep)
+    case 'tabletPick': return [{ side: 'R', at: [P.tabletDesk[0] - 0.085, 0.756 + lift, P.tabletDesk[2]] }];
+    // carrying it tucked: her right hand at the front of her hip, palm in, holding its far corner
+    case 'carry': return [carry()];
+    case 'shoulderCarry': return [...handTargets(id, { ...a, hands: 'onShoulder' }, A, chairs, t), carry()];
     // fingertips: on the tablet's far edge as she sets it down, then her finger on the keyboard's near corner
     case 'tabletPlace': return [{ side: 'R', at: [-12.345, 0.764 + lift, -12.12] }, ...handTargets(id, { ...a, hands: 'onShoulder' }, A, chairs, t)];
     case 'onShoulder': return [{ side: 'L', bone: ['jack', 'shoulderR'], offset: [0.0, 0.075, 0.03], kind: 'hold', palm: { x: 0, y: -1, z: 0 } }];
@@ -482,7 +512,7 @@ export function frame(t, aspect, fmt) {
     actors[id] = { ...a, visible: a.visible, look: lookPoint(a.look, A), hands: handTargets(id, a, A, chairs, t), typing: /^type/.test(a.hands || ''), lean: leanAt(id, t), talking: speaking.startsWith(id), seat: SEAT[id] };
   }
   const tablet = evalDiscrete(TABLET, t, {});
-  if (tablet.on === 'hand') tablet.k = Math.min(1, (t - tablet.since) / 0.5);
+  if (tablet.on !== 'desk' && tablet.since != null) tablet.k = Math.min(1, (t - tablet.since) / (tablet.dur || 0.5));
   const chairsOut = {}; for (const [id, c] of Object.entries(chairs)) chairsOut[CHAIR_IDS[id]] = c;
   const doors = {}; for (const [id, p] of Object.entries(DOORS)) doors[id] = ['jack', 'sarah'].some(k => Math.hypot(A[k].at[0] - p[0], A[k].at[1] - p[1]) < 1.7);
   // (Joshua's approved stills keep the room's own light through the warnings: the amber and red
@@ -501,7 +531,13 @@ export function frame(t, aspect, fmt) {
   } else {
     const c = CAM[shot.shot], o = fmt === 'slot' ? (c.slot || {}) : {};
     const hf = o.hfov || (fmt === 'slot' ? c.hfov * 0.9 : c.hfov);
-    camera = { pos: o.pos || c.pos, look: o.look || c.look, vfov: 2 * Math.atan(Math.tan(hf * PI / 360) / aspect) * 180 / PI, sec: c.sec || null, label: c.sec || shot.shot };
+    // THE SLOW PUSH-IN (Joshua, 2026-11-10: "add the slow zoom in... I liked that slow zoom in",
+    // the Watch tab's slow push into the room): every shot closes in slowly while it holds -- the
+    // lens narrows at about 1.2% a second at first, easing toward PUSH -- so a short cut barely
+    // moves and a long one settles in. A function of the audio time: a seek lands mid-push.
+    const held = Math.max(0, t - shot.t), push = PUSH * (1 - Math.exp(-held / PUSH_SECONDS));
+    const hz = 2 * Math.atan(Math.tan(hf * PI / 360) * (1 - push)) * 180 / PI;
+    camera = { pos: o.pos || c.pos, look: o.look || c.look, vfov: 2 * Math.atan(Math.tan(hz * PI / 360) / aspect) * 180 / PI, sec: c.sec || null, label: c.sec || shot.shot };
   }
   // footprint trails (overhead only): where each has been over the last 8 s
   const markers = {};

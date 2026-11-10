@@ -52,6 +52,10 @@ function toTurns(map) {
 }
 const ID = [0, 0, 0, 1];
 const DEG = Math.PI / 180;
+// GAME TUNING, measured on the toon cast (2026-11-10): how far a hanging arm turns in, and how far each finger joint curls at rest
+const ARM_ROLL = 85, FINGER_CURL = 14;
+// where a tucked tablet sits: this far from the elbow toward the wrist, and this far in from the forearm toward her side (metres)
+const TUCK_ALONG = 0.5, TUCK_IN = -0.02, TUCK_TURN = -35;
 const qMul = (a, b) => [a[3] * b[0] + a[0] * b[3] + a[1] * b[2] - a[2] * b[1], a[3] * b[1] - a[0] * b[2] + a[1] * b[3] + a[2] * b[0], a[3] * b[2] + a[0] * b[1] - a[1] * b[0] + a[2] * b[3], a[3] * b[3] - a[0] * b[0] - a[1] * b[1] - a[2] * b[2]];
 const rx = a => qAxis(1, 0, 0, a), ry = a => qAxis(0, 1, 0, a), rz = a => qAxis(0, 0, 1, a);
 function blend(a, b, k) { if (k >= 1) return b; const o = new Map(); for (const j of new Set([...a.keys(), ...b.keys()])) o.set(j, qSlerp(a.get(j) || ID, b.get(j) || ID, k)); return o; }
@@ -171,8 +175,11 @@ export class Stage {
       const fm = [].concat(skin.material).find(m => m.name === 'Material_0');
       if (fm) { THREE.patchFaceRig(fm); face = { mesh: skin, material: fm, motion: new THREE.FaceMotion(7), rest: [0, 0, 0] }; }
     }
+    // the finger joints (index, middle, ring, little: three each) and which way each curls
+    const fingers = [];
+    bones.forEach((bn, i) => { const m = /^(index|middle|ring|pinky)[123]_([LR])$/.exec(bn.name); if (m) fingers.push([i, m[2] === 'L' ? -1 : 1]); });
     this.scene.add(model);
-    this.bodies[id] = { id, model, rig, measure, bones, hips, head, seed: id === 'jack' ? 0.3 : 1.1, seat, face, carry, pregnant: !!spec.pregnant, settled: !!story && !!spec.pregnant, seatH: spec.seat || 0.45, solver: null, dynamics: [] };
+    this.bodies[id] = { fingers, id, model, rig, measure, bones, hips, head, seed: id === 'jack' ? 0.3 : 1.1, seat, face, carry, pregnant: !!spec.pregnant, settled: !!story && !!spec.pregnant, seatH: spec.seat || 0.45, solver: null, dynamics: [] };
   }
 
   /** a walking step's length in metres (the rig's own stride, in bind units) */
@@ -201,6 +208,16 @@ export class Stage {
     if (a.typing) out.push([j.spine, rx((a.pose === 'sit' ? 10 : 6) * DEG)]);
     const awake = 1 - asleep - w('walk');
     if (awake > 0.01) { const s = b.seed, h = Math.sin((2 * Math.PI * t) / (7.3 + s * 1.3) + s) + 0.5 * Math.sin((2 * Math.PI * t) / (3.1 + s * 0.4) + 2 * s); out.push([j.neck, ry(L * 3 * DEG * h * awake)]); }
+    // HANGING HANDS face the thighs (Joshua, 2026-11-10: "the hands doing weird twists at the
+    // wrists"): on the toon rigs a standing or walking arm hangs palm forward with the fingers
+    // spread, which reads as a wrist turned the wrong way. The whole arm turns in from the
+    // shoulder, about its own length (measured on the toon cast: 85 degrees brings the palm to
+    // the thigh, standing and walking; left and right are mirrored), so neither the elbow nor the wrist is wrung. A
+    // hand that holds something is the reach's again (it replaces the arm's turns).
+    const upright = w('stand') + w('walk');
+    if (upright > 0.01) { const r = ARM_ROLL * DEG * upright; out.push([j.shoulderL, rx(-L * r)], [j.shoulderR, rx(L * r)]); }
+    // and the fingers rest a little curled, not splayed (each finger's three joints)
+    for (const [bone, sg] of b.fingers) out.push([bone, rz(sg * L * FINGER_CURL * DEG)]);
     if (a.talking && asleep < 0.5) { const s = b.seed; out.push([j.head, rx(3.5 * DEG * Math.sin(t * 2 * Math.PI * 1.6 + s))], [j.neck, ry(L * 3 * DEG * Math.sin(t * 2 * Math.PI * 0.55 + 2 * s))]); }
     return out;
   }
@@ -282,12 +299,24 @@ export class Stage {
     }
   }
 
-  /** where a body's left armpit is, for a tablet tucked under that arm */
-  underArm(id, side = 'L') {
+  /**
+   * A tablet TUCKED against her side under her forearm ("tablet tucked beneath one arm"): its long
+   * edge along the forearm, its screen turned to her, between the arm and her side -- outside the
+   * body, so it is seen (Joshua, 2026-11-10: "only when she was supposed to place the tablet on the
+   * desk, did it suddenly appear"). The hand holds its far corner (ch1.js 'carry').
+   */
+  tuckPose(id, side = 'R') {
     const b = this.bodies[id], j = b.measure.joints, w = i => b.bones[i].getWorldPosition(new THREE.Vector3());
-    const sh = w(side === 'R' ? j.shoulderR : j.shoulderL), el = w(side === 'R' ? j.elbowR : j.elbowL), chest = w(j.chest);
-    const p = sh.clone().lerp(el, 0.55).lerp(chest, 0.28);
-    return { p, yaw: b.model.rotation.y };
+    const el = w(side === 'R' ? j.elbowR : j.elbowL), wr = w(side === 'R' ? j.wristR : j.wristL);
+    const yaw = b.model.rotation.y, f = new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw)), left = new THREE.Vector3(f.z, 0, -f.x);
+    const out = side === 'R' ? left.clone().negate() : left;
+    const T = [TUCK_ALONG, TUCK_IN, 0, TUCK_TURN];
+    const x = wr.clone().sub(el); x.addScaledVector(out, -x.dot(out)); if (x.lengthSq() < 1e-6) x.copy(f); x.normalize();
+    // (turned out toward the front a little, so it reads from the front as well as the side)
+    const turn = (side === 'R' ? 1 : -1) * T[3] * DEG; x.applyAxisAngle(new THREE.Vector3(0, 1, 0), turn); out.applyAxisAngle(new THREE.Vector3(0, 1, 0), turn);
+    const y = out.clone().negate(), z = new THREE.Vector3().crossVectors(x, y).normalize(); x.crossVectors(y, z).normalize();
+    const p = el.clone().lerp(wr, T[0]).addScaledVector(out, -T[1]).addScaledVector(z, T[2]);
+    return { p, q: new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().makeBasis(x, y, z)) };
   }
   /** a flat thing held in the hand, palm down: its near edge under her fingertips, laid the way she faces */
   inHand(id, side = 'R', depth = 0.175) {
@@ -312,19 +341,22 @@ export class Stage {
     if (this.size !== w + 'x' + h) { this.renderer.setSize(w, h, false); this.size = w + 'x' + h; } this.camera.aspect = w / h;
     for (const [id, c] of Object.entries(S.chairs)) this.setChair(id, c);
     for (const id of Object.keys(this.bodies)) this.pose(id, S.actors[id], t, steady, dt);
-    // the tablet: under her arm while she carries it, else where it was set down
+    // the tablet: on a desk, in her hand, or tucked under her arm; `from` and k ease it from one
+    // place to the next (picked up from the desk, tucked, drawn out to be set down)
     const tb = S.tablet;
     if (this.tablet && tb) {
-      const who = this.bodies[tb.who];
-      if ((tb.on === 'arm' || tb.on === 'hand') && who && who.model.visible) {
-        // under her arm, or drawn out into her hand (k eases it from one to the other)
-        const arm = this.underArm(tb.who, tb.side || 'L'), sideZ = (tb.side === 'R' ? -1 : 1) * (Math.PI / 2 - 0.15);
-        if (tb.on === 'arm') { this.tablet.position.copy(arm.p); this.tablet.rotation.set(0, arm.yaw, sideZ, 'YXZ'); }
-        else {
-          const hand = this.inHand(tb.who, tb.side || 'R'), k = smooth(tb.k ?? 1);
-          this.tablet.position.copy(arm.p).lerp(hand.p, k); this.tablet.rotation.set(0, hand.yaw + Math.PI, sideZ * (1 - k), 'YXZ');
-        }
-      } else { this.tablet.position.set(tb.at[0], tb.at[1], tb.at[2]); this.tablet.rotation.set(0, tb.yaw || 0, 0); }
+      const who = this.bodies[tb.who], held = tb.on !== 'desk' && who && who.model.visible;
+      const place = (src) => {
+        if (src === 'tuck') return this.tuckPose(tb.who, tb.side || 'R');
+        if (src === 'hand') { const h = this.inHand(tb.who, tb.side || 'R'); return { p: h.p, q: new THREE.Quaternion().setFromEuler(new THREE.Euler(0, h.yaw + Math.PI, 0)) }; }
+        const at = tb.fromAt || tb.at; return { p: new THREE.Vector3(at[0], at[1], at[2]), q: new THREE.Quaternion().setFromEuler(new THREE.Euler(0, tb.fromYaw ?? tb.yaw ?? 0, 0)) };
+      };
+      if (!held) { this.tablet.position.set(tb.at[0], tb.at[1], tb.at[2]); this.tablet.rotation.set(0, tb.yaw || 0, 0); }
+      else {
+        const B = place(tb.on), k = smooth(tb.k ?? 1);
+        if (tb.from && k < 1) { const A = place(tb.from); B.p.copy(A.p.lerp(B.p, k)); B.q.copy(A.q.slerp(B.q, k)); }
+        this.tablet.position.copy(B.p); this.tablet.quaternion.copy(B.q);
+      }
     }
     // screens and the glow each desk throws
     if (S.screens) {

@@ -9,7 +9,8 @@ that the one audio element drives the picture:
     time at once; a speed change keeps them together;
   - switching the 3D off and on while playing neither restarts nor moves the audio, and the
     chapter's audio file is fetched once (no second player);
-  - if the scene bundle fails to load, the stills stay and the audio plays on.
+  - if the scene bundle fails to load, the stills come back and the audio plays on;
+  - with the 3D on no still shows under or before it, and a first visit has it on.
 Screenshots go to out-dir (default: a temp folder). Needs Playwright's Chromium.
 """
 import functools, http.server, json, os, sys, tempfile, threading, asyncio
@@ -53,7 +54,9 @@ async def run(p, w, h, tag):
     await pg.goto(BASE + "index.html#listen/1/3d")
     await pg.wait_for_function("() => { const h = document.querySelector('.lp-3d'); return h && h.classList.contains('is-ready'); }", timeout=300000)
     s = await state(pg)
-    check(s["ready"] and s["pill"] and s["on"], f"{tag}: the 3D scene loads over the stills, the 3D pill on")
+    check(s["ready"] and s["pill"] and s["on"], f"{tag}: the 3D scene loads, the 3D pill on")
+    hidden = await pg.evaluate("() => { const v = document.getElementById('listen-visual'), i = document.getElementById('listen-shot'); return v.classList.contains('is-3d') && getComputedStyle(v).backgroundImage === 'none' && (!i || getComputedStyle(i).visibility === 'hidden'); }")
+    check(hidden, f"{tag}: with the 3D on, no still shows under or before it")
     await pg.screenshot(path=os.path.join(OUT, f"{tag}-0-loaded.png"))
     # play
     await pg.click("#listen-toggle")
@@ -106,11 +109,22 @@ async def fallback(p):
     await pg.screenshot(path=os.path.join(OUT, "fallback.png"))
     await b.close()
 
+async def default_on(p):
+    # a first visit, no saved choice: Chapter 1 opens with its 3D on (Joshua, 2026-11-10)
+    b = await p.chromium.launch(executable_path=CHROME, args=["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"])
+    pg = await b.new_page(viewport={"width": 390, "height": 844})
+    await pg.goto(BASE + "index.html#listen/1")
+    await pg.wait_for_selector("#lp-3d", timeout=120000)
+    s = await state(pg)
+    check(s["on"] and await pg.evaluate("() => !!document.querySelector('.lp-3d')"), "default: a first visit opens Chapter 1 with the 3D on")
+    await b.close()
+
 async def main():
     async with async_playwright() as p:
         await run(p, 390, 844, "portrait")
         await run(p, 844, 390, "landscape")
         await fallback(p)
+        await default_on(p)
     print(f"\n{len(failures)} failure(s). Screenshots: {OUT}")
     sys.exit(1 if failures else 0)
 

@@ -493,3 +493,16 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 - **Audio manifest.** Chapter 1's manifest was rebuilt from the current file (3b99bb2 had replaced the mp3 without it). Timing numbers and the cache hash only.
 **Consequences:** About 7.8 MB is fetched when the 3D is first switched on. The toon faces have painted eyes and no jaw, so "His eyes were closed" is not shown and speech is a small head movement, not lip-sync; the cameras keep him wide while he sleeps. No chapter text or audio approval state changed.
 **Status:** Accepted for review (Joshua, 2026-11-10). Presentation only (decision 0031).
+
+### 0051 — Chapter 1's 3D is the Listen tab's default picture; first review fixes
+**Context:** Joshua reviewed Chapter 1 in 3D on his phone, 2026-11-10: the hands "doing weird twists at the wrists"; "Jack and Sarah are too close to the desks and they end up clipping into it"; "set 3D the default view as it kept flashing the other image right before the 3D scene started"; "add the slow zoom in... back into the Listen"; "make the text smaller and push the text down more to show more"; "don't hide her pregnancy... so the camera can show her better"; and "She didn't pick up a tablet that was sitting next on her desk and only when she was supposed to place the tablet on the desk, did it suddenly appear".
+**Decision:**
+- Where a chapter has a 3D scene, the Listen player opens with it on. While it is on, the stills are hidden (black and a loading note until it is ready) and the scene draws the island opening itself. The 3D pill switches to the stills and is remembered; a scene that fails brings the stills back. This amends decision 0050's "the approved stills stay underneath".
+- The player's captions are smaller and sit at the picture's bottom edge (all chapters).
+- Every 3D shot pushes in slowly while it holds (the Watch tab's slow push).
+- Standing and walking arms turn in from the shoulder so the palms face the thighs; Sarah's free fingers rest a little curled.
+- The lab's keyboards sit 16 cm from the desk edge (were 23 cm), and the story's chairs and standing marks sit 7 to 10 cm further back, so nobody meets the desk; Jack's chair rolls closer to the intercom.
+- Sarah's tablet has a light case, starts at the front edge of her desk, is picked up on camera, tucked under her right forearm for the walk, then drawn out and set down beside Jack's keyboard.
+- Sarah's lines are shot from her side or front, at her height, so her pregnancy is seen.
+**Consequences:** The Lab tab's desks and Sarah's tablet change with the keyboard, tablet-position and case changes (one building, decision 0042). No manuscript, audio or approval state changed.
+**Status:** Accepted for review (Joshua, 2026-11-10). Presentation only (decision 0031).

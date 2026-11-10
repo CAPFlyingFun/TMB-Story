@@ -151,10 +151,12 @@ export function buildDressing(): LabDressing {
         // (always present, dark until its screens are on: switching a light on or off changes the
         // number of lights, which recompiles every material -- a hitch on a phone)
         const glow = new THREE.PointLight(0x58d6e0, 0, 2.6, 2); glow.position.set(0, H + 0.36, D / 2 - 0.45); g.add(glow); glows.set(it.id, glow);
-        // keyboard and mouse
-        add(g, box(0.44, 0.022, 0.14), M.blackPlastic, 0.05, H + 0.011, -D / 2 + 0.23);
-        add(g, box(0.42, 0.006, 0.12), M.keyCaps, 0.05, H + 0.024, -D / 2 + 0.23);
-        const mouse = add(g, geo(new THREE.SphereGeometry(0.032, 12, 8)), M.blackPlastic, -0.30, H + 0.012, -D / 2 + 0.23); mouse.scale.set(0.9, 0.45, 1.5);
+        // keyboard and mouse, 16 cm in from the front edge (Joshua, 2026-11-10: the people sat
+        // so close to the desks that they clipped into them; this lets a chair sit back)
+        const KZ = -D / 2 + 0.16;
+        add(g, box(0.44, 0.022, 0.14), M.blackPlastic, 0.05, H + 0.011, KZ);
+        add(g, box(0.42, 0.006, 0.12), M.keyCaps, 0.05, H + 0.024, KZ);
+        const mouse = add(g, geo(new THREE.SphereGeometry(0.032, 12, 8)), M.blackPlastic, -0.30, H + 0.012, KZ); mouse.scale.set(0.9, 0.45, 1.5);
         // the console's power button, set into the desk's front edge on the user's right (Chapter 1:
         // "Sarah started powering up the other console"), its ring lit while the console is on
         add(g, cyl(0.016, 0.018, 0.012, 16), M.blackPlastic, -0.35, H + 0.006, -D / 2 + 0.04);
@@ -259,7 +261,8 @@ export function buildDressing(): LabDressing {
       case 'tablet': {
         // a tablet on its back, its screen up; the group is what a hand carries
         const g = new THREE.Group(); g.name = `tombs:prop:${it.id}`; g.position.set(it.x, it.y0 ?? 0, it.z); g.rotation.y = yawOf(it.facing); group.add(g);
-        add(g, box(0.25, 0.008, 0.175), M.blackPlastic, 0, 0.004, 0);
+        // (a light case, so it reads in her hand and under her arm in the lab's night light)
+        add(g, box(0.25, 0.008, 0.175), M.white, 0, 0.004, 0);
         const face = new THREE.Mesh(geo(new THREE.PlaneGeometry(0.228, 0.155)), screenOff); face.rotation.x = -Math.PI / 2; face.position.y = 0.0085; face.name = `tombs:screen:${it.id}`; g.add(face);
         g.userData.screen = face;
         props.set(it.id, g);

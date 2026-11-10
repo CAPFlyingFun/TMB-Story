@@ -71,12 +71,15 @@
 
   /* ===== The 3D picture (Joshua, 2026-11-10: one player for Listen and Watch) ===========
      The scene is a separate bundle that only reads this player's clock: it never plays,
-     seeks or loads audio, so turning it on or off cannot restart or move the chapter. The
-     stills stay underneath it, so the picture is never empty while it loads, and if it
-     fails the stills simply remain. Chapters without a staged scene show no switch. */
+     seeks or loads audio, so turning it on or off cannot restart or move the chapter.
+     It is ON by default where a chapter has one (Joshua, 2026-11-10: "set 3D the default view
+     as it kept flashing the other image right before the 3D scene started"): while it is on,
+     the stills are hidden and the scene draws the whole chapter itself, the island opening
+     included, over black while it loads. Only if it fails do the stills come back. Switching
+     it off (remembered) brings the stills back. Chapters without a staged scene show no switch. */
   var STORY3D = { 1: "visual/story3d/dist/story3d.js" };
   var s3 = { host: null, view: null, chapter: null, error: null };
-  try { state.view3d = window.localStorage.getItem("tmb.listen.3d") === "1"; } catch (e) { state.view3d = false; }
+  try { state.view3d = window.localStorage.getItem("tmb.listen.3d") !== "0"; } catch (e) { state.view3d = true; }
   function has3d(n) { return !!STORY3D[n]; }
   function story3dLines() {
     var segs = segments(), at = starts(), ends = (state.mixed && state.mixed.endMs) || [], total = chapterTotal();
@@ -96,6 +99,8 @@
   function sync3d() {
     var art = document.getElementById("listen-artwork");
     var want = state.view3d && has3d(state.chapter) && mixedMode() && state.mixed && art && !s3.error;
+    var vis = document.getElementById("listen-visual");
+    if (vis) vis.classList.toggle("is-3d", !!want);   // the stills are hidden while the scene is on
     if (!want) { drop3d(); return; }
     if (s3.chapter === state.chapter && s3.host) {
       if (s3.host.parentNode !== art) art.appendChild(s3.host);   // the controls were rebuilt
@@ -112,7 +117,6 @@
       if (s3.host !== host) return null;
       s3.view = mod.mount(host, {
         now: chapterNow,
-        stills: true,
         playing: function () { return !!(state.playing && state.audio && !state.audio.paused); }
       });
       return s3.view.ready;
