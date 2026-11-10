@@ -40,7 +40,7 @@ Planning only; nothing is implemented. The storyboard stays a working proposal.
   | C-1 | Control room, NW corner (-5.7, 3.6, -12.8) | Along the consoles and the Array glass (useful for Chapters 2 and 3) |
   | JC | West connecting hall, south corner (-6.25, 3.0, -7.85) | Sarah arriving at Jack's door |
 
-- **Sarah's pregnancy.** She is seen only from behind until she takes Jack's chair. The reveal comes at 5:07, "Jack gave Sarah his chair right away": a plain side-on medium shot as she settles into it, with no push-in and no lingering. After that she can be framed freely, so the lines at 6:15 to 6:46 read as the explanation. J-2 is not used for her entrance, because it looks at the door.
+- **Sarah's pregnancy (relaxed, Joshua 2026-11-10).** It may be shown sooner: the approved Chapter 1 stills show her from the front during the intercom call. The earlier rule (only from behind until she takes Jack's chair at 5:07, then a plain side-on shot) is no longer required for the stills or the 3D staging. In the game, the reveal can come when the player controls Sarah and walks her to Jack.
 - **Sarah's walk.** She reacts during "Can you come take a look?" (2:59): turns, sets things down, reaches for her tablet. She walks only after "I'm on my way." (3:00). The route runs through the control room, about 26 m. Test it for natural staging rather than forcing an arrival time; a cutaway to Jack may cover the gap.
 - **Overhead.** Pull back to frame both rooms when Jack calls Sarah, then cut to S-1 when she answers.
 - **7:04, the new warning tone.** Stay on Jack's console and his reaction. The Array is not shown as the cause.

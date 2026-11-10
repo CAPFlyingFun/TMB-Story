@@ -12,7 +12,7 @@ ladder, which is archived. Ids are stable; add, never renumber.
 | Q05 | What is the scale factor? It was calculated, locked and recorded, and its value has never been spoken IN THE STORY. The world is built on 1:180 (a 10 mm human standing in for 6 ft) — see reference/README.md — but no character has said a number, and the question of whether one ever does is still open. | Ch 2, Ch 3 | open |
 | Q06 | What was the faint deep vibration after the activation, softer than the array and more like distant thunder, with no seismic event on the monitor? It came twice and faded. | Ch 3 | open |
 | Q07 | Why is all external communication gone, when internal systems work? Satellite and radio both return nothing. | Ch 3 | open |
-| Q08 | What happened to the rest of the settlement's nearly five hundred people during the event? | Ch 3 | open |
+| Q08 | What happened to the rest of the settlement's forty-three people during the event? | Ch 3 | open |
 | Q09 | What does PHASE ONE READY imply? Is there a phase two, what would it need, and could its target be a person? | Ch 7, Ch 8 | open |
 | Q10 | Who used the maintenance tablet at the equipment shed by the north pumping station three weeks ago, with a retired groundskeeper's badge reported lost eight days before the event? | Ch 9, Ch 10 | open |
 | Q11 | What made the impacts: the dinner-plate mark pressed straight down at the southern perimeter with no trail, and the blade of grass pressed flat at the eastern marker twelve minutes earlier? | Ch 8, Ch 9 | open |

@@ -180,7 +180,7 @@ Mark looked around the room, and Jack could see him counting. "Three people go. 
 
 Paul raised an eyebrow. "The man the whole town is waiting on to name a saboteur. You want him standing next to a spider?"
 
-Jack answered before Mark could. "I told five hundred people to stay off the edge. If anybody goes, I go."
+Jack answered before Mark could. "I told forty-three people to stay off the edge. If anybody goes, I go."
 
 Paul looked at him for a long moment, then shrugged. "Then don't fall in."
 

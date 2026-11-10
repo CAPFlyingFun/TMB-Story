@@ -21,8 +21,8 @@ status_changes:
   - "Doctor Mercer: not drinking water yet; first it washes, flushes and waters the greenhouse, which frees the tanks; three clean tests in a row after treatment, then she will talk about drinking"
   - "Lena: the station has chlorine for tank maintenance and a spare holding tank, the old irrigation tank, kept apart from the drinking supply"
   - "Sarah asks whether the channel stops when it does not rain; Aiden: it picks up ground water and will drop in a dry spell; the channel is measured daily"
-  - "Paul: no single pump lifts water six hundred meters; stage it like a mine, a pump to a drum to a pump, seven electric pumps (an engine would fill the gallery with exhaust), a generator at the grate, and every hose in town; about thirty liters a minute"
-  - "Lena: thirty a minute, only while people are out there (at the grate by nine, starting back by half past two), is about ten thousand liters on a good day; not seventeen; weeks, not days"
+  - "Paul: no single pump lifts water six hundred meters; stage it like a mine, a pump to a drum to a pump, seven electric pumps (an engine would fill the gallery with exhaust), a generator at the grate, and every hose in town; about three liters a minute"
+  - "Lena: three a minute, only while people are out there (at the grate by nine, starting back by half past two), is about nine hundred liters on a good day; not fifteen hundred; weeks, not days"
   - "Sarah thirty-three weeks four days"
 new_canon:
   - "Centipedes longer than a truck live in the service gallery"
@@ -136,18 +136,18 @@ He spread his hands. "Then the hoses. Every hose in town. Fire station, greenhou
 
 "How much water?"
 
-"Thirty liters a minute. Maybe. If the hose holds."
+"Three liters a minute. Maybe. If the hose holds."
 
-Lena's pen moved. "Thirty a minute. Only while people are out there with it. They walk the line first, they're at the grate by nine, they have to start back by half past two to be off the soil by five. Call it ten thousand liters on a good day."
+Lena's pen moved. "Three a minute. Only while people are out there with it. They walk the line first, they're at the grate by nine, they have to start back by half past two to be off the soil by five. Call it nine hundred liters on a good day."
 
 Jack heard the sum before she said the rest.
 
-"It's not seventeen. It doesn't replace the tanks."
+"It's not fifteen hundred. It doesn't replace the tanks."
 
-Lena looked up at the board. "But ten thousand a day we don't take out of them is the difference between running out at the end of this month and running out weeks later. Weeks we don't have now."
+Lena looked up at the board. "But nine hundred a day we don't take out of them is the difference between running out at the end of this month and running out weeks later. Weeks we don't have now."
 
 Nobody said anything for a moment.
 
 Then Mark uncapped the marker, and under Drawings, he wrote a new line.
 
-Pump. Hose. Ten thousand. Daylight.
+Pump. Hose. Nine hundred. Daylight.

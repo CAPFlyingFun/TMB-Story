@@ -462,3 +462,23 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 **Status:** Accepted for Chapter 1 (Joshua, 2026-11-09). Chapters 2 to 9 stay on the dialogue file until he decides.
 
 **0048, addendum (2026-11-09):** Chapter 2 is rendered the same way. Joshua asked for it directly ("Go ahead and do chapter two the same way"). 157 clips: 74 narrator, 6 merged runs. Tags are in `audio/tags/chapter-02.json`, drafted from the action beats; lines to other characters avoid hushed tags. Jack's two "No." lines carry their existing readings, `dread` and `grim`. It runs 7:28 (the dialogue file was 6:58) and cost about 7,350 credits. Every clip speaks its manuscript line, and every caption sits on its line's first sound. The Listen tab now plays it.
+
+### 0049 — The settlement has forty-three people, and the water arc is scaled to match
+**Context:** Joshua wants a smaller town (2026-11-10). The approved island artwork shows about twenty homes, and ChatGPT recorded the decision on Trello as a 43-person opening population. The water crisis in Chapters 14 to 39 was built on about five hundred people. At the same 20-liter ration, 43 people use under 1,000 liters a day, so the countdown would vanish.
+**Decision:**
+- **Population.** The settlement has forty-three people at the start, not "nearly five hundred". This changes every mention in Chapters 1 to 38, the story rules (overview, locations, Q08) and the outlines. The town meeting has about thirty people in the hall, a few on the lawn and a handful listening at home (Chapters 13, 14 and 17). Sarah would knock on twenty doors, not five hundred (Chapter 16). Event B2 is renamed "Tell Forty-Three People".
+- **Water (Joshua's option 1).** Every town-scale water figure is scaled by about 0.09, so each countdown keeps its day count:
+  - tanks hold about 45,000 liters when full, with 31,000 left on March 6;
+  - normal use is about 9,000 liters a day;
+  - the ration plan is 1,350 a day (860 for homes, about 300 for medical, 200 for the kitchens), and real use is about 1,500;
+  - 25,000 liters on March 10, 10,700 on March 19, 9,700 on March 22 and 6,500 on March 26;
+  - the pump line gives about 3 liters a minute, about 865 liters a day; two lines give 1,740;
+  - the rain harvest is about 1,260 liters.
+  The physical amounts are unchanged: the 200-liter drop, the 20-liter jug, the twelve liters and the 110-liter leaf shake. The leaf shake now keeps the town in water for "not quite two hours" instead of nine minutes. Chapter 36 is retitled "Nine Hundred".
+- **Food is unchanged.** Stores are counted in weeks, and the greenhouse and the bean beds now plausibly feed the smaller town.
+- **Approval.** Chapters 2, 3, 4, 7 and 10 were approved and are now `revision-pending` (last approved afb5d0a), with `audio_status: outdated`. Chapter 1 was already `revision-pending`. The other affected chapters were still in review.
+**Consequences:**
+- The audio still says "five hundred" until the affected lines are re-recorded. Chapters 1 and 2 need one or two clips each.
+- The five translations still carry the old numbers and need updating.
+- The approved Chapter 1 stills are kept.
+**Status:** Accepted (Joshua, 2026-11-10: "do option 1"). The revised text awaits his approval.

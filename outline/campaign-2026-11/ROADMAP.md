@@ -14,13 +14,13 @@ of 2026-11-06 22:44 UTC, reconciled with the manuscript at `55682cb` and Joshua'
   seventh, twenty-one ten**, about fifty-eight days after Chapter 26.
 - **Calendar.** Thirty-two weeks zero days on March fifth; thirty-three on March twelfth; forty-one
   on May seventh. The countdown is not restarted at Chapter 26.
-- **Water clock.** At the seventeen thousand liters a day observed in Chapter 26 the tanks
+- **Water clock.** At the fifteen hundred liters a day observed in Chapter 26 the tanks
   run dry around March twenty-sixth. **The underground finds water:** the construction
   records (Event 3) point to the island's own engineered water system, and the expedition
   (Event 4) is driven by reaching it. It ends with a limited, hard-won supply and an outpost,
   not an unlimited fix. **Gradual (Joshua):** evidence first, then safe access, testing and
   treatment, then a reliable supply to the town before the tanks run dry around March
-  twenty-sixth. The seventeen-thousand-liter daily need stands unless the story gives a credible
+  twenty-sixth. The fifteen-hundred-liter daily need stands unless the story gives a credible
   reason for it to change.
 - **Access.** The tunnels are full island scale, outside the transformed town. **They enter
   through an island-scale service grate just past the end of a road,** the way they went to

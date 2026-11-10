@@ -13,7 +13,7 @@ written after the fact.
 The same night, continuing straight out of Chapter 3: from the minutes after the
 activation to some hours before dawn. Jack Bennett's point of view throughout.
 
-**The shape of it is the delay.** Nearly five hundred people slept through the event,
+**The shape of it is the delay.** Forty-three people slept through the event,
 and this movement is about the hours in which that stops being true — one call at a
 time, one porch light at a time, until at two in the morning enough of the settlement
 is awake that silence becomes its own announcement. Jack holds the general alarm back

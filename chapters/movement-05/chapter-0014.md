@@ -28,7 +28,7 @@ review_status: in-review
 audio_status: not-started
 approved_on: ""
 last_approved_revision: ""
-source: "Drafted by Claude on Joshua's weekly TMB-Story writing run, 2026-10-13. PENDING APPROVAL. Event B2, Tell Five Hundred People, completes."
+source: "Drafted by Claude on Joshua's weekly TMB-Story writing run, 2026-10-13. PENDING APPROVAL. Event B2, Tell Forty-Three People, completes."
 ---
 # Chapter 14: Who Was It
 
@@ -144,7 +144,7 @@ The woman whose daughter was in Boston was the next to stand, and Jack braced hi
 
 "What do we do? Right now. Today. Not the rules. What do we actually do?"
 
-Jack looked out at sixty faces and thought about the ones he couldn't see. He thought about how little he actually had to give them.
+Jack looked out at thirty faces and thought about the ones he couldn't see. He thought about how little he actually had to give them.
 
 Then he gave them what he had. "Today, we count. Water, food, medicine, fuel, everything. We find out exactly what came with us and what didn't. If you have a skill, tell security, and they'll find you something to do with it. If you don't, stay home, check on your neighbors, and keep the lights off at the edge tonight. Nobody's going to fix this by lunchtime. But nobody's going to face it alone, either."
 
@@ -190,9 +190,9 @@ Jack closed his eyes. "People are filling their bathtubs."
 
 Sarah had heard enough to understand. She put her hand over her mouth, and Jack honestly couldn't tell whether she was horrified or trying not to laugh.
 
-"We told five hundred people the water was running out."
+"We told forty-three people the water was running out."
 
-Lena sounded almost admiring. "And five hundred people did the most reasonable thing in the world."
+Lena sounded almost admiring. "And forty-three people did the most reasonable thing in the world."
 
 Jack looked out at the crowded hall, at all the faces that had just been told the truth and believed it.
 

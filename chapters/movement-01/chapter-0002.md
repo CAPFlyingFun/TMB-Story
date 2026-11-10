@@ -21,10 +21,10 @@ new_canon:
   - "See story-rules/ for the canon this movement established. This file is the manuscript."
 playable_beat_flow: ["move through the corridor to the control room", "call the island utility station", "cut external access and disconnect TOMBS from the grid", "check backup capacitors and the internal reactor", "observe the array rings through the window", "attempt to kill the boundary emitters", "pull the physical shutdown lever", "watch the target dimensions be hidden", "try the mapping controls and be denied", "order quiet containment and no settlement alarm"]
 ending_type: revelation
-review_status: approved
-audio_status: approved
+review_status: revision-pending
+audio_status: outdated
 approved_on: "2026-10-13"
-last_approved_revision: ""
+last_approved_revision: "afb5d0a"
 source: "Joshua's revised Word manuscript, 3e9a1f9b-01-03_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 2 bare said-tag(s) removed, and 1 quote(s) split by a beat joined into one line with the beat first."
 ---
 # Chapter 2: The Boundary
@@ -175,7 +175,7 @@ Jack looked back at the screen. "Exactly. If anything changes outside this build
 
 "Understood."
 
-The laboratory remained quiet beyond the muted warning tones at their consoles. Somewhere outside, nearly five hundred people slept through an emergency they did not know existed.
+The laboratory remained quiet beyond the muted warning tones at their consoles. Somewhere outside, forty-three people slept through an emergency they did not know existed.
 
 Sarah opened the emitter controls. "Can we interrupt the boundary?"
 

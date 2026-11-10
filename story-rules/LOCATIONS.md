@@ -19,7 +19,7 @@ Only what the approved manuscript establishes. Cite the chapter.
 ## The research settlement
 
 - Near the island's center. Laboratories, homes, workshops, medical facilities and
-  other buildings, supporting nearly five hundred people `[ch 1]`.
+  other buildings, supporting forty-three people `[ch 1]`.
 - Named features on the page: the research district, housing blocks, the medical
   center, workshops, utilities, the streets connecting them, a community center, and
   a communications building with a camera mounted high on it `[ch 2, ch 3]`.

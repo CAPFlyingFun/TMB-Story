@@ -9,7 +9,7 @@ story_time:
   date: "March fifth, twenty-one ten"
   opens: "Immediately after Chapter 3, in the main control room, still late on the same night"
   elapsed: "the first hour after the activation, ending around midnight"
-objective: "Find out what the settlement has become, and decide who to tell first, while nearly five hundred people are still asleep and do not know anything has happened."
+objective: "Find out what the settlement has become, and decide who to tell first, while forty-three people are still asleep and do not know anything has happened."
 locations: ["The main control room", "The island utility station (remote, by call)", "The southern perimeter road (remote, by security channel)"]
 characters: [Jack, Sarah, "Lena Ortiz (remote, by wrist terminal)", "Mark Jones, perimeter security, Unit Twelve (remote, by security channel)"]
 status_changes:
@@ -26,10 +26,10 @@ new_canon:
   - "Water is the first hard limit: the tanks were buffers, and the reservoir did not come with them"
 playable_beat_flow: ["answer the utility call", "bring up the utility station cameras", "answer the security channel", "open the settlement infrastructure schematic", "trace the freshwater intake to the boundary", "inspect the cut pipe on the maintenance camera", "step through the frozen camera frames", "take the water estimate"]
 ending_type: quiet beat
-review_status: approved
-audio_status: approved
+review_status: revision-pending
+audio_status: outdated
 approved_on: "2026-10-13"
-last_approved_revision: ""
+last_approved_revision: "afb5d0a"
 source: "Joshua's revised Word manuscript, 80a85a2b-04-06_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 7 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first."
 ---
 # Chapter 4: The First Calls
@@ -44,7 +44,7 @@ Sarah looked past Jack toward the darkened homes outside. Most of their windows 
 
 "They don't know."
 
-Jack understood immediately. Nearly five hundred people had just been carried into a different scale, and most of them were still asleep.
+Jack understood immediately. Forty-three people had just been carried into a different scale, and most of them were still asleep.
 
 He answered the call. "Bennett."
 

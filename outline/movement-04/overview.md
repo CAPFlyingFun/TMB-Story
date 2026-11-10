@@ -10,7 +10,7 @@ Straight out of Chapter 10's sunrise, March sixth, from just after sunrise to ab
 past seven. Jack Bennett's point of view throughout.
 
 **Events:** B1, Lock Down the Greenhouse — **writing complete** in Chapter 12.
-B2, Tell Five Hundred People — **started** in Chapter 13, **in progress**.
+B2, Tell Forty-Three People — **started** in Chapter 13, **in progress**.
 
 ## Chapter 11 — The Greenhouse
 

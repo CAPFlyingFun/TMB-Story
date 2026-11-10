@@ -19,7 +19,7 @@ status_changes:
   - "Mark's new rules: nothing is left wet on the asphalt; the trough rides back to the cart on a tarp that catches what the corners lose, and the tarp comes home with it; Paul's crew waits at the last streetlight, not at the cart; nobody stops watching the feed until the road is dry"
   - "Paul, woken by radio, will make the second trough's corners from one bent sheet, with no seams at the corners at all"
   - "Sarah's camera review finds a wet line at the end of the southern road every morning since March seventh: someone on the last block is watering a garden at night, and the runoff goes down the curb and across the asphalt to the soil; flies gather on it at first light"
-  - "Lena's audit: night watering is part of why the town uses about seventeen thousand liters a day instead of fifteen"
+  - "Lena's audit: night watering is part of why the town uses about fifteen hundred liters a day instead of thirteen hundred and fifty"
   - "Lena posts a short utility notice: no water poured or sprayed outside, anywhere, at any hour; Unit Four knocks on the door on the last block of the southern road in the morning"
   - "March eleventh dawns gray and mild; Mark does not allow a shake"
 new_canon:
@@ -136,7 +136,7 @@ Jack got up off the floor. "That's not dew."
 
 "It's there every morning. The seventh. The eighth. The ninth. Not before. Somebody on that block started watering their garden at night after the restrictions went up. In the dark, so nobody sees."
 
-Lena had been listening. Her voice came back sharp. "That's my two thousand liters."
+Lena had been listening. Her voice came back sharp. "That's my hundred and fifty liters."
 
 Jack looked at the radio. "Some of it."
 

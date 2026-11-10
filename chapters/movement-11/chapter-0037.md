@@ -97,9 +97,9 @@ Lena put her clipboard down. "Water first?"
 
 "Water first."
 
-"Second test was clean. Third one's this afternoon. The line ran nine thousand eight hundred yesterday."
+"Second test was clean. Third one's this afternoon. The line ran eight hundred and eighty yesterday."
 
-Lena looked at the ceiling while she worked it. "Drinking tanks are down to a hundred and eight thousand. If the third test is clean and Doctor Mercer says yes, the gallery water stops being washing water and starts being water. It doesn't change the sum. We still use more than we pump. But it means every liter of it can go anywhere it's needed."
+Lena looked at the ceiling while she worked it. "Drinking tanks are down to nine thousand seven hundred. If the third test is clean and Doctor Mercer says yes, the gallery water stops being washing water and starts being water. It doesn't change the sum. We still use more than we pump. But it means every liter of it can go anywhere it's needed."
 
 Paul spoke from his crate. "And if I put a second pump in the same channel, and a second line beside the first one, they stop going down at all."
 
@@ -159,7 +159,7 @@ Jack sat down on the floor beside her. "The breathing line. You said start there
 
 She turned the notebook to the page and looked at the line, with nobody's name next to it yet.
 
-"With people. Five hundred of them. Somebody in this town has kept a baby breathing who wasn't supposed to. A nurse who left nursing. A grandmother. A paramedic who came here to fix pumps."
+"With people. Forty-three of them. Somebody in this town has kept a baby breathing who wasn't supposed to. A nurse who left nursing. A grandmother. A paramedic who came here to fix pumps."
 
 She closed the notebook. "We don't know, because nobody's ever asked. So tomorrow Lena asks. Over every speaker in town."
 

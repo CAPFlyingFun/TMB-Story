@@ -14,7 +14,7 @@ below is written the way the characters and the reader currently understand it.
 On March fifth, in the year twenty-one ten, a research settlement on a remote island
 in the Atlantic is reduced in scale by its own experimental system. As far as anyone
 inside can tell, the island does not change and only the developed town does. Nearly
-five hundred people wake to a world that no longer fits them. (That belief is
+forty-three people wake to a world that no longer fits them. (That belief is
 incomplete. See `WORLD_RULES.md` section 2, and never correct it on the page unasked.)
 
 ## What Chapters 1 to 3 establish
@@ -24,7 +24,7 @@ incomplete. See `WORLD_RULES.md` section 2, and never correct it on the page una
 - The island is in the Atlantic Ocean, roughly fifty-six kilometers across, about
   thirty-five miles from one side to the other. Most of it is undeveloped wilderness.
 - Near its center is a research settlement of laboratories, homes, workshops, medical
-  facilities and other buildings, supporting nearly five hundred people.
+  facilities and other buildings, supporting forty-three people.
 - TOMBS, the Temporal Object Manipulation and Boundary System, also called the TOMBS
   Array, is the project Dr. Jack Bennett administers.
 - Someone reached TOMBS through the network, revoked Jack's administrator credentials,
@@ -60,7 +60,7 @@ incomplete. See `WORLD_RULES.md` section 2, and never correct it on the page una
 2. **The aftermath, next, and it is NOT a short bridge to the jump** (Joshua,
    2026-09-18). Several chapters in the immediate aftermath, letting the
    miniature-world situation become a mystery and giving the settlement time to
-   react, investigate, adapt and survive: emergency response across five hundred
+   react, investigate, adapt and survive: emergency response across forty-three
    people, what infrastructure survived, the loss of outside communications,
    attempts to understand or reverse TOMBS, evidence the event was deliberate, the
    unexplained external vibrations, first controlled exploration near the boundary,

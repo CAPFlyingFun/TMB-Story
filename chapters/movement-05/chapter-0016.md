@@ -13,16 +13,16 @@ objective: "Find out exactly how much water is left, set limits that are fair to
 locations: ["The utility station", "The settlement (over the public address)"]
 characters: [Jack, Sarah, "Paul Harlan, machine shop foreman", "Lena Ortiz", "Mark Jones, perimeter security", "a utility technician"]
 status_changes:
-  - "Lena reads the tank gauges in person: about three hundred and fifty thousand liters of drinking water left in the two main tanks after the morning rush"
+  - "Lena reads the tank gauges in person: about thirty-one thousand liters of drinking water left in the two main tanks after the morning rush"
   - "The tanks were near their daily low when the intake was cut, because they refill from the reservoir between midnight and five"
   - "Paul Harlan offers his shop's fittings and his night shift to run treated water from the wastewater plant's holding tank to the greenhouse irrigation, so drinking water is kept for people"
   - "The limits: twenty liters a person a day from the faucets during two supply windows, morning and evening; toilets flushed with used washing water; medical and the kitchens on their own allowance; a drinking-water point at the community center for anyone who runs short; water already stored at home is the household's own"
   - "Lena announces the limits at noon over every speaker"
   - "At the limits, the stored drinking water lasts a little over three weeks, if nothing leaks, nothing breaks and nobody cheats"
 new_canon:
-  - "The settlement has two main drinking-water tanks, about five hundred thousand liters together when full, and a separate fire reserve that is not touched unless something is burning"
+  - "The settlement has two main drinking-water tanks, about forty-five thousand liters together when full, and a separate fire reserve that is not touched unless something is burning"
   - "The tanks refill from the reservoir every night between midnight and five; the intake was cut at eleven, near their lowest point"
-  - "Normal use is about a hundred thousand liters a day across the settlement"
+  - "Normal use is about nine thousand liters a day across the settlement"
   - "The wastewater plant inside the boundary treats what goes down the drains to a standard fit for irrigation, not for drinking, and normally releases it from a holding tank"
 playable_beat_flow: ["settle Paul Harlan's complaint", "read the tank gauges", "work out the daily draw", "choose the limits", "assign the recycled water", "announce the limits at noon"]
 ending_type: realization
@@ -82,7 +82,7 @@ She took the pen out of her mouth. "Oh good, everybody. Sit down, Sarah."
 
 Sarah sat in the nearest chair. Mark leaned in the doorway, as he did in every doorway, as though doorways were his natural habitat.
 
-Lena tapped the largest gauge. "Two main tanks. Drinking water. When they're full, they hold about five hundred thousand liters together. Plus the fire reserve, which nobody touches unless something's burning."
+Lena tapped the largest gauge. "Two main tanks. Drinking water. When they're full, they hold about forty-five thousand liters together. Plus the fire reserve, which nobody touches unless something's burning."
 
 Paul whistled under his breath. "That's a lot."
 
@@ -98,11 +98,11 @@ Jack saw it before she said it. "And TOMBS cut the intake at eleven."
 
 Sarah leaned forward in her chair. "How much is in them now?"
 
-Lena checked the gauge, then her tablet, then the gauge again, as if the second look might change the answer. "About three hundred and fifty thousand liters. After this morning."
+Lena checked the gauge, then her tablet, then the gauge again, as if the second look might change the answer. "About thirty-one thousand liters. After this morning."
 
 Mark frowned. "That still sounds like a lot."
 
-"Normal use is about a hundred thousand a day. Showers, laundry, cooking, the greenhouse, the shops. Everything."
+"Normal use is about nine thousand a day. Showers, laundry, cooking, the greenhouse, the shops. Everything."
 
 The room was quiet for a moment.
 
@@ -116,9 +116,9 @@ Jack looked at the gauges. Half a dozen needles, steady, unremarkable, telling t
 
 Lena nodded. "Emergency guidance says a person can get by on about twenty liters a day. Drinking, cooking, a little washing. That's not comfortable. But it's enough."
 
-Jack ran it in his head. "Five hundred people."
+Jack ran it in his head. "Forty-three people."
 
-"Ten thousand liters a day for homes. Medical needs its own, about three thousand. The kitchens, another two. Call it fifteen thousand a day. Toilets get flushed with a bucket of used washing water, not from the faucet."
+"Eight hundred and sixty liters a day for homes. Medical needs its own, about three hundred. The kitchens, another two hundred. Call it thirteen hundred and fifty a day. Toilets get flushed with a bucket of used washing water, not from the faucet."
 
 Jack frowned at the curve. "That leaves the greenhouse. Aiden irrigates every morning."
 
@@ -144,7 +144,7 @@ Jack looked at Paul for a long moment. It was the same man who, earlier that mor
 
 Paul nodded once, and didn't say thank you, and didn't need to.
 
-Sarah did the last of it in her head faster than anyone. "Fifteen thousand a day. Twenty-three days."
+Sarah did the last of it in her head faster than anyone. "Thirteen-fifty a day. Twenty-three days."
 
 "A little over three weeks. If nothing leaks. If nothing breaks. If nobody cheats."
 
@@ -158,7 +158,7 @@ Sarah tapped the arm of her chair. "That leaves Paul's night shift. And everyone
 
 Mark sounded like he already knew the answer. "Can we take the water back?"
 
-Sarah shook her head. "Knock on five hundred doors and tell people to drain their bathtubs into a truck? We'd lose more trust than water."
+Sarah shook her head. "Knock on twenty doors and tell people to drain their bathtubs into a truck? We'd lose more trust than water."
 
 "Then what?"
 

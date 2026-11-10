@@ -48,7 +48,7 @@ toward the soil; the rope hauls him back. The spider looks at him, but it alread
 climbs back to its retreat. Back to the cart: twelve liters, a sealed sample, Aiden soaked and
 chilled, Jack's stitches wet (Sarah has already called Mercer). At the station: the dew is
 low in minerals, clean enough to filter and boil, further tests pending. Twelve liters against
-fifteen thousand a day. Jack's idea from the fall: shake the drops down onto a trough at the
+thirteen hundred and fifty a day. Jack's idea from the fall: shake the drops down onto a trough at the
 road end. Paul: a gutter, a day, and a drip collar for the pole. Back at seven fifty, before
 nine. Aiden: it didn't come for us because we were boring. Mark: shaking grass is fast, and
 fast is food. He hasn't said yes.

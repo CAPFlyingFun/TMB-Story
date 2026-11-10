@@ -9,7 +9,7 @@ story_time:
   date: "March sixth, twenty-one ten"
   opens: "Back at the main control room as the sky turns from black to gray"
   elapsed: "dawn, until the sun clears the horizon"
-objective: "Find out whose badge it was, and decide what to tell five hundred people who are about to find out on their own."
+objective: "Find out whose badge it was, and decide what to tell forty-three people who are about to find out on their own."
 locations: ["The main control room", "The greenhouse (remote, by call)"]
 characters: [Jack, Sarah, "Lena Ortiz", "Mark Jones, perimeter security", "Aiden (remote, by wrist terminal)"]
 status_changes:
@@ -22,14 +22,14 @@ status_changes:
   - "Mark starts the department heads with medical; Lena builds a camera briefing in twenty minutes"
 new_canon:
   - "Aiden works at the greenhouse"
-  - "The settlement is about five hundred people"
+  - "The settlement is forty-three people"
   - "The plan stops being when to tell people and becomes what to tell them"
 playable_beat_flow: ["read the badge record", "open the lost-badge ticket", "pull the retired groundskeeper's file", "watch the dawn from the window", "answer the facilities channel", "send Mark to the department heads", "pull every camera for the briefing"]
 ending_type: turning point
-review_status: approved
-audio_status: approved
+review_status: revision-pending
+audio_status: outdated
 approved_on: "2026-10-27"
-last_approved_revision: ""
+last_approved_revision: "afb5d0a"
 source: "Joshua's Word manuscript, ba62e566-07-09_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-10-01. For the audio, following Decision 0024 as applied to his two earlier documents: 4 bare said-tag(s) removed, and 0 quote(s) split by a beat joined into one line with the beat first."
 ---
 # Chapter 10: First Light
@@ -80,7 +80,7 @@ Sarah touched his arm. "You're still standing. That's something."
 
 Outside, the gray had started pulling apart into color. Jack crossed to the window without deciding to and watched the first true light of morning reach the tops of the grass blades beyond the boundary, each one taller than the control room itself, each one catching the light like a tree catching fire, slow and gold from the top down.
 
-Dew clung to individual blades in beads the size of boulders, each one glowing faintly as the light passed through it. Somewhere out past the tree line, birdsong started up, layered and enormous, utterly indifferent to the five hundred people rebuilding their understanding of the word small.
+Dew clung to individual blades in beads the size of boulders, each one glowing faintly as the light passed through it. Somewhere out past the tree line, birdsong started up, layered and enormous, utterly indifferent to the forty-three people rebuilding their understanding of the word small.
 
 Lena stood beside him. "That's..." She trailed off.
 
@@ -126,7 +126,7 @@ He ended the call and looked at Sarah.
 
 It was almost funny, in the darkest possible way. They'd spent the whole night arguing about when to tell people. The island had just made the decision for them.
 
-Jack nodded slowly, watching the light climb higher over the transformed settlement, gold fading into full morning blue. Somewhere out there, five hundred people were about to wake into a world that no longer matched the one they'd fallen asleep in.
+Jack nodded slowly, watching the light climb higher over the transformed settlement, gold fading into full morning blue. Somewhere out there, forty-three people were about to wake into a world that no longer matched the one they'd fallen asleep in.
 
 "Then we stop trying to control when they find out, and start deciding what we tell them once they do."
 

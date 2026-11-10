@@ -123,13 +123,13 @@ Mark looked at the board for a long while. Jack watched him do what he always di
 
 "Then here's what we do. Nobody goes back to the end of that road until we've watched it do this a few more mornings. Watched, not visited. From the cameras."
 
-Lena already had her pen on her notepad. "Every morning we wait is another fifteen thousand liters out of the tanks."
+Lena already had her pen on her notepad. "Every morning we wait is another thirteen hundred and fifty liters out of the tanks."
 
 Mark didn't turn from the board. "I know what it costs."
 
 "I'm only saying it out loud, so it's on the board."
 
-Mark wrote it on the board anyway. Fifteen thousand a day. Then he looked at the speaker. "Somebody has to watch every minute of every morning, and write it down. When it comes out. Where it goes. What it eats."
+Mark wrote it on the board anyway. Thirteen-fifty a day. Then he looked at the speaker. "Somebody has to watch every minute of every morning, and write it down. When it comes out. Where it goes. What it eats."
 
 Sarah's voice came back so fast it was almost a laugh. "I've been lying on this couch for two days with nothing to do but look at those cameras. Give me a notebook."
 

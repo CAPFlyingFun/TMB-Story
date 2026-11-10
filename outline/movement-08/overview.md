@@ -45,8 +45,8 @@ The gnat, drowned, goes into Aiden's jar ("Everything out there is eating someth
 know the list yet"). The water goes to the community center kitchens to be boiled in the big pots.
 Mark's board: what worked (board, collar, lid, strips, rope; Unit Four praised for tying off twice)
 and what didn't (wrong place in the dark, two minutes lost; leaking corners). Lena's tank reading:
-about two hundred and eighty thousand liters on March 10; use is closer to seventeen thousand a day;
-about sixteen days. A hundred and ten liters is a little over nine minutes of the town's water.
+about twenty-five thousand liters on March 10; use is closer to fifteen hundred a day;
+about sixteen days. A hundred and ten liters is not quite two hours of the town's water.
 Mark: one leaf near that retreat on any morning, never the one under it; "find me somewhere else to
 shake." Sarah: there are cameras at the end of every road, mostly unwatched since March 6; she will
 list every leaf tip over asphalt, its drops, and any silk. Paul: corners sealed, a second, narrower
@@ -64,7 +64,7 @@ unknown. Whatever happens next at the western road has to reckon with the wet li
 
 ## Threads carried
 
-- Water: about 280,000 L on March 10; real use about 17,000 a day; about sixteen days. One shake is
+- Water: about 25,000 L on March 10; real use about 1,500 a day; about sixteen days. One shake is
   110 L, clear cold mornings only. Boil it, always. Paul's coolant: not raised.
 - Sarah: thirty-two weeks; pressure holding "a little better"; watching only (the survey is
   "watching with a pen").

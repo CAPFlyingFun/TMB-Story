@@ -16,14 +16,14 @@ status_changes:
   - "Nurse Hale, from the medical center's night shift, worked on a maternity ward years ago; she will be Doctor Mercer's second pair of hands; the former paramedic and the mother of four will be the runners"
   - "The pharmacy count: the injection Doctor Mercer gives after a birth is short and some is near its date; the pharmacy also has tablets that do the same job and keep well; together, enough for Doctor Mercer's comfort, with one dose put aside that nobody touches"
   - "Jack and Paul strap Doctor Mercer's handheld heart monitor into a soft belt and wire its sound into a tablet that counts the beats and draws them as a line, so the baby's heart can be watched all through labor; it works on Sarah first try, about a hundred and forty beats a minute"
-  - "March thirty-first: Paul's second line goes in at first light; the two lines together bring up a little over nineteen thousand liters a day; April first, Lena reads the drinking tanks higher than the day before for the first time since the town shrank"
+  - "March thirty-first: Paul's second line goes in at first light; the two lines together bring up a little over seventeen hundred liters a day; April first, Lena reads the drinking tanks higher than the day before for the first time since the town shrank"
   - "Doctor Mercer says the breathing gap is the one she cares about most; Nurse Hale remembers a way of helping a newborn breathe that was used where there were no machines, with oxygen, tubing and a bottle of water"
 new_canon:
   - "Nurse Hale, a night nurse at the medical center with maternity experience, is the second attendant for the birth"
   - "The pharmacy has heat-stable tablets that prevent bleeding after birth, besides the injection"
   - "A belt-mounted heart monitor wired to a tablet can watch the baby's heart continuously"
   - "The medical center has an oxygen concentrator"
-  - "From March thirty-first two pump lines bring up a little over nineteen thousand liters a day; the drinking tanks rise from April first"
+  - "From March thirty-first two pump lines bring up a little over seventeen hundred liters a day; the drinking tanks rise from April first"
 playable_beat_flow: ["meet the volunteers", "count the pharmacy", "set aside the last dose", "build the monitor belt", "test it on Sarah", "connect the second line", "read the tanks rising", "hear Nurse Hale's idea"]
 ending_type: decision
 review_status: in-review
@@ -110,7 +110,7 @@ Sarah spoke through her fingers. "He's all right. Jack. Look at him. He's all ri
 
 That evening Lena called. Paul's second line had gone in at first light: forty more lengths of hose, and a second set of stages hung on the other side of the shaft. The two lines had run together for the first time, all day.
 
-"Nineteen thousand three hundred."
+"Seventeen hundred and forty."
 
 Her voice was very steady. "Pumped. Today. That's more than we use."
 
@@ -120,7 +120,7 @@ The next morning, the first of April, she read the drinking tanks at six and cal
 
 "How much?"
 
-"Not much. Two thousand. But it went up."
+"Not much. A hundred and eighty. But it went up."
 
 She was quiet for a moment. "It's never gone up. Not once. Not since the fifth."
 

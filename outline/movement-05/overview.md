@@ -9,7 +9,7 @@ Audio not generated. Word documents: `manuscripts/13-15 Chapters - TRADDOMIUM Mi
 March sixth, from about half past seven in the morning to about ten at night. Jack
 Bennett's point of view throughout.
 
-**Events:** B2, Tell Five Hundred People — **writing complete** in Chapter 14.
+**Events:** B2, Tell Forty-Three People — **writing complete** in Chapter 14.
 B3, The Water Clock — **writing complete** in Chapters 15 to 17; it hands over to B4, the
 first expedition.
 
@@ -35,14 +35,14 @@ at the utility station. Paul Harlan is already there, arguing about his shop's w
 ## Chapter 16 — The Water Clock
 
 Paul's coolant goes on the list, and his night shift had no time to fill a bathtub. At the
-gauges: two tanks, about five hundred thousand liters full, refilled every night from the
+gauges: two tanks, about forty-five thousand liters full, refilled every night from the
 reservoir between midnight and five, so they were near their low when the intake was cut at
-eleven. About three hundred and fifty thousand liters are left; normal use is about a hundred
+eleven. About thirty-one thousand liters are left; normal use is about nine
 thousand a day. The limits: twenty liters a person a day in two supply windows, toilets
 flushed with used washing water, medical and kitchens on their own allowance, the greenhouse
 on treated water from the wastewater plant (Paul's fittings and night shift), a drinking
-point at the community center, and stored water stays with whoever stored it. Fifteen
-thousand liters a day: a little over three weeks, if nothing leaks, breaks or cheats. Lena
+point at the community center, and stored water stays with whoever stored it. Thirteen
+hundred and fifty liters a day: a little over three weeks, if nothing leaks, breaks or cheats. Lena
 announces it at noon. Sarah looks at the grass: they are only counting the water inside.
 
 ## Chapter 17 — Dew

@@ -186,7 +186,7 @@ She was quiet for a while. Then she took his good hand and pressed it flat again
 
 Jack bent his head, close, and said it quietly enough that only the two of them would hear.
 
-He thought about the hall. Sixty faces, and nearly five hundred more behind the speakers. One of them, maybe, had sat and listened to him promise to find them.
+He thought about the hall. Thirty faces, and a dozen more behind the speakers. One of them, maybe, had sat and listened to him promise to find them.
 
 Far out past the edge of town, something heavy came down in the grass, once, and then the night was still again.
 

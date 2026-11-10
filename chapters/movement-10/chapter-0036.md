@@ -1,6 +1,6 @@
 ---
 chapter: 36
-title: "Ten Thousand"
+title: "Nine Hundred"
 movement: 10
 pov: Jack
 word_count: 1351
@@ -17,15 +17,15 @@ status_changes:
   - "Sarah, on the road camera, sees the ground beetle coming along the hose toward the wet joint; Unit Four clamps and sleeves the joint while she counts the distance down, and they back off along the stakes; the beetle eats the drowned gnats on the wet soil and goes back into the stems once the patch dries"
   - "Aiden's first treated sample is clean: one of three"
   - "Lena routes the old irrigation tank through pipes to the community laundry, the public washrooms' showers and basins, and the kitchens' washing-up; nothing is poured outdoors"
-  - "The pumps run from nine to half past two: about nine thousand six hundred liters"
-  - "Lena's reading: the drinking tanks hold about a hundred and nineteen thousand liters; the town now takes about seven thousand a day from them instead of seventeen; at that rate about seventeen days, to the beginning of April"
+  - "The pumps run from nine to half past two: about eight hundred and sixty-five liters"
+  - "Lena's reading: the drinking tanks hold about ten thousand seven hundred liters; the town now takes about six hundred and thirty a day from them instead of fifteen hundred; at that rate about seventeen days, to the beginning of April"
   - "Mark's rule for the far wall: nobody crosses the channel, nobody goes up or down the gallery past the scanner, nobody goes near the opening"
   - "Paul asks that the town hear that his crew has worked past the end of a road for three days"
   - "Doctor Mercer's evening check: Sarah is thirty-four weeks; pressure holding; tightenings that come and go are practice, normal at this stage; Doctor Mercer gives the list of what would not be normal"
   - "Doctor Mercer asks to go through her delivery supplies with them the next day; more is missing than she would like"
 new_canon:
   - "Gallery water feeds the community laundry, the public washrooms' showers and basins and the kitchens' washing-up, by pipe, from the old irrigation tank"
-  - "On March nineteenth the drinking tanks hold about a hundred and nineteen thousand liters, drawn down about seven thousand a day"
+  - "On March nineteenth the drinking tanks hold about ten thousand seven hundred liters, drawn down about six hundred and thirty a day"
   - "The staged pumps run from about nine to half past two, while the line is staffed"
   - "Sarah is thirty-four weeks on March nineteenth, with practice contractions"
   - "Every delivery on the island was planned with a hospital to send the mother to if anything went wrong"
@@ -37,7 +37,7 @@ approved_on: ""
 last_approved_revision: ""
 source: "Drafted by Claude in Joshua's accelerated campaign, 2026-11-06 (decision 0045). PENDING APPROVAL. Event 4, Underground Expedition, concluded; hands over to Event 5, Building a Home, and Event 6, Medical Problem."
 ---
-# Chapter 36: Ten Thousand
+# Chapter 36: Nine Hundred
 
 Unit Four walked the line at first light, exactly as he had said he would, and Jack walked it with him.
 
@@ -109,13 +109,13 @@ The pumps ran from nine. Unit Four called in from the outpost every hour, three 
 
 Lena read the inlet meter on the irrigation tank, and wrote the number down before she said it.
 
-"Nine thousand six hundred liters."
+"Eight hundred and sixty-five liters."
 
 Paul was sitting on his crate. He took a pencil out of his pocket and wrote the number on the back of his hand.
 
 Then Lena read the drinking tanks, and that number took her longer.
 
-"A hundred and nineteen thousand. At seventeen a day, that's seven days. But the drinking tanks aren't paying for the laundry anymore, or the showers, or the washing-up. If the line runs every day like today, the town takes about seven thousand a day out of them, not seventeen."
+"Ten thousand seven hundred. At fifteen hundred a day, that's seven days. But the drinking tanks aren't paying for the laundry anymore, or the showers, or the washing-up. If the line runs every day like today, the town takes about six hundred and thirty a day out of them, not fifteen hundred."
 
 She did the last of it out loud, because everyone was watching her. "Seventeen days. To the beginning of April."
 

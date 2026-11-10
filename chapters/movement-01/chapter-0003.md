@@ -21,10 +21,10 @@ new_canon:
   - "See story-rules/ for the canon this movement established. This file is the manuscript."
 playable_beat_flow: ["attempt manual control", "interrupt the scale calculation", "brace through the activation", "check on Sarah and the baby", "read the sensor grid", "take the call from island utility control", "look out the window", "cycle the perimeter cameras", "open the TOMBS event log", "overlay the boundary on the settlement map"]
 ending_type: revelation
-review_status: approved
-audio_status: approved
+review_status: revision-pending
+audio_status: outdated
 approved_on: "2026-11-03"
-last_approved_revision: ""
+last_approved_revision: "afb5d0a"
 source: "Joshua's revised Word manuscript, 3e9a1f9b-01-03_Chapters - TRADDOMIUM Micro Battle.docx, imported 2026-09-23. For the audio, at his instruction the same day (Decision 0024): 0 bare said-tag(s) removed, and 3 quote(s) split by a beat joined into one line with the beat first."
 ---
 # Chapter 3: The Activation
@@ -235,11 +235,11 @@ Jack swallowed. "Everyone inside the boundary."
 
 "Yes."
 
-Sarah looked down at her stomach and then toward the darkened town beyond the glass. "Five hundred people."
+Sarah looked down at her stomach and then toward the darkened town beyond the glass. "Forty-three people."
 
 Jack nodded once. The number felt different now. It was no longer a population statistic in a planning report. It was every sleeping family, every night-shift technician, every child, every patient, and every person who would wake to a world that no longer fit them.
 
-Jack looked through the window again at the impossible forest beyond the streetlights. Five hundred people, their homes, laboratories, vehicles, and everything else inside the TOMBS boundary had been caught in the same event.
+Jack looked through the window again at the impossible forest beyond the streetlights. Forty-three people, their homes, laboratories, vehicles, and everything else inside the TOMBS boundary had been caught in the same event.
 
 Sarah reached for his hand. "Jack..."
 

@@ -13,7 +13,7 @@ objective: "Tell the settlement what happened, in one clear message, without sta
 locations: ["The settlement streets", "The community center", "The main control room (by call)"]
 characters: [Jack, Sarah, "Mark Jones, perimeter security", Aiden, "Doctor Mercer", "Paul Harlan, machine shop foreman", "Lena Ortiz (by wrist terminal, running the public address)", "Residents of the settlement"]
 status_changes:
-  - "About sixty residents gather inside the community center; Lena carries Jack's words to every speaker in the settlement"
+  - "About thirty residents gather inside the community center; Lena carries Jack's words to every speaker in the settlement"
   - "Jack tells the settlement the truth: TOMBS activated without authorization and changed the size of everything inside the developed zone"
   - "Settlement-wide instructions: stay indoors except for essential work, nobody past the end of any road, water restrictions, exterior lights off along the edge after dark, report insects and do not attack them"
   - "Lena plays the greenhouse footage of the spider on the hall's screen; the room goes quiet"
@@ -31,7 +31,7 @@ ending_type: unanswered question
 review_status: in-review
 audio_status: pending-review
 approved_on: ""
-source: "Drafted by Claude on Joshua's scheduled TMB-Story writing workflow, 2026-10-06. PENDING APPROVAL. Event B2, Tell Five Hundred People, begins and is still in progress."
+source: "Drafted by Claude on Joshua's scheduled TMB-Story writing workflow, 2026-10-06. PENDING APPROVAL. Event B2, Tell Forty-Three People, begins and is still in progress."
 ---
 # Chapter 13: One Clear Message
 
@@ -125,7 +125,7 @@ The microphone stand was crooked. Jack straightened it. His hand left a faint sm
 
 Her voice came quietly through his wrist. "You're live everywhere."
 
-Jack looked out at the room. Sixty faces. Behind them, through the glass doors, more people on the lawn. And beyond them, invisible, nearly five hundred people in kitchens and bedrooms and hallways, all listening to the same speakers.
+Jack looked out at the room. Thirty faces. Behind them, through the glass doors, a few more on the lawn. And beyond them, invisible, the last handful in their kitchens and bedrooms, all listening to the same speakers.
 
 He gripped the stand with his good hand. "Good morning. My name is Jack Bennett. I run the TOMBS project at the laboratory. Some of you know me. Most of you probably just know the building."
 
@@ -223,6 +223,6 @@ He hadn't decided whether he was going to.
 
 Jack looked at Sarah. She looked back at him, and for once, she didn't have the next question ready.
 
-Nearly five hundred people were waiting for his answer.
+Forty-three people were waiting for his answer.
 
 And one of them, maybe, already knew it.

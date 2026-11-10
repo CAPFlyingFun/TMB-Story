@@ -17,15 +17,15 @@ status_changes:
   - "March twenty-fifth: the first real rain since the town shrank; drops as big as buckets hit the roofs like hammers; everyone indoors; the outpost is shut and nobody is past the road end"
   - "Water pours through the grate into the shaft onto the pump platforms; the bottom pump is bolted down and every platform clamped; all survive; the channel runs high and fast"
   - "Sarah, at the morning meeting before the rain, asks for every covered container in town to go under the downpipes; residents fill them indoors-side from the gutters, lids on; Aiden: covered, so nothing breeds in it and nothing comes to drink"
-  - "After the rain: the rooftop harvest is about fourteen thousand liters, boiled before drinking; Aiden's channel reading is the highest yet"
-  - "March twenty-sixth, the day the drinking tanks would have run dry at seventeen thousand a day: Lena reads about seventy-two thousand liters; the boiled rain harvest will carry the kitchens for two days"
+  - "After the rain: the rooftop harvest is about twelve hundred and sixty liters, boiled before drinking; Aiden's channel reading is the highest yet"
+  - "March twenty-sixth, the day the drinking tanks would have run dry at fifteen hundred a day: Lena reads about sixty-five hundred liters; the boiled rain harvest will carry the kitchens for two days"
   - "Mr. Pell brings a blanket his wife knitted, for the baby; Sarah thirty-five weeks"
   - "The second line is half laid"
 new_canon:
   - "The first heavy rain since the activation fell on March twenty-fifth; raindrops are as big as buckets to the town"
   - "The grate floods the shaft in rain; the staged pumps survived it"
   - "Rainwater collected from downpipes into covered containers is drinkable after boiling"
-  - "On March twenty-sixth the drinking tanks hold about seventy-two thousand liters"
+  - "On March twenty-sixth the drinking tanks hold about sixty-five hundred liters"
   - "Rain depth at island scale is enormous to the town; the harvest is limited by containers, not by rain; the streets flood knee-deep"
   - "Mr. Pell's late wife knitted a blanket that is now in the crib"
 playable_beat_flow: ["hear Lena's call for helpers", "put containers under the downpipes", "close the lids", "wait out the rain", "check the line by wire", "read the channel", "count the harvest", "read the tanks on the twenty-sixth", "open the door to Mr. Pell"]
@@ -80,7 +80,7 @@ She looked at Aiden. "Covered."
 
 Aiden almost smiled. "Covered. So nothing breeds in it and nothing comes to drink. A mosquito lays eggs in open water. Out here, the thing that hatches would be as long as I am."
 
-Mark wrote it on the board. Downpipes. Lids. Then he looked at Sarah over the top of the marker. "Who tells five hundred people to go out and stand under their gutters?"
+Mark wrote it on the board. Downpipes. Lids. Then he looked at Sarah over the top of the marker. "Who tells forty-three people to go out and stand under their gutters?"
 
 "Nobody goes out. The downpipes come down against the walls. People put the bins at the back doors, fill them through the door, drag them in, and shut the door."
 
@@ -114,9 +114,9 @@ The town came out slowly. Everything shone. Water stood at the doors and ran kne
 
 By evening, Lena had the numbers.
 
-"Rooftops. The bins, the barrels, everything people caught. About fourteen thousand liters. Every lid we had. The roofs threw away a hundred times that."
+"Rooftops. The bins, the barrels, everything people caught. About twelve hundred and sixty liters. Every lid we had. The roofs threw away a hundred times that."
 
-She tapped the clipboard. "It needs boiling. It's not tested. But it's fourteen thousand liters, in one afternoon, in buckets."
+She tapped the clipboard. "It needs boiling. It's not tested. But it's twelve hundred and sixty liters, in one afternoon, in buckets."
 
 Aiden had been on the wire to the outpost the moment Mark let anyone near it. "The channel's the highest I've measured. It's running fast. It'll drop again, but the ground's full. It'll stay up for days."
 
@@ -132,9 +132,9 @@ On the twenty-sixth, Lena read the drinking tanks at six in the morning, the way
 
 "I know."
 
-"At seventeen thousand a day, today's the day it would have read zero."
+"At fifteen hundred a day, today's the day it would have read zero."
 
-She was quiet for a moment. "It says seventy-two thousand. Not zero. Seventy-two. And the rain bins will carry the kitchens for two days."
+She was quiet for a moment. "It says sixty-five hundred. Not zero. Sixty-five hundred. And the rain bins will carry the kitchens for two days."
 
 Jack didn't say anything for a while. Neither did she.
 

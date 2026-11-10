@@ -166,7 +166,7 @@ Mark didn't move from the doorway. "We're not doing that every morning. I'm tell
 
 "Agreed."
 
-Lena said it anyway. "We need fifteen thousand a day."
+Lena said it anyway. "We need thirteen hundred and fifty a day."
 
 "Which is why we can't do it with a stick."
 

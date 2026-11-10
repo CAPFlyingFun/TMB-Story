@@ -15,7 +15,7 @@ characters: [Jack, "Aiden", "Lena Ortiz", "Mark Jones, perimeter security", "Pau
 status_changes:
   - "The trough lid is lifted slowly at the station; the gnat is drowned against the far wall; Aiden takes it in a jar to find out what it is and what it was eating"
   - "The hundred and ten liters go to the community center kitchens to be filtered and boiled in the big pots, so the kitchens draw that much less from the tanks"
-  - "Lena's tank reading on the morning of March tenth: about two hundred and eighty thousand liters, lower than fifteen thousand a day would leave; the town is using closer to seventeen thousand; at that rate about sixteen days"
+  - "Lena's tank reading on the morning of March tenth: about twenty-five thousand liters, lower than thirteen hundred and fifty a day would leave; the town is using closer to fifteen hundred; at that rate about sixteen days"
   - "Mark's board: what worked (the board, the collar, the lid, the strips, walking it back on the rope); what did not (moving the trough cost minutes in the gray; water leaked from the corners; the biggest drop is the one under the retreat and is never taken)"
   - "One shake is a hundred and ten liters, on clear cold mornings only; Mark will not shake more than one leaf near the retreat on any morning"
   - "Sarah takes on watching the camera feeds at the ends of the other roads, looking for leaf tips with drops and no silk; Lena says nobody has looked at most of those feeds since March sixth"
@@ -25,7 +25,7 @@ status_changes:
 new_canon:
   - "There are cameras at the ends of the settlement's other roads; most of their feeds have not been watched since March sixth"
   - "The community center kitchens have pots big enough to boil a hundred liters"
-  - "On March tenth the tanks hold about two hundred and eighty thousand liters; real use is about seventeen thousand a day"
+  - "On March tenth the tanks hold about twenty-five thousand liters; real use is about fifteen hundred a day"
   - "The spider came onto the asphalt to drink from the team's spilled water and followed the wet trail partway toward the cart"
 playable_beat_flow: ["lift the lid slowly", "jar the gnat", "send the water to the kitchens", "read the tank gauge", "fill in Mark's board", "count the leaf tips on the footage", "assign the other road cameras", "sit in on the evening check", "put the second rail on the crib", "watch the footage of the wet trail"]
 ending_type: realization
@@ -91,13 +91,13 @@ Lena broke the silence. She didn't sound unhappy. She sounded like a woman doing
 
 "A hundred and ten liters. I'm sending it to the kitchens. They've got pots big enough to boil it, and every liter they cook with today is a liter they don't take from the tanks."
 
-She looked at the gauge on the wall, and tapped the glass. "Which brings me to the tanks. I read them at six. Two hundred and eighty thousand. If we'd used fifteen thousand a day since the sixth, it would say two ninety."
+She looked at the gauge on the wall, and tapped the glass. "Which brings me to the tanks. I read them at six. Twenty-five thousand. If we'd used thirteen-fifty a day since the sixth, it would say twenty-five six."
 
 Jack did the math before he wanted to. "So we're using more."
 
-"Seventeen, give or take. People are being careful, and it still isn't fifteen. Somebody's mother needs a bath. Somebody's tomatoes are dying. At seventeen, we have about sixteen days."
+"Fifteen hundred, give or take. People are being careful, and it still isn't thirteen-fifty. Somebody's mother needs a bath. Somebody's tomatoes are dying. At fifteen hundred, we have about sixteen days."
 
-Sixteen days. Jack looked at the four words in the corner of the board, and then at the hundred and ten liters on Lena's clipboard. It was the best morning they'd had since the town shrank. It would keep the whole town in water for a little over nine minutes.
+Sixteen days. Jack looked at the four words in the corner of the board, and then at the hundred and ten liters on Lena's clipboard. It was the best morning they'd had since the town shrank. It would keep the whole town in water for not quite two hours.
 
 Mark had seen him do the math. "Say it."
 

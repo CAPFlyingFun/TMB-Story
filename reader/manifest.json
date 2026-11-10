@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09",
+  "generated": "2026-11-10",
   "movements": [
     {
       "number": 1,
@@ -106,8 +106,8 @@
       "title": "The Boundary",
       "pov": "Jack",
       "word_count": 1001,
-      "review_status": "approved",
-      "audio_status": "approved",
+      "review_status": "revision-pending",
+      "audio_status": "outdated",
       "ending_type": "revelation",
       "audio": {
         "kind": "dialogue",
@@ -124,8 +124,8 @@
       "title": "The Activation",
       "pov": "Jack",
       "word_count": 1432,
-      "review_status": "approved",
-      "audio_status": "approved",
+      "review_status": "revision-pending",
+      "audio_status": "outdated",
       "ending_type": "revelation",
       "audio": {
         "kind": "dialogue",
@@ -142,8 +142,8 @@
       "title": "The First Calls",
       "pov": "Jack",
       "word_count": 1556,
-      "review_status": "approved",
-      "audio_status": "approved",
+      "review_status": "revision-pending",
+      "audio_status": "outdated",
       "ending_type": "quiet beat",
       "audio": {
         "kind": "dialogue",
@@ -196,8 +196,8 @@
       "title": "Someone Knew",
       "pov": "Jack",
       "word_count": 985,
-      "review_status": "approved",
-      "audio_status": "approved",
+      "review_status": "revision-pending",
+      "audio_status": "outdated",
       "ending_type": "revelation",
       "audio": {
         "kind": "dialogue",
@@ -250,8 +250,8 @@
       "title": "First Light",
       "pov": "Jack",
       "word_count": 1176,
-      "review_status": "approved",
-      "audio_status": "approved",
+      "review_status": "revision-pending",
+      "audio_status": "outdated",
       "ending_type": "turning point",
       "audio": {
         "kind": "mixed",
@@ -583,7 +583,7 @@
       "number": 36,
       "path": "chapters/movement-10/chapter-0036.md",
       "movement": 10,
-      "title": "Ten Thousand",
+      "title": "Nine Hundred",
       "pov": "Jack",
       "word_count": 1351,
       "review_status": "in-review",

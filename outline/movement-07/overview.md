@@ -60,7 +60,7 @@ instructions to call Mercer for herself and Mark for anything Jack needs to know
 ## Threads carried
 
 - Water is not solved: twelve liters, boiled and drinkable; a trough that might catch a fifth of a big drop
-  per drum-sized fall in the drill. Fifteen thousand liters a day still leaves the tanks.
+  per drum-sized fall in the drill. Thirteen hundred and fifty liters a day still leaves the tanks.
 - Sarah: thirty-two weeks; March 8 same as high, no protein; March 9 a little better. Watching only.
 - Jack: four stitches, pink, no worse; Mercer has antibiotics she would rather not open.
 - The spider: observation only. It drinks dew, notices moving prey first, will cross the asphalt on
