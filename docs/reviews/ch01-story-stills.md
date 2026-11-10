@@ -1,5 +1,7 @@
 # Chapter 1 opening stills — November 10, 2026
 
+Update: the next approved ten-image lab sequence now replaces the cover fallback described below. See [ch01-lab-batch-01.md](ch01-lab-batch-01.md) for current cues and continuity. This report retains the original opening integration record.
+
 The Listen player switches the four reviewed island illustrations on script cues and crossfades directly to the next decoded image over 500ms. It returns to the previous laboratory cover when the narration enters the lab. Audio and manuscript files are unchanged.
 
 | Image | Cue |

@@ -45,7 +45,7 @@ test('an unloaded or old audio source cannot overwrite a paused pending seek', a
   await f.settle();
   assert.ok(f.img.src.endsWith('003-settlement-distant.webp'));
 });
-test('loaded export time selects each shot and crossfades to the lab cover', async () => {
+test('loaded export time crosses from island artwork into approved lab stills', async () => {
   const f = fixture();
   for (const [time, name] of [[5, '001-island-wide.webp'], [10, '002-island-approach.webp'], [17, '003-settlement-distant.webp'], [22, '004-settlement-close.webp'], [5, '001-island-wide.webp']]) {
     f.audio.currentTime = time; f.player.renderProgress(); await f.settle();
@@ -54,7 +54,20 @@ test('loaded export time selects each shot and crossfades to the lab cover', asy
   }
   f.audio.currentTime = 32; f.player.renderProgress();
   await f.settle();
-  assert.equal(f.img.hidden, false); assert.ok(f.img.src.endsWith('covers/lab.jpg'));
+  assert.equal(f.img.hidden, false); assert.ok(f.img.src.endsWith('005-jack-lab.webp'));
+});
+test('the approved lab sequence follows the active reading and survives backward seeks', async () => {
+  const f = fixture();
+  const cues = api.compile(f.state.manifest, sheet).slice(4);
+  assert.ok(cues.every(cue => cue.src), 'the lab sequence must use approved stills, not the old cover');
+  for (const cue of [...cues, cues[0], cues[3], cues.at(-1)]) {
+    const start = f.state.mixed.startMs[cue.index];
+    const end = f.state.mixed.endMs[cue.index];
+    f.audio.currentTime = (start + (end - start) * Math.min(0.99, cue.fraction + 0.001)) / 1000;
+    f.player.renderProgress(); await f.settle();
+    assert.ok(f.img.src.endsWith(cue.src.slice(2)), cue.id + ': ' + f.img.src);
+    assert.equal(f.img.hidden, false);
+  }
 });
 test('a late image callback cannot overwrite a newer cue, panel or chapter', async () => {
   const f = fixture();

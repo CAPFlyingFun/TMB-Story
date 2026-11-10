@@ -53,15 +53,32 @@ test('normalization handles smart quotes and whitespace without changing a cue',
   });
   assert.equal(api.select(cues, 0, 0).id, 'night');
 });
-test('the shipped opening cue list resolves against the real chapter manifest', () => {
+test('the shipped island and approved lab cues resolve against the real chapter manifest', () => {
   const cuePath = path.join(root, 'reader/shots/chapter-01.json');
   assert.ok(fs.existsSync(cuePath), 'chapter one needs an ordered cue list');
   const real = JSON.parse(fs.readFileSync(path.join(root, 'audio/manifests/chapter-01.json')));
   const cues = compile(real, JSON.parse(fs.readFileSync(cuePath)));
-  assert.deepEqual(cues.map(c => c.id), ['island-wide', 'island-approach', 'settlement-distant', 'settlement-close', 'laboratory']);
-  assert.equal(api.select(cues, 2, 0).src, null);
+  assert.deepEqual(cues.map(c => c.id), ['island-wide', 'island-approach', 'settlement-distant', 'settlement-close',
+    'laboratory', 'jack-asleep', 'jack-first-chirp', 'jack-amber-warning', 'jack-startled', 'jack-rubs-eyes',
+    'jack-unsolicited-windows', 'jack-network-monitor', 'jack-connection-vanishes', 'jack-red-warning']);
+  assert.ok(api.select(cues, 2, 0).src.endsWith('005-jack-lab.webp'));
+  assert.ok(cues.every(c => c.src), 'approved story images must not fall through to the old lab cover');
   for (const cue of cues) if (cue.src) {
     assert.ok(fs.existsSync(path.join(root, cue.src)));
-    assert.ok(cue.portraitSrc && fs.existsSync(path.join(root, cue.portraitSrc)));
+    if (cue.portraitSrc) assert.ok(fs.existsSync(path.join(root, cue.portraitSrc)));
   }
+  assert.ok(cues.slice(0, 4).every(c => c.portraitSrc), 'keep the approved opening portrait extensions');
+  assert.ok(cues.slice(4).every(c => !c.portraitSrc), 'the new square masters serve both orientations');
+  const chirp = cues.find(c => c.id === 'jack-first-chirp');
+  const amber = cues.find(c => c.id === 'jack-amber-warning');
+  assert.equal(chirp.index, amber.index);
+  assert.equal(api.select(cues, chirp.index, amber.fraction - 0.001).id, 'jack-first-chirp');
+  assert.equal(api.select(cues, amber.index, amber.fraction).id, 'jack-amber-warning');
+  const typing = cues.find(c => c.id === 'jack-network-monitor');
+  assert.equal(api.select(cues, typing.index, typing.fraction - 0.001).id, 'jack-unsolicited-windows');
+  assert.equal(api.select(cues, typing.index, typing.fraction).id, 'jack-network-monitor');
+  const red = cues.find(c => c.id === 'jack-red-warning');
+  assert.equal(api.select(cues, red.index, 0.5).id, 'jack-connection-vanishes', 'refreshing alone must not show a red message early');
+  assert.equal(api.select(cues, red.index, 0.99).id, 'jack-red-warning');
+  assert.equal(api.select(cues, real.segments.length - 1, 1).id, 'jack-red-warning', 'hold the last approved image until the next batch');
 });

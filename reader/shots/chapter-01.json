@@ -1,6 +1,6 @@
 {
   "chapter": 1,
-  "note": "Opening batch only. Phrase positions use the phrase's character share of its spoken segment, like the Watch timeline; they are approximate within a long narration clip. The laboratory cue restores the existing cover until the next image batch is approved.",
+  "note": "Four approved island images followed by ten approved laboratory stills. Changes follow script anchors; phrase positions within a narration clip are approximate character-share timings. The final approved lab still is held until a later batch extends the sequence. Audio and manuscript are unchanged.",
   "shots": [
     {
       "id": "island-wide",
@@ -46,7 +46,83 @@
       "at": {
         "line": "Deep inside one of those laboratories"
       },
-      "src": null
+      "src": "./assets/story/ch01/005-jack-lab.webp",
+      "alt": "Jack sleeps in his chair directly at his laboratory console, with his arms folded and teal diagnostics on the screens."
+    },
+    {
+      "id": "jack-asleep",
+      "at": {
+        "line": "Jack sat slumped in his chair"
+      },
+      "src": "./assets/story/ch01/006-jack-asleep.webp",
+      "alt": "A closer view of Jack asleep at the workstation, his head tilted and arms folded across his chest."
+    },
+    {
+      "id": "jack-first-chirp",
+      "at": {
+        "line": "A warning tone chirped from Jack's console"
+      },
+      "src": "./assets/story/ch01/007-jack-first-chirp.webp",
+      "alt": "Jack shifts without waking at the first warning chirp; his console still shows teal diagnostics."
+    },
+    {
+      "id": "jack-amber-warning",
+      "at": {
+        "line": "A warning tone chirped from Jack's console",
+        "phrase": "A second tone followed"
+      },
+      "src": "./assets/story/ch01/008-jack-amber-warning.webp",
+      "alt": "Jack remains asleep beside his console as the display flashes an amber warning symbol."
+    },
+    {
+      "id": "jack-startled",
+      "at": {
+        "line": "Jack jerked awake"
+      },
+      "src": "./assets/story/ch01/009-jack-startled.webp",
+      "alt": "Startled awake by the alarm, Jack rolls his chair a short distance backward from the console."
+    },
+    {
+      "id": "jack-rubs-eyes",
+      "at": {
+        "line": "The warning repeated while Jack rubbed his eyes"
+      },
+      "src": "./assets/story/ch01/010-jack-rubs-eyes.webp",
+      "alt": "Jack leans back toward the amber-warning display while rubbing one tired eye."
+    },
+    {
+      "id": "jack-unsolicited-windows",
+      "at": {
+        "line": "Several windows were opening and closing on their own"
+      },
+      "src": "./assets/story/ch01/011-jack-unsolicited-windows.webp",
+      "alt": "Jack watches windows appear on his computer without touching the keyboard."
+    },
+    {
+      "id": "jack-network-monitor",
+      "at": {
+        "line": "Several windows were opening and closing on their own",
+        "phrase": "Jack grabbed the keyboard"
+      },
+      "src": "./assets/story/ch01/012-jack-network-monitor.webp",
+      "alt": "Jack types urgently at his workstation to open the network monitor."
+    },
+    {
+      "id": "jack-connection-vanishes",
+      "at": {
+        "line": "An unfamiliar connection appeared"
+      },
+      "src": "./assets/story/ch01/013-jack-connection-vanishes.webp",
+      "alt": "Jack leans closer and frowns at the network monitor where an unfamiliar connection has vanished."
+    },
+    {
+      "id": "jack-red-warning",
+      "at": {
+        "line": "He refreshed the display",
+        "phrase": "a red message"
+      },
+      "src": "./assets/story/ch01/014-jack-red-warning.webp",
+      "alt": "A red security warning appears on the primary monitor as Jack stares at it, fully awake."
     }
   ]
 }
