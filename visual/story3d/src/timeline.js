@@ -23,7 +23,7 @@ function makeWalk(points, keys) {
 //  {t, walk:{points, keys, endYaw}}  {t, look}  {t, hands}  {t, visible}
 export function evalActor(events, t) {
   const S = { at: [0, 0], yaw: 0, yawFrom: 0, yawT: -1e9, turn: 0.5, pose: 'stand', prevPose: null, poseT: -1e9, blend: 0.55, prevAt: null, prevYaw: null,
-    walked: 0, motion: null, look: null, hands: null, visible: true, baseWalked: 0 };
+    walked: 0, motion: null, look: null, hands: null, handsT: 0, visible: true, baseWalked: 0 };
   const posAt = (time) => {
     const m = S.motion; if (!m) return S.at;
     if (m.kind === 'move') return [lerp(m.from[0], m.to[0], smooth((time - m.t0) / m.dur)), lerp(m.from[1], m.to[1], smooth((time - m.t0) / m.dur))];
@@ -67,14 +67,14 @@ export function evalActor(events, t) {
     if (e.move) { const from = posAt(e.t); const y = yawAt(e.t); if (S.motion && S.motion.kind === 'walk') settle(e.t); S.yawFrom = y; S.yawT = e.t; S.motion = { kind: 'move', from, to: e.move.to, t0: e.t, dur: e.move.dur }; S.at = e.move.to; }
     if (e.walk) { const cur = settle(e.t); const w = makeWalk([S.at, ...e.walk.points], e.walk.keys.map(([i, tt]) => [i, tt])); S.motion = { kind: 'walk', w, startYaw: S.yaw, endYaw: e.walk.endYaw, keepYaw: !!e.walk.keepYaw, prevPose: cur.pose === 'walk' ? 'stand' : cur.pose }; }
     if (e.look !== undefined) S.look = e.look;
-    if (e.hands !== undefined) S.hands = e.hands;
+    if (e.hands !== undefined) { if (e.hands !== S.hands) S.handsT = e.t; S.hands = e.hands; }
     if (e.visible !== undefined) S.visible = e.visible;
   }
   const ps = poseAt(t);
   let walked = S.walked;
   if (S.motion && S.motion.kind === 'walk') walked = S.baseWalked + S.motion.w.dist(t);
   const k = Math.min(1, Math.max(0, ps.k));
-  return { at: posAt(t), yaw: yawAt(t), pose: ps.pose, prevPose: k < 1 ? ps.prevPose : null, k, prevAt: ps.prevAt || null, prevYaw: ps.prevYaw ?? null, walked, look: S.look, hands: S.hands, visible: S.visible };
+  return { at: posAt(t), yaw: yawAt(t), pose: ps.pose, prevPose: k < 1 ? ps.prevPose : null, k, prevAt: ps.prevAt || null, prevYaw: ps.prevYaw ?? null, walked, look: S.look, hands: S.hands, handsT: S.handsT, visible: S.visible };
 }
 
 // Discrete state from events up to t: the last value of each key wins.

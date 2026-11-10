@@ -1,9 +1,15 @@
-// CHAPTER 1, "The Alarm", staged in the procedural lab (metres: +X east, +Z south), timed to
-// the v4 dialogue file through its line index. Every time below is a LINE of the chapter
-// (L("...")), so a re-rendered file moves the staging with it. Working proposal, not canon.
-// Agreed rules (outline/LISTEN_VISUALS_IDEAS.md): Sarah is seen only from behind until she
-// takes Jack's chair (5:07); security cuts for dialogue, overhead for where people are,
-// cinematic shots for the emotional beats; the 7:04 warning stays on Jack's console.
+// CHAPTER 1, "The Alarm", staged in the Plan C lab (tombs-lab; metres: +X east, +Z south),
+// timed to the chapter's one audio file through its line index. Every time below is a LINE of
+// the chapter (L("...")), so a re-rendered file moves the staging with it. Presentation only:
+// the manuscript is not changed to fit the staging.
+// Agreed rules (outline/LISTEN_VISUALS_IDEAS.md): security cuts for dialogue, overhead for where
+// people are, cinematic shots for the emotional beats; the 7:04 warning stays on Jack's
+// console. Sarah may be seen from the front (Joshua relaxed the back-only rule, 2026-11-10); her
+// plain reveal is still the moment she takes Jack's chair.
+// Measured on the toon cast (2026-11-10): their arms are short (Sarah 0.45 m shoulder to wrist)
+// and their hands large, and the reach takes hold only under 85% of an arm and keeps it to 90%
+// (humanReach HOLD_IN / HOLD_OUT): a standing hand reaches only the desk's front strip, so marks
+// and props are placed where the hands can truly touch them (see handTargets).
 import DATA from './lines.js';
 import { evalActor, evalChair, evalDiscrete, yawTo, smooth, lerp } from './timeline.js';
 
@@ -27,11 +33,14 @@ export function L(text, o = {}) {
 // desk, its button on top at 0.88 m; Sarah's tablet starts on her desk.
 const P = {
   jackMon: [-13.0, 1.1, -12.64], jackMonR: [-12.7, 1.1, -12.62], secMon: [-15.3, 1.1, -12.64], sarahMon: [16.62, 1.1, -10.4],
-  intercom: [-12.25, 0.885, -12.3], jackKeys: [-13.05, 0.772, -12.33], secKeys: [-15.35, 0.772, -12.33], sarahKeys: [16.31, 0.772, -10.45],
+  intercom: [-12.15, 0.885, -12.3], jackKeys: [-13.05, 0.772, -12.33], secKeys: [-15.35, 0.772, -12.33], sarahKeys: [16.31, 0.772, -10.45],
   tabletDesk: [16.3, 0.74, -9.75],
   // "Sarah placed her tablet beside the keyboard": to the right of his keyboard and mouse, in
   // front of his right monitor, clear of the intercom
-  tabletJack: [-12.47, 0.74, -12.47],
+  // (its near edge under her right hand as she stands beside him: 3.5 cm clear of the intercom,
+  // 7 cm of the mouse)
+  // (where her fingertips set it down: its near edge on the desk's front strip, laid square to her)
+  tabletJack: [-12.37, 0.748, -12.205], tabletYaw: Math.atan2(-0.3, -1) + Math.PI,
 };
 const EYE = { jack: { sit: 1.13, stand: 1.6 }, sarah: { sit: 1.22, stand: 1.58 } };
 // the chair heights the cast's feet reach the floor at (stage.js CAST)
@@ -157,20 +166,28 @@ const S = [
   // "Sarah closed the distance between them."
   { t: L('Sarah closed the distance'), walk: { points: [[-12.3, -11.2]], keys: [[0, L('Sarah closed the distance', { offset: 0.1 })], [1, L('Sarah closed the distance', { offset: 1.1 })]], endYaw: yawTo(-0.7, -0.75) } },
   // "She leaned over his shoulder and studied the screen."
-  { t: L('She leaned over his shoulder'), walk: { points: [[-12.45, -11.45]], keys: [[0, L('She leaned over his shoulder', { offset: 0.1 })], [1, L('She leaned over his shoulder', { offset: 0.8 })]], endYaw: yawTo(-0.45, -1) } },
+  // (her mark: just beside his chair and 25 cm short of the desk's edge, so her bump clears it
+  // and the tablet's place, the keyboard's near corner and the back of his chair are all within
+  // her reach as she leans)
+  // (her bump is above the desk's height, so it overhangs the edge without touching it; her arms are
+  // short for the toon model, 0.45 m shoulder to wrist, so the tablet's place and the keyboard's
+  // near corner are reached by a deep lean, and her left hand rests on his right shoulder)
+  { t: L('She leaned over his shoulder'), walk: { points: [[-12.42, -11.97]], keys: [[0, L('She leaned over his shoulder', { offset: 0.1 })], [1, L('She leaned over his shoulder', { offset: 0.9 })]], endYaw: yawTo(-0.3, -1) } },
   { t: L('She leaned over his shoulder'), look: 'jackMon' },
+  { t: L('She leaned over his shoulder', { offset: 1.0 }), hands: 'onShoulder' },
   { t: L('Jack.', { nth: 0 }), look: 'jack' },
   { t: L('Sarah placed her tablet', { phrase: 'Sarah placed' }), hands: 'tabletPlace', look: 'tabletJack' },
-  { t: L('Sarah placed her tablet', { edge: 'end' }), hands: null, look: 'jack' },
-  { t: L('Sarah tapped the edge of the keyboard.'), hands: 'keyEdge', look: 'jackMon' },
-  { t: L('And then?'), hands: null, look: 'jack' },
+  { t: L('Sarah placed her tablet', { edge: 'end' }), hands: 'onShoulder', look: 'jack' },
+  { t: L('Sarah tapped the edge of the keyboard.', { offset: 0.5 }), hands: 'keyEdge', look: 'jackMon' },
+  { t: L('And then?', { edge: 'end' }), hands: null, look: 'jack' },
   { t: L("Sarah's attention sharpened."), look: 'jackMon' },
   { t: L('By itself?'), look: 'jack' },
   { t: L('Sarah looked at the terminal lock indicator.'), look: 'jackMon' },
   { t: L('You locked the terminal?'), look: 'jack' },
   { t: L('Sarah stared at him', { phrase: 'before looking back' }), look: 'jackMon' },
   // "Sarah started powering up the other console next to Jack."
-  { t: L('Sarah started powering up'), walk: { points: [[-12.6, -10.95], [-13.4, -10.75], [-14.6, -11.0], [-15.2, -11.75]], keys: [[0, L('Sarah started powering up', { offset: 0.1 })], [4, L('Sarah started powering up', { offset: 2.6 })]], endYaw: N } },
+  { t: L('Sarah started powering up'), hands: null },
+  { t: L('Sarah started powering up'), walk: { points: [[-12.6, -10.95], [-13.4, -10.75], [-14.6, -11.0], [-15.05, -11.98]], keys: [[0, L('Sarah started powering up', { offset: 0.1 })], [4, L('Sarah started powering up', { offset: 2.6 })]], endYaw: N } },
   { t: L('Sarah started powering up', { offset: 0.2 }), look: 'secMon' },
   { t: L('Sarah started powering up', { offset: 2.4 }), hands: 'powerUp' },
   { t: L('Can I take your chair?'), hands: null, look: 'jack' },
@@ -224,8 +241,9 @@ const CHAIRS = {
     { t: L('Can you come take a look?', { offset: 0.3 }), move: { to: [16.0, -10.75], yaw: E + 0.5, dur: 0.6 } }],
 };
 const TABLET = [{ t: 0, set: { on: 'desk', at: P.tabletDesk, yaw: 0 } },
-  { t: L("I'm on my way.", { offset: 0.3 }), set: { on: 'arm', who: 'sarah' } },
-  { t: L('Sarah placed her tablet', { edge: 'end', offset: -0.6 }), set: { on: 'desk', at: P.tabletJack, yaw: 0.25 } }];
+  { t: L("I'm on my way.", { offset: 0.3 }), set: { on: 'arm', who: 'sarah', side: 'R' } },
+  { t: L('Sarah placed her tablet', { phrase: 'Sarah placed', offset: -0.5 }), set: { on: 'hand', who: 'sarah', side: 'R', since: L('Sarah placed her tablet', { phrase: 'Sarah placed', offset: -0.5 }) } },
+  { t: L('Sarah placed her tablet', { edge: 'end', offset: -0.6 }), set: { on: 'desk', at: P.tabletJack, yaw: P.tabletYaw } }];
 // ---- screens ----------------------------------------------------------------------------
 // What each of the room's screens shows, from the manuscript's own system lines. Jack's left
 // monitor ('...:0') is where he works (the network monitor, the logs, the directory); his right
@@ -272,7 +290,8 @@ const CAM = {
   J1: { sec: "CAM J-1 · JACK'S LABORATORY", pos: [-14.3, 2.4, -12.98], look: [-13.0, 1.0, -11.8], hfov: 74 },
   J2: { sec: "CAM J-2 · JACK'S LABORATORY", pos: [-16.7, 2.9, -7.9], look: [-12.6, 1.0, -10.9], hfov: 92, slot: { hfov: 84 } },
   J3: { sec: "CAM J-3 · JACK'S LABORATORY", pos: [-10.8, 2.9, -7.85], look: [-12.6, 1.05, -11.2], hfov: 72 },
-  J4: { sec: "CAM J-4 · JACK'S LABORATORY", pos: [-16.6, 2.4, -12.95], look: [-15.0, 1.05, -11.9], hfov: 72 },
+  // (in the corner by the window, west of the other console's monitors, so they are not in front of her)
+  J4: { sec: "CAM J-4 · JACK'S LABORATORY", pos: [-16.75, 2.55, -12.6], look: [-15.2, 1.05, -11.85], hfov: 70 },
   S1: { sec: "CAM S-1 · SARAH'S OFFICE", pos: [10.8, 2.75, -7.9], look: [15.7, 0.9, -10.3], hfov: 50 },
   S2: { sec: "CAM S-2 · SARAH'S OFFICE", pos: [16.75, 2.8, -7.85], look: [11.6, 1.0, -9.6], hfov: 74 },
   SC: { sec: 'CAM SC · EAST CONNECTION', pos: [10.2, 3.0, -10.95], look: [6.0, 1.0, -9.5], hfov: 76 },
@@ -284,14 +303,24 @@ const CAM = {
   overSarah: { pos: [-12.1, 1.85, -9.9], look: [-13.05, 1.12, -11.95], hfov: 56 },
   overSarahW: { pos: [-16.3, 1.65, -11.0], look: [-13.0, 1.15, -11.75], hfov: 58 },
   reveal: { pos: [-13.45, 1.3, -9.3], look: [-13.05, 0.95, -11.5], hfov: 56 },
-  pairFront: { pos: [-10.8, 2.0, -12.9], look: [-14.2, 1.0, -11.7], hfov: 70 },
+  // (high enough that his desk lamp passes below the frame's middle)
+  pairFront: { pos: [-11.0, 2.35, -12.8], look: [-14.2, 1.0, -11.75], hfov: 68 },
+  // from Jack's left, over the desk: his hands, the keyboard, the tablet's place and her arm coming in
+  desk: { pos: [-13.7, 1.78, -12.5], look: [-12.55, 0.78, -12.15], hfov: 58, slot: { hfov: 66 } },
+  secConsole: { pos: [-13.85, 1.5, -11.15], look: [-15.15, 0.92, -12.3], hfov: 62 },
+  // over each shoulder, for the quiet beats between them: her face over his, his over hers
+  jackOS: { pos: [-12.72, 1.36, -11.55], look: [-15.3, 1.12, -11.95], hfov: 44 },
+  sarahOS: { pos: [-15.62, 1.4, -11.5], look: [-13.0, 1.08, -12.0], hfov: 44 },
+  chairNudge: { pos: [-12.0, 1.45, -10.55], look: [-13.3, 0.8, -11.65], hfov: 62 },
+  bench: { pos: [-12.25, 1.7, -10.3], look: [-14.0, 0.7, -9.2], hfov: 66 },
+  pairFace: { pos: [-14.15, 1.32, -12.72], look: [-14.15, 1.12, -11.6], hfov: 74, slot: { hfov: 82 } },
 };
 const FRAMES = { facility: [-18.5, 18.5, -14.5, 14.5], jackLab: [-17.4, -10.1, -13.5, -7.2], northWing: [-17.5, 17.5, -13.6, -6.8] };
 const SHOTS = [];
 const cut = (t, shot, extra = {}) => SHOTS.push({ t, shot, ...extra });
 cut(0, 'overhead', { from: 'facility', to: 'jackLab', t0: L('Deep inside one of those laboratories'), dur: L('A warning tone chirped') - L('Deep inside one of those laboratories') - 4 });
-cut(L('A warning tone chirped'), 'J1');
-cut(L('Warning. Unauthorized system access.'), 'J2');
+cut(L('A warning tone chirped'), 'J2');   // (the toon faces' eyes are painted open: asleep, he is not seen close)
+cut(L('Warning. Unauthorized system access.'), 'jackScreen');
 cut(L('Jack jerked awake'), 'jackSide');
 cut(L('What? Okay'), 'J1');
 cut(L('Several windows were opening'), 'jackScreen');
@@ -335,11 +364,12 @@ for (const ln of LINES) {
 cut(L('Sarah started powering up'), 'J3');
 cut(L('Can I take your chair?'), 'overSarahW');
 cut(L("I'm sitting here."), 'overSarahW');
-cut(L('Sarah nudged the arm'), 'J2');
+cut(L('Sarah nudged the arm'), 'chairNudge');
 cut(L('Let me have your chair'), 'overSarahW');
 // the reveal, plainly, as she takes his chair
 cut(L('Jack gave Sarah his chair'), 'reveal');
-cut(L('He crossed to the next workstation'), 'J2');
+cut(L('He crossed to the next workstation'), 'bench');
+cut(L('He crossed to the next workstation', { offset: 5.4 }), 'J1');
 cut(L('Sarah was already typing.'), 'pairFront');
 for (const ln of LINES) {
   if (ln.s < L('You said the connection disappeared?') || ln.s >= L('A new warning tone interrupted them.')) continue;
@@ -365,12 +395,33 @@ cut(L('Sarah leaned toward the screen.'), 'pairFront');
 cut(L('Jack stopped typing.'), 'J1');
 cut(L('Sarah slowly turned toward him.'), 'J4');
 cut(L('Jack met her eyes.'), 'pairFront');
+// close on the desk for her tablet and her tap; their faces from the window for the quiet beats
+cut(L('Jack straightened in his chair'), 'desk');
+cut(L('Sarah tapped the edge of the keyboard.'), 'J1');
+for (const [line, shot] of [['Sarah looked sideways at him.', 'jackOS'], ['Jack glanced at her stomach.', 'sarahOS'], ['Sarah rested a hand briefly', 'jackOS'],
+  ['Jack smiled at the movement', 'sarahOS'], ['Sarah slowly turned toward him.', 'jackOS'], ['Jack met her eyes.', 'sarahOS']]) cut(L(line), shot);
+cut(L('Sarah started powering up', { offset: 1.9 }), 'secConsole');
 SHOTS.sort((a, b) => a.t - b.t);
 // a cut never comes less than 1.2 s after the last one
 const SHOTLIST = []; for (const s of SHOTS) { const last = SHOTLIST[SHOTLIST.length - 1]; if (last && s.t - last.t < 1.0 && s.shot !== 'overhead' && last.shot !== 'overhead') { SHOTLIST[SHOTLIST.length - 1] = { ...s, t: last.t }; continue; } SHOTLIST.push(s); }
 export { SHOTLIST, CAM };
 
 // ---- evaluate ---------------------------------------------------------------------------
+const LEANS = {
+  sarah: [[L('She leaned over his shoulder', { offset: 0.2 }), 0], [L('She leaned over his shoulder', { offset: 1.5 }), 24],
+    [L('Sarah placed her tablet', { phrase: 'Sarah placed', offset: -0.4 }), 24], [L('Sarah placed her tablet', { phrase: 'Sarah placed', offset: 0.6 }), 40],
+    [L('Sarah placed her tablet', { edge: 'end', offset: 0.3 }), 40], [L('Sarah placed her tablet', { edge: 'end', offset: 1.3 }), 24],
+    [L('Sarah tapped the edge of the keyboard.'), 24], [L('Sarah tapped the edge of the keyboard.', { offset: 0.7 }), 36],
+    [L('Sarah tapped the edge of the keyboard.', { edge: 'end' }), 36], [L('And then?', { edge: 'end' }), 12],
+    [L('Sarah started powering up'), 12], [L('Sarah started powering up', { offset: 0.8 }), 0],
+    [L('Sarah started powering up', { offset: 2.2 }), 0], [L('Sarah started powering up', { offset: 2.9 }), 16], [L('Can I take your chair?'), 0]],
+  jack: [[L('Jack leaned back.'), 0], [L('Jack leaned back.', { offset: 0.6 }), -8], [L('I know.'), -8], [L('I know.', { offset: 0.8 }), 0]],
+};
+function leanAt(id, t) {
+  const k = LEANS[id]; if (!k || t <= k[0][0]) return 0;
+  for (let i = 1; i < k.length; i++) if (t <= k[i][0]) return lerp(k[i - 1][1], k[i][1], smooth((t - k[i - 1][0]) / Math.max(0.01, k[i][0] - k[i - 1][0])));
+  return k[k.length - 1][1];
+}
 const sorted = a => a.slice().sort((x, y) => x.t - y.t);
 const JS = sorted(J), SS = sorted(S);
 const CH = Object.fromEntries(Object.entries(CHAIRS).map(([k, v]) => [k, sorted(v)]));
@@ -383,7 +434,12 @@ function lookPoint(name, A) {
   if (name === 'tablet') return P.tabletDesk; if (name === 'tabletJack') return P.tabletJack;
   return P[name] || null;
 }
-function handTargets(id, a, A, chairs) {
+// A hand that sets something down or presses comes in a few centimetres above the surface and
+// then lowers onto it over `DOWN` seconds: the reach takes hold only under 85% of the arm and
+// keeps it to 90% (humanReach HOLD_IN / HOLD_OUT), and the toon arms are short.
+const DOWN = 0.7, ABOVE = 0.07;
+function handTargets(id, a, A, chairs, t = 0) {
+  const settle = 1 - smooth((t - (a.handsT || 0)) / DOWN), lift = ABOVE * settle;
   const f = [Math.sin(a.yaw), Math.cos(a.yaw)], left = [f[1], -f[0]];
   const keysAt = (k, side) => [k[0] + left[0] * 0.13 * side, k[1], k[2] + left[1] * 0.13 * side];
   const near = () => { let best = P.jackKeys, d = 1e9; for (const k of [P.jackKeys, P.secKeys, P.sarahKeys]) { const dd = Math.hypot(k[0] - a.at[0], k[2] - a.at[1]); if (dd < d) { d = dd; best = k; } } return best; };
@@ -392,9 +448,16 @@ function handTargets(id, a, A, chairs) {
     case 'typeL': return [{ side: 'L', at: keysAt(P.jackKeys, 1) }];
     case 'intercom': return [{ side: 'R', at: P.intercom }];
     case 'tabletPick': return [{ side: 'R', at: P.tabletDesk }];
-    case 'tabletPlace': return [{ side: 'R', at: P.tabletJack }];
-    case 'keyEdge': return [{ side: 'R', at: [-12.78, 0.775, -12.18] }];
-    case 'powerUp': return [{ side: 'R', at: [-15.05, 0.775, -12.25] }];
+    // fingertips: on the tablet's far edge as she sets it down, then her finger on the keyboard's near corner
+    case 'tabletPlace': return [{ side: 'R', at: [-12.345, 0.764 + lift, -12.12] }, ...handTargets(id, { ...a, hands: 'onShoulder' }, A, chairs, t)];
+    case 'onShoulder': return [{ side: 'L', bone: ['jack', 'shoulderR'], offset: [0.0, 0.075, 0.03], kind: 'hold', palm: { x: 0, y: -1, z: 0 } }];
+    // (the keyboard itself is out of the toon arm's reach from beside him: she taps the desk's edge by it)
+    case 'keyEdge': return [{ side: 'R', at: [-12.33, 0.762 + lift, -12.115], kind: 'press' }];
+    // the other console's power button (tombs-lab dressing: the desk's front edge, on the user's right)
+    case 'powerUp': return [{ side: 'R', at: [-14.95, 0.766 + lift, -12.14] }];
+    // her left hand on the top of the back of his chair, as she leans over his shoulder
+    case 'chairBackL': { const c = chairs.jackChair, cy = Math.cos(c.yaw), sy = Math.sin(c.yaw), bx = -0.08, bz = -0.29;
+      return [{ side: 'L', at: [c.at[0] + bx * cy + bz * sy, (c.seat || 0.45) + 0.66, c.at[1] - bx * sy + bz * cy], kind: 'hold', palm: { x: 0, y: -1, z: 0 } }]; }
     case 'chairBack': { const c = chairs.secondChair; return [{ side: 'L', at: [c.at[0] + 0.2, 0.9, c.at[1] - 0.27] }, { side: 'R', at: [c.at[0] - 0.2, 0.9, c.at[1] - 0.27] }]; }
     case 'chairArm': { const c = chairs.jackChair; return [{ side: 'R', at: [c.at[0] - 0.3, 0.66, c.at[1] + 0.05] }]; }
     case 'belly': { const p = lookPoint('sarahBelly', A); return [{ side: 'R', at: [p[0], 0.82, p[2]], kind: 'hold', palm: { x: -f[0], y: 0, z: -f[1] } }]; }
@@ -416,9 +479,10 @@ export function frame(t, aspect, fmt) {
   const actors = {};
   for (const id of ['jack', 'sarah']) {
     const a = A[id];
-    actors[id] = { ...a, visible: a.visible, look: lookPoint(a.look, A), hands: handTargets(id, a, A, chairs), typing: /^type/.test(a.hands || ''), talking: speaking.startsWith(id), seat: SEAT[id] };
+    actors[id] = { ...a, visible: a.visible, look: lookPoint(a.look, A), hands: handTargets(id, a, A, chairs, t), typing: /^type/.test(a.hands || ''), lean: leanAt(id, t), talking: speaking.startsWith(id), seat: SEAT[id] };
   }
   const tablet = evalDiscrete(TABLET, t, {});
+  if (tablet.on === 'hand') tablet.k = Math.min(1, (t - tablet.since) / 0.5);
   const chairsOut = {}; for (const [id, c] of Object.entries(chairs)) chairsOut[CHAIR_IDS[id]] = c;
   const doors = {}; for (const [id, p] of Object.entries(DOORS)) doors[id] = ['jack', 'sarah'].some(k => Math.hypot(A[k].at[0] - p[0], A[k].at[1] - p[1]) < 1.7);
   // (Joshua's approved stills keep the room's own light through the warnings: the amber and red

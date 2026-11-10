@@ -55,7 +55,7 @@ export const FURNITURE: readonly Furniture[] = [
   f('jack.desk.secondary', 'jack', 'desk', -15.3, -12.5, 2.0, 0.8, 0.74, 'n', true, { note: 'the other console next to Jack (Ch 1)' }),
   f('jack.chair.primary', 'jack', 'chair', -13.0, -11.55, 0.62, 0.6, 0.95, 'n', false),
   f('jack.chair.bench', 'jack', 'chair', -14.0, -8.85, 0.62, 0.6, 0.95, 's', false, { note: "the bench's chair: the one Jack drags back in Ch 1" }),
-  f('jack.intercom', 'jack', 'intercom', -12.25, -12.3, 0.12, 0.1, 0.14, 'n', false, { y0: 0.74, note: 'on his desk at the front right, within reach' }),
+  f('jack.intercom', 'jack', 'intercom', -12.15, -12.3, 0.12, 0.1, 0.14, 'n', false, { y0: 0.74, note: 'on his desk at its front right corner, within reach' }),
   f('jack.lamp', 'jack', 'desk-lamp', -12.2, -12.78, 0.16, 0.16, 0.62, 'n', false, { y0: 0.74, note: 'his desk lamp, back right' }),
   f('jack.bench', 'jack', 'bench', -14.5, -8.05, 3.0, 0.7, 0.9, 's', true, { note: 'prototype bench along the south wall, behind the chairs' }),
   f('jack.bench.shelf', 'jack', 'wall-shelf', -14.5, -7.82, 2.6, 0.24, 0.32, 's', false, { y0: 1.48, note: 'bottles over the bench' }),

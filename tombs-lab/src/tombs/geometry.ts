@@ -231,8 +231,8 @@ export function buildLab(_state:LabState):LabDisplay{
  function update(dt:number,s:LabState):void{
   const mode=s.mode;const alarm=mode==='alarm'||mode==='emergency';
   // night (the approved stills): the ceiling lights soft and cool, the room's warmth from its desk lamps
-  for(const [i,l] of highlights.entries()){l.color.setHex(alarm?(i%2?0xff6355:0xedac6b):mode==='dawn'?0xffd9b1:0xa8c8e8);l.intensity=alarm?12:mode==='night'?9:21}
-  ambient.intensity=mode==='night'?.62:alarm?.55:1.4;
+  for(const [i,l] of highlights.entries()){l.color.setHex(alarm?(i%2?0xff6355:0xedac6b):mode==='dawn'?0xffd9b1:0xa8c8e8);l.intensity=alarm?12:mode==='night'?13:21}
+  ambient.intensity=mode==='night'?.78:alarm?.55:1.4;
   for(const d of PLAN.doors){const old=animatedDoor.get(d.id)??0,target=s.isOpen(d.id)?1:0;
     // Ease toward the target and STOP there. The first draft stepped "down" whenever it was not
     // below the target, so an open door (at 1, target 1) stepped back every other frame and

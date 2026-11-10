@@ -29,7 +29,8 @@ const cap = document.getElementById('cap');
 let cam = q.get('cam') ? q.get('cam').split(',').map(Number) : null;
 const view = mod.mount(host, { now: () => t, playing: () => playing, camera: () => cam && { pos: cam.slice(0, 3), look: cam.slice(3, 6), vfov: cam[6] || 40 } });
 host.appendChild(cap);
-window.story3d = { view, set(time, play = false) { t = time; playing = play; }, get t() { return t; } };
+window.story3d = { view, set(time, play = false) { t = time; playing = play; }, get t() { return t; },
+  get info() { const r = view.debug.stage.renderer.info; return { calls: r.render.calls, triangles: r.render.triangles, geometries: r.memory.geometries, textures: r.memory.textures, programs: r.programs ? r.programs.length : null }; } };
 await view.ready;
 const lines = globalThis.__TMB_STORY3D.lines;
 const show = () => { const ln = [...lines].reverse().find(l => l.s <= t); cap.textContent = ln ? `${t.toFixed(1)}s · ${ln.who}: ${ln.text}` : `${t.toFixed(1)}s`; };

@@ -91,7 +91,7 @@ const anchors:Anchor[]=[
  // Seats match furniture.ts. A seat's yaw turns a figure built facing +z to face its desk.
  {id:'jackDeskSeat',xyz:[-13.0,0,-11.55],yaw:Math.PI,label:'Jack at primary workstation'},
  {id:'jackBenchChair',xyz:[-14.0,0,-8.85],yaw:0,label:'The bench chair Jack fetches (Ch 1)'},
- {id:'intercomTarget',xyz:[-12.25,.86,-12.3],yaw:Math.PI,label:'Chapter 1 intercom, on Jack\u2019s desk'},
+ {id:'intercomTarget',xyz:[-12.15,.86,-12.3],yaw:Math.PI,label:'Chapter 1 intercom, on Jack\u2019s desk'},
  {id:'sarahDeskSeat',xyz:[15.55,0,-10.4],yaw:Math.PI/2,label:'Sarah at desk; desk opposite doorway'},
  {id:'tabletPickup',xyz:[16.3,.75,-9.75],yaw:Math.PI/2,label:'Sarah tablet'},
  {id:'sceneHandoffStart',xyz:[-11,1.75,-9.5],yaw:0,label:'Camera departs Jack'},

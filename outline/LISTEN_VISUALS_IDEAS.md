@@ -1,7 +1,8 @@
-# Listen tab visuals: ideas being planned (Joshua, 2026-11-07)
+# Listen tab visuals (Joshua, 2026-11-07; built for Chapter 1 on 2026-11-10)
 
-Not built yet; recorded so the planning carries over. The PocketFM-style player is built.
-Its picture area, today a chapter cover, is where these go.
+**Status, 2026-11-10 (decision 0050):** Chapter 1 is built — the Listen player's 3D pill draws the
+Plan C lab from the one audio element (`visual/story3d/README.md`). What follows is the plan it
+was built from; the open items are at the end of `visual/story3d/README.md`.
 
 ## The lab, live
 - **Stage.** The procedural TOMBS lab (`tombs-lab/`), built from the approved Draft C blueprint in metres. Roof off, North up.

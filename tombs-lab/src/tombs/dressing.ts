@@ -37,6 +37,8 @@ export interface LabDressing {
   readonly lamps: ReadonlyMap<string, LabLamp>;
   /** small things a person picks up (Sarah's tablet): each its own group, origin on its underside */
   readonly props: ReadonlyMap<string, THREE.Group>;
+  /** each desk's power button ring: shown while its console is on */
+  readonly powers: ReadonlyMap<string, THREE.Mesh>;
   /** the screens' material while nothing is shown on them */
   readonly screenOff: THREE.Material;
   dispose(): void;
@@ -88,7 +90,7 @@ export function buildDressing(): LabDressing {
   /** width across the user and depth along the way they look, from a world-axis footprint */
   const dims = (it: Furniture) => { const alongZ = it.facing === 'n' || it.facing === 's'; return { W: alongZ ? it.w : it.d, D: alongZ ? it.d : it.w }; };
 
-  const props = new Map<string, THREE.Group>();
+  const props = new Map<string, THREE.Group>(), powers = new Map<string, THREE.Mesh>();
   const chairs = new Map<string, LabChair>(), screens = new Map<string, LabScreen[]>(), glows = new Map<string, THREE.PointLight>(), lamps = new Map<string, LabLamp>();
 
   for (const it of FURNITURE) {
@@ -146,11 +148,18 @@ export function buildDressing(): LabDressing {
           list.push({ mesh: screen, width: sw, height: sh });
         }
         screens.set(it.id, list);
-        const glow = new THREE.PointLight(0x58d6e0, 0, 2.6, 2); glow.position.set(0, H + 0.36, D / 2 - 0.45); glow.visible = false; g.add(glow); glows.set(it.id, glow);
+        // (always present, dark until its screens are on: switching a light on or off changes the
+        // number of lights, which recompiles every material -- a hitch on a phone)
+        const glow = new THREE.PointLight(0x58d6e0, 0, 2.6, 2); glow.position.set(0, H + 0.36, D / 2 - 0.45); g.add(glow); glows.set(it.id, glow);
         // keyboard and mouse
         add(g, box(0.44, 0.022, 0.14), M.blackPlastic, 0.05, H + 0.011, -D / 2 + 0.23);
         add(g, box(0.42, 0.006, 0.12), M.keyCaps, 0.05, H + 0.024, -D / 2 + 0.23);
         const mouse = add(g, geo(new THREE.SphereGeometry(0.032, 12, 8)), M.blackPlastic, -0.30, H + 0.012, -D / 2 + 0.23); mouse.scale.set(0.9, 0.45, 1.5);
+        // the console's power button, set into the desk's front edge on the user's right (Chapter 1:
+        // "Sarah started powering up the other console"), its ring lit while the console is on
+        add(g, cyl(0.016, 0.018, 0.012, 16), M.blackPlastic, -0.35, H + 0.006, -D / 2 + 0.04);
+        const ring = add(g, geo(new THREE.TorusGeometry(0.012, 0.0025, 6, 20)), M.ring, -0.35, H + 0.0125, -D / 2 + 0.04, 0, Math.PI / 2); ring.castShadow = false;
+        powers.set(it.id, ring);
         break;
       }
       case 'desk-lamp': {
@@ -173,7 +182,8 @@ export function buildDressing(): LabDressing {
         light.position.copy(head.clone().addScaledVector(dir, 0.09)); g.add(light);
         const target = new THREE.Object3D(); target.position.copy(aim); g.add(target); light.target = target;
         light.castShadow = true; light.shadow.mapSize.set(1024, 1024); light.shadow.bias = -0.0008; light.shadow.normalBias = 0.02; light.shadow.camera.near = 0.05; light.shadow.camera.far = 3.2;
-        const lamp: LabLamp = { light, bulb, get on() { return light.visible; }, set on(v: boolean) { light.visible = v; bulb.visible = v; } };
+        const full = light.intensity;
+        const lamp: LabLamp = { light, bulb, get on() { return light.intensity > 0; }, set on(v: boolean) { light.intensity = v ? full : 0; bulb.visible = v; } };
         lamps.set(it.id, lamp);
         break;
       }
@@ -259,7 +269,7 @@ export function buildDressing(): LabDressing {
     }
   }
   return {
-    group, chairs, screens, glows, lamps, props, screenOff,
+    group, chairs, screens, glows, lamps, props, powers, screenOff,
     dispose() { for (const g of geos) g.dispose(); for (const m of mats) m.dispose(); group.removeFromParent(); },
   };
 }

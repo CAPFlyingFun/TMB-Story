@@ -76,6 +76,9 @@ export class Stage {
     const scene = this.scene = new THREE.Scene(); scene.background = new THREE.Color(0x0b1520); scene.fog = new THREE.Fog(0x0b1520, 30, 140);
     // moonlight through the north windows: a little cool shape on faces and furniture
     const moon = new THREE.DirectionalLight(0x9ec4e8, 0.35); moon.position.set(-6, 9, -22); scene.add(moon);
+    // the overhead view looks down with the roof off: a soft light from above, only for that view,
+    // so the rooms and the tracker marks read at a phone's size
+    this.overheadFill = new THREE.HemisphereLight(0xcfe3f5, 0x2a3340, 0); scene.add(this.overheadFill);
     this.labState = new LabState(); this.labState.setMode('night');
     this.building = buildLab(this.labState); scene.add(this.building.group); this.building.setLabels(false);
     const D = this.building.dressing;
@@ -121,6 +124,13 @@ export class Stage {
     }));
     const template = await badge;
     if (template) for (const id of ids) if (cast[id].badge) this.hangBadge(id, template);
+    // compile every material now, the lit screens' too, so nothing compiles mid-chapter (a phone hitch)
+    try {
+      const items = [...this.screens.items.values()];
+      for (const it of items) it.mesh.material = it.mat;
+      this.renderer.compile(this.scene, this.camera);
+      for (const it of items) it.mesh.material = it.off;
+    } catch (e) { /* compiling ahead is only a convenience */ }
   }
 
   hangBadge(id, template) {
@@ -174,7 +184,8 @@ export class Stage {
     if (kind === 'sit' || kind === 'doze') return toMap(THREE.poseSeated(measure, rig.bind, { style: kind, seconds: t, headSide: 1, arms: b.pregnant ? 'cradle' : 'fold', posture: b.pregnant ? 'pregnant' : undefined, ...(b.settled ? { settled: true, bump: b.carry } : {}) }, []));
     const walking = kind === 'walk';
     const phase = walking ? ((a.walked * rig.bindScale) / THREE.humanStride(measure, 'walk', b.carry)) % 1 : 0;
-    return toMap(THREE.poseHuman(measure, rig.bind, { stance: walking ? 'walk' : 'stand', phase, seconds: t, lean: a.lean || 0, carry: b.carry }, []));
+    // (poseHuman's own `lean` is a sideways roll for a run, -1..1: not this)
+    return toMap(THREE.poseHuman(measure, rig.bind, { stance: walking ? 'walk' : 'stand', phase, seconds: t, lean: 0, carry: b.carry }, []));
   }
   /**
    * The Watch's small turns on top of a pose (people3d.js extras), so a body reads as a person:
@@ -188,7 +199,6 @@ export class Stage {
     const asleep = w('doze');
     if (asleep > 0.01) { out.push([j.spine, rx(-9 * DEG * asleep)], [j.neck, rz(L * 12 * DEG * asleep)], [j.head, rz(L * 8 * DEG * asleep)]); }
     if (a.typing) out.push([j.spine, rx((a.pose === 'sit' ? 10 : 6) * DEG)]);
-    if (a.lean) out.push([j.spine, rx(a.lean * DEG)]);
     const awake = 1 - asleep - w('walk');
     if (awake > 0.01) { const s = b.seed, h = Math.sin((2 * Math.PI * t) / (7.3 + s * 1.3) + s) + 0.5 * Math.sin((2 * Math.PI * t) / (3.1 + s * 0.4) + 2 * s); out.push([j.neck, ry(L * 3 * DEG * h * awake)]); }
     if (a.talking && asleep < 0.5) { const s = b.seed; out.push([j.head, rx(3.5 * DEG * Math.sin(t * 2 * Math.PI * 1.6 + s))], [j.neck, ry(L * 3 * DEG * Math.sin(t * 2 * Math.PI * 0.55 + 2 * s))]); }
@@ -223,13 +233,39 @@ export class Stage {
     const rootY = root[1] - grounded.rootDrop;
     const frame = { rootX: root[0], rootY, rootZ: root[2], rootYaw: a.yaw, unitsPerMetre: rig.bindScale };
     const target = a.look ? { x: a.look[0], y: a.look[1], z: a.look[2] } : null;
-    const hands = (a.hands || []).map(h => ({ side: h.side, x: h.at[0], y: h.at[1], z: h.at[2], kind: h.kind || 'press', palm: h.palm || { x: 0, y: -1, z: 0 } }));
+    // a hand target may be on another person (a hand on his shoulder): read from his bone as he
+    // is posed this frame (he is posed first), so it neither floats nor sinks into him
+    const hands = (a.hands || []).map(h => {
+      let at = h.at;
+      if (h.bone) { const p = this.bonePoint(h.bone[0], h.bone[1]); const o = h.offset || [0, 0, 0]; at = [p.x + o[0], p.y + o[1], p.z + o[2]]; }
+      return { side: h.side, x: at[0], y: at[1], z: at[2], kind: h.kind || 'press', palm: h.palm || { x: 0, y: -1, z: 0 } };
+    });
     // a free seated hand rests on its thigh (humanReach rule 4) -- but asleep, his folded arms are
     // the pose's own, so a doze is not "seated" for the hands
     const handsSeated = a.pose === 'sit' && !(a.prevPose === 'doze' && a.k < 1);
-    const solve = d => { const aimed = THREE.aimBody(S.aim, measure, rig.bind, grounded.turns, { ...frame, dt: d, target, bodyFree: false, weight: 1 }, S.at); return THREE.reachHands(S.reach, measure, rig.bind, aimed.turns, { ...frame, dt: d, seated: handsSeated, hands }, S.rt); };
-    let out; if (fresh) for (let i = 0; i < 12; i++) out = solve(0.05); else out = solve(dt);
+    // A LEAN (degrees forward) bends the whole back after the look is aimed -- the aim's closed
+    // loop would otherwise straighten it to keep the eyes on target -- three fifths low, two
+    // fifths at the chest, and the neck gives back about half so the eyes stay on what she reads.
+    const J = measure.joints;
+    const leaned = (turns) => {
+      if (!a.lean) return turns;
+      // (measured on the toon rig: this carries her head forward over what she reads; her arms'
+      // reach is re-solved from the clavicle, so a hand's reach is staged by where she stands)
+      const m = toMap(turns), L = a.lean * DEG;
+      for (const [joint, q] of [[J.spine, rx(L * 0.6)], [J.chest, rx(L * 0.4)], [J.neck, rx(-L * 0.45)]]) if (joint >= 0) m.set(joint, qMul(m.get(joint) || ID, q));
+      return toTurns(m);
+    };
+    const solve = d => { const aimed = THREE.aimBody(S.aim, measure, rig.bind, grounded.turns, { ...frame, dt: d, target, bodyFree: false, weight: 1 }, S.at); return THREE.reachHands(S.reach, measure, rig.bind, leaned(aimed.turns), { ...frame, dt: d, seated: handsSeated, hands }, S.rt); };
+    // After a seek, a hand is solved as if it had come in from a little above its target, the way
+    // it does in playback (the reach takes hold only under 85% of the arm, keeps it to 90%): so a
+    // seek lands on the same pose as playing through.
+    let out;
+    if (fresh) {
+      const lifted = hands.map(h => ({ ...h, y: h.y + 0.07 }));
+      for (let i = 0; i < 14; i++) { const use = i < 6 ? lifted : hands; const aimed = THREE.aimBody(S.aim, measure, rig.bind, grounded.turns, { ...frame, dt: 0.05, target, bodyFree: false, weight: 1 }, S.at); out = THREE.reachHands(S.reach, measure, rig.bind, leaned(aimed.turns), { ...frame, dt: 0.05, seated: handsSeated, hands: use }, S.rt); }
+    } else out = solve(dt);
     rig.apply(out.turns);
+    b.reached = out;   // the reach's own report of each hand (tests read whether a hand holds its target)
     b.model.position.set(root[0], rootY, root[2]); b.model.rotation.set(0, a.yaw, 0); b.model.updateMatrixWorld(true);
     for (const [mesh, idx] of b.seat) mesh.morphTargetInfluences[idx] = seated ? (a.prevPose && a.prevPose !== a.pose ? smooth(a.k) : 1) : (a.prevPose === 'sit' ? 1 - smooth(a.k) : 0);
     if (b.face) {
@@ -247,11 +283,19 @@ export class Stage {
   }
 
   /** where a body's left armpit is, for a tablet tucked under that arm */
-  underArm(id) {
+  underArm(id, side = 'L') {
     const b = this.bodies[id], j = b.measure.joints, w = i => b.bones[i].getWorldPosition(new THREE.Vector3());
-    const sh = w(j.shoulderL), el = w(j.elbowL), chest = w(j.chest);
+    const sh = w(side === 'R' ? j.shoulderR : j.shoulderL), el = w(side === 'R' ? j.elbowR : j.elbowL), chest = w(j.chest);
     const p = sh.clone().lerp(el, 0.55).lerp(chest, 0.28);
     return { p, yaw: b.model.rotation.y };
+  }
+  /** a flat thing held in the hand, palm down: its near edge under her fingertips, laid the way she faces */
+  inHand(id, side = 'R', depth = 0.175) {
+    const b = this.bodies[id], j = b.measure.joints;
+    const tip = b.bones.find(x => x.name === (side === 'R' ? 'middle4_R' : 'middle4_L')) || b.bones[side === 'R' ? j.wristR : j.wristL];
+    const p = tip.getWorldPosition(new THREE.Vector3()), yaw = b.model.rotation.y;
+    p.x += Math.sin(yaw) * depth / 2; p.z += Math.cos(yaw) * depth / 2; p.y -= 0.021;
+    return { p, yaw };
   }
 
   setChair(id, c) {
@@ -271,8 +315,15 @@ export class Stage {
     // the tablet: under her arm while she carries it, else where it was set down
     const tb = S.tablet;
     if (this.tablet && tb) {
-      if (tb.on === 'arm' && this.bodies[tb.who] && this.bodies[tb.who].model.visible) {
-        const { p, yaw } = this.underArm(tb.who); this.tablet.position.copy(p); this.tablet.rotation.set(0, yaw, Math.PI / 2 - 0.15, 'YXZ');
+      const who = this.bodies[tb.who];
+      if ((tb.on === 'arm' || tb.on === 'hand') && who && who.model.visible) {
+        // under her arm, or drawn out into her hand (k eases it from one to the other)
+        const arm = this.underArm(tb.who, tb.side || 'L'), sideZ = (tb.side === 'R' ? -1 : 1) * (Math.PI / 2 - 0.15);
+        if (tb.on === 'arm') { this.tablet.position.copy(arm.p); this.tablet.rotation.set(0, arm.yaw, sideZ, 'YXZ'); }
+        else {
+          const hand = this.inHand(tb.who, tb.side || 'R'), k = smooth(tb.k ?? 1);
+          this.tablet.position.copy(arm.p).lerp(hand.p, k); this.tablet.rotation.set(0, hand.yaw + Math.PI, sideZ * (1 - k), 'YXZ');
+        }
       } else { this.tablet.position.set(tb.at[0], tb.at[1], tb.at[2]); this.tablet.rotation.set(0, tb.yaw || 0, 0); }
     }
     // screens and the glow each desk throws
@@ -280,7 +331,9 @@ export class Stage {
       this.screens.update(S.screens, t);
       for (const [desk, glow] of this.building.dressing.glows) {
         const k = [0, 1].map(i => S.screens[`${desk}:${i}`]?.kind).find(k => k && GLOW[k]);
-        glow.visible = !!k; if (k) { glow.color.setHex(GLOW[k]); glow.intensity = k === 'red' || k === 'revoked' || k === 'denied' ? 1.4 : 1.0; }
+        // (only its intensity changes: a light switched off would recompile every material)
+        if (k) { glow.color.setHex(GLOW[k]); glow.intensity = k === 'red' || k === 'revoked' || k === 'denied' ? 1.4 : 1.0; } else glow.intensity = 0;
+        const ring = this.building.dressing.powers.get(desk); if (ring) ring.visible = [0, 1].some(i => (S.screens[`${desk}:${i}`]?.kind || 'off') !== 'off');
       }
     }
     if (this.lamp) this.lamp.on = S.lamp !== false;
@@ -293,6 +346,7 @@ export class Stage {
     const C = S.camera; this.camera.fov = C.vfov; this.camera.updateProjectionMatrix();
     this.camera.position.set(...C.pos); this.camera.up.set(0, 1, 0); this.camera.lookAt(new THREE.Vector3(...C.look));
     this.building.setRoof(!C.overhead);
+    this.overheadFill.intensity = C.overhead ? 1.6 : 0;
     // tracker markers, overhead only
     this.markers.grp.visible = !!C.overhead;
     if (C.overhead) for (const id of ['jack', 'sarah']) {

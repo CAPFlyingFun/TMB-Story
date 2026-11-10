@@ -1,35 +1,43 @@
-# Chapter 1 staging prototype — handoff (not wired into the site)
+# Chapter 1 in the one player — the 3D story picture
 
-Joshua moved the 3D story work (one player for Listen and Watch, Plan C lab, CCBS
-characters) to another agent on 2026-11-10. This folder hands over what this session had,
-so nothing is lost. **Nothing here is loaded by the reader.** Use it, change it, or
-discard it.
+The Listen player's **3D** pill (`reader/player.js`) draws this scene over the chapter's stills,
+from the player's one audio element. Watch → Chapter 1 opens the same player
+(`#listen/1/3d`; `visual/?old=1` keeps the older Watch staging). Presentation only: nothing in
+`chapters/` or the audio changes for it.
 
-- `src/`: the staging prototype from 2026-11-07 to 2026-11-09 (the published "Chapter 1
-  staging" artifact). It has the procedural Plan C lab (`tombs-lab/src/tombs`), the Watch
-  tab's rig and posing code (`visual/vendor/three-human.js`), and Chapter 1 staged line by
-  line in `ch1.js` in lab metres. That staging includes:
-  - the chair fetched from the bench;
-  - footsteps on real footfalls;
-  - the island intro;
-  - seek-safe state.
-- **Models.** It uses TMB-Story's `jack.glb` (the toon Jack) and `sarah-v2.glb`. These are
-  **not** the approved non-cartoon CCBS models, which still need to replace them.
-- **Timing.** Every action is anchored to a line of the chapter (`L("...")`), never to raw
-  seconds. `src/lines.js` reads the lines from `globalThis.__TMB_STORY3D`, as
-  `{ lines: [{ text, who, s, e }], seconds }`. These come from the current audio file's
-  index (`audio/exports/chapter-01-clips.json`), so the re-recorded 43-people opening
-  lines up.
-- **Entry point.** `src/mount.js` exports `mount(host, { now, playing })`. It draws what
-  the scene looks like at the player's audio time and never touches audio.
-- **Build.** `scripts/build-story3d.sh` writes `visual/story3d/dist/story3d.js` (about
-  1 MB). The build output is not committed.
-- `player-wiring.patch` is an UNTESTED draft for `reader/player.js` and
-  `reader/style.css`. It adds a "3D" pill on Chapter 1, lazy-loads the bundle into the
-  picture slot over the stills, and keeps the stills if loading fails. It was not
-  applied.
-- **Known gaps.** These are listed in `outline/LISTEN_VISUALS_IDEAS.md`:
-  - believable seat clearance and hand contact;
-  - Sarah's console staying off until she powers it up;
-  - eye lines;
-  - the relaxed pregnancy rule, which `ch1.js`'s header still describes the old way.
+## How it stays in step
+- `src/mount.js` — `mount(host, { now, playing, stills })`. Every frame it asks the player for
+  the audio time and draws that moment. It never plays, seeks or loads audio, so pause, seek,
+  buffering, speed and switching the 3D off and on need nothing special.
+- `src/timeline.js` — the clock: positions, poses and cameras are worked out from the time;
+  chairs, the tablet, doors and screens are rebuilt from the events up to it. Any seek lands
+  right. Dynamics (the badge's swing, a cloth sim later) step only while time advances and are
+  reset and settled after a seek.
+- `src/lines.js` — the chapter's lines on the current audio file (the manifest's own index), so
+  a re-recorded line moves everything anchored to it.
+
+## What it draws
+- `src/stage.js` — the Plan C building from `tombs-lab/` (the one source of the lab for the story
+  and the game, decision 0042) and the **cast as data** (`CAST`): today the toon Jack and Sarah
+  with the swinging TOMBS badge (Joshua, 2026-11-10). Swapping in the CCBS bodies is a change to
+  `CAST`; a cloth-sim garment goes in with `stage.addDynamics(id, sim)`.
+- `src/ch1.js` — Chapter 1 line by line: marks, walks, hands, leans, chairs, the tablet, every
+  screen's content, and the shot list. Places are measured on the lab as built.
+- `src/screens.js` — what each named screen shows, drawn from the manuscript's system lines.
+- `src/intro.js` — the Watch's painted island opening, used when there are no stills (the player
+  shows its own approved island stills instead and the 3D comes in with the lab).
+
+## Build and check
+- `scripts/build-story3d.sh` writes `dist/story3d.js` (about 1 MB). **It is committed**: Pages
+  serves the repository as it is, with no build step.
+- `probe.html?t=SECONDS[&w=&h=&cam=x,y,z,lx,ly,lz,fov&quality=low]` — one moment, outside the
+  player.
+- `python3 scripts/tests/player-3d.py [out]` — the player in a headless phone browser,
+  portrait and landscape: play, seek both ways, 1.5x, 3D off and on mid-play, the bundle failing.
+
+## Parked for later
+- `ccbs-story-bake.patch` — a local fix of CCBS's `story-sarah.mjs` bake (her new finger weights
+  and finger fills, sneakers exported as their own parts, the fitted tee instead of the raglan
+  cloth-sim tee for a skinned file). Not applied in CCBS: for whoever brings the CCBS Sarah in.
+  Note: that fitted tee no longer clears her newer approved belly; it needs a fit pass, or the
+  room's cloth sim run here through `addDynamics`.
