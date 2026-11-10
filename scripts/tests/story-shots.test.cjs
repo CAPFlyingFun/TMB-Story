@@ -62,7 +62,10 @@ test('the shipped island and approved lab cues resolve against the real chapter 
     'laboratory', 'jack-asleep', 'jack-first-chirp', 'jack-amber-warning', 'jack-startled', 'jack-rubs-eyes',
     'jack-unsolicited-windows', 'jack-network-monitor', 'jack-connection-vanishes', 'jack-red-warning',
     'jack-access-logs', 'tombs-directory', 'terminal-locked', 'terminal-reopened', 'jack-intercom',
-    'sarah-intercom', 'jack-intercom-network', 'sarah-good-answer', 'jack-who-are-you', 'boundary-control']);
+    'sarah-intercom', 'jack-intercom-network', 'sarah-good-answer', 'jack-who-are-you', 'boundary-control',
+    'sarah-lab-door', 'sarah-approaches-console', 'sarah-sleepy-defense', 'sarah-against-what',
+    'jack-advanced-technique', 'sarah-studies-screen', 'sarah-sets-tablet', 'sarah-and-then',
+    'jack-reveals-directory', 'sarah-by-itself']);
   assert.ok(api.select(cues, 2, 0).src.endsWith('005-jack-lab.webp'));
   assert.ok(cues.every(c => c.src), 'approved story images must not fall through to the old lab cover');
   for (const cue of cues) if (cue.src) {
@@ -91,5 +94,11 @@ test('the shipped island and approved lab cues resolve against the real chapter 
   const sarah = cues.find(c => c.id === 'sarah-intercom');
   assert.equal(api.select(cues, sarah.index - 1, 1).id, 'jack-intercom', 'Sarah must not appear before her intercom response');
   assert.equal(api.select(cues, sarah.index, 0).id, 'sarah-intercom');
-  assert.equal(api.select(cues, real.segments.length - 1, 1).id, 'boundary-control', 'hold the last approved image until the next batch');
+  const door = cues.find(c => c.id === 'sarah-lab-door');
+  assert.equal(api.select(cues, door.index - 1, 1).id, 'boundary-control', 'Sarah is not in the lab before the door opens');
+  const tablet = cues.find(c => c.id === 'sarah-sets-tablet');
+  assert.ok(tablet.fraction > 0, 'the tablet goes down on its phrase, not at the start of the line');
+  assert.equal(api.select(cues, tablet.index, tablet.fraction - 0.001).id, 'sarah-studies-screen');
+  assert.equal(api.select(cues, tablet.index, tablet.fraction).id, 'sarah-sets-tablet');
+  assert.equal(api.select(cues, real.segments.length - 1, 1).id, 'sarah-by-itself', 'hold the last approved image until the next batch');
 });

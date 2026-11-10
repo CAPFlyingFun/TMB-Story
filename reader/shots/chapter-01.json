@@ -208,6 +208,87 @@
       },
       "src": "./assets/story/ch01/024-boundary-control.webp",
       "alt": "Boundary Control opens on the monitor without Jack touching the keyboard or mouse."
+    },
+    {
+      "id": "sarah-lab-door",
+      "at": {
+        "line": "He reached for the keyboard just as the laboratory door slid open behind him."
+      },
+      "src": "./assets/story/ch01/025-sarah-lab-door.webp",
+      "alt": "Sarah arrives at the open laboratory door behind Jack at his console."
+    },
+    {
+      "id": "sarah-approaches-console",
+      "at": {
+        "line": "Sarah Bennett walked straight in"
+      },
+      "src": "./assets/story/ch01/026-sarah-approaches-console.webp",
+      "alt": "Sarah carries her tablet into the laboratory and approaches Jack at the computer."
+    },
+    {
+      "id": "sarah-sleepy-defense",
+      "at": {
+        "line": "Sarah closed the distance between them."
+      },
+      "src": "./assets/story/ch01/027-sarah-sleepy-defense.webp",
+      "alt": "Sarah stands beside Jack at his workstation, questioning his sleepy explanation."
+    },
+    {
+      "id": "sarah-against-what",
+      "at": {
+        "line": "Sarah raised an eyebrow."
+      },
+      "src": "./assets/story/ch01/028-sarah-against-what.webp",
+      "alt": "Sarah raises an eyebrow skeptically as Jack explains his defense."
+    },
+    {
+      "id": "jack-advanced-technique",
+      "at": {
+        "line": "Jack sat a little straighter."
+      },
+      "src": "./assets/story/ch01/029-jack-advanced-technique.webp",
+      "alt": "Jack offers a solemnly playful explanation while Sarah holds her tablet forward in a relaxed grip."
+    },
+    {
+      "id": "sarah-studies-screen",
+      "at": {
+        "line": "She leaned over his shoulder and studied the screen."
+      },
+      "src": "./assets/story/ch01/030-sarah-studies-screen.webp",
+      "alt": "Sarah leans beside Jack to study the monitors, with one hand braced on the desk."
+    },
+    {
+      "id": "sarah-sets-tablet",
+      "at": {
+        "line": "Jack straightened in his chair while Sarah placed her tablet beside the keyboard.",
+        "phrase": "Sarah placed her tablet"
+      },
+      "src": "./assets/story/ch01/031-sarah-sets-tablet.webp",
+      "alt": "Sarah places her tablet flat beside Jack's keyboard as he explains the unauthorized access warning."
+    },
+    {
+      "id": "sarah-and-then",
+      "at": {
+        "line": "Sarah tapped the edge of the keyboard."
+      },
+      "src": "./assets/story/ch01/032-sarah-and-then.webp",
+      "alt": "Sarah questions Jack at the workstation, tapping the keyboard edge with the tablet on the desk."
+    },
+    {
+      "id": "jack-reveals-directory",
+      "at": {
+        "line": "Jack pointed to the open directory."
+      },
+      "src": "./assets/story/ch01/033-jack-reveals-directory.webp",
+      "alt": "Jack points out the open TOMBS directory while Sarah watches the monitors."
+    },
+    {
+      "id": "sarah-by-itself",
+      "at": {
+        "line": "Sarah's attention sharpened."
+      },
+      "src": "./assets/story/ch01/034-sarah-by-itself.webp",
+      "alt": "Sarah studies the TOMBS directory with sharpened attention and asks whether it opened by itself."
     }
   ]
 }
