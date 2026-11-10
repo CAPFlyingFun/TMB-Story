@@ -127,13 +127,13 @@ def main():
     plain = ["\n\n".join(s["ttsText"] for s in u) for u in us]
     def key(k): return os.path.join(out, "unit-%03d" % k)
     redo = {int(x) for x in a.redo.replace(" ", "").split(",") if x}
-    for k, u in enumerate(us):
+    for k, u in enumerate(us if not a.estimate else []):
         if redo & {s["order"] for s in u} and os.path.exists(key(k) + ".json"):
             prev = os.path.join(out, "previous"); os.makedirs(prev, exist_ok=True)
             for ext in (".mp3", ".json"):
                 os.replace(key(k) + ext, os.path.join(prev, "unit-%03d%s" % (k, ext)))
             print("clip %d (orders %s) will be rendered again; the old take is in previous/" % (k, [s["order"] for s in u]))
-    todo = [k for k in range(len(us)) if not os.path.exists(key(k) + ".json")]
+    todo = [k for k in range(len(us)) if not os.path.exists(key(k) + ".json") or (a.estimate and redo & {s["order"] for s in us[k]})]
     cost = sum(len(texts[k]) for k in todo)
     print("chapter %d: %d lines, %d clips (%d narrator, %d merged), %d to render, ~%d credits"
           % (a.chapter, len(segs), len(us), sum(u[0]["speaker"] == "narrator" for u in us), sum(len(u) > 1 for u in us), len(todo), cost))

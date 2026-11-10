@@ -1,0 +1,39 @@
+name: Re-record changed lines in a v4 dialogue chapter (spends a few credits)
+
+# MANUAL ONLY. Renders only the inputs holding the named manifest orders again, as
+# single-voice v4 patch takes, then rebuilds that chapter's one-file dialogue export.
+# Everything else in the chapter is untouched. Cost: about one credit per character
+# of the patched inputs (scripts/dialogue-patch.py --estimate prints it).
+on:
+  workflow_dispatch:
+    inputs:
+      chapter:
+        description: 'Chapter'
+        required: true
+      orders:
+        description: 'Manifest orders whose text changed, e.g. 167,169'
+        required: true
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg && python3 -m pip install -q numpy
+      - name: Patch and rebuild
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python3 scripts/dialogue-patch.py "${{ inputs.chapter }}" "${{ inputs.orders }}"
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio/tests/dialogue-v4/ audio/exports/
+          git diff --cached --quiet && { echo "Nothing new."; exit 0; }
+          git commit -m "Re-record changed lines in chapter ${{ inputs.chapter }} (orders ${{ inputs.orders }})"
+          git pull --rebase -q origin main
+          git push
