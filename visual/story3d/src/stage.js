@@ -12,8 +12,9 @@
 //   carry    her bump, 0..1+, for her walk's shorter wider steps (the Lab's slider over 100)
 //   seat     the chair height her feet reach the floor at (the chair is raised or lowered)
 //   badge    she wears the TOMBS badge on its lanyard (assets/models/badge.glb, swinging)
-//   armRoll  degrees a hanging arm turns about its own length so the palm faces the thigh
-//            (measured per model, 2026-11-10: toon Sarah hangs palm-forward, toon Jack nearly right)
+//   hands    where this body's hands rest (arms.js; MEASURED on its mesh): how far out a hanging
+//            hand clears the hips, a walking hand's swing, where on the thigh a seated hand rests and
+//            how high the thigh's top stands, how far her bump stands ahead of her pelvis
 //
 // DYNAMICS are anything on a person that moves by itself after the pose is set: the badge's
 // swing now, a cloth-sim garment later ("still allow the rooms to be capable with cloth sim
@@ -25,12 +26,22 @@ import * as THREE from 'three';
 import { buildLab, LabState } from '../../../tombs-lab/src/tombs/index.ts';
 import { ScreenSet, GLOW } from './screens.js';
 import { asset } from './paths.js';
+import { Arms } from './arms.js';
 
 export const CAST = {
-  jack: { url: 'assets/models/jack.glb', seat: 0.42, carry: 0, badge: true, armRoll: -20 },
+  jack: { url: 'assets/models/jack.glb', seat: 0.42, carry: 0, badge: true,
+    // MEASURED on the toon Jack (2026-11-10, the skinned mesh): his thighs stand 0.20 m out from his
+    // middle where a hanging hand reaches, his shoulders 0.17; seated, a thigh's top is 0.08 above
+    // its bone line. GAME TUNING: the swing of a walking hand, and where on the thigh a seated one rests.
+    hands: { hangOut: 0.065, swing: 0.10, restAlong: 0.72, thigh: 0.082 } },
   // GAME TUNING: the toon Sarah's file carries no bump number; 0.55 gives her walk a late-
   // pregnancy shortening without the waddle of the Lab's larger settings.
-  sarah: { url: 'assets/models/sarah.glb', seat: 0.49, carry: 0.55, pregnant: true, badge: true, armRoll: 70 },
+  sarah: { url: 'assets/models/sarah.glb', seat: 0.49, carry: 0.55, pregnant: true, badge: true,
+    // MEASURED on the toon Sarah: her hips stand 0.18 out from her middle at a hanging hand's
+    // height, her shoulders 0.12; her bump 0.20 in front of her, 0.17 ahead of her pelvis; seated, a
+    // thigh's top is 0.07 above its bone line, and her bump covers her thigh to 60% of the way to
+    // the knee, so her hand rests beyond it.
+    hands: { hangOut: 0.10, swing: 0.07, restAlong: 0.85, thigh: 0.068, bumpAhead: 0.17 } },
 };
 const BADGE_URL = 'assets/models/badge.glb';
 
@@ -54,10 +65,47 @@ function toTurns(map) {
 }
 const ID = [0, 0, 0, 1];
 const DEG = Math.PI / 180;
-// GAME TUNING, measured on the toon cast (2026-11-10): how far a hanging arm turns in, and how far each finger joint curls at rest
-const ARM_ROLL = 0, FINGER_CURL = 14;
-// where a tucked tablet sits: this far from the elbow toward the wrist, and this far in from the forearm toward her side (metres)
-const TUCK_ALONG = 0.5, TUCK_IN = -0.02, TUCK_TURN = -35;
+// her tablet tucked under her arm (stage tuckPose): its front edge `grip` ahead of her knuckles,
+// its back `in` from the hand's line toward her side, its middle `rise` above it, turned `turn`
+// degrees toward the front (metres; the tablet is TABLET_LONG long, tombs-lab dressing). The hand
+// that holds it (restHand 'carry'): its fingertip from the shoulder (down, forward, out), the palm
+// turned in to it, the elbow kept in against her side and back.
+const TUCK = { grip: 0.015, in: 0.027, rise: 0.05, turn: -8 }, TABLET_LONG = 0.25;
+const CARRY = { down: 0.22, fwd: 0.23, out: 0.045, palmUp: 0.15, pole: -0.3, poleFwd: -0.5 };
+const lerp = (a, b, k) => a + (b - a) * k;
+// WHAT A HAND DOING EACH JOB LOOKS LIKE (arms.js): how it would lie by itself (`tip`: tipped down
+// from level along its approach, degrees), how much it follows its forearm instead (`keep`: 1
+// straight on), its fingers' curl per joint (f: fingers, i: the index if it differs, t: the thumb;
+// degrees). A target may name its own palm; a resting hand's comes from restHand. GAME TUNING,
+// judged on the pose sheet (2026-11-10): a hand that sets something down or presses from standing
+// tips toward it, as a real one does, instead of staying level and bending back at the wrist.
+const HAND = {
+  type: { keep: 0.5, tip: 10, curl: { f: 24, t: 12 } },
+  press: { keep: 0.35, tip: 40, curl: { f: 45, i: 8, t: 25 } },
+  hold: { keep: 0.4, tip: 35, curl: { f: 28, t: 14 } },
+  shoulder: { keep: 0.2, tip: 40, curl: { f: 30, t: 14 } },
+  point: { keep: 0.85, tip: 0, curl: { f: 80, i: 4, t: 40 } },
+  open: { keep: 0.4, tip: -10, curl: { f: 10, t: 6 } },
+  belly: { keep: 0.2, tip: 10, curl: { f: 10, t: 6 } },
+  carry: { keep: 0.85, tip: 30, curl: { f: 70, t: 50 } },
+  hang: { keep: 1, tip: 10, curl: { f: 18, t: 8 } },
+  walk: { keep: 1, tip: 10, curl: { f: 18, t: 8 } },
+  rest: { keep: 0.5, tip: 25, curl: { f: 22, t: 10 } },
+  fold: { keep: 0.2, tip: 10, curl: { f: 45, t: 40 } },
+};
+// JACK'S FOLDED ARMS, asleep (restHand 'fold'): each hand's fingertip (out, up, forward from the
+// chest joint, metres), its palm (up: + toward up, - toward down; always turned back to him), how far
+// back round the other arm the hand turns, and the elbow's lean forward. The left forearm lies over
+// the right, high on his chest, its hand draped over his right elbow; the right lies under it,
+// its hand under his left elbow. Searched against his slumped outline at 45 s (the forearms lying
+// on him, nothing inside him: scripts/story3d/hands-scan.py) and judged on the pose sheet.
+const FOLD = {
+  over: { at: [-0.20, -0.09, 0.20], palmUp: -1.3, back: 0.45, poleFwd: 0.9 },
+  under: { at: [-0.12, -0.15, 0.24], palmUp: 0.8, back: 0.25, poleFwd: 1.5 },
+  pole: 0.8,
+};
+const RESTING = new Set(['hang', 'walk', 'rest', 'fold']);
+const DOWN = new THREE.Vector3(0, -1, 0), UP = new THREE.Vector3(0, 1, 0);
 const qMul = (a, b) => [a[3] * b[0] + a[0] * b[3] + a[1] * b[2] - a[2] * b[1], a[3] * b[1] - a[0] * b[2] + a[1] * b[3] + a[2] * b[0], a[3] * b[2] + a[0] * b[1] - a[1] * b[0] + a[2] * b[3], a[3] * b[3] - a[0] * b[0] - a[1] * b[1] - a[2] * b[2]];
 const rx = a => qAxis(1, 0, 0, a), ry = a => qAxis(0, 1, 0, a), rz = a => qAxis(0, 0, 1, a);
 function blend(a, b, k) { if (k >= 1) return b; const o = new Map(); for (const j of new Set([...a.keys(), ...b.keys()])) o.set(j, qSlerp(a.get(j) || ID, b.get(j) || ID, k)); return o; }
@@ -99,6 +147,9 @@ export class Stage {
     if (this.tablet) this.screens.add('sarah.tablet', this.tablet.userData.screen, 99);
     this.camera = new THREE.PerspectiveCamera(50, 1, 0.02, 400);
     this.bodies = {}; this.lastT = null;
+    // the hand tables, reachable from the page (story3d.view.debug.stage.tune) so a pose can be
+    // tuned live and rendered with the pose tools (scripts/story3d) before its numbers are written here
+    this.tune = { HAND, FOLD, TUCK, CARRY };
     this.alarm = new THREE.PointLight(0xff3030, 0, 9, 2); this.alarm.position.set(-13.5, 2.9, -10.3); scene.add(this.alarm);
     this.markers = this.makeMarkers();
   }
@@ -177,11 +228,9 @@ export class Stage {
       const fm = [].concat(skin.material).find(m => m.name === 'Material_0');
       if (fm) { THREE.patchFaceRig(fm); face = { mesh: skin, material: fm, motion: new THREE.FaceMotion(7), rest: [0, 0, 0] }; }
     }
-    // the finger joints (index, middle, ring, little: three each) and which way each curls
-    const fingers = [];
-    bones.forEach((bn, i) => { const m = /^(index|middle|ring|pinky)[123]_([LR])$/.exec(bn.name); if (m) fingers.push([i, m[2] === 'L' ? -1 : 1]); });
     this.scene.add(model);
-    this.bodies[id] = { fingers, armRoll: spec.armRoll ?? ARM_ROLL, id, model, rig, measure, bones, hips, head, seed: id === 'jack' ? 0.3 : 1.1, seat, face, carry, pregnant: !!spec.pregnant, settled: !!story && !!spec.pregnant, seatH: spec.seat || 0.45, solver: null, dynamics: [] };
+    const body = this.bodies[id] = { id, model, rig, measure, bones, hips, head, seed: id === 'jack' ? 0.3 : 1.1, seat, face, carry, pregnant: !!spec.pregnant, settled: !!story && !!spec.pregnant, seatH: spec.seat || 0.45, solver: null, dynamics: [], hands: { hangOut: 0.06, swing: 0.09, restAlong: 0.72, thigh: 0.08, bumpAhead: 0.15, ...(spec.hands || {}) } };
+    body.arms = new Arms(body);
   }
 
   /** a walking step's length in metres (the rig's own stride, in bind units) */
@@ -210,23 +259,6 @@ export class Stage {
     if (a.typing) out.push([j.spine, rx((a.pose === 'sit' ? 10 : 6) * DEG)]);
     const awake = 1 - asleep - w('walk');
     if (awake > 0.01) { const s = b.seed, h = Math.sin((2 * Math.PI * t) / (7.3 + s * 1.3) + s) + 0.5 * Math.sin((2 * Math.PI * t) / (3.1 + s * 0.4) + 2 * s); out.push([j.neck, ry(L * 3 * DEG * h * awake)]); }
-    // HANGING HANDS face the thighs (Joshua, 2026-11-10: "the hands doing weird twists at the
-    // wrists"): on the toon rigs a standing or walking arm hangs palm forward with the fingers
-    // spread, which reads as a wrist turned the wrong way. The whole arm turns in from the
-    // shoulder, about its own length (CAST armRoll, measured per model; left and right mirrored), so neither the elbow nor the wrist is wrung. A
-    // hand that holds something is the reach's again (it replaces the arm's turns).
-    const upright = w('stand') + w('walk');
-    if (upright > 0.01) {
-      const AR = [b.armRoll, b.armRoll];
-      for (const [sh, el, deg] of [[j.shoulderL, j.elbowL, AR[0]], [j.shoulderR, j.elbowR, -AR[1]]]) {
-        // about the upper arm's OWN bind direction (the toon rigs are modelled arms-angled-down, so a
-        // turn about the body's side-to-side axis would swing the arm, not turn it in place)
-        const B = b.rig.bind, dx = B[el].x - B[sh].x, dy = B[el].y - B[sh].y, dz = B[el].z - B[sh].z, n = Math.hypot(dx, dy, dz) || 1;
-        out.push([sh, qAxis(dx / n, dy / n, dz / n, deg * DEG * upright)]);
-      }
-    }
-    // and the fingers rest a little curled, not splayed (each finger's three joints)
-    for (const [bone, sg] of b.fingers) out.push([bone, rz(sg * L * FINGER_CURL * DEG)]);
     if (a.talking && asleep < 0.5) { const s = b.seed; out.push([j.head, rx(3.5 * DEG * Math.sin(t * 2 * Math.PI * 1.6 + s))], [j.neck, ry(L * 3 * DEG * Math.sin(t * 2 * Math.PI * 0.55 + 2 * s))]); }
     return out;
   }
@@ -250,8 +282,11 @@ export class Stage {
       map = blend(m0, map, k); root = r0.map((v, i) => v + (root[i] - v) * k);
     }
     for (const [joint, q] of this.extras(b, a, t)) if (joint >= 0) map.set(joint, qMul(map.get(joint) || ID, q));
+    // what each hand is doing (or resting as), and the fingers curled for it
+    const jobs = this.handJobs(b, a);
+    for (const sd of ['L', 'R']) for (const [joint, q] of b.arms.curlTurns(sd, jobs[sd].curl)) map.set(joint, q);
     const turns = toTurns(map);
-    const sv = (!steady || !b.solver) ? (b.solver = { feet: THREE.createFeet(measure, rig.bind, -1), aim: THREE.createAim(measure, rig.bind, -1), reach: THREE.createReach(measure, rig.bind, -1), ft: [], at: [], rt: [] }, null) : b.solver;
+    const sv = (!steady || !b.solver) ? (b.solver = { feet: THREE.createFeet(measure, rig.bind, -1), aim: THREE.createAim(measure, rig.bind, -1), ft: [], at: [] }, null) : b.solver;
     const S = b.solver, fresh = sv === null;
     const footing = { dt: fresh ? 0 : dt, released: seated || (a.k < 1 && (a.prevPose === 'sit' || a.pose === 'sit' || a.prevPose === 'doze')), rootX: root[0], rootY: root[1], rootZ: root[2], rootYaw: a.yaw, unitsPerMetre: rig.bindScale, groundAt: () => ({ y: 0, grip: 1 }) };
     if (fresh) for (let i = 0; i < 8; i++) THREE.groundFeet(S.feet, measure, rig.bind, turns, { ...footing, dt: 0.05 }, S.ft);
@@ -259,40 +294,27 @@ export class Stage {
     const rootY = root[1] - grounded.rootDrop;
     const frame = { rootX: root[0], rootY, rootZ: root[2], rootYaw: a.yaw, unitsPerMetre: rig.bindScale };
     const target = a.look ? { x: a.look[0], y: a.look[1], z: a.look[2] } : null;
-    // a hand target may be on another person (a hand on his shoulder): read from his bone as he
-    // is posed this frame (he is posed first), so it neither floats nor sinks into him
-    const hands = (a.hands || []).map(h => {
-      let at = h.at;
-      if (h.bone) { const p = this.bonePoint(h.bone[0], h.bone[1]); const o = h.offset || [0, 0, 0]; at = [p.x + o[0], p.y + o[1], p.z + o[2]]; }
-      return { side: h.side, x: at[0], y: at[1], z: at[2], kind: h.kind || 'press', palm: h.palm || { x: 0, y: -1, z: 0 } };
-    });
-    // a free seated hand rests on its thigh (humanReach rule 4) -- but asleep, his folded arms are
-    // the pose's own, so a doze is not "seated" for the hands
-    const handsSeated = a.pose === 'sit' && !(a.prevPose === 'doze' && a.k < 1);
     // A LEAN (degrees forward) bends the whole back after the look is aimed -- the aim's closed
     // loop would otherwise straighten it to keep the eyes on target -- three fifths low, two
     // fifths at the chest, and the neck gives back about half so the eyes stay on what she reads.
     const J = measure.joints;
     const leaned = (turns) => {
       if (!a.lean) return turns;
-      // (measured on the toon rig: this carries her head forward over what she reads; her arms'
-      // reach is re-solved from the clavicle, so a hand's reach is staged by where she stands)
+      // (measured on the toon rig: this carries her head forward over what she reads; her arms are
+      // placed after it, from where the lean has carried her shoulders)
       const m = toMap(turns), L = a.lean * DEG;
       for (const [joint, q] of [[J.spine, rx(L * 0.6)], [J.chest, rx(L * 0.4)], [J.neck, rx(-L * 0.45)]]) if (joint >= 0) m.set(joint, qMul(m.get(joint) || ID, q));
       return toTurns(m);
     };
-    const solve = d => { const aimed = THREE.aimBody(S.aim, measure, rig.bind, grounded.turns, { ...frame, dt: d, target, bodyFree: false, weight: 1 }, S.at); return THREE.reachHands(S.reach, measure, rig.bind, leaned(aimed.turns), { ...frame, dt: d, seated: handsSeated, hands }, S.rt); };
-    // After a seek, a hand is solved as if it had come in from a little above its target, the way
-    // it does in playback (the reach takes hold only under 85% of the arm, keeps it to 90%): so a
-    // seek lands on the same pose as playing through.
-    let out;
-    if (fresh) {
-      const lifted = hands.map(h => ({ ...h, y: h.y + 0.07 }));
-      for (let i = 0; i < 14; i++) { const use = i < 6 ? lifted : hands; const aimed = THREE.aimBody(S.aim, measure, rig.bind, grounded.turns, { ...frame, dt: 0.05, target, bodyFree: false, weight: 1 }, S.at); out = THREE.reachHands(S.reach, measure, rig.bind, leaned(aimed.turns), { ...frame, dt: 0.05, seated: handsSeated, hands: use }, S.rt); }
-    } else out = solve(dt);
-    rig.apply(out.turns);
-    b.reached = out;   // the reach's own report of each hand (tests read whether a hand holds its target)
+    // the look (a closed loop: after a seek it is run until it settles, as playing would have)
+    const aim = d => leaned(THREE.aimBody(S.aim, measure, rig.bind, grounded.turns, { ...frame, dt: d, target, bodyFree: false, weight: 1 }, S.at).turns);
+    let posed;
+    if (fresh) for (let i = 0; i < 10; i++) posed = aim(0.05); else posed = aim(dt);
+    rig.apply(posed);
     b.model.position.set(root[0], rootY, root[2]); b.model.rotation.set(0, a.yaw, 0); b.model.updateMatrixWorld(true);
+    // every hand placed where it should be (arms.js): on what it holds, or at rest
+    b.reached = this.placeHands(id, b, a, jobs);   // (tests read each hand's report)
+    b.model.updateMatrixWorld(true);
     for (const [mesh, idx] of b.seat) mesh.morphTargetInfluences[idx] = seated ? (a.prevPose && a.prevPose !== a.pose ? smooth(a.k) : 1) : (a.prevPose === 'sit' ? 1 - smooth(a.k) : 0);
     if (b.face) {
       const F = b.face, M = F.motion; M.talking = !!a.talking; M.blinking = a.pose !== 'doze';
@@ -309,28 +331,159 @@ export class Stage {
   }
 
   /**
-   * A tablet TUCKED against her side under her forearm ("tablet tucked beneath one arm"): its long
-   * edge along the forearm, its screen turned to her, between the arm and her side -- outside the
-   * body, so it is seen (Joshua, 2026-11-10: "only when she was supposed to place the tablet on the
-   * desk, did it suddenly appear"). The hand holds its far corner (ch1.js 'carry').
+   * What each hand is doing this frame: { L, R } of { cur, prev, s, curl }. A hand with no job
+   * rests as its pose rests it (asleep the arms fold; seated a hand lies on the thigh; standing it
+   * hangs; walking it swings). Going from one job to the next takes ch1's handsS; a resting hand
+   * follows its body from one pose to the next (standing up, sitting down).
+   */
+  handJobs(b, a) {
+    const restOf = pose => (pose === 'doze' ? 'fold' : pose === 'sit' ? 'rest' : pose === 'walk' ? 'walk' : 'hang');
+    const out = {};
+    for (const sd of ['L', 'R']) {
+      const find = list => (list || []).find(h => h.side === sd) || null;
+      const cur = find(a.hands) || { kind: restOf(a.pose) };
+      let prev = null, s = 1;
+      if (a.handsS !== undefined && a.handsS < 1) { prev = find(a.handsPrev) || { kind: restOf(a.pose) }; s = a.handsS; }
+      if (!prev && RESTING.has(cur.kind) && a.prevPose && a.k < 1 && restOf(a.prevPose) !== cur.kind) { prev = { kind: restOf(a.prevPose) }; s = smooth(a.k); }
+      const C = (HAND[cur.kind] || HAND.hold).curl, P = prev ? (HAND[prev.kind] || HAND.hold).curl : null;
+      const curl = P ? { f: lerp(P.f, C.f, s), i: lerp(P.i ?? P.f, C.i ?? C.f, s), t: lerp(P.t, C.t, s) } : C;
+      out[sd] = { cur, prev, s, curl };
+    }
+    return out;
+  }
+
+  /** One job's place: { at (the fingertip), palm, keep, pole, poleFwd }, world. */
+  resolveHand(b, a, sd, h) {
+    const H = HAND[h.kind] || HAND.hold;
+    if (!h.at && !h.bone) return this.restHand(b, a, sd, h.kind);
+    let at = h.at;
+    // a hand on another person (on his shoulder) is read from his bone as he is posed this frame
+    // (he is posed first), so it neither floats nor sinks into him
+    if (h.bone) { const p = this.bonePoint(h.bone[0], h.bone[1]), o = h.offset || [0, 0, 0]; at = [p.x + o[0], p.y + o[1], p.z + o[2]]; }
+    const pm = h.palm, palm = pm ? new THREE.Vector3(pm.x ?? pm[0], pm.y ?? pm[1], pm.z ?? pm[2]) : DOWN.clone();
+    let T = new THREE.Vector3(at[0], at[1], at[2]), pole = h.pole || 0;
+    if (h.kind === 'point') {
+      // a point is a direction: the fingertip along it at most of the arm's length, the elbow
+      // kept down (out, it swings into whoever stands beside)
+      const A = b.arms.side[sd], Pt = j => b.bones[j].getWorldPosition(new THREE.Vector3()), S = Pt(A.sh);
+      const arm = S.distanceTo(Pt(A.el)) + Pt(A.el).distanceTo(Pt(A.wr)) + Pt(A.wr).distanceTo(Pt(A.tip));
+      T = S.clone().add(T.sub(S).normalize().multiplyScalar(0.9 * arm)); pole = -0.35;
+    }
+    return { at: T, palm, keep: h.keep ?? H.keep, tip: h.tip ?? H.tip, axis: null, pole, poleFwd: h.poleFwd || 0, poleUp: h.poleUp || 0 };
+  }
+
+  /**
+   * Where a hand without a job is, from the body as it is posed now and its measured outline
+   * (CAST hands). Standing: beside the thigh, clear of the hips, palm to the thigh and turned a
+   * little back; walking, swung against the opposite leg. Seated: on the thigh by the knee, palm
+   * down. Asleep: the arms folded, the forearms crossed on his chest, each hand at the other
+   * elbow. Carrying (her tablet under her arm): the forearm forward along its lower edge at her
+   * side, the hand round its front edge. On her bump: its front.
+   */
+  restHand(b, a, sd, kind) {
+    const J = b.measure.joints, A = b.arms.side[sd], c = b.hands, P = j => b.bones[j].getWorldPosition(new THREE.Vector3());
+    const yaw = b.model.rotation.y, f = new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw));
+    const left = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw)).multiplyScalar(b.arms.leftSign);
+    const out = sd === 'L' ? left : left.clone().negate();
+    const S = P(A.sh), E = P(A.el), W = P(A.wr), Tp = P(A.tip), arm = S.distanceTo(E) + E.distanceTo(W) + W.distanceTo(Tp);
+    const { keep, tip } = HAND[kind] || HAND.hold;
+    const job = (at, palm, more = {}) => ({ at, palm, keep, tip, axis: null, pole: 0, poleFwd: 0, poleUp: 0, ...more });
+    switch (kind) {
+      case 'walk': case 'hang': {
+        let sw = 0;
+        if (kind === 'walk') { const d = P(J.ankleL).sub(P(J.ankleR)).dot(f); sw = Math.max(-1, Math.min(1, (sd === 'L' ? -d : d) / 0.22)); }
+        // (0.96 of the arm below the shoulder: the elbow eased about 25 degrees, as a relaxed arm hangs)
+        const at = S.clone().addScaledVector(UP, -0.96 * arm).addScaledVector(f, 0.06 + c.swing * sw).addScaledVector(out, c.hangOut + 0.02 * Math.abs(sw));
+        const palm = out.clone().negate().multiplyScalar(0.94).addScaledVector(f, -0.34).normalize();
+        return job(at, palm);
+      }
+      case 'rest': {
+        const hip = P(sd === 'L' ? J.hipL : J.hipR), knee = P(sd === 'L' ? J.kneeL : J.kneeR);
+        const at = hip.lerp(knee, c.restAlong).addScaledVector(UP, c.thigh + 0.012).addScaledVector(f, 0.03);
+        return job(at, DOWN.clone());
+      }
+      case 'fold': {
+        // each forearm across the front of the body and lying on it, the left over the right, each
+        // hand at the other elbow (FOLD)
+        const C = P(J.chest), F = sd === 'L' ? FOLD.over : FOLD.under, [o, u, w] = F.at;
+        const at = C.addScaledVector(out, o).addScaledVector(UP, u).addScaledVector(f, w);
+        const axis = out.clone().negate().addScaledVector(f, -F.back).addScaledVector(UP, -0.15).normalize();
+        const palm = UP.clone().multiplyScalar(F.palmUp).addScaledVector(f, -1).normalize();
+        return job(at, palm, { axis, pole: FOLD.pole, poleFwd: F.poleFwd });
+      }
+      case 'carry': {
+        // her tablet under her arm: the forearm along its lower edge, forward at her side, the hand
+        // round its front edge, palm in (the tablet follows the forearm: tuckPose)
+        const at = S.clone().addScaledVector(UP, -CARRY.down).addScaledVector(f, CARRY.fwd).addScaledVector(out, CARRY.out);
+        return job(at, out.clone().negate().addScaledVector(UP, CARRY.palmUp).normalize(), { pole: CARRY.pole, poleFwd: CARRY.poleFwd });
+      }
+      case 'belly': {
+        // the hand lies on the front of her bump, fingers down and in along it, palm against it
+        const at = P(J.pelvis).addScaledVector(f, c.bumpAhead + 0.03).addScaledVector(UP, 0.02).addScaledVector(out, 0.03);
+        return job(at, f.clone().negate(), { axis: UP.clone().multiplyScalar(-0.8).addScaledVector(out, -0.5).normalize() });
+      }
+      default: return this.restHand(b, a, sd, 'hang');
+    }
+  }
+
+  /**
+   * Every hand placed (arms.js), from its job: going from one job to the next, along an arc out
+   * from the body and up, so it never passes through it. Returns each hand's report.
+   */
+  placeHands(id, b, a, jobs) {
+    const rep = {}, yaw = b.model.rotation.y;
+    const left = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw)).multiplyScalar(b.arms.leftSign);
+    for (const sd of ['L', 'R']) {
+      const j = jobs[sd], C = this.resolveHand(b, a, sd, j.cur);
+      let T = C;
+      if (j.prev && j.s < 1) {
+        const P = this.resolveHand(b, a, sd, j.prev), s = j.s, out = sd === 'L' ? left : left.clone().negate();
+        // (between two rests -- the thigh and the side, sitting down or standing up -- it swings
+        // wide round the hip)
+        const rests = RESTING.has(j.prev.kind) && RESTING.has(j.cur.kind);
+        const lift = Math.sin(Math.PI * s) * Math.min(rests ? 0.14 : 0.1, 0.4 * P.at.distanceTo(C.at) + (rests ? 0.05 : 0));
+        // (a hand coming off, or going onto, another person lifts up and back from them instead)
+        const onPerson = !!(j.prev.bone || j.cur.bone), f = new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw));
+        const arc = onPerson ? UP.clone().multiplyScalar(0.8).addScaledVector(f, -0.6) : out.clone().addScaledVector(UP, rests ? 0.1 : 0.35);
+        const at = P.at.clone().lerp(C.at, s).addScaledVector(arc.normalize(), lift);
+        const palm = P.palm.clone().lerp(C.palm, s); if (palm.lengthSq() < 1e-6) palm.copy(C.palm); palm.normalize();
+        const axis = P.axis && C.axis ? P.axis.clone().lerp(C.axis, s).normalize() : s < 0.5 ? P.axis : C.axis;
+        T = { at, palm, keep: lerp(P.keep, C.keep, s), tip: lerp(P.tip, C.tip, s), axis, pole: lerp(P.pole, C.pole, s), poleFwd: lerp(P.poleFwd, C.poleFwd, s), poleUp: lerp(P.poleUp, C.poleUp, s) };
+      }
+      rep[sd] = b.arms.solve(sd, T.at, T.palm, T);
+    }
+    return rep;
+  }
+
+  /**
+   * A tablet TUCKED against her side under her arm ("tablet tucked beneath one arm"): standing on
+   * its long edge, its screen turned to her, between the arm and her side, its front edge in her
+   * hand -- outside the body, so it is seen (Joshua, 2026-11-10: "only when she was supposed to
+   * place the tablet on the desk, did it suddenly appear"). It is placed from the hand as the arm
+   * holds it (restHand 'carry'): its front edge just ahead of the knuckles, so the curled fingers
+   * close round it, its length back along the forearm.
    */
   tuckPose(id, side = 'R') {
-    const b = this.bodies[id], j = b.measure.joints, w = i => b.bones[i].getWorldPosition(new THREE.Vector3());
-    const el = w(side === 'R' ? j.elbowR : j.elbowL), wr = w(side === 'R' ? j.wristR : j.wristL);
-    const yaw = b.model.rotation.y, f = new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw)), left = new THREE.Vector3(f.z, 0, -f.x);
+    const b = this.bodies[id], A = b.arms.side[side], w = i => b.bones[i].getWorldPosition(new THREE.Vector3());
+    const el = w(A.el), wr = w(A.wr), fingers = A.chains.filter(c => c !== A.thumb);
+    const kn = fingers.reduce((v, c) => v.add(w(c[0])), new THREE.Vector3()).divideScalar(Math.max(1, fingers.length));
+    const yaw = b.model.rotation.y, f = new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw));
+    const left = new THREE.Vector3(Math.cos(yaw), 0, -Math.sin(yaw)).multiplyScalar(b.arms.leftSign);
     const out = side === 'R' ? left.clone().negate() : left;
-    const T = [TUCK_ALONG, TUCK_IN, 0, TUCK_TURN];
     const x = wr.clone().sub(el); x.addScaledVector(out, -x.dot(out)); if (x.lengthSq() < 1e-6) x.copy(f); x.normalize();
-    // (turned out toward the front a little, so it reads from the front as well as the side)
-    const turn = (side === 'R' ? 1 : -1) * T[3] * DEG; x.applyAxisAngle(new THREE.Vector3(0, 1, 0), turn); out.applyAxisAngle(new THREE.Vector3(0, 1, 0), turn);
-    const y = out.clone().negate(), z = new THREE.Vector3().crossVectors(x, y).normalize(); x.crossVectors(y, z).normalize();
-    const p = el.clone().lerp(wr, T[0]).addScaledVector(out, -T[1]).addScaledVector(z, T[2]);
+    // (turned toward the front a little, as her side curves round her bump)
+    const turn = (side === 'R' ? 1 : -1) * TUCK.turn * DEG; x.applyAxisAngle(UP, turn); out.applyAxisAngle(UP, turn);
+    // its screen to her (y), its width standing up (z), its length along the forearm (x)
+    const y = out.clone().negate(), z = new THREE.Vector3().crossVectors(x, y).normalize(); if (z.y < 0) z.negate();
+    const fwd = x.dot(f) >= 0 ? x.clone() : x.clone().negate();
+    x.crossVectors(y, z).normalize();
+    const p = kn.addScaledVector(fwd, TUCK.grip - TABLET_LONG / 2).addScaledVector(out, -TUCK.in).addScaledVector(z, TUCK.rise);
     return { p, q: new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().makeBasis(x, y, z)) };
   }
   /** a flat thing held in the hand, palm down: its near edge under her fingertips, laid the way she faces */
   inHand(id, side = 'R', depth = 0.175) {
     const b = this.bodies[id], j = b.measure.joints;
-    const tip = b.bones.find(x => x.name === (side === 'R' ? 'middle4_R' : 'middle4_L')) || b.bones[side === 'R' ? j.wristR : j.wristL];
+    const tip = b.bones[b.arms.side[side].tip];
     const p = tip.getWorldPosition(new THREE.Vector3()), yaw = b.model.rotation.y;
     p.x += Math.sin(yaw) * depth / 2; p.z += Math.cos(yaw) * depth / 2; p.y -= 0.021;
     return { p, yaw };

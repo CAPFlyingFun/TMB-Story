@@ -23,7 +23,8 @@ const x = m.exports.dialogue, segs = m.segments;
 // the same list the player builds (reader/player.js story3dLines)
 globalThis.__TMB_STORY3D = { seconds: x.seconds, lines: segs.map((s, i) => ({ text: s.displayText, who: s.speaker, s: x.startMs[i] / 1000, e: (x.endMs[i] ?? x.startMs[i + 1] ?? x.seconds * 1000) / 1000 })) };
 let t = +(q.get('t') || 0), playing = q.get('play') === '1';
-const mod = await import('./dist/story3d.js');
+// &bundle=dist-before: another build of the bundle, side by side (a before-and-after)
+const mod = await import(`./${(q.get('bundle') || 'dist').replace(/[^\w-]/g, '')}/story3d.js`);
 const cap = document.getElementById('cap');
 // &cam=x,y,z,lookX,lookY,lookZ[,vfov]: look from there instead of the story's camera
 let cam = q.get('cam') ? q.get('cam').split(',').map(Number) : null;
