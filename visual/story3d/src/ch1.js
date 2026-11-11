@@ -437,7 +437,7 @@ const LEANS = {
     [L('Sarah tapped the edge of the keyboard.'), 24], [L('Sarah tapped the edge of the keyboard.', { offset: 0.7 }), 36],
     [L('Sarah tapped the edge of the keyboard.', { edge: 'end' }), 36], [L('And then?', { edge: 'end' }), 12],
     [L('Sarah started powering up'), 12], [L('Sarah started powering up', { offset: 0.8 }), 0],
-    [L('Sarah started powering up', { offset: 1.9 }), 0], [L('Sarah started powering up', { offset: 2.5 }), 34], [L('Sarah started powering up', { offset: 3.6 }), 34], [L('Can I take your chair?'), 0]],
+    [L('Sarah started powering up', { offset: 1.9 }), 0], [L('Sarah started powering up', { offset: 2.5 }), 40], [L('Sarah started powering up', { offset: 3.6 }), 40], [L('Can I take your chair?'), 0]],
   jack: [[L('Jack leaned back.'), 0], [L('Jack leaned back.', { offset: 0.6 }), -8], [L('I know.'), -8], [L('I know.', { offset: 0.8 }), 0]],
 };
 function leanAt(id, t) {
@@ -466,7 +466,17 @@ const CARRY = [0.27, 0.06, 1.0];
 function handTargets(id, a, A, chairs, t = 0) {
   const settle = 1 - smooth((t - (a.handsT || 0)) / DOWN), lift = ABOVE * settle;
   const f = [Math.sin(a.yaw), Math.cos(a.yaw)], left = [f[1], -f[0]];
-  const keysAt = (k, side) => [k[0] + left[0] * 0.13 * side, k[1], k[2] + left[1] * 0.13 * side];
+  // (her hands type wider apart than his, so her forearms pass either side of her bump)
+  const KW = id === 'sarah' ? 0.19 : 0.13;
+  const keysAt = (k, side) => [k[0] + left[0] * KW * side, k[1], k[2] + left[1] * KW * side];
+  // SARAH SEATED rests a free hand on her chair's armrest (Joshua, 2026-11-10: hands "clipping into
+  // their own body"): the reach's own rest is on the thigh, which her bump covers. The pads are
+  // 0.30 m either side of the seat's middle, 0.23 m above it (tombs-lab dressing).
+  const armrest = side => ({ side, at: [a.at[0] + left[0] * 0.30 * (side === 'L' ? 1 : -1) + f[0] * 0.09, SEAT[id] + 0.245, a.at[1] + left[1] * 0.30 * (side === 'L' ? 1 : -1) + f[1] * 0.09], kind: 'hold' });
+  const seatedSarah = id === 'sarah' && a.pose === 'sit';
+  const withRests = list => seatedSarah ? [...list, ...['L', 'R'].filter(sd => !list.some(h => h.side === sd)).map(armrest)] : list;
+  return withRests(targets());
+  function targets() {
   const carry = () => ({ side: 'R', at: [a.at[0] - left[0] * CARRY[0] + f[0] * CARRY[1], CARRY[2], a.at[1] - left[1] * CARRY[0] + f[1] * CARRY[1]], kind: 'hold', palm: { x: left[0], y: 0.3, z: left[1] } });
   const near = () => { let best = P.jackKeys, d = 1e9; for (const k of [P.jackKeys, P.secKeys, P.sarahKeys]) { const dd = Math.hypot(k[0] - a.at[0], k[2] - a.at[1]); if (dd < d) { d = dd; best = k; } } return best; };
   switch (a.hands) {
@@ -484,7 +494,8 @@ function handTargets(id, a, A, chairs, t = 0) {
     // (the keyboard itself is out of the toon arm's reach from beside him: she taps the desk's edge by it)
     case 'keyEdge': return [{ side: 'R', at: [-12.33, 0.762 + lift, -12.115], kind: 'press' }];
     // the other console's power button (tombs-lab dressing: the desk's front edge, on the user's right)
-    case 'powerUp': return [{ side: 'R', at: [-14.95, 0.766 + lift, -12.14] }];
+    // (her left hand braces on the desk's edge as she leans to it)
+    case 'powerUp': return [{ side: 'R', at: [-14.95, 0.766 + lift, -12.14] }, { side: 'L', at: [-15.21, 0.762 + lift, -12.112], kind: 'hold' }];
     // her left hand on the top of the back of his chair, as she leans over his shoulder
     case 'chairBackL': { const c = chairs.jackChair, cy = Math.cos(c.yaw), sy = Math.sin(c.yaw), bx = -0.08, bz = -0.29;
       return [{ side: 'L', at: [c.at[0] + bx * cy + bz * sy, (c.seat || 0.45) + 0.66, c.at[1] - bx * sy + bz * cy], kind: 'hold', palm: { x: 0, y: -1, z: 0 } }]; }
@@ -493,6 +504,7 @@ function handTargets(id, a, A, chairs, t = 0) {
     case 'belly': { const p = lookPoint('sarahBelly', A); return [{ side: 'R', at: [p[0], 0.82, p[2]], kind: 'hold', palm: { x: -f[0], y: 0, z: -f[1] } }]; }
     case 'point': { const tgt = id === 'sarah' ? P.jackMon : P.jackMon; const d = [tgt[0] - a.at[0], tgt[2] - a.at[1]], n = Math.hypot(...d) || 1, sit = a.pose === 'sit'; return [{ side: 'R', at: [a.at[0] + d[0] / n * 0.62 + left[0] * -0.12, sit ? 1.12 : 1.35, a.at[1] + d[1] / n * 0.62 + left[1] * -0.12], kind: 'hold' }]; }
     default: return [];
+  }
   }
 }
 const lineAt = t => { for (let i = LINES.length - 1; i >= 0; i--) if (LINES[i].s <= t) return LINES[i]; return null; };

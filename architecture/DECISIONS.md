@@ -506,3 +506,8 @@ The current cast: Narrator `XjLkpWUlnhS8i7gGz3lZ`, TOMBS / settlement systems `Q
 - Sarah's lines are shot from her side or front, at her height, so her pregnancy is seen.
 **Consequences:** The Lab tab's desks and Sarah's tablet change with the keyboard, tablet-position and case changes (one building, decision 0042). No manuscript, audio or approval state changed.
 **Status:** Accepted for review (Joshua, 2026-11-10). Presentation only (decision 0031).
+
+### 0052 — Chapter 1's 3D: hands corrected a second time
+**Context:** Joshua, 2026-11-10, after 0051 went live: "It's not fixed yet… hands are still flipped the wrong way, and clipping into their own body."
+**Decision:** 0051's arm turn was about the body's side-to-side axis, which on the toon models (built with arms angled down) swung the arm instead of turning it. Each hanging arm now turns about its own upper-arm bone, by an amount measured per model (`CAST.armRoll`: toon Sarah 70, toon Jack -20). Seated, Sarah's free hands rest on her chair's armrests, not on thighs her bump covers, and her typing hands sit wider so her forearms pass either side of it. Leaning to the power button she braces her left hand on the desk.
+**Status:** Accepted for review (Joshua, 2026-11-10). Presentation only (decision 0031).

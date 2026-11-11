@@ -12,6 +12,8 @@
 //   carry    her bump, 0..1+, for her walk's shorter wider steps (the Lab's slider over 100)
 //   seat     the chair height her feet reach the floor at (the chair is raised or lowered)
 //   badge    she wears the TOMBS badge on its lanyard (assets/models/badge.glb, swinging)
+//   armRoll  degrees a hanging arm turns about its own length so the palm faces the thigh
+//            (measured per model, 2026-11-10: toon Sarah hangs palm-forward, toon Jack nearly right)
 //
 // DYNAMICS are anything on a person that moves by itself after the pose is set: the badge's
 // swing now, a cloth-sim garment later ("still allow the rooms to be capable with cloth sim
@@ -25,10 +27,10 @@ import { ScreenSet, GLOW } from './screens.js';
 import { asset } from './paths.js';
 
 export const CAST = {
-  jack: { url: 'assets/models/jack.glb', seat: 0.42, carry: 0, badge: true },
+  jack: { url: 'assets/models/jack.glb', seat: 0.42, carry: 0, badge: true, armRoll: -20 },
   // GAME TUNING: the toon Sarah's file carries no bump number; 0.55 gives her walk a late-
   // pregnancy shortening without the waddle of the Lab's larger settings.
-  sarah: { url: 'assets/models/sarah.glb', seat: 0.49, carry: 0.55, pregnant: true, badge: true },
+  sarah: { url: 'assets/models/sarah.glb', seat: 0.49, carry: 0.55, pregnant: true, badge: true, armRoll: 70 },
 };
 const BADGE_URL = 'assets/models/badge.glb';
 
@@ -53,7 +55,7 @@ function toTurns(map) {
 const ID = [0, 0, 0, 1];
 const DEG = Math.PI / 180;
 // GAME TUNING, measured on the toon cast (2026-11-10): how far a hanging arm turns in, and how far each finger joint curls at rest
-const ARM_ROLL = 85, FINGER_CURL = 14;
+const ARM_ROLL = 0, FINGER_CURL = 14;
 // where a tucked tablet sits: this far from the elbow toward the wrist, and this far in from the forearm toward her side (metres)
 const TUCK_ALONG = 0.5, TUCK_IN = -0.02, TUCK_TURN = -35;
 const qMul = (a, b) => [a[3] * b[0] + a[0] * b[3] + a[1] * b[2] - a[2] * b[1], a[3] * b[1] - a[0] * b[2] + a[1] * b[3] + a[2] * b[0], a[3] * b[2] + a[0] * b[1] - a[1] * b[0] + a[2] * b[3], a[3] * b[3] - a[0] * b[0] - a[1] * b[1] - a[2] * b[2]];
@@ -179,7 +181,7 @@ export class Stage {
     const fingers = [];
     bones.forEach((bn, i) => { const m = /^(index|middle|ring|pinky)[123]_([LR])$/.exec(bn.name); if (m) fingers.push([i, m[2] === 'L' ? -1 : 1]); });
     this.scene.add(model);
-    this.bodies[id] = { fingers, id, model, rig, measure, bones, hips, head, seed: id === 'jack' ? 0.3 : 1.1, seat, face, carry, pregnant: !!spec.pregnant, settled: !!story && !!spec.pregnant, seatH: spec.seat || 0.45, solver: null, dynamics: [] };
+    this.bodies[id] = { fingers, armRoll: spec.armRoll ?? ARM_ROLL, id, model, rig, measure, bones, hips, head, seed: id === 'jack' ? 0.3 : 1.1, seat, face, carry, pregnant: !!spec.pregnant, settled: !!story && !!spec.pregnant, seatH: spec.seat || 0.45, solver: null, dynamics: [] };
   }
 
   /** a walking step's length in metres (the rig's own stride, in bind units) */
@@ -211,11 +213,18 @@ export class Stage {
     // HANGING HANDS face the thighs (Joshua, 2026-11-10: "the hands doing weird twists at the
     // wrists"): on the toon rigs a standing or walking arm hangs palm forward with the fingers
     // spread, which reads as a wrist turned the wrong way. The whole arm turns in from the
-    // shoulder, about its own length (measured on the toon cast: 85 degrees brings the palm to
-    // the thigh, standing and walking; left and right are mirrored), so neither the elbow nor the wrist is wrung. A
+    // shoulder, about its own length (CAST armRoll, measured per model; left and right mirrored), so neither the elbow nor the wrist is wrung. A
     // hand that holds something is the reach's again (it replaces the arm's turns).
     const upright = w('stand') + w('walk');
-    if (upright > 0.01) { const r = ARM_ROLL * DEG * upright; out.push([j.shoulderL, rx(-L * r)], [j.shoulderR, rx(L * r)]); }
+    if (upright > 0.01) {
+      const AR = [b.armRoll, b.armRoll];
+      for (const [sh, el, deg] of [[j.shoulderL, j.elbowL, AR[0]], [j.shoulderR, j.elbowR, -AR[1]]]) {
+        // about the upper arm's OWN bind direction (the toon rigs are modelled arms-angled-down, so a
+        // turn about the body's side-to-side axis would swing the arm, not turn it in place)
+        const B = b.rig.bind, dx = B[el].x - B[sh].x, dy = B[el].y - B[sh].y, dz = B[el].z - B[sh].z, n = Math.hypot(dx, dy, dz) || 1;
+        out.push([sh, qAxis(dx / n, dy / n, dz / n, deg * DEG * upright)]);
+      }
+    }
     // and the fingers rest a little curled, not splayed (each finger's three joints)
     for (const [bone, sg] of b.fingers) out.push([bone, rz(sg * L * FINGER_CURL * DEG)]);
     if (a.talking && asleep < 0.5) { const s = b.seed; out.push([j.head, rx(3.5 * DEG * Math.sin(t * 2 * Math.PI * 1.6 + s))], [j.neck, ry(L * 3 * DEG * Math.sin(t * 2 * Math.PI * 0.55 + 2 * s))]); }
